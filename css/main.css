@@ -1,0 +1,40 @@
+body {
+    background-color: var(--deepDarkBlue);
+}
+
+header {
+    display: flex;
+    position: relative;
+    height: 3.75vw;
+    margin-top: 1.45833vw;
+}
+
+#header-logo {
+    position: absolute;
+    left: 1.45833vw;
+}
+
+#header-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vw;
+    position: absolute;
+    top: 1.45833vw;
+    left: 56.09375vw;
+}
+
+.header-text {
+    color: var(--blue);
+    font-weight: 400;
+    font-size: 1.66667vw;
+}
+
+#header-dividing-line {
+    height: 2.29167vw;
+    width: 0.1vw;
+    background-color: var(--darkBlue);
+    position: absolute;
+    top: 1.15vw;
+    right: 8.6vw;
+}
