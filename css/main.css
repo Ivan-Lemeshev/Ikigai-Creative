@@ -2,16 +2,20 @@ body {
     background-color: var(--deepDarkBlue);
 }
 
-header {
+#header {
     display: flex;
-    position: relative;
+    position: absolute;
+    width: 100vw;
     height: 3.75vw;
-    margin-top: 1.45833vw;
+    top: 1.45833vw;
+    overflow: hidden;
 }
 
 #header-logo {
     position: absolute;
     left: 1.45833vw;
+    object-fit: contain;
+    cursor: pointer;
 }
 
 #header-navigation {
@@ -28,6 +32,7 @@ header {
     color: var(--blue);
     font-weight: 400;
     font-size: 1.66667vw;
+    cursor: pointer;
 }
 
 #header-dividing-line {
@@ -37,4 +42,58 @@ header {
     position: absolute;
     top: 1.15vw;
     right: 8.6vw;
+}
+
+#first-section {
+    position: relative;
+    width: 100vw;
+    height: 56.25vw;
+}
+
+#background-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#central-img-first-section {
+    position: absolute;
+    left: 29.16667vw;
+    top: 7.29167vw;
+    width: 41.66667vw;
+    height: 41.66667vw;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#central-text-first-section {
+    position: absolute;
+    width: 18.07292vw;
+    height: 5.05208vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: var(--lightBlue);
+    top: 26vw;
+    left: 41vw;
+    z-index: 2;
+}
+
+
+#central-text-first-section-up {
+    font-size: 1.875vw;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#central-text-first-section-down {
+    font-size: 1.25vw;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
