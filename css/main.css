@@ -186,3 +186,10 @@ body {
         color: #FF945B;
     }
 }
+
+#third-section {
+    position: relative;
+    width: 100vw;
+    height: 83.95833vw;
+    background: linear-gradient(180deg, #000D15 0%, #000D15 4.39%, #002D49 33%, #000D15 62.8%, #000D15 100%);
+}
