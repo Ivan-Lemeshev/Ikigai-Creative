@@ -2,23 +2,27 @@ body {
     background-color: var(--deepDarkBlue);
 }
 
-#header {
+#header-first-section {
     display: flex;
     position: absolute;
     width: 100vw;
     height: 3.75vw;
     top: 1.45833vw;
     overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-#header-logo {
+#header-logo-first-section {
     position: absolute;
     left: 1.45833vw;
     object-fit: contain;
     cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-#header-navigation {
+#header-navigation-first-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,20 +32,28 @@ body {
     left: 56.09375vw;
 }
 
-.header-text {
+.header-text-first-section {
     color: var(--blue);
     font-weight: 400;
     font-size: 1.66667vw;
     cursor: pointer;
+    opacity: 0;
+    transition: color 0.5s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-#header-dividing-line {
+.header-text-first-section:hover {
+    color: var(--orangeRed);
+}
+
+#header-dividing-line-first-section {
     height: 2.29167vw;
     width: 0.1vw;
     background-color: var(--darkBlue);
     position: absolute;
     top: 1.15vw;
     right: 8.6vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 #first-section {
@@ -55,7 +67,38 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
 }
+
+#ikigai-logo-text {
+    position: absolute;
+    top: 26.04167vw;
+    left: 29.16667vw;
+    opacity: 0;
+    transition: left 0.5s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+#animation-text {
+    font-weight: 400;
+    color: var(--lightBlue);
+    position: absolute;
+    opacity: 0;
+    font-size: 1.45833vw;
+    top: 27.54167vw;
+    left: 40.16667vw;
+    z-index: 10;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#creative-logo-text {
+    position: absolute;
+    top: 26.04167vw;
+    left: 47.39583vw;
+    opacity: 0;
+    transition: left 0.5s ease-in-out, opacity 0.7s ease-in-out;
+}
+
 
 #central-img-first-section {
     position: absolute;
@@ -66,6 +109,8 @@ body {
     object-fit: contain;
     pointer-events: none;
     z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, rotate 1.8s ease-in-out;
 }
 
 #central-text-first-section {
@@ -79,6 +124,8 @@ body {
     top: 26vw;
     left: 41vw;
     z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 
@@ -96,6 +143,79 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#second-header {
+    display: none;
+    position: fixed;
+    top: 1.5625vw;
+    left: 1.5625vw;
+    width: 100vw;
+    height: 3.75vw;
+    overflow: hidden;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#second-header-logo-hover {
+    position: absolute;
+    left: 1.45833vw;
+    object-fit: contain;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: all;
+    z-index: 7;
+}
+
+#second-header-logo-hover:hover {
+    opacity: 1;
+}
+
+#second-header-logo-activ {
+    position: absolute;
+    left: 1.45833vw;
+    object-fit: contain;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: all;
+    z-index: 6;
+}
+
+#second-header-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 48vw;
+    position: absolute;
+    top: 1.45833vw;
+    left: 47.96875vw;
+}
+
+.second-header-text {
+    color: var(--blue);
+    font-weight: 400;
+    font-size: 1.66667vw;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.second-header-text:hover {
+    color: var(--orangeRed);
+}
+
+#second-header-dividing-line {
+    height: 2.29167vw;
+    width: 0.1vw;
+    background-color: var(--darkBlue);
+    position: absolute;
+    top: 1.15vw;
+    right: 8.6vw;
+    opacity: 0;
+    transition: color 0.5s ease-in-out;
 }
 
 #second-section {
