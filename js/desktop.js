@@ -126,10 +126,3 @@ secondHeader.addEventListener('mouseleave', () => {
 secondHeaderLogoHover.addEventListener('mouseenter', () => {
     secondHeaderLogoHover.style.opacity = "1";
 });
-
-window.addEventListener('scroll', () => {
-    if( window.scrollY > window.innerHeight) {
-        secondHeaderNavInfo.style.opacity = "0.5"
-    }
-});
-        
