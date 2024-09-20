@@ -496,6 +496,9 @@ body {
     width: 45.83333vw;
     height: 6.77083vw;
     position: absolute;
+    font-weight: 300;
+    font-size: 1.5625vw;
+    color: var(--blue);
     margin-top: 25.26042vw;
     margin-left: 2.86458vw;
     overflow: hidden;
