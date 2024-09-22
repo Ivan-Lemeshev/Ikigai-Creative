@@ -338,6 +338,66 @@ body {
 }
 
 
+#third-section-title {
+    position: absolute;
+    top: 3.125vw;
+    left: 7.29167vw;
+    font-weight: 500;
+    font-size: 2.1875vw;
+    color: var(--blue);
+}
+
+#third-section-main-content {
+    position: absolute;
+    width: 85.41667vw;
+    height: 34.89583vw;
+    top: 9.6875vw;
+    left: 7.29167vw;
+    display: flex;
+    justify-content: space-between;
+    overflow: visible;
+
+    &>#third-section-main-content-left-part {
+        width: 28.125vw;
+        background: linear-gradient(145.28deg, rgba(0, 34, 53, 0.8) 18.9%, rgba(0, 17, 27, 0.6) 95.94%);
+        box-shadow: 0px 0px 8px 0px #0285CC;
+    }
+
+    &>#third-section-main-content-right-part {
+        width: 45.3125vw;
+
+        &>#third-section-main-content-right-part-line {
+            position: absolute;
+            width: 0.1vw;
+            height: 32.29167vw;
+            margin-left: 46.3125vw;
+            background: linear-gradient(90deg, rgba(0, 154, 236, 0) 0%, #009AEC 55.56%, rgba(0, 87, 134, 0) 100%);
+        }
+
+        &>#third-section-main-content-right-part-title {
+            margin-left: 26.04167vw;
+            font-weight: 400;
+            font-size: 1.875vw;
+            color: #02A6FF;
+            text-align: right;
+        }
+
+        &>#third-section-main-content-right-part-paragraph {
+            font-size: 1.875vw;
+            font-weight: 300;
+            height: 18.125vw;
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            flex-wrap: wrap;
+            color: #02A6FF;
+            text-align: right;
+            line-height: 2.44792vw;
+        }
+    }
+}
+
+
 #four-section {
     position: relative;
     width: 100vw;
@@ -494,17 +554,23 @@ body {
 
 #textarea {
     width: 45.83333vw;
-    height: 6.77083vw;
+    height: 7.77083vw;
     position: absolute;
-    margin-top: 25.26042vw;
+    margin-top: 24vw;
     margin-left: 2.86458vw;
     overflow: hidden;
+    color: var(--darkBlue);
+    font-weight: 300;
+    line-height: 200%;
+    font-size: 1.875vw;
+    word-wrap: break-word;
+    overflow-y: hidden;
+    padding-top: 0.78125vw;
 
     &::placeholder {
         font-size: 1.5625vw;
         color: var(--darkBlue);
         font-weight: 300;
-        line-height: 240%;
     }
 }
 
@@ -517,6 +583,8 @@ body {
     position: absolute;
     margin-top: 28.38542vw;
     margin-left: 2.34375vw;
+    pointer-events: none;
+    user-select: none;
 }
 
 #send-form-submit {
@@ -542,7 +610,7 @@ body {
     box-shadow: 0px 0px 8px 3px var(--blue);
     border: transparent;
     cursor: pointer;
-    
+
     &:hover {
         color: #00A5FF;
         background-color: var(--darkBlue);
