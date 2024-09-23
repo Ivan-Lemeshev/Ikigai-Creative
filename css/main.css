@@ -371,14 +371,14 @@ body {
             width: 0.1vw;
             height: 32.29167vw;
             margin-left: 46.3125vw;
-            background: linear-gradient(90deg, rgba(0, 154, 236, 0) 0%, #009AEC 55.56%, rgba(0, 87, 134, 0) 100%);
+            background: linear-gradient(to bottom, #005786 0%, #009AEC 56%, #005786 100%);
         }
 
         &>#third-section-main-content-right-part-title {
             margin-left: 26.04167vw;
             font-weight: 400;
             font-size: 1.875vw;
-            color: #02A6FF;
+            color: var(--secondBlue);
             text-align: right;
         }
 
@@ -390,10 +390,48 @@ body {
             justify-content: flex-end;
             align-items: end;
             flex-wrap: wrap;
-            color: #02A6FF;
+            color: var(--secondBlue);
             text-align: right;
             line-height: 2.44792vw;
         }
+
+        &>#third-section-main-content-right-part-button-order,
+        &>#third-section-main-content-right-part-button-more {
+            width: 14.0625vw;
+            height: 3.59375vw;
+            font-weight: 600;
+            font-size: 1.875vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--secondBlue);
+            background-color: rgba(0, 13, 21, 0.4);
+            box-shadow: 0px 0px 8px 3px rgba(2, 133, 204, 1);
+            overflow: visible;
+            position: absolute;
+            top: 28.69792vw;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        &>#third-section-main-content-right-part-button-order {
+            left: 51.04167vw;
+        }
+
+        &>#third-section-main-content-right-part-button-order:hover {
+            background-color: var(--darkBlue);
+            color: #00A5FF;
+        }
+
+        &>#third-section-main-content-right-part-button-more {
+            left: 67.70833vw;
+        }
+
+        &>#third-section-main-content-right-part-button-more:hover {
+            background-color: var(--darkBlue);
+            color: #00A5FF;
+        }
+
     }
 }
 
@@ -735,4 +773,44 @@ body {
 
 #alternative-contact-telegram-whatsapp {
     margin-top: 35.41667vw;
+}
+
+#five-section {
+    position: relative;
+    width: 100vw;
+    height: 56.25vw;
+}
+
+#five-section-title {
+    position: absolute;
+    top: 2.60417vw;
+    left: 7.29167vw;
+    font-weight: 500;
+    font-size: 2.1875vw;
+    color: var(--blue);
+}
+
+#footer {
+    position: relative;
+    width: 100vw;
+    height: 13.33333vw;
+}
+
+#footer-content {
+    position: absolute;
+    width: 85.41667vw;
+    height: 5.20833vw;
+    left: 7.29167vw;
+    top: 8.125vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-content {
+    font-weight: 700;
+    font-size: 2.1875vw;
+    font-family: Josefin Sans;
+    letter-spacing: 0.1em;
+    color: var(--blue);
 }
