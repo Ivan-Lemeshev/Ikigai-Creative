@@ -160,7 +160,6 @@ body {
 
 #second-header-logo-hover {
     position: absolute;
-    left: 1.45833vw;
     object-fit: contain;
     cursor: pointer;
     opacity: 0.5;
@@ -175,7 +174,6 @@ body {
 
 #second-header-logo-activ {
     position: absolute;
-    left: 1.45833vw;
     object-fit: contain;
     cursor: pointer;
     opacity: 0;
@@ -220,7 +218,7 @@ body {
     top: 1.15vw;
     right: 8.6vw;
     opacity: 0;
-    transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 #second-section {
