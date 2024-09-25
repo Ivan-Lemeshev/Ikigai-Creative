@@ -644,14 +644,11 @@ body {
     width: 45.83333vw;
     height: 7.77083vw;
     position: absolute;
-<<<<<<< HEAD
     font-weight: 300;
     font-size: 1.5625vw;
     color: var(--blue);
     margin-top: 25.26042vw;
-=======
     margin-top: 24vw;
->>>>>>> aa9a42cdab7cef694fbfbe20fb6de426275fb91b
     margin-left: 2.86458vw;
     overflow: hidden;
     color: var(--darkBlue);
