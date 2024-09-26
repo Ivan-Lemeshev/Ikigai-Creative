@@ -36,37 +36,45 @@ const secondSectionButtonContacts = document.getElementById("second-section-butt
 let animationisActiv = false;
 let animationIsGone = false;
 let numberOfActivAnimation = 0;
-const timeOfAnimation = 5000;
+const timeOfAnimation = 4000;
 
 const thirdSectionImage = document.getElementById("third-section-main-content-left-part");
 const thirdSectionText = document.getElementById("third-section-main-content-right-part");
 const thirdSectionButtonOrder = document.getElementById("third-section-main-content-right-part-button-order");
 const thirdSectionButtonMore = document.getElementById("third-section-main-content-right-part-button-more");
+const thirdSectionLowerPartDivFirst = document.getElementById("third-section-lower-part-div-1");
+const thirdSectionLowerPartDivSecond = document.getElementById("third-section-lower-part-div-2");
+const thirdSectionLowerPartDivThird = document.getElementById("third-section-lower-part-div-3");
+const thirdSectionLowerPartDivFourth = document.getElementById("third-section-lower-part-div-4");
+const thirdSectionLowerPartDivFifth = document.getElementById("third-section-lower-part-div-5");
 
 const ideasArrayUp = [
     "Transforming Ideas",
     "Your Vision",
     "Crafting Digital",
-    "Innovate & Engage"
+    "Innovate & Engage",
+    "DIGITAL AGENCY"
 ];
 
 const ideasArrayDown = [
     "into Digital Reality",
     "Our Innovation",
     "Excellence",
-    "Succeed"
+    "Succeed",
+    "LONDON"
 ];
 
+let angel = 360;
 
 const changeIdeasText = () => {
     centralText.style.opacity = "0";
+    angel = (angel + 90);
     setTimeout(() => {
         numberOfActivAnimation = (numberOfActivAnimation + 1) % ideasArrayUp.length;
         centralTextUp.textContent = ideasArrayUp[numberOfActivAnimation];
         centralTextDown.textContent = ideasArrayDown[numberOfActivAnimation];
-        centralImg.style.rotate = "360deg"
+        centralImg.style.rotate = angel + "deg";
         centralText.style.opacity = "1";
-
     }, 500);
 
 };
@@ -79,7 +87,7 @@ const startAnimation = () => {
             creativeLogoText.style.opacity = "1";
             setTimeout(() => {
                 ikigaiLogoText.style.left = "7.44792vw";
-                creativeLogoText.style.left = "73.48958vw";
+                creativeLogoText.style.left = "72.23958vw";
                 setTimeout(() => {
                     ideasText.style.opacity = "1";
                     setTimeout(() => {
@@ -163,11 +171,9 @@ window.addEventListener('scroll', () => {
 
             setTimeout(() => {
                 secondSectionText.style.opacity = "1";
-                setTimeout(() => {
-                    secondSectionButtonServices.style.opacity = "1";
-                    secondSectionButtonContacts.style.opacity = "1";
-                }, 200);
-            }, 1000);
+                secondSectionButtonServices.style.opacity = "1";
+                secondSectionButtonContacts.style.opacity = "1";
+            }, 200);
         };
 
     } else if (scrollY > width * 1.125 && scrollY < width * 1.965) {
@@ -178,14 +184,28 @@ window.addEventListener('scroll', () => {
         thirdSectionImage.style.transform = "rotate3d(0, 1, 0, 30deg)";
         thirdSectionText.style.transform = "rotate3d(0, 1, 0, 0deg)";
         thirdSectionText.style.opacity = "1";
+
         setTimeout(() => {
-            thirdSectionImage.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
-        }, 500);
-        setTimeout(() => {
-            thirdSectionButtonOrder.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
-        }, 500);
-        setTimeout(() => {
-            thirdSectionButtonMore.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
+            setTimeout(() => {
+                thirdSectionLowerPartDivFirst.style.opacity = "1";
+                setTimeout(() => {
+                    thirdSectionLowerPartDivSecond.style.opacity = "1";
+                    setTimeout(() => {
+                        thirdSectionLowerPartDivThird.style.opacity = "1";
+                        setTimeout(() => {
+                            thirdSectionLowerPartDivFourth.style.opacity = "1";
+                            setTimeout(() => {
+                                thirdSectionLowerPartDivFifth.style.opacity = "1";
+                                setTimeout(() => {
+                                    thirdSectionImage.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
+                                    thirdSectionButtonOrder.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
+                                    thirdSectionButtonMore.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
+                                }, 250);
+                            }, 250);
+                        }, 250);
+                    }, 250);
+                }, 250);
+            }, 300);
         }, 500);
     } else if (scrollY > width * 1.965 && scrollY < width * 2.527) {
         secondHeaderNavInfo.classList = "second-header-text";
@@ -254,3 +274,8 @@ const lightAnimation = (data, id) => {
     }
 };
 
+thirdSectionButtonOrder.addEventListener('click', () => {
+    window.scrollTo({
+
+    })
+})
