@@ -4,6 +4,9 @@ const creativeLogoText = document.getElementById("creative-logo-text");
 const ideasText = document.getElementById("animation-text");
 const centralImg = document.getElementById("central-img-first-section");
 const centralText = document.getElementById("central-text-first-section");
+const centralTextUp = document.getElementById("central-text-first-section-up");
+const centralTextDown = document.getElementById("central-text-first-section-down");
+
 
 const headerFirstSection = document.getElementById("header-first-section");
 const headerLogoFirstSection = document.getElementById("header-logo-first-section");
@@ -32,6 +35,37 @@ const secondSectionButtonContacts = document.getElementById("second-section-butt
 
 let animationisActiv = false;
 let animationIsGone = false;
+
+const thirdSectionImage = document.getElementById("third-section-main-content-left-part");
+const thirdSectionText = document.getElementById("third-section-main-content-right-part");
+const thirdSectionButtonOrder = document.getElementById("third-section-main-content-right-part-button-order");
+const thirdSectionButtonMore = document.getElementById("third-section-main-content-right-part-button-more");
+
+const ideasArrayUp = [
+    "Transforming Ideas",
+    "Your Vision",
+    "Crafting Digital",
+    "Innovate & Engage"
+];
+
+const ideasArrayDown = [
+    "into Digital Reality",
+    "Our Innovation",
+    "Excellence",
+    "Succeed"
+
+];
+
+
+const changeIdeasText = () => {
+    for (let i = 0; i < ideasArrayUp; i++) {
+        centralTextUp.textContent = ideasArrayUp[i];
+    }
+
+    for (let i = 0; i < ideasArrayDown; i++) {
+        centralTextDown.textContent = ideasArrayDown[i];
+    };
+};
 
 const startAnimation = () => {
     setTimeout(() => {
@@ -67,6 +101,9 @@ const startAnimation = () => {
                                                     setTimeout(() => {
                                                         headerDividingLine.style.opacity = "1";
                                                         headerLanguageButton.style.opacity = "1";
+                                                        setTimeout(() => {
+                                                            changeIdeasText
+                                                        }, 1000);
                                                     }, 300);
                                                 }, 300);
                                             }, 300);
@@ -136,6 +173,18 @@ window.addEventListener('scroll', () => {
         secondHeaderNavServices.classList.add("second-header-text-none-clickable");
         secondHeaderNavContacts.classList = "second-header-text";
         secondHeaderNavReviews.classList = "second-header-text";
+        thirdSectionImage.style.transform = "rotate3d(0, 1, 0, 30deg)";
+        thirdSectionText.style.transform = "rotate3d(0, 1, 0, 0deg)";
+        thirdSectionText.style.opacity = "1";
+        setTimeout(() => {
+            thirdSectionImage.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
+        }, 500);
+        setTimeout(() => {
+            thirdSectionButtonOrder.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
+        }, 500);
+        setTimeout(() => {
+            thirdSectionButtonMore.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
+        }, 500);
     } else if (scrollY > width * 1.965 && scrollY < width * 2.527) {
         secondHeaderNavInfo.classList = "second-header-text";
         secondHeaderNavServices.classList = "second-header-text";
