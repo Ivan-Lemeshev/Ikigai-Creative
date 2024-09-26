@@ -35,6 +35,8 @@ const secondSectionButtonContacts = document.getElementById("second-section-butt
 
 let animationisActiv = false;
 let animationIsGone = false;
+let numberOfActivAnimation = 0;
+const timeOfAnimation = 5000;
 
 const thirdSectionImage = document.getElementById("third-section-main-content-left-part");
 const thirdSectionText = document.getElementById("third-section-main-content-right-part");
@@ -53,18 +55,20 @@ const ideasArrayDown = [
     "Our Innovation",
     "Excellence",
     "Succeed"
-
 ];
 
 
 const changeIdeasText = () => {
-    for (let i = 0; i < ideasArrayUp; i++) {
-        centralTextUp.textContent = ideasArrayUp[i];
-    }
+    centralText.style.opacity = "0";
+    setTimeout(() => {
+        numberOfActivAnimation = (numberOfActivAnimation + 1) % ideasArrayUp.length;
+        centralTextUp.textContent = ideasArrayUp[numberOfActivAnimation];
+        centralTextDown.textContent = ideasArrayDown[numberOfActivAnimation];
+        centralImg.style.rotate = "360deg"
+        centralText.style.opacity = "1";
 
-    for (let i = 0; i < ideasArrayDown; i++) {
-        centralTextDown.textContent = ideasArrayDown[i];
-    };
+    }, 500);
+
 };
 
 const startAnimation = () => {
@@ -101,9 +105,7 @@ const startAnimation = () => {
                                                     setTimeout(() => {
                                                         headerDividingLine.style.opacity = "1";
                                                         headerLanguageButton.style.opacity = "1";
-                                                        setTimeout(() => {
-                                                            changeIdeasText
-                                                        }, 1000);
+                                                        setInterval(changeIdeasText, timeOfAnimation);
                                                     }, 300);
                                                 }, 300);
                                             }, 300);
