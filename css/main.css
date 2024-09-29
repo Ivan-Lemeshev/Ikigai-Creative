@@ -640,7 +640,7 @@ body {
 }
 
 #choice-of-service {
-    width: 21.61458vw;
+    width: 21.875vw;
     height: 3.125vw;
     position: absolute;
     margin-top: 17.1875vw;
@@ -664,8 +664,48 @@ body {
         width: 0.83333vw;
         height: 0.83333vw;
         pointer-events: all;
-
+        rotate: 0deg;
+        transition: rotate 0.5s ease-in-out;
     }
+}
+
+
+#drop-list {
+    width: 21.875vw;
+    height: 12.08333vw;
+    position: absolute;
+    top: 20.3125vw;
+    left: 26.30208vw;
+    z-index: 10;
+    border: 1px solid #015A8C;
+    border-bottom-left-radius: 0.52083vw;
+    border-bottom-right-radius: 0.52083vw;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: inline-block;
+    transition: opacity 0.3s ease-in-out, display 0.3s ease-in-out;
+
+    &>.drop-list-item {
+        width: 21.875vw;
+        height: 2.29167vw;
+        display: flex;
+        align-items: center;
+        padding-left: 0.52083vw;
+        color: #01679F;
+        font-size: 1.35417vw;
+        text-align: left;
+        font-weight: 300;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #01679F;
+    }
+
+    &>.drop-list-item:hover {
+        background-color: #006AA4;
+        color: #B9E6FF;
+    }
+
 }
 
 #textarea-title {

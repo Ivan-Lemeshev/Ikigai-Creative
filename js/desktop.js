@@ -17,37 +17,6 @@ const headerNavReviews = document.getElementById("nav-reviews-first-section");
 const headerDividingLine = document.getElementById("header-dividing-line-first-section");
 const headerLanguageButton = document.getElementById("language-button-first-section");
 
-const secondHeader = document.getElementById("second-header");
-const secondHeaderLogoHover = document.getElementById("second-header-logo-hover");
-const secondHeaderLogoActiv = document.getElementById("second-header-logo-activ");
-
-const secondHeaderNavMain = document.getElementById("second-nav-main");
-const secondHeaderNavInfo = document.getElementById("second-nav-info");
-const secondHeaderNavServices = document.getElementById("second-nav-services");
-const secondHeaderNavContacts = document.getElementById("second-nav-contacts");
-const secondHeaderNavReviews = document.getElementById("second-nav-reviews");
-const secondHeaderLanguageButton = document.getElementById("second-language-button");
-const secondHeaderDividingLine = document.getElementById("second-header-dividing-line");
-
-const secondSectionText = document.getElementById("second-section-text");
-const secondSectionButtonServices = document.getElementById("second-section-button-services");
-const secondSectionButtonContacts = document.getElementById("second-section-button-contacts");
-
-let animationisActiv = false;
-let animationIsGone = false;
-let numberOfActivAnimation = 0;
-const timeOfAnimation = 4000;
-
-const thirdSectionImage = document.getElementById("third-section-main-content-left-part");
-const thirdSectionText = document.getElementById("third-section-main-content-right-part");
-const thirdSectionButtonOrder = document.getElementById("third-section-main-content-right-part-button-order");
-const thirdSectionButtonMore = document.getElementById("third-section-main-content-right-part-button-more");
-const thirdSectionLowerPartDivFirst = document.getElementById("third-section-lower-part-div-1");
-const thirdSectionLowerPartDivSecond = document.getElementById("third-section-lower-part-div-2");
-const thirdSectionLowerPartDivThird = document.getElementById("third-section-lower-part-div-3");
-const thirdSectionLowerPartDivFourth = document.getElementById("third-section-lower-part-div-4");
-const thirdSectionLowerPartDivFifth = document.getElementById("third-section-lower-part-div-5");
-
 const ideasArrayUp = [
     "Transforming Ideas",
     "Your Vision",
@@ -64,7 +33,42 @@ const ideasArrayDown = [
     "LONDON"
 ];
 
+let animationisActiv = false;
+let animationIsGone = false;
+let numberOfActivAnimation = 0;
+const timeOfAnimation = 4000;
 let angel = 360;
+
+const secondHeader = document.getElementById("second-header");
+const secondHeaderLogoHover = document.getElementById("second-header-logo-hover");
+const secondHeaderLogoActiv = document.getElementById("second-header-logo-activ");
+const secondHeaderNavMain = document.getElementById("second-nav-main");
+const secondHeaderNavInfo = document.getElementById("second-nav-info");
+const secondHeaderNavServices = document.getElementById("second-nav-services");
+const secondHeaderNavContacts = document.getElementById("second-nav-contacts");
+const secondHeaderNavReviews = document.getElementById("second-nav-reviews");
+const secondHeaderLanguageButton = document.getElementById("second-language-button");
+const secondHeaderDividingLine = document.getElementById("second-header-dividing-line");
+const secondSectionText = document.getElementById("second-section-text");
+const secondSectionButtonServices = document.getElementById("second-section-button-services");
+const secondSectionButtonContacts = document.getElementById("second-section-button-contacts");
+
+const thirdSectionImage = document.getElementById("third-section-main-content-left-part");
+const thirdSectionText = document.getElementById("third-section-main-content-right-part");
+const thirdSectionButtonOrder = document.getElementById("third-section-main-content-right-part-button-order");
+const thirdSectionButtonMore = document.getElementById("third-section-main-content-right-part-button-more");
+const thirdSectionLowerPartDivFirst = document.getElementById("third-section-lower-part-div-1");
+const thirdSectionLowerPartDivSecond = document.getElementById("third-section-lower-part-div-2");
+const thirdSectionLowerPartDivThird = document.getElementById("third-section-lower-part-div-3");
+const thirdSectionLowerPartDivFourth = document.getElementById("third-section-lower-part-div-4");
+const thirdSectionLowerPartDivFifth = document.getElementById("third-section-lower-part-div-5");
+
+const fourthSectionChoiceOfService = document.getElementById("choice-of-service");
+const fourthSectionChoiceOfServiceArrow = document.getElementById("choice-of-service-arrow");
+const dropList = document.getElementById("drop-list");
+
+
+
 
 const changeIdeasText = () => {
     centralText.style.opacity = "0";
@@ -274,8 +278,30 @@ const lightAnimation = (data, id) => {
     }
 };
 
-thirdSectionButtonOrder.addEventListener('click', () => {
-    window.scrollTo({
+let enter = false;
 
-    })
-})
+fourthSectionChoiceOfService.addEventListener('mouseenter', () => {
+    if (!enter) {
+        enter = true;
+        fourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
+        dropList.style.opacity = "1";
+        dropList.style.display = "inline-block";
+    };
+});
+
+// fourthSectionChoiceOfService.addEventListener('mouseleave', () => {
+//     if (enter) {
+//         fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+//         dropList.style.opacity = "0";
+//         dropList.style.display = "none";
+//     };
+// });
+
+dropList.addEventListener('mouseleave', () => {
+    if (enter) {
+        fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+        dropList.style.opacity = "0";
+        dropList.style.display = "none";
+        enter = false;
+    };
+});
