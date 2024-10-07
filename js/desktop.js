@@ -279,29 +279,22 @@ const lightAnimation = (data, id) => {
 };
 
 let enter = false;
-
-fourthSectionChoiceOfService.addEventListener('mouseenter', () => {
+const dropListWrapper = document.getElementById("drop-list-wrapper");
+fourthSectionChoiceOfService.addEventListener('click', () => {
     if (!enter) {
         enter = true;
-        fourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
-        dropList.style.opacity = "1";
-        dropList.style.display = "inline-block";
+        if (enter) {
+            dropList.style.opacity = "1";
+            fourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
+        };
     };
 });
 
-// fourthSectionChoiceOfService.addEventListener('mouseleave', () => {
-//     if (enter) {
-//         fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-//         dropList.style.opacity = "0";
-//         dropList.style.display = "none";
-//     };
-// });
-
-dropList.addEventListener('mouseleave', () => {
+dropListWrapper.addEventListener('mouseleave', () => {
     if (enter) {
-        fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-        dropList.style.opacity = "0";
-        dropList.style.display = "none";
         enter = false;
+        dropList.style.opacity = "0";
+        fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
     };
 });
+
