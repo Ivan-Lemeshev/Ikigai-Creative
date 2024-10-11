@@ -641,7 +641,7 @@ body {
 
 #drop-list-wrapper {
     width: 21.875vw;
-    height: 15.20833vw;
+    height: 17.5vw;
     position: absolute;
     overflow: hidden;
     top: 17.1875vw;
@@ -653,13 +653,16 @@ body {
     width: 21.875vw;
     height: 3.125vw;
     position: absolute;
-    border-bottom: 0.05208vw solid var(--blue);
+    border-bottom-color: rgba(2, 133, 204, 1);
+    border-bottom-width: 0.05208vw;
+    border-bottom-style: solid;
     padding-left: 0.52083vw;
     padding-right: 0.52083vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    transition: border-bottom-color ease-in-out 0.3s;
 
     &>#choice-of-service-placeholder {
         color: var(--darkBlue);
@@ -680,7 +683,7 @@ body {
 
 #drop-list {
     width: 21.875vw;
-    height: 12.08333vw;
+    height: 14.375vw;
     position: absolute;
     z-index: 10;
     border: 1px solid #015A8C;
@@ -693,13 +696,14 @@ body {
     display: inline-block;
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
-    transition: opacity 0.3s ease-in-out, display 0.3s ease-in-out;
-    
+    transition: opacity 0.3s ease-in-out;
+    backdrop-filter: blur(0.41667vw);
+    overflow: hidden;
+    pointer-events: none;
 
     &>.drop-list-item {
         width: 21.875vw;
-        height: 2.29167vw;
+        height: 2.4vw;
         display: flex;
         align-items: center;
         padding-left: 0.52083vw;
@@ -711,6 +715,15 @@ body {
         background-color: rgba(0, 0, 0, 0.5);
         color: #01679F;
     }
+
+    &>.drop-list-item:first-child {
+        padding-top: 0.41667vw;
+    }
+
+    &>.drop-list-item:last-child {
+        padding-bottom: 0.41667vw;
+    }
+
 
     &>.drop-list-item:hover {
         background-color: #006AA4;

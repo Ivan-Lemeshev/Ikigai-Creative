@@ -278,23 +278,38 @@ const lightAnimation = (data, id) => {
     }
 };
 
-let enter = false;
 const dropListWrapper = document.getElementById("drop-list-wrapper");
+
 fourthSectionChoiceOfService.addEventListener('click', () => {
-    if (!enter) {
-        enter = true;
-        if (enter) {
-            dropList.style.opacity = "1";
-            fourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
-        };
-    };
+    dropList.style.opacity = "1";
+    fourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
+    fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 0)";
+    dropList.style.pointerEvents = "all";
 });
 
-dropListWrapper.addEventListener('mouseleave', () => {
-    if (enter) {
-        enter = false;
-        dropList.style.opacity = "0";
-        fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-    };
+// dropListWrapper.addEventListener('mouseleave', () => {
+//     dropList.style.opacity = "0";
+//     fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+//     fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+//     dropList.style.pointerEvents = "none";
+// });
+
+
+
+const red = document.getElementById("red");
+const green = document.getElementById("green");
+
+red.addEventListener('click', () => {
+    let redResult = arrayCalc.filter(elem => {
+        return elem.color === "red";
+    });
+    console.log(redResult)
+});
+
+green.addEventListener('click', () => {
+    let greenResult = arrayCalc.filter(elem => {
+        return elem.color === "green";
+    });
+    console.log(greenResult)
 });
 
