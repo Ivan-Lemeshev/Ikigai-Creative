@@ -279,12 +279,26 @@ const lightAnimation = (data, id) => {
 };
 
 const dropListWrapper = document.getElementById("drop-list-wrapper");
+const choiceOfServicePlaceholder = document.getElementById("choice-of-service-placeholder");
+
+const dropListDesign = document.getElementById("drop-list-design");
+const dropListDevelopment = document.getElementById("drop-list-development");
+const dropListVideoProduction = document.getElementById("drop-list-video-production");
+const dropListSupport = document.getElementById("drop-list-support");
+const dropListPromotion = document.getElementById("drop-list-promotion");
+const dropListSetting = document.getElementById("drop-list-setting");
+
 
 fourthSectionChoiceOfService.addEventListener('click', () => {
     dropList.style.opacity = "1";
     fourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
     fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 0)";
     dropList.style.pointerEvents = "all";
+    choiceOfServicePlaceholder.style.color = "var(--blue)";
+});
+
+dropListDesign.addEventListener('click', () => {
+    choiceOfServicePlaceholder.innerText = "Creative Design";
 });
 
 // dropListWrapper.addEventListener('mouseleave', () => {
@@ -292,6 +306,7 @@ fourthSectionChoiceOfService.addEventListener('click', () => {
 //     fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
 //     fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
 //     dropList.style.pointerEvents = "none";
+//     choiceOfServicePlaceholder.style.color = "var(--darkBlue)";
 // });
 
 
