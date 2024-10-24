@@ -297,19 +297,30 @@ fourthSectionChoiceOfService.addEventListener('click', () => {
     choiceOfServicePlaceholder.style.color = "var(--blue)";
 });
 
-dropListDesign.addEventListener('click', () => {
-    choiceOfServicePlaceholder.innerText = "Creative Design";
+
+dropListWrapper.addEventListener('mouseleave', () => {
+    dropList.style.opacity = "0";
+    fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+    fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+    dropList.style.pointerEvents = "none";
+    choiceOfServicePlaceholder.style.color = "var(--darkBlue)";
 });
 
-// dropListWrapper.addEventListener('mouseleave', () => {
-//     dropList.style.opacity = "0";
-//     fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-//     fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
-//     dropList.style.pointerEvents = "none";
-//     choiceOfServicePlaceholder.style.color = "var(--darkBlue)";
-// });
+const dropListArray = [
+    "Creative Design",
+    "Website design and development",
+    "Video production",
+    "Support and content",
+    "Promotion on social networks",
+    "Setting up payment"
+];
 
 
+dropListDesign.addEventListener('click', () => {
+    choiceOfServicePlaceholder.innerText = dropListArray[0];
+    const dropListDesignDiv = document.createElement('div');
+    
+});
 
 const red = document.getElementById("red");
 const green = document.getElementById("green");
