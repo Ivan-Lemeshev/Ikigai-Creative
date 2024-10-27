@@ -278,33 +278,17 @@ const lightAnimation = (data, id) => {
     }
 };
 
-const dropListWrapper = document.getElementById("drop-list-wrapper");
-const choiceOfServicePlaceholder = document.getElementById("choice-of-service-placeholder");
-
-const dropListDesign = document.getElementById("drop-list-design");
 const dropListDevelopment = document.getElementById("drop-list-development");
 const dropListVideoProduction = document.getElementById("drop-list-video-production");
 const dropListSupport = document.getElementById("drop-list-support");
 const dropListPromotion = document.getElementById("drop-list-promotion");
 const dropListSetting = document.getElementById("drop-list-setting");
 
+const dropListWrapper = document.getElementById("drop-list-wrapper");
+const choiceOfServicePlaceholder = document.getElementById("choice-of-service-placeholder");
 
-fourthSectionChoiceOfService.addEventListener('click', () => {
-    dropList.style.opacity = "1";
-    fourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
-    fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 0)";
-    dropList.style.pointerEvents = "all";
-    choiceOfServicePlaceholder.style.color = "var(--blue)";
-});
+const dropListDesign = document.getElementById("drop-list-design");
 
-
-dropListWrapper.addEventListener('mouseleave', () => {
-    dropList.style.opacity = "0";
-    fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-    fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
-    dropList.style.pointerEvents = "none";
-    choiceOfServicePlaceholder.style.color = "var(--darkBlue)";
-});
 
 const dropListArray = [
     "Creative Design",
@@ -315,27 +299,71 @@ const dropListArray = [
     "Setting up payment"
 ];
 
+let arrayCounter = false;
+
+fourthSectionChoiceOfService.addEventListener('click', () => {
+    if (!arrayCounter) {
+        dropList.style.opacity = "1";
+        fourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
+        fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 0)";
+        dropList.style.pointerEvents = "all";
+        choiceOfServicePlaceholder.style.color = "var(--blue)";
+    };
+    arrayCounter = true;
+});
+
+
+dropListWrapper.addEventListener('mouseleave', () => {
+    if (arrayCounter) {
+        dropList.style.opacity = "0";
+        fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+        fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+        dropList.style.pointerEvents = "none";
+        choiceOfServicePlaceholder.style.color = "var(--darkBlue)";
+        // arrayCounter = false;
+    };
+});
+
 
 dropListDesign.addEventListener('click', () => {
-    choiceOfServicePlaceholder.innerText = dropListArray[0];
-    const dropListDesignDiv = document.createElement('div');
-    
+    if (arrayCounter) {
+        const dropListDesignDiv = document.createElement('div');
+        choiceOfServicePlaceholder.innerText = dropListArray[0];
+        dropListDesignDiv.classList = "drop-list-js";
+        dropListWrapper.appendChild(dropListDesignDiv);
+        dropList.style.opacity = "0";
+        dropListDesignDiv.style.opacity = "1";
+
+        for (let i = 1; i < dropListArray.length; i++) {
+            const dropListItem = document.createElement('div');
+            dropListItem.classList = "drop-list-item-js";
+            dropListItem.innerText = dropListArray[i];
+            dropListDesignDiv.appendChild(dropListItem);
+        };
+        dropListDesignDiv.style.opacity = "0";
+        fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+        choiceOfServicePlaceholder.style.color = "var(--blue)";
+        fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+    }
+    arrayCounter = false;
 });
 
-const red = document.getElementById("red");
-const green = document.getElementById("green");
 
-red.addEventListener('click', () => {
-    let redResult = arrayCalc.filter(elem => {
-        return elem.color === "red";
-    });
-    console.log(redResult)
-});
 
-green.addEventListener('click', () => {
-    let greenResult = arrayCalc.filter(elem => {
-        return elem.color === "green";
-    });
-    console.log(greenResult)
-});
+// const red = document.getElementById("red");
+// const green = document.getElementById("green");
+
+// red.addEventListener('click', () => {
+//     let redResult = arrayCalc.filter(elem => {
+//         return elem.color === "red";
+//     });
+//     console.log(redResult)
+// });
+
+// green.addEventListener('click', () => {
+//     let greenResult = arrayCalc.filter(elem => {
+//         return elem.color === "green";
+//     });
+//     console.log(greenResult)
+// });
 
