@@ -65,7 +65,7 @@ const thirdSectionLowerPartDivFifth = document.getElementById("third-section-low
 
 const fourthSectionChoiceOfService = document.getElementById("choice-of-service");
 const fourthSectionChoiceOfServiceArrow = document.getElementById("choice-of-service-arrow");
-const dropList = document.getElementById("drop-list");
+
 
 
 
@@ -278,16 +278,9 @@ const lightAnimation = (data, id) => {
     }
 };
 
-const dropListDevelopment = document.getElementById("drop-list-development");
-const dropListVideoProduction = document.getElementById("drop-list-video-production");
-const dropListSupport = document.getElementById("drop-list-support");
-const dropListPromotion = document.getElementById("drop-list-promotion");
-const dropListSetting = document.getElementById("drop-list-setting");
-
 const dropListWrapper = document.getElementById("drop-list-wrapper");
 const choiceOfServicePlaceholder = document.getElementById("choice-of-service-placeholder");
 
-const dropListDesign = document.getElementById("drop-list-design");
 
 
 const dropListArray = [
@@ -299,71 +292,53 @@ const dropListArray = [
     "Setting up payment"
 ];
 
-let arrayCounter = false;
-
-fourthSectionChoiceOfService.addEventListener('click', () => {
-    if (!arrayCounter) {
-        dropList.style.opacity = "1";
-        fourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
-        fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 0)";
-        dropList.style.pointerEvents = "all";
-        choiceOfServicePlaceholder.style.color = "var(--blue)";
-    };
-    arrayCounter = true;
-});
+let selectCategory = "";
 
 
-dropListWrapper.addEventListener('mouseleave', () => {
-    if (arrayCounter) {
-        dropList.style.opacity = "0";
-        fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-        fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
-        dropList.style.pointerEvents = "none";
-        choiceOfServicePlaceholder.style.color = "var(--darkBlue)";
-        // arrayCounter = false;
-    };
-});
+fourthSectionChoiceOfService.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const newDropListWrapper = document.createElement('div');
+    newDropListWrapper.id = "drop-list";
 
+    const actualityCategory = dropListArray.filter((textCategory) => {
+        return textCategory !== selectCategory;
+    });
 
-dropListDesign.addEventListener('click', () => {
-    if (arrayCounter) {
-        const dropListDesignDiv = document.createElement('div');
-        choiceOfServicePlaceholder.innerText = dropListArray[0];
-        dropListDesignDiv.classList = "drop-list-js";
-        dropListWrapper.appendChild(dropListDesignDiv);
-        dropList.style.opacity = "0";
-        dropListDesignDiv.style.opacity = "1";
+    actualityCategory.forEach (textSelectCategoty => {
+        const newDropListPoint = document.createElement('div');
+        newDropListPoint.textContent = textSelectCategoty;
+        newDropListPoint.classList = "drop-list-item";
 
-        for (let i = 1; i < dropListArray.length; i++) {
-            const dropListItem = document.createElement('div');
-            dropListItem.classList = "drop-list-item-js";
-            dropListItem.innerText = dropListArray[i];
-            dropListDesignDiv.appendChild(dropListItem);
-        };
-        dropListDesignDiv.style.opacity = "0";
-        fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-        choiceOfServicePlaceholder.style.color = "var(--blue)";
-        fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+        newDropListPoint.addEventListener('click', (event) => {
+            event.stopPropagation();
+            selectCategory = textSelectCategoty;
+            choiceOfServicePlaceholder.textContent = textSelectCategoty;
+            newDropListWrapper.style.opacity = "0";
+            fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+            fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+            newDropListWrapper.style.pointerEvents = "none";
+        });
+        newDropListWrapper.appendChild(newDropListPoint);
+    });
+
+    newDropListWrapper.style.opacity = "1";
+    fourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
+    fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 0)";
+    newDropListWrapper.style.pointerEvents = "all";
+    choiceOfServicePlaceholder.style.color = "var(--blue)";
+    const possibleDublicate = document.getElementById("drop-list");
+    if (possibleDublicate) {
+        dropListWrapper.removeChild(possibleDublicate);
     }
-    arrayCounter = false;
+    dropListWrapper.appendChild(newDropListWrapper);
+
+    dropListWrapper.addEventListener('mouseleave', () => {
+        if(!selectCategory) {
+            choiceOfServicePlaceholder.style.color = "var(--darkBlue)";
+        };
+        newDropListWrapper.style.opacity = "0";
+        fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+        fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+        newDropListWrapper.style.pointerEvents = "none";
+    });
 });
-
-
-
-// const red = document.getElementById("red");
-// const green = document.getElementById("green");
-
-// red.addEventListener('click', () => {
-//     let redResult = arrayCalc.filter(elem => {
-//         return elem.color === "red";
-//     });
-//     console.log(redResult)
-// });
-
-// green.addEventListener('click', () => {
-//     let greenResult = arrayCalc.filter(elem => {
-//         return elem.color === "green";
-//     });
-//     console.log(greenResult)
-// });
-

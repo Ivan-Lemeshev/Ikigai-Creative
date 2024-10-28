@@ -663,12 +663,15 @@ body {
     justify-content: space-between;
     cursor: pointer;
     transition: border-bottom-color ease-in-out 0.3s;
+    overflow: hidden;
+
 
     &>#choice-of-service-placeholder {
         color: var(--darkBlue);
         font-weight: 300;
         font-size: 1.5625vw;
         transition: color ease-in-out 0.3s;
+        overflow: hidden;
     }
 
     &>#choice-of-service-arrow {
@@ -684,7 +687,7 @@ body {
 
 #drop-list {
     width: 21.875vw;
-    height: 14.375vw;
+    height: auto;
     position: absolute;
     z-index: 10;
     border: 1px solid #015A8C;
@@ -701,6 +704,7 @@ body {
     backdrop-filter: blur(0.41667vw);
     overflow: hidden;
     pointer-events: none;
+    overflow: hidden;
 
     &>.drop-list-item {
         width: 21.875vw;
@@ -733,56 +737,6 @@ body {
 
 }
 
-.drop-list-js {
-    width: 21.875vw;
-    height: 12.08333vw;
-    position: absolute;
-    z-index: 10;
-    border: 1px solid #015A8C;
-    border-bottom-left-radius: 0.52083vw;
-    border-bottom-right-radius: 0.52083vw;
-    text-align: left;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    top: 3.125vw;
-    display: inline-block;
-    display: flex;
-    flex-wrap: wrap;
-    transition: opacity 0.3s ease-in-out;
-    backdrop-filter: blur(0.41667vw);
-    overflow: hidden;
-    pointer-events: none;
-
-    &>.drop-list-item-js {
-        width: 21.875vw;
-        height: 2.4vw;
-        display: flex;
-        align-items: center;
-        padding-left: 0.52083vw;
-        color: #01679F;
-        font-size: 1.35417vw;
-        text-align: left;
-        font-weight: 300;
-        cursor: pointer;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #01679F;
-    }
-
-    &>.drop-list-item-js:first-child {
-        padding-top: 0.41667vw;
-    }
-
-    &>.drop-list-item-js:last-child {
-        padding-bottom: 0.41667vw;
-    }
-
-
-    &>.drop-list-item-js:hover {
-        background-color: #006AA4;
-        color: #B9E6FF;
-    }
-
-}
 
 #textarea-title {
     font-weight: 300;
