@@ -567,15 +567,16 @@ body {
     background-color: rgba(0, 83, 128, 0.07);
     border: 0.10417vw solid rgba(0, 154, 236, 0.5);
     z-index: 2;
+    overflow: hidden;
 }
 
 #main-send-form-title {
     font-weight: 400;
     font-size: 1.875vw;
     color: var(--blue);
-    margin-top: 2.34375vw;
-    margin-left: 2.34375vw;
     position: absolute;
+    top: 2.34375vw;
+    left: 2.34375vw;
 }
 
 #main-send-form-svg {
@@ -584,8 +585,8 @@ body {
     pointer-events: none;
     width: 2.60417vw;
     height: 2.60417vw;
-    margin-top: 2.3vw;
-    margin-left: 45.3125vw;
+    top: 2.3vw;
+    left: 45.3125vw;
 }
 
 #input-first-name,
@@ -609,23 +610,46 @@ body {
 }
 
 #input-first-name {
-    margin-top: 7.29167vw;
-    margin-left: 2.34375vw;
+    top: 7.29167vw;
+    left: 2.34375vw;
 }
 
 #input-last-name {
-    margin-top: 7.29167vw;
-    margin-left: 26.30208vw;
+    top: 7.29167vw;
+    left: 26.30208vw;
 }
 
 #input-phone {
-    margin-top: 12.23958vw;
-    margin-left: 2.34375vw;
+    top: 12.23958vw;
+    left: 2.34375vw;
 }
 
 #input-email {
-    margin-top: 12.23958vw;
-    margin-left: 26.30208vw;
+    top: 12.23958vw;
+    left: 26.30208vw;
+}
+
+.error-img {
+    position: relative;
+    height: 2.08333vw;
+    width: 2.08333vw;
+    opacity: 0;
+}
+#error-img-first-name-input {
+    left: 21.35417vw;
+    top: 7.8125vw;
+}
+
+.correct-img {
+    position: relative;
+    height: 1.5625vw;
+    width: 1.5625vw;
+    opacity: 0;
+}
+
+correct-img-first-name-input {
+    left: 19.53125vw;
+    top: 7.8125vw;
 }
 
 #choice-serveces-title {
@@ -635,8 +659,8 @@ body {
     color: var(--blue);
     font-weight: 300;
     font-size: 1.5625vw;
-    margin-top: 17.1875vw;
-    margin-left: 2.86458vw;
+    top: 17.1875vw;
+    left: 2.86458vw;
 }
 
 #drop-list-wrapper {
@@ -743,8 +767,8 @@ body {
     font-size: 1.5625vw;
     color: var(--blue);
     position: absolute;
-    margin-top: 22.13542vw;
-    margin-left: 2.86458vw;
+    top: 22.13542vw;
+    left: 2.86458vw;
 }
 
 #textarea {
@@ -754,9 +778,9 @@ body {
     font-weight: 300;
     font-size: 1.5625vw;
     color: var(--blue);
-    margin-top: 25.26042vw;
-    margin-top: 24vw;
-    margin-left: 2.86458vw;
+    top: 25.26042vw;
+    top: 24vw;
+    left: 2.86458vw;
     overflow: hidden;
     color: var(--darkBlue);
     font-weight: 300;
@@ -780,8 +804,8 @@ body {
     border-bottom: 0.05208vw solid var(--blue);
     border-top: 0.05208vw solid var(--blue);
     position: absolute;
-    margin-top: 28.38542vw;
-    margin-left: 2.34375vw;
+    top: 28.38542vw;
+    left: 2.34375vw;
     pointer-events: none;
     user-select: none;
 }
@@ -790,8 +814,8 @@ body {
     position: absolute;
     width: 20.83333vw;
     height: 3.59375vw;
-    margin-top: 35.05208vw;
-    margin-left: 13.85417vw;
+    top: 35.05208vw;
+    left: 13.85417vw;
     background-color: rgba(0, 13, 21, 0.8);
     border: 0.05208vw solid var(--deepDarkBlue);
     color: var(--darkBlue);

@@ -304,7 +304,7 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
         return textCategory !== selectCategory;
     });
 
-    actualityCategory.forEach (textSelectCategoty => {
+    actualityCategory.forEach(textSelectCategoty => {
         const newDropListPoint = document.createElement('div');
         newDropListPoint.textContent = textSelectCategoty;
         newDropListPoint.classList = "drop-list-item";
@@ -333,7 +333,7 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
     dropListWrapper.appendChild(newDropListWrapper);
 
     dropListWrapper.addEventListener('mouseleave', () => {
-        if(!selectCategory) {
+        if (!selectCategory) {
             choiceOfServicePlaceholder.style.color = "var(--darkBlue)";
         };
         newDropListWrapper.style.opacity = "0";
@@ -341,4 +341,40 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
         fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
         newDropListWrapper.style.pointerEvents = "none";
     });
+});
+
+const mainSendForm = document.getElementById('main-send-form');
+
+const inputFirstName = document.getElementById("input-first-name");
+const inputLastName = document.getElementById("input-last-name");
+const inputPhone = document.getElementById("input-phone");
+const inputEmail = document.getElementById("input-email");
+
+// const inputElement = document.getElementById('textInput');
+const maxLength = 14;
+
+const errorImg = document.createElement('img');
+mainSendForm.appendChild(errorImg);
+const correctImg = document.createElement('img');
+mainSendForm.appendChild(correctImg);
+
+inputFirstName.addEventListener('input', () => {
+    const inputValue = inputFirstName.value;
+    const filteredString = inputValue.replace(/[^а-яА-ЯёЁa-zA-Z0-9]/g, '');
+    if (filteredString !== inputValue) {
+        console.log(1);
+        errorImg.style.opacity = "1";
+        inputFirstName.value = filteredString;
+    } else if (filteredString.length > maxLength) {
+        errorImg.style.opacity = "1";
+        inputFirstName.value = filteredString.slice(0, maxLength); // Удаляем символы, превышающие максимальную длину
+    } else {
+        correctImg.style.opacity = "1";
+        errorImg.style.opacity = "0";
+    }
+
+    // Преобразуем введенное значение в Capitalize
+    if (filteredString.length) {
+        inputFirstName.value = filteredString.value.charAt(0).toUpperCase() + filteredString.value.slice(1).toLowerCase();
+    };
 });
