@@ -345,36 +345,83 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
 
 const mainSendForm = document.getElementById('main-send-form');
 
+
+const errorImgFirstName = document.getElementById('error-img-first-name-input');
+const correctImgFirstName = document.getElementById('correct-img-first-name-input');
 const inputFirstName = document.getElementById("input-first-name");
+
 const inputLastName = document.getElementById("input-last-name");
+const errorImgLastName = document.getElementById('error-img-last-name-input');
+const correctImgLastName = document.getElementById('correct-img-last-name-input');
+
 const inputPhone = document.getElementById("input-phone");
+const errorImgPhone = document.getElementById('error-img-phone-input');
+const correctImgPhone = document.getElementById('correct-img-phone-input');
+
 const inputEmail = document.getElementById("input-email");
+const errorImgEmail = document.getElementById('error-img-email-input');
+const correctImgEmail = document.getElementById('correct-img-email-input');
 
-// const inputElement = document.getElementById('textInput');
-const maxLength = 14;
 
-const errorImg = document.createElement('img');
-mainSendForm.appendChild(errorImg);
-const correctImg = document.createElement('img');
-mainSendForm.appendChild(correctImg);
+function capitalize(str) {
+    return str.split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+}
 
 inputFirstName.addEventListener('input', () => {
     const inputValue = inputFirstName.value;
-    const filteredString = inputValue.replace(/[^а-яА-ЯёЁa-zA-Z0-9]/g, '');
-    if (filteredString !== inputValue) {
-        console.log(1);
-        errorImg.style.opacity = "1";
-        inputFirstName.value = filteredString;
-    } else if (filteredString.length > maxLength) {
-        errorImg.style.opacity = "1";
-        inputFirstName.value = filteredString.slice(0, maxLength); // Удаляем символы, превышающие максимальную длину
-    } else {
-        correctImg.style.opacity = "1";
-        errorImg.style.opacity = "0";
+    let editValue = inputValue.replace(/[^a-zA-Zа-яА-ЯёЁ]/g, '');
+    if (editValue.length > 10) {
+        editValue = editValue.slice(0, 10);
     }
-
-    // Преобразуем введенное значение в Capitalize
-    if (filteredString.length) {
-        inputFirstName.value = filteredString.value.charAt(0).toUpperCase() + filteredString.value.slice(1).toLowerCase();
-    };
+    if (editValue.length > 0) {
+        correctImgFirstName.style.opacity = 1;
+    } else {
+        correctImgFirstName.style.opacity = 0;
+    }
+    inputFirstName.value = capitalize(editValue);
 });
+
+inputLastName.addEventListener('input', () => {
+    const inputValue = inputLastName.value;
+    let editValue = inputValue.replace(/[^a-zA-Zа-яА-ЯёЁ]/g, '');
+    if (editValue.length > 10) {
+        editValue = editValue.slice(0, 10);
+    }
+    if (editValue.length > 0) {
+        correctImgLastName.style.opacity = 1;
+    } else {
+        correctImgLastName.style.opacity = 0;
+    }
+    inputLastName.value = capitalize(editValue);
+});
+
+inputPhone.addEventListener('input', () => {
+    const inputValue = inputPhone.value;
+    let editValue = inputValue.replace(/[^0-9+]/g, '');
+    if (editValue.length > 12) {
+        editValue = editValue.slice(0, 12);
+    }
+    if (editValue.length > 0) {
+        correctImgPhone.style.opacity = 1;
+    } else {
+        correctImgPhone.style.opacity = 0;
+    }
+    inputPhone.value = capitalize(editValue);
+});
+
+inputEmail.addEventListener('input', () => {
+    const inputValue = inputEmail.value;
+    let editValue = inputValue.replace(/[^a-zA-Z1-9@./*+-,?^;:%$#!]/g, '');
+    if (editValue.length > 20) {
+        editValue = editValue.slice(0, 20);
+    }
+    if (editValue.length > 0) {
+        correctImgEmail.style.opacity = 1;
+    } else {
+        correctImgEmail.style.opacity = 0;
+    }
+    inputEmail.value = capitalize(editValue);
+});
+

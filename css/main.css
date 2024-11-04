@@ -634,10 +634,26 @@ body {
     height: 2.08333vw;
     width: 2.08333vw;
     opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 #error-img-first-name-input {
     left: 21.35417vw;
     top: 7.8125vw;
+}
+
+#error-img-last-name-input {
+    left: 40.7vw;
+    top: 7.8125vw;
+}
+
+#error-img-phone-input {
+    left: 12.25vw;
+    top: 12.75vw;
+}
+
+#error-img-email-input {
+    left: 31.65vw;
+    top: 12.75vw;
 }
 
 .correct-img {
@@ -645,11 +661,27 @@ body {
     height: 1.5625vw;
     width: 1.5625vw;
     opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-correct-img-first-name-input {
+#correct-img-first-name-input {
     left: 19.53125vw;
     top: 7.8125vw;
+}
+
+#correct-img-last-name-input {
+    left: 38.95vw;
+    top: 7.8125vw;
+}
+
+#correct-img-phone-input {
+    left: 10.5vw;
+    top: 12.75vw;
+}
+
+#correct-img-email-input {
+    left: 29.9vw;
+    top: 12.75vw;
 }
 
 #choice-serveces-title {
