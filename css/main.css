@@ -630,7 +630,7 @@ body {
 }
 
 .error-img {
-    position: relative;
+    position: absolute;
     height: 2.08333vw;
     width: 2.08333vw;
     opacity: 0;
@@ -642,22 +642,22 @@ body {
 }
 
 #error-img-last-name-input {
-    left: 40.7vw;
+    left: 45.57292vw;
     top: 7.8125vw;
 }
 
 #error-img-phone-input {
-    left: 12.25vw;
+    left: 21.35417vw;
     top: 12.75vw;
 }
 
 #error-img-email-input {
-    left: 31.65vw;
+    left: 45.57292vw;
     top: 12.75vw;
 }
 
 .correct-img {
-    position: relative;
+    position: absolute;
     height: 1.5625vw;
     width: 1.5625vw;
     opacity: 0;
@@ -665,22 +665,22 @@ body {
 }
 
 #correct-img-first-name-input {
-    left: 19.53125vw;
+    left: 21.875vw;
     top: 7.8125vw;
 }
 
 #correct-img-last-name-input {
-    left: 38.95vw;
+    left: 46.09375vw;
     top: 7.8125vw;
 }
 
 #correct-img-phone-input {
-    left: 10.5vw;
+    left: 21.875vw;
     top: 12.75vw;
 }
 
 #correct-img-email-input {
-    left: 29.9vw;
+    left: 46.09375vw;
     top: 12.75vw;
 }
 
@@ -814,13 +814,14 @@ body {
     top: 24vw;
     left: 2.86458vw;
     overflow: hidden;
-    color: var(--darkBlue);
+    color: var(--blue);
     font-weight: 300;
     line-height: 200%;
     font-size: 1.875vw;
     word-wrap: break-word;
     overflow-y: hidden;
     padding-top: 0.78125vw;
+
 
     &::placeholder {
         font-size: 1.5625vw;
