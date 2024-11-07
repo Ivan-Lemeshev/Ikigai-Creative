@@ -413,7 +413,7 @@ inputPhone.addEventListener('input', () => {
 
 inputEmail.addEventListener('input', () => {
     const inputValue = inputEmail.value;
-    let editValue = inputValue.replace(/[^a-zA-Z1-9@./*+-,?^;:%$#!]/g, '');
+    let editValue = inputValue.replace(/[^a-zA-Z1-9@_\.-]/g, '');
     if (editValue.length > 20) {
         editValue = editValue.slice(0, 20);
     }
@@ -422,6 +422,44 @@ inputEmail.addEventListener('input', () => {
     } else {
         correctImgEmail.style.opacity = 0;
     }
-    inputEmail.value = capitalize(editValue);
+    inputEmail.value = editValue;
 });
 
+
+const submitButtonFourthSection = document.getElementById('send-form-submit');
+
+submitButtonFourthSection.addEventListener('mouseenter', () => {
+    let resultChecked = true;
+
+    if (!inputFirstName.value.length) {
+        errorImgFirstName.style.opacity = 1;
+        resultChecked = false;
+    } else {
+        errorImgFirstName.style.opacity = 0;
+    }
+    if (!inputLastName.value.length) {
+        errorImgLastName.style.opacity = 1;
+        resultChecked = false;
+    } else {
+        errorImgLastName.style.opacity = 0;
+    }
+    if (!inputPhone.value.length) {
+        errorImgPhone.style.opacity = 1;
+        resultChecked = false;
+    } else {
+        errorImgPhone.style.opacity = 0;
+    }
+
+    if (!inputEmail.value.length) {
+        errorImgEmail.style.opacity = 1;
+        resultChecked = false;
+    } else {
+        errorImgEmail.style.opacity = 0;
+    }
+
+    if (resultChecked) {
+        submitButtonFourthSection.className = "send-form-submit-activ";
+    } else {
+        submitButtonFourthSection.className = " ";
+    }
+});
