@@ -140,10 +140,12 @@
             <img id="main-send-form-svg" src="/img/svg/main-send-form-svg.svg" alt="main-send-form-svg">
             <input id="input-first-name" type="text" value="" placeholder="First name">
             <img src="/img/svg/error-input.svg" alt="error-img" class="error-img" id="error-img-first-name-input">
-            <img src="/img/svg/checked-input.svg" alt="correct-img" class="correct-img" id="correct-img-first-name-input">
+            <img src="/img/svg/checked-input.svg" alt="correct-img" class="correct-img"
+                id="correct-img-first-name-input">
             <input id="input-last-name" type="text" value="" placeholder="Last name">
             <img src="/img/svg/error-input.svg" alt="error-img" class="error-img" id="error-img-last-name-input">
-            <img src="/img/svg/checked-input.svg" alt="correct-img" class="correct-img" id="correct-img-last-name-input">
+            <img src="/img/svg/checked-input.svg" alt="correct-img" class="correct-img"
+                id="correct-img-last-name-input">
             <input id="input-phone" type="tel" value="" placeholder="Phone">
             <img src="/img/svg/error-input.svg" alt="error-img" class="error-img" id="error-img-phone-input">
             <img src="/img/svg/checked-input.svg" alt="correct-img" class="correct-img" id="correct-img-phone-input">
@@ -163,7 +165,15 @@
             <textarea id="textarea"
                 placeholder="In this field, you can provide any additional details or requests for your order, including your preferred method of contact."></textarea>
             <div id="placeholder-textarea"></div>
+            <div id="button-wrapper"> 
+            <div id="required-fields" class="required">Please fill in all <span>required</span>
+                fields before submitting the form!</div>
+            <div id="correctly" class="required">Please fill in the <span>required</span> fields <span>correctly</span>!
+
+            </div>
             <button id="send-form-submit">Submit</button>
+            >
+        </div>
         </div>
 
         <div id="alternative-send-form">

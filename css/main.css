@@ -636,6 +636,7 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
+
 #error-img-first-name-input {
     left: 21.35417vw;
     top: 7.8125vw;
@@ -843,11 +844,41 @@ body {
     user-select: none;
 }
 
+#button-wrapper {
+    width: 46.35417vw;
+    height: 3.59375vw;
+    position: absolute;
+    left: 2.34375vw;
+    top: 35.05208vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &>.required {
+        width: 22.39583vw;
+        height: 3.38542vw;
+        position: absolute;
+        left: 25.78125vw;
+        font-weight: 300;
+        line-height: 1.5625vw;
+        text-align: justify;
+        font-size: 1.5625vw;
+        color: var(--blue);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+
+        &>span {
+            font-weight: 500;
+        }
+    }
+}
+
+
+
 #send-form-submit {
     position: absolute;
     width: 20.83333vw;
     height: 3.59375vw;
-    top: 35.05208vw;
     left: 13.85417vw;
     background-color: rgba(0, 13, 21, 0.8);
     border: 0.05208vw solid var(--deepDarkBlue);

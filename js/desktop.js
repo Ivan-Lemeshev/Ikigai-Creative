@@ -427,6 +427,9 @@ inputEmail.addEventListener('input', () => {
 
 
 const submitButtonFourthSection = document.getElementById('send-form-submit');
+const requiredFieldsText = document.getElementById("required-fields");
+const correctlyText = document.getElementById("correctly");
+const buttonWrapper = document.getElementById("button-wrapper");
 
 submitButtonFourthSection.addEventListener('mouseenter', () => {
     let resultChecked = true;
@@ -434,32 +437,106 @@ submitButtonFourthSection.addEventListener('mouseenter', () => {
     if (!inputFirstName.value.length) {
         errorImgFirstName.style.opacity = 1;
         resultChecked = false;
+        requiredFieldsText.style.opacity = 1;
+        submitButtonFourthSection.style.left = "2.34375vw";
     } else {
         errorImgFirstName.style.opacity = 0;
+        requiredFieldsText.style.opacity = 0;
+        submitButtonFourthSection.style.left = "13.85417vw";
     }
     if (!inputLastName.value.length) {
         errorImgLastName.style.opacity = 1;
         resultChecked = false;
+        requiredFieldsText.style.opacity = 1;
+        submitButtonFourthSection.style.left = "2.34375vw";
     } else {
         errorImgLastName.style.opacity = 0;
+        requiredFieldsText.style.opacity = 0;
+        submitButtonFourthSection.style.left = "13.85417vw";
     }
     if (!inputPhone.value.length) {
         errorImgPhone.style.opacity = 1;
         resultChecked = false;
+        requiredFieldsText.style.opacity = 1;
+        submitButtonFourthSection.style.left = "2.34375vw";
     } else {
         errorImgPhone.style.opacity = 0;
+        requiredFieldsText.style.opacity = 0;
+        submitButtonFourthSection.style.left = "13.85417vw";
     }
-
     if (!inputEmail.value.length) {
         errorImgEmail.style.opacity = 1;
         resultChecked = false;
+        requiredFieldsText.style.opacity = 1;
+        submitButtonFourthSection.style.left = "2.34375vw";
     } else {
         errorImgEmail.style.opacity = 0;
+        requiredFieldsText.style.opacity = 0;
+        submitButtonFourthSection.style.left = "13.85417vw";
     }
 
     if (resultChecked) {
         submitButtonFourthSection.className = "send-form-submit-activ";
+        requiredFieldsText.style.opacity = 0;
     } else {
         submitButtonFourthSection.className = " ";
+        submitButtonFourthSection.style.left = "2.34375vw";
+        requiredFieldsText.style.opacity = 1;
     }
-});
+}
+);
+
+// buttonWrapper.addEventListener('mouseleave', () => {
+//     let resultChecked = true;
+
+//     if (!inputFirstName.value.length) {
+//         errorImgFirstName.style.opacity = 1;
+//         resultChecked = false;
+//         requiredFieldsText.style.opacity = 1;
+//         submitButtonFourthSection.style.left = "2.34375vw";
+//     } else {
+//         errorImgFirstName.style.opacity = 0;
+//         requiredFieldsText.style.opacity = 0;
+//         submitButtonFourthSection.style.left = "13.85417vw";
+//     }
+//     if (!inputLastName.value.length) {
+//         errorImgLastName.style.opacity = 1;
+//         resultChecked = false;
+//         requiredFieldsText.style.opacity = 1;
+//         submitButtonFourthSection.style.left = "2.34375vw";
+//     } else {
+//         errorImgLastName.style.opacity = 0;
+//         requiredFieldsText.style.opacity = 0;
+//         submitButtonFourthSection.style.left = "13.85417vw";
+//     }
+//     if (!inputPhone.value.length) {
+//         errorImgPhone.style.opacity = 1;
+//         resultChecked = false;
+//         requiredFieldsText.style.opacity = 1;
+//         submitButtonFourthSection.style.left = "2.34375vw";
+//     } else {
+//         errorImgPhone.style.opacity = 0;
+//         requiredFieldsText.style.opacity = 0;
+//         submitButtonFourthSection.style.left = "13.85417vw";
+//     }
+//     if (!inputEmail.value.length) {
+//         errorImgEmail.style.opacity = 1;
+//         resultChecked = false;
+//         requiredFieldsText.style.opacity = 1;
+//         submitButtonFourthSection.style.left = "2.34375vw";
+//     } else {
+//         errorImgEmail.style.opacity = 0;
+//         requiredFieldsText.style.opacity = 0;
+//         submitButtonFourthSection.style.left = "13.85417vw";
+//     }
+
+//     if (resultChecked) {
+//         submitButtonFourthSection.className = "send-form-submit-activ";
+//         requiredFieldsText.style.opacity = 0;
+//     } else {
+//         submitButtonFourthSection.className = " ";
+//         submitButtonFourthSection.style.left = "2.34375vw";
+//         requiredFieldsText.style.opacity = 1;
+//     }
+
+// })
