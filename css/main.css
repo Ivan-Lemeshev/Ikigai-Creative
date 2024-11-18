@@ -737,7 +737,12 @@ body {
         height: 0.83333vw;
         pointer-events: all;
         rotate: 0deg;
-        transition: rotate 0.5s ease-in-out;
+        transition: rotate 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        opacity: 1;
+    }
+
+    &>#correct-img-choice-of-service {
+        left: 19.79167vw;
     }
 }
 
@@ -848,11 +853,11 @@ body {
     width: 46.35417vw;
     height: 3.59375vw;
     position: absolute;
-    left: 2.34375vw;
     top: 35.05208vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: visible;
 
     &>.required {
         width: 22.39583vw;
@@ -872,8 +877,6 @@ body {
         }
     }
 }
-
-
 
 #send-form-submit {
     position: absolute;

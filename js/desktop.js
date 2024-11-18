@@ -280,6 +280,7 @@ const lightAnimation = (data, id) => {
 
 const dropListWrapper = document.getElementById("drop-list-wrapper");
 const choiceOfServicePlaceholder = document.getElementById("choice-of-service-placeholder");
+const correctImgChoiceOfServise = document.getElementById('correct-img-choice-of-service');
 
 
 
@@ -336,15 +337,15 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
         if (!selectCategory) {
             choiceOfServicePlaceholder.style.color = "var(--darkBlue)";
         };
+        correctImgChoiceOfServise.style.opacity = 1;
         newDropListWrapper.style.opacity = "0";
-        fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+        fourthSectionChoiceOfServiceArrow.style.opacity = "0";
         fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
         newDropListWrapper.style.pointerEvents = "none";
     });
 });
 
 const mainSendForm = document.getElementById('main-send-form');
-
 
 const errorImgFirstName = document.getElementById('error-img-first-name-input');
 const correctImgFirstName = document.getElementById('correct-img-first-name-input');
@@ -430,7 +431,10 @@ const submitButtonFourthSection = document.getElementById('send-form-submit');
 const requiredFieldsText = document.getElementById("required-fields");
 const correctlyText = document.getElementById("correctly");
 const buttonWrapper = document.getElementById("button-wrapper");
-
+function isValidEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
 submitButtonFourthSection.addEventListener('mouseenter', () => {
     let resultChecked = true;
 
@@ -475,68 +479,75 @@ submitButtonFourthSection.addEventListener('mouseenter', () => {
         submitButtonFourthSection.style.left = "13.85417vw";
     }
 
-    if (resultChecked) {
+
+
+    if (!isValidEmail(inputEmail.value)) {
+        submitButtonFourthSection.className = " ";
+        submitButtonFourthSection.style.left = "2.34375vw";
+        correctlyText.style.opacity = 1;
+        requiredFieldsText.style.opacity = 0;
+    } else {
+        submitButtonFourthSection.className = "send-form-submit-activ";
+        submitButtonFourthSection.style.left = "13.85417vw";
+    }
+
+    if (resultChecked && isValidEmail(inputEmail.value)) {
         submitButtonFourthSection.className = "send-form-submit-activ";
         requiredFieldsText.style.opacity = 0;
+        errorImgEmail.style.opacity = 0;
+        correctImgEmail.style.opacity = 1;
     } else {
         submitButtonFourthSection.className = " ";
         submitButtonFourthSection.style.left = "2.34375vw";
-        requiredFieldsText.style.opacity = 1;
+        requiredFieldsText.style.opacity = 0;
+        correctlyText.style.opacity = 1;
+        errorImgEmail.style.opacity = 1;
+        correctImgEmail.style.opacity = 0;
     }
 }
 );
 
-// buttonWrapper.addEventListener('mouseleave', () => {
-//     let resultChecked = true;
+buttonWrapper.addEventListener('mouseleave', () => {
+    let resultChecked = true;
 
-//     if (!inputFirstName.value.length) {
-//         errorImgFirstName.style.opacity = 1;
-//         resultChecked = false;
-//         requiredFieldsText.style.opacity = 1;
-//         submitButtonFourthSection.style.left = "2.34375vw";
-//     } else {
-//         errorImgFirstName.style.opacity = 0;
-//         requiredFieldsText.style.opacity = 0;
-//         submitButtonFourthSection.style.left = "13.85417vw";
-//     }
-//     if (!inputLastName.value.length) {
-//         errorImgLastName.style.opacity = 1;
-//         resultChecked = false;
-//         requiredFieldsText.style.opacity = 1;
-//         submitButtonFourthSection.style.left = "2.34375vw";
-//     } else {
-//         errorImgLastName.style.opacity = 0;
-//         requiredFieldsText.style.opacity = 0;
-//         submitButtonFourthSection.style.left = "13.85417vw";
-//     }
-//     if (!inputPhone.value.length) {
-//         errorImgPhone.style.opacity = 1;
-//         resultChecked = false;
-//         requiredFieldsText.style.opacity = 1;
-//         submitButtonFourthSection.style.left = "2.34375vw";
-//     } else {
-//         errorImgPhone.style.opacity = 0;
-//         requiredFieldsText.style.opacity = 0;
-//         submitButtonFourthSection.style.left = "13.85417vw";
-//     }
-//     if (!inputEmail.value.length) {
-//         errorImgEmail.style.opacity = 1;
-//         resultChecked = false;
-//         requiredFieldsText.style.opacity = 1;
-//         submitButtonFourthSection.style.left = "2.34375vw";
-//     } else {
-//         errorImgEmail.style.opacity = 0;
-//         requiredFieldsText.style.opacity = 0;
-//         submitButtonFourthSection.style.left = "13.85417vw";
-//     }
+    if (!inputFirstName.value.length) {
+        errorImgFirstName.style.opacity = 0;
+        requiredFieldsText.style.opacity = 0;
+        submitButtonFourthSection.style.left = "13.85417vw";
+        resultChecked = false;
+    }
+    if (!inputLastName.value.length) {
+        resultChecked = false;
+        errorImgLastName.style.opacity = 0;
+        requiredFieldsText.style.opacity = 0;
+        submitButtonFourthSection.style.left = "13.85417vw";
+    }
+    if (!inputPhone.value.length) {
+        resultChecked = false;
+        errorImgPhone.style.opacity = 0;
+        requiredFieldsText.style.opacity = 0;
+        submitButtonFourthSection.style.left = "13.85417vw";
+    }
+    if (!inputEmail.value.length) {
+        resultChecked = false;
+        errorImgEmail.style.opacity = 0;
+        requiredFieldsText.style.opacity = 0;
+        submitButtonFourthSection.style.left = "13.85417vw";
+    }
+    if (!resultChecked) {
+        requiredFieldsText.style.opacity = 0;
+        correctlyText.style.opacity = 0;
+        errorImgEmail.style.opacity = 0;
 
-//     if (resultChecked) {
-//         submitButtonFourthSection.className = "send-form-submit-activ";
-//         requiredFieldsText.style.opacity = 0;
-//     } else {
-//         submitButtonFourthSection.className = " ";
-//         submitButtonFourthSection.style.left = "2.34375vw";
-//         requiredFieldsText.style.opacity = 1;
-//     }
+    } else {
+        submitButtonFourthSection.style.left = "13.85417vw";
+        requiredFieldsText.style.opacity = 0;
+    }
 
-// })
+    if (!isValidEmail(inputEmail.value)) {
+        requiredFieldsText.style.opacity = 0;
+        correctlyText.style.opacity = 0;
+        errorImgEmail.style.opacity = 0;
+    }
+
+})
