@@ -389,6 +389,8 @@ thirdSectionButtonOrder.addEventListener('click', (event) => {
         choiceOfServicePlaceholder.textContent = selCat;
         fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
         fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+        choiceOfServicePlaceholder.style.color = "var(--blue)";
+
         allInputsHave();
 
     }
