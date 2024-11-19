@@ -375,6 +375,7 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
         newDropListWrapper.style.opacity = "0";
         fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
         newDropListWrapper.style.pointerEvents = "none";
+        fourthSectionChoiceOfServiceArrow.style.rotate = "";
     });
 });
 
@@ -390,11 +391,9 @@ thirdSectionButtonOrder.addEventListener('click', (event) => {
         fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
         fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
         choiceOfServicePlaceholder.style.color = "var(--blue)";
-
+        selectCategory = selCat;
         allInputsHave();
-
     }
-
 });
 
 inputFirstName.addEventListener('input', () => {
@@ -674,3 +673,11 @@ reviewsArrowRight.addEventListener('click', () => {
 })
 
 
+const massiv = [2, 3, 4, 5, 6];
+let activNumber = 1;
+
+const setActivElement = (number) => {
+    let indexOfReplace = massiv.indexOf(number);
+    massiv[indexOfReplace] = activNumber;
+    activNumber = number;
+}
