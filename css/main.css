@@ -1031,6 +1031,7 @@ body {
     position: relative;
     width: 100vw;
     height: 56.25vw;
+    overflow: hidden;
 }
 
 #five-section-title {
@@ -1039,6 +1040,122 @@ body {
     left: 7.29167vw;
     font-weight: 500;
     font-size: 2.1875vw;
+    color: var(--blue);
+}
+
+#left-part-reviews {
+    width: 40.72917vw;
+    height: 45.83333vw;
+    position: absolute;
+    top: 3.17708vw;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    overflow: visible;
+}
+
+#reviews-svg {
+    object-fit: contain;
+    pointer-events: none;
+    width: 40.72917vw;
+    height: 41.66667vw;
+}
+
+#other-reviews-wrapper {
+    width: 26.51042vw;
+    height: 3.64583vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    top: 45.625vw;
+}
+
+#reviews-arrow-left {
+    width: 3.64583vw;
+    height: 3.64583vw;
+    left: 0;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#other-reviews-text {
+    margin-left: 3.125vw;
+    margin-right: 3.125vw;
+    width: 12.96875vw;
+    height: 3.17708vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blue);
+    font-weight: 400;
+    font-size: 1.875vw;
+}
+
+#reviews-arrow-right {
+    width: 3.64583vw;
+    height: 3.64583vw;
+    right: 0;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.block-with-reviews {
+    width: 51.97917vw;
+    min-height: 19.32292vw;
+    position: absolute;
+    top: 9.16667vw;
+    left: 7.29167vw;
+    overflow: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, left 0.5s ease-in-out;
+}
+
+#lower-block-with-reviews {
+    top: 31.875vw;
+    left: 9.89583vw;
+}
+
+.reviews-img {
+    object-fit: contain;
+    pointer-events: none;
+    width: 13.02083vw;
+    box-shadow: 8px 8px 4px 0px #009AEC80;
+    position: absolute;
+}
+
+.reviews-text-wrapper {
+    display: flex;
+    height: 22.13542vw;
+    width: 36.35417vw;
+    position: absolute;
+    left: 15.625vw;
+    flex-wrap: wrap;
+}
+
+.reviews-name {
+    font-weight: 400;
+    font-size: 1.66667vw;
+    color: var(--blue);
+    width: 16vw;
+    position: absolute;
+}
+
+.reviews-text {
+    font-weight: 300;
+    font-size: 1.45833vw;
+    line-height: 1.71875vw;
+    color: var(--blue);
+    margin-top: 3.38542vw;
+}
+
+.second-reviews-text {
+    margin-top: 1.71875vw;
+    font-weight: 300;
+    font-size: 1.45833vw;
+    line-height: 1.71875vw;
     color: var(--blue);
 }
 

@@ -280,9 +280,6 @@ const lightAnimation = (data, id) => {
 
 const dropListWrapper = document.getElementById("drop-list-wrapper");
 const choiceOfServicePlaceholder = document.getElementById("choice-of-service-placeholder");
-const correctImgChoiceOfServise = document.getElementById('correct-img-choice-of-service');
-
-
 
 const dropListArray = [
     "Creative Design",
@@ -293,57 +290,6 @@ const dropListArray = [
     "Setting up payment"
 ];
 
-let selectCategory = "";
-
-
-fourthSectionChoiceOfService.addEventListener('click', (event) => {
-    event.stopPropagation();
-    const newDropListWrapper = document.createElement('div');
-    newDropListWrapper.id = "drop-list";
-
-    const actualityCategory = dropListArray.filter((textCategory) => {
-        return textCategory !== selectCategory;
-    });
-
-    actualityCategory.forEach(textSelectCategoty => {
-        const newDropListPoint = document.createElement('div');
-        newDropListPoint.textContent = textSelectCategoty;
-        newDropListPoint.classList = "drop-list-item";
-
-        newDropListPoint.addEventListener('click', (event) => {
-            event.stopPropagation();
-            selectCategory = textSelectCategoty;
-            choiceOfServicePlaceholder.textContent = textSelectCategoty;
-            newDropListWrapper.style.opacity = "0";
-            fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-            fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
-            newDropListWrapper.style.pointerEvents = "none";
-        });
-        newDropListWrapper.appendChild(newDropListPoint);
-    });
-
-    newDropListWrapper.style.opacity = "1";
-    fourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
-    fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 0)";
-    newDropListWrapper.style.pointerEvents = "all";
-    choiceOfServicePlaceholder.style.color = "var(--blue)";
-    const possibleDublicate = document.getElementById("drop-list");
-    if (possibleDublicate) {
-        dropListWrapper.removeChild(possibleDublicate);
-    }
-    dropListWrapper.appendChild(newDropListWrapper);
-
-    dropListWrapper.addEventListener('mouseleave', () => {
-        if (!selectCategory) {
-            choiceOfServicePlaceholder.style.color = "var(--darkBlue)";
-        };
-        correctImgChoiceOfServise.style.opacity = 1;
-        newDropListWrapper.style.opacity = "0";
-        fourthSectionChoiceOfServiceArrow.style.opacity = "0";
-        fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
-        newDropListWrapper.style.pointerEvents = "none";
-    });
-});
 
 const mainSendForm = document.getElementById('main-send-form');
 
@@ -363,12 +309,91 @@ const inputEmail = document.getElementById("input-email");
 const errorImgEmail = document.getElementById('error-img-email-input');
 const correctImgEmail = document.getElementById('correct-img-email-input');
 
+let selectCategory = "";
 
-function capitalize(str) {
+const capitalize = (str) => {
     return str.split(' ')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
 }
+
+const isValidEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+const allInputsHave = () => {
+    if (inputFirstName.value.length && inputLastName.value.length && inputPhone.value.length && inputEmail.value.length && isValidEmail(inputEmail.value) && selectCategory) {
+        submitButtonFourthSection.className = "send-form-submit-activ";
+    }
+}
+
+fourthSectionChoiceOfService.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const newDropListWrapper = document.createElement('div');
+    newDropListWrapper.id = "drop-list";
+
+    const actualityCategory = dropListArray.filter((textCategory) => {
+        return textCategory !== selectCategory;
+    });
+
+    actualityCategory.forEach(textSelectCategoty => {
+        const newDropListPoint = document.createElement('div');
+        newDropListPoint.textContent = textSelectCategoty;
+        newDropListPoint.classList = "drop-list-item";
+        newDropListPoint.id = textSelectCategoty;
+
+        newDropListPoint.addEventListener('click', (event) => {
+            event.stopPropagation();
+            selectCategory = textSelectCategoty;
+            choiceOfServicePlaceholder.textContent = textSelectCategoty;
+            newDropListWrapper.style.opacity = "0";
+            fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+            fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+            newDropListWrapper.style.pointerEvents = "none";
+            allInputsHave();
+        });
+        newDropListWrapper.appendChild(newDropListPoint);
+
+    });
+
+    newDropListWrapper.style.opacity = "1";
+    fourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
+    fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 0)";
+    newDropListWrapper.style.pointerEvents = "all";
+    choiceOfServicePlaceholder.style.color = "var(--blue)";
+    const possibleDublicate = document.getElementById("drop-list");
+    if (possibleDublicate) {
+        dropListWrapper.removeChild(possibleDublicate);
+    }
+    dropListWrapper.appendChild(newDropListWrapper);
+
+    dropListWrapper.addEventListener('mouseleave', () => {
+        if (!selectCategory) {
+            choiceOfServicePlaceholder.style.color = "var(--darkBlue)";
+        };
+        newDropListWrapper.style.opacity = "0";
+        fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+        newDropListWrapper.style.pointerEvents = "none";
+    });
+});
+
+thirdSectionButtonOrder.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({
+        top: window.innerWidth * 1.950625,
+        behavior: 'smooth'
+    });
+    const selCat = "Creative Design";
+    if (selCat !== selectCategory && dropListArray.includes(selCat)) {
+        choiceOfServicePlaceholder.textContent = selCat;
+        fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+        fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+        allInputsHave();
+
+    }
+
+});
 
 inputFirstName.addEventListener('input', () => {
     const inputValue = inputFirstName.value;
@@ -378,8 +403,10 @@ inputFirstName.addEventListener('input', () => {
     }
     if (editValue.length > 0) {
         correctImgFirstName.style.opacity = 1;
+        allInputsHave();
     } else {
         correctImgFirstName.style.opacity = 0;
+        voidInput();
     }
     inputFirstName.value = capitalize(editValue);
 });
@@ -392,8 +419,10 @@ inputLastName.addEventListener('input', () => {
     }
     if (editValue.length > 0) {
         correctImgLastName.style.opacity = 1;
+        allInputsHave();
     } else {
         correctImgLastName.style.opacity = 0;
+        voidInput();
     }
     inputLastName.value = capitalize(editValue);
 });
@@ -406,10 +435,14 @@ inputPhone.addEventListener('input', () => {
     }
     if (editValue.length > 0) {
         correctImgPhone.style.opacity = 1;
+        allInputsHave();
     } else {
         correctImgPhone.style.opacity = 0;
+        voidInput();
     }
     inputPhone.value = capitalize(editValue);
+
+
 });
 
 inputEmail.addEventListener('input', () => {
@@ -420,8 +453,10 @@ inputEmail.addEventListener('input', () => {
     }
     if (editValue.length > 0) {
         correctImgEmail.style.opacity = 1;
+        allInputsHave();
     } else {
         correctImgEmail.style.opacity = 0;
+        voidInput();
     }
     inputEmail.value = editValue;
 });
@@ -431,17 +466,20 @@ const submitButtonFourthSection = document.getElementById('send-form-submit');
 const requiredFieldsText = document.getElementById("required-fields");
 const correctlyText = document.getElementById("correctly");
 const buttonWrapper = document.getElementById("button-wrapper");
-function isValidEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
+
+
+
+const voidInput = () => {
+    submitButtonFourthSection.className = " ";
 }
+
+
 submitButtonFourthSection.addEventListener('mouseenter', () => {
     let resultChecked = true;
 
     if (!inputFirstName.value.length) {
         errorImgFirstName.style.opacity = 1;
         resultChecked = false;
-        requiredFieldsText.style.opacity = 1;
         submitButtonFourthSection.style.left = "2.34375vw";
     } else {
         errorImgFirstName.style.opacity = 0;
@@ -451,7 +489,6 @@ submitButtonFourthSection.addEventListener('mouseenter', () => {
     if (!inputLastName.value.length) {
         errorImgLastName.style.opacity = 1;
         resultChecked = false;
-        requiredFieldsText.style.opacity = 1;
         submitButtonFourthSection.style.left = "2.34375vw";
     } else {
         errorImgLastName.style.opacity = 0;
@@ -461,7 +498,6 @@ submitButtonFourthSection.addEventListener('mouseenter', () => {
     if (!inputPhone.value.length) {
         errorImgPhone.style.opacity = 1;
         resultChecked = false;
-        requiredFieldsText.style.opacity = 1;
         submitButtonFourthSection.style.left = "2.34375vw";
     } else {
         errorImgPhone.style.opacity = 0;
@@ -471,38 +507,29 @@ submitButtonFourthSection.addEventListener('mouseenter', () => {
     if (!inputEmail.value.length) {
         errorImgEmail.style.opacity = 1;
         resultChecked = false;
+        submitButtonFourthSection.style.left = "2.34375vw";
+    } else {
+        errorImgEmail.style.opacity = 0;
+        requiredFieldsText.style.opacity = 0;
+        submitButtonFourthSection.style.left = "13.85417vw";
+    }
+
+    if (!resultChecked) {
+        submitButtonFourthSection.className = " ";
         requiredFieldsText.style.opacity = 1;
+        correctlyText.style.opacity = 0;
         submitButtonFourthSection.style.left = "2.34375vw";
-    } else {
-        errorImgEmail.style.opacity = 0;
-        requiredFieldsText.style.opacity = 0;
-        submitButtonFourthSection.style.left = "13.85417vw";
-    }
-
-
-
-    if (!isValidEmail(inputEmail.value)) {
-        submitButtonFourthSection.className = " ";
-        submitButtonFourthSection.style.left = "2.34375vw";
+    } else if (!isValidEmail(inputEmail.value)) {
         correctlyText.style.opacity = 1;
         requiredFieldsText.style.opacity = 0;
-    } else {
-        submitButtonFourthSection.className = "send-form-submit-activ";
-        submitButtonFourthSection.style.left = "13.85417vw";
-    }
-
-    if (resultChecked && isValidEmail(inputEmail.value)) {
-        submitButtonFourthSection.className = "send-form-submit-activ";
-        requiredFieldsText.style.opacity = 0;
-        errorImgEmail.style.opacity = 0;
-        correctImgEmail.style.opacity = 1;
-    } else {
-        submitButtonFourthSection.className = " ";
         submitButtonFourthSection.style.left = "2.34375vw";
-        requiredFieldsText.style.opacity = 0;
-        correctlyText.style.opacity = 1;
+        submitButtonFourthSection.className = " ";
         errorImgEmail.style.opacity = 1;
         correctImgEmail.style.opacity = 0;
+    } else {
+        submitButtonFourthSection.className = "send-form-submit-activ";
+        requiredFieldsText.style.opacity = 0;
+        correctlyText.style.opacity = 0;
     }
 }
 );
@@ -551,3 +578,97 @@ buttonWrapper.addEventListener('mouseleave', () => {
     }
 
 })
+
+const reviews = [
+    {
+        top: {
+            title: "Dmitry Malyukin",
+            upperText: "In 2022, our project scaled up. We turned to the team at Ikigai Creative to update our brand identity. Time, as it turned out, has proven the success of the innovations they introduced. Working with this agency has been a real pleasure. My colleagues and I quickly decided to continue a long-term collaboration, which is still ongoing to this day.",
+            lowerText: "I can recommend this organization for their high-quality and diligent work over many years."
+        },
+
+        bottom: {
+            title: "Mikhail Potapenko",
+            upperText: "Our motorwheel enthusiasts' company wanted to promote our movement in Moscow. We approached this company for website design, development, and promotion. They took the project very seriously and quickly delivered not only an excellent mockup but also the website itself! Ikigai also helped us manage content for our groups—writing posts, shooting videos! As clients, we didn’t have to handle any unnecessary tasks—they took care of everything.",
+            lowerText: "My admiration and respect."
+        }
+    },
+
+    {
+        top: {
+            title: "Mikhail Potapenko",
+            upperText: "Our motorwheel enthusiasts' company wanted to promote our movement in Moscow. We approached this company for website design, development, and promotion. They took the project very seriously and quickly delivered not only an excellent mockup but also the website itself! Ikigai also helped us manage content for our groups—writing posts, shooting videos! As clients, we didn’t have to handle any unnecessary tasks—they took care of everything.",
+            lowerText: "My admiration and respect."
+        },
+
+        bottom: {
+            title: "Dmitry Malyukin",
+            upperText: "In 2022, our project scaled up. We turned to the team at Ikigai Creative to update our brand identity. Time, as it turned out, has proven the success of the innovations they introduced. Working with this agency has been a real pleasure. My colleagues and I quickly decided to continue a long-term collaboration, which is still ongoing to this day.",
+            lowerText: "I can recommend this organization for their high-quality and diligent work over many years."
+        }
+    }
+]
+
+const reviewsArrowLeft = document.getElementById("reviews-arrow-left");
+const reviewsArrowRight = document.getElementById("reviews-arrow-right");
+
+const upperBlock = document.getElementById("upper-block-with-reviews");
+const reviewsUpperName = document.getElementById("reviews-upper-name");
+const reviewsUpperImg = document.getElementById("reviews-upper-img");
+const reviewsUpperUpperText = document.getElementById("reviews-upper-upper-text");
+const reviewsUpperLowerText = document.getElementById("reviews-upper-lower-text");
+
+const lowerBlock = document.getElementById("lower-block-with-reviews");
+const reviewsLowerName = document.getElementById("reviews-lower-name");
+const reviewsLowerImg = document.getElementById("reviews-lower-img");
+const reviewsLowerUpperText = document.getElementById("reviews-lower-upper-text");
+const reviewsLowerLowerText = document.getElementById("reviews-lower-lower-text");
+
+let number = 0;
+let float = false;
+
+const upperloadReviews = (numberActivReviews, direction) => {
+    if (!float) {
+        number = numberActivReviews >= 0 ? numberActivReviews % reviews.length : (reviews.length - 1);
+        const data = reviews[number];
+        float = true;
+        upperBlock.style.opacity = "0";
+        lowerBlock.style.opacity = "0";
+        if (direction) {
+            upperBlock.style.left = "-5vw";
+            lowerBlock.style.left = "-5vw";
+        } else {
+            upperBlock.style.left = "19vw";
+            lowerBlock.style.left = "19vw";
+        }
+        setTimeout(() => {
+            upperBlock.style.opacity = "";
+            lowerBlock.style.opacity = "";
+            upperBlock.style.left = "";
+            lowerBlock.style.left = "";
+            float = false;
+        }, 500);
+        setTimeout(() => {
+            reviewsUpperName.textContent = data.top.title;
+            reviewsUpperImg.src = `/img/png/reviews-img-${data.top.title}.png`;
+            reviewsUpperUpperText.textContent = data.top.upperText;
+            reviewsUpperLowerText.textContent = data.top.lowerText;
+            reviewsLowerName.textContent = data.bottom.title;
+            reviewsLowerImg.src = `/img/png/reviews-img-${data.bottom.title}.png`;
+            reviewsLowerUpperText.textContent = data.bottom.upperText;
+            reviewsLowerLowerText.textContent = data.bottom.lowerText;
+        }, 400);
+    }
+}
+
+upperloadReviews(0);
+
+reviewsArrowLeft.addEventListener('click', () => {
+    upperloadReviews(--number, true)
+})
+
+reviewsArrowRight.addEventListener('click', () => {
+    upperloadReviews(++number, false)
+})
+
+
