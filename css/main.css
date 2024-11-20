@@ -517,7 +517,7 @@ body {
         background-color: rgba(0, 83, 128, 0.05);
         box-shadow: 0px 0px 8px 0px var(--blue);
         opacity: 0;
-        transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        transition: opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
         cursor: pointer;
 
         &>.third-section-lower-part-img {
@@ -528,6 +528,8 @@ body {
             margin-top: 1.30208vw;
             margin-left: 2.60417vw;
             pointer-events: none;
+            opacity: 0.6;
+            transition: opacity 0.5s ease-in-out;
         }
 
         &>.third-section-lower-part-text {
@@ -544,6 +546,7 @@ body {
             overflow: hidden;
             margin-left: 2.60417vw;
             margin-top: -1vw;
+            transition: color 0.5s ease-in-out;
         }
     }
 }

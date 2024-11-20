@@ -73,6 +73,7 @@ const arrayCard = [
     thirdSectionLowerPartDivFifth
 ];
 
+
 const arrayDataOfService = [
     {
         title: "Creative Design",
@@ -156,8 +157,6 @@ for (let index = 1; index < arrayDataOfService.length; index++) {
 
 }
 
-
-
 const customization = (number) => {
     const currentCard = cardLinks[number - 1];
     const currentServise = arrayDataOfService[massiv[number - 1] - 1];
@@ -165,6 +164,21 @@ const customization = (number) => {
     currentCard.imgBlock.src = `/img/svg/third-section-lower-part ${currentServise.title}.svg`;
     currentCard.textBlock.textContent = currentServise.title;
     // добавить функцию нажатия
+
+    thirdSectionLowerPartDivFirst.addEventListener('mouseenter', () => {
+        currentCard.imgBlock.style.opacity = "1";
+        thirdSectionLowerPartDivFirst.style.backgroundColor = "rgba(0, 83, 128, 0.25)";
+        thirdSectionLowerPartDivFirst.style.boxShadow = "0px 0px 10px 0px rgba(52, 184, 255, 1)";
+        currentCard.textBlock.style.color = "#46BFFF";
+    })
+
+    thirdSectionLowerPartDivFirst.addEventListener('mouseleave', () => {
+        currentCard.imgBlock.style.opacity = "";
+        thirdSectionLowerPartDivFirst.style.backgroundColor = "";
+        thirdSectionLowerPartDivFirst.style.boxShadow = "";
+        currentCard.textBlock.style.color = "";
+
+    })
 }
 
 const firstUploadCard = () => {
