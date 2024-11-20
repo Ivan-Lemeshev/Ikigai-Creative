@@ -53,15 +53,129 @@ const secondSectionText = document.getElementById("second-section-text");
 const secondSectionButtonServices = document.getElementById("second-section-button-services");
 const secondSectionButtonContacts = document.getElementById("second-section-button-contacts");
 
-const thirdSectionImage = document.getElementById("third-section-main-content-left-part");
 const thirdSectionText = document.getElementById("third-section-main-content-right-part");
 const thirdSectionButtonOrder = document.getElementById("third-section-main-content-right-part-button-order");
 const thirdSectionButtonMore = document.getElementById("third-section-main-content-right-part-button-more");
-const thirdSectionLowerPartDivFirst = document.getElementById("third-section-lower-part-div-1");
-const thirdSectionLowerPartDivSecond = document.getElementById("third-section-lower-part-div-2");
-const thirdSectionLowerPartDivThird = document.getElementById("third-section-lower-part-div-3");
-const thirdSectionLowerPartDivFourth = document.getElementById("third-section-lower-part-div-4");
-const thirdSectionLowerPartDivFifth = document.getElementById("third-section-lower-part-div-5");
+
+
+const thirdSectionImage = document.getElementById("third-section-main-content-left-part");
+const thirdSectionLowerPartDivFirst = document.getElementById("third-section-lower-part-1");
+const thirdSectionLowerPartDivSecond = document.getElementById("third-section-lower-part-2");
+const thirdSectionLowerPartDivThird = document.getElementById("third-section-lower-part-3");
+const thirdSectionLowerPartDivFourth = document.getElementById("third-section-lower-part-4");
+const thirdSectionLowerPartDivFifth = document.getElementById("third-section-lower-part-5");
+
+const arrayCard = [
+    thirdSectionLowerPartDivFirst,
+    thirdSectionLowerPartDivSecond,
+    thirdSectionLowerPartDivThird,
+    thirdSectionLowerPartDivFourth,
+    thirdSectionLowerPartDivFifth
+];
+
+const arrayDataOfService = [
+    {
+        title: "Creative Design",
+        text: [
+            "Development of unique concepts and visual solutions.",
+            "Web design, app design, and user interface design.",
+            "Logo creation and complete branding for companies."
+        ]
+    },
+
+    {
+        title: "Website design and development",
+        text: [
+            "Responsive websites and mobile sites for all devices.",
+            "Website development using popular CMS (WordPress, Joomla, etc.).",
+            "Custom platform and mobile app development for iOS and Android."
+        ]
+    },
+
+    {
+        title: "Video production",
+        text: [
+            "Business videos: promotional videos, video presentations.",
+            "Event recording and post-production services.",
+            "Animation to enhance visual appeal in videos."
+        ]
+    },
+
+    {
+        title: "Support and content",
+        text: [
+            "Technical support for websites and apps.",
+            "Social media management and content creation.",
+            "Content management and promotion of websites and applications (SEO and SMM)."
+        ]
+    },
+
+    {
+        title: "Promotion on social networks",
+        text: [
+            "Developing promotional strategies for products or services on social platforms.",
+            "Targeted advertising setup to increase brand visibility and sales.",
+            "Content planning and creation of high-quality visual content (graphics, videos)."
+        ]
+    },
+
+    {
+        title: "Setting up payment",
+        text: [
+            "Integration with PayPal or Stripe to create and send payment links to clients.",
+            "The ability to generate individual payment links for deposits and final payments.",
+            "Send automated reminders with personalized payment links."
+        ]
+    }
+];
+
+
+
+const massiv = [2, 3, 4, 5, 6];
+let activNumber = 1;
+
+const setActivElement = (number) => {
+    let indexOfReplace = massiv.indexOf(number);
+    massiv[indexOfReplace] = activNumber;
+    activNumber = number;
+};
+
+
+
+
+const cardLinks = [];
+
+for (let index = 1; index < arrayDataOfService.length; index++) {
+    cardLinks.push(
+        {
+            wrapper: arrayCard[index],
+            imgBlock: document.getElementById(`third-section-img-in-div-${index}`),
+            textBlock: document.getElementById(`third-section-div-in-div-${index}`)
+        }
+    )
+
+}
+
+
+
+const customization = (number) => {
+    const currentCard = cardLinks[number - 1];
+    const currentServise = arrayDataOfService[massiv[number - 1] - 1];
+
+    currentCard.imgBlock.src = `/img/svg/third-section-lower-part ${currentServise.title}.svg`;
+    currentCard.textBlock.textContent = currentServise.title;
+    // добавить функцию нажатия
+}
+
+const firstUploadCard = () => {
+    for (let index = 1; index < arrayDataOfService.length; index++) {
+        customization(index);
+    }
+}
+
+firstUploadCard();
+
+//функцию клика на картику 
 
 const fourthSectionChoiceOfService = document.getElementById("choice-of-service");
 const fourthSectionChoiceOfServiceArrow = document.getElementById("choice-of-service-arrow");
@@ -672,12 +786,3 @@ reviewsArrowRight.addEventListener('click', () => {
     upperloadReviews(++number, false)
 })
 
-
-const massiv = [2, 3, 4, 5, 6];
-let activNumber = 1;
-
-const setActivElement = (number) => {
-    let indexOfReplace = massiv.indexOf(number);
-    massiv[indexOfReplace] = activNumber;
-    activNumber = number;
-}
