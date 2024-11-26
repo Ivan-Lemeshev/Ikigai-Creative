@@ -182,23 +182,12 @@ const massiv = [2, 3, 4, 5, 6];
 let activNumber = 1;
 
 const setActivElement = (number) => {
-    let indexOfReplace = massiv.indexOf(number);
-    massiv[indexOfReplace] = activNumber;
-    activNumber = number;
+    const oldValue = massiv[number - 1];
+    massiv[number - 1] = activNumber;
+    activNumber = oldValue;
 };
 
 const cardLinks = [];
-
-for (let index = 1; index < arrayDataOfService.length; index++) {
-    cardLinks.push(
-        {
-            wrapper: arrayCard[index],
-            imgBlock: document.getElementById(`third-section-img-in-div-${index}`),
-            textBlock: document.getElementById(`third-section-div-in-div-${index}`)
-        }
-    )
-
-}
 
 const customization = (number) => {
     const currentCard = cardLinks[number - 1];
@@ -215,9 +204,24 @@ const customization = (number) => {
     arrayCard[number - 1].appendChild(svgElement);
 
     currentCard.textBlock.textContent = currentServise.title;
-    // добавить функцию нажатия
 
 }
+
+for (let index = 1; index < arrayDataOfService.length; index++) {
+    cardLinks.push(
+        {
+            wrapper: arrayCard[index - 1],
+            textBlock: document.getElementById(`third-section-div-in-div-${index}`)
+        }
+    )
+    
+    arrayCard[index - 1].addEventListener('click', () => {
+        setActivElement(index);
+        customization(massiv[index - 1]);
+    })
+}
+
+
 
 const firstUploadCard = () => {
     for (let index = 1; index < arrayDataOfService.length; index++) {
