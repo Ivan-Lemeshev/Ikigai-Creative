@@ -219,6 +219,20 @@ const customization = (number) => {
 
 };
 
+const upLoadActivServise = () => {
+    const data = arrayDataOfService[activNumber];
+    const imgBlock = document.getElementById("third-section-creative-design-img");
+    imgBlock.src = `/img/svg/third-section-lower-part ${data.title}.svg`;
+    const firstParagraph = document.getElementById("third-section-main-content-right-part-paragraph-1");
+    const secondParagraph = document.getElementById("third-section-main-content-right-part-paragraph-2");
+    const thirdParagraph = document.getElementById("third-section-main-content-right-part-paragraph-3");
+    firstParagraph.textContent = data.text[0];
+    secondParagraph.textContent = data.text[1];
+    thirdParagraph.textContent = data.text[2];
+    const title = document.getElementById("third-section-main-content-right-part-title");
+    title.textContent = data.title;
+}
+
 for (let index = 1; index < arrayDataOfService.length; index++) {
     cardLinks.push(
         {
@@ -230,6 +244,7 @@ for (let index = 1; index < arrayDataOfService.length; index++) {
     arrayCard[index - 1].addEventListener('click', () => {
         setActivElement(index);
         customization(index);
+        upLoadActivServise();
     });
 };
 
