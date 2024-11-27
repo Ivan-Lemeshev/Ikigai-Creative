@@ -591,7 +591,17 @@ body {
 
 }
 
-
+#button-more-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid red;
+    width: 100vw;
+    height: 83.95833vw;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
 
 
 #four-section {

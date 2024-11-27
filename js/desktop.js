@@ -502,6 +502,17 @@ const lightAnimation = (data, id) => {
     }
 };
 
+const buttonMoreBlock = document.getElementById("button-more-block");
+
+
+thirdSectionButtonMore.addEventListener('click', () => {
+    buttonMoreBlock.style.display = "block";
+    setTimeout(() => {
+    buttonMoreBlock.style.opacity = "1";
+        
+    }, 1);
+})
+
 const dropListWrapper = document.getElementById("drop-list-wrapper");
 const choiceOfServicePlaceholder = document.getElementById("choice-of-service-placeholder");
 
