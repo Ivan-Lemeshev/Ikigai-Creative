@@ -523,6 +523,8 @@ body {
     justify-content: space-between;
     align-items: center;
     top: 51.875vw;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
     overflow: visible;
 
     &>.third-section-lower-part-div {
@@ -601,7 +603,21 @@ body {
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+
+    &>h2 {
+        width: 26.04167vw;
+        height: 3.17708vw;
+        position: absolute;
+        top: 4.16667vw;
+        left: 59.79167vw;
+        font-weight: 500;
+        font-size: 2.1875vw;
+        text-align: right;
+        color: var(--secondBlue);
+    }
 }
+
+
 
 
 #four-section {

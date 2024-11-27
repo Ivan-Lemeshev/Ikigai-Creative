@@ -59,6 +59,7 @@ const thirdSectionButtonMore = document.getElementById("third-section-main-conte
 
 
 const thirdSectionImage = document.getElementById("third-section-main-content-left-part");
+const thirdSectionLowerPart = document.getElementById("third-section-lower-part");
 const thirdSectionLowerPartDivFirst = document.getElementById("third-section-lower-part-1");
 const thirdSectionLowerPartDivSecond = document.getElementById("third-section-lower-part-2");
 const thirdSectionLowerPartDivThird = document.getElementById("third-section-lower-part-3");
@@ -502,20 +503,10 @@ const lightAnimation = (data, id) => {
     }
 };
 
-const buttonMoreBlock = document.getElementById("button-more-block");
-
-
-thirdSectionButtonMore.addEventListener('click', () => {
-    buttonMoreBlock.style.display = "block";
-    setTimeout(() => {
-    buttonMoreBlock.style.opacity = "1";
-        
-    }, 1);
-})
-
 const dropListWrapper = document.getElementById("drop-list-wrapper");
 const choiceOfServicePlaceholder = document.getElementById("choice-of-service-placeholder");
 
+let selectCategory = "";
 const dropListArray = [
     "Creative Design",
     "Website design and development",
@@ -524,6 +515,25 @@ const dropListArray = [
     "Promotion on social networks",
     "Setting up payment"
 ];
+
+const buttonMoreBlock = document.getElementById("button-more-block");
+const buttonMoreTitle = document.getElementById("button-more-title");
+
+
+thirdSectionButtonMore.addEventListener('click', () => {
+    buttonMoreBlock.style.display = "block";
+    setTimeout(() => {
+        buttonMoreBlock.style.opacity = "1";
+        thirdSectionText.style.opacity = "";
+        thirdSectionLowerPart.style.opacity = "";
+        let selCat = dropListArray[activNumber];
+        if (selCat !== selectCategory && dropListArray.includes(selCat)) {
+            buttonMoreTitle.textContent = selCat;
+        }
+
+    }, 1);
+})
+
 
 
 const mainSendForm = document.getElementById('main-send-form');
@@ -544,7 +554,6 @@ const inputEmail = document.getElementById("input-email");
 const errorImgEmail = document.getElementById('error-img-email-input');
 const correctImgEmail = document.getElementById('correct-img-email-input');
 
-let selectCategory = "";
 
 const capitalize = (str) => {
     return str.split(' ')
@@ -614,15 +623,6 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
     });
 });
 
-const arrayOfTitles = [
-    "Creative design",
-    "Website design and development",
-    "Video production",
-    "Support and content",
-    "Promotion on social networks",
-    "Setting up payment"
-];
-
 thirdSectionButtonOrder.addEventListener('click', (event) => {
     event.preventDefault();
     window.scrollTo({
@@ -630,7 +630,7 @@ thirdSectionButtonOrder.addEventListener('click', (event) => {
         behavior: 'smooth'
     });
 
-    let selCat = arrayOfTitles[activNumber];
+    let selCat = dropListArray[activNumber];
 
     if (selCat !== selectCategory && dropListArray.includes(selCat)) {
         choiceOfServicePlaceholder.textContent = selCat;
