@@ -211,7 +211,12 @@ const customization = (number) => {
 
     if (oldSvgElement) {
         arrayCard[number - 1].removeChild(oldSvgElement);
-    } 
+    }
+
+    svgElement.style.opacity = "0";
+    setTimeout(() => {
+        svgElement.style.opacity = "";
+    }, 300);
 
     arrayCard[number - 1].appendChild(svgElement);
 
@@ -219,17 +224,18 @@ const customization = (number) => {
 
 };
 
+const firstParagraph = document.getElementById("third-section-main-content-right-part-paragraph-1");
+const secondParagraph = document.getElementById("third-section-main-content-right-part-paragraph-2");
+const thirdParagraph = document.getElementById("third-section-main-content-right-part-paragraph-3");
+const imgBlock = document.getElementById("third-section-creative-design-img");
+const title = document.getElementById("third-section-main-content-right-part-title");
+
 const upLoadActivServise = () => {
     const data = arrayDataOfService[activNumber];
-    const imgBlock = document.getElementById("third-section-creative-design-img");
     imgBlock.src = `/img/svg/third-section-lower-part ${data.title}.svg`;
-    const firstParagraph = document.getElementById("third-section-main-content-right-part-paragraph-1");
-    const secondParagraph = document.getElementById("third-section-main-content-right-part-paragraph-2");
-    const thirdParagraph = document.getElementById("third-section-main-content-right-part-paragraph-3");
     firstParagraph.textContent = data.text[0];
     secondParagraph.textContent = data.text[1];
     thirdParagraph.textContent = data.text[2];
-    const title = document.getElementById("third-section-main-content-right-part-title");
     title.textContent = data.title;
 }
 
@@ -240,11 +246,32 @@ for (let index = 1; index < arrayDataOfService.length; index++) {
             textBlock: document.getElementById(`third-section-div-in-div-${index}`)
         }
     )
-    
+
     arrayCard[index - 1].addEventListener('click', () => {
+        thirdSectionText.style.opacity = "0";
+        thirdSectionImage.style.transform = "rotate3d(0, 1, 0, 0deg)";
+        thirdSectionText.style.transform = "rotate3d(0, 1, 0, 30deg)";
+        imgBlock.style.opacity = "0";
+
+        const textBlock = document.getElementById(`third-section-div-in-div-${index}`)
+        const svgBlock = document.getElementById(`svgElement-${index}`)
+
+        textBlock.style.opacity = "0";
+        svgBlock.style.opacity = "0";
+
+        setTimeout(() => {
+            upLoadActivServise();
+            customization(index);
+            setTimeout(() => {
+                thirdSectionImage.style.transform = "rotate3d(0, 1, 0, 30deg)";
+                thirdSectionText.style.transform = "rotate3d(0, 1, 0, 0deg)";
+                imgBlock.style.opacity = "";
+                thirdSectionText.style.opacity = "1";
+                textBlock.style.opacity = "";
+                svgBlock.style.opacity = "";
+            }, 300);
+        }, 300);
         setActivElement(index);
-        customization(index);
-        upLoadActivServise();
     });
 };
 
