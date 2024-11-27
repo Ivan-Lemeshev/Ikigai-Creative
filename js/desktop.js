@@ -603,13 +603,24 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
     });
 });
 
+const arrayOfTitles = [
+    "Creative design",
+    "Website design and development",
+    "Video production",
+    "Support and content",
+    "Promotion on social networks",
+    "Setting up payment"
+];
+
 thirdSectionButtonOrder.addEventListener('click', (event) => {
     event.preventDefault();
     window.scrollTo({
         top: window.innerWidth * 1.950625,
         behavior: 'smooth'
     });
-    const selCat = "Creative Design";
+
+    let selCat = arrayOfTitles[activNumber];
+
     if (selCat !== selectCategory && dropListArray.includes(selCat)) {
         choiceOfServicePlaceholder.textContent = selCat;
         fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
