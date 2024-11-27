@@ -369,6 +369,7 @@ body {
     justify-content: space-between;
     overflow: visible;
     perspective: 52.08333vw;
+    opacity: 1;
 
     &>#third-section-main-content-left-part {
         width: 34.89583vw;

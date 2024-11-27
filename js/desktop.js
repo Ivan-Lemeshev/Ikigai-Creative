@@ -59,6 +59,7 @@ const thirdSectionButtonMore = document.getElementById("third-section-main-conte
 
 
 const thirdSectionImage = document.getElementById("third-section-main-content-left-part");
+const thirdSectionTitle = document.getElementById("third-section-title");
 const thirdSectionLowerPart = document.getElementById("third-section-lower-part");
 const thirdSectionLowerPartDivFirst = document.getElementById("third-section-lower-part-1");
 const thirdSectionLowerPartDivSecond = document.getElementById("third-section-lower-part-2");
@@ -524,8 +525,14 @@ thirdSectionButtonMore.addEventListener('click', () => {
     buttonMoreBlock.style.display = "block";
     setTimeout(() => {
         buttonMoreBlock.style.opacity = "1";
-        thirdSectionText.style.opacity = "";
-        thirdSectionLowerPart.style.opacity = "";
+        thirdSectionText.style.opacity = "0";
+        thirdSectionLowerPart.style.opacity = "0";
+        thirdSectionLowerPart.style.display = "none";
+        thirdSectionTitle.style.opacity = "0";
+        thirdSectionImage.style.transform = "rotate3d(0, 1, 0, 0deg)";
+        thirdSectionImage.style.width = "28.125vw";
+        thirdSectionImage.style.height = "28.125vw";
+        thirdSectionImage.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 0)";
         let selCat = dropListArray[activNumber];
         if (selCat !== selectCategory && dropListArray.includes(selCat)) {
             buttonMoreTitle.textContent = selCat;
