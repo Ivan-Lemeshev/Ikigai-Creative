@@ -600,7 +600,6 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    border: 1px solid red;
     width: 100vw;
     height: 83.95833vw;
     display: none;
@@ -608,11 +607,11 @@ body {
     transition: opacity 0.3s ease-in-out;
 
     &>h2 {
-        width: 26.04167vw;
+        width: 33.85417vw;
         height: 3.17708vw;
         position: absolute;
         top: 4.16667vw;
-        left: 59.79167vw;
+        right: 14.16667vw;
         font-weight: 500;
         font-size: 2.1875vw;
         display: flex;
@@ -663,11 +662,11 @@ body {
             margin-bottom: 1.04167vw;
 
             &>.button-more-price-services {
-                width: 28.33333vw;
+                width: fit-content;
             }
 
             &>.button-more-price-money {
-                width: 4.53125vw;
+                width: 5.20833vw;
             }
         }
     }
@@ -712,7 +711,87 @@ body {
         height: 10.41667vw;
         bottom: 0.83333vw;
         left: 7.29167vw;
+
+        &>.button-more-lower-part-button-arrows {
+            width: 6.77083vw;
+            height: 6.77083vw;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 1.82292vw;
+            background-color: rgba(0, 125, 202, 0.1);
+            border: 2px solid var(--darkBlue);
+            cursor: pointer;
+
+            &>img {
+                object-fit: contain;
+                pointer-events: none;
+                width: 4.16667vw;
+                height: 4.16667vw;
+            }
+        }
+
+        &>#button-more-lower-part-button-right {
+            right: 0;
+        }
+
+        &>#button-more-lower-part-buttons{ 
+            width: 59.375vw;
+            height: 10.41667vw;
+            position: absolute;
+            left: 10.9375vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &>.button-more-lower-part-buttons-wrapper {
+                display: flex;
+                justify-content: space-between;
+
+                &>.button-more-lower-part-buttons {
+                    width: 28.64583vw;
+                    height: 4.16667vw;
+                    display: flex;
+                    border: 0.10417vw solid var(--darkBlue);
+                    background-color: rgba(0, 125, 202, 0.1);
+                    cursor: pointer;
+
+                    &>img {
+                        object-fit: contain;
+                        pointer-events: none;
+                        width: 2.08333vw;
+                        height: 2.08333vw;
+                        margin-top: 1.04167vw;
+                        margin-left: 1.04167vw;
+                    }
+
+                    &>.button-more-lower-part-buttons-line {
+                        width: 0.05208vw;
+                        height: 3.125vw;
+                        background-color: var(--darkBlue);
+                        margin-top: 0.52083vw;
+                        margin-left: 1.04167vw;
+                    }
+
+                    &>.button-more-lower-part-buttons-text {
+                        font-weight: 400;
+                        font-size: 1.875vw;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: var(--secondBlue);
+                        width: 24.47917vw;
+                        height: 3.64583vw;
+                        margin-top: 0.26042vw;
+
+                    }
+                }
+            }
+        }   
     }
+
+
 }
 
 

@@ -351,6 +351,7 @@ const startAnimation = () => {
 };
 
 window.onload = startAnimation;
+let activAnimationThirdSection = false;
 
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
@@ -397,7 +398,7 @@ window.addEventListener('scroll', () => {
             }, 200);
         };
 
-    } else if (scrollY > width * 1.125 && scrollY < width * 1.965) {
+    } else if (scrollY > width * 1.125 && scrollY < width * 1.965 && !activAnimationThirdSection) {
         secondHeaderNavInfo.classList = "second-header-text";
         secondHeaderNavServices.classList.add("second-header-text-none-clickable");
         secondHeaderNavContacts.classList = "second-header-text";
@@ -418,9 +419,11 @@ window.addEventListener('scroll', () => {
                             setTimeout(() => {
                                 thirdSectionLowerPartDivFifth.style.opacity = "1";
                                 setTimeout(() => {
+
                                     thirdSectionImage.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
                                     thirdSectionButtonOrder.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
                                     thirdSectionButtonMore.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
+
                                 }, 250);
                             }, 250);
                         }, 250);
@@ -513,6 +516,7 @@ const buttonMoreTitle = document.getElementById("button-more-title");
 
 
 thirdSectionButtonMore.addEventListener('click', () => {
+    activAnimationThirdSection = true;
     buttonMoreBlock.style.display = "block";
     setTimeout(() => {
         buttonMoreBlock.style.opacity = "1";
@@ -528,7 +532,6 @@ thirdSectionButtonMore.addEventListener('click', () => {
         thirdSectionMainContentRightPartLine.style.backgroundImage = "linear-gradient(to bottom, rgba(0, 154, 236, 0) 0%, rgba(0, 154, 236, 0.3) 25%, rgba(0, 87, 134, 0) 100%)";
         thirdSectionMainContentRightPartLine.style.top = "-10vw";
         // добавить трансзишн
-    
         let selCat = dropListArray[activNumber];
         if (selCat !== selectCategory && dropListArray.includes(selCat)) {
             buttonMoreTitle.textContent = selCat;
