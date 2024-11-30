@@ -60,6 +60,7 @@ const thirdSectionButtonMore = document.getElementById("third-section-main-conte
 
 const thirdSectionImage = document.getElementById("third-section-main-content-left-part");
 const thirdSectionTitle = document.getElementById("third-section-title");
+const thirdSectionMainContentRightPartLine = document.getElementById("third-section-main-content-right-part-line");
 const thirdSectionLowerPart = document.getElementById("third-section-lower-part");
 const thirdSectionLowerPartDivFirst = document.getElementById("third-section-lower-part-1");
 const thirdSectionLowerPartDivSecond = document.getElementById("third-section-lower-part-2");
@@ -198,8 +199,6 @@ const setActivElement = (number) => {
     activNumber = oldValue;
 };
 
-// number передается без - 1(первая карта 1)
-
 const cardLinks = [];
 
 const customization = (number) => {
@@ -277,8 +276,6 @@ for (let index = 1; index < arrayDataOfService.length; index++) {
     });
 };
 
-
-
 const firstUploadCard = () => {
     for (let index = 1; index < arrayDataOfService.length; index++) {
         customization(index);
@@ -287,14 +284,8 @@ const firstUploadCard = () => {
 
 firstUploadCard();
 
-//функцию клика на картику 
-
 const fourthSectionChoiceOfService = document.getElementById("choice-of-service");
 const fourthSectionChoiceOfServiceArrow = document.getElementById("choice-of-service-arrow");
-
-
-
-
 
 const changeIdeasText = () => {
     centralText.style.opacity = "0";
@@ -533,6 +524,11 @@ thirdSectionButtonMore.addEventListener('click', () => {
         thirdSectionImage.style.width = "28.125vw";
         thirdSectionImage.style.height = "28.125vw";
         thirdSectionImage.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 0)";
+        thirdSectionMainContentRightPartLine.style.height = "70.57292vw";
+        thirdSectionMainContentRightPartLine.style.backgroundImage = "linear-gradient(to bottom, rgba(0, 154, 236, 0) 0%, rgba(0, 154, 236, 0.3) 25%, rgba(0, 87, 134, 0) 100%)";
+        thirdSectionMainContentRightPartLine.style.top = "-10vw";
+        // добавить трансзишн
+    
         let selCat = dropListArray[activNumber];
         if (selCat !== selectCategory && dropListArray.includes(selCat)) {
             buttonMoreTitle.textContent = selCat;
