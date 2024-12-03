@@ -93,6 +93,49 @@ const arrayDataOfService = [
             "Development of unique concepts and visual solutions.",
             "Web design, app design, and user interface design.",
             "Logo creation and complete branding for companies."
+        ],
+
+        prices: [
+            {
+                nameOfServise: "Web Design",
+                cost: 500
+            },
+
+            {
+                nameOfServise: "Mobile App Design",
+                cost: 700
+            },
+
+            {
+                nameOfServise: "Logo and Branding",
+                cost: 300
+            },
+
+            {
+                nameOfServise: "Graphic Design",
+                cost: 100
+            },
+
+            {
+                nameOfServise: "Packaging Design",
+                cost: 400
+            },
+
+            {
+                nameOfServise: "Print Design",
+                cost: 150
+            },
+
+            {
+                nameOfServise: "UI/UX Design for Software",
+                cost: 150
+            },
+
+        ],
+
+        description: [
+            "Creative design is your opportunity to stand out and be remembered. We develop unique concepts and visual solutions that not only grab attention but also reflect the individuality of your business. From web design and app design to user interface creation, each of our solutions is focused on your success and the convenience of your customers. We know how to make your website or app look modern, stylish, and, most importantly, effective.",
+            "But we don’t stop there. We create not just logos but a complete visual identity for your brand. A full-fledged branding strategy is what distinguishes successful companies, and we’re ready to help you become one of them. Our creative design will make your brand recognizable, memorable, and visually striking on every level."
         ]
     },
 
@@ -502,6 +545,7 @@ const dropListWrapper = document.getElementById("drop-list-wrapper");
 const choiceOfServicePlaceholder = document.getElementById("choice-of-service-placeholder");
 
 let selectCategory = "";
+
 const dropListArray = [
     "Creative Design",
     "Website design and development",
@@ -513,9 +557,22 @@ const dropListArray = [
 
 const buttonMoreBlock = document.getElementById("button-more-block");
 const buttonMoreTitle = document.getElementById("button-more-title");
+const modalNotificationBlock = document.getElementById("modal-notification-block");
+let showNotification = true;
 
 
 thirdSectionButtonMore.addEventListener('click', () => {
+    if (showNotification) {
+        setTimeout(() => {
+            modalNotificationBlock.style.opacity = "1";
+        }, 1000);
+        setTimeout(() => {
+            modalNotificationBlock.style.opacity = "";
+        }, 4000);
+
+        showNotification = false;
+    }
+
     activAnimationThirdSection = true;
     buttonMoreBlock.style.display = "block";
     setTimeout(() => {
@@ -533,14 +590,44 @@ thirdSectionButtonMore.addEventListener('click', () => {
         thirdSectionMainContentRightPartLine.style.top = "-10vw";
         // добавить трансзишн
         let selCat = dropListArray[activNumber];
+        const category = arrayDataOfService[activNumber]
         if (selCat !== selectCategory && dropListArray.includes(selCat)) {
             buttonMoreTitle.textContent = selCat;
         }
 
+        category.prices.map((serviceData, number) => {
+            const { nameOfServise, cost } = serviceData;
+            const priceName = document.getElementById(`button-more-price-services-${number}`);
+            const priceMoney = document.getElementById(`button-more-price-money-${number}`);
+            priceName.textContent = nameOfServise;
+            priceMoney.textContent = `£${cost}`;
+        })
+
+        category.description.map((selfText, number) => {
+            const textBlock = document.getElementById(`button-more-discription-text-${number}`);
+            textBlock.textContent = selfText;
+        })
+
     }, 1);
 })
 
+const buttonMoreTitleSvgBlock = document.getElementById("button-more-title-svg-block");
+let activAnmimationTitle = true;
 
+buttonMoreTitleSvgBlock.addEventListener('click', () => {
+    if (activAnmimationTitle) {
+        setTimeout(() => {
+            buttonMoreTitle.style.opacity = "0";
+            setTimeout(() => {
+                buttonMoreTitle.textContent = "What Interests You?";
+                setTimeout(() => {
+                    buttonMoreTitle.style.opacity = "";
+                }, 300);
+            }, 300);
+        }, 1);
+        activAnmimationTitle = false;
+    }
+});
 
 const mainSendForm = document.getElementById('main-send-form');
 
