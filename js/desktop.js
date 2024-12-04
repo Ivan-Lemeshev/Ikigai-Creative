@@ -841,6 +841,10 @@ buttonMoreTitleSvgBlock.addEventListener('click', () => {
             }, 300);
         }, 1);
         activAnmimationTitle = false;
+
+        const category = arrayDataOfService[activNumber]
+        const titleOfServise = document.getElementById(`interest-block-text-${activNumber}`);
+        titleOfServise.textContent = category.title;
     }
 });
 
@@ -1144,22 +1148,36 @@ const reviews = [
 
         bottom: {
             title: "Mikhail Potapenko",
-            upperText: "Our motorwheel enthusiasts' company wanted to promote our movement in Moscow. We approached this company for website design, development, and promotion. They took the project very seriously and quickly delivered not only an excellent mockup but also the website itself! Ikigai also helped us manage content for our groups—writing posts, shooting videos! As clients, we didn’t have to handle any unnecessary tasks—they took care of everything.",
+            upperText: "When my team decided to update our website for our volunteer project, I didn’t expect it to turn out this great! The team really understood our vision and added some brilliant ideas we hadn’t thought of. Everything was done quickly and with great attention to detail. Now, our website not only works but inspires more people to get involved.",
             lowerText: "My admiration and respect."
         }
     },
 
     {
         top: {
-            title: "Mikhail Potapenko",
+            title: "Diana Belousova",
             upperText: "Our motorwheel enthusiasts' company wanted to promote our movement in Moscow. We approached this company for website design, development, and promotion. They took the project very seriously and quickly delivered not only an excellent mockup but also the website itself! Ikigai also helped us manage content for our groups—writing posts, shooting videos! As clients, we didn’t have to handle any unnecessary tasks—they took care of everything.",
-            lowerText: "My admiration and respect."
+            lowerText: "I highly recommend them as partners!"
         },
 
         bottom: {
-            title: "Dmitry Malyukin",
-            upperText: "In 2022, our project scaled up. We turned to the team at Ikigai Creative to update our brand identity. Time, as it turned out, has proven the success of the innovations they introduced. Working with this agency has been a real pleasure. My colleagues and I quickly decided to continue a long-term collaboration, which is still ongoing to this day.",
-            lowerText: "I can recommend this organization for their high-quality and diligent work over many years."
+            title: "Andrey Skugarov",
+            upperText: "As a guy who knows how to enjoy the good things in life, I never expected our project to turn out this well. I reached out for a video production project, and they didn’t just meet my expectations—they exceeded them. From the start, they understood my vision, and the results were outstanding. The video captured our brand perfectly, with every detail in place. They didn’t just shoot and edit—they brought our vision to life in ways I hadn’t imagined.",
+            lowerText: "Respect to this team for their amazing work!"
+        }
+    },
+
+    {
+        top: {
+            title: "Sofia Pomina",
+            upperText: "When my international orders started increasing, I knew I needed a more efficient and reliable way to manage payments. I reached out to this team, and they quickly set up a secure and user-friendly payment system that fits my needs perfectly. Now, the process is seamless, and I don’t have to worry about complicated transactions anymore, giving me more time to focus on growing my business.",
+            lowerText: "Highly recommend them for reliable payment solutions!"
+        },
+
+        bottom: {
+            title: "Yulia Biryukova",
+            upperText: "As a dancer who’s always looking to stand out, I never expected my social media to blow up like it did. I reached out to this team for social media promotion, and they didn’t just deliver—they totally elevated my online presence. From the start, they understood my vibe and nailed it. My content has never looked better, and the engagement is off the charts. They didn’t just manage my posts—they made my brand shine in ways I never thought possible.",
+            lowerText: "Can’t thank them enough for helping me level up!"
         }
     }
 ]
