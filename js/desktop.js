@@ -250,7 +250,7 @@ const arrayDataOfService = [
             },
 
             {
-                nameOfServise: "Social Media Video Content",
+                nameOfServise: "Event/Conference Video Coverage",
                 cost: 800
             },
 
