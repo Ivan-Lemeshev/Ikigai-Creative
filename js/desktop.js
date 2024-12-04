@@ -461,7 +461,7 @@ const switchLocalization = () => {
 
         if(selectLang === "rus") { // добавляем стили к русскому тексту 
             const allStyles = data.styles;
-            element.style.fontFamily = "Lato";
+            element.style.fontFamily = "'Lato'";
             for (let style in allStyles) {
                 const valueStyle = allStyles[style];
                 element.style[style] = valueStyle; // придумать как сбрасывать стили для ангийского языка

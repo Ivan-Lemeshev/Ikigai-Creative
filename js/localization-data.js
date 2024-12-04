@@ -4,7 +4,7 @@ const localizationWrapper = {
         eng: "Info",
         styles: {
             fontSize: "",
-            fontWeight: "",
+            fontWeight: "400",
             lineHeight: "2vw"
         }
     },
