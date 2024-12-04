@@ -1,4 +1,4 @@
-const locakizationWrapper = {
+const localizationWrapper = {
     "nav-info-first-section": {
         rus: "Инфо",
         eng: "Info",
@@ -563,3 +563,5 @@ const locakizationWrapper = {
     },
 
 }
+
+export default localizationWrapper;

@@ -1113,12 +1113,14 @@ body {
 
 #drop-list-wrapper {
     width: 21.875vw;
-    height: 17.5vw;
+    height: 3.125vw;
     position: absolute;
     overflow: hidden;
     top: 17.1875vw;
     left: 26.30208vw;
     z-index: 10;
+    transition: height 0.3s ease-in-out;
+    
 }
 
 #choice-of-service {

@@ -1,3 +1,5 @@
+import localizationWrapper from "./localization-data.js";
+
 const backgroundGradient = document.getElementById("background-gradient");
 const ikigaiLogoText = document.getElementById("ikigai-logo-text");
 const creativeLogoText = document.getElementById("creative-logo-text");
@@ -446,6 +448,31 @@ const arrayDataOfService = [
     }
 ];
 
+let selectLang = "eng";
+const lang = document.getElementById("language-button-first-section");
+
+const switchLocalization = () => {
+    selectLang = selectLang === "eng" ? "rus" : "eng";
+    for (let id in localizationWrapper) { // перебираем все айдишники
+        const data = localizationWrapper[id]; // пой айди получаю информацию 
+
+        const element = document.getElementById(id); // получаю элемент который нужно по айди заменить 
+        element.textContent = data[selectLang]; //   обновляю текст
+
+        if(selectLang === "rus") { // добавляем стили к русскому тексту 
+            const allStyles = data.styles;
+            element.style.fontFamily = "Lato";
+            for (let style in allStyles) {
+                const valueStyle = allStyles[style];
+                element.style[style] = valueStyle; // придумать как сбрасывать стили для ангийского языка
+            }
+        }
+    }
+}
+
+lang.addEventListener('click', () => {
+    switchLocalization();
+})
 
 
 const massiv = [1, 2, 3, 4, 5];
@@ -819,10 +846,9 @@ thirdSectionButtonMore.addEventListener('click', () => {
         })
 
         category.description.map((selfText, number) => {
-            const textBlock = document.getElementById(`button-more-discription-text-${number}`);
+            const textBlock = document.getElementById(`button-more-description-text-${number}`);
             textBlock.textContent = selfText;
         })
-
     }, 1);
 })
 
@@ -888,7 +914,7 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
     event.stopPropagation();
     const newDropListWrapper = document.createElement('div');
     newDropListWrapper.id = "drop-list";
-
+    dropListWrapper.style.height = "17.5vw"
     const actualityCategory = dropListArray.filter((textCategory) => {
         return textCategory !== selectCategory;
     });
@@ -929,19 +955,31 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
             choiceOfServicePlaceholder.style.color = "var(--darkBlue)";
         };
         newDropListWrapper.style.opacity = "0";
+        dropListWrapper.style.height = "";
         fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
         newDropListWrapper.style.pointerEvents = "none";
         fourthSectionChoiceOfServiceArrow.style.rotate = "";
     });
 });
 
-thirdSectionButtonOrder.addEventListener('click', (event) => {
+let numberOfService = 0;
+const textarea = document.getElementById("textarea");
+
+const textForApplication = [
+    "",
+    "Hello, I want to get advice on the chosen service",
+    "Hello, I want to get an answer to the question:",
+    "Hello, I have used this service and I want to leave a review:"
+]
+
+const setupAndTranslateForSelectService = (event) => {
     event.preventDefault();
     window.scrollTo({
         top: window.innerWidth * 1.950625,
         behavior: 'smooth'
     });
 
+    textarea.textContent = textForApplication[numberOfService];
     let selCat = dropListArray[activNumber];
 
     if (selCat !== selectCategory && dropListArray.includes(selCat)) {
@@ -952,7 +990,19 @@ thirdSectionButtonOrder.addEventListener('click', (event) => {
         selectCategory = selCat;
         allInputsHave();
     }
-});
+}
+
+
+for (let index = 0; index < textForApplication.length; index++) {
+    const button = document.getElementById(`button-more-lower-part-buttons-${index}`);
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        numberOfService = index;
+        setupAndTranslateForSelectService(event);
+    })
+}
+
+thirdSectionButtonOrder.addEventListener('click', setupAndTranslateForSelectService);
 
 inputFirstName.addEventListener('input', () => {
     const inputValue = inputFirstName.value;
@@ -1243,4 +1293,6 @@ reviewsArrowLeft.addEventListener('click', () => {
 reviewsArrowRight.addEventListener('click', () => {
     upperloadReviews(++number, false)
 })
+
+
 
