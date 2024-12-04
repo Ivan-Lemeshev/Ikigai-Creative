@@ -154,6 +154,49 @@ const arrayDataOfService = [
             "Responsive websites and mobile sites for all devices.",
             "Website development using popular CMS (WordPress, Joomla, etc.).",
             "Custom platform and mobile app development for iOS and Android."
+        ],
+
+        prices: [
+            {
+                nameOfServise: "Landing Page Design",
+                cost: 300
+            },
+
+            {
+                nameOfServise: "Custom Website Design ",
+                cost: 700
+            },
+
+            {
+                nameOfServise: "E-commerce Website Development",
+                cost: 1200
+            },
+
+            {
+                nameOfServise: "WordPress Website Setup",
+                cost: 400
+            },
+
+            {
+                nameOfServise: "Website Redesign/Modernization",
+                cost: 600
+            },
+
+            {
+                nameOfServise: "Single Page Application",
+                cost: 900
+            },
+
+            {
+                nameOfServise: "SEO-Optimized Website Development",
+                cost: 800
+            },
+
+        ],
+
+        description: [
+            "Website design and development is about more than just creating a beautiful site; it’s about crafting functional, user-friendly experiences that keep your customers engaged. We build responsive, visually striking websites that reflect your brand's uniqueness while ensuring seamless performance across all devices. From landing pages to e-commerce platforms, we create websites that don’t just look good—they work flawlessly, providing an enjoyable experience for your users.",
+            "Our development team goes beyond design; we ensure your website is optimized for speed, performance, and search engine visibility. Whether launching a new e-commerce site or redesigning an existing one, we guide you through every step—from concept to execution. We don’t just create websites; we deliver digital experiences that engage, convert, and grow your business."
         ]
     },
 
@@ -188,6 +231,49 @@ const arrayDataOfService = [
             "Business videos: promotional videos, video presentations.",
             "Event recording and post-production services.",
             "Animation to enhance visual appeal in videos."
+        ],
+
+        prices: [
+            {
+                nameOfServise: "Product/Service Promo Video",
+                cost: 500
+            },
+
+            {
+                nameOfServise: "Branding Video (Up to 3 Minutes) ",
+                cost: 1000
+            },
+
+            {
+                nameOfServise: "Social Media Video Content",
+                cost: 300
+            },
+
+            {
+                nameOfServise: "Social Media Video Content",
+                cost: 800
+            },
+
+            {
+                nameOfServise: "Corporate Training Video",
+                cost: 600
+            },
+
+            {
+                nameOfServise: "Animated Explainer Video",
+                cost: 1200
+            },
+
+            {
+                nameOfServise: "Music Video Production",
+                cost: 1500
+            },
+
+        ],
+
+        description: [
+            "Video production is not just about capturing footage; it’s about telling a compelling story that resonates with your audience and elevates your brand. We create high-quality videos that are tailored to your vision, whether it’s a promotional video, corporate branding, or engaging social media content. From scripting to shooting, editing to post-production, we ensure every detail is perfect, delivering a polished final product that captivates viewers and drives results.",
+            "Our video production team goes beyond filming; we ensure your video is optimized for its purpose, whether for social media, websites, or marketing. From concept to final cut, we make sure your message is clear and impactful. We don’t just create videos; we craft stories that engage, captivate, and convert your audience."
         ]
     },
 
@@ -200,6 +286,49 @@ const arrayDataOfService = [
             "Technical support for websites and apps.",
             "Social media management and content creation.",
             "Content management and promotion of websites and applications (SEO and SMM)."
+        ],
+
+        prices: [
+            {
+                nameOfServise: "Content Writing & Copywriting",
+                cost: 300
+            },
+
+            {
+                nameOfServise: "Technical Support for Websites ",
+                cost: 400
+            },
+
+            {
+                nameOfServise: "Content Strategy Development",
+                cost: 500
+            },
+
+            {
+                nameOfServise: "Website Maintenance & Updates",
+                cost: 350
+            },
+
+            {
+                nameOfServise: "SEO Content Optimization",
+                cost: 450
+            },
+
+            {
+                nameOfServise: "Blog Management",
+                cost: 300
+            },
+
+            {
+                nameOfServise: "Customer Support via Live Chat",
+                cost: 600
+            },
+
+        ],
+
+        description: [
+            "Support and content services are essential to keep your business running smoothly online. We offer a range of services, from creating high-quality content to providing technical support, ensuring your website is always up to date and running smoothly. Whether it’s content writing, website maintenance, or customer support, we focus on delivering value and improving the user experience. Our team helps you maintain an engaging online presence while addressing your customers’ needs efficiently.",
+            "We don’t just create content; we offer ongoing support to ensure your digital assets function seamlessly. From blog management and content optimization to live chat support, our services are designed to keep your website relevant and engaging. We help you maintain fresh content, perform regular updates, and provide top-notch customer service."
         ]
     },
 
@@ -213,6 +342,49 @@ const arrayDataOfService = [
             "Developing promotional strategies for products or services on social platforms.",
             "Targeted advertising setup to increase brand visibility and sales.",
             "Content planning and creation of high-quality visual content (graphics, videos)."
+        ],
+
+        prices: [
+            {
+                nameOfServise: "Social Media Strategy Development",
+                cost: 400
+            },
+
+            {
+                nameOfServise: "Content Creation & Management ",
+                cost: 500
+            },
+
+            {
+                nameOfServise: "Social Media Ad Campaigns",
+                cost: 600
+            },
+
+            {
+                nameOfServise: "Influencer Marketing",
+                cost: 700
+            },
+
+            {
+                nameOfServise: "Community Management",
+                cost: 350
+            },
+
+            {
+                nameOfServise: "Social Media Account Setup",
+                cost: 300
+            },
+
+            {
+                nameOfServise: "Social Media Analytics",
+                cost: 200
+            },
+
+        ],
+
+        description: [
+            "Social media promotion is about building your online presence to engage your audience, grow your community, and drive traffic. We create strategies to help you stand out, grow your following, and reach your customers. From content management to ad campaigns, we offer a full-service approach to social media marketing. Our team develops campaigns that reflect your brand and connect with your audience.",
+            "We go beyond posting content; we monitor performance, engage your community, and optimize for the best results. Whether you want to increase brand awareness, drive sales, or grow your following, our data-driven strategies align with your goals. We don’t just manage your social media; we build a loyal community that supports your brand."
         ]
     },
 
@@ -227,6 +399,49 @@ const arrayDataOfService = [
             "Integration with PayPal or Stripe to create and send payment links to clients.",
             "The ability to generate individual payment links for deposits and final payments.",
             "Send automated reminders with personalized payment links."
+        ],
+
+        prices: [
+            {
+                nameOfServise: "Payment Gateway Integration",
+                cost: 500
+            },
+
+            {
+                nameOfServise: "E-commerce Payment Setup ",
+                cost: 600
+            },
+
+            {
+                nameOfServise: "Subscription Payment System Setup",
+                cost: 700
+            },
+
+            {
+                nameOfServise: "Secure Payment Systems Configuration",
+                cost: 450
+            },
+
+            {
+                nameOfServise: "Payment Gateway Testing & Troubleshooting",
+                cost: 400
+            },
+
+            {
+                nameOfServise: "Multi-Currency Payment Setup",
+                cost: 550
+            },
+
+            {
+                nameOfServise: "Payment System Optimization for Speed ",
+                cost: 600
+            },
+
+        ],
+
+        description: [
+            "Setting up payment systems is crucial for ensuring seamless and secure transactions on your website. We help you integrate the right payment gateways, whether for e-commerce stores, subscriptions, or one-time purchases, making sure the process is simple and secure for both you and your customers. Our team configures payment solutions that are tailored to your needs, including multi-currency options and mobile payment integration.",
+            "We ensure your payment system is optimized for both speed and security. From testing to troubleshooting, we make sure your payment processes run smoothly, reducing friction and increasing customer satisfaction. With our setup, you can confidently manage payments, knowing your system is reliable and fully secure."
         ]
     }
 ];
