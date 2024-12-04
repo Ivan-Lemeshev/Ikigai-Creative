@@ -812,7 +812,7 @@ body {
         }
     }
 
-    &>#button-more-discription-title {
+    &>#button-more-description-title {
         font-weight: 400;
         font-size: 1.875vw;
         color: var(--secondBlue);
@@ -822,7 +822,7 @@ body {
 
     }
 
-    &>#button-more-discription-text {
+    &>#button-more-description-text {
         width: 80.72917vw;
         font-weight: 300;
         font-size: 1.875vw;
@@ -833,13 +833,13 @@ body {
         left: 7.8125vw;
         overflow: visible;
 
-        &>#button-more-discription-text-0 {
+        &>#button-more-description-text-0 {
             position: absolute;
             height: 12.23958vw;
             top: 45.46875vw;
         }
 
-        &>#button-more-discription-text-1 {
+        &>#button-more-description-text-1 {
             position: absolute;
             height: 9.79167vw;
             top: 58.75vw;

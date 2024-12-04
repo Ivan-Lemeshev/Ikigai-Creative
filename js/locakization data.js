@@ -293,4 +293,273 @@ const locakizationWrapper = {
         }
     },
 
+    // сделать массив с названиями в русском jse 
+    "interest-block-text-0": {
+        rus: "Креативный дизайн",
+        eng: "Creative design",
+        styles: {
+            fontSize: "1.14583vw",
+            fontWeight: "",
+            lineHeight: "1.48958vw"
+        }
+    },
+
+    "interest-block-text": {
+        rus: "Все услуги",
+        eng: "All services",
+        styles: {
+            fontSize: "1.77083vw",
+            fontWeight: "",
+            lineHeight: "2.125vw"
+        }
+    },
+
+    "button-more-title-of-price": {
+        rus: "Начальные цены на услуги",
+        eng: "Starting prices for services",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "2.375vw"
+        }
+    },
+
+    // сделать массив с названиями в русском jse 
+    "button-more-price-services-0": {
+        rus: "Дизайн сайтов",
+        eng: "Web Design",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "2.375vw"
+        }
+    },
+
+    "button-more-description-title": {
+        rus: "Описание",
+        eng: "Description",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    // сделать массив с названиями в русском jse 
+    "button-more-description-text-0": {
+        rus: "",
+        eng: "",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "button-more-lower-part-buttons-text-order": {
+        rus: "Заказать услугу",
+        eng: "Order a Service",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "2.25vw"
+        }
+    },
+
+    "button-more-lower-part-buttons-text-consultation": {
+        rus: "Получить консультацию",
+        eng: "Get a Consultation",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "2.25vw"
+        }
+    },
+
+    "button-more-lower-part-buttons-text-questions": {
+        rus: "Задать вопрос",
+        eng: "Got Questions",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "2.25vw"
+        }
+    },
+
+    "button-more-lower-part-buttons-text-review": {
+        rus: "Оставить отзыв",
+        eng: "Leave a Review",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "2.25vw"
+        }
+    },
+
+    // сделать массив с названиями в русском jse 
+    "third-section-div-in-div-1": {
+        rus: "",
+        eng: "",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "four-section-title": {
+        rus: "Свяжитесь с нами",
+        eng: "Contact us",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "2.625vw"
+        }
+    },
+    
+    "main-send-form-title": {
+        rus: "Отправить сообщение",
+        eng: "Send a Massage",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "2.25vw"
+        }
+    },
+    
+    // поменять плейсхолдеры
+    "input-first-name": {
+        rus: "",
+        eng: "",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "choice-serveces-title": {
+        rus: "Заинтересовавшая услуга:",
+        eng: "The service you're interested in:",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "1.875vw"
+        }
+    },
+
+    "choice-of-service-placeholder": {
+        rus: "Выбрать услугу",
+        eng: "Choose a service",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "1.875vw"
+        }
+    },
+
+    "textarea-title": {
+        rus: "Комментарий*",
+        eng: "Comment*",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "1.875vw"
+        }
+    },
+
+    // поменять плейсхолдер
+    "textarea": {
+        rus: "",
+        eng: "",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+    
+    // нет перевода
+    "required-fields": {
+        rus: "",
+        eng: "",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+    // нет перевода
+    "correctly": {
+        rus: "",
+        eng: "",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "send-form-submit": {
+        rus: "Отправить",
+        eng: "Submit",
+        styles: {
+            fontSize: "1.77083vw",
+            fontWeight: "",
+            lineHeight: "2.125vw"
+        }
+    },
+
+    "alternative-send-form-title": {
+        rus: "Альтернативные контакты",
+        eng: "Alternative Contact",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "2.25vw"
+        }
+    },
+
+    "five-section-title": {
+        rus: "Отзывы",
+        eng: "Reviews",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "2.625vw"
+        }
+    },
+
+    "other-reviews-text": {
+        rus: "Другие отзывы",
+        eng: "Other reviews",
+        styles: {
+            fontSize: "1.66667vw",
+            fontWeight: "",
+            lineHeight: "2vw"
+        }
+    },
+
+    // создать массив в русском jse 
+    "reviews-upper-name": {
+        rus: "",
+        eng: "",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    // как перевести из 5 слов в 4?
+    "footer-content": {
+        rus: "",
+        eng: "",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
 }
