@@ -526,116 +526,191 @@ const arrayDataOfService = [
     },
 
     {
-        title: "Promotion on social networks",
+        title: {
+            eng: "Promotion on social networks",
+            rus: "Продвижение в социальных сетях"
+        },
+
         svgCode: `<svg width="201" height="200" viewBox="0 0 201 200" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M100.799 20C59.3757 20 25.7988 53.5769 25.7988 95C25.7988 136.423 59.3757 170 100.799 170C142.222 170 175.799 136.423 175.799 95C175.799 53.5769 142.222 20 100.799 20ZM100.799 158.281C65.8485 158.281 37.5176 129.95 37.5176 95C37.5176 60.0497 65.8485 31.7188 100.799 31.7188C135.749 31.7188 164.08 60.0497 164.08 95C164.08 129.95 135.749 158.281 100.799 158.281Z" fill="#009AEC" fill-opacity="0.6"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M120.574 82.2434H106.078V71.664C106.078 68.4189 109.435 67.6663 111.002 67.6663C112.558 67.6663 120.366 67.6663 120.366 67.6663V53.3892L109.634 53.3333C94.9906 53.3333 91.6488 63.9788 91.6488 70.8046V82.2437H81.0234V96.953H91.6488C91.6488 115.838 91.6488 136.667 91.6488 136.667H106.078C106.078 136.667 106.078 115.625 106.078 96.953H118.336L120.574 82.2434Z" fill="#009AEC" fill-opacity="0.6"/>
         </svg>`,
-        text: [
-            "Developing promotional strategies for products or services on social platforms.",
-            "Targeted advertising setup to increase brand visibility and sales.",
-            "Content planning and creation of high-quality visual content (graphics, videos)."
-        ],
+        text: {
+            eng: [
+                "Developing promotional strategies for products or services on social platforms.",
+                "Targeted advertising setup to increase brand visibility and sales.",
+                "Content planning and creation of high-quality visual content (graphics, videos)."
+            ],
+            rus: [
+                "Разработка стратегии продвижения для товаров или услуг в социальных медиа.",
+                "Настройка таргетированной рекламы для увеличения продаж.",
+                "Создание контент-планов и качественного визуального контента (графика, видео)."
+            ]
+        },
 
         prices: [
             {
-                nameOfServise: "Social Media Strategy Development",
+                nameOfServise: {
+                    eng: "Social Media Strategy Development",
+                    rus: "Разработка стратегии для социальных сетей"
+                },
                 cost: 400
             },
 
             {
-                nameOfServise: "Content Creation & Management ",
+                nameOfServise: {
+                    eng: "Content Creation & Management ",
+                    rus: "Создание и управление контентом"
+                },
                 cost: 500
             },
 
             {
-                nameOfServise: "Social Media Ad Campaigns",
+                nameOfServise: {
+                    eng: "Social Media Ad Campaigns",
+                    rus: "Рекламные кампании в социальных сетях"
+                },
                 cost: 600
             },
 
             {
-                nameOfServise: "Influencer Marketing",
+                nameOfServise: {
+                    eng: "Influencer Marketing",
+                    rus: "Маркетинг через инфлюенсеров"
+                },
                 cost: 700
             },
 
             {
-                nameOfServise: "Community Management",
+                nameOfServise: {
+                    eng: "Community Management",
+                    rus: "Управление сообществом"
+                },
                 cost: 350
             },
 
             {
-                nameOfServise: "Social Media Account Setup",
+                nameOfServise: {
+                    eng: "Social Media Account Setup",
+                    rus: "Создание аккаунтов в социальных сетях"
+                },
                 cost: 300
             },
 
             {
-                nameOfServise: "Social Media Analytics",
+                nameOfServise: {
+                    eng: "Social Media Analytics",
+                    rus: "Аналитика социальных сетей"
+                },
                 cost: 200
             },
 
         ],
 
-        description: [
-            "Social media promotion is about building your online presence to engage your audience, grow your community, and drive traffic. We create strategies to help you stand out, grow your following, and reach your customers. From content management to ad campaigns, we offer a full-service approach to social media marketing. Our team develops campaigns that reflect your brand and connect with your audience.",
-            "We go beyond posting content; we monitor performance, engage your community, and optimize for the best results. Whether you want to increase brand awareness, drive sales, or grow your following, our data-driven strategies align with your goals. We don’t just manage your social media; we build a loyal community that supports your brand."
-        ]
+        description: {
+            eng: [
+                "Social media promotion is about building your online presence to engage your audience, grow your community, and drive traffic. We create strategies to help you stand out, grow your following, and reach your customers. From content management to ad campaigns, we offer a full-service approach to social media marketing. Our team develops campaigns that reflect your brand and connect with your audience.",
+                "We go beyond posting content; we monitor performance, engage your community, and optimize for the best results. Whether you want to increase brand awareness, drive sales, or grow your following, our data-driven strategies align with your goals. We don’t just manage your social media; we build a loyal community that supports your brand."
+            ],
+            rus: [
+                "Продвижение в социальных сетях — это создание вашего онлайн-присутствия для вовлечения аудитории, роста сообщества и привлечения трафика. Мы разрабатываем стратегии, которые помогут вам выделиться, увеличить количество подписчиков и достичь своих клиентов. Мы предлагаем комплексный подход к маркетингу в социальных сетях. Наша команда разрабатывает кампании, которые отражают уникальность вашего бренда и находят отклик у вашей аудитории.",
+                "Мы отслеживаем результаты и оптимизируем процессы для достижения максимальных результатов. Хотите ли вы повысить узнаваемость бренда, увеличить продажи или расширить аудиторию, наши стратегии помогут вам достичь поставленных целей. Мы не просто управляем вашими социальными сетями — мы строим лояльное сообщество, которое поддерживает ваш бренд."
+            ]
+        }
     },
 
     {
-        title: "Setting up payment",
+        title: {
+            eng: "Setting up payment",
+            rus: "Настройка оплаты"
+        },
         svgCode: `<svg width="201" height="200" viewBox="0 0 201 200" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M80.1871 36C65.5384 36.3459 51.6061 42.4081 41.368 52.8907C31.13 63.3734 25.3984 77.445 25.3984 92.0978C25.3984 106.751 31.13 120.822 41.368 131.305C51.6061 141.787 65.5384 147.85 80.1871 148.195H82.6894V103.718C82.6894 100.402 85.2229 96.1483 88.5697 96.1483H136.113C136.113 94.3029 136.3 93.0205 136.3 92.0196C136.226 77.1689 130.288 62.9489 119.778 52.4566C109.268 41.9642 95.0379 36.0493 80.1871 36ZM124.978 87.2965H110.527C110.252 75.6471 107.546 64.1836 102.582 53.641C108.661 57.1406 113.846 62.0005 117.731 67.8396C121.617 73.6787 124.097 80.3383 124.978 87.2965ZM73.775 50.4193V87.2965H60.9509C61.9205 69.7181 67.4568 55.8305 73.775 50.4193ZM73.775 96.899V133.745C67.5194 128.334 61.9205 114.509 60.9509 96.899H73.775ZM86.5992 87.2965V50.4193C92.8548 55.8305 98.4849 69.7181 99.4233 87.2965H86.5992ZM57.7605 53.641C52.8819 64.2117 50.1902 75.6594 49.8471 87.2965H35.3026C36.1808 80.3297 38.6669 73.6625 42.5645 67.8216C46.462 61.9806 51.6644 57.1259 57.7605 53.641ZM35.3339 98.4942H49.8784C50.1466 110.107 52.831 121.537 57.7605 132.056C51.685 128.573 46.4985 123.73 42.6077 117.907C38.7168 112.085 36.2272 105.44 35.3339 98.4942Z" fill="#009AEC" fill-opacity="0.6"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M167.579 105.657H99.4856C97.4117 105.657 95.4228 106.481 93.9563 107.947C92.4899 109.414 91.666 111.403 91.666 113.477V151.48C91.666 153.554 92.4899 155.543 93.9563 157.009C95.4228 158.476 97.4117 159.299 99.4856 159.299H167.579C169.652 159.299 171.641 158.476 173.108 157.009C174.574 155.543 175.398 153.554 175.398 151.48V113.477C175.398 111.403 174.574 109.414 173.108 107.947C171.641 106.481 169.652 105.657 167.579 105.657ZM108.65 151.48C108.683 150.28 108.48 149.086 108.052 147.965C107.623 146.844 106.978 145.819 106.153 144.947C105.328 144.076 104.34 143.376 103.244 142.886C102.148 142.397 100.967 142.129 99.7671 142.096H99.5169V122.672C101.937 122.731 104.282 121.83 106.04 120.166C107.799 118.502 108.827 116.209 108.9 113.789V113.57H158.351C158.351 115.963 159.293 118.259 160.973 119.963C162.653 121.666 164.936 122.64 167.328 122.672H167.579V142.221C166.375 142.192 165.177 142.401 164.054 142.835C162.931 143.268 161.905 143.919 161.033 144.75C160.162 145.581 159.463 146.575 158.976 147.676C158.489 148.777 158.224 149.963 158.195 151.167V151.449L108.65 151.48Z" fill="#009AEC" fill-opacity="0.6"/>
         <path d="M133.518 144.943C140.773 144.943 146.655 139.061 146.655 131.806C146.655 124.55 140.773 118.669 133.518 118.669C126.262 118.669 120.381 124.55 120.381 131.806C120.381 139.061 126.262 144.943 133.518 144.943Z" fill="#009AEC" fill-opacity="0.6"/>
         </svg>`,
-        text: [
-            "Integration with PayPal or Stripe to create and send payment links to clients.",
-            "The ability to generate individual payment links for deposits and final payments.",
-            "Send automated reminders with personalized payment links."
-        ],
+        text: {
+            eng: [
+                "Integration with PayPal or Stripe to create and send payment links to clients.",
+                "The ability to generate individual payment links for deposits and final payments.",
+                "Send automated reminders with personalized payment links."
+            ],
+            rus: [
+                "Интеграция с PayPal или Stripe для создания и отправки клиентам платежных ссылок.",
+                "Возможность генерации индивидуальных ссылок на авансовые и окончательные платежи.",
+                "Отправляйте автоматические напоминания с персонализированными ссылками для оплаты."
+            ]
+        },
 
         prices: [
             {
-                nameOfServise: "Payment Gateway Integration",
+                nameOfServise: {
+                    eng: "Payment Gateway Integration",
+                    rus: "Интеграция платёжных систем"
+                },
                 cost: 500
             },
 
             {
-                nameOfServise: "E-commerce Payment Setup ",
+                nameOfServise: {
+                    eng: "E-commerce Payment Setup ",
+                    rus: "Настройка платёжной системы магазина"
+                },
                 cost: 600
             },
 
             {
-                nameOfServise: "Subscription Payment System Setup",
+                nameOfServise: {
+                    eng: "Subscription Payment System Setup",
+                    rus: "Настройка системы подписки"
+                },
                 cost: 700
             },
 
             {
-                nameOfServise: "Secure Payment Systems Configuration",
+                nameOfServise: {
+                    eng: "Secure Payment Systems Configuration",
+                    rus: "Конфигурация безопасности платёжных систем"
+                },
                 cost: 450
             },
 
             {
-                nameOfServise: "Payment Gateway Testing & Troubleshooting",
+                nameOfServise: {
+                    eng: "Payment Gateway Testing & Troubleshooting",
+                    rus: "Тестирование платёжных систем"
+                },
                 cost: 400
             },
 
             {
-                nameOfServise: "Multi-Currency Payment Setup",
+                nameOfServise: {
+                    eng: "Multi-Currency Payment Setup",
+                    rus: "Настройка многовалютных платёжных систем"
+                },
                 cost: 550
             },
 
             {
-                nameOfServise: "Payment System Optimization for Speed ",
+                nameOfServise: {
+                    eng: "Payment System Optimization for Speed ",
+                    rus: "Оптимизация платёжных систем для скорости",
+                },
                 cost: 600
             },
 
         ],
 
-        description: [
-            "Setting up payment systems is crucial for ensuring seamless and secure transactions on your website. We help you integrate the right payment gateways, whether for e-commerce stores, subscriptions, or one-time purchases, making sure the process is simple and secure for both you and your customers. Our team configures payment solutions that are tailored to your needs, including multi-currency options and mobile payment integration.",
-            "We ensure your payment system is optimized for both speed and security. From testing to troubleshooting, we make sure your payment processes run smoothly, reducing friction and increasing customer satisfaction. With our setup, you can confidently manage payments, knowing your system is reliable and fully secure."
-        ]
+        description: {
+            eng: [
+                "Setting up payment systems is crucial for ensuring seamless and secure transactions on your website. We help you integrate the right payment gateways, whether for e-commerce stores, subscriptions, or one-time purchases, making sure the process is simple and secure for both you and your customers. Our team configures payment solutions that are tailored to your needs, including multi-currency options and mobile payment integration.",
+                "We ensure your payment system is optimized for both speed and security. From testing to troubleshooting, we make sure your payment processes run smoothly, reducing friction and increasing customer satisfaction. With our setup, you can confidently manage payments, knowing your system is reliable and fully secure."
+            ],
+            rus: [
+                "Настройка платёжных систем критична для обеспечения безошибочных и безопасных транзакций на вашем сайте. Мы помогаем интегрировать правильные платёжные шлюзы — будь то для интернет-магазинов, подписок или одноразовых покупок, обеспечивая простой и безопасный процесс как для вас, так и для ваших клиентов. Наша команда настраивает платёжные решения, учитывая ваши потребности, включая многовалютные опции и интеграцию мобильных платёжей.",
+                "Мы оптимизируем вашу платёжную систему для скорости и безопасности. От тестирования до устранения неполадок, мы гарантируем, что платёжные процессы работают без сбоев, снижая трение и повышая удовлетворённость клиентов. С нашей настройкой вы можете уверенно управлять платёжными процессами, зная, что ваша система надёжна и полностью защищена."
+            ]
+        }
     }
 ];
 
