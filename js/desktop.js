@@ -120,7 +120,11 @@ const arrayCard = [
 
 const arrayDataOfService = [
     {
-        title: "Creative Design",
+        title: {
+            eng: "Creative Design",
+            rus: "Креативный дизайн"
+        },
+
         svgCode: `<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M399.992 50.5545C400.182 39.2138 396.075 28.7568 388.429 21.1109C384.28 16.9629 377.555 16.9629 373.407 21.1114C369.259 25.2599 369.258 31.9854 373.407 36.1333C376.946 39.6716 378.843 44.6667 378.751 50.1992C378.663 55.4774 376.665 60.5739 373.407 63.8323C366.648 70.5906 299.28 129.735 246.666 175.755L233.77 162.861C272.18 118.913 319.846 64.5716 338.49 43.938L342.732 48.1799C346.88 52.3284 353.606 52.329 357.753 48.181C361.902 44.033 361.903 37.3076 357.755 33.1591L345.709 21.112C343.717 19.1198 341.015 18.0002 338.198 18.0002H338.197C335.38 18.0002 332.679 19.1192 330.687 21.1109C324.222 27.5745 284.683 72.4824 249.006 113.195C239.412 98.673 226.597 86.1803 211.353 76.5906C189.074 62.5741 163.099 55.4673 134.15 55.4673C127.782 55.4673 121.481 55.8688 115.425 56.6618C109.608 57.4234 105.51 62.7557 106.271 68.5729C107.032 74.3896 112.364 78.4877 118.181 77.7266C123.327 77.0532 128.7 76.7117 134.15 76.7117C178.229 76.7117 215.203 96.4732 234.377 129.9C216.485 150.345 201.113 167.955 193.7 176.451C180.466 178.254 170.591 183.67 163.628 192.957C157.154 201.591 154.316 211.903 151.312 222.821C147.69 235.985 143.945 249.597 133.264 260.278C130.225 263.316 129.317 267.884 130.961 271.854C132.605 275.823 136.479 278.411 140.775 278.411C169.362 278.411 192.019 272.318 208.119 260.301C222.627 249.471 231.275 234.096 233.32 215.632C260.69 191.729 378.613 88.6701 388.429 78.8541C395.597 71.6868 399.811 61.3716 399.992 50.5545ZM230.636 189.77C227.444 192.559 224.349 195.262 221.374 197.86L211.676 188.162C214.271 185.187 216.974 182.09 219.762 178.897L230.636 189.77ZM195.411 243.277C187.056 249.514 175.936 253.67 162.212 255.706C166.882 246.315 169.502 236.794 171.796 228.456C176.719 210.564 179.718 201.584 191.849 198.38L211.463 217.993C209.303 228.433 203.93 236.918 195.411 243.277Z" fill="#0282C9"/>
         <path d="M82.2595 87.9525C83.8066 87.9525 85.3782 87.6126 86.8647 86.8961C87.8181 86.4362 88.7974 85.9842 89.7747 85.5535C95.1415 83.1842 97.5719 76.9128 95.2026 71.546C92.8333 66.1797 86.5625 63.7493 81.1952 66.118C80.0018 66.6449 78.8052 67.1973 77.6383 67.7597C72.3543 70.3074 70.1359 76.6568 72.6831 81.9408C74.5143 85.7383 78.308 87.9525 82.2595 87.9525Z" fill="#0282C9"/>
@@ -130,58 +134,97 @@ const arrayDataOfService = [
         <path d="M99.8402 226.932C99.8402 207.419 83.9648 191.543 64.4514 191.543C44.9379 191.543 29.0625 207.419 29.0625 226.932C29.0625 246.445 44.9379 262.321 64.4514 262.321C83.9648 262.321 99.8402 246.445 99.8402 226.932ZM64.4514 241.076C56.652 241.076 50.3069 234.732 50.3069 226.932C50.3069 219.132 56.652 212.787 64.4514 212.787C72.2507 212.787 78.5959 219.132 78.5959 226.932C78.5959 234.731 72.2507 241.076 64.4514 241.076Z" fill="#0282C9"/>
         <path d="M101.634 345.124C121.148 345.124 137.024 329.249 137.024 309.736C137.024 290.223 121.148 274.348 101.634 274.348C82.1215 274.348 66.2461 290.223 66.2461 309.736C66.2461 329.249 82.1215 345.124 101.634 345.124ZM101.634 295.592C109.434 295.592 115.779 301.937 115.779 309.736C115.779 317.535 109.434 323.88 101.634 323.88C93.8356 323.88 87.4905 317.535 87.4905 309.736C87.4905 301.937 93.8356 295.592 101.634 295.592Z" fill="#0282C9"/>
         </svg>`,
-        text: [
-            "Development of unique concepts and visual solutions.",
-            "Web design, app design, and user interface design.",
-            "Logo creation and complete branding for companies."
-        ],
+        text: {
+            eng: [
+                "Development of unique concepts and visual solutions.",
+                "Web design, app design, and user interface design.",
+                "Logo creation and complete branding for companies."
+            ],
+
+            rus: [
+                "Разработка уникальных концепций и визуальных решений.",
+                "Веб-дизайн, дизайн приложений и пользовательских интерфейсов.",
+                "Создание логотипов и полный брендинг для компаний"
+            ]
+        },
+
 
         prices: [
             {
-                nameOfServise: "Web Design",
+                nameOfServise: {
+                    eng: "Web Design",
+                    rus: "Дизайн сайтов"
+                },
                 cost: 500
             },
 
             {
-                nameOfServise: "Mobile App Design",
+                nameOfServise: {
+                    eng: "Mobile App Design",
+                    rus: "Дизайн мобильных приложений"
+                },
                 cost: 700
             },
 
             {
-                nameOfServise: "Logo and Branding",
+                nameOfServise: {
+                    eng: "Logo and Branding",
+                    rus: "Логотип и брендинг"
+                },
                 cost: 300
             },
 
             {
-                nameOfServise: "Graphic Design",
+                nameOfServise: {
+                    eng: "Graphic Design",
+                    rus: "Графический дизайн"
+                },
                 cost: 100
             },
 
             {
-                nameOfServise: "Packaging Design",
+                nameOfServise: {
+                    eng: "Packaging Design",
+                    rus: "Дизайн упаковки"
+                },
                 cost: 400
             },
 
             {
-                nameOfServise: "Print Design",
+                nameOfServise: {
+                    eng: "Print Design",
+                    rus: "Дизайн для печати"
+                },
                 cost: 150
             },
 
             {
-                nameOfServise: "UI/UX Design for Software",
+                nameOfServise: {
+                    eng: "UI/UX Design for Software",
+                    rus: "UI/UX дизайн"
+                },
                 cost: 150
             },
 
         ],
 
-        description: [
-            "Creative design is your opportunity to stand out and be remembered. We develop unique concepts and visual solutions that not only grab attention but also reflect the individuality of your business. From web design and app design to user interface creation, each of our solutions is focused on your success and the convenience of your customers. We know how to make your website or app look modern, stylish, and, most importantly, effective.",
-            "But we don’t stop there. We create not just logos but a complete visual identity for your brand. A full-fledged branding strategy is what distinguishes successful companies, and we’re ready to help you become one of them. Our creative design will make your brand recognizable, memorable, and visually striking on every level."
-        ]
+        description: {
+            eng: [
+                "Creative design is your opportunity to stand out and be remembered. We develop unique concepts and visual solutions that not only grab attention but also reflect the individuality of your business. From web design and app design to user interface creation, each of our solutions is focused on your success and the convenience of your customers. We know how to make your website or app look modern, stylish, and, most importantly, effective.",
+                "But we don’t stop there. We create not just logos but a complete visual identity for your brand. A full-fledged branding strategy is what distinguishes successful companies, and we’re ready to help you become one of them. Our creative design will make your brand recognizable, memorable, and visually striking on every level."
+            ],
+            rus: [
+                "Креативный дизайн — это ваш шанс выделиться и запомниться. Мы разрабатываем уникальные концепции и визуальные решения, которые не только привлекают внимание, но и отражают индивидуальность вашего бизнеса. От веб-дизайна и дизайна приложений до создания интерфейсов — каждое наше решение ориентировано на ваш успех и удобство ваших клиентов. Мы знаем, как сделать ваш сайт или приложение современным, стильным и, что важнее всего, эффективным.",
+                "Но мы не останавливаемся на этом. Мы создаём не просто логотипы, а целостную визуальную идентичность для вашего бренда. Полноценная стратегия брендинга — вот что отличает успешные компании, и мы готовы помочь вам стать одной из них. Наш креативный дизайн сделает ваш бренд узнаваемым, запоминающимся и визуально впечатляющим на каждом уровне."
+            ]
+        }
     },
 
     {
-        title: "Website design and development",
+        title: {
+            eng: "Website design and development",
+            rus: "Веб-дизайн и разработка"
+        },
         svgCode: `<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M177.166 10H22.8342C17.0434 10 11.4898 12.2979 7.3951 16.3883C3.30039 20.4787 1 26.0264 1 31.8111V140.189C1 145.974 3.30039 151.521 7.3951 155.612C11.4898 159.702 17.0434 162 22.8342 162H177.166C182.957 162 188.51 159.702 192.605 155.612C196.7 151.521 199 145.974 199 140.189V31.8111C199 26.0264 196.7 20.4787 192.605 16.3883C188.51 12.2979 182.957 10 177.166 10ZM22.8342 18.2638H177.166C180.763 18.2638 184.212 19.6911 186.755 22.2317C189.299 24.7723 190.727 28.2181 190.727 31.8111V41.5651H9.2726V31.8111C9.2726 28.2181 10.7014 24.7723 13.2447 22.2317C15.788 19.6911 19.2375 18.2638 22.8342 18.2638ZM177.166 153.736H22.8342C19.2375 153.736 15.788 152.309 13.2447 149.768C10.7014 147.228 9.2726 143.782 9.2726 140.189V49.8289H190.727V140.189C190.727 141.968 190.377 143.73 189.695 145.373C189.014 147.017 188.015 148.51 186.755 149.768C185.496 151.026 184.001 152.024 182.356 152.705C180.71 153.386 178.947 153.736 177.166 153.736Z" fill="#009AEC"/>
         <path d="M21.1011 33.7986C21.7873 33.8591 22.4758 33.7098 23.0753 33.3703C23.6748 33.0309 24.157 32.5174 24.4581 31.8977C24.7592 31.2781 24.8649 30.5816 24.7614 29.9006C24.6578 29.2195 24.3498 28.5859 23.8781 28.0838C23.4064 27.5817 22.7933 27.2347 22.12 27.0888C21.4468 26.9429 20.745 27.005 20.1078 27.2668C19.4706 27.5287 18.928 27.9779 18.5518 28.555C18.1755 29.1321 17.9835 29.8099 18.0011 30.4986C18.0224 31.3333 18.3502 32.131 18.9219 32.7396C19.4936 33.3482 20.2693 33.7251 21.1011 33.7986Z" fill="#009AEC"/>
@@ -191,58 +234,95 @@ const arrayDataOfService = [
         <path d="M144.2 89.6999L140.3 98.4999L136.3 89.6999C136.3 89.6999 135.8 89.6999 135.6 88.9999C135.4 88.2999 135.6 88.3999 134.8 88.1999C134.413 88.054 133.986 88.054 133.6 88.1999C133.6 88.1999 132.9 88.1999 132.5 88.1999C132.5 88.1999 132 88.6999 131.7 88.9999C131.4 89.2999 131.1 88.9999 131 89.6999L127 98.4999L123.1 89.6999C122.938 89.3369 122.705 89.0097 122.416 88.7374C122.126 88.465 121.785 88.2529 121.413 88.1133C121.041 87.9738 120.645 87.9095 120.248 87.9244C119.851 87.9393 119.46 88.0329 119.1 88.1999C118.728 88.3524 118.39 88.5781 118.108 88.8634C117.825 89.1488 117.602 89.4881 117.453 89.8612C117.304 90.2343 117.231 90.6336 117.239 91.0353C117.247 91.437 117.336 91.8331 117.5 92.1999L124.1 107.8C124.434 108.382 124.917 108.865 125.5 109.2H126.7C127.127 109.302 127.572 109.302 128 109.2C128.802 108.966 129.505 108.474 130 107.8L134 98.8999L137.9 107.8C138.234 108.382 138.717 108.865 139.3 109.2C139.728 109.292 140.171 109.292 140.6 109.2H141.8C142.41 108.868 142.926 108.386 143.3 107.8L150 92.1999C150.164 91.8331 150.252 91.437 150.26 91.0353C150.268 90.6336 150.196 90.2343 150.046 89.8612C149.897 89.4881 149.674 89.1488 149.392 88.8634C149.109 88.5781 148.771 88.3524 148.4 88.1999C148.03 88.0001 147.622 87.8804 147.202 87.8485C146.783 87.8166 146.362 87.8732 145.966 88.0146C145.57 88.1561 145.208 88.3792 144.903 88.6695C144.599 88.9598 144.359 89.3109 144.2 89.6999Z" fill="#009AEC"/>
         <path d="M75.6 89.7001L71.7 98.5001L67.8 89.7001C67.5784 89.4462 67.3059 89.2417 67 89.1001C66.8891 88.5884 66.6069 88.1298 66.2 87.8001C65.8133 87.6543 65.3867 87.6543 65 87.8001C65 87.8001 64.3 87.8001 63.9 87.8001L63.1 88.6001C63.1 88.6001 62.5 88.6001 62.4 89.3001L58.4 98.1001L54.5 89.3001C54.3485 88.8681 54.1001 88.4764 53.7738 88.1552C53.4476 87.834 53.0521 87.5917 52.6178 87.4469C52.1834 87.3021 51.7217 87.2587 51.2679 87.3199C50.8142 87.3811 50.3805 87.5454 50 87.8001C49.2668 88.1294 48.6901 88.7305 48.3916 89.4768C48.0931 90.223 48.0961 91.056 48.4 91.8001L55.5 107.8C55.8348 108.382 56.3178 108.865 56.9 109.2H58.1C58.5274 109.302 58.9727 109.302 59.4 109.2H60C60.436 108.816 60.7781 108.337 61 107.8L65 98.9001L68.9 107.8C69.2348 108.382 69.7178 108.865 70.3 109.2H71.5H72.7C73.4292 108.929 74.0575 108.44 74.5 107.8L81.2 92.7001C81.5453 92.3358 81.7937 91.8906 81.9224 91.4054C82.051 90.9202 82.0559 90.4104 81.9365 89.9228C81.8171 89.4352 81.5772 88.9854 81.2389 88.6146C80.9006 88.2437 80.4746 87.9637 80 87.8001C79.5899 87.6077 79.1435 87.5045 78.6905 87.4975C78.2375 87.4904 77.7881 87.5797 77.3722 87.7593C76.9562 87.9389 76.5831 88.2048 76.2776 88.5394C75.9721 88.874 75.7412 89.2696 75.6 89.7001Z" fill="#009AEC"/>
         </svg>`,
-        text: [
-            "Responsive websites and mobile sites for all devices.",
-            "Website development using popular CMS (WordPress, Joomla, etc.).",
-            "Custom platform and mobile app development for iOS and Android."
-        ],
+        text: {
+            eng: [
+                "Responsive websites and mobile sites for all devices.",
+                "Website development using popular CMS (WordPress, Joomla, etc.).",
+                "Custom platform and mobile app development for iOS and Android."
+            ],
+            rus: [
+                "Адаптивные веб-сайты и мобильные сайты для всех устройств.",
+                "Разработка веб-сайтов на популярных CMS (WordPress, Joomla и др.).",
+                "Разработка пользовательских платформ и приложений для iOS и Android."
+            ]
+        },
 
         prices: [
             {
-                nameOfServise: "Landing Page Design",
+                nameOfServise: {
+                    eng: "Landing Page Design",
+                    rus: "Дизайн лендинга"
+                },
                 cost: 300
             },
 
             {
-                nameOfServise: "Custom Website Design ",
+                nameOfServise: {
+                    eng: "Custom Website Design",
+                    rus: "Индивидуальный дизайн сайта"
+                },
                 cost: 700
             },
 
             {
-                nameOfServise: "E-commerce Website Development",
+                nameOfServise: {
+                    eng: "E-commerce Website Development",
+                    rus: "Разработка интернет-магазина"
+                },
                 cost: 1200
             },
 
             {
-                nameOfServise: "WordPress Website Setup",
+                nameOfServise: {
+                    eng: "WordPress Website Setup",
+                    rus: "Настройка сайта на WordPress"
+                },
                 cost: 400
             },
 
             {
-                nameOfServise: "Website Redesign/Modernization",
+                nameOfServise: {
+                    eng: "Website Redesign/Modernization",
+                    rus: "Редизайн/модернизация сайта"
+                },
                 cost: 600
             },
 
             {
-                nameOfServise: "Single Page Application",
+                nameOfServise: {
+                    eng: "Single Page Application",
+                    rus: "Одностраничное веб-приложение"
+                },
                 cost: 900
             },
 
             {
-                nameOfServise: "SEO-Optimized Website Development",
+                nameOfServise: {
+                    eng: "SEO-Optimized Website Development",
+                    rus: "Разработка SEO-оптимизированного сайта"
+                },
                 cost: 800
             },
 
         ],
 
-        description: [
-            "Website design and development is about more than just creating a beautiful site; it’s about crafting functional, user-friendly experiences that keep your customers engaged. We build responsive, visually striking websites that reflect your brand's uniqueness while ensuring seamless performance across all devices. From landing pages to e-commerce platforms, we create websites that don’t just look good—they work flawlessly, providing an enjoyable experience for your users.",
-            "Our development team goes beyond design; we ensure your website is optimized for speed, performance, and search engine visibility. Whether launching a new e-commerce site or redesigning an existing one, we guide you through every step—from concept to execution. We don’t just create websites; we deliver digital experiences that engage, convert, and grow your business."
-        ]
+        description: {
+            eng: [
+                "Website design and development is about more than just creating a beautiful site; it’s about crafting functional, user-friendly experiences that keep your customers engaged. We build responsive, visually striking websites that reflect your brand's uniqueness while ensuring seamless performance across all devices. From landing pages to e-commerce platforms, we create websites that don’t just look good—they work flawlessly, providing an enjoyable experience for your users.",
+                "Our development team goes beyond design; we ensure your website is optimized for speed, performance, and search engine visibility. Whether launching a new e-commerce site or redesigning an existing one, we guide you through every step—from concept to execution. We don’t just create websites; we deliver digital experiences that engage, convert, and grow your business."
+            ],
+            rus: [
+                "Дизайн и разработка сайтов — это искусство создания функциональных и удобных для пользователей решений, которые удерживают вашу аудиторию. Мы разрабатываем адаптивные и визуально впечатляющие сайты, отражающие уникальность вашего бренда и обеспечивают безупречную работу на любых устройствах. От лендингов до платформ электронной коммерции — мы создаем сайты, которые не только привлекают внимание, но и работают идеально, даря вашим пользователям приятный опыт.",
+                "Наша команда разработчиков выходит за рамки. Мы обеспечиваем оптимизацию вашего сайта для высокой скорости, стабильной производительности и видимости в поисковых системах. Независимо от того, запускаете ли вы новый интернет-магазин или обновляете существующий сайт, мы сопровождаем вас на каждом этапе — от концепции до реализации."
+            ]
+        }
     },
 
     {
-        title: "Video production",
+        title: {
+            eng: "Video production",
+            rus: "Создание видео"
+        },
         svgCode: `<svg width="201" height="200" viewBox="0 0 201 200" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_1450_228)">
         <path d="M41.1402 4.51343H8.70772C4.01042 4.51343 0.599609 7.92424 0.599609 12.6215V169.378C0.599609 174.076 4.01042 177.486 8.70772 177.486H41.1402H160.059H192.492C197.189 177.486 200.6 174.076 200.6 169.378V12.6215C200.6 7.92424 197.189 4.51343 192.492 4.51343H160.059H41.1402ZM6.00501 169.378V12.6215C6.00501 10.9296 7.01583 9.91883 8.70772 9.91883H38.4374V172.081H8.70772C7.01583 172.081 6.00501 171.07 6.00501 169.378ZM43.8429 172.081V9.91883H157.356V172.081H43.8429ZM195.194 12.6215V169.378C195.194 171.07 194.183 172.081 192.492 172.081H162.762V9.91883H192.492C194.183 9.91883 195.194 10.9296 195.194 12.6215Z" fill="#009AEC" fill-opacity="0.6"/>
@@ -268,109 +348,181 @@ const arrayDataOfService = [
         </clipPath>
         </defs>
         </svg>`,
-        text: [
-            "Business videos: promotional videos, video presentations.",
-            "Event recording and post-production services.",
-            "Animation to enhance visual appeal in videos."
-        ],
+        text: {
+            eng: [
+                "Business videos: promotional videos, video presentations.",
+                "Event recording and post-production services.",
+                "Animation to enhance visual appeal in videos."
+            ],
+            rus: [
+                "Видео для бизнеса: рекламные ролики, видеопрезентации.",
+                "Видеозапись событий и пост-продакшн.",
+                "Анимация для усиления визуальной привлекательности видео."
+            ]
+        },
 
         prices: [
             {
-                nameOfServise: "Product/Service Promo Video",
+                nameOfServise: {
+                    eng: "Product/Service Promo Video",
+                    rus: "Рекламное видео для продукта/услуги"
+                },
                 cost: 500
             },
 
             {
-                nameOfServise: "Branding Video (Up to 3 Minutes) ",
+                nameOfServise: {
+                    eng: "Branding Video (Up to 3 Minutes) ",
+                    rus: "Брендовое видео (до 3 минут)"
+                },
                 cost: 1000
             },
 
             {
-                nameOfServise: "Social Media Video Content",
+                nameOfServise: {
+                    eng: "Social Media Video Content",
+                    rus: "Видеоконтент для социальных сетей"
+                },
                 cost: 300
             },
 
             {
-                nameOfServise: "Event/Conference Video Coverage",
+                nameOfServise: {
+                    eng: "Event/Conference Video Coverage",
+                    rus: "Видео с мероприятий/конференций"
+                },
                 cost: 800
             },
 
             {
-                nameOfServise: "Corporate Training Video",
+                nameOfServise: {
+                    eng: "Corporate Training Video",
+                    rus: "Обучающее корпоративное видео"
+                },
                 cost: 600
             },
 
             {
-                nameOfServise: "Animated Explainer Video",
+                nameOfServise: {
+                    eng: "Animated Explainer Video",
+                    rus: "Анимационное объясняющее видео"
+                },
                 cost: 1200
             },
 
             {
-                nameOfServise: "Music Video Production",
+                nameOfServise: {
+                    eng: "Music Video Production",
+                    rus: "Производство музыкального клипа"
+                },
                 cost: 1500
             },
 
         ],
 
-        description: [
-            "Video production is not just about capturing footage; it’s about telling a compelling story that resonates with your audience and elevates your brand. We create high-quality videos that are tailored to your vision, whether it’s a promotional video, corporate branding, or engaging social media content. From scripting to shooting, editing to post-production, we ensure every detail is perfect, delivering a polished final product that captivates viewers and drives results.",
-            "Our video production team goes beyond filming; we ensure your video is optimized for its purpose, whether for social media, websites, or marketing. From concept to final cut, we make sure your message is clear and impactful. We don’t just create videos; we craft stories that engage, captivate, and convert your audience."
-        ]
+        description: {
+            eng: [
+                "Video production is not just about capturing footage; it’s about telling a compelling story that resonates with your audience and elevates your brand. We create high-quality videos that are tailored to your vision, whether it’s a promotional video, corporate branding, or engaging social media content. From scripting to shooting, editing to post-production, we ensure every detail is perfect, delivering a polished final product that captivates viewers and drives results.",
+                "Our video production team goes beyond filming; we ensure your video is optimized for its purpose, whether for social media, websites, or marketing. From concept to final cut, we make sure your message is clear and impactful. We don’t just create videos; we craft stories that engage, captivate, and convert your audience."
+            ],
+            rus: [
+                "Видеопроизводство — это создание увлекательной истории, которая находит отклик у вашей аудитории и усиливает имидж вашего бренда. Мы создаём высококачественные видео, адаптированные под ваше видение — будь то промо-ролик, корпоративное видео или контент для социальных сетей. От написания сценария и съёмки до монтажа и пост-продакшена мы прорабатываем каждую деталь, чтобы представить безупречный конечный продукт, привлекающий внимание зрителей.",
+                "Наша команда  делает больше, чем просто съёмку. Мы оптимизируем видео под конкретные цели — будь то социальные сети, веб-сайты или маркетинговые кампании. От идеи до финального ролика мы заботимся о том, чтобы ваше послание было чётким и убедительным. Мы создаём не просто видео, а истории, которые увлекают, очаровывают и преобразуют вашу аудиторию."
+            ]
+        }
     },
 
     {
-        title: "Support and content",
+        title: {
+            eng: "Support and content",
+            rus: "Поддержка и контент"
+        },
+
         svgCode: `<svg width="201" height="200" viewBox="0 0 201 200" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M99.6992 112.955V51.1818M99.6992 51.1818C99.6992 30.5909 99.6992 10 142.137 10C142.137 30.5909 142.137 51.1818 99.6992 51.1818ZM51.1992 112.955H148.199M136.074 112.955L123.949 161H75.4492L63.3242 112.955M99.6992 78.6364C99.6992 58.0455 99.6992 37.4545 57.2617 37.4545C57.2617 58.0455 57.2617 78.6364 99.6992 78.6364Z" stroke="#009AEC" stroke-opacity="0.6" stroke-width="6"/>
         </svg>`,
-        text: [
-            "Technical support for websites and apps.",
-            "Social media management and content creation.",
-            "Content management and promotion of websites and applications (SEO and SMM)."
-        ],
+        text: {
+            eng: [
+                "Technical support for websites and apps.",
+                "Social media management and content creation.",
+                "Content management and promotion of websites and applications (SEO and SMM)."
+            ],
+            rus: [
+                "Техническая поддержка веб-сайтов и приложений.",
+                "Управление социальными медиа и создание контента для соцсетей.",
+                "Контент-менеджмент и продвижение веб-сайтов и приложений."
+            ]
+        },
 
         prices: [
             {
-                nameOfServise: "Content Writing & Copywriting",
+                nameOfServise: {
+                    eng: "Content Writing & Copywriting",
+                    rus: "Написание контента и копирайтинг"
+                },
                 cost: 300
             },
 
             {
-                nameOfServise: "Technical Support for Websites ",
+                nameOfServise: {
+                    eng: "Technical Support for Websites ",
+                    rus: "Техническая поддержка сайтов"
+                },
                 cost: 400
             },
 
             {
-                nameOfServise: "Content Strategy Development",
+                nameOfServise: {
+                    eng: "Content Strategy Development",
+                    rus: "Разработка стратегии контента"
+                },
                 cost: 500
             },
 
             {
-                nameOfServise: "Website Maintenance & Updates",
+                nameOfServise: {
+                    eng: "Website Maintenance & Updates",
+                    rus: "Обслуживание и обновление сайтов",
+                },
                 cost: 350
             },
 
             {
-                nameOfServise: "SEO Content Optimization",
+                nameOfServise: {
+                    eng: "SEO Content Optimization",
+                    rus: "SEO-оптимизация контента"
+                },
                 cost: 450
             },
 
             {
-                nameOfServise: "Blog Management",
+                nameOfServise: {
+                    eng: "Blog Management",
+                    rus: "Управление блогом"
+                },
                 cost: 300
             },
 
             {
-                nameOfServise: "Customer Support via Live Chat",
+                nameOfServise: {
+                    eng: "Customer Support via Live Chat",
+                    rus: "Поддержка клиентов через онлайн-чат"
+                },
                 cost: 600
             },
 
         ],
 
-        description: [
-            "Support and content services are essential to keep your business running smoothly online. We offer a range of services, from creating high-quality content to providing technical support, ensuring your website is always up to date and running smoothly. Whether it’s content writing, website maintenance, or customer support, we focus on delivering value and improving the user experience. Our team helps you maintain an engaging online presence while addressing your customers’ needs efficiently.",
-            "We don’t just create content; we offer ongoing support to ensure your digital assets function seamlessly. From blog management and content optimization to live chat support, our services are designed to keep your website relevant and engaging. We help you maintain fresh content, perform regular updates, and provide top-notch customer service."
-        ]
+        description: {
+            eng: [
+                "Support and content services are essential to keep your business running smoothly online. We offer a range of services, from creating high-quality content to providing technical support, ensuring your website is always up to date and running smoothly. Whether it’s content writing, website maintenance, or customer support, we focus on delivering value and improving the user experience. Our team helps you maintain an engaging online presence while addressing your customers’ needs efficiently.",
+                "We don’t just create content; we offer ongoing support to ensure your digital assets function seamlessly. From blog management and content optimization to live chat support, our services are designed to keep your website relevant and engaging. We help you maintain fresh content, perform regular updates, and provide top-notch customer service."
+            ],
+            rus: [
+                "Поддержка и создание контента — это ключ к успешной работе вашего бизнеса в интернете. Мы предлагаем широкий спектр услуг: от создания качественного контента до технической поддержки, обеспечивая актуальность и бесперебойную работу вашего сайта. Мы фокусируемся на создании ценности и улучшении пользовательского опыта. Наша команда помогает вам сохранять активное онлайн-присутствие, эффективно удовлетворяя запросы ваших клиентов.",
+                "Мы не просто создаём контент, мы предоставляем постоянную поддержку. Наши услуги, включая управление блогами, SEO-оптимизацию контента и онлайн-чат для клиентов, направлены на то, чтобы ваш сайт оставался актуальным и увлекательным. Мы помогаем вам регулярно обновлять материалы, поддерживать техническую исправность и предоставлять первоклассное обслуживание клиентов."
+            ]
+        }
     },
 
     {
@@ -709,7 +861,7 @@ window.addEventListener('scroll', () => {
         secondHeaderNavReviews.classList = "second-header-text";
 
         if (!animationIsGone) {
-            if(selectLang === "eng") {
+            if (selectLang === "eng") {
                 lightAnimation([33, 100, 66, 133, 86, 78, 189], 'letter-W');
                 lightAnimation([215, 137, 49, 133, 107, 166, 105], 'letter-h');
                 lightAnimation([59, 105, 49, 166, 107, 133, 49], 'letter-o');
@@ -719,16 +871,16 @@ window.addEventListener('scroll', () => {
                 lightAnimation([151, 229, 111, 89, 125, 152, 178], 'letter-r');
                 lightAnimation([118, 196, 78, 55, 159, 185, 211], 'letter-E');
                 animationIsGone = true
-                secondSectionTitleEng.style.display = "flex"; 
-                secondSectionTitleRus.style.display = "none"; 
+                secondSectionTitleEng.style.display = "flex";
+                secondSectionTitleRus.style.display = "none";
             } else {
                 lightAnimation([33, 100, 66, 133, 86, 78, 189], 'letter-K');
                 lightAnimation([215, 137, 49, 133, 107, 166, 105], 'letter-t');
                 lightAnimation([59, 105, 49, 166, 107, 133, 49], 'letter-O');
                 lightAnimation([115, 159, 85, 122, 159, 152, 78], 'letter-m');
                 lightAnimation([218, 329, 178, 155, 59, 85, 111], 'letter-i');
-                animationIsGone = true    
-                secondSectionTitleEng.style.display = "none"; 
+                animationIsGone = true
+                secondSectionTitleEng.style.display = "none";
                 secondSectionTitleRus.style.display = "flex";
             }
 
@@ -877,7 +1029,6 @@ thirdSectionButtonMore.addEventListener('click', () => {
         thirdSectionMainContentRightPartLine.style.height = "70.57292vw";
         thirdSectionMainContentRightPartLine.style.backgroundImage = "linear-gradient(to bottom, rgba(0, 154, 236, 0) 0%, rgba(0, 154, 236, 0.3) 25%, rgba(0, 87, 134, 0) 100%)";
         thirdSectionMainContentRightPartLine.style.top = "-10vw";
-        // добавить трансзишн
         let selCat = arrayDataOfService.map((service) => service.title)[activNumber];
         const category = arrayDataOfService[activNumber]
         if (selCat !== selectCategory && arrayDataOfService.map((service) => service.title).includes(selCat)) {
@@ -1341,5 +1492,70 @@ reviewsArrowRight.addEventListener('click', () => {
     upperloadReviews(++number, false)
 })
 
+headerNavInfo.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 0.563,
+        behavior: 'smooth'
+    });
+})
+
+headerNavServices.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 1.13,
+        behavior: 'smooth'
+    });
+})
+
+headerNavContacts.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 1.97,
+        behavior: 'smooth'
+    });
+})
+
+headerNavReviews.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 2.528,
+        behavior: 'smooth'
+    });
+})
+
+secondHeaderNavMain.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * -0.1,
+        behavior: 'smooth'
+    });
+})
+
+secondHeaderNavInfo.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 0.563,
+        behavior: 'smooth'
+    });
+})
 
 
+secondHeaderNavServices.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 1.13,
+        behavior: 'smooth'
+    });
+})
+
+secondHeaderNavContacts.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 1.97,
+        behavior: 'smooth'
+    });
+})
+
+secondHeaderNavReviews.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 2.528,
+        behavior: 'smooth'
+    });
+})
+
+secondHeaderLanguageButton.addEventListener('click', () => {
+    switchLocalization()
+})
