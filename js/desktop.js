@@ -1147,8 +1147,6 @@ buttonMoreTitleSvgBlock.addEventListener('click', () => {
     }
 });
 
-const mainSendForm = document.getElementById('main-send-form');
-
 const errorImgFirstName = document.getElementById('error-img-first-name-input');
 const correctImgFirstName = document.getElementById('correct-img-first-name-input');
 const inputFirstName = document.getElementById("input-first-name");
