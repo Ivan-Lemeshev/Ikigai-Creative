@@ -149,17 +149,6 @@ const localizationWrapper = {
         }
     },
 
-    // хз как делать 
-    "second-section-title": {
-        rus: "Кто мы?",
-        eng: "who we are",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
-        }
-    },
-
     "second-section-text": {
         rus: `Креативное агентство с более чем 10-летним опытом работы, помогающее малому и среднему бизнесу реализовывать цифровые проекты. Мы специализируемся на веб-дизайне, разработке, брендинге, продвижении и видеопроизводстве.`,
         eng: `Сreative agency with over 10 years of experience helping small and medium-sized

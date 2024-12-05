@@ -20,19 +20,58 @@ const headerDividingLine = document.getElementById("header-dividing-line-first-s
 const headerLanguageButton = document.getElementById("language-button-first-section");
 
 const ideasArrayUp = [
-    "Transforming Ideas",
-    "Your Vision",
-    "Crafting Digital",
-    "Innovate & Engage",
-    "DIGITAL AGENCY"
+    {
+        eng: "Transforming Ideas",
+        rus: "Превращаем идеи"
+    },
+
+    {
+        eng: "Your Vision",
+        rus: "Ваше видение"
+    },
+
+    {
+        eng: "Crafting Digital",
+        rus: "Создаём цифровое"
+    },
+
+    {
+        eng: "Innovate & Engage",
+        rus: "Прорывы & Участия"
+    },
+
+    {
+        eng: "DIGITAL AGENCY",
+        rus: "IT АГЕНСТВО"
+    }
 ];
 
 const ideasArrayDown = [
-    "into Digital Reality",
-    "Our Innovation",
-    "Excellence",
-    "Succeed",
-    "LONDON"
+    {
+        eng: "into Digital Reality",
+        rus: "В цифровую реальность"
+    },
+
+    {
+        eng: "Our Innovation",
+        rus: "Наше новаторство"
+    },
+
+    {
+        eng: "Excellence",
+        rus: "Совершенство"
+    },
+
+    {
+        eng: "Succeed",
+        rus: "Успех"
+    },
+
+    {
+        eng: "LONDON",
+        rus: "Лондон"
+    }
+
 ];
 
 let animationisActiv = false;
@@ -459,7 +498,7 @@ const switchLocalization = () => {
         const element = document.getElementById(id); // получаю элемент который нужно по айди заменить 
         element.textContent = data[selectLang]; //   обновляю текст
 
-        if(selectLang === "rus") { // добавляем стили к русскому тексту 
+        if (selectLang === "rus") { // добавляем стили к русскому тексту 
             const allStyles = data.styles;
             element.style.fontFamily = "'Lato'";
             for (let style in allStyles) {
@@ -468,6 +507,8 @@ const switchLocalization = () => {
             }
         }
     }
+
+    animationIsGone = false;
 }
 
 lang.addEventListener('click', () => {
@@ -577,8 +618,8 @@ const changeIdeasText = () => {
     angel = (angel + 90);
     setTimeout(() => {
         numberOfActivAnimation = (numberOfActivAnimation + 1) % ideasArrayUp.length;
-        centralTextUp.textContent = ideasArrayUp[numberOfActivAnimation];
-        centralTextDown.textContent = ideasArrayDown[numberOfActivAnimation];
+        centralTextUp.textContent = ideasArrayUp[numberOfActivAnimation][selectLang];
+        centralTextDown.textContent = ideasArrayDown[numberOfActivAnimation][selectLang];
         centralImg.style.rotate = angel + "deg";
         centralText.style.opacity = "1";
     }, 500);
@@ -637,6 +678,8 @@ const startAnimation = () => {
 
 window.onload = startAnimation;
 let activAnimationThirdSection = false;
+const secondSectionTitleEng = document.getElementById("second-section-title-eng");
+const secondSectionTitleRus = document.getElementById("second-section-title-rus");
 
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
@@ -666,15 +709,28 @@ window.addEventListener('scroll', () => {
         secondHeaderNavReviews.classList = "second-header-text";
 
         if (!animationIsGone) {
-            lightAnimation([33, 100, 66, 133, 86, 78, 189], 'letter-W');
-            lightAnimation([215, 137, 49, 133, 107, 166, 105], 'letter-h');
-            lightAnimation([59, 105, 49, 166, 107, 133, 49], 'letter-o');
-            lightAnimation([115, 159, 85, 122, 159, 152, 78], 'letter-w');
-            lightAnimation([218, 329, 178, 155, 59, 85, 111], 'letter-e');
-            lightAnimation([184, 296, 145, 122, 92, 118, 145], 'letter-A');
-            lightAnimation([151, 229, 111, 89, 125, 152, 178], 'letter-r');
-            lightAnimation([118, 196, 78, 55, 159, 185, 211], 'letter-E');
-            animationIsGone = true
+            if(selectLang === "eng") {
+                lightAnimation([33, 100, 66, 133, 86, 78, 189], 'letter-W');
+                lightAnimation([215, 137, 49, 133, 107, 166, 105], 'letter-h');
+                lightAnimation([59, 105, 49, 166, 107, 133, 49], 'letter-o');
+                lightAnimation([115, 159, 85, 122, 159, 152, 78], 'letter-w');
+                lightAnimation([218, 329, 178, 155, 59, 85, 111], 'letter-e');
+                lightAnimation([184, 296, 145, 122, 92, 118, 145], 'letter-A');
+                lightAnimation([151, 229, 111, 89, 125, 152, 178], 'letter-r');
+                lightAnimation([118, 196, 78, 55, 159, 185, 211], 'letter-E');
+                animationIsGone = true
+                secondSectionTitleEng.style.display = "flex"; 
+                secondSectionTitleRus.style.display = "none"; 
+            } else {
+                lightAnimation([33, 100, 66, 133, 86, 78, 189], 'letter-K');
+                lightAnimation([215, 137, 49, 133, 107, 166, 105], 'letter-t');
+                lightAnimation([59, 105, 49, 166, 107, 133, 49], 'letter-O');
+                lightAnimation([115, 159, 85, 122, 159, 152, 78], 'letter-m');
+                lightAnimation([218, 329, 178, 155, 59, 85, 111], 'letter-i');
+                animationIsGone = true    
+                secondSectionTitleEng.style.display = "none"; 
+                secondSectionTitleRus.style.display = "flex";
+            }
 
             setTimeout(() => {
                 secondSectionText.style.opacity = "1";
@@ -788,15 +844,6 @@ const choiceOfServicePlaceholder = document.getElementById("choice-of-service-pl
 
 let selectCategory = "";
 
-const dropListArray = [
-    "Creative Design",
-    "Website design and development",
-    "Video production",
-    "Support and content",
-    "Promotion on social networks",
-    "Setting up payment"
-];
-
 const buttonMoreBlock = document.getElementById("button-more-block");
 const buttonMoreTitle = document.getElementById("button-more-title");
 const modalNotificationBlock = document.getElementById("modal-notification-block");
@@ -831,9 +878,9 @@ thirdSectionButtonMore.addEventListener('click', () => {
         thirdSectionMainContentRightPartLine.style.backgroundImage = "linear-gradient(to bottom, rgba(0, 154, 236, 0) 0%, rgba(0, 154, 236, 0.3) 25%, rgba(0, 87, 134, 0) 100%)";
         thirdSectionMainContentRightPartLine.style.top = "-10vw";
         // добавить трансзишн
-        let selCat = dropListArray[activNumber];
+        let selCat = arrayDataOfService.map((service) => service.title)[activNumber];
         const category = arrayDataOfService[activNumber]
-        if (selCat !== selectCategory && dropListArray.includes(selCat)) {
+        if (selCat !== selectCategory && arrayDataOfService.map((service) => service.title).includes(selCat)) {
             buttonMoreTitle.textContent = selCat;
         }
 
@@ -915,7 +962,7 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
     const newDropListWrapper = document.createElement('div');
     newDropListWrapper.id = "drop-list";
     dropListWrapper.style.height = "17.5vw"
-    const actualityCategory = dropListArray.filter((textCategory) => {
+    const actualityCategory = arrayDataOfService.map((service) => service.title).filter((textCategory) => {
         return textCategory !== selectCategory;
     });
 
@@ -980,9 +1027,9 @@ const setupAndTranslateForSelectService = (event) => {
     });
 
     textarea.textContent = textForApplication[numberOfService];
-    let selCat = dropListArray[activNumber];
+    let selCat = arrayDataOfService.map((service) => service.title)[activNumber];
 
-    if (selCat !== selectCategory && dropListArray.includes(selCat)) {
+    if (selCat !== selectCategory && arrayDataOfService.map((service) => service.title).includes(selCat)) {
         choiceOfServicePlaceholder.textContent = selCat;
         fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
         fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";

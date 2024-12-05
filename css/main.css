@@ -131,6 +131,8 @@ body {
     justify-content: space-around;
     color: var(--lightBlue);
     top: 26vw;
+    flex-direction: column;
+    overflow: visible;
     left: 40.9375vw;
     z-index: 2;
     opacity: 0;
@@ -144,6 +146,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible;
 }
 
 #central-text-first-section-down {
@@ -240,11 +243,27 @@ body {
     height: 56.25vw;
 }
 
-#second-section-title {
+#second-section-title-eng {
     position: absolute;
     display: flex;
     font-weight: 500;
     font-size: 2.1875vw;
+    top: 11.45833vw;
+    left: 7.29167vw;
+    color: var(--blue);
+    transition: opacity 0.1s ease-in-out;
+
+    &>div {
+        opacity: 0;
+    }
+}
+
+#second-section-title-rus {
+    position: absolute;
+    display: none;
+    font-weight: 500;
+    font-size: 2.1875vw;
+    line-height: 2.625vw;
     top: 11.45833vw;
     left: 7.29167vw;
     color: var(--blue);
@@ -263,6 +282,10 @@ body {
     margin-left: 1vw;
 }
 
+#letter-m {
+    margin-left: 1vw;
+}
+
 #second-section-text {
     position: absolute;
     width: 37.96875vw;
@@ -274,6 +297,7 @@ body {
     font-size: 1.875vw;
     line-height: 2.39583vw;
     opacity: 0;
+    overflow: visible;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -298,46 +322,31 @@ body {
     font-size: 1.875vw;
     cursor: pointer;
     background-color: var(--deepDarkBlue);
-    transition: background-color 0.4s ease-in-out, opacity 0.3s ease-in-out;
+    transition: background-color 0.4s ease-in-out, opacity 0.3s ease-in-out, color 0.4s ease-in-out;
     opacity: 0;
-
-    &>p {
-        transition: color 0.4s ease-in-out;
-    }
 }
 
 #second-section-button-services {
     box-shadow: 0px 0px 8px 3px var(--blue);
     left: 7.29167vw;
-
-    &>p {
-        color: var(--blue);
-    }
+    color: var(--blue);
 }
 
 #second-section-button-services:hover {
     background-color: var(--darkBlue);
-
-    &>p {
-        color: #00A5FF;
-    }
+    color: #00A5FF;
 }
 
 #second-section-button-contacts {
     box-shadow: 0px 0px 8px 3px var(--orangeRed);
     left: 24.11458vw;
-
-    &>p {
-        color: var(--orangeRed);
-    }
+    color: var(--orangeRed);
 }
 
 #second-section-button-contacts:hover {
     background-color: #A13B02;
+    color: #FF945B;
 
-    &>p {
-        color: #FF945B;
-    }
 }
 
 #third-section {
@@ -658,7 +667,8 @@ body {
                 height: 0.52083vw;
                 stroke-width: 0.13021vw;
                 stroke: var(--secondBlue);
-                transition: stroke 0.3s ease-in-out;;
+                transition: stroke 0.3s ease-in-out;
+                ;
             }
         }
 
@@ -669,14 +679,14 @@ body {
         &:hover {
 
             &>#button-more-title-svg {
-            transform: rotate(45deg);
+                transform: rotate(45deg);
             }
 
             & path {
                 fill: var(--orangeRed)
             }
 
-            &>#button-more-title-red-svg  {
+            &>#button-more-title-red-svg {
                 transform: rotate(45deg);
                 opacity: 1;
 
@@ -1120,7 +1130,7 @@ body {
     left: 26.30208vw;
     z-index: 10;
     transition: height 0.3s ease-in-out;
-    
+
 }
 
 #choice-of-service {
