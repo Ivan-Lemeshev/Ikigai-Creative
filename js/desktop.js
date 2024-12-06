@@ -82,6 +82,7 @@ let angel = 360;
 
 const secondHeader = document.getElementById("second-header");
 const secondHeaderLogoHover = document.getElementById("second-header-logo-hover");
+const secondHeaderNavigation = document.getElementById("second-header-navigation");
 const secondHeaderLogoActiv = document.getElementById("second-header-logo-activ");
 const secondHeaderNavMain = document.getElementById("second-nav-main");
 const secondHeaderNavInfo = document.getElementById("second-nav-info");
@@ -1014,6 +1015,7 @@ window.addEventListener('scroll', () => {
 });
 
 secondHeaderLogoHover.addEventListener('click', () => {
+    secondHeaderNavigation.style.pointerEvents = "all";
     secondHeaderLogoHover.style.opacity = "0";
     secondHeaderLogoActiv.style.opacity = "1";
     secondHeaderNavMain.style.opacity = "1";
@@ -1033,6 +1035,7 @@ secondHeaderLogoHover.addEventListener('click', () => {
 });
 
 secondHeader.addEventListener('mouseleave', () => {
+    secondHeaderNavigation.style.pointerEvents = "";
     secondHeaderLogoHover.style.opacity = "0.5";
     secondHeaderLogoActiv.style.opacity = "0";
     secondHeaderNavMain.style.opacity = "0";
@@ -1075,6 +1078,7 @@ const buttonMoreBlock = document.getElementById("button-more-block");
 const buttonMoreTitle = document.getElementById("button-more-title");
 const modalNotificationBlock = document.getElementById("modal-notification-block");
 let showNotification = true;
+const interestBlockAllService = document.getElementById("interest-block-all-service");
 
 
 thirdSectionButtonMore.addEventListener('click', () => {
@@ -1117,12 +1121,38 @@ thirdSectionButtonMore.addEventListener('click', () => {
             priceName.textContent = nameOfServise;
             priceMoney.textContent = `£${cost}`;
         })
-
+        
         category.description.map((selfText, number) => {
             const textBlock = document.getElementById(`button-more-description-text-${number}`);
             textBlock.textContent = selfText;
         })
     }, 1);
+})
+
+const buttonMoreInterestBlock = document.getElementById("interest-block");
+
+
+interestBlockAllService.addEventListener('click', () => {
+    activAnimationThirdSection = false;
+    buttonMoreBlock.style.display = "";
+    setTimeout(() => {
+        buttonMoreBlock.style.opacity = "";
+        thirdSectionText.style.opacity = "1";
+        thirdSectionLowerPart.style.opacity = "1";
+        thirdSectionLowerPart.style.display = "";
+        thirdSectionImage.style.width = "34.89583vw";
+        thirdSectionImage.style.height = "34.89583vw";
+        buttonMoreInterestBlock.style.display = "";
+        thirdSectionTitle.style.opacity = "1";
+
+        thirdSectionMainContentRightPartLine.style.height = "";
+        thirdSectionMainContentRightPartLine.style.backgroundImage = "";
+        thirdSectionMainContentRightPartLine.style.top = "";
+        setTimeout(() => {
+            thirdSectionImage.style.transform = "rotate3d(0, 1, 0, 30deg)";
+            thirdSectionImage.style.boxShadow = "rgb(2, 133, 204) 0px 0px 8px 0px";
+        }, 500);
+    })
 })
 
 const buttonMoreTitleSvgBlock = document.getElementById("button-more-title-svg-block");
@@ -1132,7 +1162,9 @@ buttonMoreTitleSvgBlock.addEventListener('click', () => {
     if (activAnmimationTitle) {
         setTimeout(() => {
             buttonMoreTitle.style.opacity = "0";
+            buttonMoreInterestBlock.style.display = "flex";
             setTimeout(() => {
+                buttonMoreInterestBlock.style.opacity = "1";
                 buttonMoreTitle.textContent = "What Interests You?";
                 setTimeout(() => {
                     buttonMoreTitle.style.opacity = "";
@@ -1141,9 +1173,7 @@ buttonMoreTitleSvgBlock.addEventListener('click', () => {
         }, 1);
         activAnmimationTitle = false;
 
-        const category = arrayDataOfService[activNumber]
-        const titleOfServise = document.getElementById(`interest-block-text-${activNumber}`);
-        titleOfServise.textContent = category.title;
+        const category = arrayDataOfService[activNumber];
     }
 });
 
