@@ -775,7 +775,11 @@ const customization = (number) => {
 
     arrayCard[number - 1].appendChild(svgElement);
 
-    currentCard.textBlock.textContent = currentServise.title;
+    if (selectLang === "eng") {
+        currentCard.textBlock.textContent = currentServise.title.eng;
+    } else {
+        currentCard.textBlock.textContent = currentServise.title.rus;
+    }
 
 };
 
@@ -787,11 +791,18 @@ const title = document.getElementById("third-section-main-content-right-part-tit
 
 const upLoadActivServise = () => {
     const data = arrayDataOfService[activNumber];
-    imgBlock.src = `/img/svg/third-section-lower-part ${data.title}.svg`;
-    firstParagraph.textContent = data.text[0];
-    secondParagraph.textContent = data.text[1];
-    thirdParagraph.textContent = data.text[2];
-    title.textContent = data.title;
+    imgBlock.src = `/img/svg/third-section-lower-part ${data.title.eng}.svg`;
+    if (selectLang === "eng") {
+        firstParagraph.textContent = data.text.eng[0];
+        secondParagraph.textContent = data.text.eng[1];
+        thirdParagraph.textContent = data.text.eng[2];
+        title.textContent = data.title.eng;
+    } else {
+        firstParagraph.textContent = data.text.rus[0];
+        secondParagraph.textContent = data.text.rus[1];
+        thirdParagraph.textContent = data.text.rus[2];
+        title.textContent = data.title.rus;
+    }
 }
 
 for (let index = 1; index < arrayDataOfService.length; index++) {
@@ -1108,24 +1119,39 @@ thirdSectionButtonMore.addEventListener('click', () => {
         thirdSectionMainContentRightPartLine.style.height = "70.57292vw";
         thirdSectionMainContentRightPartLine.style.backgroundImage = "linear-gradient(to bottom, rgba(0, 154, 236, 0) 0%, rgba(0, 154, 236, 0.3) 25%, rgba(0, 87, 134, 0) 100%)";
         thirdSectionMainContentRightPartLine.style.top = "-10vw";
+
         let selCat = arrayDataOfService.map((service) => service.title)[activNumber];
         const category = arrayDataOfService[activNumber]
-        if (selCat !== selectCategory && arrayDataOfService.map((service) => service.title).includes(selCat)) {
-            buttonMoreTitle.textContent = selCat;
+        if (selCat !== selectCategory && arrayDataOfService.map((service) => service.title).includes(selCat) && selectLang === "eng") {
+            buttonMoreTitle.textContent = selCat.eng;
+        } else {
+            buttonMoreTitle.textContent = selCat.rus;
         }
 
         category.prices.map((serviceData, number) => {
             const { nameOfServise, cost } = serviceData;
             const priceName = document.getElementById(`button-more-price-services-${number}`);
             const priceMoney = document.getElementById(`button-more-price-money-${number}`);
-            priceName.textContent = nameOfServise;
+
+            if (selectLang === "eng") {
+                priceName.textContent = nameOfServise.eng;
+            } else {
+                priceName.textContent = nameOfServise.rus;
+            }
             priceMoney.textContent = `£${cost}`;
         })
-        
-        category.description.map((selfText, number) => {
-            const textBlock = document.getElementById(`button-more-description-text-${number}`);
-            textBlock.textContent = selfText;
-        })
+
+        if (selectLang === "eng") {
+            category.description.eng.map((selfText, number) => {
+                const textBlock = document.getElementById(`button-more-description-text-${number}`);
+                textBlock.textContent = selfText;
+            })
+        } else {
+            category.description.rus.map((selfText, number) => {
+                const textBlock = document.getElementById(`button-more-description-text-${number}`);
+                textBlock.textContent = selfText;
+            })
+        }
     }, 1);
 })
 
@@ -1165,7 +1191,11 @@ buttonMoreTitleSvgBlock.addEventListener('click', () => {
             buttonMoreInterestBlock.style.display = "flex";
             setTimeout(() => {
                 buttonMoreInterestBlock.style.opacity = "1";
-                buttonMoreTitle.textContent = "What Interests You?";
+                if (selectLang === "eng") {
+                    buttonMoreTitle.textContent = "What Interests You?";
+                } else {
+                    buttonMoreTitle.textContent = "Что Вас Интересует?";
+                }
                 setTimeout(() => {
                     buttonMoreTitle.style.opacity = "";
                 }, 300);

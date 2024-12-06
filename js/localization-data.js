@@ -282,17 +282,6 @@ const localizationWrapper = {
         }
     },
 
-    // сделать массив с названиями в русском jse 
-    "interest-block-text-0": {
-        rus: "Креативный дизайн",
-        eng: "Creative design",
-        styles: {
-            fontSize: "1.14583vw",
-            fontWeight: "",
-            lineHeight: "1.48958vw"
-        }
-    },
-
     "interest-block-text": {
         rus: "Все услуги",
         eng: "All services",
@@ -313,31 +302,9 @@ const localizationWrapper = {
         }
     },
 
-    // сделать массив с названиями в русском jse 
-    "button-more-price-services-0": {
-        rus: "Дизайн сайтов",
-        eng: "Web Design",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: "2.375vw"
-        }
-    },
-
     "button-more-description-title": {
         rus: "Описание",
         eng: "Description",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
-        }
-    },
-
-    // сделать массив с названиями в русском jse 
-    "button-more-description-text-0": {
-        rus: "",
-        eng: "",
         styles: {
             fontSize: "",
             fontWeight: "",
@@ -382,17 +349,6 @@ const localizationWrapper = {
             fontSize: "",
             fontWeight: "",
             lineHeight: "2.25vw"
-        }
-    },
-
-    // сделать массив с названиями в русском jse 
-    "third-section-div-in-div-1": {
-        rus: "",
-        eng: "",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
         }
     },
 
