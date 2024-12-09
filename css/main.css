@@ -786,6 +786,48 @@ body {
                 object-fit: contain;
                 pointer-events: none;
             }
+
+
+        }
+
+        &>.nonActivService {
+            width: 26.09375vw;
+            height: 3.64583vw;
+            margin-bottom: 1.04167vw;
+            display: flex;
+            align-items: center;
+            overflow: visible;
+            margin-left: 1.51042vw;
+            cursor: pointer;
+            pointer-events: none;
+
+            &>.interest-block-text {
+                width: 22.44792vw;
+                height: 3.64583vw;
+                font-weight: 400;
+                font-size: 1.875vw;
+                line-height: 2.25vw;
+                color: var(--darkBlue);
+                margin-left: 1.04167vw;
+                overflow: visible;
+                display: flex;
+                align-items: center;
+            }
+
+            &>.nonActivServiceSvg {
+                width: 2.60417vw;
+                height: 2.60417vw;
+                object-fit: contain;
+                pointer-events: none;
+
+                & path {
+                    fill: var(--darkBlue);
+                }
+
+                & circle {
+                    stroke: var(--darkBlue);
+                }
+            }
         }
 
         #interest-block-line {

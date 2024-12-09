@@ -118,13 +118,46 @@ const arrayCard = [
     thirdSectionLowerPartDivFifth
 ];
 
+const setupAndTranslateForSelectService = (event) => {
+    event.preventDefault();
+    window.scrollTo({
+        top: window.innerWidth * 1.950625,
+        behavior: 'smooth'
+    });
+
+    if (selectLang === "eng") {
+        textarea.textContent = textForApplication.eng[numberOfService];
+        console.log(textarea.textContent)
+        let selCat = arrayDataOfService.map((service) => service.title.eng)[activNumber];
+        if (selCat !== selectCategory && arrayDataOfService.map((service) => service.title.eng).includes(selCat)) {
+            choiceOfServicePlaceholder.textContent = selCat;
+            fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+            fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+            choiceOfServicePlaceholder.style.color = "var(--blue)";
+            selectCategory = selCat;
+            allInputsHave();
+        }
+    } else {
+        textarea.textContent = textForApplication.rus[numberOfService];
+        let selCat = arrayDataOfService.map((service) => service.title.rus)[activNumber];
+        if (selCat !== selectCategory && arrayDataOfService.map((service) => service.title.rus).includes(selCat)) {
+            choiceOfServicePlaceholder.textContent = selCat;
+            fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+            fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+            choiceOfServicePlaceholder.style.color = "var(--blue)";
+            selectCategory = selCat;
+            allInputsHave();
+        }
+    }
+}
+
+
 let selectLang = "eng";
 const lang = document.getElementById("language-button-first-section");
 
 const refreshDataForLocalization = () => {
+    const titles = arrayDataOfService.map((service) => service.title);
     for (let index = 1; index < arrayDataOfService.length; index++) {
-
-        const titles = arrayDataOfService.map((service) => service.title);
         const currentTitle = titles[index][selectLang]
         const htmlBlock = document.getElementById(`third-section-div-in-div-${index}`);
 
@@ -194,7 +227,7 @@ const refreshDataForLocalization = () => {
         secondHeaderNavReviews.textContent = "Отзывы";
         secondHeaderNavReviews.style.fontFamily = "Lato";
 
-        
+
     } else {
         buttonMoreTitle.style.fontFamily = "";
         buttonMoreTitle.style.fontSize = "";
@@ -283,18 +316,27 @@ const refreshDataForLocalization = () => {
 
     for (let index = 0; index < arrayDataOfService.length; index++) {
         const currentTitle = arrayDataOfService[index].title;
-        const interestBlock = document.getElementById(`interest-block-text-${index}`);
+        const interestBlockText = document.getElementById(`interest-block-text-${index}`);
         if (selectLang === "rus") {
-            interestBlock.textContent = currentTitle.rus;
-            interestBlock.style.fontFamily = "Lato";
+            interestBlockText.textContent = currentTitle.rus;
+            interestBlockText.style.fontFamily = "Lato";
         } else {
-            interestBlock.textContent = currentTitle.eng;
-            interestBlock.style.fontFamily = "";
+            interestBlockText.textContent = currentTitle.eng;
+            interestBlockText.style.fontFamily = "";
         }
-
-
     }
 }
+
+
+for (let index = 0; index < textForApplication.length; index++) {
+    const button = document.getElementById(`button-more-lower-part-buttons-${index}`);
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        numberOfService = index;
+        setupAndTranslateForSelectService(event);
+    })
+}
+
 
 const switchLocalization = () => {
     selectLang = selectLang === "eng" ? "rus" : "eng";
@@ -334,6 +376,8 @@ for (let index = 0; index < arrayDataOfService.length; index++) {
         interestBlock.style.fontFamily = "";
     }
 }
+
+
 
 const setActivElement = (number) => {
     const oldValue = massiv[number - 1];
@@ -670,7 +714,6 @@ const lightAnimation = (data, id) => {
 
 
 
-
 thirdSectionButtonMore.addEventListener('click', () => {
     if (showNotification) {
         setTimeout(() => {
@@ -751,11 +794,61 @@ thirdSectionButtonMore.addEventListener('click', () => {
     }, 1);
 })
 
-const buttonMoreInterestBlock = document.getElementById("interest-block");
 
+let activAnmimationTitle = true;
+const buttonMoreInterestBlock = document.getElementById("interest-block");
+const buttonMoreTitleSvgBlock = document.getElementById("button-more-title-svg-block");
+
+buttonMoreTitleSvgBlock.addEventListener('click', () => {
+    const currentTitle = arrayDataOfService[activNumber].title[selectLang];
+    const interestBlock = document.getElementById(`interest-block-${activNumber}`);
+    const interestBlockSvg = document.getElementById(`interest-block-svg-${activNumber}`);
+
+    interestBlock.classList = "nonActivService";
+    interestBlockSvg.classList = "nonActivServiceSvg";
+
+    if (activAnmimationTitle) {
+        setTimeout(() => {
+            buttonMoreTitle.style.opacity = "0";
+            buttonMoreInterestBlock.style.display = "flex";
+            setTimeout(() => {
+                buttonMoreInterestBlock.style.opacity = "1";
+                if (selectLang === "eng") {
+                    buttonMoreTitle.textContent = "What Interests You?";
+                } else {
+                    buttonMoreTitle.textContent = "Что Вас Интересует?";
+                }
+                setTimeout(() => {
+                    buttonMoreTitle.style.opacity = "";
+
+                }, 200);
+            }, 200);
+        }, 1);
+
+        activAnmimationTitle = false;
+
+    } else {
+
+        setTimeout(() => {
+            buttonMoreTitle.style.opacity = "0";
+            setTimeout(() => {
+                buttonMoreInterestBlock.style.opacity = "0";
+                buttonMoreTitle.textContent = currentTitle;
+                setTimeout(() => {
+                    buttonMoreTitle.style.opacity = "";
+                    buttonMoreInterestBlock.style.display = "none";
+                }, 200);
+            }, 200);
+        }, 1);
+        activAnmimationTitle = true;
+        interestBlock.classList = "interest-block";
+        interestBlockSvg.classList = "interest-block-svg";
+    }
+});
 
 
 interestBlockAllService.addEventListener('click', () => {
+    activAnmimationTitle = true;
     activAnimationThirdSection = false;
     buttonMoreBlock.style.display = "";
     setTimeout(() => {
@@ -779,61 +872,6 @@ interestBlockAllService.addEventListener('click', () => {
         }, 500);
     })
 })
-
-const buttonMoreTitleSvgBlock = document.getElementById("button-more-title-svg-block");
-let activAnmimationTitle = true;
-
-buttonMoreTitleSvgBlock.addEventListener('click', () => {
-    const category = arrayDataOfService[activNumber];
-    if (activAnmimationTitle) {
-        setTimeout(() => {
-            buttonMoreTitle.style.opacity = "0";
-            buttonMoreInterestBlock.style.display = "flex";
-            setTimeout(() => {
-                buttonMoreInterestBlock.style.opacity = "1";
-                if (selectLang === "eng") {
-                    buttonMoreTitle.textContent = "What Interests You?";
-                } else {
-                    buttonMoreTitle.textContent = "Что Вас Интересует?";
-                }
-                setTimeout(() => {
-                    buttonMoreTitle.style.opacity = "";
-
-                }, 200);
-            }, 200);
-        }, 1);
-
-
-
-        activAnmimationTitle = false;
-
-    } else {
-        const currentTitle = arrayDataOfService[activNumber].title[selectLang];
-        console.log("click")
-        setTimeout(() => {
-            buttonMoreTitle.style.opacity = "0";
-            setTimeout(() => {
-                buttonMoreInterestBlock.style.opacity = "0";
-                buttonMoreTitle.textContent = currentTitle;
-                setTimeout(() => {
-                    buttonMoreTitle.style.opacity = "";
-                    buttonMoreInterestBlock.style.display = "none";
-                }, 200);
-            }, 200);
-        }, 1);
-        activAnmimationTitle = true;
-    }
-});
-thirdSection.addEventListener('click', () => {
-
-
-})
-
-
-
-
-
-
 
 
 const capitalize = (str) => {
@@ -933,47 +971,7 @@ const textarea = document.getElementById("textarea");
 
 
 
-const setupAndTranslateForSelectService = (event) => {
-    event.preventDefault();
-    window.scrollTo({
-        top: window.innerWidth * 1.950625,
-        behavior: 'smooth'
-    });
 
-    if (selectLang === "eng") {
-        textarea.textContent = textForApplication.eng[numberOfService];
-        console.log(textarea.textContent)
-        let selCat = arrayDataOfService.map((service) => service.title.eng)[activNumber];
-        if (selCat !== selectCategory && arrayDataOfService.map((service) => service.title.eng).includes(selCat)) {
-            choiceOfServicePlaceholder.textContent = selCat;
-            fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-            fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
-            choiceOfServicePlaceholder.style.color = "var(--blue)";
-            selectCategory = selCat;
-            allInputsHave();
-        }
-    } else {
-        textarea.textContent = textForApplication.rus[numberOfService];
-        let selCat = arrayDataOfService.map((service) => service.title.rus)[activNumber];
-        if (selCat !== selectCategory && arrayDataOfService.map((service) => service.title.rus).includes(selCat)) {
-            choiceOfServicePlaceholder.textContent = selCat;
-            fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-            fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
-            choiceOfServicePlaceholder.style.color = "var(--blue)";
-            selectCategory = selCat;
-            allInputsHave();
-        }
-    }
-}
-
-for (let index = 0; index < textForApplication.length; index++) {
-    const button = document.getElementById(`button-more-lower-part-buttons-${index}`);
-    button.addEventListener('click', (event) => {
-        event.preventDefault();
-        numberOfService = index;
-        setupAndTranslateForSelectService(event);
-    })
-}
 
 thirdSectionButtonOrder.addEventListener('click', setupAndTranslateForSelectService);
 
