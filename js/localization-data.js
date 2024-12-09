@@ -49,18 +49,6 @@ const localizationWrapper = {
         }
     },
 
-
-    // не сделал перевод
-    "animation-text": {
-        rus: "Идеи Которые Меняют Мир",
-        eng: "Ideas That Change the World",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
-        }
-    },
-
     "central-text-first-section-up": {
         rus: "IT АГЕНСТВО",
         eng: "DIGITAL AGENCY",
@@ -78,74 +66,6 @@ const localizationWrapper = {
             fontSize: "",
             fontWeight: "",
             lineHeight: "1.5vw"
-        }
-    },
-
-    // наполнение меняется в айдишниках, как тут быть? (выше два айдишника)
-
-    // не сделал перевод
-    "second-nav-main": {
-        rus: "Главная",
-        eng: "Main",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
-        }
-    },
-
-    // не сделал перевод
-    "second-nav-info": {
-        rus: "Инфо",
-        eng: "Info",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
-        }
-    },
-
-    // не сделал перевод
-    "second-nav-services": {
-        rus: "Услуги",
-        eng: "Services",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
-        }
-    },
-
-    // не сделал перевод
-    "second-nav-contacts": {
-        rus: "Контакты",
-        eng: "Contacts",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
-        }
-    },
-
-    // не сделал перевод
-    "second-nav-reviews": {
-        rus: "Отзывы",
-        eng: "Reviews",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
-        }
-    },
-
-    // не сделал перевод
-    "second-language-button": {
-        rus: "Rus",
-        eng: "Eng",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
         }
     },
 
@@ -361,7 +281,7 @@ const localizationWrapper = {
             lineHeight: "2.625vw"
         }
     },
-    
+
     "main-send-form-title": {
         rus: "Отправить сообщение",
         eng: "Send a Massage",
@@ -369,17 +289,6 @@ const localizationWrapper = {
             fontSize: "",
             fontWeight: "",
             lineHeight: "2.25vw"
-        }
-    },
-    
-    // поменять плейсхолдеры
-    "input-first-name": {
-        rus: "",
-        eng: "",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
         }
     },
 
@@ -410,38 +319,6 @@ const localizationWrapper = {
             fontSize: "",
             fontWeight: "",
             lineHeight: "1.875vw"
-        }
-    },
-
-    // поменять плейсхолдер
-    "textarea": {
-        rus: "",
-        eng: "",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
-        }
-    },
-    
-    // нет перевода
-    "required-fields": {
-        rus: "",
-        eng: "",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
-        }
-    },
-    // нет перевода
-    "correctly": {
-        rus: "",
-        eng: "",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
         }
     },
 
@@ -482,28 +359,6 @@ const localizationWrapper = {
             fontSize: "1.66667vw",
             fontWeight: "",
             lineHeight: "2vw"
-        }
-    },
-
-    // создать массив в русском jse 
-    "reviews-upper-name": {
-        rus: "",
-        eng: "",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
-        }
-    },
-
-    // как перевести из 5 слов в 4?
-    "footer-content": {
-        rus: "",
-        eng: "",
-        styles: {
-            fontSize: "",
-            fontWeight: "",
-            lineHeight: ""
         }
     },
 
