@@ -2,6 +2,7 @@ import localizationWrapper from "./localization-data.js";
 import arrayDataOfService from "./Services.js";
 import { ideasArrayUp, ideasArrayDown, textForApplication } from "./slogans.js";
 import reviews from "./reviews.js";
+import dataContats from "./links.js";
 
 const backgroundGradient = document.getElementById("background-gradient");
 const ikigaiLogoText = document.getElementById("ikigai-logo-text");
@@ -520,7 +521,7 @@ const startAnimation = () => {
     }, 200);
 };
 
-window.onload = startAnimation;
+startAnimation();
 let activAnimationThirdSection = false;
 const secondSectionTitleEng = document.getElementById("second-section-title-eng");
 const secondSectionTitleRus = document.getElementById("second-section-title-rus");
@@ -1066,7 +1067,6 @@ inputEmail.addEventListener('input', () => {
 const submitButtonFourthSection = document.getElementById('send-form-submit');
 const requiredFieldsText = document.getElementById("required-fields");
 const correctlyText = document.getElementById("correctly");
-const buttonWrapper = document.getElementById("button-wrapper");
 
 
 
@@ -1370,5 +1370,12 @@ secondHeaderLanguageButton.addEventListener('click', () => {
 
 });
 
+const uploadLinks = () => {
 
+    const alternativeContactPhone = document.getElementById("alternative-contact-phone");
+    alternativeContactPhone.addEventListener('click', () => {
+        window.location.href = `tel:${dataContats.Phone}`; 
+    })
+}
 
+uploadLinks()
