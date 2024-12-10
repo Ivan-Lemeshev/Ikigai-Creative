@@ -314,17 +314,17 @@ const refreshDataForLocalization = () => {
         }
     }
 
-    for (let index = 0; index < arrayDataOfService.length; index++) {
-        const currentTitle = arrayDataOfService[index].title;
-        const interestBlockText = document.getElementById(`interest-block-text-${index}`);
-        if (selectLang === "rus") {
-            interestBlockText.textContent = currentTitle.rus;
-            interestBlockText.style.fontFamily = "Lato";
-        } else {
-            interestBlockText.textContent = currentTitle.eng;
-            interestBlockText.style.fontFamily = "";
-        }
-    }
+    // for (let index = 0; index < arrayDataOfService.length; index++) {
+    //     const currentTitle = arrayDataOfService[index].title;
+    //     const interestBlockText = document.getElementById(`interest-block-text-${index}`);
+    //     if (selectLang === "rus") {
+    //         interestBlockText.textContent = currentTitle.rus;
+    //         interestBlockText.style.fontFamily = "Lato";
+    //     } else {
+    //         interestBlockText.textContent = currentTitle.eng;
+    //         interestBlockText.style.fontFamily = "";
+    //     }
+    // }
 }
 
 
@@ -365,17 +365,17 @@ lang.addEventListener('click', () => {
 })
 
 
-for (let index = 0; index < arrayDataOfService.length; index++) {
-    const currentTitle = arrayDataOfService[index].title;
-    const interestBlock = document.getElementById(`interest-block-text-${index}`);
-    if (selectLang === "rus") {
-        interestBlock.textContent = currentTitle.rus;
-        interestBlock.style.fontFamily = "Lato";
-    } else {
-        interestBlock.textContent = currentTitle.eng;
-        interestBlock.style.fontFamily = "";
-    }
-}
+// for (let index = 0; index < arrayDataOfService.length; index++) {
+//     const currentTitle = arrayDataOfService[index].title;
+//     const interestBlock = document.getElementById(`interest-block-text-${index}`);
+//     if (selectLang === "rus") {
+//         interestBlock.textContent = currentTitle.rus;
+//         interestBlock.style.fontFamily = "Lato";
+//     } else {
+//         interestBlock.textContent = currentTitle.eng;
+//         interestBlock.style.fontFamily = "";
+//     }
+// }
 
 
 
@@ -794,12 +794,19 @@ thirdSectionButtonMore.addEventListener('click', () => {
     }, 1);
 })
 
-
+let oldActivService = null;
 let activAnmimationTitle = true;
 const buttonMoreInterestBlock = document.getElementById("interest-block");
 const buttonMoreTitleSvgBlock = document.getElementById("button-more-title-svg-block");
 
 buttonMoreTitleSvgBlock.addEventListener('click', () => {
+    if (oldActivService !== null) {
+        const oldInterestBlock = document.getElementById(`interest-block-${oldActivService}`);
+        const oldInterestBlockSvg = document.getElementById(`interest-block-svg-${oldActivService}`);
+        oldInterestBlock.classList = "interest-block";
+        oldInterestBlockSvg.classList = "interest-block-svg";
+    }
+
     const currentTitle = arrayDataOfService[activNumber].title[selectLang];
     const interestBlock = document.getElementById(`interest-block-${activNumber}`);
     const interestBlockSvg = document.getElementById(`interest-block-svg-${activNumber}`);
@@ -841,9 +848,10 @@ buttonMoreTitleSvgBlock.addEventListener('click', () => {
             }, 200);
         }, 1);
         activAnmimationTitle = true;
-        interestBlock.classList = "interest-block";
-        interestBlockSvg.classList = "interest-block-svg";
+
     }
+
+    oldActivService = activNumber;
 });
 
 
@@ -906,6 +914,7 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
             newDropListPoint.textContent = textSelectCategoty;
             newDropListPoint.classList = "drop-list-item";
             newDropListPoint.id = textSelectCategoty;
+            newDropListPoint.style.fontFamily = "";
 
             newDropListPoint.addEventListener('click', (event) => {
                 event.stopPropagation();
@@ -928,6 +937,7 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
             newDropListPoint.textContent = textSelectCategoty;
             newDropListPoint.classList = "drop-list-item";
             newDropListPoint.id = textSelectCategoty;
+            newDropListPoint.style.fontFamily = "Lato";
 
             newDropListPoint.addEventListener('click', (event) => {
                 event.stopPropagation();
@@ -1223,6 +1233,7 @@ headerNavInfo.addEventListener('click', () => {
     });
 })
 
+
 headerNavServices.addEventListener('click', () => {
     window.scrollTo({
         top: window.innerWidth * 1.13,
@@ -1230,7 +1241,21 @@ headerNavServices.addEventListener('click', () => {
     });
 })
 
+secondSectionButtonServices.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 1.13,
+        behavior: 'smooth'
+    });
+})
+
 headerNavContacts.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 1.97,
+        behavior: 'smooth'
+    });
+})
+
+secondSectionButtonContacts.addEventListener('click', () => {
     window.scrollTo({
         top: window.innerWidth * 1.97,
         behavior: 'smooth'

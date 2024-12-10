@@ -362,6 +362,26 @@ const localizationWrapper = {
         }
     },
 
+    "required-fields": {
+        rus: "Заполните все обязательные поля перед отправкой формы!",
+        eng: "Please fill in all required fields before submitting the form!",
+        styles: {
+            fontSize: "1.35417vw",
+            fontWeight: "",
+            lineHeight: "1.625vw"
+        }
+    },
+
+    "correctly": {
+        rus: "Пожалуйста заполните все обязательные поля корректно!",
+        eng: "Please fill in the fields required fields correctly",
+        styles: {
+            fontSize: "1.35417vw",
+            fontWeight: "",
+            lineHeight: "1.625vw"
+        }
+    },
+
 }
 
 export default localizationWrapper;

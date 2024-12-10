@@ -1052,7 +1052,7 @@ body {
     background-color: rgba(0, 83, 128, 0.07);
     border: 0.10417vw solid rgba(0, 154, 236, 0.5);
     z-index: 2;
-    overflow: hidden;
+    overflow: visible;
 }
 
 #main-send-form-title {
@@ -1168,6 +1168,47 @@ body {
 #correct-img-email-input {
     left: 46.09375vw;
     top: 12.75vw;
+}
+
+.empty-field {
+    width: 21.875vw;
+    height: 9.32292vw;
+    position: absolute;
+    border-radius: 0vw 0.52083vw 0.52083vw 0.52083vw;
+    border: 0.05208vw solid #0285CC;
+    background: #000D15;
+    backdrop-filter: blur(0.26042vw);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    & div {
+        font-size: 1.66667vw;
+        color: var(--blue);
+        margin-left: 1.30208vw;
+    }
+
+
+    &>.empty-field-1 {
+        font-weight: 400;
+        line-height: 1.66667vw;
+    }
+
+    &>.empty-field-2 {
+        font-weight: 300;
+        line-height: 2vw;
+    }
+}
+
+#empty-field-0 {
+    left: 22.35vw;
+    top: 8.8vw;
+}
+
+#empty-field-1 {
+    left: 46.5vw;
+    top: 8.8vw;
+    z-index: 4;   
 }
 
 #choice-serveces-title {
@@ -1356,6 +1397,7 @@ body {
         text-align: justify;
         font-size: 1.5625vw;
         color: var(--blue);
+        overflow: visible;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
 
@@ -1404,7 +1446,7 @@ body {
     left: 59.63542vw;
     background-color: rgba(127, 45, 0, 0.1);
     border: 0.10417vw solid rgba(236, 82, 0, 0.5);
-    z-index: 2;
+    z-index: 1;
 }
 
 #alternative-send-form-title {
@@ -1414,7 +1456,7 @@ body {
     margin-left: 2.34375vw;
     font-size: 1.875vw;
     font-weight: 400;
-    z-index: 2;
+    z-index: 1;
 }
 
 #alternative-send-form-svg {
@@ -1424,7 +1466,7 @@ body {
     margin-top: 2vw;
     margin-left: 27.86458vw;
     display: flex;
-    z-index: 3;
+    z-index: 2;
 }
 
 .alternative-contact-wrapper {
