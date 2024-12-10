@@ -382,6 +382,146 @@ const localizationWrapper = {
         }
     },
 
+    "interest-block-text-0": {
+        rus: "Креативный дизайн",
+        eng: "Creative design",
+        styles: {
+            fontSize: "1.77083vw",
+            fontWeight: "",
+            lineHeight: "2.125vw"
+        }
+    },
+
+    "interest-block-text-1": {
+        rus: "Веб-дизайн и разработка",
+        eng: "Website design and development",
+        styles: {
+            fontSize: "1.77083vw",
+            fontWeight: "",
+            lineHeight: "2.125vw"
+        }
+    },
+
+    "interest-block-text-2": {
+        rus: "Создание видео",
+        eng: "Video production",
+        styles: {
+            fontSize: "1.77083vw",
+            fontWeight: "",
+            lineHeight: "2.125vw"
+        }
+    },
+
+    "interest-block-text-3": {
+        rus: "Поддержка и контент",
+        eng: "Support and content",
+        styles: {
+            fontSize: "1.77083vw",
+            fontWeight: "",
+            lineHeight: "2.125vw"
+        }
+    },
+
+    "interest-block-text-4": {
+        rus: "Продвижение в соц. сетях",
+        eng: "Promotion on social networks",
+        styles: {
+            fontSize: "1.77083vw",
+            fontWeight: "",
+            lineHeight: "2.125vw"
+        }
+    },
+
+    "interest-block-text-4": {
+        rus: "Настройка оплаты",
+        eng: "Setting up payment",
+        styles: {
+            fontSize: "1.77083vw",
+            fontWeight: "",
+            lineHeight: "2.125vw"
+        }
+    },
+
+    "empty-field-one": {
+        rus: "Пустое поле",
+        eng: "An empty field",
+        styles: {
+            fontSize: "1.25vw",
+            fontWeight: "",
+            lineHeight: "1.5vw"
+        }
+    },
+
+    "empty-field-three": {
+        rus: "Пустое поле",
+        eng: "An empty field",
+        styles: {
+            fontSize: "1.25vw",
+            fontWeight: "",
+            lineHeight: "1.5vw"
+        }
+    },
+
+    "empty-field-five": {
+        rus: "Пустое поле",
+        eng: "An empty field",
+        styles: {
+            fontSize: "1.25vw",
+            fontWeight: "",
+            lineHeight: "1.5vw"
+        }
+    },
+
+    "empty-field-two": {
+        rus: "Это поле не может быть пропущено.",
+        eng: "You have not filled in the required field.",
+        styles: {
+            fontSize: "1.14583vw",
+            fontWeight: "",
+            lineHeight: "1.375vw"
+        }
+    },
+
+    "empty-field-four": {
+        rus: "Это поле не может быть пропущено.",
+        eng: "You have not filled in the required field.",
+        styles: {
+            fontSize: "1.14583vw",
+            fontWeight: "",
+            lineHeight: "1.375vw"
+        }
+    },
+
+    "empty-field-six": {
+        rus: "Это поле не может быть пропущено.",
+        eng: "You have not filled in the required field.",
+        styles: {
+            fontSize: "1.14583vw",
+            fontWeight: "",
+            lineHeight: "1.375vw"
+        }
+    },
+
+    "empty-field-seven": {
+        rus: "Невозможный email",
+        eng: "Invalid value.",
+        styles: {
+            fontSize: "1.14583vw",
+            fontWeight: "",
+            lineHeight: "1.375vw"
+        }
+    },
+
+    "empty-field-eight": {
+        rus: "Введенный email-адрес не корректный.",
+        eng: "The email you entered is not correct.",
+        styles: {
+            fontSize: "1.14583vw",
+            fontWeight: "",
+            lineHeight: "1.375vw"
+        }
+    },
+
 }
 
 export default localizationWrapper;

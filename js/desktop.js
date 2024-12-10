@@ -313,18 +313,6 @@ const refreshDataForLocalization = () => {
             })
         }
     }
-
-    // for (let index = 0; index < arrayDataOfService.length; index++) {
-    //     const currentTitle = arrayDataOfService[index].title;
-    //     const interestBlockText = document.getElementById(`interest-block-text-${index}`);
-    //     if (selectLang === "rus") {
-    //         interestBlockText.textContent = currentTitle.rus;
-    //         interestBlockText.style.fontFamily = "Lato";
-    //     } else {
-    //         interestBlockText.textContent = currentTitle.eng;
-    //         interestBlockText.style.fontFamily = "";
-    //     }
-    // }
 }
 
 
@@ -363,21 +351,6 @@ lang.addEventListener('click', () => {
     switchLocalization();
     refreshDataForLocalization();
 })
-
-
-// for (let index = 0; index < arrayDataOfService.length; index++) {
-//     const currentTitle = arrayDataOfService[index].title;
-//     const interestBlock = document.getElementById(`interest-block-text-${index}`);
-//     if (selectLang === "rus") {
-//         interestBlock.textContent = currentTitle.rus;
-//         interestBlock.style.fontFamily = "Lato";
-//     } else {
-//         interestBlock.textContent = currentTitle.eng;
-//         interestBlock.style.fontFamily = "";
-//     }
-// }
-
-
 
 const setActivElement = (number) => {
     const oldValue = massiv[number - 1];
@@ -854,6 +827,44 @@ buttonMoreTitleSvgBlock.addEventListener('click', () => {
     oldActivService = activNumber;
 });
 
+const updateActivService = () => {
+    const currentService = arrayDataOfService[activNumber];
+
+    buttonMoreTitle.textContent = currentService.title[selectLang];
+    imgBlock.src = `/img/svg/third-section-lower-part ${currentService.title.eng}.svg`;
+
+
+    for (let index = 0; index < currentService.prices.length; index++) {
+        const priceName = document.getElementById(`button-more-price-services-${index}`);
+        const priceCost = document.getElementById(`button-more-price-money-${index}`);
+        priceName.textContent = currentService.prices[index].nameOfServise[selectLang];
+        priceCost.textContent = "£" + currentService.prices[index].cost;
+    }
+
+    for (let index = 0; index < currentService.description[selectLang].length; index++) {
+        const currentDescription = document.getElementById(`button-more-description-text-${index}`);
+        currentDescription.textContent = currentService.description[selectLang][index];
+    }
+}
+
+const buttonMoreLowerPartButtonRight = document.getElementById("button-more-lower-part-button-right");
+const buttonMoreLowerPartButtonLeft = document.getElementById("button-more-lower-part-button-left");
+
+buttonMoreLowerPartButtonRight.addEventListener('click', () => {
+    activNumber++
+    if (activNumber === arrayDataOfService.length) {
+        activNumber = 0;
+    }
+    updateActivService()
+})
+
+buttonMoreLowerPartButtonLeft.addEventListener('click', () => {
+    activNumber--
+    if (activNumber < 0) {
+        activNumber = arrayDataOfService.length - 1;
+    }
+    updateActivService()
+})
 
 interestBlockAllService.addEventListener('click', () => {
     activAnmimationTitle = true;
@@ -1065,6 +1076,10 @@ const voidInput = () => {
 
 
 submitButtonFourthSection.addEventListener('mouseenter', () => {
+    errorImgFirstName.style.pointerEvents = "all";
+    errorImgLastName.style.pointerEvents = "all";
+    errorImgPhone.style.pointerEvents = "all";
+    errorImgEmail.style.pointerEvents = "all";
     let resultChecked = true;
 
     if (!inputFirstName.value.length) {
@@ -1124,7 +1139,12 @@ submitButtonFourthSection.addEventListener('mouseenter', () => {
 }
 );
 
-buttonWrapper.addEventListener('mouseleave', () => {
+document.addEventListener('click', () => {
+    
+    errorImgFirstName.style.pointerEvents = "none";
+    errorImgLastName.style.pointerEvents = "none";
+    errorImgPhone.style.pointerEvents = "none";
+    errorImgEmail.style.pointerEvents = "none";
     let resultChecked = true;
 
     if (!inputFirstName.value.length) {
@@ -1167,6 +1187,43 @@ buttonWrapper.addEventListener('mouseleave', () => {
         errorImgEmail.style.opacity = 0;
     }
 
+})
+
+const emptyFieldFirstName = document.getElementById("empty-field-0");
+const emptyFieldLastName = document.getElementById("empty-field-1");
+const emptyFieldPhone = document.getElementById("empty-field-2");
+const emptyFieldEmail = document.getElementById("empty-field-3");
+
+errorImgFirstName.addEventListener('mouseenter', () => {
+    emptyFieldFirstName.style.opacity = "1";
+})
+
+errorImgFirstName.addEventListener('mouseleave', () => {
+    emptyFieldFirstName.style.opacity = "0";
+})
+
+errorImgLastName.addEventListener('mouseenter', () => {
+    emptyFieldLastName.style.opacity = "1";
+})
+
+errorImgLastName.addEventListener('mouseleave', () => {
+    emptyFieldLastName.style.opacity = "0";
+})
+
+errorImgPhone.addEventListener('mouseenter', () => {
+    emptyFieldPhone.style.opacity = "1";
+})
+
+errorImgPhone.addEventListener('mouseleave', () => {
+    emptyFieldPhone.style.opacity = "0";
+})
+
+errorImgEmail.addEventListener('mouseenter', () => {
+    emptyFieldEmail.style.opacity = "1";
+})
+
+errorImgEmail.addEventListener('mouseleave', () => {
+    emptyFieldEmail.style.opacity = "0";
 })
 
 

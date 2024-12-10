@@ -1125,21 +1125,29 @@ body {
 #error-img-first-name-input {
     left: 21.35417vw;
     top: 7.8125vw;
+    pointer-events: none;
+    cursor: pointer;
 }
 
 #error-img-last-name-input {
     left: 45.57292vw;
     top: 7.8125vw;
+    pointer-events: none;
+    cursor: pointer;
 }
 
 #error-img-phone-input {
     left: 21.35417vw;
     top: 12.75vw;
+    pointer-events: none;
+    cursor: pointer;
 }
 
 #error-img-email-input {
     left: 45.57292vw;
     top: 12.75vw;
+    pointer-events: none;
+    cursor: pointer;
 }
 
 .correct-img {
@@ -1171,44 +1179,71 @@ body {
 }
 
 .empty-field {
-    width: 21.875vw;
-    height: 9.32292vw;
+    width: 15.36458vw;
+    height: 6.66667vw;
     position: absolute;
     border-radius: 0vw 0.52083vw 0.52083vw 0.52083vw;
     border: 0.05208vw solid #0285CC;
-    background: #000D15;
     backdrop-filter: blur(0.26042vw);
+    background-color: rgba(0, 13, 21, 0.8);
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    z-index: 5;
 
     & div {
-        font-size: 1.66667vw;
         color: var(--blue);
-        margin-left: 1.30208vw;
+        margin-left: 0.78125vw;
+        overflow: visible;
     }
 
 
     &>.empty-field-1 {
+        width: 9.32292vw;
+        height: 1.35417vw;
+        font-size: 1.35417vw;
         font-weight: 400;
-        line-height: 1.66667vw;
+        line-height: 1.35417vw;
+        position: absolute;
+        top: 0.78125vw;
     }
 
     &>.empty-field-2 {
+        position: absolute;
+        width: 13.80208vw;
+        height: 3.02083vw;
+        font-size: 1.25vw;
         font-weight: 300;
-        line-height: 2vw;
+        line-height: 1.5vw;
+        top: 2.70833vw;
     }
 }
 
 #empty-field-0 {
     left: 22.35vw;
     top: 8.8vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 #empty-field-1 {
     left: 46.5vw;
-    top: 8.8vw;
-    z-index: 4;   
+    top: 8.8vw; 
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#empty-field-2 {
+    left: 22.35vw;
+    top: 13.8vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#empty-field-3 {
+    left: 46.5vw;
+    top: 13.8vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 #choice-serveces-title {
@@ -1229,7 +1264,7 @@ body {
     overflow: hidden;
     top: 17.1875vw;
     left: 26.30208vw;
-    z-index: 10;
+    z-index: 3;
     transition: height 0.3s ease-in-out;
 
 }
@@ -1249,7 +1284,6 @@ body {
     cursor: pointer;
     transition: border-bottom-color ease-in-out 0.3s;
     overflow: hidden;
-
 
     &>#choice-of-service-placeholder {
         color: var(--darkBlue);
