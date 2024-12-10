@@ -1,0 +1,81 @@
+#mv-first-section {
+    width: 100vw;
+    height: 217.4129353233831vw;
+    background: linear-gradient(166.39deg, rgba(0, 76, 123, 0.2) 4.94%, rgba(0, 13, 21, 0.2) 14.94%, rgba(0, 13, 21, 0.2) 35.08%, rgba(0, 76, 123, 0.2) 69.97%, rgba(0, 13, 21, 0.2) 89.82%);
+    position: relative;
+    overflow: visible;
+
+
+    &>#mv-background-gradient {
+        width: 69.15422885572139vw;
+        height: 40.547263681592035vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(128.05deg, rgba(0, 13, 21, 0) 12.99%, rgba(0, 13, 21, 0.5) 65.25%);
+        overflow: visible;
+    }
+
+    &>#mv-first-section-img-circle {
+        width: 74.6268656716418vw;
+        height: 75.36567164179105vw;
+        position: absolute;
+        top: -11.062189054726367vw;
+        left: -45.80348258706468vw;
+        transform: rotate(55deg);
+    }
+
+    &>#mv-first-section-logo {
+        width: 10.44776119402985vw;
+        height: 7.9378109452736325vw;
+        position: absolute;
+        top: 2.4875621890547266vw;
+        left: 2.4875621890547266vw;
+    }
+
+    #mv-nav-button {
+        width: 8.549751243781094vw;
+        height: 7.9378109452736325vw;
+        position: absolute;
+        top: 2.4875621890547266vw;
+        right: 2.4875621890547266vw;
+        overflow: visible;
+
+        &>#mv-nav-button-svg {
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            object-fit: contain;
+        }
+    }
+
+    &>#mv-first-section-main-title {
+        width: 78.6318407960199vw;
+        height: 9.950248756218906vw;
+        position: absolute;
+        top: 98.75621890547264vw;
+        left: 13.184079601990051vw;
+        font-size: 7.462686567164178vw;
+        font-weight: 400;
+        line-height: 8.955223880597014vw;
+        letter-spacing: 0.15em;
+        color: rgba(0, 154, 236, 0.1);
+        text-decoration: #005380 solid 50px;
+    }
+
+    &>#mv-first-section-subtitle-block {
+        width: 74.12935323383084vw;
+        height: 4.975124378109453vw;
+        position: absolute;
+        top: 114.92537313432835vw;
+        left: 12.686567164179104vw;
+        font-family: "Josefin Sans";
+        font-size: 4.975124378109453vw;
+        font-weight: 400;
+        line-height: 4.975124378109453vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba(0, 83, 128, 0.8);
+    }
+}
