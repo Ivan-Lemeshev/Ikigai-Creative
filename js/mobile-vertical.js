@@ -1,3 +1,5 @@
+import arrayDataOfService from "./Services.js";
+
 const mvNavButton = document.getElementById("mv-nav-button");
 const mvNavigationBlock = document.getElementById("mv-navigation-block");
 const mvNavigationBlockItem0 = document.getElementById("mv-navigation-block-item-0");
@@ -186,3 +188,77 @@ const mvChangeIdeasText = () => {
 };
 
 mvChangeIdeasText();
+
+
+let mvActivNumber = 0;
+
+const mvThirdSectionTitle = document.getElementById("mv-third-section-title");
+const mvThirdSectionImg = document.getElementById("mv-third-section-img");
+const mvThirdSectionText0 = document.getElementById("mv-third-section-text-0");
+const mvThirdSectionText1 = document.getElementById("mv-third-section-text-1");
+
+const mvFourthSectionButton0 = document.getElementById("mv-fourth-section-button-0");
+const mvFourthSectionButton1 = document.getElementById("mv-fourth-section-button-1");
+const mvFourthSectionButton2 = document.getElementById("mv-fourth-section-button-2");
+const mvFourthSectionButton3 = document.getElementById("mv-fourth-section-button-3");
+const mvFourthSectionButton4 = document.getElementById("mv-fourth-section-button-4");
+const mvFourthSectionButton5 = document.getElementById("mv-fourth-section-button-5");
+
+const mvActivSrvice = () => {
+    const currentService = arrayDataOfService[mvActivNumber];
+    mvThirdSectionTitle.textContent = currentService.title[mvSelectLang];
+    mvThirdSectionImg.src = `/img/svg/mobile-vertical/mv-third-section-img ${currentService.title.eng}.svg`;
+    mvThirdSectionText0.textContent = currentService.description[mvSelectLang][0];
+    mvThirdSectionText1.textContent = currentService.description[mvSelectLang][1];
+}
+
+mvActivSrvice()
+
+mvFourthSectionButton0.addEventListener('click', () => {
+    mvActivNumber = 0;
+    mvActivSrvice()
+})
+
+mvFourthSectionButton1.addEventListener('click', () => {
+    mvActivNumber = 1;
+    mvActivSrvice()
+})
+
+mvFourthSectionButton2.addEventListener('click', () => {
+    mvActivNumber = 2;
+    mvActivSrvice()
+})
+
+mvFourthSectionButton3.addEventListener('click', () => {
+    mvActivNumber = 3;
+    mvActivSrvice()
+})
+
+mvFourthSectionButton4.addEventListener('click', () => {
+    mvActivNumber = 4;
+    mvActivSrvice()
+})
+
+mvFourthSectionButton5.addEventListener('click', () => {
+    mvActivNumber = 5;
+    mvActivSrvice()
+})
+
+const mvThirdSectionLeftArrow = document.getElementById("mv-third-section-left-arrow")
+const mvThirdSectionRightArrow = document.getElementById("mv-third-section-right-arrow")
+
+mvThirdSectionRightArrow.addEventListener('click', () => {
+    mvActivNumber++;
+    if(mvActivNumber > arrayDataOfService.length) {
+        mvActivNumber = 0;
+    }
+    mvActivSrvice();
+})
+
+mvThirdSectionLeftArrow.addEventListener('click', () => {
+    mvActivNumber--;
+    if(mvActivNumber < 0) {
+        mvActivNumber = arrayDataOfService.length;
+    }
+    mvActivSrvice();
+})
