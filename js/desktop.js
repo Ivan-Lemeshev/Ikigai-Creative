@@ -119,6 +119,9 @@ const arrayCard = [
     thirdSectionLowerPartDivFifth
 ];
 
+let selectLang = "eng";
+const lang = document.getElementById("language-button-first-section");
+
 const setupAndTranslateForSelectService = (event) => {
     event.preventDefault();
     window.scrollTo({
@@ -152,9 +155,6 @@ const setupAndTranslateForSelectService = (event) => {
     }
 }
 
-
-let selectLang = "eng";
-const lang = document.getElementById("language-button-first-section");
 
 const refreshDataForLocalization = () => {
     const titles = arrayDataOfService.map((service) => service.title);
@@ -468,7 +468,6 @@ const changeIdeasText = () => {
         centralImg.style.rotate = angel + "deg";
         centralText.style.opacity = "1";
     }, 500);
-
 };
 
 const startAnimation = () => {
