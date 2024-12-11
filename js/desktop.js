@@ -45,7 +45,6 @@ const secondSectionButtonServices = document.getElementById("second-section-butt
 const secondSectionButtonContacts = document.getElementById("second-section-button-contacts");
 
 
-const thirdSection = document.getElementById("third-section");
 const thirdSectionText = document.getElementById("third-section-main-content-right-part");
 const thirdSectionButtonOrder = document.getElementById("third-section-main-content-right-part-button-order");
 const thirdSectionButtonMore = document.getElementById("third-section-main-content-right-part-button-more");

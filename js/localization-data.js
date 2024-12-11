@@ -522,6 +522,186 @@ const localizationWrapper = {
         }
     },
 
+    "mv-navigation-block-title": {
+        rus: "Навигация",
+        eng: "Navigation",
+        styles: {
+            fontSize: "min(5.472636815920398vw, 2.517162471395881dvh)",
+            fontWeight: "",
+            lineHeight: "3.020594965675057dvh"
+        }
+    },
+
+    "mv-navigation-block-item-title-0": {
+        rus: "Интро",
+        eng: "Intro",
+        styles: {
+            fontSize: "min(5.472636815920398vw, 2.517162471395881dvh)",
+            fontWeight: "",
+            lineHeight: "3.020594965675057dvh"
+        }
+    },
+
+    "mv-navigation-block-item-text-0": {
+        rus: "В этом разделе вас встретит наш великолепный логотип.",
+        eng: "In this section you will be greeted by our gorgeous logo.",
+        styles: {
+            fontSize: "min(4.477611940298507vw, 2.059496567505721dvh)",
+            fontWeight: "",
+            lineHeight: "5.373134328358209vw"
+        }
+    },
+
+    "mv-navigation-block-item-title-1": {
+        rus: "Кто Мы",
+        eng: "About us",
+        styles: {
+            fontSize: "min(5.472636815920398vw, 2.517162471395881dvh)",
+            fontWeight: "",
+            lineHeight: "3.020594965675057dvh"
+        }
+    },
+
+    "mv-navigation-block-item-text-1": {
+        rus: "В этом разделе вас встретит наш великолепный логотип.",
+        eng: "In this section you will be greeted by our gorgeous logo.",
+        styles: {
+            fontSize: "min(4.477611940298507vw, 2.059496567505721dvh)",
+            fontWeight: "",
+            lineHeight: "5.373134328358209vw"
+        }
+    },
+
+    "mv-navigation-block-item-title-2": {
+        rus: "Услуги",
+        eng: "Services",
+        styles: {
+            fontSize: "min(5.472636815920398vw, 2.517162471395881dvh)",
+            fontWeight: "",
+            lineHeight: "3.020594965675057dvh"
+        }
+    },
+
+    "mv-navigation-block-item-text-2": {
+        rus: "Ознакомьтесь со списком наших услуг, призванных обеспечить ваш цифровой успех.",
+        eng: "Explore our range of cutting-edge solutions designed to drive your digital success.",
+        styles: {
+            fontSize: "min(4.477611940298507vw, 2.059496567505721dvh)",
+            fontWeight: "",
+            lineHeight: "5.373134328358209vw"
+        }
+    },
+
+    "mv-navigation-block-item-title-3": {
+        rus: "Контакты",
+        eng: "Contacts",
+        styles: {
+            fontSize: "min(5.472636815920398vw, 2.517162471395881dvh)",
+            fontWeight: "",
+            lineHeight: "3.020594965675057dvh"
+        }
+    },
+
+    "mv-navigation-block-item-text-3": {
+        rus: "Каждый запрос делает мир ярче. Давайте вместе создадим что-то невероятное!",
+        eng: "Every request makes the world brighter. Let’s create something incredible together!",
+        styles: {
+            fontSize: "min(4.477611940298507vw, 2.059496567505721dvh)",
+            fontWeight: "",
+            lineHeight: "5.373134328358209vw"
+        }
+    },
+
+    "mv-navigation-block-item-title-4": {
+        rus: "Отзывы",
+        eng: "Reviews",
+        styles: {
+            fontSize: "min(5.472636815920398vw, 2.517162471395881dvh)",
+            fontWeight: "",
+            lineHeight: "3.020594965675057dvh"
+        }
+    },
+
+    "mv-navigation-block-item-text-4": {
+        rus: "Критика делает нас лучше, а похвала - счастливее.",
+        eng: "Criticism makes us better, while praise makes us happiers. ",
+        styles: {
+            fontSize: "min(4.477611940298507vw, 2.059496567505721dvh)",
+            fontWeight: "",
+            lineHeight: "5.373134328358209vw"
+        }
+    },
+
+    "mv-second-section-title": {
+        rus: "Кто Мы",
+        eng: "Who We Are",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "mv-second-section-text-0": {
+        rus: "Креативное агентство с более чем 10-летним опытом работы, помогающее малому и среднему бизнесу реализовывать it-проекты.",
+        eng: "Сreative agency with over 10 years of experience helping small and medium-sized businesses achieve success through digital projects. ",
+        styles: {
+            fontSize: "5.472636815920398vw",
+            fontWeight: "",
+            lineHeight: "7.6616915422885565vw"
+        }
+    },
+
+    "mv-second-section-text-1": {
+        rus: "Мы специализируемся  на веб-дизайне, разработке, брендинге, продвижении и видеопроизводстве.",
+        eng: "We specialize in web design, development, branding, promotion, and video production.",
+        styles: {
+            fontSize: "5.472636815920398vw",
+            fontWeight: "",
+            lineHeight: "7.6616915422885565vw"
+        }
+    },
+
+    "mv-second-section-button-services": {
+        rus: "Услуги",
+        eng: "Services",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "mv-second-section-button-contacts": {
+        rus: "Контакты",
+        eng: "Contacts",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "mv-navigation-block-lang-button": {
+        rus: "Rus",
+        eng: "Eng",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "mv-navigation-block-lang-button": {
+        rus: "Заказать",
+        eng: "Order",
+        styles: {
+            fontSize: "4.477611940298507vw",
+            fontWeight: "400",
+            lineHeight: "5.373134328358209vw"
+        }
+    },
+
 }
 
 export default localizationWrapper;
