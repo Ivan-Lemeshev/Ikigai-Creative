@@ -978,6 +978,72 @@
             overflow: visible;
         }
     }
+
+    &>#mv-send-to-application {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 217.4129353233831vw;
+        z-index: 10;
+        background: rgba(0, 13, 21, 0.3);
+        backdrop-filter: blur(1.9900497512437811vw);
+
+        &>#mv-send-to-application-main-content {
+            position: absolute;
+            top: 59.70149253731343vw;
+            left: 12.437810945273633vw;
+            width: 75.12437810945273vw;
+            height: 97.76119402985076vw;
+            background: rgba(0, 63, 98, 0.4);
+            border: 0.24875621890547264vw solid var(--darkBlue);
+            backdrop-filter: blur(2.4875621890547266vw);
+
+            &>#mv-send-to-application-main-content-title {
+                position: absolute;
+                top: 7.462686567164178vw;
+                left: 12.437810945273633vw;
+                width: 50.24875621890548vw;
+                height: 14.925373134328357vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 5.970149253731343vw;
+                font-weight: 400;
+                line-height: 7.164179104477612vw;
+                text-align: center;
+                color: var(--blue);
+            }
+
+            &>#mv-send-to-application-main-content-text {
+                position: absolute;
+                top: 27.363184079601986vw;
+                left: 12.437810945273633vw;
+                width: 50.24875621890548vw;
+                height: 30.597014925373134vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 4.477611940298507vw;
+                font-weight: 300;
+                line-height: 6.26865671641791vw;
+                text-align: center;
+                color: var(--blue);
+                overflow: visible;
+            }
+
+            &>#mv-send-to-application-main-content-img {
+                position: absolute;
+                bottom: 7.462686567164178vw;
+                left: 25.12437810945274vw;
+                width: 24.875621890547265vw;
+                height: 24.875621890547265vw;
+            }
+
+        }
+
+    }
 }
 
 #mv-sixth-section {

@@ -893,6 +893,26 @@ const localizationWrapper = {
         }
     },
 
+    "mv-send-to-application-main-content-title": {
+        rus: "Отправляем вашу заявку",
+        eng: "Sending an application",
+        styles: {
+            fontSize: "5.472636815920398vw",
+            fontWeight: "",
+            lineHeight: "6.567164179104477vw"
+        }
+    },
+
+    "mv-send-to-application-main-content-text": {
+        rus: "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд...",
+        eng: "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds...",
+        styles: {
+            fontSize: "3.9800995024875623vw",
+            fontWeight: "",
+            lineHeight: "5.572139303482587vw"
+        }
+    },
+
 }
 
 export default localizationWrapper;

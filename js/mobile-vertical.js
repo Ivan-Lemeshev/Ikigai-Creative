@@ -690,6 +690,8 @@ const mvAllInputsHave = () => {
 
 mvAllInputsHave()
 
+const mvSendToApplication = document.getElementById("mv-send-to-application");
+
 
 mvSubmitButton.addEventListener('click', (event) => {
     event.preventDefault
@@ -706,7 +708,14 @@ mvSubmitButton.addEventListener('click', (event) => {
         mvSubmitButton.style.border = "0.24875621890547264vw solid #7F2D00";
         mvSubmitButton.style.backgroundColor = "rgba(236, 82, 0, 0.05)";
         mvSubmitButton.style.color = "#7F2D00";
+    } else {
+        mvSendToApplication.style.display = "block";
+        setTimeout(() => {
+        mvSendToApplication.style.display = "none";
+            
+        }, 5000);
     }
+
     if (mvActivNumberSave === null) {
         mvFifvthSectionMainContentSubtitle.textContent = "Choose a service:"
         mvFifvthSectionMainContentSubtitle.style.color = "#EC5200"
@@ -737,6 +746,8 @@ mvSubmitButton.addEventListener('click', (event) => {
         mvInputEmail.classList = "mv-fifvth-section-input-placeholder";
         mvInputEmail.placeholder = "Invalid email";
     }
+
+
 
 })
 
