@@ -120,6 +120,13 @@ const arrayCard = [
 
 let selectLang = "eng";
 const lang = document.getElementById("language-button-first-section");
+let numberOfService = 0;
+
+const allInputsHave = () => {
+    if (inputFirstName.value.length && inputLastName.value.length && inputPhone.value.length && inputEmail.value.length && isValidEmail(inputEmail.value) && selectCategory) {
+        submitButtonFourthSection.className = "send-form-submit-activ";
+    }
+}
 
 const setupAndTranslateForSelectService = (event) => {
     event.preventDefault();
@@ -903,11 +910,7 @@ const isValidEmail = (email) => {
     return regex.test(email);
 }
 
-const allInputsHave = () => {
-    if (inputFirstName.value.length && inputLastName.value.length && inputPhone.value.length && inputEmail.value.length && isValidEmail(inputEmail.value) && selectCategory) {
-        submitButtonFourthSection.className = "send-form-submit-activ";
-    }
-}
+
 
 fourthSectionChoiceOfService.addEventListener('click', (event) => {
     event.stopPropagation();
@@ -986,7 +989,7 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
     });
 });
 
-let numberOfService = 0;
+
 const textarea = document.getElementById("textarea");
 
 
@@ -994,6 +997,10 @@ const textarea = document.getElementById("textarea");
 
 
 thirdSectionButtonOrder.addEventListener('click', setupAndTranslateForSelectService);
+
+const voidInput = () => {
+    submitButtonFourthSection.className = "";
+}
 
 inputFirstName.addEventListener('input', () => {
     const inputValue = inputFirstName.value;
@@ -1068,9 +1075,6 @@ const correctlyText = document.getElementById("correctly");
 
 
 
-const voidInput = () => {
-    submitButtonFourthSection.className = " ";
-}
 
 
 submitButtonFourthSection.addEventListener('mouseenter', () => {

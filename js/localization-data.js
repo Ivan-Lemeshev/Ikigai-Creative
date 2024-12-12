@@ -692,13 +692,204 @@ const localizationWrapper = {
         }
     },
 
-    "mv-navigation-block-lang-button": {
+    "mv-third-section-button-order-text": {
         rus: "Заказать",
         eng: "Order",
         styles: {
             fontSize: "4.477611940298507vw",
             fontWeight: "400",
             lineHeight: "5.373134328358209vw"
+        }
+    },
+
+    "mv-price-list-title": {
+        rus: "Прайс-лист",
+        eng: "Price list",
+        styles: {
+            fontSize: "5.472636815920398vw",
+            fontWeight: "",
+            lineHeight: "5.472636815920398vw"
+        }
+    },
+
+    "mv-price-list-footer": {
+        rus: "Цены ориентировочные — точная стоимость зависит от ваших пожеланий и особенностей заказа. Мы всегда готовы обсудить детали и предложить оптимальное решение!",
+        eng: "Prices are indicative and serve as a starting point. Each project is unique, so we’ll tailor the final cost to match your specific needs. Let’s discuss the details together!",
+        styles: {
+            fontSize: "3.482587064676617vw",
+            fontWeight: "",
+            lineHeight: "5.223880597014925vw"
+        }
+    },
+
+    "mv-fourth-section-title": {
+        rus: "Наши услуги",
+        eng: "Our services",
+        styles: {
+            fontSize: "5.472636815920398vw",
+            fontWeight: "",
+            lineHeight: "6.567164179104477vw"
+        }
+    },
+
+    "mv-name-of-service-0": {
+        rus: "Креативный дизайн",
+        eng: "Creative Design",
+        styles: {
+            fontSize: "2.9850746268656714vw",
+            fontWeight: "400",
+            lineHeight: "3.582089552238806vw"
+        }
+    },
+
+    "mv-name-of-service-1": {
+        rus: "Веб-дизайн и разработка",
+        eng: "Website design and development",
+        styles: {
+            fontSize: "2.9850746268656714vw",
+            fontWeight: "400",
+            lineHeight: "3.582089552238806vw"
+        }
+    },
+
+    "mv-name-of-service-2": {
+        rus: "Создание видео",
+        eng: "Video production",
+        styles: {
+            fontSize: "2.9850746268656714vw",
+            fontWeight: "400",
+            lineHeight: "3.582089552238806vw"
+        }
+    },
+
+    "mv-name-of-service-3": {
+        rus: "Поддержка и контент",
+        eng: "Support and content",
+        styles: {
+            fontSize: "2.9850746268656714vw",
+            fontWeight: "400",
+            lineHeight: "3.582089552238806vw"
+        }
+    },
+
+    "mv-name-of-service-4": {
+        rus: "Продвижение в соц. сетях",
+        eng: "Promotion on social networks ",
+        styles: {
+            fontSize: "2.9850746268656714vw",
+            fontWeight: "400",
+            lineHeight: "3.582089552238806vw"
+        }
+    },
+
+    "mv-name-of-service-5": {
+        rus: "Настройка оплаты",
+        eng: "Setting up payment",
+        styles: {
+            fontSize: "2.9850746268656714vw",
+            fontWeight: "400",
+            lineHeight: "3.582089552238806vw"
+        }
+    },
+
+    "mv-fifvth-section-title": {
+        rus: "Свяжитесь с нами",
+        eng: "Contact us",
+        styles: {
+            fontSize: "5.472636815920398vw",
+            fontWeight: "",
+            lineHeight: "6.567164179104477vw"
+        }
+    },
+
+
+    "mv-fifvth-section-drop-list-item-text-0": {
+        rus: "Креативный дизайн",
+        eng: "Creative Design",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "5.970149253731343vw"
+        }
+    },
+
+    "mv-fifvth-section-drop-list-item-text-1": {
+        rus: "Веб-дизайн и разработка",
+        eng: "Website design and development",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "5.970149253731343vw"
+        }
+    },
+
+    "mv-fifvth-section-drop-list-item-text-2": {
+        rus: "Создание видео",
+        eng: "Video production",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "5.970149253731343vw"
+        }
+    },
+
+    "mv-fifvth-section-drop-list-item-text-3": {
+        rus: "Поддержка и контент",
+        eng: "Support and content",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "5.970149253731343vw"
+        }
+    },
+
+    "mv-fifvth-section-drop-list-item-text-4": {
+        rus: "Продвижение в соц. сетях",
+        eng: "Promotion on social networks ",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "5.970149253731343vw"
+        }
+    },
+
+    "mv-fifvth-section-drop-list-item-text-5": {
+        rus: "Настройка оплаты",
+        eng: "Setting up payment",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: "5.970149253731343vw"
+        }
+    },
+
+    "mv-submit-button": {
+        rus: "Отправить",
+        eng: "Submit",
+        styles: {
+            fontSize: "4.477611940298507vw",
+            fontWeight: "400",
+            lineHeight: "5.373134328358209vw"
+        }
+    },
+
+    "mv-sixth-section-title": {
+        rus: "Отзывы",
+        eng: "Reviews",
+        styles: {
+            fontSize: "5.472636815920398vw",
+            fontWeight: "",
+            lineHeight: "6.567164179104477vw"
+        }
+    },
+
+    "mv-fifvth-section-main-content-subtitle": {
+        rus: "Заинтересовавшая вас услуга:",
+        eng: "The service you're interested in:",
+        styles: {
+            fontSize: "4.72636815920398vw",
+            fontWeight: "",
+            lineHeight: "5.6716417910447765vw"
         }
     },
 

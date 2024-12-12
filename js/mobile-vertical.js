@@ -1,11 +1,25 @@
 import arrayDataOfService from "./Services.js";
 import localizationWrapper from "./localization-data.js";
+import reviews from "./reviews-mobile.js";
+import dataContats from "./links.js";
 
 const mvNavButton = document.getElementById("mv-nav-button");
 const mvNavigationBlock = document.getElementById("mv-navigation-block");
 const mvNavigationBlockItem0 = document.getElementById("mv-navigation-block-item-0");
 const mvNavigationBlockItem1 = document.getElementById("mv-navigation-block-item-1");
 const mvNavigationBlockItem2 = document.getElementById("mv-navigation-block-item-2");
+const mvNavigationBlockItem3 = document.getElementById("mv-navigation-block-item-3");
+const mvNavigationBlockItem4 = document.getElementById("mv-navigation-block-item-4");
+
+const mvSixthSectionMainBlockArrowLeft = document.getElementById("mv-sixth-section-main-block-arrow-left");
+const mvSixthSectionMainBlockArrowRight = document.getElementById("mv-sixth-section-main-block-arrow-right");
+const mvUpperBlock = document.getElementById("mv-sixth-section-main-text-review-0");
+const mvLowerBlock = document.getElementById("mv-sixth-section-main-text-review-1");
+const mvBlockTitle = document.getElementById("mv-sixth-section-main-block-all-text-title");
+const mvBlockImg = document.getElementById("mv-sixth-section-main-block-photo");
+const mvnumberOfReviews = document.getElementById("mv-sixth-section-number-of-reviews");
+let number = 0;
+let float = false;
 
 mvNavButton.addEventListener('click', () => {
     mvNavigationBlock.style.display = "block";
@@ -43,6 +57,28 @@ mvNavigationBlockItem2.addEventListener('click', () => {
     }, 500);
     window.scrollTo({
         top: window.innerWidth * 6.5,
+        behavior: 'smooth'
+    });
+})
+
+mvNavigationBlockItem3.addEventListener('click', () => {
+    mvNavigationBlock.style.left = "";
+    setTimeout(() => {
+        mvNavigationBlock.style.display = "";
+    }, 500);
+    window.scrollTo({
+        top: window.innerWidth * 8.75,
+        behavior: 'smooth'
+    });
+})
+
+mvNavigationBlockItem4.addEventListener('click', () => {
+    mvNavigationBlock.style.left = "";
+    setTimeout(() => {
+        mvNavigationBlock.style.display = "";
+    }, 500);
+    window.scrollTo({
+        top: window.innerWidth * 12.1,
         behavior: 'smooth'
     });
 })
@@ -155,6 +191,8 @@ const mvCentralTextsecondBlockLeft = document.getElementById("mv-first-section-s
 const mvCentralTextsecondBlockRight = document.getElementById("mv-first-section-subtitle-block-right");
 const mvCentralTextsecondBlockLeftGradient = document.getElementById("mv-first-section-subtitle-second-block-left");
 const mvCentralTextsecondBlockRightGradient = document.getElementById("mv-first-section-subtitle-second-block-right");
+const mvFooterRus = document.getElementById("mv-footer-rus");
+const mvFooterEng = document.getElementById("mv-footer-eng");
 
 
 const mvRefreshDataForLocalization = () => {
@@ -164,11 +202,67 @@ const mvRefreshDataForLocalization = () => {
         mvCentralTextsecondBlockRight.style.fontFamily = "Lato";
         mvCentralTextsecondBlockLeftGradient.style.fontFamily = "Lato";
         mvCentralTextsecondBlockRightGradient.style.fontFamily = "Lato";
+        mvInputFirstName.placeholder = "Имя";
+        mvInputFirstName.style.fontFamily = "Lato";
+        mvInputFirstName.style.fontSize = "4.975124378109453vw";
+        mvInputFirstName.style.lineHeight = "5.970149253731343vw";
+        mvInputLastName.placeholder = "Фамилия";
+        mvInputLastName.style.fontFamily = "Lato";
+        mvInputLastName.style.fontSize = "4.975124378109453vw";
+        mvInputLastName.style.lineHeight = "5.970149253731343vw";
+        mvInputPhone.placeholder = "Телефон";
+        mvInputPhone.style.fontFamily = "Lato";
+        mvInputPhone.style.fontSize = "4.975124378109453vw";
+        mvInputPhone.style.lineHeight = "5.970149253731343vw";
+        mvTextarea.placeholder = "В этом поле вы можете указать указать любые дополнительные данные или пожелания по заказу."
+        mvTextarea.style.fontFamily = "Lato";
+        mvBlockTitle.textContent = reviews[number].title.rus;
+        mvBlockTitle.style.fontFamily = "Lato";
+        mvBlockTitle.style.fontSize = "4.975124378109453vw";
+        mvBlockTitle.style.lineHeight = "5.970149253731343vw";
+        mvUpperBlock.textContent = reviews[number].upperText.rus;
+        mvUpperBlock.style.fontFamily = "Lato";
+        mvUpperBlock.style.fontSize = "4.975124378109453vw";
+        mvUpperBlock.style.lineHeight = "5.970149253731343vw";
+        mvLowerBlock.textContent = reviews[number].lowerText.rus;
+        mvLowerBlock.style.fontFamily = "Lato";
+        mvLowerBlock.style.fontSize = "4.975124378109453vw";
+        mvLowerBlock.style.lineHeight = "5.970149253731343vw";
+        mvFooterEng.style.display = "none";
+        mvFooterRus.style.display = "flex";
     } else {
         mvCentralTextsecondBlockLeft.style.fontFamily = "";
         mvCentralTextsecondBlockRight.style.fontFamily = "";
         mvCentralTextsecondBlockLeftGradient.style.fontFamily = "";
         mvCentralTextsecondBlockRightGradient.style.fontFamily = "";
+        mvInputFirstName.placeholder = "First Name";
+        mvInputFirstName.style.fontFamily = "";
+        mvInputFirstName.style.fontSize = "";
+        mvInputFirstName.style.lineHeight = "";
+        mvInputLastName.placeholder = "";
+        mvInputLastName.style.fontFamily = "";
+        mvInputLastName.style.fontSize = "";
+        mvInputLastName.style.lineHeight = "";
+        mvInputPhone.placeholder = "";
+        mvInputPhone.style.fontFamily = "";
+        mvInputPhone.style.fontSize = "";
+        mvInputPhone.style.lineHeight = "";
+        mvTextarea.placeholder = "";
+        mvTextarea.style.fontFamily = "";
+        mvBlockTitle.textContent = reviews[number].title.eng;
+        mvBlockTitle.style.fontFamily = "";
+        mvBlockTitle.style.fontSize = "";
+        mvBlockTitle.style.lineHeight = "";
+        mvUpperBlock.textContent = reviews[number].upperText.eng;
+        mvUpperBlock.style.fontFamily = "";
+        mvUpperBlock.style.fontSize = "";
+        mvUpperBlock.style.lineHeight = "";
+        mvLowerBlock.textContent = reviews[number].lowerText.eng;
+        mvLowerBlock.style.fontFamily = "";
+        mvLowerBlock.style.fontSize = "";
+        mvLowerBlock.style.lineHeight = "";
+        mvFooterEng.style.display = "flex";
+        mvFooterRus.style.display = "none";
     }
 
     for (let index = 0; index < arrayDataOfService.length; index++) {
@@ -307,7 +401,11 @@ mvChangeIdeasText();
 
 const mvActivSrvice = () => {
     const currentService = arrayDataOfService[mvActivNumber];
+
+    console.log(currentService)
+
     mvThirdSectionTitle.textContent = currentService.title[mvSelectLang];
+
     mvThirdSectionImg.src = `/img/svg/mobile-vertical/mv-third-section-img ${currentService.title.eng}.svg`;
     mvThirdSectionText0.textContent = currentService.description[mvSelectLang][0];
     mvThirdSectionText1.textContent = currentService.description[mvSelectLang][1];
@@ -376,7 +474,7 @@ const mvThirdSectionRightArrow = document.getElementById("mv-third-section-right
 
 mvThirdSectionRightArrow.addEventListener('click', () => {
     mvActivNumber++;
-    if (mvActivNumber > arrayDataOfService.length) {
+    if (mvActivNumber === arrayDataOfService.length) {
         mvActivNumber = 0;
     }
     mvActivSrvice();
@@ -385,16 +483,24 @@ mvThirdSectionRightArrow.addEventListener('click', () => {
 mvThirdSectionLeftArrow.addEventListener('click', () => {
     mvActivNumber--;
     if (mvActivNumber < 0) {
-        mvActivNumber = arrayDataOfService.length;
+        mvActivNumber = arrayDataOfService.length - 1;
     }
     mvActivSrvice();
 })
 
 const mvSecondSectionButtonServices = document.getElementById("mv-second-section-button-services");
+const mvSecondSectionButtonContacts = document.getElementById("mv-second-section-button-contacts");
 
 mvSecondSectionButtonServices.addEventListener('click', () => {
     window.scrollTo({
         top: window.innerWidth * 6.5,
+        behavior: 'smooth'
+    });
+})
+
+mvSecondSectionButtonContacts.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 8.75,
         behavior: 'smooth'
     });
 })
@@ -417,27 +523,380 @@ mvPriceListX.addEventListener('click', () => {
     }, 300);
 })
 
-let mvActivChoice = null;
+const mvTextForApplication = {
+    eng: [
+        "Hello, I want to get advice on the chosen service",
+        "Hello, I have used this service and I want to leave a review:",
+        "Hello, I want to get an answer to the question:"
+    ],
 
-const mvFifvthSectionDropListItem0 = document.getElementById("mv-fifvth-section-drop-list-item-0");
-const mvFifvthSectionDropListItemText0 = document.getElementById("mv-fifvth-section-drop-list-item-text-0");
-const mvFifvthSectionDropListItemCircle0 = document.getElementById("mv-fifvth-section-drop-list-activ-circle-0");
+    rus: [
+        "Здравстуйте, я хочу воспользоваться выбранной услугой",
+        "Здравстуйте, я воспользовался вашей услугой и хочу оставить о ней отзыв",
+        "Здравстуйте, я хочу задать вам несколько вопросов"
+    ]
+}
 
-mvFifvthSectionDropListItem0.addEventListener('click', () => {
-    // 1. проверяем есть ли переменная 2. Если она есть очищаем стили
-    if (!mvActivChoice) {
-        mvFifvthSectionDropListItemText0.style.color = "#0285CC";
-        mvFifvthSectionDropListItemCircle0.style.backgroundColor = "#0285CC";
+
+
+const capitalize = (str) => {
+    return str.split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+}
+
+const isValidEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+const mvInputFirstName = document.getElementById("mv-fifvth-section-input-first-name");
+const mvInputLastName = document.getElementById("mv-fifvth-section-input-last-name");
+const mvInputPhone = document.getElementById("mv-fifvth-section-input-phone");
+const mvInputEmail = document.getElementById("mv-fifvth-section-input-email");
+const mvSubmitButton = document.getElementById("mv-submit-button");
+
+
+const mvVoidInput = () => {
+    mvSubmitButton.className = "";
+}
+
+mvInputFirstName.addEventListener('input', () => {
+    mvInputFirstName.style.borderBottom = "";
+    mvInputFirstName.classList = "mv-fifvth-section-input";
+    if (mvSelectLang === "rus") {
+        mvInputFirstName.placeholder = "Имя";
+        mvInputFirstName.style.fontFamily = "Lato";
+        mvInputFirstName.style.fontSize = "4.975124378109453vw";
+        mvInputFirstName.style.lineHeight = "5.970149253731343vw";
+    } else {
+        mvInputFirstName.placeholder = "First Name";
+        mvInputFirstName.style.fontFamily = "";
+        mvInputFirstName.style.fontSize = "";
+        mvInputFirstName.style.lineHeight = "";
     }
+
+    const inputValue = mvInputFirstName.value;
+    let editValue = inputValue.replace(/[^a-zA-Zа-яА-ЯёЁ]/g, '');
+
+    if (editValue.length > 10) {
+        editValue = editValue.slice(0, 10);
+    }
+    if (editValue.length > 0) {
+        mvAllInputsHave();
+    } else {
+        mvVoidInput();
+    }
+    mvInputFirstName.value = capitalize(editValue);
+});
+
+mvInputLastName.addEventListener('input', () => {
+    mvInputLastName.style.borderBottom = "";
+    mvInputLastName.classList = "mv-fifvth-section-input";
+
+    if (mvSelectLang === "rus") {
+        mvInputLastName.placeholder = "Фамилия";
+        mvInputLastName.style.fontFamily = "Lato";
+        mvInputLastName.style.fontSize = "4.975124378109453vw";
+        mvInputLastName.style.lineHeight = "5.970149253731343vw";
+    } else {
+        mvInputLastName.placeholder = "Last Name";
+        mvInputLastName.style.fontFamily = "";
+        mvInputLastName.style.fontSize = "";
+        mvInputLastName.style.lineHeight = "";
+    }
+
+    const inputValue = mvInputLastName.value;
+    let editValue = inputValue.replace(/[^a-zA-Zа-яА-ЯёЁ]/g, '');
+    if (editValue.length > 10) {
+        editValue = editValue.slice(0, 10);
+    }
+    if (editValue.length > 0) {
+        mvAllInputsHave();
+    } else {
+        mvVoidInput();
+    }
+    mvInputLastName.value = capitalize(editValue);
+});
+
+mvInputPhone.addEventListener('input', () => {
+
+    if (mvSelectLang === "rus") {
+        mvInputPhone.placeholder = "Телефон";
+        mvInputPhone.style.fontFamily = "Lato";
+        mvInputPhone.style.fontSize = "4.975124378109453vw";
+        mvInputPhone.style.lineHeight = "5.970149253731343vw";
+    } else {
+        mvInputPhone.placeholder = "Phone";
+        mvInputPhone.style.fontFamily = "";
+        mvInputPhone.style.fontSize = "";
+        mvInputPhone.style.lineHeight = "";
+    }
+    mvInputPhone.style.borderBottom = "";
+    mvInputPhone.classList = "mv-fifvth-section-input";
+    const inputValue = mvInputPhone.value;
+    let editValue = inputValue.replace(/[^0-9+]/g, '');
+    if (editValue.length > 12) {
+        editValue = editValue.slice(0, 12);
+    }
+    if (editValue.length > 0) {
+        mvAllInputsHave();
+    } else {
+        mvVoidInput();
+    }
+    mvInputPhone.value = capitalize(editValue);
+
+
+});
+
+mvInputEmail.addEventListener('input', () => {
+    mvInputEmail.placeholder = "Email";
+    mvInputEmail.style.borderBottom = "";
+    mvInputEmail.classList = "mv-fifvth-section-input";
+    const inputValue = mvInputEmail.value;
+    let editValue = inputValue.replace(/[^a-zA-Z1-9@_\.-]/g, '');
+    if (editValue.length > 20) {
+        editValue = editValue.slice(0, 20);
+    }
+    if (editValue.length > 0) {
+        mvAllInputsHave();
+    } else {
+        mvVoidInput();
+    }
+    mvInputEmail.value = editValue;
+});
+
+const mvFifvthSectionImgPath = document.getElementById("mv-fifvth-section-img-path");
+const mvFifvthSectionMainContent = document.getElementById("mv-fifvth-section-main-content");
+const mvFifvthSectionMainContentSubtitle = document.getElementById("mv-fifvth-section-main-content-subtitle");
+let mvActivNumberSave = null;
+
+const mvAllInputsHave = () => {
+    if (mvInputFirstName.value.length && mvInputLastName.value.length && mvInputPhone.value.length && mvInputEmail.value.length && isValidEmail(mvInputEmail.value) && mvActivNumberSave !== null) {
+        mvSubmitButton.classList = "mv-activ-button";
+        mvFifvthSectionImgPath.style.fill = "#009AEC";
+        mvFifvthSectionMainContent.style.backgroundColor = "rgba(0, 63, 98, 0.07)";
+        mvFifvthSectionMainContent.style.border = "0.4975124378109453vw solid rgba(0, 154, 236, 0.5)";
+        mvSubmitButton.style.border = "0.24875621890547264vw solid #0285CC";
+        mvSubmitButton.style.backgroundColor = "rgba(0, 154, 236, 0.05)";
+        mvSubmitButton.style.color = "#0285CC";
+        mvFifvthSectionMainContentSubtitle.textContent = "The service you're interested in:"
+        mvFifvthSectionMainContentSubtitle.style.color = "#005380"
+        mvFifvthSectionMainContentSubtitle.style.justifyContent = ""
+        return true;
+    }
+    return false;
+}
+
+mvAllInputsHave()
+
+
+mvSubmitButton.addEventListener('click', (event) => {
+    event.preventDefault
+
+    if (!mvAllInputsHave()) {
+        window.scrollTo({
+            top: window.innerWidth * 8.75,
+            behavior: 'smooth'
+        });
+
+        mvFifvthSectionImgPath.style.fill = "#EC5200";
+        mvFifvthSectionMainContent.style.backgroundColor = "rgba(127, 45, 0, 0.07)";
+        mvFifvthSectionMainContent.style.border = "0.4975124378109453vw solid rgba(127, 45, 0, 0.5)";
+        mvSubmitButton.style.border = "0.24875621890547264vw solid #7F2D00";
+        mvSubmitButton.style.backgroundColor = "rgba(236, 82, 0, 0.05)";
+        mvSubmitButton.style.color = "#7F2D00";
+    }
+    if (mvActivNumberSave === null) {
+        mvFifvthSectionMainContentSubtitle.textContent = "Choose a service:"
+        mvFifvthSectionMainContentSubtitle.style.color = "#EC5200"
+        mvFifvthSectionMainContentSubtitle.style.justifyContent = "flex-start"
+    }
+
+    if (mvInputFirstName.value.length < 1) {
+        mvInputFirstName.style.borderBottom = "0.24875621890547264vw solid #EC5200";
+        mvInputFirstName.classList = "mv-fifvth-section-input-placeholder";
+        mvInputFirstName.placeholder = "Empty field";
+    }
+
+    if (mvInputLastName.value.length < 1) {
+        mvInputLastName.style.borderBottom = "0.24875621890547264vw solid #EC5200";
+        mvInputLastName.classList = "mv-fifvth-section-input-placeholder";
+        mvInputLastName.placeholder = "Empty field";
+
+    }
+
+    if (mvInputPhone.value.length < 1) {
+        mvInputPhone.style.borderBottom = "0.24875621890547264vw solid #EC5200";
+        mvInputPhone.classList = "mv-fifvth-section-input-placeholder";
+        mvInputPhone.placeholder = "Empty field";
+    }
+
+    if (mvInputEmail.value.length < 1) {
+        mvInputEmail.style.borderBottom = "0.24875621890547264vw solid #EC5200";
+        mvInputEmail.classList = "mv-fifvth-section-input-placeholder";
+        mvInputEmail.placeholder = "Invalid email";
+    }
+
 })
 
-const mvFifvthSectionDropListItem1 = document.getElementById("mv-fifvth-section-drop-list-item-1");
-const mvFifvthSectionDropListItemText1 = document.getElementById("mv-fifvth-section-drop-list-item-text-1");
-const mvFifvthSectionDropListItemCircle1 = document.getElementById("mv-fifvth-section-drop-list-activ-circle-1");
 
-mvFifvthSectionDropListItem1.addEventListener('click', () => {
-    mvFifvthSectionDropListItemText1.style.color = "#0285CC";
-    mvFifvthSectionDropListItemCircle1.style.backgroundColor = "#0285CC";
-    mvFifvthSectionDropListItemCircle0.style.backgroundColor = "";
+const mvTextarea = document.getElementById("mv-textarea");
+let mvNumberOfText = 0;
+let mvOldActivService = null;
+
+
+
+const setupAndTranslateForSelectService = (event) => {
+    event.preventDefault();
+
+    window.scrollTo({
+        top: window.innerWidth * 9.35,
+        behavior: 'smooth'
+    });
+
+    if (mvOldActivService !== null) {
+        const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvOldActivService}`);
+        const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${mvOldActivService}`);
+        mvFifvthSectionDropListItemCircle.style.backgroundColor = "";
+        mvFifvthSectionDropListItemText.style.color = "";
+    }
+
+    if (mvSelectLang === "eng") {
+        mvTextarea.textContent = mvTextForApplication.eng[mvNumberOfText];
+        const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvActivNumber}`);
+        const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${mvActivNumber}`);
+        mvFifvthSectionDropListItemCircle.style.backgroundColor = "#0285CC";
+        mvFifvthSectionDropListItemText.style.color = "#0285CC";
+    } else {
+        mvTextarea.textContent = mvTextForApplication.rus[mvNumberOfText];
+    }
+
+    mvOldActivService = mvActivNumber;
+    mvActivNumberSave = mvActivNumber;
+}
+
+
+
+for (let index = 0; index < arrayDataOfService.length; index++) {
+
+    const current = document.getElementById(`mv-fifvth-section-drop-list-item-${index}`);
+
+    current.addEventListener('click', () => {
+        if (mvOldActivService !== null) {
+            const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvOldActivService}`);
+            const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${mvOldActivService}`);
+            mvFifvthSectionDropListItemCircle.style.backgroundColor = "";
+            mvFifvthSectionDropListItemText.style.color = "";
+        }
+
+        const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${index}`);
+        const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${index}`);
+        mvFifvthSectionDropListItemCircle.style.backgroundColor = "#0285CC";
+        mvFifvthSectionDropListItemText.style.color = "#0285CC";
+
+
+        mvOldActivService = index;
+        mvActivNumberSave = index;
+        mvAllInputsHave()
+    })
+
+}
+
+const func = () => {
+    if (mvSelectLang === "eng") {
+        for (let index = 0; index < mvTextForApplication.eng.length; index++) {
+            const button = document.getElementById(`mv-button-more-lower-part-buttons-${index}`);
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                mvNumberOfText = index;
+                setupAndTranslateForSelectService(event);
+            })
+        }
+    } else {
+        for (let index = 0; index < mvTextForApplication.rus.length; index++) {
+            const button = document.getElementById(`mv-button-more-lower-part-buttons-${index}`);
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                mvNumberOfText = index;
+                setupAndTranslateForSelectService(event);
+            })
+        }
+    }
+}
+
+func()
+
+
+
+
+const upperloadReviews = (numberActivReviews) => {
+    if (!float) {
+        number = numberActivReviews >= 0 ? numberActivReviews % reviews.length : (reviews.length - 1);
+        const data = reviews[number];
+        float = true;
+        mvUpperBlock.style.opacity = "0";
+        mvBlockImg.style.opacity = "0";
+        mvLowerBlock.style.opacity = "0";
+        mvBlockTitle.style.opacity = "0";
+        setTimeout(() => {
+            mvBlockTitle.style.opacity = "";
+            mvUpperBlock.style.opacity = "";
+            mvLowerBlock.style.opacity = "";
+            mvBlockImg.style.opacity = "";
+            float = false;
+        }, 500);
+        setTimeout(() => {
+            if (mvSelectLang === "eng") {
+                mvBlockTitle.textContent = data.title.eng;
+                mvUpperBlock.textContent = data.upperText.eng;
+                mvLowerBlock.textContent = data.lowerText.eng;
+            } else {
+                mvBlockTitle.textContent = data.title.rus;
+                mvUpperBlock.textContent = data.upperText.rus;
+                mvLowerBlock.textContent = data.lowerText.rus;
+            }
+            mvBlockImg.src = `/img/png/reviews-img-${data.title.eng}.png`;
+        }, 400);
+    }
+
+    mvnumberOfReviews.textContent = `${number + 1}/6`
+}
+
+
+upperloadReviews(0);
+
+mvSixthSectionMainBlockArrowLeft.addEventListener('click', () => {
+    upperloadReviews(--number)
+})
+
+mvSixthSectionMainBlockArrowRight.addEventListener('click', () => {
+    upperloadReviews(++number)
+})
+
+const mvThirdSectionButtonOrder = document.getElementById("mv-third-section-button-order");
+
+mvThirdSectionButtonOrder.addEventListener('click', () => {
+
+    window.scrollTo({
+        top: window.innerWidth * 8.75,
+        behavior: 'smooth'
+    });
+
+
+
+    if (mvActivNumberSave !== null) {
+        const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvActivNumber}`);
+        const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${mvActivNumber}`);
+        mvFifvthSectionDropListItemCircle.style.backgroundColor = "";
+        mvFifvthSectionDropListItemText.style.color = "";
+    }
+
+    mvActivNumberSave = mvActivNumber;
+
+    const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvActivNumberSave}`);
+    const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${mvActivNumberSave}`);
+    mvFifvthSectionDropListItemCircle.style.backgroundColor = "#0285CC";
+    mvFifvthSectionDropListItemText.style.color = "#0285CC";
 
 })
