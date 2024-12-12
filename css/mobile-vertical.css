@@ -566,6 +566,9 @@
                     justify-content: space-between;
                     align-items: center;
                     overflow: visible;
+                    color: #EAF8FF;
+                    font-size: 20px;
+                    font-weight: 300;
 
                     &>.mv-price-list-service-name {
                         width: 57.2139303482587vw;
