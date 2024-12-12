@@ -344,6 +344,7 @@
     width: 100vw;
     height: 217.4129353233831vw;
     background: linear-gradient(180deg, #000D15 0%, #002D49 13.4%, #002D49 24.28%, #000D15 52.1%, #000D15 100%);
+    overflow: visible;
 
     &>#mv-third-section-title {
         width: 59.70149253731343vw;
@@ -431,7 +432,7 @@
 
     &>#mv-third-section-text-0 {
         position: absolute;
-        height: 57.46268656716418vw;
+        height: auto;
         width: 75.12437810945273vw;
         top: 93.03482587064677vw;
         left: 12.437810945273633vw;
@@ -443,9 +444,9 @@
 
     &>#mv-third-section-text-1 {
         position: absolute;
-        height: 41.7910447761194vw;
+        height: auto;
         width: 75.12437810945273vw;
-        top: 155.4726368159204vw;
+        top: 157.4726368159204vw;
         left: 12.437810945273633vw;
         font-size: 3.9800995024875623vw;
         font-weight: 300;
@@ -455,11 +456,12 @@
 
     &>#mv-third-section-button-order {
         position: absolute;
-        top: 204.726368159204vw;
+        top: 206.726368159204vw;
         left: 12.437810945273633vw;
         width: 75.12437810945273vw;
         height: 9.950248756218906vw;
         border: 0.24875621890547264vw solid var(--orangeRed);
+        overflow: visible;
 
         &>p {
             position: absolute;
@@ -1094,6 +1096,7 @@
             width: 24.875621890547265vw;
             height: 31.8407960199005vw;
             border: 0.4975124378109453vw solid rgba(0, 154, 236, 0.5);
+            position: absolute;
             z-index: 3;
             transition: opacity 0.3s ease-in-out;
         }
@@ -1102,9 +1105,8 @@
             height: 7.462686567164178vw;
             width: 7.462686567164178vw;
             object-fit: contain;
-            margin-left: 30.83582089552239vw;
+            margin-left: 57.711442786069654vw;
             position: relative;
-            top: -24.378109452736318vw;
             pointer-events: all;
         }
 
@@ -1113,7 +1115,6 @@
             width: 7.462686567164178vw;
             object-fit: contain;
             position: relative;
-            top: -24.378109452736318vw;
             pointer-events: all;
         }
 
@@ -1121,7 +1122,6 @@
             z-index: 2;
             height: auto;
             width: 70.8955223880597vw;
-            margin-top: -19.402985074626866vw;
             margin-left: 4.228855721393035vw;
             position: relative;
             border: 0.24875621890547264vw solid rgba(0, 154, 236, 0.5);
@@ -1161,7 +1161,7 @@
             &>#mv-sixth-section-main-text-review-0 {
                 width: 63.43283582089553vw;
                 height: auto;
-                margin-top: 7.462686567164178vw;
+                margin-top: 10.462686567164178vw;
                 margin-left: 4.975124378109453vw;
                 font-size: 3.9800995024875623vw;
                 font-weight: 300;

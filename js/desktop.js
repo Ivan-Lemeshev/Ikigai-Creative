@@ -323,14 +323,26 @@ const refreshDataForLocalization = () => {
 }
 
 
-for (let index = 0; index < textForApplication.length; index++) {
-    const button = document.getElementById(`button-more-lower-part-buttons-${index}`);
-    button.addEventListener('click', (event) => {
-        event.preventDefault();
-        numberOfService = index;
-        setupAndTranslateForSelectService(event);
-    })
+if(selectLang === "eng") {
+    for (let index = 0; index < textForApplication.eng.length; index++) {
+        const button = document.getElementById(`button-more-lower-part-buttons-${index}`);
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            numberOfService = index;
+            setupAndTranslateForSelectService(event);
+        })
+    }
+} else {
+    for (let index = 0; index < textForApplication.rus.length; index++) {
+        const button = document.getElementById(`button-more-lower-part-buttons-${index}`);
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            numberOfService = index;
+            setupAndTranslateForSelectService(event);
+        })
+    }
 }
+
 
 
 const switchLocalization = () => {
@@ -381,9 +393,10 @@ const customization = (number) => {
     }
 
     svgElement.style.opacity = "0";
+
     setTimeout(() => {
         svgElement.style.opacity = "";
-    }, 300);
+    }, 500);
 
     arrayCard[number - 1].appendChild(svgElement);
 
@@ -448,7 +461,7 @@ for (let index = 1; index < arrayDataOfService.length; index++) {
                 textBlock.style.opacity = "";
                 svgBlock.style.opacity = "";
             }, 300);
-        }, 300);
+        }, 500);
         setActivElement(index);
     });
 };
