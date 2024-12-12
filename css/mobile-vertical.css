@@ -947,32 +947,71 @@
     width: 100vw;
 
     &>#mv-sixth-section-title-wrapper {
-        
-    }
-
-    &>#mv-sixth-section-title {
-        width: 24.875621890547265vw;
-        height: 8.706467661691542vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        width: 78.60696517412936vw;
         margin-top: 9.950248756218906vw;
         margin-left: 12.437810945273633vw;
-        font-size: 5.970149253731343vw;
-        font-weight: 400;
-        line-height: 5.970149253731343vw;
-        color: var(--blue);
+
+        &>#mv-sixth-section-title {
+            width: 24.875621890547265vw;
+            height: 8.706467661691542vw;
+            font-size: 5.970149253731343vw;
+            font-weight: 400;
+            line-height: 5.970149253731343vw;
+            color: var(--blue);
+        }
+    
+        &>#mv-sixth-section-number-of-reviews {
+            width: 17.412935323383085vw;
+            height: 8.706467661691542vw;
+            font-size: 4.975124378109453vw;
+            font-weight: 400;
+            line-height: 5.970149253731343vw;
+            color: var(--blue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Lato';
+        }
     }
 
-    &>#mv-sixth-section-number-of-reviews {
-        width: 17.412935323383085vw;
-        height: 8.706467661691542vw;
-        position: relative;
-        top: 9.950248756218906vw;
-        left: 36.318407960199vw;
-        font-size: 4.975124378109453vw;
-        font-weight: 400;
-        line-height: 5.970149253731343vw;
-        color: var(--blue);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    &>#mv-sixth-section-main-block {
+        height: auto;
+        width: 75.12437810945273vw;
+        margin-top: 8.955223880597014vw;
+        margin-left: 12.437810945273633vw;
+        border: 1px solid red;
+
+        &>#mv-sixth-section-main-block-photo {
+            width: 24.875621890547265vw;
+            height: 31.8407960199005vw;
+            border: 0.4975124378109453vw solid rgba(0, 154, 236, 0.5);
+        }
+
+        &>#mv-sixth-section-main-block-arrow-left {
+            height: 7.462686567164178vw;
+            width: 7.462686567164178vw;
+            object-fit: contain;
+            margin-left: 30.83582089552239vw;
+        }
+
+        &>#mv-sixth-section-main-block-arrow-right {
+            height: 7.462686567164178vw;
+            width: 7.462686567164178vw;
+            object-fit: contain;
+        }
+
+        &>#mv-sixth-section-main-block-all-text {
+            height: auto;
+            width: 70.8955223880597vw;
+            margin-top: 12.437810945273633vw;
+            margin-left: 4.228855721393035vw;
+            display: flex;
+        }
     }
+
+
 }
