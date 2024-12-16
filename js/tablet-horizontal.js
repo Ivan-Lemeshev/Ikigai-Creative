@@ -30,7 +30,7 @@ thNavigationBlockItem1.addEventListener('click', () => {
         thNavigationBlock.style.display = "";
     }, 500);
     window.scrollTo({
-        top: window.innerWidth * 2.2,
+        top: window.innerWidth * 0.85,
         behavior: 'smooth'
     });
 })
@@ -41,29 +41,29 @@ thNavigationBlockItem2.addEventListener('click', () => {
         thNavigationBlock.style.display = "";
     }, 500);
     window.scrollTo({
-        top: window.innerWidth * 6.5,
+        top: window.innerWidth * 1.7,
         behavior: 'smooth'
     });
 })
 
-thNavigationBlockItem3.addEventListener('click', () => {
-    thNavigationBlock.style.right = "";
-    setTimeout(() => {
-        thNavigationBlock.style.display = "";
-    }, 500);
-    window.scrollTo({
-        top: window.innerWidth * 8.75,
-        behavior: 'smooth'
-    });
-})
+// thNavigationBlockItem3.addEventListener('click', () => {
+//     thNavigationBlock.style.right = "";
+//     setTimeout(() => {
+//         thNavigationBlock.style.display = "";
+//     }, 500);
+//     window.scrollTo({
+//         top: window.innerWidth * 8.75,
+//         behavior: 'smooth'
+//     });
+// })
 
-thNavigationBlockItem4.addEventListener('click', () => {
-    thNavigationBlock.style.right = "";
-    setTimeout(() => {
-        thNavigationBlock.style.display = "";
-    }, 500);
-    window.scrollTo({
-        top: window.innerWidth * 12.1,
-        behavior: 'smooth'
-    });
-})
+// thNavigationBlockItem4.addEventListener('click', () => {
+//     thNavigationBlock.style.right = "";
+//     setTimeout(() => {
+//         thNavigationBlock.style.display = "";
+//     }, 500);
+//     window.scrollTo({
+//         top: window.innerWidth * 12.1,
+//         behavior: 'smooth'
+//     });
+// })
