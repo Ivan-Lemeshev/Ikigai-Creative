@@ -399,11 +399,9 @@ mvChangeIdeasText();
 
 
 
-const mvActivSrvice = () => {
+const mvActivService = () => {
     const currentService = arrayDataOfService[mvActivNumber];
-
-    console.log(currentService)
-
+    
     mvThirdSectionTitle.textContent = currentService.title[mvSelectLang];
 
     mvThirdSectionImg.src = `/img/svg/mobile-vertical/mv-third-section-img ${currentService.title.eng}.svg`;
@@ -411,11 +409,11 @@ const mvActivSrvice = () => {
     mvThirdSectionText1.textContent = currentService.description[mvSelectLang][1];
 }
 
-mvActivSrvice()
+mvActivService()
 
 mvFourthSectionButton0.addEventListener('click', () => {
     mvActivNumber = 0;
-    mvActivSrvice()
+    mvActivService()
 
     window.scrollTo({
         top: window.innerWidth * 4.3,
@@ -426,7 +424,7 @@ mvFourthSectionButton0.addEventListener('click', () => {
 
 mvFourthSectionButton1.addEventListener('click', () => {
     mvActivNumber = 1;
-    mvActivSrvice()
+    mvActivService()
     window.scrollTo({
         top: window.innerWidth * 4.3,
         behavior: 'smooth'
@@ -435,7 +433,7 @@ mvFourthSectionButton1.addEventListener('click', () => {
 
 mvFourthSectionButton2.addEventListener('click', () => {
     mvActivNumber = 2;
-    mvActivSrvice()
+    mvActivService()
     window.scrollTo({
         top: window.innerWidth * 4.3,
         behavior: 'smooth'
@@ -444,7 +442,7 @@ mvFourthSectionButton2.addEventListener('click', () => {
 
 mvFourthSectionButton3.addEventListener('click', () => {
     mvActivNumber = 3;
-    mvActivSrvice()
+    mvActivService()
     window.scrollTo({
         top: window.innerWidth * 4.3,
         behavior: 'smooth'
@@ -453,7 +451,7 @@ mvFourthSectionButton3.addEventListener('click', () => {
 
 mvFourthSectionButton4.addEventListener('click', () => {
     mvActivNumber = 4;
-    mvActivSrvice()
+    mvActivService()
     window.scrollTo({
         top: window.innerWidth * 4.3,
         behavior: 'smooth'
@@ -462,7 +460,7 @@ mvFourthSectionButton4.addEventListener('click', () => {
 
 mvFourthSectionButton5.addEventListener('click', () => {
     mvActivNumber = 5;
-    mvActivSrvice()
+    mvActivService()
     window.scrollTo({
         top: window.innerWidth * 4.3,
         behavior: 'smooth'
@@ -477,7 +475,7 @@ mvThirdSectionRightArrow.addEventListener('click', () => {
     if (mvActivNumber === arrayDataOfService.length) {
         mvActivNumber = 0;
     }
-    mvActivSrvice();
+    mvActivService();
 })
 
 mvThirdSectionLeftArrow.addEventListener('click', () => {
@@ -485,7 +483,7 @@ mvThirdSectionLeftArrow.addEventListener('click', () => {
     if (mvActivNumber < 0) {
         mvActivNumber = arrayDataOfService.length - 1;
     }
-    mvActivSrvice();
+    mvActivService();
 })
 
 const mvSecondSectionButtonServices = document.getElementById("mv-second-section-button-services");
