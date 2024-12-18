@@ -128,6 +128,9 @@ const allInputsHave = () => {
     }
 }
 
+const fourthSectionChoiceOfService = document.getElementById("choice-of-service");
+const fourthSectionChoiceOfServiceArrow = document.getElementById("choice-of-service-arrow");
+
 const setupAndTranslateForSelectService = (event) => {
     event.preventDefault();
     window.scrollTo({
@@ -473,8 +476,7 @@ const firstUploadCard = () => {
 
 firstUploadCard();
 
-const fourthSectionChoiceOfService = document.getElementById("choice-of-service");
-const fourthSectionChoiceOfServiceArrow = document.getElementById("choice-of-service-arrow");
+
 
 const changeIdeasText = () => {
     centralText.style.opacity = "0";

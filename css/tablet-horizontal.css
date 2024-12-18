@@ -458,7 +458,7 @@
                 position: absolute;
                 bottom: 2.4838vw;
                 left: 3.23974vw;
-                font-size: 1.94384vw;    
+                font-size: 1.94384vw;
                 font-weight: 300;
                 line-height: 2.72138vw;
                 color: #EAF8FF;
@@ -610,7 +610,7 @@
             display: flex;
             text-align: center;
             justify-content: center;
-            align-items: center;    
+            align-items: center;
             overflow: visible;
         }
     }
@@ -798,6 +798,14 @@
                     transition: color ease-in-out 0.3s;
                     overflow: hidden;
                 }
+
+                &>#th-choice-of-service-arrow {
+                    object-fit: contain;
+                    width: 1.2959vw;
+                    height: 1.2959vw;
+                    position: absolute;
+                    right: 1.5vw;
+                }
             }
         }
 
@@ -887,7 +895,7 @@
 
 
 
-#drop-list {
+#th-drop-list {
     width: 21.875vw;
     height: auto;
     position: absolute;
@@ -908,7 +916,7 @@
     pointer-events: none;
     overflow: hidden;
 
-    &>.drop-list-item {
+    &>.th-drop-list-item {
         width: 21.875vw;
         height: 2.4vw;
         display: flex;
@@ -923,18 +931,12 @@
         color: #01679F;
     }
 
-    &>.drop-list-item:first-child {
+    &>.th-drop-list-item:first-child {
         padding-top: 0.41667vw;
     }
 
-    &>.drop-list-item:last-child {
+    &>.th-drop-list-item:last-child {
         padding-bottom: 0.41667vw;
-    }
-
-
-    &>.drop-list-item:hover {
-        background-color: #006AA4;
-        color: #B9E6FF;
     }
 
 }

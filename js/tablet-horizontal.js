@@ -144,7 +144,7 @@ const thRefreshDataForLocalization = () => {
             thPriceListServiceName.style.fontSize = "2.15983vw";
             thPriceListServiceCost.style.fontFamily = "Lato";
             thPriceListServiceCost.style.fontSize = "2.15983vw";
-        } else { 
+        } else {
             thPriceListServiceName.style.fontFamily = "";
             thPriceListServiceName.style.fontSize = "";
             thPriceListServiceCost.style.fontFamily = "";
@@ -224,10 +224,10 @@ const thRefreshDataForLocalization = () => {
             thThirdSectionText1.style.fontSize = "";
             thThirdSectionText1.style.lineHeight = "";
         }
-        
+
     }
 
-    
+
 
 }
 
@@ -345,16 +345,147 @@ thThirdSectionRightService5.addEventListener('click', () => {
     thActivService();
 })
 
-const thTextForApplication = {
-    eng: [
-        "Hello, I want to get advice on the chosen service",
-        "Hello, I have used this service and I want to leave a review:",
-        "Hello, I want to get an answer to the question:"
-    ],
+const thFourthSectionChoiceOfService = document.getElementById("th-choice-of-service");
+const thFourthSectionChoiceOfServiceArrow = document.getElementById("th-choice-of-service-arrow");
+const thChoiceOfServicePlaceholder = document.getElementById("th-choice-of-service-placeholder");
+let thNumberOfService = 0;
+let thSelectCategory = "";
 
-    rus: [
-        "Здравстуйте, я хочу воспользоваться выбранной услугой",
-        "Здравстуйте, я воспользовался вашей услугой и хочу оставить о ней отзыв",
-        "Здравстуйте, я хочу задать вам несколько вопросов"
-    ]
+const thDropListWrapper = document.getElementById("th-drop-list-wrapper");
+
+
+thFourthSectionChoiceOfService.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const newDropListWrapper = document.createElement('div');
+    newDropListWrapper.id = "th-drop-list";
+    thDropListWrapper.style.height = "22.67819vw"
+
+    if (thSelectLang === "eng") {
+        const actualityCategory = arrayDataOfService.map((service) => service.title.eng).filter((textCategory) => {
+            return textCategory !== thSelectCategory;
+        });
+        actualityCategory.forEach(textSelectCategoty => {
+            const newDropListPoint = document.createElement('div');
+            newDropListPoint.textContent = textSelectCategoty;
+            newDropListPoint.classList = "th-drop-list-item";
+            newDropListPoint.id = textSelectCategoty;
+            newDropListPoint.style.fontFamily = "";
+
+            newDropListPoint.addEventListener('click', (event) => {
+                event.stopPropagation();
+                thSelectCategory = textSelectCategoty;
+                thChoiceOfServicePlaceholder.textContent = textSelectCategoty;
+                newDropListWrapper.style.opacity = "0";
+                thFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+                thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+                newDropListWrapper.style.pointerEvents = "none";
+                // allInputsHave(); добавить проверку
+            });
+            newDropListWrapper.appendChild(newDropListPoint);
+        });
+    } else {
+        const actualityCategory = arrayDataOfService.map((service) => service.title.rus).filter((textCategory) => {
+            return textCategory !== thSelectCategory;
+        });
+        actualityCategory.forEach(textSelectCategoty => {
+            const newDropListPoint = document.createElement('div');
+            newDropListPoint.textContent = textSelectCategoty;
+            newDropListPoint.classList = "th-drop-list-item";
+            newDropListPoint.id = textSelectCategoty;
+            newDropListPoint.style.fontFamily = "Lato";
+
+            newDropListPoint.addEventListener('click', (event) => {
+                event.stopPropagation();
+                thSelectCategory = textSelectCategoty;
+                thChoiceOfServicePlaceholder.textContent = textSelectCategoty;
+                newDropListWrapper.style.opacity = "0";
+                thFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+                thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+                newDropListWrapper.style.pointerEvents = "none";
+                // allInputsHave(); добавить проверку
+            });
+            newDropListWrapper.appendChild(newDropListPoint);
+        });
+    }
+
+    newDropListWrapper.style.opacity = "1";
+    thFourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
+    thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 0)";
+    newDropListWrapper.style.pointerEvents = "all";
+    thChoiceOfServicePlaceholder.style.color = "var(--blue)";
+    const possibleDublicate = document.getElementById("drop-list");
+    if (possibleDublicate) {
+        thDropListWrapper.removeChild(possibleDublicate);
+    }
+    thDropListWrapper.appendChild(newDropListWrapper);
+
+    thDropListWrapper.addEventListener('mouseleave', () => {
+        if (!thSelectCategory) {
+            thChoiceOfServicePlaceholder.style.color = "var(--darkBlue)";
+        };
+        newDropListWrapper.style.opacity = "0";
+        thDropListWrapper.style.height = "";
+        thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+        newDropListWrapper.style.pointerEvents = "none";
+        thFourthSectionChoiceOfServiceArrow.style.rotate = "";
+    });
+});
+
+
+const thSetupAndTranslateForSelectService = (event) => {
+    event.preventDefault();
+    window.scrollTo({
+        top: window.innerWidth * 2.5,
+        behavior: 'smooth'
+    });
+
+    if (thSelectLang === "eng") {
+        thTextarea.textContent = textForApplication.eng[thNumberOfService];
+        let selCat = arrayDataOfService.map((service) => service.title.eng)[thActivNumber];
+        if (selCat !== thSelectCategory && arrayDataOfService.map((service) => service.title.eng).includes(selCat)) {
+            thChoiceOfServicePlaceholder.textContent = selCat;
+            thFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+            thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+            thChoiceOfServicePlaceholder.style.color = "var(--blue)";
+            thSelectCategory = selCat;
+            // allInputsHave(); добавить эффекты когда поля не заполнены
+        }
+    } else {
+        thTextarea.textContent = textForApplication.rus[thNumberOfService];
+        let selCat = arrayDataOfService.map((service) => service.title.rus)[thActivNumber];
+        if (selCat !== thSelectCategory && arrayDataOfService.map((service) => service.title.rus).includes(selCat)) {
+            thChoiceOfServicePlaceholder.textContent = selCat;
+            thFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+            thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+            thChoiceOfServicePlaceholder.style.color = "var(--blue)";
+            thSelectCategory = selCat;
+            // allInputsHave(); добавить эффекты когда поля не заполнены
+        }
+    }
 }
+const buttonOrder = document.getElementById("th-third-section-button-order");
+const buttonConsultation = document.getElementById("th-third-section-button-consultation");
+const buttonReview = document.getElementById("th-third-section-button-review");
+
+
+buttonOrder.addEventListener('click', (event) => {
+    event.preventDefault();
+    thNumberOfService = thActivNumber;
+    thSetupAndTranslateForSelectService(event);
+    thTextarea.textContent = textForApplication.eng[0]
+})
+
+buttonConsultation.addEventListener('click', (event) => {
+    event.preventDefault();
+    thNumberOfService = thActivNumber;
+    thSetupAndTranslateForSelectService(event);
+    thTextarea.textContent = textForApplication[thSelectLang][1]
+})
+
+buttonReview.addEventListener('click', (event) => {
+    event.preventDefault();
+    thNumberOfService = thActivNumber;
+    thSetupAndTranslateForSelectService(event);
+    thTextarea.textContent = textForApplication[thSelectLang][3]
+})
+
