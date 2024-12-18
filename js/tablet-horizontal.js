@@ -87,7 +87,6 @@ const thPriceListXMark = document.getElementById("th-price-list-x-mark");
 
 let thAngel = 0;
 let thNumberOfActivAnimation = 0;
-const thTimeOfAnimation = 4000;
 let thActivNumber = 0;
 
 const thThirdSectionTitle = document.getElementById("th-third-section-title-of-service");
@@ -95,6 +94,18 @@ const thThirdSectionImg = document.getElementById("th-third-section-main-img");
 const thThirdSectionText0 = document.getElementById("th-third-section-text-about-service-0");
 const thThirdSectionText1 = document.getElementById("th-third-section-text-about-service-1");
 
+
+const thUpperBlock = document.getElementById("th-upper-block-with-reviews");
+const thReviewsUpperName = document.getElementById("th-reviews-upper-name");
+const thReviewsUpperImg = document.getElementById("th-reviews-upper-img");
+const thReviewsUpperUpperText = document.getElementById("th-reviews-upper-upper-text");
+const thReviewsUpperLowerText = document.getElementById("th-reviews-upper-lower-text");
+
+const thLowerBlock = document.getElementById("th-lower-block-with-reviews");
+const thReviewsLowerName = document.getElementById("th-reviews-lower-name");
+const thReviewsLowerImg = document.getElementById("th-reviews-lower-img");
+const thReviewsLowerUpperText = document.getElementById("th-reviews-lower-upper-text");
+const thReviewsLowerLowerText = document.getElementById("th-reviews-lower-lower-text");
 
 
 
@@ -131,6 +142,16 @@ const thFooterRus = document.getElementById("th-footer-rus")
 const thRefreshDataForLocalization = () => {
 
     const current = arrayDataOfService[thActivNumber];
+
+    const currentReviewsTop = reviews[number].top;
+    const currentReviewsBottom = reviews[number].bottom;
+    thReviewsUpperName.textContent = currentReviewsTop.title[thSelectLang];
+    thReviewsLowerName.textContent = currentReviewsBottom.title[thSelectLang];
+    thReviewsUpperUpperText.textContent = currentReviewsTop.upperText[thSelectLang];
+    thReviewsUpperLowerText.textContent = currentReviewsTop.lowerText[thSelectLang];
+    thReviewsLowerUpperText.textContent = currentReviewsBottom.upperText[thSelectLang];
+    thReviewsLowerLowerText.textContent = currentReviewsBottom.lowerText[thSelectLang];
+
 
     current.prices.map((serviceData, number) => {
         const { nameOfServise, cost } = serviceData;
@@ -174,6 +195,14 @@ const thRefreshDataForLocalization = () => {
         thTextarea.style.fontFamily = "Lato";
         thFooterEng.style.display = "none";
         thFooterRus.style.display = "block";
+        thReviewsUpperName.style.fontFamily = "Lato";
+        thReviewsUpperUpperText.style.fontFamily = "Lato";
+        thReviewsLowerName.style.fontFamily = "Lato";
+        thReviewsUpperUpperText.style.fontFamily = "Lato";
+        thReviewsUpperLowerText.style.fontFamily = "Lato";
+        thReviewsLowerUpperText.style.fontFamily = "Lato";
+        thReviewsLowerLowerText.style.fontFamily = "Lato";
+
 
     } else {
         thCentralText.style.fontFamily = "";
@@ -196,6 +225,14 @@ const thRefreshDataForLocalization = () => {
         thTextarea.style.fontFamily = "";
         thFooterEng.style.display = "block";
         thFooterRus.style.display = "none";
+        thReviewsUpperName.style.fontFamily = "";
+        thReviewsUpperUpperText.style.fontFamily = "";
+        thReviewsLowerName.style.fontFamily = "";
+        thReviewsUpperUpperText.style.fontFamily = "";
+        thReviewsUpperLowerText.style.fontFamily = "";
+        thReviewsLowerUpperText.style.fontFamily = "";
+        thReviewsLowerLowerText.style.fontFamily = "";
+
     }
 
     for (let index = 0; index < arrayDataOfService.length; index++) {
@@ -231,10 +268,6 @@ const thRefreshDataForLocalization = () => {
 
 }
 
-thLang.addEventListener('click', () => {
-    thSwitchLocalization();
-    thRefreshDataForLocalization();
-})
 
 const thChangeIdeasText = () => {
     thCentralText.style.opacity = "0";
@@ -250,7 +283,13 @@ const thChangeIdeasText = () => {
     }, 500);
 };
 
-setInterval(thChangeIdeasText, thTimeOfAnimation);
+setInterval(thChangeIdeasText, 4000);
+
+
+thLang.addEventListener('click', () => {
+    thSwitchLocalization();
+    thRefreshDataForLocalization();
+})
 
 thSecondSectionButtonServices.addEventListener('click', () => {
     thNavigationBlock.style.right = "";
@@ -419,7 +458,7 @@ thFourthSectionChoiceOfService.addEventListener('click', (event) => {
     }
     thDropListWrapper.appendChild(newDropListWrapper);
 
-    thDropListWrapper.addEventListener('mouseleave', () => {
+    document.addEventListener('click', () => {
         if (!thSelectCategory) {
             thChoiceOfServicePlaceholder.style.color = "var(--darkBlue)";
         };
@@ -489,3 +528,62 @@ buttonReview.addEventListener('click', (event) => {
     thTextarea.textContent = textForApplication[thSelectLang][3]
 })
 
+
+const thReviewsArrowLeft = document.getElementById("th-five-section-button-left");
+const thReviewsArrowRight = document.getElementById("th-five-section-button-right");
+
+let number = 0;
+let float = false;
+
+const upperloadReviews = (numberActivReviews, direction) => {
+    if (!float) {
+        number = numberActivReviews >= 0 ? numberActivReviews % reviews.length : (reviews.length - 1);
+        const data = reviews[number];
+        float = true;
+        thUpperBlock.style.opacity = "0";
+        thLowerBlock.style.opacity = "0";
+        if (direction) {
+            thUpperBlock.style.left = "30vw";
+            thLowerBlock.style.left = "-6vw";
+        } else {
+            thUpperBlock.style.left = "50vw";
+            thLowerBlock.style.left = "14.5vw";
+        }
+        setTimeout(() => {
+            thUpperBlock.style.opacity = "";
+            thLowerBlock.style.opacity = "";
+            thUpperBlock.style.left = "";
+            thLowerBlock.style.left = "";
+            float = false;
+        }, 500);
+        setTimeout(() => {
+            if (thSelectLang === "eng") {
+                thReviewsUpperName.textContent = data.top.title.eng;
+                thReviewsUpperUpperText.textContent = data.top.upperText.eng;
+                thReviewsUpperLowerText.textContent = data.top.lowerText.eng;
+                thReviewsLowerName.textContent = data.bottom.title.eng;
+                thReviewsLowerUpperText.textContent = data.bottom.upperText.eng;
+                thReviewsLowerLowerText.textContent = data.bottom.lowerText.eng;
+            } else {
+                thReviewsUpperName.textContent = data.top.title.rus;
+                thReviewsUpperUpperText.textContent = data.top.upperText.rus;
+                thReviewsUpperLowerText.textContent = data.top.lowerText.rus;
+                thReviewsLowerName.textContent = data.bottom.title.rus;
+                thReviewsLowerUpperText.textContent = data.bottom.upperText.rus;
+                thReviewsLowerLowerText.textContent = data.bottom.lowerText.rus;
+            }
+            thReviewsUpperImg.src = `/img/png/reviews-img-${data.top.title.eng}.png`;
+            thReviewsLowerImg.src = `/img/png/reviews-img-${data.bottom.title.eng}.png`;
+        }, 400);
+    }
+}
+
+upperloadReviews(0);
+
+thReviewsArrowLeft.addEventListener('click', () => {
+    upperloadReviews(--number, true)
+})
+
+thReviewsArrowRight.addEventListener('click', () => {
+    upperloadReviews(++number, false)
+})
