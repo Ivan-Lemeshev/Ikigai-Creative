@@ -28,12 +28,13 @@
     }
 
     &>#th-nav-button {
-        position: absolute;
+        position: fixed;
         top: 1.94384vw;
         right: 1.94384vw;
         width: 3.71166vW;
         height: 3.446vw;
         overflow: visible;
+        z-index: 10;
 
         &>img {
             width: 100%;
@@ -191,6 +192,7 @@
     width: 100vw;
     height: 83.36933vw;
     position: relative;
+    overflow: visible;
 
 
     &>#th-second-section-title {
@@ -269,7 +271,7 @@
 
     &>#th-third-section-title {
         position: absolute;
-        width: 16.73866vw;
+        width: 16.84665vw;
         height: 3.56371vw;
         top: 5.61555vw;
         left: 5.39957vw;
@@ -374,7 +376,7 @@
                 position: absolute;
                 top: 3.23974vw;
                 left: 3.23974vw;
-                width: 12.41901vw;
+                width: 18.89849vw;
                 height: 3.56371vw;
                 font-size: 3.02376vw;
                 font-weight: 400;
@@ -410,6 +412,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                overflow: visible;
 
                 &>.th-price-list-item {
                     width: 47.5162vw;
@@ -426,11 +429,16 @@
                     &>.th-price-list-service-name {
                         width: 36.71706vw;
                         height: 3.56371vw;
+                        overflow: visible;
+                        display: flex;
+                        align-items: center;
                     }
 
                     &>.th-price-list-service-cost {
                         width: 6.47948vw;
                         height: 3.56371vw;
+                        display: flex;
+                        align-items: center;
                     }
                 }
             }
@@ -661,6 +669,7 @@
     position: relative;
     width: 100vw;
     height: 83.36933vw;
+    overflow: visible;
     background:
         /*linear-gradient(0deg, #000D15, #000D15), */
         radial-gradient(80.13% 43.52% at 17.01% 51.49%, rgba(0, 83, 128, 0.2) 0%, rgba(0, 0, 0, 0) 100%),
@@ -668,7 +677,7 @@
 
 
     &>#th-four-section-title {
-        width: 16.73866vw;
+        width: 27.64579vw;
         height: 3.56371vw;
         font-weight: 400;
         font-size: 3.02376vw;
@@ -932,6 +941,7 @@
 
 #th-five-section {
     position: relative;
+    overflow: visible;
     width: 100vw;
     height: 83.36933vw;
 
@@ -1067,6 +1077,8 @@
         letter-spacing: 0.1em;
         color: var(--blue);
         font-family: 'Lato';
+        display: flex;
+        align-items: center;
     }
 
     &>#th-footer-rus-1 {
@@ -1080,6 +1092,8 @@
         letter-spacing: 0.1em;
         color: var(--blue);
         font-family: 'Lato';
+        display: flex;
+        align-items: center;
     }
 
     &>#th-footer-rus-2 {
@@ -1093,6 +1107,8 @@
         letter-spacing: 0.1em;
         color: var(--blue);
         font-family: 'Lato';
+        display: flex;
+        align-items: center;
     }
 
     &>#th-footer-rus-3 {
@@ -1106,5 +1122,7 @@
         letter-spacing: 0.1em;
         color: var(--blue);
         font-family: 'Lato';
+        display: flex;
+        align-items: center;
     }
 }

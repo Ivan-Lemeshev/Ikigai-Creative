@@ -137,7 +137,6 @@ const setupAndTranslateForSelectService = (event) => {
 
     if (selectLang === "eng") {
         textarea.textContent = textForApplication.eng[numberOfService];
-        console.log(textarea.textContent)
         let selCat = arrayDataOfService.map((service) => service.title.eng)[activNumber];
         if (selCat !== selectCategory && arrayDataOfService.map((service) => service.title.eng).includes(selCat)) {
             choiceOfServicePlaceholder.textContent = selCat;

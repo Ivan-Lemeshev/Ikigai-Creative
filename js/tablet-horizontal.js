@@ -87,9 +87,154 @@ const thPriceListXMark = document.getElementById("th-price-list-x-mark");
 
 let thAngel = 0;
 let thNumberOfActivAnimation = 0;
+const thTimeOfAnimation = 4000;
+let thActivNumber = 0;
+
+const thThirdSectionTitle = document.getElementById("th-third-section-title-of-service");
+const thThirdSectionImg = document.getElementById("th-third-section-main-img");
+const thThirdSectionText0 = document.getElementById("th-third-section-text-about-service-0");
+const thThirdSectionText1 = document.getElementById("th-third-section-text-about-service-1");
+
+
+
+
 let thSelectLang = "eng";
 const thLang = document.getElementById("th-navigation-block-lang-button");
-const thTimeOfAnimation = 4000;
+const thSwitchLocalization = () => {
+    thSelectLang = thSelectLang === "eng" ? "rus" : "eng";
+    for (let id in localizationWrapper) { // перебираем все айдишники
+        const data = localizationWrapper[id]; // пой айди получаю информацию 
+
+        const element = document.getElementById(id); // получаю элемент который нужно по айди заменить 
+        element.textContent = data[thSelectLang]; //   обновляю текст
+
+        if (thSelectLang === "rus") { // добавляем стили к русскому тексту 
+            const allStyles = data.styles;
+            element.style.fontFamily = "'Lato'";
+            for (let style in allStyles) {
+                const valueStyle = allStyles[style];
+                element.style[style] = valueStyle; // придумать как сбрасывать стили для ангийского языка
+            }
+        }
+    }
+}
+
+const thInputFirstName = document.getElementById("th-input-first-name");
+const thInputLastName = document.getElementById("th-input-last-name");
+const thInputPhone = document.getElementById("th-input-phone");
+const thInputEmail = document.getElementById("th-input-email");
+const thTextarea = document.getElementById("th-textarea");
+const thFooterEng = document.getElementById("th-footer-eng");
+const thFooterRus = document.getElementById("th-footer-rus")
+
+
+const thRefreshDataForLocalization = () => {
+
+    const current = arrayDataOfService[thActivNumber];
+
+    current.prices.map((serviceData, number) => {
+        const { nameOfServise, cost } = serviceData;
+        const thPriceListServiceName = document.getElementById(`th-price-list-service-name-${number}`);
+        const thPriceListServiceCost = document.getElementById(`th-price-list-service-cost-${number}`);
+        thPriceListServiceCost.textContent = `£${cost}`;
+        thPriceListServiceName.textContent = nameOfServise[thSelectLang];
+
+        if (thSelectLang === "rus") {
+            thPriceListServiceName.style.fontFamily = "Lato";
+            thPriceListServiceName.style.fontSize = "2.15983vw";
+            thPriceListServiceCost.style.fontFamily = "Lato";
+            thPriceListServiceCost.style.fontSize = "2.15983vw";
+        } else { 
+            thPriceListServiceName.style.fontFamily = "";
+            thPriceListServiceName.style.fontSize = "";
+            thPriceListServiceCost.style.fontFamily = "";
+            thPriceListServiceCost.style.fontSize = "";
+        }
+
+    })
+
+    if (thSelectLang === "rus") {
+        thCentralText.style.fontFamily = "Lato";
+        thInputFirstName.placeholder = "Имя";
+        thInputFirstName.style.fontFamily = "Lato";
+        thInputFirstName.style.fontSize = "1.94384vw";
+        thInputFirstName.style.lineHeight = "2.33261vw";
+        thInputLastName.placeholder = "Фамилия";
+        thInputLastName.style.fontFamily = "Lato";
+        thInputLastName.style.fontSize = "1.94384vw";
+        thInputLastName.style.lineHeight = "2.33261vw";
+        thInputPhone.placeholder = "Телефон";
+        thInputPhone.style.fontFamily = "Lato";
+        thInputPhone.style.fontSize = "1.94384vw";
+        thInputPhone.style.lineHeight = "2.33261vw";
+        thInputEmail.style.fontFamily = "Lato";
+        thInputEmail.style.fontSize = "1.94384vw";
+        thInputEmail.style.lineHeight = "2.33261vw";
+        thTextarea.placeholder = "В этом поле вы можете указать указать любые дополнительные данные или пожелания по заказу."
+        thTextarea.style.fontFamily = "Lato";
+        thFooterEng.style.display = "none";
+        thFooterRus.style.display = "block";
+
+    } else {
+        thCentralText.style.fontFamily = "";
+        thInputFirstName.placeholder = "First Name";
+        thInputFirstName.style.fontFamily = "";
+        thInputFirstName.style.fontSize = "";
+        thInputFirstName.style.lineHeight = "";
+        thInputLastName.placeholder = "Last Name";
+        thInputLastName.style.fontFamily = "";
+        thInputLastName.style.fontSize = "";
+        thInputLastName.style.lineHeight = "";
+        thInputPhone.placeholder = "Phone";
+        thInputPhone.style.fontFamily = "";
+        thInputPhone.style.fontSize = "";
+        thInputPhone.style.lineHeight = "";
+        thInputEmail.style.fontFamily = "";
+        thInputEmail.style.fontSize = "";
+        thInputEmail.style.lineHeight = "";
+        thTextarea.placeholder = "In this field, you can provide any additional details or requests for your order, including your preferred method of contact.";
+        thTextarea.style.fontFamily = "";
+        thFooterEng.style.display = "block";
+        thFooterRus.style.display = "none";
+    }
+
+    for (let index = 0; index < arrayDataOfService.length; index++) {
+        if (thSelectLang === "rus") {
+            thThirdSectionTitle.textContent = current.title.rus;
+            thThirdSectionTitle.style.fontFamily = "Lato";
+            thThirdSectionTitle.style.fontSize = "2.80778vw";
+            thThirdSectionText0.textContent = current.description.rus[0];
+            thThirdSectionText0.style.fontFamily = "Lato";
+            thThirdSectionText0.style.fontSize = "1.72786vw";
+            thThirdSectionText0.style.lineHeight = "2.24622vw";
+            thThirdSectionText1.textContent = current.description.rus[1];
+            thThirdSectionText1.style.fontFamily = "Lato";
+            thThirdSectionText1.style.fontSize = "1.72786vw";
+            thThirdSectionText1.style.lineHeight = "2.24622vw";
+        } else {
+            thThirdSectionTitle.textContent = current.title.eng;
+            thThirdSectionTitle.style.fontFamily = "";
+            thThirdSectionTitle.style.fontSize = "";
+            thThirdSectionText0.textContent = current.description.eng[0];
+            thThirdSectionText0.style.fontFamily = "";
+            thThirdSectionText0.style.fontSize = "";
+            thThirdSectionText1.style.lineHeight = "";
+            thThirdSectionText1.textContent = current.description.eng[1];
+            thThirdSectionText1.style.fontFamily = "";
+            thThirdSectionText1.style.fontSize = "";
+            thThirdSectionText1.style.lineHeight = "";
+        }
+        
+    }
+
+    
+
+}
+
+thLang.addEventListener('click', () => {
+    thSwitchLocalization();
+    thRefreshDataForLocalization();
+})
 
 const thChangeIdeasText = () => {
     thCentralText.style.opacity = "0";
@@ -106,7 +251,6 @@ const thChangeIdeasText = () => {
 };
 
 setInterval(thChangeIdeasText, thTimeOfAnimation);
-
 
 thSecondSectionButtonServices.addEventListener('click', () => {
     thNavigationBlock.style.right = "";
@@ -145,22 +289,26 @@ thPriceListXMark.addEventListener('click', () => {
 })
 
 
-let  thActivNumber = 0;
 
-const thThirdSectionTitle = document.getElementById("th-third-section-title-of-service");
-const thThirdSectionImg = document.getElementById("th-third-section-main-img");
-const thThirdSectionText0 = document.getElementById("th-third-section-text-about-service-0");
-const thThirdSectionText1 = document.getElementById("th-third-section-text-about-service-1");
 
 
 const thActivService = () => {
     const currentService = arrayDataOfService[thActivNumber];
-    
+
     thThirdSectionTitle.textContent = currentService.title[thSelectLang];
 
-    thThirdSectionImg.src = `/img/svg/mobile-vertical/mv-third-section-img ${currentService.title.eng}.svg`;
+    thThirdSectionImg.src = `/img/svg/tablet-horizontal/th-third-section-img ${currentService.title.eng}.svg`;
     thThirdSectionText0.textContent = currentService.description[thSelectLang][0];
     thThirdSectionText1.textContent = currentService.description[thSelectLang][1];
+
+    currentService.prices.map((serviceData, number) => {
+        const { nameOfServise, cost } = serviceData;
+        const thPriceListServiceName = document.getElementById(`th-price-list-service-name-${number}`);
+        const thPriceListServiceCost = document.getElementById(`th-price-list-service-cost-${number}`);
+        thPriceListServiceCost.textContent = `£${cost}`;
+        thPriceListServiceName.textContent = nameOfServise[thSelectLang];
+
+    })
 }
 
 thActivService();
@@ -196,3 +344,17 @@ thThirdSectionRightService5.addEventListener('click', () => {
     thActivNumber = 5;
     thActivService();
 })
+
+const thTextForApplication = {
+    eng: [
+        "Hello, I want to get advice on the chosen service",
+        "Hello, I have used this service and I want to leave a review:",
+        "Hello, I want to get an answer to the question:"
+    ],
+
+    rus: [
+        "Здравстуйте, я хочу воспользоваться выбранной услугой",
+        "Здравстуйте, я воспользовался вашей услугой и хочу оставить о ней отзыв",
+        "Здравстуйте, я хочу задать вам несколько вопросов"
+    ]
+}
