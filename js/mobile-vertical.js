@@ -1,4 +1,4 @@
-import arrayDataOfService from "./Services.js";
+import arrayPriceList from "./arrayPriceList.js";
 import localizationWrapper from "./localization-data.js";
 import reviews from "./reviews-mobile.js";
 import dataContats from "./links.js";
@@ -196,7 +196,27 @@ const mvFooterEng = document.getElementById("mv-footer-eng");
 
 
 const mvRefreshDataForLocalization = () => {
-    const current = arrayDataOfService[mvActivNumber];
+
+    const current = arrayPriceList[mvActivNumber];
+
+
+    current.prices.map((serviceData, number) => {
+        const { nameOfServise, cost } = serviceData;
+        const mvPriceListServiceName = document.getElementById(`mv-price-list-service-name-${number}`);
+        const mvPriceListServiceCost = document.getElementById(`mv-price-list-service-cost-${number}`);
+        mvPriceListServiceCost.textContent = `£${cost}`;
+        mvPriceListServiceName.textContent = nameOfServise[mvSelectLang];
+        if (mvSelectLang === "rus") {
+            mvPriceListServiceCost.style.fontFamily = "Lato";
+            mvPriceListServiceName.style.fontFamily = "Lato";
+
+        } else {
+            mvPriceListServiceCost.style.fontFamily = "";
+            mvPriceListServiceName.style.fontFamily = "";
+        }
+
+    })
+
     if (mvSelectLang === "rus") {
         mvCentralTextsecondBlockLeft.style.fontFamily = "Lato";
         mvCentralTextsecondBlockRight.style.fontFamily = "Lato";
@@ -230,6 +250,7 @@ const mvRefreshDataForLocalization = () => {
         mvLowerBlock.style.lineHeight = "5.970149253731343vw";
         mvFooterEng.style.display = "none";
         mvFooterRus.style.display = "flex";
+
     } else {
         mvCentralTextsecondBlockLeft.style.fontFamily = "";
         mvCentralTextsecondBlockRight.style.fontFamily = "";
@@ -263,9 +284,10 @@ const mvRefreshDataForLocalization = () => {
         mvLowerBlock.style.lineHeight = "";
         mvFooterEng.style.display = "flex";
         mvFooterRus.style.display = "none";
+
     }
 
-    for (let index = 0; index < arrayDataOfService.length; index++) {
+    for (let index = 0; index < arrayPriceList.length; index++) {
 
         if (mvSelectLang === "rus") {
             mvThirdSectionTitle.textContent = current.title.rus;
@@ -291,6 +313,9 @@ const mvRefreshDataForLocalization = () => {
             mvThirdSectionText1.style.lineHeight = "";
         }
     }
+
+
+
 }
 
 mvLang.addEventListener('click', () => {
@@ -400,13 +425,22 @@ mvChangeIdeasText();
 
 
 const mvActivService = () => {
-    const currentService = arrayDataOfService[mvActivNumber];
-    
+    const currentService = arrayPriceList[mvActivNumber];
+
     mvThirdSectionTitle.textContent = currentService.title[mvSelectLang];
 
     mvThirdSectionImg.src = `/img/svg/mobile-vertical/mv-third-section-img ${currentService.title.eng}.svg`;
     mvThirdSectionText0.textContent = currentService.description[mvSelectLang][0];
     mvThirdSectionText1.textContent = currentService.description[mvSelectLang][1];
+
+    currentService.prices.map((serviceData, number) => {
+        const { nameOfServise, cost } = serviceData;
+        const mvPriceListServiceName = document.getElementById(`mv-price-list-service-name-${number}`);
+        const mvPriceListServiceCost = document.getElementById(`mv-price-list-service-cost-${number}`);
+        mvPriceListServiceCost.textContent = `£${cost}`;
+        mvPriceListServiceName.textContent = nameOfServise[mvSelectLang];
+
+    })
 }
 
 mvActivService()
@@ -472,7 +506,7 @@ const mvThirdSectionRightArrow = document.getElementById("mv-third-section-right
 
 mvThirdSectionRightArrow.addEventListener('click', () => {
     mvActivNumber++;
-    if (mvActivNumber === arrayDataOfService.length) {
+    if (mvActivNumber === arrayPriceList.length) {
         mvActivNumber = 0;
     }
     mvActivService();
@@ -481,7 +515,7 @@ mvThirdSectionRightArrow.addEventListener('click', () => {
 mvThirdSectionLeftArrow.addEventListener('click', () => {
     mvActivNumber--;
     if (mvActivNumber < 0) {
-        mvActivNumber = arrayDataOfService.length - 1;
+        mvActivNumber = arrayPriceList.length - 1;
     }
     mvActivService();
 })
@@ -709,8 +743,8 @@ mvSubmitButton.addEventListener('click', (event) => {
     } else {
         mvSendToApplication.style.display = "block";
         setTimeout(() => {
-        mvSendToApplication.style.display = "none";
-            
+            mvSendToApplication.style.display = "none";
+
         }, 5000);
     }
 
@@ -787,7 +821,7 @@ const setupAndTranslateForSelectService = (event) => {
 
 
 
-for (let index = 0; index < arrayDataOfService.length; index++) {
+for (let index = 0; index < arrayPriceList.length; index++) {
 
     const current = document.getElementById(`mv-fifvth-section-drop-list-item-${index}`);
 

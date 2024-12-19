@@ -1,5 +1,5 @@
 import localizationWrapper from "./localization-data.js";
-import arrayDataOfService from "./Services.js";
+import arrayPriceList from "./arrayPriceList.js";
 import { ideasArrayUp, ideasArrayDown, textForApplication } from "./slogans.js";
 import reviews from "./reviews.js";
 import dataContats from "./links.js";
@@ -141,7 +141,7 @@ const thFooterRus = document.getElementById("th-footer-rus")
 
 const thRefreshDataForLocalization = () => {
 
-    const current = arrayDataOfService[thActivNumber];
+    const current = arrayPriceList[thActivNumber];
 
     const currentReviewsTop = reviews[number].top;
     const currentReviewsBottom = reviews[number].bottom;
@@ -235,7 +235,7 @@ const thRefreshDataForLocalization = () => {
 
     }
 
-    for (let index = 0; index < arrayDataOfService.length; index++) {
+    for (let index = 0; index < arrayPriceList.length; index++) {
         if (thSelectLang === "rus") {
             thThirdSectionTitle.textContent = current.title.rus;
             thThirdSectionTitle.style.fontFamily = "Lato";
@@ -332,7 +332,7 @@ thPriceListXMark.addEventListener('click', () => {
 
 
 const thActivService = () => {
-    const currentService = arrayDataOfService[thActivNumber];
+    const currentService = arrayPriceList[thActivNumber];
 
     thThirdSectionTitle.textContent = currentService.title[thSelectLang];
 
@@ -400,7 +400,7 @@ thFourthSectionChoiceOfService.addEventListener('click', (event) => {
     thDropListWrapper.style.height = "22.67819vw"
 
     if (thSelectLang === "eng") {
-        const actualityCategory = arrayDataOfService.map((service) => service.title.eng).filter((textCategory) => {
+        const actualityCategory = arrayPriceList.map((service) => service.title.eng).filter((textCategory) => {
             return textCategory !== thSelectCategory;
         });
         actualityCategory.forEach(textSelectCategoty => {
@@ -423,7 +423,7 @@ thFourthSectionChoiceOfService.addEventListener('click', (event) => {
             newDropListWrapper.appendChild(newDropListPoint);
         });
     } else {
-        const actualityCategory = arrayDataOfService.map((service) => service.title.rus).filter((textCategory) => {
+        const actualityCategory = arrayPriceList.map((service) => service.title.rus).filter((textCategory) => {
             return textCategory !== thSelectCategory;
         });
         actualityCategory.forEach(textSelectCategoty => {
@@ -480,8 +480,8 @@ const thSetupAndTranslateForSelectService = (event) => {
 
     if (thSelectLang === "eng") {
         thTextarea.textContent = textForApplication.eng[thNumberOfService];
-        let selCat = arrayDataOfService.map((service) => service.title.eng)[thActivNumber];
-        if (selCat !== thSelectCategory && arrayDataOfService.map((service) => service.title.eng).includes(selCat)) {
+        let selCat = arrayPriceList.map((service) => service.title.eng)[thActivNumber];
+        if (selCat !== thSelectCategory && arrayPriceList.map((service) => service.title.eng).includes(selCat)) {
             thChoiceOfServicePlaceholder.textContent = selCat;
             thFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
             thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
@@ -491,8 +491,8 @@ const thSetupAndTranslateForSelectService = (event) => {
         }
     } else {
         thTextarea.textContent = textForApplication.rus[thNumberOfService];
-        let selCat = arrayDataOfService.map((service) => service.title.rus)[thActivNumber];
-        if (selCat !== thSelectCategory && arrayDataOfService.map((service) => service.title.rus).includes(selCat)) {
+        let selCat = arrayPriceList.map((service) => service.title.rus)[thActivNumber];
+        if (selCat !== thSelectCategory && arrayPriceList.map((service) => service.title.rus).includes(selCat)) {
             thChoiceOfServicePlaceholder.textContent = selCat;
             thFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
             thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";

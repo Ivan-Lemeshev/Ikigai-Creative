@@ -1,4 +1,4 @@
-const arrayDataOfService = [
+const arrayPriceList = [
     {
         title: {
             eng: "Creative Design",
@@ -41,7 +41,7 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Mobile App Design",
-                    rus: "Дизайн мобильных приложений"
+                    rus: "Дизайн моб. приложений"
                 },
                 cost: 700
             },
@@ -85,7 +85,6 @@ const arrayDataOfService = [
                 },
                 cost: 150
             },
-
         ],
 
         description: {
@@ -139,15 +138,15 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Custom Website Design",
-                    rus: "Индивидуальный дизайн сайта"
+                    rus: "Любой дизайн сайта"
                 },
                 cost: 700
             },
 
             {
                 nameOfServise: {
-                    eng: "E-commerce Website Development",
-                    rus: "Разработка интернет-магазина"
+                    eng: "Website Development",
+                    rus: "Разработка веб-магазина"
                 },
                 cost: 1200
             },
@@ -155,15 +154,15 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "WordPress Website Setup",
-                    rus: "Настройка сайта на WordPress"
+                    rus: "Настройка на WordPress"
                 },
                 cost: 400
             },
 
             {
                 nameOfServise: {
-                    eng: "Website Redesign and Modernization",
-                    rus: "Редизайн/модернизация сайта"
+                    eng: "Redesign and Modernization",
+                    rus: "Редизайн/модернизация"
                 },
                 cost: 600
             },
@@ -171,15 +170,15 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Single Page Application",
-                    rus: "Одностраничное веб-приложение"
+                    rus: "Веб-приложение"
                 },
                 cost: 900
             },
 
             {
                 nameOfServise: {
-                    eng: "SEO-Optimized Website Development",
-                    rus: "Разработка SEO-оптимизированного сайта"
+                    eng: "SEO-Optimized Development",
+                    rus: "Разработка SEO-сайта"
                 },
                 cost: 800
             },
@@ -244,32 +243,32 @@ const arrayDataOfService = [
         prices: [
             {
                 nameOfServise: {
-                    eng: "Product/Service Promo Video",
-                    rus: "Рекламное видео для продукта/услуги"
+                    eng: "Promo Video",
+                    rus: "Рекламное видео"
                 },
                 cost: 500
             },
 
             {
                 nameOfServise: {
-                    eng: "Branding Video (Up to 3 Minutes) ",
-                    rus: "Брендовое видео (до 3 минут)"
+                    eng: "Branding Video",
+                    rus: "Брендовое видео"
                 },
                 cost: 1000
             },
 
             {
                 nameOfServise: {
-                    eng: "Social Media Video Content",
-                    rus: "Видеоконтент для социальных сетей"
+                    eng: "Social Media Content",
+                    rus: "Видеоконтент для соц. сетей"
                 },
                 cost: 300
             },
 
             {
                 nameOfServise: {
-                    eng: "Event/Conference Video Coverage",
-                    rus: "Видео с мероприятий/конференций"
+                    eng: "Event Video Coverage",
+                    rus: "Видео с мероприятий"
                 },
                 cost: 800
             },
@@ -277,7 +276,7 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Corporate Training Video",
-                    rus: "Обучающее корпоративное видео"
+                    rus: "Обучающие видео"
                 },
                 cost: 600
             },
@@ -285,7 +284,7 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Animated Explainer Video",
-                    rus: "Анимационное объясняющее видео"
+                    rus: "Анимационное видео"
                 },
                 cost: 1200
             },
@@ -293,7 +292,7 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Music Video Production",
-                    rus: "Производство музыкального клипа"
+                    rus: "Музыкальные клипы"
                 },
                 cost: 1500
             },
@@ -338,7 +337,7 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Content Writing & Copywriting",
-                    rus: "Написание контента и копирайтинг"
+                    rus: "Контент и копирайтинг"
                 },
                 cost: 300
             },
@@ -346,7 +345,7 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Technical Support for Websites ",
-                    rus: "Техническая поддержка сайтов"
+                    rus: "Тех. поддержка сайтов"
                 },
                 cost: 400
             },
@@ -354,7 +353,7 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Content Strategy Development",
-                    rus: "Разработка стратегии контента"
+                    rus: "Разработка стратегии"
                 },
                 cost: 500
             },
@@ -362,7 +361,7 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Website Maintenance & Updates",
-                    rus: "Обслуживание и обновление сайтов",
+                    rus: "Обслуживание сайтов",
                 },
                 cost: 350
             },
@@ -386,7 +385,7 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Customer Support via Live Chat",
-                    rus: "Поддержка клиентов через онлайн-чат"
+                    rus: "Чат поддержка клиентов"
                 },
                 cost: 600
             },
@@ -431,16 +430,16 @@ const arrayDataOfService = [
         prices: [
             {
                 nameOfServise: {
-                    eng: "Social Media Strategy Development",
-                    rus: "Разработка стратегии для социальных сетей"
+                    eng: "Social Media Strategy",
+                    rus: "Cтратегии для соц. сетей"
                 },
                 cost: 400
             },
 
             {
                 nameOfServise: {
-                    eng: "Content Creation & Management ",
-                    rus: "Создание и управление контентом"
+                    eng: "Content Management ",
+                    rus: "Управление контентом"
                 },
                 cost: 500
             },
@@ -448,7 +447,7 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Social Media Ad Campaigns",
-                    rus: "Рекламные кампании в социальных сетях"
+                    rus: "Реклама в соц. сетях"
                 },
                 cost: 600
             },
@@ -456,7 +455,7 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Influencer Marketing",
-                    rus: "Маркетинг через инфлюенсеров"
+                    rus: "Работа с инфлюенсерами"
                 },
                 cost: 700
             },
@@ -472,7 +471,7 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Social Media Account Setup",
-                    rus: "Создание аккаунтов в социальных сетях"
+                    rus: "Аккаунты в соц. сетях"
                 },
                 cost: 300
             },
@@ -480,7 +479,7 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Social Media Analytics",
-                    rus: "Аналитика социальных сетей"
+                    rus: "Аналитика соц. сетей"
                 },
                 cost: 200
             },
@@ -526,7 +525,7 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Payment Gateway Integration",
-                    rus: "Интеграция платёжных систем"
+                    rus: "Интеграция систем"
                 },
                 cost: 500
             },
@@ -534,31 +533,31 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "E-commerce Payment Setup ",
-                    rus: "Настройка платёжной системы магазина"
+                    rus: "Настройка системы"
                 },
                 cost: 600
             },
 
             {
                 nameOfServise: {
-                    eng: "Subscription Payment System Setup",
-                    rus: "Настройка системы подписки"
+                    eng: "Subscription Payment System",
+                    rus: "Настройка подписки"
                 },
                 cost: 700
             },
 
             {
                 nameOfServise: {
-                    eng: "Secure Payment Systems Configuration",
-                    rus: "Конфигурация безопасности платёжных систем"
+                    eng: "Secure Payment Systems",
+                    rus: "Безопасность платежей"
                 },
                 cost: 450
             },
 
             {
                 nameOfServise: {
-                    eng: "Payment Gateway Testing & Troubleshooting",
-                    rus: "Тестирование платёжных систем"
+                    eng: "Payment Gateway Testing",
+                    rus: "Тестирование систем"
                 },
                 cost: 400
             },
@@ -566,15 +565,15 @@ const arrayDataOfService = [
             {
                 nameOfServise: {
                     eng: "Multi-Currency Payment Setup",
-                    rus: "Настройка многовалютных платёжных систем"
+                    rus: "Настройка валютных систем"
                 },
                 cost: 550
             },
 
             {
                 nameOfServise: {
-                    eng: "Payment System Optimization for Speed ",
-                    rus: "Оптимизация платёжных систем для скорости",
+                    eng: "Payment System Optimization",
+                    rus: "Оптимизация платёжей",
                 },
                 cost: 600
             },
@@ -592,6 +591,8 @@ const arrayDataOfService = [
             ]
         }
     }
-];
+]
 
-export default arrayDataOfService;
+export default arrayPriceList;
+
+
