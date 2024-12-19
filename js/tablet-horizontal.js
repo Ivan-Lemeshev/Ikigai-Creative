@@ -135,6 +135,7 @@ const thInputLastName = document.getElementById("th-input-last-name");
 const thInputPhone = document.getElementById("th-input-phone");
 const thInputEmail = document.getElementById("th-input-email");
 const thTextarea = document.getElementById("th-textarea");
+const thSubmitButtonFourthSection = document.getElementById("th-send-form-submit");
 const thFooterEng = document.getElementById("th-footer-eng");
 const thFooterRus = document.getElementById("th-footer-rus")
 
@@ -268,6 +269,193 @@ const thRefreshDataForLocalization = () => {
 
 }
 
+const capitalize = (str) => {
+    return str.split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+}
+
+const isValidEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+
+const allInputsHave = () => {
+    if (thInputFirstName.value.length && thInputLastName.value.length && thInputPhone.value.length && thInputEmail.value.length && isValidEmail(thInputEmail.value) && thSelectCategory) {
+        thSubmitButtonFourthSection.className = "send-form-submit-activ";
+    }
+}
+
+const voidInput = () => {
+    thSubmitButtonFourthSection.className = "";
+}
+
+thInputFirstName.addEventListener('input', () => {
+    const inputValue = thInputFirstName.value;
+    let editValue = inputValue.replace(/[^a-zA-Zа-яА-ЯёЁ]/g, '');
+    if (editValue.length > 10) {
+        editValue = editValue.slice(0, 10);
+    }
+    if (editValue.length > 0) {
+        thInputFirstName.style.borderBottom = "0.10799vw solid var(--blue)";
+        thInputFirstName.style.color = "var(--blue)";
+        allInputsHave();
+    } else {
+        thInputFirstName.style.borderBottom = "0.10799vw solid var(--orangeRed)";
+        thInputFirstName.placeholder = "Enter your first name";
+        thInputFirstName.classList = "th-input-placeholder";
+        thInputFirstName.style.color = "var(--orangeRed)";
+        voidInput();
+    }
+    thInputFirstName.value = capitalize(editValue);
+});
+
+thInputLastName.addEventListener('input', () => {
+    const inputValue = thInputLastName.value;
+    let editValue = inputValue.replace(/[^a-zA-Zа-яА-ЯёЁ]/g, '');
+    if (editValue.length > 10) {
+        editValue = editValue.slice(0, 10);
+    }
+    if (editValue.length > 0) {
+        thInputLastName.style.borderBottom = "0.10799vw solid var(--blue)";
+        thInputLastName.style.color = "var(--blue)";
+        allInputsHave();
+    } else {
+        thInputLastName.style.borderBottom = "0.10799vw solid var(--orangeRed)";
+        thInputLastName.placeholder = "Enter your last name";
+        thInputLastName.classList = "th-input-placeholder";
+        thInputLastName.style.color = "var(--orangeRed)";
+        voidInput();
+    }
+    thInputLastName.value = capitalize(editValue);
+});
+
+thInputPhone.addEventListener('input', () => {
+    const inputValue = thInputPhone.value;
+    let editValue = inputValue.replace(/[^0-9+]/g, '');
+    if (editValue.length > 12) {
+        editValue = editValue.slice(0, 12);
+    }
+    if (editValue.length > 0) {
+        thInputPhone.style.borderBottom = "0.10799vw solid var(--blue)";
+        thInputPhone.style.color = "var(--blue)";
+        allInputsHave();
+    } else {
+        thInputPhone.style.borderBottom = "0.10799vw solid var(--orangeRed)";
+        thInputPhone.placeholder = "Enter your phone";
+        thInputPhone.classList = "th-input-placeholder";
+        thInputPhone.style.color = "var(--orangeRed)";
+        voidInput();
+    }
+    thInputPhone.value = capitalize(editValue);
+
+
+});
+
+thInputEmail.addEventListener('input', () => {
+    const inputValue = thInputEmail.value;
+    let editValue = inputValue.replace(/[^a-zA-Z1-9@_\.-]/g, '');
+    if (editValue.length > 20) {
+        editValue = editValue.slice(0, 20);
+    }
+    if (editValue.length > 0) {
+        thInputEmail.style.borderBottom = "0.10799vw solid var(--blue)";
+        thInputEmail.style.color = "var(--blue)";
+        allInputsHave();
+    } else {
+        thInputEmail.style.borderBottom = "0.10799vw solid var(--orangeRed)";
+        thInputEmail.placeholder = "Enter a valid email";
+        thInputEmail.classList = "th-input-placeholder";
+        thInputEmail.style.color = "var(--orangeRed)";
+        voidInput();
+    }
+    thInputEmail.value = editValue;
+});
+
+allInputsHave();
+
+const thFourSectionTitle = document.getElementById("th-four-section-title");
+const thMainSendForm = document.getElementById("th-main-send-form");
+const thMainSendFormTitle = document.getElementById("th-main-send-form-title");
+
+thSubmitButtonFourthSection.addEventListener('click', () => {
+
+    let resultChecked = true;
+
+    if (!thInputFirstName.value.length) {
+        resultChecked = false;
+        thInputFirstName.style.borderBottom = "0.10799vw solid var(--orangeRed)";
+        thInputFirstName.placeholder = "Enter your first name";
+        thInputFirstName.classList = "th-input-placeholder";
+        thInputFirstName.style.color = "var(--orangeRed)";
+        thSubmitButtonFourthSection.style.border = "0.10799vw solid var(--secondBrown)";
+        thSubmitButtonFourthSection.style.color = "var(--secondBrown)";
+        thFourSectionTitle.textContent = "Fill in all required fields";
+        thFourSectionTitle.style.color = "var(--orangeRed)";
+        thMainSendForm.style.backgroundColor = "rgba(236, 82, 0, 0.07)";
+        thMainSendForm.style.border = "0.21598vw solid rgba(236, 82, 0, 0.5)";
+        thMainSendFormTitle.style.color = "var(--orangeRed)";
+
+    } else {
+        thInputFirstName.style.borderBottom = "0.10799vw solid var(--blue)";
+        thInputFirstName.style.color = "var(--blue)";
+        thSubmitButtonFourthSection.style.border = "";
+        thSubmitButtonFourthSection.style.color = "";
+        thFourSectionTitle.textContent = "Contact us";
+        thFourSectionTitle.style.color = "";
+        thMainSendForm.style.backgroundColor = "";
+        thMainSendForm.style.border = "";
+        thMainSendFormTitle.style.color = "";
+
+    }
+    if (!inputLastName.value.length) {
+        errorImgLastName.style.opacity = 1;
+        resultChecked = false;
+        submitButtonFourthSection.style.left = "2.34375vw";
+    } else {
+        errorImgLastName.style.opacity = 0;
+        requiredFieldsText.style.opacity = 0;
+        submitButtonFourthSection.style.left = "13.85417vw";
+    }
+    if (!inputPhone.value.length) {
+        errorImgPhone.style.opacity = 1;
+        resultChecked = false;
+        submitButtonFourthSection.style.left = "2.34375vw";
+    } else {
+        errorImgPhone.style.opacity = 0;
+        requiredFieldsText.style.opacity = 0;
+        submitButtonFourthSection.style.left = "13.85417vw";
+    }
+    if (!inputEmail.value.length) {
+        errorImgEmail.style.opacity = 1;
+        resultChecked = false;
+        submitButtonFourthSection.style.left = "2.34375vw";
+    } else {
+        errorImgEmail.style.opacity = 0;
+        requiredFieldsText.style.opacity = 0;
+        submitButtonFourthSection.style.left = "13.85417vw";
+    }
+
+    if (!resultChecked) {
+        submitButtonFourthSection.className = " ";
+        requiredFieldsText.style.opacity = 1;
+        correctlyText.style.opacity = 0;
+        submitButtonFourthSection.style.left = "2.34375vw";
+    } else if (!isValidEmail(inputEmail.value)) {
+        correctlyText.style.opacity = 1;
+        requiredFieldsText.style.opacity = 0;
+        submitButtonFourthSection.style.left = "2.34375vw";
+        submitButtonFourthSection.className = " ";
+        errorImgEmail.style.opacity = 1;
+        correctImgEmail.style.opacity = 0;
+    } else {
+        submitButtonFourthSection.className = "send-form-submit-activ";
+        requiredFieldsText.style.opacity = 0;
+        correctlyText.style.opacity = 0;
+    }
+}
+);
 
 const thChangeIdeasText = () => {
     thCentralText.style.opacity = "0";
@@ -418,7 +606,7 @@ thFourthSectionChoiceOfService.addEventListener('click', (event) => {
                 thFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
                 thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
                 newDropListWrapper.style.pointerEvents = "none";
-                // allInputsHave(); добавить проверку
+                allInputsHave();
             });
             newDropListWrapper.appendChild(newDropListPoint);
         });
@@ -441,7 +629,7 @@ thFourthSectionChoiceOfService.addEventListener('click', (event) => {
                 thFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
                 thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
                 newDropListWrapper.style.pointerEvents = "none";
-                // allInputsHave(); добавить проверку
+                allInputsHave(); 
             });
             newDropListWrapper.appendChild(newDropListPoint);
         });
@@ -487,7 +675,7 @@ const thSetupAndTranslateForSelectService = (event) => {
             thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
             thChoiceOfServicePlaceholder.style.color = "var(--blue)";
             thSelectCategory = selCat;
-            // allInputsHave(); добавить эффекты когда поля не заполнены
+            allInputsHave(); 
         }
     } else {
         thTextarea.textContent = textForApplication.rus[thNumberOfService];
@@ -498,10 +686,12 @@ const thSetupAndTranslateForSelectService = (event) => {
             thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
             thChoiceOfServicePlaceholder.style.color = "var(--blue)";
             thSelectCategory = selCat;
-            // allInputsHave(); добавить эффекты когда поля не заполнены
+            allInputsHave();
         }
     }
 }
+
+
 const buttonOrder = document.getElementById("th-third-section-button-order");
 const buttonConsultation = document.getElementById("th-third-section-button-consultation");
 const buttonReview = document.getElementById("th-third-section-button-review");

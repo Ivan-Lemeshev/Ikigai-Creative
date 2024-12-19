@@ -737,9 +737,9 @@ mvSubmitButton.addEventListener('click', (event) => {
         mvFifvthSectionImgPath.style.fill = "#EC5200";
         mvFifvthSectionMainContent.style.backgroundColor = "rgba(127, 45, 0, 0.07)";
         mvFifvthSectionMainContent.style.border = "0.4975124378109453vw solid rgba(127, 45, 0, 0.5)";
-        mvSubmitButton.style.border = "0.24875621890547264vw solid #7F2D00";
+        mvSubmitButton.style.border = "0.24875621890547264vw solid var(--secondBrown)";
         mvSubmitButton.style.backgroundColor = "rgba(236, 82, 0, 0.05)";
-        mvSubmitButton.style.color = "#7F2D00";
+        mvSubmitButton.style.color = "var(--secondBrown)";
     } else {
         mvSendToApplication.style.display = "block";
         setTimeout(() => {

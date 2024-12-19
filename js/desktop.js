@@ -122,6 +122,12 @@ let selectLang = "eng";
 const lang = document.getElementById("language-button-first-section");
 let numberOfService = 0;
 
+const isValidEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+
 const allInputsHave = () => {
     if (inputFirstName.value.length && inputLastName.value.length && inputPhone.value.length && inputEmail.value.length && isValidEmail(inputEmail.value) && selectCategory) {
         submitButtonFourthSection.className = "send-form-submit-activ";
@@ -917,11 +923,6 @@ const capitalize = (str) => {
     return str.split(' ')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
-}
-
-const isValidEmail = (email) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
 }
 
 

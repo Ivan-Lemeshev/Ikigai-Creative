@@ -337,7 +337,7 @@
             right: 5.39957vw;
             width: 0.10799vw;
             height: 4.31965vw;
-            background-color: #7F2D00;
+            background-color: var(--secondBrown);
         }
 
         &>#th-third-section-button-order-img {
@@ -677,14 +677,16 @@
 
 
     &>#th-four-section-title {
-        width: 27.64579vw;
-        height: 3.56371vw;
+        width: 32.72138vw;
+        height: 3.86371vw;
         font-weight: 400;
         font-size: 3.02376vw;
         color: var(--blue);
         position: absolute;
         top: 5.39957vw;
         left: 5.39957vw;
+        display: flex;
+        align-items: center;
     }
 
     &>#th-main-send-form {
@@ -726,6 +728,12 @@
                 color: var(--darkBlue);
                 font-weight: 300;
             }
+        }
+
+        &>.th-input-placeholder::placeholder {
+            font-size: 2.15983vw;
+            color: var(--orangeRed) !important;
+            font-weight: 300;
         }
 
 
@@ -863,7 +871,7 @@
             transition: all 0.3s ease-in-out;
         }
 
-        &>#send-form-submit.send-form-submit-activ {
+        &>#th-send-form-submit.th-send-form-submit-activ {
             color: var(--blue);
             box-shadow: 0px 0px 8px 3px var(--blue);
             border: transparent;
@@ -1025,12 +1033,12 @@
         opacity: 1;
         transition: opacity 0.5s ease-in-out, left 0.5s ease-in-out;
     }
-    
+
     #th-lower-block-with-reviews {
         top: 17.06263vw;
         left: 5.39957vw;
     }
-    
+
     .th-reviews-img {
         pointer-events: none;
         width: 10.79914vw;
@@ -1041,7 +1049,7 @@
         top: 0;
         z-index: 2;
     }
-    
+
     .th-reviews-text-wrapper {
         display: flex;
         min-height: 47.08423vw;
@@ -1054,9 +1062,9 @@
         overflow: visible;
         border: 1px solid rgba(0, 154, 236, 0.5);
         background: rgba(0, 83, 128, 0.05);
-        
+
     }
-    
+
     .th-reviews-name {
         font-weight: 300;
         font-size: 2.15983vw;
@@ -1067,7 +1075,7 @@
         left: 11.87905vw;
         top: 1.07991vw;
     }
-    
+
     .th-reviews-text {
         font-weight: 300;
         font-size: 2.15983vw;
@@ -1076,7 +1084,7 @@
         margin-top: 1.61987vw;
         margin-left: 1.61987vw;
     }
-    
+
     .th-second-reviews-text {
         margin-top: 2.59179vw;
         font-weight: 300;
