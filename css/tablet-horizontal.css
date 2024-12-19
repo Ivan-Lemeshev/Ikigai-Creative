@@ -670,11 +670,32 @@
     width: 100vw;
     height: 83.36933vw;
     overflow: visible;
-    background:
-        /*linear-gradient(0deg, #000D15, #000D15), */
-        radial-gradient(80.13% 43.52% at 17.01% 51.49%, rgba(0, 83, 128, 0.2) 0%, rgba(0, 0, 0, 0) 100%),
-        radial-gradient(84.34% 46.98% at 89.9% 55.12%, rgba(236, 82, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
 
+    &>#th-four-section-blue-gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 83.36933vw;
+        background:
+            radial-gradient(80.13% 43.52% at 17.01% 51.49%, rgba(0, 83, 128, 0.2) 0%, rgba(0, 0, 0, 0) 100%),
+            radial-gradient(84.34% 46.98% at 89.9% 55.12%, rgba(236, 82, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &>#th-four-section-red-gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 83.36933vw;
+        background:
+            radial-gradient(80.13% 43.52% at 17.01% 51.49%, rgba(236, 82, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%),
+            radial-gradient(84.34% 46.98% at 89.9% 55.12%, rgba(236, 82, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
 
     &>#th-four-section-title {
         width: 32.72138vw;
@@ -687,6 +708,7 @@
         left: 5.39957vw;
         display: flex;
         align-items: center;
+        transition: opacity 0.3s ease-in-out;
     }
 
     &>#th-main-send-form {
@@ -707,6 +729,7 @@
             position: absolute;
             top: 4.9676vw;
             left: 30.56156vw;
+            transition: color 0.3s ease-in-out;
         }
 
 
@@ -722,11 +745,13 @@
             color: var(--blue);
             border-bottom: 0.10799vw solid var(--blue);
             padding-left: 0.83045vw;
+            transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
 
             &::placeholder {
                 font-size: 2.15983vw;
                 color: var(--darkBlue);
                 font-weight: 300;
+                transition: opacity 0.3s ease-in-out;
             }
         }
 
@@ -734,6 +759,7 @@
             font-size: 2.15983vw;
             color: var(--orangeRed) !important;
             font-weight: 300;
+            transition: opacity 0.3s ease-in-out;
         }
 
 
@@ -814,6 +840,10 @@
                     position: absolute;
                     right: 1.5vw;
                     transition: rotate 0.4s ease-in-out;
+
+                    & path {
+                        transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+                    }
                 }
             }
         }
@@ -873,9 +903,8 @@
 
         &>#th-send-form-submit.th-send-form-submit-activ {
             color: var(--blue);
-            box-shadow: 0px 0px 8px 3px var(--blue);
-            border: transparent;
-            cursor: pointer;
+            background-color: #004C7B;
+            border: 0.10799vw solid var(--secondBlue);
         }
     }
 
@@ -891,6 +920,8 @@
         justify-content: space-evenly;
         flex-direction: column;
 
+
+
         &>.th-four-section-contacts {
             width: 4.31965vw;
             height: 4.31965vw;
@@ -902,17 +933,17 @@
 }
 
 #th-drop-list {
-    width: 21.875vw;
+    width: 33.47732vw;
     height: auto;
     position: absolute;
     z-index: 10;
-    border: 1px solid #015A8C;
+    border: 0.10799vw solid #015A8C;
     border-bottom-left-radius: 0.52083vw;
     border-bottom-right-radius: 0.52083vw;
     text-align: left;
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
-    top: 3.125vw;
+    top: 5.07559vw;
     display: inline-block;
     display: flex;
     flex-wrap: wrap;
@@ -923,13 +954,13 @@
     overflow: hidden;
 
     &>.th-drop-list-item {
-        width: 21.875vw;
-        height: 2.4vw;
+        width: 33.47732vw;
+        height: 4.31965vw;
         display: flex;
         align-items: center;
         padding-left: 0.52083vw;
         color: #01679F;
-        font-size: 1.35417vw;
+        font-size: 2.15983vw;
         text-align: left;
         font-weight: 300;
         cursor: pointer;
