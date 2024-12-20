@@ -109,7 +109,7 @@
         left: 2.59067vw;
         font-size: min(3.10881vw, 2.59179dvh);
         font-weight: 600;
-        line-height:  2.59179dvh;
+        line-height: 2.59179dvh;
         color: var(--secondBlue);
         overflow: visible;
     }
@@ -122,7 +122,7 @@
         right: 2.59067vw;
         font-weight: 600;
         font-size: min(3.10881vw, 2.59179dvh);
-        line-height:  2.59179dvh;
+        line-height: 2.59179dvh;
         color: var(--secondBlue);
         overflow: visible;
     }
@@ -295,7 +295,7 @@
     &>#tv-second-section-button-contacts {
         width: 73.38083vw;
         bottom: 13.34197vw;
-        
+
         &>p {
             position: absolute;
             left: 2.72021vw;
@@ -304,7 +304,7 @@
             font-size: 2.59067vw;
             display: flex;
             align-items: center;
-            width: 45.59585vw;   
+            width: 45.59585vw;
             color: var(--blue);
         }
 
@@ -321,7 +321,7 @@
     &>#tv-second-section-button-services {
         width: 78.23834vw;
         bottom: 4.92228vw;
-        
+
         &>p {
             position: absolute;
             left: 2.72021vw;
@@ -333,7 +333,7 @@
             width: 54.92228vw;
             color: var(--blue);
         }
-        
+
         &>.second-section-click {
             object-fit: contain;
             width: 4.66321vw;
@@ -341,7 +341,352 @@
             position: absolute;
             right: 7.90155vw;
             top: 0.64767vw;
-            
+
         }
+    }
+}
+
+#tv-third-section {
+    width: 100vw;
+    height: 119.94819vw;
+    position: relative;
+    overflow: hidden;
+
+    &>#tv-third-section-title {
+        position: absolute;
+        width: 20.20725vw;
+        height: 4.27461vw;
+        top: 6.47668vw;
+        left: 6.47668vw;
+        font-size: 3.62694vw;
+        font-weight: 400;
+        color: var(--blue);
+    }
+
+    &>#tv-third-section-title-line {
+        position: absolute;
+        width: 64.30829vw;
+        height: 13.56347vw;
+        top: -2.58472vw;
+        left: 28.49741vw;
+        z-index: 3;
+    }
+
+
+    &>#tv-third-section-main-img-wrapper {
+        position: absolute;
+        top: 17.22798vw;
+        left: 6.47668vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35.49223vw;
+        height: 35.49223vw;
+        background: rgba(0, 154, 236, 0.05);
+        border: 0.10799vw solid var(--secondBlue);
+
+        &>img {
+            width: 26.0272vw;
+            height: 26.0272vw;
+        }
+    }
+
+    &>#tv-price-list-wrapper {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 83.36933vw;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        backdrop-filter: blur(1.9900497512437811vw);
+
+        &>#tv-price-list-block {
+            width: 53.99568vw;
+            height: 64.79482vw;
+            position: absolute;
+            top: 9.28726vw;
+            left: 23.00216vw;
+            background: rgba(0, 63, 98, 0.4);
+            border: 0.24875621890547264vw solid var(--darkBlue);
+            backdrop-filter: blur(1.07991vw);
+
+            &>#tv-price-list-title {
+                position: absolute;
+                top: 3.23974vw;
+                left: 3.23974vw;
+                width: 18.89849vw;
+                height: 3.56371vw;
+                font-size: 3.02376vw;
+                font-weight: 400;
+                line-height: 3.02376vw;
+                color: #EAF8FF;
+            }
+
+            &>#tv-price-list-x-mark {
+                position: absolute;
+                top: 3.88769vw;
+                right: 3.23974vw;
+                width: 2.15983vw;
+                height: 2.15983vw;
+                object-fit: contain;
+                pointer-events: all;
+            }
+
+            &>#tv-price-list-title-line {
+                position: absolute;
+                top: 8.42333vw;
+                left: 3.23974vw;
+                width: 47.5162vw;
+                height: 0.10799vw;
+                background: rgba(0, 154, 236, 0.6)
+            }
+
+            &>#tv-price-list-item-wrapper {
+                width: 47.5162vw;
+                height: 37.90497vw;
+                position: absolute;
+                top: 11.66307vw;
+                left: 3.23974vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                overflow: visible;
+
+                &>.tv-price-list-item {
+                    width: 47.5162vw;
+                    height: 3.56371vw;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    overflow: visible;
+                    color: #EAF8FF;
+                    font-size: 2.37581vw;
+                    line-height: 2.37581vw;
+                    font-weight: 300;
+
+                    &>.tv-price-list-service-name {
+                        width: 36.71706vw;
+                        height: 3.56371vw;
+                        overflow: visible;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    &>.tv-price-list-service-cost {
+                        width: 6.47948vw;
+                        height: 3.56371vw;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+
+            &>#tv-price-list-footer-line {
+                position: absolute;
+                bottom: 11.98704vw;
+                left: 3.23974vw;
+                width: 47.5162vw;
+                height: 0.10799vw;
+                background: rgba(0, 154, 236, 0.6)
+            }
+
+            &>#tv-price-list-footer {
+                width: 47.5162vw;
+                height: 7.34341vw;
+                position: absolute;
+                bottom: 2.4838vw;
+                left: 3.23974vw;
+                font-size: 1.94384vw;
+                font-weight: 300;
+                line-height: 2.72138vw;
+                color: #EAF8FF;
+                overflow: visible;
+            }
+        }
+    }
+
+    &>#tv-third-section-wrapper-right-five-buttons {
+        position: absolute;
+        height: 35.49223vw;
+        width: 5.18135vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        left: 44.04145vw;
+        top: 17.22798vw;
+        pointer-events: all;
+
+        &>.tv-third-section-wrapper-right-five-buttons {
+            width: 5.18135vw;
+            height: 5.18135vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0.24875621890547264vw solid var(--secondBlue);
+            background: linear-gradient(179.79deg, rgba(0, 0, 0, 0.2) 0.23%, rgba(0, 41, 63, 0.3) 61.99%, rgba(0, 0, 0, 0.2) 99.87%);
+
+            &>.tv-third-section-right-four-buttons {
+                object-fit: contain;
+                width: 3.10881vw;
+                height: 3.10881vw;
+            }
+        }
+
+        &>#tv-button-more-lower-part-buttons-3 {
+            width: 5.18135vw;
+            height: 5.18135vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0.24875621890547264vw solid var(--orangeRed);
+            background: linear-gradient(179.79deg, rgba(0, 0, 0, 0.2) 0.23%, rgba(0, 41, 63, 0.3) 61.99%, rgba(0, 0, 0, 0.2) 99.87%);
+
+        }
+    }
+
+    &>#tv-third-section-title-of-service {
+        position: absolute;
+        top: 56.60622vw;
+        left: 6.47668vw;
+        width: 35.36269vw;
+        height: 3.75648vw;
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+        font-size: 3.10881vw;
+        color: var(--secondBlue);
+        overflow: visible;
+    }
+
+    &>#tv-third-section-text-about-service-0 {
+        position: absolute;
+        top: 62.95337vw;
+        left: 6.47668vw;
+        width: 61.65803vw;
+        height: auto;
+        font-weight: 300;
+        font-size: 2.33161vw;
+        line-height: 3.03109vw;
+        color: var(--secondBlue);
+    }
+
+    &>#tv-third-section-text-about-service-1 {
+        position: absolute;
+        bottom: 13.4715vw;
+        left: 6.47668vw;
+        width: 61.65803vw;
+        height: auto;
+        font-weight: 300;
+        font-size: 2.33161vw;
+        line-height: 3.03109vw;
+        color: var(--secondBlue);
+    }
+
+    &>#tv-third-section-top-arrow {
+        position: absolute;
+        object-fit: contain;
+        pointer-events: all;
+        width: 3.88601vw;
+        height: 1.94301vw;
+        top: 6.73575vw;
+        right: 13.4715vw;
+        z-index: 6;
+    }
+
+    &>#tv-third-section-bottom-arrow {
+        position: absolute;
+        object-fit: contain;
+        pointer-events: all;
+        width: 3.88601vw;
+        height: 1.94301vw;
+        bottom: 6.34715vw;
+        right: 15.02591vw;
+        z-index: 6;
+    }
+
+    &>.tv-third-section-right-services {
+        width: 20.72539vw;
+        height: 20.72539vw;
+        position: absolute;
+        right: 7.25389vw;
+        background: rgba(0, 154, 236, 0.05);
+        border: 0.10799vw solid var(--secondBlue);
+        transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+
+        &>img {
+            width: 13.81736vw;
+            height: 13.81736vw;
+            position: absolute;
+            top: 1.72668vw;
+            left: 3.45466vw;
+        }
+
+        &>h3 {
+            width: 13.81736vw;
+            height: auto;
+            position: absolute;
+            left: 3.45466vw;
+            bottom: 2.07254vw;
+            font-weight: 300;
+            font-size: 1.81347vw;
+            line-height: 2.17617vw;
+            color: var(--secondBlue);
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            overflow: visible;
+        }
+    }
+
+    &>#tv-third-section-right-services-0 {
+        top: 8.67876vw;
+    }
+
+    &>#tv-third-section-right-services-1 {
+        top: 31.99482vw;
+    }
+
+    &>#tv-third-section-right-services-2 {
+        top: 55.31088vw;
+    }
+
+    &>#tv-third-section-right-services-3 {
+        top: 78.62694vw;
+    }
+
+    &>#tv-third-section-right-services-4 {
+        top: 102.07254vw;
+    }
+
+    &>.tv-third-section-black-blocks {
+        position: absolute;
+        right: 5.25389vw;
+        z-index: 4;
+        width: 23.72539vw;
+        height: 12.54663vw;
+    }
+
+    &>#tv-third-section-black-blocks-top {
+        top: 8.57876vw;
+        background: linear-gradient(180deg, #000D15 43.55%, rgba(0, 13, 21, 0) 100%);
+    }
+
+    &>#tv-third-section-black-blocks-bottom {
+        height: 16.96891vw;
+        background: linear-gradient(180deg, rgba(0, 13, 21, 0) 0%, #000D15 38.38%);
+        bottom: 0;
+    }
+
+    &>#tv-third-section-bootom-line {
+        position: absolute;
+        width: 85.81088vw;
+        height: 13.56347vw;
+        bottom: -5.27332vw;
+        left: 6.47668vw;
+        z-index: 5;
     }
 }
