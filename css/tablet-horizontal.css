@@ -698,7 +698,7 @@
     }
 
     &>#th-four-section-title {
-        width: 32.72138vw;
+        width: 48.59611vw;
         height: 3.86371vw;
         font-weight: 400;
         font-size: 3.02376vw;
@@ -966,6 +966,7 @@
         cursor: pointer;
         background-color: rgba(0, 0, 0, 0.5);
         color: #01679F;
+        overflow: visible;
     }
 
     &>.th-drop-list-item:first-child {

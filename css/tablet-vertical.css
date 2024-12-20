@@ -88,13 +88,13 @@
 }
 
 #tv-navigation-block {
-    /* display: none; */
+    display: none;
     width: 36.65803vw;
     height: 100dvh;
     position: fixed;
     z-index: 10;
     top: 0;
-    left: 63.34197vw;
+    left: 100vw;
     transition: left 0.5s ease-in-out;
     background-image: linear-gradient(166.39deg, rgba(0, 76, 123, 0.2) 4.94%, rgba(0, 13, 21, 0.2) 14.94%, rgba(0, 13, 21, 0.2) 35.08%, rgba(0, 76, 123, 0.2) 69.97%, rgba(0, 13, 21, 0.2) 89.82%);
     backdrop-filter: blur(2.4875621890547266vw);
@@ -225,5 +225,123 @@
     &>#tv-nav-img-whatsapp {
         bottom: 3.45572dvh;
         right: 11.39896vw;
+    }
+
+    &>#tv-nav-img-logo {
+        position: absolute;
+        width: 5.44041vw;
+        height: 3.446dvh;
+        bottom: 4.0054dvh;
+        right: 3.23834vw;
+    }
+}
+
+#tv-second-section {
+    width: 100vw;
+    height: 119.94819vw;
+    position: relative;
+
+    &>#tv-second-section-title {
+        font-weight: 600;
+        font-size: 3.62694vw;
+        color: var(--blue);
+        position: absolute;
+        top: 6.47668vw;
+        left: 6.47668vw;
+    }
+
+    &>.tv-second-section-text {
+        width: 87.04663vw;
+        font-weight: 500;
+        font-size: 3.10881vw;
+        line-height: 4.35233vw;
+        position: absolute;
+        left: 6.47668vw;
+        color: var(--blue);
+    }
+
+    &>#tv-second-section-text-0 {
+        top: 15.93264vw;
+        height: 13.21244vw;
+    }
+
+    &>#tv-second-section-text-1 {
+        top: 30.44041vw;
+        height: 8.80829vw;
+    }
+
+    &>#tv-second-section-img {
+        object-fit: contain;
+        width: 66.50259vw;
+        height: 50.51813vw;
+        position: absolute;
+        bottom: 25.51813vw;
+        left: 6.47668vw;
+    }
+
+    &>.tv-second-section-button {
+        position: absolute;
+        height: 5.82902vw;
+        left: 6.47668vw;
+
+        &>.tv-second-section-button-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+    }
+
+    &>#tv-second-section-button-contacts {
+        width: 73.38083vw;
+        bottom: 13.34197vw;
+        
+        &>p {
+            position: absolute;
+            left: 2.72021vw;
+            height: 5.56995vw;
+            font-weight: 600;
+            font-size: 2.59067vw;
+            display: flex;
+            align-items: center;
+            width: 45.59585vw;   
+            color: var(--blue);
+        }
+
+        &>.second-section-click {
+            object-fit: contain;
+            width: 4.66321vw;
+            height: 4.66321vw;
+            position: absolute;
+            right: 10.16839vw;
+            top: 0.64767vw;
+        }
+    }
+
+    &>#tv-second-section-button-services {
+        width: 78.23834vw;
+        bottom: 4.92228vw;
+        
+        &>p {
+            position: absolute;
+            left: 2.72021vw;
+            height: 5.56995vw;
+            font-weight: 600;
+            font-size: 2.59067vw;
+            display: flex;
+            align-items: center;
+            width: 54.92228vw;
+            color: var(--blue);
+        }
+        
+        &>.second-section-click {
+            object-fit: contain;
+            width: 4.66321vw;
+            height: 4.66321vw;
+            position: absolute;
+            right: 7.90155vw;
+            top: 0.64767vw;
+            
+        }
     }
 }

@@ -107,7 +107,7 @@ const thReviewsLowerImg = document.getElementById("th-reviews-lower-img");
 const thReviewsLowerUpperText = document.getElementById("th-reviews-lower-upper-text");
 const thReviewsLowerLowerText = document.getElementById("th-reviews-lower-lower-text");
 
-
+let thSelectCategory = "";
 
 let thSelectLang = "eng";
 const thLang = document.getElementById("th-navigation-block-lang-button");
@@ -189,6 +189,7 @@ const thRefreshDataForLocalization = () => {
         thInputPhone.style.fontFamily = "Lato";
         thInputPhone.style.fontSize = "1.94384vw";
         thInputPhone.style.lineHeight = "2.33261vw";
+        thInputEmail.placeholder = "Email";
         thInputEmail.style.fontFamily = "Lato";
         thInputEmail.style.fontSize = "1.94384vw";
         thInputEmail.style.lineHeight = "2.33261vw";
@@ -219,6 +220,7 @@ const thRefreshDataForLocalization = () => {
         thInputPhone.style.fontFamily = "";
         thInputPhone.style.fontSize = "";
         thInputPhone.style.lineHeight = "";
+        thInputEmail.placeholder = "Email";
         thInputEmail.style.fontFamily = "";
         thInputEmail.style.fontSize = "";
         thInputEmail.style.lineHeight = "";
@@ -280,7 +282,7 @@ const thFourthSectionChoiceOfServiceArrow = document.getElementById("th-choice-o
 const thFourthSectionChoiceOfServiceArrowPath = document.getElementById("th-choice-of-service-arrow-path");
 const thChoiceOfServicePlaceholder = document.getElementById("th-choice-of-service-placeholder");
 let thNumberOfService = 0;
-let thSelectCategory = "";
+
 
 const thDropListWrapper = document.getElementById("th-drop-list-wrapper");
 const capitalize = (str) => {
@@ -324,8 +326,16 @@ thInputFirstName.addEventListener('input', () => {
         thInputFirstName.style.color = "var(--blue)";
         allInputsHave();
     } else {
+        if (thSelectLang === "rus") {
+            thInputFirstName.placeholder = "Укажите ваше имя";
+            thInputFirstName.style.fontFamily = "Lato";
+            thInputFirstName.style.fontSize = "1.94384vw";
+        } else {
+            thInputFirstName.placeholder = "Enter your first name";
+            thInputFirstName.style.fontFamily = "";
+            thInputFirstName.style.fontSize = "";
+        }
         thInputFirstName.style.borderBottom = "0.10799vw solid var(--orangeRed)";
-        thInputFirstName.placeholder = "Enter your first name";
         thInputFirstName.classList = "th-input-placeholder";
         thInputFirstName.style.color = "var(--orangeRed)";
         voidInput();
@@ -345,9 +355,17 @@ thInputLastName.addEventListener('input', () => {
         allInputsHave();
     } else {
         thInputLastName.style.borderBottom = "0.10799vw solid var(--orangeRed)";
-        thInputLastName.placeholder = "Enter your last name";
         thInputLastName.classList = "th-input-placeholder";
         thInputLastName.style.color = "var(--orangeRed)";
+        if (thSelectLang === "rus") {
+            thInputLastName.placeholder = "Укажите вашу фамилию";
+            thInputLastName.style.fontFamily = "Lato";
+            thInputLastName.style.fontSize = "1.94384vw";
+        } else {
+            thInputLastName.placeholder = "Enter your last name";
+            thInputLastName.style.fontFamily = "";
+            thInputLastName.style.fontSize = "";
+        }
         voidInput();
     }
     thInputLastName.value = capitalize(editValue);
@@ -365,10 +383,19 @@ thInputPhone.addEventListener('input', () => {
         allInputsHave();
     } else {
         thInputPhone.style.borderBottom = "0.10799vw solid var(--orangeRed)";
-        thInputPhone.placeholder = "Enter your phone";
         thInputPhone.classList = "th-input-placeholder";
         thInputPhone.style.color = "var(--orangeRed)";
+        if (thSelectLang === "rus") {
+            thInputPhone.placeholder = "Напишите ваш телефон";
+            thInputPhone.style.fontFamily = "Lato";
+            thInputPhone.style.fontSize = "1.94384vw";
+        } else {
+            thInputPhone.placeholder = "Enter the phone number";
+            thInputPhone.style.fontFamily = "";
+            thInputPhone.style.fontSize = "";
+        }
         voidInput();
+
     }
     thInputPhone.value = capitalize(editValue);
 
@@ -387,9 +414,17 @@ thInputEmail.addEventListener('input', () => {
         allInputsHave();
     } else {
         thInputEmail.style.borderBottom = "0.10799vw solid var(--orangeRed)";
-        thInputEmail.placeholder = "Enter a valid email";
         thInputEmail.classList = "th-input-placeholder";
         thInputEmail.style.color = "var(--orangeRed)";
+        if (thSelectLang === "rus") {
+            thInputEmail.placeholder = "Введите корректный email";
+            thInputEmail.style.fontFamily = "Lato";
+            thInputEmail.style.fontSize = "1.94384vw";
+        } else {
+            thInputEmail.placeholder = "Enter a valid email";
+            thInputEmail.style.fontFamily = "";
+            thInputEmail.style.fontSize = "";
+        }
         voidInput();
     }
     thInputEmail.value = editValue;
@@ -401,13 +436,20 @@ let resultChecked = "";
 
 thSubmitButtonFourthSection.addEventListener('click', () => {
 
-
     if (!thInputFirstName.value.length) {
         resultChecked = false;
         thInputFirstName.style.borderBottom = "0.10799vw solid var(--orangeRed)";
         thInputFirstName.classList = "th-input-placeholder";
         thInputFirstName.style.color = "var(--orangeRed)";
-        thInputFirstName.placeholder = "Enter your first name";
+        if (thSelectLang === "rus") {
+            thInputFirstName.placeholder = "Укажите ваше имя";
+            thInputFirstName.style.fontFamily = "Lato";
+            thInputFirstName.style.fontSize = "1.94384vw";
+        } else {
+            thInputFirstName.placeholder = "Enter your first name";
+            thInputFirstName.style.fontFamily = "";
+            thInputFirstName.style.fontSize = "";
+        }
 
     } else {
         thInputFirstName.style.borderBottom = "0.10799vw solid var(--blue)";
@@ -420,7 +462,15 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         thInputLastName.style.borderBottom = "0.10799vw solid var(--orangeRed)";
         thInputLastName.classList = "th-input-placeholder";
         thInputLastName.style.color = "var(--orangeRed)";
-        thInputLastName.placeholder = "Enter your last name";
+        if (thSelectLang === "rus") {
+            thInputLastName.placeholder = "Укажите вашу фамилию";
+            thInputLastName.style.fontFamily = "Lato";
+            thInputLastName.style.fontSize = "1.94384vw";
+        } else {
+            thInputLastName.placeholder = "Enter your last name";
+            thInputLastName.style.fontFamily = "";
+            thInputLastName.style.fontSize = "";
+        }
 
     } else {
         thInputLastName.style.borderBottom = "0.10799vw solid var(--blue)";
@@ -432,7 +482,15 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         thInputPhone.style.borderBottom = "0.10799vw solid var(--orangeRed)";
         thInputPhone.classList = "th-input-placeholder";
         thInputPhone.style.color = "var(--orangeRed)";
-        thInputPhone.placeholder = "Enter your phone";
+        if (thSelectLang === "rus") {
+            thInputPhone.placeholder = "Напишите ваш телефон";
+            thInputPhone.style.fontFamily = "Lato";
+            thInputPhone.style.fontSize = "1.94384vw";
+        } else {
+            thInputPhone.placeholder = "Enter the phone number";
+            thInputPhone.style.fontFamily = "";
+            thInputPhone.style.fontSize = "";
+        }
 
     } else {
         thInputPhone.style.borderBottom = "0.10799vw solid var(--blue)";
@@ -444,7 +502,15 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         thInputEmail.style.borderBottom = "0.10799vw solid var(--orangeRed)";
         thInputEmail.classList = "th-input-placeholder";
         thInputEmail.style.color = "var(--orangeRed)";
-        thInputEmail.placeholder = "Enter a valid email";
+        if (thSelectLang === "rus") {
+            thInputEmail.placeholder = "Введите корректный email";
+            thInputEmail.style.fontFamily = "Lato";
+            thInputEmail.style.fontSize = "1.94384vw";
+        } else {
+            thInputEmail.placeholder = "Enter a valid email";
+            thInputEmail.style.fontFamily = "";
+            thInputEmail.style.fontSize = "";
+        }
     } else {
         thInputEmail.style.borderBottom = "0.10799vw solid var(--blue)";
         thInputEmail.style.color = "var(--blue)";
@@ -468,8 +534,15 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         thInputEmail.style.borderBottom = "0.10799vw solid var(--orangeRed)";
         thInputEmail.classList = "th-input-placeholder";
         thInputEmail.style.color = "var(--orangeRed)";
-        thInputEmail.placeholder = "Enter a valid email";
-
+        if (thSelectLang === "rus") {
+            thInputEmail.placeholder = "Введите корректный email";
+            thInputEmail.style.fontFamily = "Lato";
+            thInputEmail.style.fontSize = "1.94384vw";
+        } else {
+            thInputEmail.placeholder = "Enter a valid email";
+            thInputEmail.style.fontFamily = "";
+            thInputEmail.style.fontSize = "";
+        }
     } else {
         thInputEmail.style.borderBottom = "0.10799vw solid var(--blue)";
         thInputEmail.style.color = "var(--blue)";
@@ -482,7 +555,11 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         thMainSendFormTitle.style.color = "var(--orangeRed)";
         thFourSectionBlueGradient.style.opacity = "0";
         thFourSectionRedGradient.style.opacity = "1";
-        thFourSectionTitle.textContent = "Fill in all required fields";
+        if (thSelectLang === "rus") {
+            thFourSectionTitle.textContent = "Заполните все обязательные поля";
+        } else {
+            thFourSectionTitle.textContent = "Fill in all required fields";
+        }
         allInputsHave()
     } else {
         allInputsHave()
@@ -554,8 +631,13 @@ thPriceListXMark.addEventListener('click', () => {
 
 const thActivService = () => {
     const currentService = arrayPriceList[thActivNumber];
+    let currentTitle = currentService.title[thSelectLang];
 
-    thThirdSectionTitle.textContent = currentService.title[thSelectLang];
+    if (currentTitle === "Продвижение в соц. сетях") {
+        currentTitle = "Продвижение в социальных сетях"
+    }
+
+    thThirdSectionTitle.textContent = currentTitle;
 
     thThirdSectionImg.src = `/img/svg/tablet-horizontal/th-third-section-img ${currentService.title.eng}.svg`;
     thThirdSectionText0.textContent = currentService.description[thSelectLang][0];
