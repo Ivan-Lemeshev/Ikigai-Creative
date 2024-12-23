@@ -570,10 +570,9 @@ const tvChangeIdeasText = () => {
         tvNumberOfActivAnimation = (tvNumberOfActivAnimation + 1) % ideasArrayUp.length;
         tvCentralTextUp.textContent = ideasArrayUp[tvNumberOfActivAnimation][tvSelectLang];
         tvCentralTextDown.textContent = ideasArrayDown[tvNumberOfActivAnimation][tvSelectLang];
-        tvCentralImg.style.rotate = tvAngel + "deg";
+        tvCentralImg.style.transform = `rotate(${tvAngel}deg)`;
         tvCentralImg.style.opacity = "1";
         tvCentralText.style.opacity = "1";
-
     }, 500);
 };
 
@@ -640,3 +639,96 @@ const tvActivService = () => {
 }
 
 tvActivService();
+
+tvFourthSectionChoiceOfService.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const newDropListWrapper = document.createElement('div');
+    newDropListWrapper.id = "tv-drop-list";
+    tvDropListWrapper.style.height = "42.74611vw"
+
+    if (tvSelectLang === "eng") {
+        const actualityCategory = arrayPriceList.map((service) => service.title.eng).filter((textCategory) => {
+            return textCategory !== tvSelectCategory;
+        });
+        actualityCategory.forEach(textSelectCategoty => {
+            const newDropListPoint = document.createElement('div');
+            newDropListPoint.textContent = textSelectCategoty;
+            newDropListPoint.classList = "tv-drop-list-item";
+            newDropListPoint.id = textSelectCategoty;
+            newDropListPoint.style.fontFamily = "";
+
+            newDropListPoint.addEventListener('click', (event) => {
+
+                event.stopPropagation();
+                tvSelectCategory = textSelectCategoty;
+                tvChoiceOfServicePlaceholder.textContent = textSelectCategoty;
+                newDropListWrapper.style.opacity = "0";
+                tvFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+                tvFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+                newDropListWrapper.style.pointerEvents = "none";
+                tvChoiceServecesTitle.style.color = "";
+                tvChoiceOfServicePlaceholder.style.color = "";
+                tvFourthSectionChoiceOfService.style.borderBottomColor = "";
+                tvFourthSectionChoiceOfServiceArrowPath.style.fill = "#0285CC";
+                tvFourthSectionChoiceOfServiceArrowPath.style.stroke = "#0285CC";
+                if (resultChecked !== null) {
+                    allInputsHave();
+                }
+            });
+            newDropListWrapper.appendChild(newDropListPoint);
+
+        });
+    } else {
+        const actualityCategory = arrayPriceList.map((service) => service.title.rus).filter((textCategory) => {
+            return textCategory !== tvSelectCategory;
+        });
+        actualityCategory.forEach(textSelectCategoty => {
+            const newDropListPoint = document.createElement('div');
+            newDropListPoint.textContent = textSelectCategoty;
+            newDropListPoint.classList = "tv-drop-list-item";
+            newDropListPoint.id = textSelectCategoty;
+            newDropListPoint.style.fontFamily = "Lato";
+
+            newDropListPoint.addEventListener('click', (event) => {
+
+                event.stopPropagation();
+                tvSelectCategory = textSelectCategoty;
+                tvChoiceOfServicePlaceholder.textContent = textSelectCategoty;
+                newDropListWrapper.style.opacity = "0";
+                tvFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+                tvFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+                newDropListWrapper.style.pointerEvents = "none";
+                if (resultChecked !== null) {
+                    allInputsHave();
+                }
+
+
+            });
+            newDropListWrapper.appendChild(newDropListPoint);
+
+        });
+
+    }
+
+    newDropListWrapper.style.opacity = "1";
+    tvFourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
+    tvFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 0)";
+    newDropListWrapper.style.pointerEvents = "all";
+    tvChoiceOfServicePlaceholder.style.color = "var(--blue)";
+    const possibleDublicate = document.getElementById("tv-drop-list");
+    if (possibleDublicate) {
+        tvDropListWrapper.removeChild(possibleDublicate);
+    }
+    tvDropListWrapper.appendChild(newDropListWrapper);
+
+    document.addEventListener('click', () => {
+        if (!tvSelectCategory) {
+            tvChoiceOfServicePlaceholder.style.color = "var(--darkBlue)";
+        };
+        newDropListWrapper.style.opacity = "0";
+        tvDropListWrapper.style.height = "";
+        tvFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+        newDropListWrapper.style.pointerEvents = "none";
+        tvFourthSectionChoiceOfServiceArrow.style.rotate = "";
+    });
+});

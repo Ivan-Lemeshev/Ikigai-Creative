@@ -15,7 +15,7 @@
         object-fit: contain;
         width: 64.79482vw;
         height: 64.79482vw;
-        transition: rotate 1.8s ease-in-out;
+        transition: transform 1.8s ease-in-out;
     }
 
     &>#th-first-section-logo {

@@ -574,7 +574,7 @@ const thChangeIdeasText = () => {
         thNumberOfActivAnimation = (thNumberOfActivAnimation + 1) % ideasArrayUp.length;
         thCentralTextUp.textContent = ideasArrayUp[thNumberOfActivAnimation][thSelectLang];
         thCentralTextDown.textContent = ideasArrayDown[thNumberOfActivAnimation][thSelectLang];
-        thCentralImg.style.rotate = thAngel + "deg";
+        thCentralImg.style.transform = `rotate(${thAngel}deg)`;
         thCentralImg.style.opacity = "1";
         thCentralText.style.opacity = "1";
 
