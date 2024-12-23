@@ -570,7 +570,7 @@ const tvChangeIdeasText = () => {
         tvNumberOfActivAnimation = (tvNumberOfActivAnimation + 1) % ideasArrayUp.length;
         tvCentralTextUp.textContent = ideasArrayUp[tvNumberOfActivAnimation][tvSelectLang];
         tvCentralTextDown.textContent = ideasArrayDown[tvNumberOfActivAnimation][tvSelectLang];
-        tvCentralImg.style.transform = `rotate(${tvAngel}deg)`;
+        tvCentralImg.style.transform = `rotate(${tvAngel}deg)`;     
         tvCentralImg.style.opacity = "1";
         tvCentralText.style.opacity = "1";
     }, 500);

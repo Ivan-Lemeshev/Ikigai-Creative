@@ -12,6 +12,7 @@
         object-fit: contain;
         width: 77.72021vw;
         height: 77.72021vw;
+        transform: rotate(0deg);
         transition: transform 1.8s ease-in-out;
     }
 
@@ -570,6 +571,8 @@
         font-size: 2.33161vw;
         line-height: 3.03109vw;
         color: var(--secondBlue);
+        text-rendering: optimizeLegibility;
+        will-change: transform;
     }
 
     &>#tv-third-section-text-about-service-1 {
