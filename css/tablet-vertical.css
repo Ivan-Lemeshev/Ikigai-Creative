@@ -122,7 +122,6 @@
         right: 2.59067vw;
         font-weight: 600;
         font-size: min(3.10881vw, 2.59179dvh);
-        line-height: 2.59179dvh;
         color: var(--secondBlue);
         overflow: visible;
     }
@@ -397,87 +396,87 @@
         top: 0;
         left: 0;
         width: 100vw;
-        height: 83.36933vw;
+        height: 119.94819vw;
         display: none;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
-        backdrop-filter: blur(1.9900497512437811vw);
+        backdrop-filter: blur(1.29534vw);
 
         &>#tv-price-list-block {
-            width: 53.99568vw;
-            height: 64.79482vw;
+            width: 64.76684vw;
+            height: 77.72021vw;
             position: absolute;
-            top: 9.28726vw;
-            left: 23.00216vw;
+            top: 21.11399vw;
+            left: 17.61658vw;
             background: rgba(0, 63, 98, 0.4);
-            border: 0.24875621890547264vw solid var(--darkBlue);
-            backdrop-filter: blur(1.07991vw);
+            border: 0.12953vw solid var(--darkBlue);
+            backdrop-filter: blur(1.29534vw);
 
             &>#tv-price-list-title {
                 position: absolute;
-                top: 3.23974vw;
-                left: 3.23974vw;
-                width: 18.89849vw;
-                height: 3.56371vw;
-                font-size: 3.02376vw;
+                top: 3.88601vw;
+                left: 3.88601vw;
+                width: 22.66839vw;
+                height: 4.27461vw;
+                font-size: 3.62694vw;
                 font-weight: 400;
-                line-height: 3.02376vw;
+                line-height: 3.62694vw;
                 color: #EAF8FF;
             }
 
             &>#tv-price-list-x-mark {
                 position: absolute;
-                top: 3.88769vw;
-                right: 3.23974vw;
-                width: 2.15983vw;
-                height: 2.15983vw;
+                top: 4.66321vw;
+                right: 3.88601vw;
+                width: 2.59067vw;
+                height: 2.59067vw;
                 object-fit: contain;
                 pointer-events: all;
             }
 
             &>#tv-price-list-title-line {
                 position: absolute;
-                top: 8.42333vw;
-                left: 3.23974vw;
-                width: 47.5162vw;
-                height: 0.10799vw;
+                top: 10.10363vw;
+                left: 3.88601vw;
+                width: 56.99482vw;
+                height: 0.12953vw;
                 background: rgba(0, 154, 236, 0.6)
             }
 
             &>#tv-price-list-item-wrapper {
-                width: 47.5162vw;
-                height: 37.90497vw;
+                width: 56.99482vw;
+                height: 45.46632vw;
                 position: absolute;
-                top: 11.66307vw;
-                left: 3.23974vw;
+                top: 13.98964vw;
+                left: 3.88601vw;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 overflow: visible;
 
                 &>.tv-price-list-item {
-                    width: 47.5162vw;
-                    height: 3.56371vw;
+                    width: 56.99482vw;
+                    height: 4.27461vw;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     overflow: visible;
                     color: #EAF8FF;
-                    font-size: 2.37581vw;
-                    line-height: 2.37581vw;
+                    font-size: 2.84974vw;
+                    line-height: 2.84974vw;
                     font-weight: 300;
 
                     &>.tv-price-list-service-name {
-                        width: 36.71706vw;
-                        height: 3.56371vw;
+                        width: 44.04145vw;
+                        height: 4.27461vw;
                         overflow: visible;
                         display: flex;
                         align-items: center;
                     }
 
                     &>.tv-price-list-service-cost {
-                        width: 6.47948vw;
-                        height: 3.56371vw;
+                        width: 7.77202vw;
+                        height: 4.27461vw;
                         display: flex;
                         align-items: center;
                     }
@@ -486,22 +485,22 @@
 
             &>#tv-price-list-footer-line {
                 position: absolute;
-                bottom: 11.98704vw;
-                left: 3.23974vw;
-                width: 47.5162vw;
-                height: 0.10799vw;
+                bottom: 14.37824vw;
+                left: 3.88601vw;
+                width: 56.99482vw;
+                height: 0.12953vw;
                 background: rgba(0, 154, 236, 0.6)
             }
 
             &>#tv-price-list-footer {
-                width: 47.5162vw;
-                height: 7.34341vw;
+                width: 56.99482vw;
+                height: 8.80829vw;
                 position: absolute;
-                bottom: 2.4838vw;
-                left: 3.23974vw;
-                font-size: 1.94384vw;
+                bottom: 2.97927vw;
+                left: 3.88601vw;
+                font-size: 2.33161vw;
                 font-weight: 300;
-                line-height: 2.72138vw;
+                line-height: 3.26425vw;
                 color: #EAF8FF;
                 overflow: visible;
             }
@@ -952,4 +951,330 @@
         }
     }
 
+}
+
+#tv-five-section {
+    position: relative;
+    overflow: visible;
+    width: 100vw;
+    height: 119.94819vw;
+
+    &>#tv-five-section-title {
+        position: absolute;
+        top: 6.47668vw;
+        left: 6.47668vw;
+        width: 34.97409vw;
+        height: 4.53368vw;
+        font-weight: 400;
+        font-size: 3.62694vw;
+        line-height: 3.62694vw;
+        color: var(--blue);
+    }
+
+    &>#tv-five-section-button-left {
+        position: absolute;
+        object-fit: contain;
+        bottom: 15.41451vw;
+        right: 17.61658vw;
+        width: 3.88601vw;
+        height: 7.77202vw;
+        pointer-events: all;
+        z-index: 3;
+    }
+
+    &>#tv-five-section-button-right {
+        position: absolute;
+        object-fit: contain;
+        bottom: 15.41451vw;
+        right: 6.47668vw;
+        width: 3.88601vw;
+        height: 7.77202vw;
+        pointer-events: all;
+        z-index: 3;
+    }
+
+    &>#tv-reviews-wrapper-left {
+        width: 42.74611vw;
+        min-height: 89.89637vw;
+        position: absolute;
+        top: 14.63731vw;
+        left: 6.47668vw;
+        overflow: visible;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out, left 0.5s ease-in-out;
+
+        &>#tv-reviews-photo-left {
+            pointer-events: none;
+            width: 12.95337vw;
+            height: 16.58031vw;
+            border: 0.12953vw solid rgba(0, 154, 236, 0.5);
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+        }
+
+        &>.tv-reviews-wrapper-text {
+            display: flex;
+            min-height: 87.04663vw;
+            width: 33.67876vw;
+            position: absolute;
+            left: 0;
+            top: 2.84974vw;
+            flex-wrap: wrap;
+            line-height: 3.10881vw;
+            overflow: visible;
+            border: 1px solid rgba(0, 154, 236, 0.5);
+            background: rgba(0, 83, 128, 0.05);
+
+            &>.tv-reviews-name {
+                font-weight: 400;
+                font-size: 2.59067vw;
+                color: var(--lightBlue);
+                width: 23.31606vw;
+                height: 3.10881vw;
+                position: absolute;
+                left: 2.59067vw;
+                top: 2.59067vw;
+            }
+
+
+            &>.tv-reviews-text {
+                font-weight: 300;
+                font-size: 2.59067vw;
+                line-height: 3.10881vw;
+                color: var(--blue);
+                margin-top: 7.77202vw;
+                margin-left: 2.59067vw;
+                width: 25.90674vw;
+            }
+
+            &>.tv-second-reviews-text {
+                font-weight: 300;
+                font-size: 2.59067vw;
+                line-height: 3.10881vw;
+                color: var(--blue);
+                margin-left: 2.59067vw;
+                width: 25.90674vw;
+            }
+        }
+    }
+
+    &>#tv-reviews-wrapper-right {
+        width: 42.74611vw;
+        min-height: 89.89637vw;
+        position: absolute;
+        top: 3.62694vw;
+        left: 50.7772vw;
+        overflow: visible;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out, left 0.5s ease-in-out;
+
+
+        &>#tv-reviews-photo-right {
+            pointer-events: none;
+            width: 12.95337vw;
+            height: 16.58031vw;
+            border: 0.12953vw solid rgba(0, 154, 236, 0.5);
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+        }
+
+        &>.tv-reviews-wrapper-text {
+            display: flex;
+            min-height: 87.04663vw;
+            width: 33.67876vw;
+            position: absolute;
+            left: 0;
+            top: 2.84974vw;
+            flex-wrap: wrap;
+            line-height: 3.10881vw;
+            overflow: visible;
+            border: 1px solid rgba(0, 154, 236, 0.5);
+            background: rgba(0, 83, 128, 0.05);
+
+            &>.tv-reviews-name {
+                font-weight: 400;
+                font-size: 2.59067vw;
+                color: var(--lightBlue);
+                width: 23.31606vw;
+                height: 3.10881vw;
+                position: absolute;
+                left: 2.59067vw;
+                top: 2.59067vw;
+            }
+
+
+            &>.tv-reviews-text {
+                font-weight: 300;
+                font-size: 2.59067vw;
+                line-height: 3.10881vw;
+                color: var(--blue);
+                margin-top: 7.77202vw;
+                margin-left: 2.59067vw;
+                width: 25.90674vw;
+            }
+
+            &>.tv-second-reviews-text {
+                font-weight: 300;
+                font-size: 2.59067vw;
+                line-height: 3.10881vw;
+                color: var(--blue);
+                margin-left: 2.59067vw;
+                width: 25.90674vw;
+            }
+        }
+    }
+}
+
+#tv-footer-eng {
+    width: 100vw;
+    height: 7.77202vw;
+    position: relative;
+    overflow: visible;
+
+
+    &>#tv-footer-eng-0 {
+        width: 11.65803vw;
+        height: 7.77202vw;
+        position: absolute;
+        left: 6.73575vw;
+        font-size: 3.36788vw;
+        font-weight: 700;
+        line-height: 3.36788vw;
+        letter-spacing: 0.1em;
+        color: var(--blue);
+        overflow: visible;
+        display: flex;
+        align-items: center;
+    }
+
+    &>#tv-footer-eng-1 {
+        width: 9.84456vw;
+        height: 7.77202vw;
+        position: absolute;
+        left: 24.87047vw;
+        font-size: 3.36788vw;
+        font-weight: 700;
+        line-height: 3.36788vw;
+        letter-spacing: 0.1em;
+        color: var(--blue);
+        overflow: visible;
+        display: flex;
+        align-items: center;
+    }
+
+    &>#tv-footer-eng-2 {
+        width: 16.83938vw;
+        height: 7.77202vw;
+        position: absolute;
+        left: 41.19171vw;
+        font-size: 3.36788vw;
+        font-weight: 700;
+        line-height: 3.36788vw;
+        letter-spacing: 0.1em;
+        color: var(--blue);
+        overflow: visible;
+        display: flex;
+        align-items: center;
+    }
+
+    &>#tv-footer-eng-3 {
+        width: 7.64249vw;
+        height: 7.77202vw;
+        position: absolute;
+        left: 64.50777vw;
+        font-size: 3.36788vw;
+        font-weight: 700;
+        line-height: 3.36788vw;
+        letter-spacing: 0.1em;
+        color: var(--blue);
+        overflow: visible;
+        display: flex;
+        align-items: center;
+    }
+
+    &>#tv-footer-eng-4 {
+        width: 14.63731vw;
+        height: 7.77202vw;
+        position: absolute;
+        left: 78.62694vw;
+        font-size: 3.36788vw;
+        font-weight: 700;
+        line-height: 3.36788vw;
+        letter-spacing: 0.1em;
+        color: var(--blue);
+        overflow: visible;
+        display: flex;
+        align-items: center;
+    }
+}
+
+#tv-footer-rus {
+    width: 100vw;
+    height: 7.77202vw;
+    position: relative;
+    display: none;
+
+    &>#tv-footer-rus-0 {
+        position: absolute;
+        left: 8.80829vw;
+        width: 11.65803vw;
+        height: 7.77202vw;
+        font-size: 3.36788vw;
+        font-weight: 700;
+        line-height: 3.36788vw;
+        letter-spacing: 0.1em;
+        color: var(--blue);
+        font-family: 'Lato';
+        display: flex;
+        align-items: center;
+    }
+
+    &>#tv-footer-rus-1 {
+        position: absolute;
+        left: 29.14508vw;
+        width: 18.65285vw;
+        height: 7.77202vw;
+        font-size: 3.36788vw;
+        font-weight: 700;
+        line-height: 3.36788vw;
+        letter-spacing: 0.1em;
+        color: var(--blue);
+        font-family: 'Lato';
+        display: flex;
+        align-items: center;
+    }
+
+    &>#tv-footer-rus-2 {
+        position: absolute;
+        left: 56.47668vw;
+        width: 17.22798vw;
+        height: 7.77202vw;
+        font-size: 3.36788vw;
+        font-weight: 700;
+        line-height: 3.36788vw;
+        letter-spacing: 0.1em;
+        color: var(--blue);
+        font-family: 'Lato';
+        display: flex;
+        align-items: center;
+    }
+
+    &>#tv-footer-rus-3 {
+        position: absolute;
+        left: 82.38342vw;
+        width: 8.80829vw;
+        height: 7.77202vw;
+        font-size: 3.36788vw;
+        font-weight: 700;
+        line-height: 3.36788vw;
+        letter-spacing: 0.1em;
+        color: var(--blue);
+        font-family: 'Lato';
+        display: flex;
+        align-items: center;
+    }
 }

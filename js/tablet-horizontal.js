@@ -283,8 +283,8 @@ const thFourthSectionChoiceOfServiceArrowPath = document.getElementById("th-choi
 const thChoiceOfServicePlaceholder = document.getElementById("th-choice-of-service-placeholder");
 let thNumberOfService = 0;
 
-
 const thDropListWrapper = document.getElementById("th-drop-list-wrapper");
+
 const capitalize = (str) => {
     return str.split(' ')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -590,10 +590,6 @@ thLang.addEventListener('click', () => {
 })
 
 thSecondSectionButtonServices.addEventListener('click', () => {
-    thNavigationBlock.style.right = "";
-    setTimeout(() => {
-        thNavigationBlock.style.display = "";
-    }, 500);
     window.scrollTo({
         top: window.innerWidth * 1.7,
         behavior: 'smooth'
@@ -601,10 +597,6 @@ thSecondSectionButtonServices.addEventListener('click', () => {
 })
 
 thSecondSectionButtonContacts.addEventListener('click', () => {
-    thNavigationBlock.style.right = "";
-    setTimeout(() => {
-        thNavigationBlock.style.display = "";
-    }, 500);
     window.scrollTo({
         top: window.innerWidth * 2.5,
         behavior: 'smooth'
