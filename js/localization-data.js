@@ -1213,6 +1213,266 @@ const localizationWrapper = {
         }
     },
 
+    "tv-navigation-block-lang-button": {
+        rus: "Rus",
+        eng: "Eng",
+        styles: {
+            fontSize: "2.84974vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-navigation-block-title": {
+        rus: "Навигация",
+        eng: "Navigation",
+        styles: {
+            fontSize: "2.84974vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-navigation-block-item-title-0": {
+        rus: "Интро",
+        eng: "Intro",
+        styles: {
+            fontSize: "2.84974vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-navigation-block-item-text-0": {
+        rus: "В этом разделе вас встретит наш великолепный логотип.",
+        eng: "In this section you will be greeted by our gorgeous logo.",
+        styles: {
+            fontSize: "2.33161vw",
+            fontWeight: "",
+            lineHeight: "2.79793vw"
+        }
+    },
+
+    "tv-navigation-block-item-title-1": {
+        rus: "Кто Мы",
+        eng: "About us",
+        styles: {
+            fontSize: "2.84974vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-navigation-block-item-text-1": {
+        rus: "Узнайте: кто мы, чем занимаемся и как воплощаем мечты в жизнь.",
+        eng: "Discover who we are, what we do, and how we bring digital innovation to life.",
+        styles: {
+            fontSize: "2.33161vw",
+            fontWeight: "",
+            lineHeight: "2.79793vw"
+        }
+    },
+
+    "tv-navigation-block-item-title-2": {
+        rus: "Услуги",
+        eng: "Services",
+        styles: {
+            fontSize: "2.84974vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-navigation-block-item-text-2": {
+        rus: "Ознакомьтесь со списком наших услуг, призванных обеспечить ваш цифровой успех.",
+        eng: "Explore our range of cutting-edge solutions designed to drive your digital success.",
+        styles: {
+            fontSize: "2.33161vw",
+            fontWeight: "",
+            lineHeight: "2.79793vw"
+        }
+    },
+
+    "tv-navigation-block-item-title-3": {
+        rus: "Контакты",
+        eng: "Contacts",
+        styles: {
+            fontSize: "2.84974vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-navigation-block-item-text-3": {
+        rus: "Каждый запрос делает мир ярче. Давайте вместе создадим что-то невероятное!",
+        eng: "Every request makes the world brighter. Let’s create something incredible together!",
+        styles: {
+            fontSize: "2.33161vw",
+            fontWeight: "",
+            lineHeight: "2.79793vw"
+        }
+    },
+
+    "tv-navigation-block-item-title-4": {
+        rus: "Отзывы",
+        eng: "Reviews",
+        styles: {
+            fontSize: "2.84974vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-navigation-block-item-text-4": {
+        rus: "Критика делает нас лучше, а похвала - счастливее.",
+        eng: "Criticism makes us better, while praise makes us happiers. ",
+        styles: {
+            fontSize: "2.33161vw",
+            fontWeight: "",
+            lineHeight: "2.79793vw"
+        }
+    },
+
+    "tv-second-section-title": {
+        rus: "Кто Мы",
+        eng: "Who We Are",
+        styles: {
+            fontSize: "3.36788vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-second-section-text-0": {
+        rus: "Креативное агентство с более чем 10-летним опытом работы, помогающее малому и среднему бизнесу реализовывать цифровые проекты.",
+        eng: "Сreative agency with over 10 years of experience helping small and medium-sized businesses achieve success through digital projects. ",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-second-section-text-1": {
+        rus: "Мы специализируемся  на веб-дизайне, разработке, брендинге, продвижении и видеопроизводстве.",
+        eng: "We specialize in web design, development, branding, promotion, and video production.",
+        styles: {
+            fontSize: "",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-second-section-button-contacts-text": {
+        rus: "Веб-форма и контакты для связи с нами",
+        eng: "Web form and contacts to contact us",
+        styles: {
+            fontSize: "2.33161vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-second-section-button-services-text": {
+        rus: "С радостью представляем  список наших услуг",
+        eng: "List of our services to familiarise yourself with",
+        styles: {
+            fontSize: "2.33161vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-third-section-title": {
+        rus: "Наши услуги",
+        eng: "Our services",
+        styles: {
+            fontSize: "3.36788vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-price-list-title": {
+        rus: "Прайс-лист",
+        eng: "Price list",
+        styles: {
+            fontSize: "3.36788vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-price-list-footer": {
+        rus: "Цены ориентировочные — точная стоимость зависит от ваших пожеланий и особенностей заказа. Мы всегда готовы обсудить детали и предложить оптимальное решение!",
+        eng: "Prices are indicative and serve as a starting point. Each project is unique, so we’ll tailor the final cost to match your specific needs. Let’s discuss the details together!",
+        styles: {
+            fontSize: "2.07254vw",
+            fontWeight: "",
+            lineHeight: "2.90155vw"
+        }
+    },
+
+    "tv-four-section-title": {
+        rus: "Свяжитесь с нами",
+        eng: "Contact us",
+        styles: {
+            fontSize: "3.36788vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-main-send-form-title": {
+        rus: "Отправить сообщение",
+        eng: "Send a Message",
+        styles: {
+            fontSize: "2.84974vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-choice-serveces-title": {
+        rus: "Заинтересовавшая вас услуга:",
+        eng: "The service you're interested in:",
+        styles: {
+            fontSize: "2.33161vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-choice-of-service-placeholder": {
+        rus: "Выбрать услугу",
+        eng: "Choose a service",
+        styles: {
+            fontSize: "2.33161vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-send-form-submit": {
+        rus: "Отправить",
+        eng: "Submit",
+        styles: {
+            fontSize: "2.59067vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
+    "tv-five-section-title": {
+        rus: "Отзывы",
+        eng: "Reviews",
+        styles: {
+            fontSize: "3.36788vw",
+            fontWeight: "",
+            lineHeight: ""
+        }
+    },
+
 }
 
 export default localizationWrapper;

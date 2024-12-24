@@ -85,6 +85,8 @@
         width: 77.72021vw;
         height: 5.82902vw;
         object-fit: contain;
+        text-rendering: optimizeLegibility;
+        will-change: transform;
     }
 }
 
@@ -741,7 +743,7 @@
     }
 
     &>#tv-four-section-title {
-        width: 40.15544vw;
+        width: 54.15544vw;
         height: 4.53368vw;
         font-weight: 400;
         font-size: 3.62694vw;
