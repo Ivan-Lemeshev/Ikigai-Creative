@@ -243,7 +243,7 @@ const tvRefreshDataForLocalization = () => {
             tvThirdSectionTitle.style.fontSize = "2.84974vw";
             tvThirdSectionText0.textContent = current.description.rus[0];
             tvThirdSectionText0.style.fontFamily = "Lato";
-            tvThirdSectionText0.style.fontSize = "2.07254vw";   
+            tvThirdSectionText0.style.fontSize = "2.07254vw";
             tvThirdSectionText0.style.lineHeight = "2.6943vw";
             tvThirdSectionText1.textContent = current.description.rus[1];
             tvThirdSectionText1.style.fontFamily = "Lato";
@@ -567,7 +567,7 @@ const tvChangeIdeasText = () => {
         tvNumberOfActivAnimation = (tvNumberOfActivAnimation + 1) % ideasArrayUp.length;
         tvCentralTextUp.textContent = ideasArrayUp[tvNumberOfActivAnimation][tvSelectLang];
         tvCentralTextDown.textContent = ideasArrayDown[tvNumberOfActivAnimation][tvSelectLang];
-        tvCentralImg.style.transform = `rotate(${tvAngel}deg)`;     
+        tvCentralImg.style.transform = `rotate(${tvAngel}deg)`;
         tvCentralImg.style.opacity = "1";
         tvCentralText.style.opacity = "1";
     }, 500);
@@ -855,3 +855,59 @@ tvReviewsArrowLeft.addEventListener('click', () => {
 tvReviewsArrowRight.addEventListener('click', () => {
     upperloadReviews(++number, false)
 })
+
+
+let scrollLvl = 0;
+const visableBlocks = 5;
+const tvThirdSection = document.getElementById("tv-third-section");
+const buffer = [];
+const gapDivs = 2.59067;
+const startDivTop = -23.31606;
+const divHeight = 20.72539;
+
+const resetBlocks = () => {
+    while (buffer.length > 0) {
+        tvThirdSection.removeChild(buffer.shift().link)
+    }
+    
+}
+console.log(tvActivNumber)
+const createDivBlocks = () => {
+
+    let i = scrollLvl % (arrayPriceList.length);
+
+    while (buffer.length < (visableBlocks + 2)) {
+        if (i !== tvActivNumber) {
+            const div = document.createElement('div');
+            
+            const service = arrayPriceList[i];
+            const divImg = document.createElement('img');
+            const divH3 = document.createElement('h3');
+
+            div.id = `tv-third-section-right-services-${buffer.length}`;
+            div.classList = "tv-third-section-right-services";
+            div.style.top = startDivTop + (gapDivs + divHeight) * buffer.length + "vw";
+            divImg.src = `/img/svg/tablet-vertical/src/${service.title.eng}`;
+            divH3.textContent = service.title[tvSelectLang]
+            div.appendChild(divImg);
+            div.appendChild(divH3);
+            tvThirdSection.appendChild(div);
+
+            div.addEventListener('click', () => {
+                tvActivNumber = buffer[Math.round(Number(div.id[div.id.length - 1]))].serviceId;
+                tvActivService();
+                resetBlocks();
+                createDivBlocks();
+            })
+
+            buffer.push({
+                serviceId: i,
+                link: document.getElementById(div.id)
+            })
+        }
+
+        i = (i + 1) % (arrayPriceList.length);
+    }
+}
+
+createDivBlocks();
