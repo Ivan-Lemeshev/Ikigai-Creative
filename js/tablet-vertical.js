@@ -83,10 +83,7 @@ const tvCentralTextDown = document.getElementById("tv-central-text-first-section
 const tvSecondSectionButtonServices = document.getElementById("tv-second-section-button-services");
 const tvSecondSectionButtonContacts = document.getElementById("tv-second-section-button-contacts");
 const tvThirdSectionButtonOfPriceList = document.getElementById("tv-price-list-button");
-const tvThirdSectionButtonOfConsultation = document.getElementById("tv-consultation-button");
-const tvThirdSectionButtonOfReview = document.getElementById("tv-review-button");
-const tvThirdSectionButtonOfQuestion = document.getElementById("tv-question-button");
-const tvThirdSectionButtonOfOrder = document.getElementById("tv-order-button");
+
 const tvPriceListWrapper = document.getElementById("tv-price-list-wrapper");
 const tvPriceListXMark = document.getElementById("tv-price-list-x-mark");
 
@@ -303,7 +300,7 @@ const allInputsHave = () => {
         tvFourSectionTitle.textContent = "Contact us";
         tvFourSectionTitle.style.color = "";
         tvMainSendForm.style.border = "";
-        tvMainSendForm.style.Backgroundcolor = "";
+        tvMainSendForm.style.backgroundColor = "";
         tvMainSendFormTitle.style.color = "";
         tvFourSectionBlueGradient.style.opacity = "1";
         tvFourSectionRedGradient.style.opacity = "0";
@@ -732,3 +729,129 @@ tvFourthSectionChoiceOfService.addEventListener('click', (event) => {
         tvFourthSectionChoiceOfServiceArrow.style.rotate = "";
     });
 });
+
+const tvSetupAndTranslateForSelectService = (event) => {
+    event.preventDefault();
+    window.scrollTo({
+        top: window.innerWidth * 3.6,
+        behavior: 'smooth'
+    });
+
+    if (tvSelectLang === "eng") {
+        tvTextarea.textContent = textForApplication.eng[tvNumberOfService];
+        let selCat = arrayPriceList.map((service) => service.title.eng)[tvActivNumber];
+        if (selCat !== tvSelectCategory && arrayPriceList.map((service) => service.title.eng).includes(selCat)) {
+            tvChoiceOfServicePlaceholder.textContent = selCat;
+            tvFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+            tvFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+            tvChoiceOfServicePlaceholder.style.color = "var(--blue)";
+            tvSelectCategory = selCat;
+            allInputsHave();
+        }
+    } else {
+        tvTextarea.textContent = textForApplication.rus[tvNumberOfService];
+        let selCat = arrayPriceList.map((service) => service.title.rus)[tvActivNumber];
+        if (selCat !== tvSelectCategory && arrayPriceList.map((service) => service.title.rus).includes(selCat)) {
+            tvChoiceOfServicePlaceholder.textContent = selCat;
+            tvFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+            tvFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+            tvChoiceOfServicePlaceholder.style.color = "var(--blue)";
+            tvSelectCategory = selCat;
+            allInputsHave();
+        }
+    }
+}
+
+const tvThirdSectionButtonOfConsultation = document.getElementById("tv-consultation-button");
+const tvThirdSectionButtonOfReview = document.getElementById("tv-review-button");
+const tvThirdSectionButtonOfQuestion = document.getElementById("tv-question-button");
+const tvThirdSectionButtonOfOrder = document.getElementById("tv-button-more-lower-part-buttons-3");
+
+
+tvThirdSectionButtonOfOrder.addEventListener('click', (event) => {
+    event.preventDefault();
+    tvNumberOfService = tvActivNumber;
+    tvSetupAndTranslateForSelectService(event);
+    tvTextarea.textContent = textForApplication.eng[0]
+})
+
+tvThirdSectionButtonOfConsultation.addEventListener('click', (event) => {
+    event.preventDefault();
+    tvNumberOfService = tvActivNumber;
+    tvSetupAndTranslateForSelectService(event);
+    tvTextarea.textContent = textForApplication[tvSelectLang][1]
+})
+
+tvThirdSectionButtonOfQuestion.addEventListener('click', (event) => {
+    event.preventDefault();
+    tvNumberOfService = tvActivNumber;
+    tvSetupAndTranslateForSelectService(event);
+    tvTextarea.textContent = textForApplication[tvSelectLang][2]
+})
+
+tvThirdSectionButtonOfReview.addEventListener('click', (event) => {
+    event.preventDefault();
+    tvNumberOfService = tvActivNumber;
+    tvSetupAndTranslateForSelectService(event);
+    tvTextarea.textContent = textForApplication[tvSelectLang][3]
+})
+
+
+const tvReviewsArrowLeft = document.getElementById("tv-five-section-button-left");
+const tvReviewsArrowRight = document.getElementById("tv-five-section-button-right");
+
+let number = 0;
+let float = false;
+
+const upperloadReviews = (numberActivReviews, direction) => {
+    if (!float) {
+        number = numberActivReviews >= 0 ? numberActivReviews % reviews.length : (reviews.length - 1);
+        const data = reviews[number];
+        float = true;
+        tvUpperBlock.style.opacity = "0";
+        tvLowerBlock.style.opacity = "0";
+        if (direction) {
+            tvUpperBlock.style.left = "-6vw";
+            tvLowerBlock.style.left = "35vw";
+        } else {
+            tvUpperBlock.style.left = "19vw";
+            tvLowerBlock.style.left = "60vw";
+        }
+        setTimeout(() => {
+            tvUpperBlock.style.opacity = "";
+            tvLowerBlock.style.opacity = "";
+            tvUpperBlock.style.left = "";
+            tvLowerBlock.style.left = "";
+            float = false;
+        }, 500);
+        setTimeout(() => {
+            if (tvSelectLang === "eng") {
+                tvReviewsUpperName.textContent = data.top.title.eng;
+                tvReviewsUpperUpperText.textContent = data.top.upperText.eng;
+                tvReviewsUpperLowerText.textContent = data.top.lowerText.eng;
+                tvReviewsLowerName.textContent = data.bottom.title.eng;
+                tvReviewsLowerUpperText.textContent = data.bottom.upperText.eng;
+                tvReviewsLowerLowerText.textContent = data.bottom.lowerText.eng;
+            } else {
+                tvReviewsUpperName.textContent = data.top.title.rus;
+                tvReviewsUpperUpperText.textContent = data.top.upperText.rus;
+                tvReviewsUpperLowerText.textContent = data.top.lowerText.rus;
+                tvReviewsLowerName.textContent = data.bottom.title.rus;
+                tvReviewsLowerUpperText.textContent = data.bottom.upperText.rus;
+                tvReviewsLowerLowerText.textContent = data.bottom.lowerText.rus;
+            }
+            tvReviewsUpperImg.src = `/img/png/reviews-img-${data.top.title.eng}.png`;
+            tvReviewsLowerImg.src = `/img/png/reviews-img-${data.bottom.title.eng}.png`;
+        }, 400);
+    }
+}
+
+upperloadReviews(0);
+
+tvReviewsArrowLeft.addEventListener('click', () => {
+    upperloadReviews(--number, true)
+})
+
+tvReviewsArrowRight.addEventListener('click', () => {
+    upperloadReviews(++number, false)
+})
