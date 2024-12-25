@@ -859,7 +859,7 @@ tvReviewsArrowRight.addEventListener('click', () => {
 
 let scrollLvl = 0;
 const visableBlocks = 5;
-const tvThirdSection = document.getElementById("tv-third-section");
+const tvThirdSectionRightServicesWrapper = document.getElementById("tv-third-section-right-services-wrapper");
 const buffer = [];
 const gapDivs = 2.59067;
 const startDivTop = -23.31606;
@@ -867,11 +867,11 @@ const divHeight = 20.72539;
 
 const resetBlocks = () => {
     while (buffer.length > 0) {
-        tvThirdSection.removeChild(buffer.shift().link)
+        tvThirdSectionRightServicesWrapper.removeChild(buffer.shift().link)
     }
     
 }
-console.log(tvActivNumber)
+
 const createDivBlocks = () => {
 
     let i = scrollLvl % (arrayPriceList.length);
@@ -887,11 +887,11 @@ const createDivBlocks = () => {
             div.id = `tv-third-section-right-services-${buffer.length}`;
             div.classList = "tv-third-section-right-services";
             div.style.top = startDivTop + (gapDivs + divHeight) * buffer.length + "vw";
-            divImg.src = `/img/svg/tablet-vertical/src/${service.title.eng}`;
+            divImg.src = `/img/svg/tablet-vertical/src/${service.title.eng}.svg`;
             divH3.textContent = service.title[tvSelectLang]
             div.appendChild(divImg);
             div.appendChild(divH3);
-            tvThirdSection.appendChild(div);
+            tvThirdSectionRightServicesWrapper.appendChild(div);
 
             div.addEventListener('click', () => {
                 tvActivNumber = buffer[Math.round(Number(div.id[div.id.length - 1]))].serviceId;

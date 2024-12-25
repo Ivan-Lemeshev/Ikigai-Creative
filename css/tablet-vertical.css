@@ -591,7 +591,7 @@
 
     &>#tv-third-section-text-about-service-1 {
         position: absolute;
-        bottom: 13.4715vw;
+        bottom: 8.4715vw;
         left: 6.47668vw;
         width: 61.65803vw;
         height: auto;
@@ -625,65 +625,80 @@
         z-index: 6;
     }
 
-    &>.tv-third-section-right-services {
-        width: 20.72539vw;
-        height: 20.72539vw;
+    &>#tv-third-section-right-services-wrapper {
         position: absolute;
-        right: 7.25389vw;
-        background: rgba(0, 154, 236, 0.05);
-        border: 0.10799vw solid var(--secondBlue);
-        z-index: 1;
-        transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
-
-        &>img {
-            width: 13.81736vw;
-            height: 13.81736vw;
-            position: absolute;
-            top: 1.72668vw;
-            left: 3.45466vw;
-            text-rendering: optimizeLegibility;
-            will-change: transform;
-        }
-
-        &>h3 {
-            width: 13.81736vw;
-            height: auto;
-            position: absolute;
-            left: 3.45466vw;
-            bottom: 2.07254vw;
-            font-weight: 300;
-            font-size: 1.81347vw;
-            line-height: 2.17617vw;
-            color: var(--secondBlue);
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            overflow: visible;
-            text-rendering: optimizeLegibility;
-            will-change: transform;
-        }
-    }
-
-    &>#tv-third-section-right-services-0 {
+        right: 7.45389vw;
         top: 8.67876vw;
+        height: 102.97927vw;
+        width: 20.72539vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: visible;
+
+        &>.tv-third-section-right-services {
+            width: 20.72539vw;
+            height: 20.72539vw;
+            position: absolute;
+            background: rgba(0, 154, 236, 0.05);
+            border: 0.10799vw solid var(--secondBlue);
+            z-index: 1;
+            transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+
+            &>img {
+                width: 13.81736vw;
+                height: 13.81736vw;
+                position: absolute;
+                top: 1.72668vw;
+                left: 3.45466vw;
+                text-rendering: optimizeLegibility;
+                will-change: transform;
+            }
+
+            &>h3 {
+                width: 13.81736vw;
+                height: auto;
+                position: absolute;
+                left: 3.45466vw;
+                bottom: 2.07254vw;
+                font-weight: 300;
+                font-size: 1.81347vw;
+                line-height: 2.17617vw;
+                color: var(--secondBlue);
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                overflow: visible;
+                text-rendering: optimizeLegibility;
+                will-change: transform;
+            }
+        }
+
+
+        &>#tv-third-section-right-services-0 {
+            top: 8.67876vw;
+        }
+
+        &>#tv-third-section-right-services-1 {
+            top: 31.99482vw;
+        }
+
+        &>#tv-third-section-right-services-2 {
+            top: 55.31088vw;
+        }
+
+        &>#tv-third-section-right-services-3 {
+            top: 78.62694vw;
+        }
+
+        &>#tv-third-section-right-services-4 {
+            top: 102.07254vw;
+        }
     }
 
-    &>#tv-third-section-right-services-1 {
-        top: 31.99482vw;
-    }
 
-    &>#tv-third-section-right-services-2 {
-        top: 55.31088vw;
-    }
 
-    &>#tv-third-section-right-services-3 {
-        top: 78.62694vw;
-    }
-
-    &>#tv-third-section-right-services-4 {
-        top: 102.07254vw;
-    }
 
     &>.tv-third-section-black-blocks {
         position: absolute;
@@ -699,9 +714,9 @@
     }
 
     &>#tv-third-section-black-blocks-bottom {
-        height: 16.96891vw;
+        height: 21.96891vw;
         background: linear-gradient(180deg, rgba(0, 13, 21, 0) 0%, #000D15 38.38%);
-        bottom: 0;
+        bottom: -5vw;
     }
 
     &>#tv-third-section-bootom-line {
