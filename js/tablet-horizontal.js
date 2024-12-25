@@ -647,40 +647,6 @@ const thActivService = () => {
 
 thActivService();
 
-const thThirdSectionRightService1 = document.getElementById("th-third-section-right-services-0");
-const thThirdSectionRightService2 = document.getElementById("th-third-section-right-services-1");
-const thThirdSectionRightService3 = document.getElementById("th-third-section-right-services-2");
-const thThirdSectionRightService4 = document.getElementById("th-third-section-right-services-3");
-const thThirdSectionRightService5 = document.getElementById("th-third-section-right-services-4");
-const thThirdSectionRightService6 = document.getElementById("th-third-section-right-services-5");
-
-thThirdSectionRightService1.addEventListener('click', () => {
-    thActivNumber = 1;
-    thActivService();
-})
-
-thThirdSectionRightService2.addEventListener('click', () => {
-    thActivNumber = 2;
-    thActivService();
-})
-
-thThirdSectionRightService3.addEventListener('click', () => {
-    thActivNumber = 3;
-    thActivService();
-})
-
-thThirdSectionRightService4.addEventListener('click', () => {
-    thActivNumber = 4;
-    thActivService();
-})
-
-thThirdSectionRightService5.addEventListener('click', () => {
-    thActivNumber = 5;
-    thActivService();
-})
-
-
-
 thFourthSectionChoiceOfService.addEventListener('click', (event) => {
     event.stopPropagation();
     const newDropListWrapper = document.createElement('div');
@@ -893,3 +859,58 @@ thReviewsArrowLeft.addEventListener('click', () => {
 thReviewsArrowRight.addEventListener('click', () => {
     upperloadReviews(++number, false)
 })
+
+let scrollLvl = 0;
+const visableBlocks = 5;
+const thThirdSectionRightServicesWrapper = document.getElementById("th-third-section-right-services-wrapper");
+const buffer = [];
+const gapDivs = 2.15983;
+const startDivTop = -19.43844;
+const divHeight = 17.27862;
+
+const resetBlocks = () => {
+    while (buffer.length > 0) {
+        thThirdSectionRightServicesWrapper.removeChild(buffer.shift().link)
+    }
+    
+}
+
+const createDivBlocks = () => {
+
+    let i = scrollLvl % (arrayPriceList.length);
+
+    while (buffer.length < (visableBlocks + 2)) {
+        if (i !== thActivNumber) {
+            const div = document.createElement('div');
+            
+            const service = arrayPriceList[i];
+            const divImg = document.createElement('img');
+            const divH3 = document.createElement('h3');
+
+            div.id = `th-third-section-right-services-${buffer.length}`;
+            div.classList = "th-third-section-right-services";
+            div.style.top = startDivTop + (gapDivs + divHeight) * buffer.length + "vw";
+            divImg.src = `/img/svg/tablet-horizontal/src/${service.title.eng}.svg`;
+            divH3.textContent = service.title[thSelectLang]
+            div.appendChild(divImg);
+            div.appendChild(divH3);
+            thThirdSectionRightServicesWrapper.appendChild(div);
+
+            div.addEventListener('click', () => {
+                thActivNumber = buffer[Math.round(Number(div.id[div.id.length - 1]))].serviceId;
+                thActivService();
+                resetBlocks();
+                createDivBlocks();
+            })
+
+            buffer.push({
+                serviceId: i,
+                link: document.getElementById(div.id)
+            })
+        }
+
+        i = (i + 1) % (arrayPriceList.length);
+    }
+}
+
+createDivBlocks();

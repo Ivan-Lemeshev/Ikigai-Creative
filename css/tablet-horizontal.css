@@ -566,7 +566,7 @@
 
     &>#th-third-section-text-about-service-1 {
         position: absolute;
-        top: 51.94384vw;
+        top: 53.94384vw;
         left: 39.9568vw;
         width: 35.20518vw;
         height: auto;
@@ -600,61 +600,72 @@
         z-index: 3;
     }
 
-    &>.th-third-section-right-services {
-        width: 17.27862vw;
-        height: 17.27862vw;
+    &>#th-third-section-right-services-wrapper {
         position: absolute;
         right: 5.39957vw;
-        background: rgba(0, 154, 236, 0.05);
-        border: 0.10799vw solid var(--secondBlue);
-        transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
-
-        &>img {
-            width: 11.51944vw;
-            height: 11.51944vw;
-            position: absolute;
-            top: 1.43952vw;
-            left: 2.88013vw;
-        }
-
-        &>h3 {
-            width: 11.51944vw;
-            height: auto;
-            position: absolute;
-            left: 2.88013vw;
-            bottom: 1.72786vw;
-            font-weight: 300;
-            font-size: 1.51188vw;
-            line-height: 1.81425vw;
-            color: var(--secondBlue);
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            overflow: visible;
-            text-rendering: optimizeLegibility;
-            will-change: transform;
-        }
-    }
-
-    &>#th-third-section-right-services-0 {
         top: 7.4514vw;
-    }
+        height: 72.24622vw;
+        width: 17.27862vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
 
-    &>#th-third-section-right-services-1 {
-        top: 26.88985vw;
-    }
+        &>.th-third-section-right-services {
+            width: 17.27862vw;
+            height: 17.27862vw;
+            position: absolute;
+            background: rgba(0, 154, 236, 0.05);
+            border: 0.10799vw solid var(--secondBlue);
+            transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
 
-    &>#th-third-section-right-services-2 {
-        top: 46.32829vw;
-    }
+            &>img {
+                width: 11.51944vw;
+                height: 11.51944vw;
+                position: absolute;
+                top: 1.43952vw;
+                left: 2.88013vw;
+            }
 
-    &>#th-third-section-right-services-3 {
-        top: 65.76674vw;
-    }
+            &>h3 {
+                width: 11.51944vw;
+                height: auto;
+                position: absolute;
+                left: 2.88013vw;
+                bottom: 1.72786vw;
+                font-weight: 300;
+                font-size: 1.51188vw;
+                line-height: 1.81425vw;
+                color: var(--secondBlue);
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                overflow: visible;
+                text-rendering: optimizeLegibility;
+                will-change: transform;
+            }
+        }
 
-    &>#th-third-section-right-services-4 {
-        top: 85.20518vw;
+        &>#th-third-section-right-services-0 {
+            top: 7.4514vw;
+        }
+
+        &>#th-third-section-right-services-1 {
+            top: 26.88985vw;
+        }
+
+        &>#th-third-section-right-services-2 {
+            top: 46.32829vw;
+        }
+
+        &>#th-third-section-right-services-3 {
+            top: 65.76674vw;
+        }
+
+        &>#th-third-section-right-services-4 {
+            top: 85.20518vw;
+        }
     }
 
     &>.th-third-section-black-blocks {
