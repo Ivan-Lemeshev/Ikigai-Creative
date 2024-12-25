@@ -857,7 +857,7 @@ tvReviewsArrowRight.addEventListener('click', () => {
 })
 
 
-let scrollLvl = 0;
+let scrollLvl = 1;
 const visableBlocks = 5;
 const tvThirdSectionRightServicesWrapper = document.getElementById("tv-third-section-right-services-wrapper");
 const buffer = [];
@@ -910,4 +910,58 @@ const createDivBlocks = () => {
     }
 }
 
-createDivBlocks();
+createDivBlocks();const movePlitka = (deltaGap) => {
+    for (let index = 0; index < buffer.length; index++) {
+        const newTop = startDivTop + (gapDivs + divHeight) * index + deltaGap + "vw";
+        buffer[index].link.style.top = newTop;
+    }
+}
+
+const tvThirdSectionTopArrow = document.getElementById("tv-third-section-top-arrow");
+const tvThirdSectionBottomArrow = document.getElementById("tv-third-section-bottom-arrow");
+let tvThirdSectionAnimation = false;
+
+tvThirdSectionTopArrow.addEventListener('click', () => {
+    if (!tvThirdSectionAnimation) {
+        tvThirdSectionAnimation = true;
+        movePlitka(-gapDivs - divHeight)
+        setTimeout(() => {
+            tvThirdSectionAnimation = false;
+            scrollLvl = (scrollLvl + 1) % (arrayPriceList.length);
+
+            if (scrollLvl === tvActivNumber) {
+                scrollLvl = (scrollLvl + 1) % (arrayPriceList.length);
+            }
+
+            resetBlocks();
+            createDivBlocks();
+        }, 300);
+    }
+
+})
+
+tvThirdSectionBottomArrow.addEventListener('click', () => {
+    if (!tvThirdSectionAnimation) {
+        tvThirdSectionAnimation = true;
+        movePlitka(gapDivs + divHeight)
+        setTimeout(() => {
+            tvThirdSectionAnimation = false;
+            scrollLvl = (scrollLvl - 1);
+            if (scrollLvl === 0) {
+                scrollLvl = arrayPriceList.length - 1;
+            }
+            if (scrollLvl === tvActivNumber) {
+                scrollLvl = (scrollLvl - 1);
+
+                if (scrollLvl === 0) {
+                    scrollLvl = arrayPriceList.length - 1;
+                }
+            }
+
+            resetBlocks();
+            createDivBlocks();
+        }, 300);
+    }
+
+
+})

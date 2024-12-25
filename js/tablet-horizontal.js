@@ -860,7 +860,7 @@ thReviewsArrowRight.addEventListener('click', () => {
     upperloadReviews(++number, false)
 })
 
-let scrollLvl = 0;
+let scrollLvl = 1;
 const visableBlocks = 5;
 const thThirdSectionRightServicesWrapper = document.getElementById("th-third-section-right-services-wrapper");
 const buffer = [];
@@ -872,7 +872,6 @@ const resetBlocks = () => {
     while (buffer.length > 0) {
         thThirdSectionRightServicesWrapper.removeChild(buffer.shift().link)
     }
-    
 }
 
 const createDivBlocks = () => {
@@ -882,7 +881,7 @@ const createDivBlocks = () => {
     while (buffer.length < (visableBlocks + 2)) {
         if (i !== thActivNumber) {
             const div = document.createElement('div');
-            
+
             const service = arrayPriceList[i];
             const divImg = document.createElement('img');
             const divH3 = document.createElement('h3');
@@ -914,3 +913,60 @@ const createDivBlocks = () => {
 }
 
 createDivBlocks();
+
+const movePlitka = (deltaGap) => {
+    for (let index = 0; index < buffer.length; index++) {
+        const newTop = startDivTop + (gapDivs + divHeight) * index + deltaGap + "vw";
+        buffer[index].link.style.top = newTop;
+    }
+}
+
+const thThirdSectionTopArrow = document.getElementById("th-third-section-top-arrow");
+const thThirdSectionBottomArrow = document.getElementById("th-third-section-bottom-arrow");
+let thThirdSectionAnimation = false;
+
+thThirdSectionTopArrow.addEventListener('click', () => {
+    if (!thThirdSectionAnimation) {
+        thThirdSectionAnimation = true;
+        movePlitka(-gapDivs - divHeight)
+        setTimeout(() => {
+            thThirdSectionAnimation = false;
+            scrollLvl = (scrollLvl + 1) % (arrayPriceList.length);
+
+            if (scrollLvl === thActivNumber) {
+                scrollLvl = (scrollLvl + 1) % (arrayPriceList.length);
+            }
+
+            resetBlocks();
+            createDivBlocks();
+        }, 300);
+    }
+
+})
+
+thThirdSectionBottomArrow.addEventListener('click', () => {
+    if (!thThirdSectionAnimation) {
+        thThirdSectionAnimation = true;
+        movePlitka(gapDivs + divHeight)
+        setTimeout(() => {
+            thThirdSectionAnimation = false;
+            scrollLvl = (scrollLvl - 1);
+            if (scrollLvl === 0) {
+                scrollLvl = arrayPriceList.length - 1;
+            }
+            if (scrollLvl === thActivNumber) {
+                scrollLvl = (scrollLvl - 1);
+
+                if (scrollLvl === 0) {
+                    scrollLvl = arrayPriceList.length - 1;
+                }
+            }
+
+            resetBlocks();
+            createDivBlocks();
+        }, 300);
+    }
+
+
+})
+
