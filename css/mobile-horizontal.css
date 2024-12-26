@@ -5,7 +5,6 @@ body {
 #mh-first-section {
     width: 100.0vw;
     height: 45.9954233409611vw;
-    position: relative;
 
 
     &>#mh-first-section-background {
@@ -48,5 +47,303 @@ body {
         text-align: center;
         justify-content: center;
         color: var(--ltText);
+    }
+}
+
+#mh-second-section {
+    width: 100.0vw;
+    height: 45.9954233409611vw;
+    position: relative;
+
+
+    &>#mh-second-section-background {
+        object-fit: contain;
+        width: 77.48512585812357vw;
+        height: 37.86842105263158vw;
+        position: absolute;
+        top: 0.6864988558352403vw;
+        left: 5.720823798627003vw;
+    }
+
+    &>#mh-second-section-creative {
+        object-fit: contain;
+        position: absolute;
+        width: 2.517162471395881vw;
+        height: 35.46910755148742vw;
+        top: 0;
+        right: 3.318077803203661vw;
+    }
+
+    &>#mh-second-section-text {
+        position: absolute;
+        width: 9.267734553775744vw;
+        height: 3.6613272311212817vw;
+        top: 0.5720823798627002vw;
+        left: 39.702517162471395vw;
+        font-size: 2.745995423340961vw;
+        font-weight: 400;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: var(--ltText);
+    }
+}
+
+#mh-navogation-block {
+    display: none;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100.0vw;
+    height: 45.9954233409611vw;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(0.6720823798627002vw);
+
+    &>#mh-navogation-block-title {
+        position: absolute;
+        width: 11.297482837528605vw;
+        height: 2.745995423340961vw;
+        top: 3.4324942791762014vw;
+        left: 2.2883295194508007vw;
+        font-size: 2.059496567505721vw;
+        font-weight: 600;
+        color: var(--ltText);
+    }
+
+    &>#mh-navogation-block-night-mode-wrapper {
+        width: 17.391304347826086vw;
+        height: 2.402745995423341vw;
+        position: relative;
+        margin-top: 3.775743707093822vw;
+        margin-left: 59.26773455377574vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: visible;
+
+        &>#mh-navogation-block-night-mode-moon {
+
+            object-fit: contain;
+            width: 2.059496567505721vw;
+            height: 2.059496567505721vw;
+        }
+
+        &>#mh-navogation-block-night-mode-text {
+            width: auto;
+            height: 2.402745995423341vw;
+            font-size: 1.8306636155606408vw;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &>#mh-navogation-block-night-mode-switch-button-wrapper {
+            width: 2.9748283752860414vw;
+            height: 1.8306636155606408vw;
+            overflow: visible;
+
+            &>#mh-navogation-block-night-mode-switch-button-back {
+                width: 100%;
+                height: 100%;
+            }
+
+            &>#mh-navogation-block-night-mode-switch-button-face {
+                width: 1.8306636155606408vw;
+                height: 1.8306636155606408vw;
+                position: absolute;
+                right: 1.1vw;
+                /* следующее положение 0 vw */
+            }
+        }
+    }
+
+    &>#mh-navogation-block-language-wrapper {
+        position: absolute;
+        top: 3.775743707093822vw;
+        right: 2.2883295194508007vw;
+        width: 17.620137299771166vw;
+        height: 2.402745995423341vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &>#mh-navogation-block-language-svg {
+            width: 2.059496567505721vw;
+            height: 2.059496567505721vw;
+            object-fit: contain;
+        }
+
+        &>#mh-navogation-block-language-text {
+            width: 8.937986270022883vw;
+            height: 2.402745995423341vw;
+            font-weight: 600;
+            font-size: 1.8306636155606408vw;
+            color: var(--ltText);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &>#mh-navogation-block-language-button {
+            font-weight: 600;
+            font-size: 1.8306636155606408vw;
+            color: var(--ltText);
+            height: 2.402745995423341vw;
+            width: 3.203661327231121vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &>#mh-navogation-block-main-content-wrapper {
+        position: absolute;
+        top: 11.899313501144166vw;
+        left: 2.2883295194508007vw;
+        width: 95.53775743707094vw;
+        height: 25.171624713958813vw;
+        overflow: visible;
+        position: absolute;
+
+        &>.mh-navogation-block-main-content-item {
+            height: 25.171624713958813vw;
+            width: 20.022883295194507vw;
+            overflow: visible;
+            position: absolute;
+
+            &>.mh-navogation-block-main-content-item-title {
+                width: 9.610983981693364vw;
+                height: 2.745995423340961vw;
+                font-size: 2.059496567505721vw;
+                font-weight: 400;
+                color: var(--ltText);
+                margin-left: 2.2883295194508007vw;
+            }
+
+            &>.mh-navogation-block-main-content-item-text {
+                width: 15.446224256292906vw;
+                height: 18.306636155606405vw;
+                font-size: 2.059496567505721vw;
+                font-weight: 400;
+                color: var(--ltText);
+                line-height: 2.9290617848970255vw;
+                margin-left: 2.2883295194508007vw;
+                margin-top: 2.2883295194508007vw;
+                overflow: visible;
+            }
+
+            &>.mh-navogation-block-main-content-item-line {
+                width: 0.11441647597254005vw;
+                height: 25.171624713958813vw;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background-color: var(--ltSeparationLine);
+            }
+        }
+
+        &>#mh-navogation-block-main-content-intro {
+            left: 0;
+        }
+
+        &>#mh-navogation-block-main-content-about-us {
+            left: 20.022883295194507vw;
+        }
+
+        &>#mh-navogation-block-main-content-services {
+            left: 40.045766590389015vw;
+        }
+
+        &>#mh-navogation-block-main-content-contacts {
+            left: 60.068649885583525vw;
+        }
+
+        &>#mh-navogation-block-main-content-reviews {
+            left: 80.09153318077803vw;
+        }
+    }
+}
+
+#mh-third-section {
+    width: 100.0vw;
+    height: 45.9954233409611vw;
+    position: relative;
+
+    &>#mh-third-section-title {
+        position: absolute;
+        top: 4.576659038901601vw;
+        left: 5.720823798627003vw;
+        font-size: 2.059496567505721vw;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        width: 14.729977116704806vw;
+        height: 2.745995423340961vw;
+    }
+
+    &>#mh-third-section-text-0 {
+        position: absolute;
+        width: 34.89702517162471vw;
+        height: 9.610983981693364vw;
+        top: 9.610983981693364vw;
+        left: 5.720823798627003vw;
+        font-size: 1.8306636155606408vw;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        color: var(--ltText);
+    }
+
+    &>#mh-third-section-text-1 {
+        position: absolute;
+        width: 34.89702517162471vw;
+        height: 7.208237986270023vw;
+        top: 20.36613272311213vw;
+        left: 5.720823798627003vw;
+        font-size: 1.8306636155606408vw;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        color: var(--ltText);
+    }
+
+    &>#mh-third-section-button-services {
+        width: 16.018306636155607vw;
+        height: 3.8901601830663615vw;
+        position: absolute;
+        top: 32.151029748283754vw;
+        left: 5.720823798627003vw;
+        background: var(--dtSeparationLine);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8306636155606408vw;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        color: var(--dtText);
+    }
+
+    &>#mh-third-section-button-contacts {
+        width: 16.018306636155607vw;
+        height: 3.8901601830663615vw;
+        position: absolute;
+        top: 32.151029748283754vw;
+        left: 24.59954233409611vw;
+        background: var(--dtSeparationLine);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8306636155606408vw;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        color: var(--dtText);
+    }
+
+    &>#mh-third-section-logo {
+        width: 34.55377574370709vw;
+        height: 26.248283752860413vw;
+        object-fit: contain;
+        position: absolute;
+        top: 9.839816933638444vw;
+        right: 9.153318077803203vw;
     }
 }
