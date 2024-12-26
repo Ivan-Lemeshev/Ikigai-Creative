@@ -11,3 +11,19 @@
     --tabletHorizontalBlue: #006399;
     --secondBrown: #7F2D00;
 }
+
+:root {
+    --ltMain: #FFFFFF;
+    --ltText: #2B2B2B;
+    --ltSeparationLine: #D6D6D6;
+    --ltElementBackground: #F3F3F3;
+    --dtMain: #1C1C1C;
+    --dtText: #E8E8E8;
+    --dtSeparationLine: #2E2E2E;
+    --dtElementBackground: #242424;
+    --outline: #EDEDED;
+    --accent: #0088CC;
+    --hover: #007AB8;
+    --bad: #FF4F4F;
+    --success: #4CAF50;
+}

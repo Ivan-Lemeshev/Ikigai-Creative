@@ -1,0 +1,52 @@
+body {
+    background: linear-gradient(180deg, #E7EFF3 0%, #D8E9F1 50.42%);
+}
+
+#mh-first-section {
+    width: 100.0vw;
+    height: 45.9954233409611vw;
+    position: relative;
+
+
+    &>#mh-first-section-background {
+        object-fit: contain;
+        width: 77.39816933638444vw;
+        height: 39.94050343249428vw;
+        position: absolute;
+        top: 6.0949656750572085vw;
+        left: 5.720823798627003vw;
+    }
+
+    &>#mh-first-section-navigation-button {
+        width: 4.576659038901601vw;
+        height: 4.252860411899314vw;
+        pointer-events: all;
+        object-fit: contain;
+        position: absolute;
+        top: 2.2883295194508007vw;
+        right: 2.2883295194508007vw;
+    }
+
+    &>#mh-first-section-ikigai {
+        object-fit: contain;
+        position: absolute;
+        width: 2.517162471395881vw;
+        height: 26.08695652173913vw;
+        top: 12.929061784897025vw;
+        right: 3.318077803203661vw;
+    }
+
+    &>#mh-first-section-text {
+        position: absolute;
+        width: 21.59496567505721vw;
+        height: 4.233409610983982vw;
+        bottom: 1.7162471395881007vw;
+        left: 33.98169336384439vw;
+        font-size: 3.203661327231121vw;
+        font-weight: 400;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: var(--ltText);
+    }
+}

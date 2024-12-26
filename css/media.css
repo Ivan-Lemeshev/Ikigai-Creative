@@ -18,7 +18,7 @@
 }
 
 /* Планшет Горизонтальный */
-@media (min-width: 700px) and (max-width: 1024px) and (orientation: landscape) { 
+@media (min-width: 875px) and (max-width: 1024px) and (orientation: landscape) { 
     #desktop, 
     #tablet-vertical, 
     #mobile-vertical, 
