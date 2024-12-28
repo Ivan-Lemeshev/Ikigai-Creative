@@ -567,6 +567,139 @@ body {
     }
 }
 
+#mh-price-list-wrapper {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 45.9954233409611vw;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.4);;
+    backdrop-filter: blur(1.1441647597254003vw);
+
+    &>#mh-price-list-title {
+        position: absolute;
+        top: 3.4324942791762014vw;
+        left: 2.2883295194508007vw;
+        width: 8.894736842105263vw;
+        height: 2.745995423340961vw;
+        font-size: 2.059496567505721vw;
+        font-weight: 600;
+        color: var(--ltText);
+    }
+
+    &>#mh-price-list-x-mark {
+        position: absolute;
+        top: 3.4324942791762014vw;
+        right: 3.4324942791762014vw;
+        width: 2.745995423340961vw;
+        height: 2.745995423340961vw;
+        object-fit: contain;
+        pointer-events: all;
+    }
+
+    &>#mh-price-list-line {
+        position: absolute;
+        top: 18.53546910755149vw;
+        left: 49.19908466819222vw;
+        width: 0.11441647597254005vw;
+        height: 21.96796338672769vw;
+        background: var(--ltSeparationLine);
+    }
+
+    &>#mh-price-list-item-wrapper-1 {
+        width: 45.19450800915332vw;
+        height: 20.59496567505721vw;
+        position: absolute;
+        top: 18.53546910755149vw;
+        left: 2.2883295194508007vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: visible;
+
+        &>.mh-price-list-item-1 {
+            width: 100%;
+            height: 2.2883295194508007vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: visible;
+            color: var(--ltText);
+            font-size: 2.059496567505721vw;
+            font-weight: 300;
+            overflow: visible;
+
+            &>.mh-price-list-service-name {
+                width: 34.41990846681922vw;
+                height: 100%;
+                overflow: visible;
+
+            }
+
+            &>.mh-price-list-service-cost {
+                width: 5.720823798627003vw;
+                height: 100%;
+                overflow: visible;
+            }
+        }
+    }
+
+    &>#mh-price-list-item-wrapper-2 {
+        width: 45.19450800915332vw;
+        height: 6.864988558352403vw;
+        position: absolute;
+        top: 18.53546910755149vw;
+        left: 50.91533180778032vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: visible;
+
+        &>.mh-price-list-item-2 {
+            width: 100%;
+            height: 2.2883295194508007vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: visible;
+            color: var(--ltText);
+            font-size: 2.059496567505721vw;
+            font-weight: 300;
+            overflow: visible;
+
+            &>.mh-price-list-service-name {
+                width: 34.41990846681922vw;
+                height: 100%;
+                overflow: visible;
+
+            }
+
+            &>.mh-price-list-service-cost {
+                width: 5.720823798627003vw;
+                height: 100%;
+                overflow: visible;
+            }
+        }
+    }
+
+    &>#mh-price-list-footer {
+        width: 91.9908466819222vw;
+        height: 5.491990846681922vw;
+        position: absolute;
+        top: 9.610983981693364vw;
+        left: 2.2883295194508007vw;
+        font-size: 2.059496567505721vw;
+        font-weight: 400;
+        line-height: 2.739130434782609vw;
+        color: var(--ltText);
+        overflow: visible;
+    }
+}
+
 #mh-five-section {
     width: 100.0vw;
     height: 45.9954233409611vw;
