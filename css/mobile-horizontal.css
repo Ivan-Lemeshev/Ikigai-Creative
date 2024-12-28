@@ -24,6 +24,8 @@ body {
         position: fixed;
         top: 2.2883295194508007vw;
         right: 2.2883295194508007vw;
+        opacity: 1;
+        transition: opacity ease-in-out 0.3s;
         z-index: 12;
     }
 
@@ -38,7 +40,7 @@ body {
 
     &>#mh-first-section-text {
         position: absolute;
-        width: 21.59496567505721vw;
+        width: 27.59496567505721vw;
         height: 4.233409610983982vw;
         bottom: 1.7162471395881007vw;
         left: 33.98169336384439vw;
@@ -80,10 +82,10 @@ body {
 
     &>#mh-second-section-text {
         position: absolute;
-        width: 9.267734553775744vw;
+        width: 20.267734553775744vw;
         height: 3.6613272311212817vw;
         top: 0.5720823798627002vw;
-        left: 39.702517162471395vw;
+        left: 35.502517162471395vw;
         font-size: 2.745995423340961vw;
         font-weight: 400;
         display: flex;
@@ -177,6 +179,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 15;
 
         &>#mh-navigation-block-language-svg {
             width: 2.059496567505721vw;

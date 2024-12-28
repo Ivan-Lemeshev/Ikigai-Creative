@@ -81,7 +81,7 @@ const thCentralTextUp = document.getElementById("th-central-text-first-section-u
 const thCentralTextDown = document.getElementById("th-central-text-first-section-down");
 const thSecondSectionButtonServices = document.getElementById("th-second-section-button-services");
 const thSecondSectionButtonContacts = document.getElementById("th-second-section-button-contacts");
-const thThirdSectionButtonOPriceList = document.getElementById("th-third-section-button-price-list");
+const thThirdSectionButtonOfPriceList = document.getElementById("th-third-section-button-price-list");
 const thPriceListWrapper = document.getElementById("th-price-list-wrapper");
 const thPriceListXMark = document.getElementById("th-price-list-x-mark");
 
@@ -603,7 +603,7 @@ thSecondSectionButtonContacts.addEventListener('click', () => {
     });
 })
 
-thThirdSectionButtonOPriceList.addEventListener('click', () => {
+thThirdSectionButtonOfPriceList.addEventListener('click', () => {
     thPriceListWrapper.style.display = "block";
     setTimeout(() => {
         thPriceListWrapper.style.opacity = "1";
