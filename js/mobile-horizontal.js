@@ -261,6 +261,9 @@ let mhSelectCategory = "";
 const titleInterestingName = document.getElementById("mh-five-section-title-interesting-name");
 const mhTextarea = document.getElementById("mh-textarea");
 const buttonOrder = document.getElementById("mh-four-section-button-order");
+const buttonReview = document.getElementById("mh-four-section-button-review");
+const buttonConsultation = document.getElementById("mh-four-section-button-consultation");
+const buttonQuestion = document.getElementById("mh-four-section-button-question");
 
 const mhSetupAndTranslateForSelectService = (event) => {
     event.preventDefault();
@@ -295,3 +298,25 @@ buttonOrder.addEventListener('click', (event) => {
     mhSetupAndTranslateForSelectService(event);
     mhTextarea.textContent = textForApplication.eng[0]
 })
+
+buttonReview.addEventListener('click', (event) => {
+    event.preventDefault();
+    mhNumberOfService = mhActivNumber;
+    mhSetupAndTranslateForSelectService(event);
+    mhTextarea.textContent = textForApplication[mhSelectLang][3];
+})
+
+buttonConsultation.addEventListener('click', (event) => {
+    event.preventDefault();
+    mhNumberOfService = mhActivNumber;
+    mhSetupAndTranslateForSelectService(event);
+    mhTextarea.textContent = textForApplication[mhSelectLang][1]
+})
+
+buttonQuestion.addEventListener('click', (event) => {
+    event.preventDefault();
+    mhNumberOfService = mhActivNumber;
+    mhSetupAndTranslateForSelectService(event);
+    mhTextarea.textContent = textForApplication[mhSelectLang][2]
+})
+
