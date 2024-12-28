@@ -21,9 +21,10 @@ body {
         height: 4.252860411899314vw;
         pointer-events: all;
         object-fit: contain;
-        position: absolute;
+        position: fixed;
         top: 2.2883295194508007vw;
         right: 2.2883295194508007vw;
+        z-index: 12;
     }
 
     &>#mh-first-section-ikigai {
@@ -47,6 +48,9 @@ body {
         text-align: center;
         justify-content: center;
         color: var(--ltText);
+        opacity: 1;
+        overflow: visible;
+        transition: opacity 0.3s ease-in-out;
     }
 }
 
@@ -84,23 +88,28 @@ body {
         font-weight: 400;
         display: flex;
         text-align: center;
+        overflow: visible;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
         justify-content: center;
         color: var(--ltText);
     }
 }
 
-#mh-navogation-block {
+#mh-navigation-block {
     display: none;
     z-index: 10;
     top: 0;
     left: 0;
+    opacity: 0;
     position: fixed;
     width: 100.0vw;
     height: 45.9954233409611vw;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(0.6720823798627002vw);
+    transition: opacity ease-in-out 0.3s;
 
-    &>#mh-navogation-block-title {
+    &>#mh-navigation-block-title {
         position: absolute;
         width: 11.297482837528605vw;
         height: 2.745995423340961vw;
@@ -111,7 +120,7 @@ body {
         color: var(--ltText);
     }
 
-    &>#mh-navogation-block-night-mode-wrapper {
+    &>#mh-navigation-block-night-mode-wrapper {
         width: 17.391304347826086vw;
         height: 2.402745995423341vw;
         position: relative;
@@ -122,14 +131,14 @@ body {
         justify-content: space-between;
         overflow: visible;
 
-        &>#mh-navogation-block-night-mode-moon {
+        &>#mh-navigation-block-night-mode-moon {
 
             object-fit: contain;
             width: 2.059496567505721vw;
             height: 2.059496567505721vw;
         }
 
-        &>#mh-navogation-block-night-mode-text {
+        &>#mh-navigation-block-night-mode-text {
             width: auto;
             height: 2.402745995423341vw;
             font-size: 1.8306636155606408vw;
@@ -139,17 +148,17 @@ body {
             justify-content: center;
         }
 
-        &>#mh-navogation-block-night-mode-switch-button-wrapper {
+        &>#mh-navigation-block-night-mode-switch-button-wrapper {
             width: 2.9748283752860414vw;
             height: 1.8306636155606408vw;
             overflow: visible;
 
-            &>#mh-navogation-block-night-mode-switch-button-back {
+            &>#mh-navigation-block-night-mode-switch-button-back {
                 width: 100%;
                 height: 100%;
             }
 
-            &>#mh-navogation-block-night-mode-switch-button-face {
+            &>#mh-navigation-block-night-mode-switch-button-face {
                 width: 1.8306636155606408vw;
                 height: 1.8306636155606408vw;
                 position: absolute;
@@ -159,7 +168,7 @@ body {
         }
     }
 
-    &>#mh-navogation-block-language-wrapper {
+    &>#mh-navigation-block-language-wrapper {
         position: absolute;
         top: 3.775743707093822vw;
         right: 2.2883295194508007vw;
@@ -169,13 +178,13 @@ body {
         justify-content: space-between;
         align-items: center;
 
-        &>#mh-navogation-block-language-svg {
+        &>#mh-navigation-block-language-svg {
             width: 2.059496567505721vw;
             height: 2.059496567505721vw;
             object-fit: contain;
         }
 
-        &>#mh-navogation-block-language-text {
+        &>#mh-navigation-block-language-text {
             width: 8.937986270022883vw;
             height: 2.402745995423341vw;
             font-weight: 600;
@@ -186,7 +195,7 @@ body {
             align-items: center;
         }
 
-        &>#mh-navogation-block-language-button {
+        &>#mh-navigation-block-language-button {
             font-weight: 600;
             font-size: 1.8306636155606408vw;
             color: var(--ltText);
@@ -198,7 +207,7 @@ body {
         }
     }
 
-    &>#mh-navogation-block-main-content-wrapper {
+    &>#mh-navigation-block-main-content-wrapper {
         position: absolute;
         top: 11.899313501144166vw;
         left: 2.2883295194508007vw;
@@ -207,13 +216,13 @@ body {
         overflow: visible;
         position: absolute;
 
-        &>.mh-navogation-block-main-content-item {
+        &>.mh-navigation-block-main-content-item {
             height: 25.171624713958813vw;
             width: 20.022883295194507vw;
             overflow: visible;
             position: absolute;
 
-            &>.mh-navogation-block-main-content-item-title {
+            &>.mh-navigation-block-main-content-item-title {
                 width: 9.610983981693364vw;
                 height: 2.745995423340961vw;
                 font-size: 2.059496567505721vw;
@@ -222,7 +231,7 @@ body {
                 margin-left: 2.2883295194508007vw;
             }
 
-            &>.mh-navogation-block-main-content-item-text {
+            &>.mh-navigation-block-main-content-item-text {
                 width: 15.446224256292906vw;
                 height: 18.306636155606405vw;
                 font-size: 2.059496567505721vw;
@@ -234,7 +243,7 @@ body {
                 overflow: visible;
             }
 
-            &>.mh-navogation-block-main-content-item-line {
+            &>.mh-navigation-block-main-content-item-line {
                 width: 0.11441647597254005vw;
                 height: 25.171624713958813vw;
                 position: absolute;
@@ -244,23 +253,23 @@ body {
             }
         }
 
-        &>#mh-navogation-block-main-content-intro {
+        &>#mh-navigation-block-main-content-intro {
             left: 0;
         }
 
-        &>#mh-navogation-block-main-content-about-us {
+        &>#mh-navigation-block-main-content-about-us {
             left: 20.022883295194507vw;
         }
 
-        &>#mh-navogation-block-main-content-services {
+        &>#mh-navigation-block-main-content-services {
             left: 40.045766590389015vw;
         }
 
-        &>#mh-navogation-block-main-content-contacts {
+        &>#mh-navigation-block-main-content-contacts {
             left: 60.068649885583525vw;
         }
 
-        &>#mh-navogation-block-main-content-reviews {
+        &>#mh-navigation-block-main-content-reviews {
             left: 80.09153318077803vw;
         }
     }
