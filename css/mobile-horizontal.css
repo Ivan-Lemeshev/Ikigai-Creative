@@ -606,7 +606,7 @@ body {
 
         &::placeholder {
             color: var(--dtSeparationLine);
-            font-weight: 300;
+            font-weight: 400;
             font-size: 1.8306636155606408vw;
             padding-left: 0.5720823798627002vw;
         }
@@ -631,4 +631,150 @@ body {
         top: 17.505720823798626vw;
         left: 37.75743707093822vw;
     }
+
+    &>#mh-textarea {
+        position: absolute;
+        height: 12.013729977116705vw;
+        width: 53.775743707093824vw;
+        top: 24.25629290617849vw;
+        left: 8.009153318077804vw;
+        font-weight: 400;
+        font-size: 1.8306636155606408vw;
+        line-height: 250%;
+        letter-spacing: 0.1em;
+        color: var(--dtSeparationLine);
+        overflow: hidden;
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 1.8306636155606408vw;
+            line-height: 250%;
+            letter-spacing: 0.1em;
+            color: var(--dtSeparationLine);
+
+        }
+    }
+
+    &>#mh-textarea-line-0 {
+        position: absolute;
+        width: 53.775743707093824vw;
+        height: 0.11441647597254005vw;
+        background-color: var(--dtSeparationLine);
+        left: 8.009153318077804vw;
+        top: 28.07437070938215vw;
+    }
+
+    &>#mh-textarea-line-1 {
+        position: absolute;
+        width: 53.775743707093824vw;
+        height: 0.11441647597254005vw;
+        background-color: var(--dtSeparationLine);
+        left: 8.009153318077804vw;
+        top: 32.536613272311214vw;
+    }
+
+    &>#mh-textarea-line-2 {
+        position: absolute;
+        width: 53.775743707093824vw;
+        height: 0.11441647597254005vw;
+        background-color: var(--dtSeparationLine);
+        left: 8.009153318077804vw;
+        top: 37.0700228832952vw;
+    }
+
+    &>#mh-five-section-title-interesting {
+        width: 11.441647597254006vw;
+        height: 2.402745995423341vw;
+        position: absolute;
+        top: 11.899313501144166vw;
+        right: 20.48054919908467vw;
+        color: var(--ltText);
+        font-weight: 400;
+        font-size: 1.8306636155606408vw;
+        letter-spacing: 0.1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &>#mh-five-section-title-interesting-service {
+        width: 10.297482837528605vw;
+        height: 10.297482837528605vw;
+        position: absolute;
+        top: 16.361556064073227vw;
+        right: 21.052631578947366vw;
+
+        &>svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &>#mh-five-section-title-interesting-name {
+        position: absolute;
+        top: 26.65903890160183vw;
+        right: 19.336384439359268vw;
+        width: 13.729977116704806vw;
+        height: 4.805491990846682vw;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.3729977116704806vw;
+        line-height: 2.196796338672769vw;
+        letter-spacing: 0.1em;
+        color: var(--ltText);
+    }
+
+    &>#mh-five-section-interesting-change-button {
+        position: absolute;
+        width: 11.441647597254006vw;
+        height: 2.7791762013729975vw;
+        bottom: 9.692219679633867vw;
+        right: 20.48054919908467vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--dtSeparationLine);
+        font-weight: 600;
+        color: var(--dtText);
+        font-size: 1.3729977116704806vw;
+        letter-spacing: 0.1em;
+    }
+
+    &>#mh-five-section-contacts-wrapper {
+        position: absolute;
+        width: 5.606407322654462vw;
+        height: 34.32494279176201vw;
+        bottom: 2.059496567505721vw;
+        right: 9.153318077803203vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--accent);
+
+        &>.mh-five-section-contacts {
+            width: 3.4324942791762014vw;
+            height: 3.4324942791762014vw;
+            object-fit: contain;
+        }
+    }
+
+    &>#mh-five-section-send-button {
+        position: absolute;
+        bottom: 2.402745995423341vw;
+        left: 29.176201372997713vw;
+        width: 32.608695652173914vw;
+        height: 3.8901601830663615vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--accent);
+        font-weight: 600;
+        font-size: 1.8306636155606408vw;
+        letter-spacing: 0.1em;
+        color: var(--dtText);
+    }
+
 }
