@@ -541,6 +541,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        overflow: hidden;
 
         &>.mh-four-section-others-services {
             height: 100%;
@@ -548,6 +549,8 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: absolute;
+            transition: left 0.3s ease-in-out;
 
             &>h4 {
                 width: 100%;
@@ -559,6 +562,7 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                text-align: center;
             }
 
             &>.mh-four-section-others-services-wrapper-img {
@@ -848,8 +852,12 @@ body {
         position: absolute;
         top: 16.361556064073227vw;
         right: 21.052631578947366vw;
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        &>svg {
+        &>img{
             width: 100%;
             height: 100%;
         }
@@ -863,6 +871,7 @@ body {
         height: 4.805491990846682vw;
         display: flex;
         align-items: center;
+        justify-content: center;
         text-align: center;
         font-weight: 400;
         font-size: 1.3729977116704806vw;

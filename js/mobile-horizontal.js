@@ -1,7 +1,7 @@
 
 import arrayPriceList from "./arrayPriceList.js"
 import localizationWrapper from "./localization-data.js";
-import {textForApplication } from "./slogans.js";
+import { textForApplication } from "./slogans.js";
 import reviews from "./reviews-mobile.js";
 import dataContats from "./links.js";
 
@@ -226,7 +226,6 @@ mhFourPriceListXMark.addEventListener('click', () => {
 })
 
 const mhFourSectionTitle = document.getElementById("mh-four-section-title");
-const mhFourSectionImg = document.getElementById("mh-four-section-img-wrapper");
 const mhFourSectionText0 = document.getElementById("mh-four-section-text-0");
 const mhFourSectionText1 = document.getElementById("mh-four-section-text-1");
 
@@ -240,7 +239,6 @@ const thActivService = () => {
 
     mhFourSectionTitle.textContent = currentTitle;
 
-    mhFourSectionImg.src = `/img/svg/tablet-horizontal/th-third-section-img ${currentService.title.eng}.svg`;
     mhFourSectionText0.textContent = currentService.description[mhSelectLang][0];
     mhFourSectionText1.textContent = currentService.description[mhSelectLang][1];
 
@@ -264,6 +262,7 @@ const buttonOrder = document.getElementById("mh-four-section-button-order");
 const buttonReview = document.getElementById("mh-four-section-button-review");
 const buttonConsultation = document.getElementById("mh-four-section-button-consultation");
 const buttonQuestion = document.getElementById("mh-four-section-button-question");
+const mhFiveSectionTitleInterestingService = document.getElementById("mh-five-section-title-interesting-service-img");
 
 const mhSetupAndTranslateForSelectService = (event) => {
     event.preventDefault();
@@ -271,10 +270,12 @@ const mhSetupAndTranslateForSelectService = (event) => {
         top: window.innerWidth * 2.3,
         behavior: 'smooth'
     });
+    
+    let selCat = arrayPriceList.map((service) => service.title.eng)[mhActivNumber];
+    mhFiveSectionTitleInterestingService.src = `/img/svg/mobile-horizontal/interesting-svg ${selCat}.svg`;
 
     if (mhSelectLang === "eng") {
         mhTextarea.textContent = textForApplication.eng[mhNumberOfService];
-        let selCat = arrayPriceList.map((service) => service.title.eng)[mhActivNumber];
         if (selCat !== mhSelectCategory && arrayPriceList.map((service) => service.title.eng).includes(selCat)) {
             titleInterestingName.textContent = selCat;
             mhSelectCategory = selCat;
@@ -282,10 +283,10 @@ const mhSetupAndTranslateForSelectService = (event) => {
         }
     } else {
         mhTextarea.textContent = textForApplication.rus[mhNumberOfService];
-        let selCat = arrayPriceList.map((service) => service.title.rus)[mhActivNumber];
-        if (selCat !== mhSelectCategory && arrayPriceList.map((service) => service.title.rus).includes(selCat)) {
-            titleInterestingName.textContent = selCat;
-            mhSelectCategory = selCat;
+        let selCatRus = arrayPriceList.map((service) => service.title.rus)[mhActivNumber];
+        if (selCatRus !== mhSelectCategory && arrayPriceList.map((service) => service.title.rus).includes(selCatRus)) {
+            titleInterestingName.textContent = selCatRus;
+            mhSelectCategory = selCatRus;
             // allInputsHave();
         }
     }
@@ -318,5 +319,122 @@ buttonQuestion.addEventListener('click', (event) => {
     mhNumberOfService = mhActivNumber;
     mhSetupAndTranslateForSelectService(event);
     mhTextarea.textContent = textForApplication[mhSelectLang][2]
+})
+
+
+let scrollLvl = 1;
+const visableBlocks = 4;
+const ServicesWrapper = document.getElementById("mh-four-section-others-services-wrapper");
+const mhFourSectionImg = document.getElementById("mh-four-section-img");
+const buffer = [];
+const gapDivs = 1.7162471395881007;
+const startDivLeft = -18.87871853546911;
+const divWidth = 17.162471395881006;
+
+const resetBlocks = () => {
+    while (buffer.length > 0) {
+        ServicesWrapper.removeChild(buffer.shift().link)
+    }
+}
+
+const createDivBlocks = () => {
+
+    let i = scrollLvl % (arrayPriceList.length);
+
+    while (buffer.length < (visableBlocks + 2)) {
+        if (i !== mhActivNumber) {
+            const div = document.createElement('div');
+
+            const service = arrayPriceList[i];
+            const divImgWrapper = document.createElement('div');
+            const divImg = document.createElement('img');
+            const divH3 = document.createElement('h4');
+
+            div.id = `th-third-section-right-services-${buffer.length}`;
+            div.classList = "mh-four-section-others-services";
+            div.style.left = startDivLeft + (gapDivs + divWidth) * buffer.length + "vw";
+            divImgWrapper.classList = "mh-four-section-others-services-wrapper-img";
+            divImgWrapper.appendChild(divImg);
+            divImg.src = `/img/svg/mobile-horizontal/src/${service.title.eng}.svg`;
+            divH3.textContent = service.title[mhSelectLang]
+            div.appendChild(divImgWrapper);
+            div.appendChild(divH3);
+            ServicesWrapper.appendChild(div);
+
+            div.addEventListener('click', () => {
+                mhActivNumber = buffer[Math.round(Number(div.id[div.id.length - 1]))].serviceId;
+                mhFourSectionImg.src = divImg.src;
+                thActivService();
+                resetBlocks();
+                createDivBlocks();
+
+            })
+
+            buffer.push({
+                serviceId: i,
+                link: document.getElementById(div.id)
+            })
+        }
+
+        i = (i + 1) % (arrayPriceList.length);
+    }
+}
+
+createDivBlocks();
+
+const movePlitka = (deltaGap) => {
+    for (let index = 0; index < buffer.length; index++) {
+        const newLeft = startDivLeft + (gapDivs + divWidth) * index + deltaGap + "vw";
+        buffer[index].link.style.left = newLeft;
+    }
+}
+
+const thThirdSectionLeftArrow = document.getElementById("mh-four-section-others-services-left-arrow");
+const thThirdSectionRightArrow = document.getElementById("mh-four-section-others-services-right-arrow");
+let thThirdSectionAnimation = false;
+
+thThirdSectionLeftArrow.addEventListener('click', () => {
+    if (!thThirdSectionAnimation) {
+        thThirdSectionAnimation = true;
+        movePlitka(-gapDivs - divWidth)
+        setTimeout(() => {
+            thThirdSectionAnimation = false;
+            scrollLvl = (scrollLvl + 1) % (arrayPriceList.length);
+
+            if (scrollLvl === mhActivNumber) {
+                scrollLvl = (scrollLvl + 1) % (arrayPriceList.length);
+            }
+
+            resetBlocks();
+            createDivBlocks();
+        }, 300);
+    }
+
+})
+
+thThirdSectionRightArrow.addEventListener('click', () => {
+    if (!thThirdSectionAnimation) {
+        thThirdSectionAnimation = true;
+        movePlitka(gapDivs + divWidth)
+        setTimeout(() => {
+            thThirdSectionAnimation = false;
+            scrollLvl = (scrollLvl - 1);
+            if (scrollLvl === 0) {
+                scrollLvl = arrayPriceList.length - 1;
+            }
+            if (scrollLvl === mhActivNumber) {
+                scrollLvl = (scrollLvl - 1);
+
+                if (scrollLvl === 0) {
+                    scrollLvl = arrayPriceList.length - 1;
+                }
+            }
+
+            resetBlocks();
+            createDivBlocks();
+        }, 300);
+    }
+
+
 })
 
