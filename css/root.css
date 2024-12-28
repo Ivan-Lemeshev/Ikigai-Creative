@@ -27,3 +27,7 @@
     --bad: #FF4F4F;
     --success: #4CAF50;
 }
+
+body {
+    font-family: 'Segoe UI';
+}

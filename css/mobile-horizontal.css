@@ -790,7 +790,7 @@ body {
         &::placeholder {
             font-weight: 400;
             font-size: 1.8306636155606408vw;
-            line-height: 250%;
+            line-height: 240%;
             letter-spacing: 0.1em;
             color: var(--dtSeparationLine);
 
