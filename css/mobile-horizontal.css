@@ -941,6 +941,7 @@ body {
         radial-gradient(68.64% 25.91% at 26.54% 27.66%, rgba(0, 136, 204, 0.3) 0%, rgba(252, 253, 253, 0) 100%),
         radial-gradient(19.59% 14.45% at 23.8% 85.4%, rgba(0, 136, 204, 0.3) 0%, rgba(252, 253, 253, 0) 100%),
         radial-gradient(82.45% 27.94% at 69.85% 56.86%, rgba(0, 136, 204, 0.3) 0%, rgba(252, 253, 253, 0) 100%);
+    overflow: visible;
 
     &>#mh-six-section-title {
         position: absolute;
@@ -1023,7 +1024,7 @@ body {
             width: 0.057208237986270026vw;
             height: 18.306636155606405vw;
             background:
-                linear-gradient(90deg, #2e2e2e00 0%, #2E2E2E 20.36%, #2e2e2e00 100%);
+                linear-gradient(180deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%);
         }
     }
 
@@ -1095,7 +1096,7 @@ body {
             width: 0.057208237986270026vw;
             height: 18.306636155606405vw;
             background:
-                linear-gradient(90deg, #2e2e2e00 0%, #2E2E2E 20.36%, #2e2e2e00 100%);
+                linear-gradient(180deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%);
         }
     }
 
@@ -1106,7 +1107,7 @@ body {
         width: 0.057208237986270026vw;
         height: 18.306636155606405vw;
         background:
-            linear-gradient(90deg, #2e2e2e00 0%, #2E2E2E 20.36%, #2e2e2e00 100%);
+            linear-gradient(180deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%);
     }
 
     &>#mh-six-section-bottom-img {
@@ -1173,7 +1174,7 @@ body {
             letter-spacing: 0.1em;
             color: var(--ltText);
         }
-        
+
         &>#six-section-bottom-more-button {
             width: 100%;
             height: 3.4324942791762014vw;
@@ -1187,6 +1188,7 @@ body {
             &>#six-section-bottom-more-left-button {
                 width: 3.4324942791762014vw;
                 height: 3.4324942791762014vw;
+                background-color: #2E2E2E;
             }
 
             &>#six-section-bottom-more-button-score {
@@ -1199,9 +1201,97 @@ body {
                 justify-content: center;
                 align-items: center;
             }
+
+
+            &>#six-section-bottom-more-right-button {
+                width: 3.4324942791762014vw;
+                height: 3.4324942791762014vw;
+            }
         }
-    
+
     }
 
+    &>#mh-six-section-bottom-line {
+        position: absolute;
+        bottom: 0.4vw;
+        left: 5.720823798627003vw;
+        width: 85.24027459954233vw;
+        height: 0.057208237986270026vw;
+        background:
+            linear-gradient(90deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%);
 
+    }
+
+}
+
+#mh-footer-eng {
+    color: var(--ltText);
+    position: absolute;
+    width: 100vw;
+    height: 6.864988558352403vw;
+    font-size: 1.8306636155606408vw;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+
+    &>#mh-footer-eng-0 {
+        position: absolute;
+        top: 2.1739130434782608vw;
+        left: 5.720823798627003vw;
+    }
+
+    &>#mh-footer-eng-1 {
+        position: absolute;
+        top: 2.1739130434782608vw;
+        left: 25.286041189931353vw;
+    }
+
+    &>#mh-footer-eng-2 {
+        position: absolute;
+        top: 2.1739130434782608vw;
+        left: 44.05034324942792vw;
+    }
+
+    &>#mh-footer-eng-3 {
+        position: absolute;
+        top: 2.1739130434782608vw;
+        left: 66.13272311212815vw;
+    }
+
+    &>#mh-footer-eng-4 {
+        position: absolute;
+        top: 2.1739130434782608vw;
+        left: 83.63844393592677vw;
+    }
+}
+
+#mh-footer-rus {
+    position: absolute;
+    display: none;
+    width: 100vw;
+    height: 6.864988558352403vw;
+    color: var(--ltText);
+
+    &>#mh-footer-rus-0 {
+        position: absolute;
+        top: 2.1739130434782608vw;
+        left: 5.720823798627003vw;
+    }
+
+    &>#mh-footer-rus-1 {
+        position: absolute;
+        top: 2.1739130434782608vw;
+        left: 30.434782608695656vw;
+    }
+
+    &>#mh-footer-rus-2 {
+        position: absolute;
+        top: 2.1739130434782608vw;
+        left: 58.69565217391305vw;
+    }
+
+    &>#mh-footer-rus-3 {
+        position: absolute;
+        top: 2.1739130434782608vw;
+        left: 86.38443935926774vw;
+    }
 }
