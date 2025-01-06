@@ -948,6 +948,7 @@ body {
         color: var(--ltMain);
         background-color:rgba(0, 136, 204, 0.2);
         border: 0.057208237986270026vw solid var(--accent);
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
     }
 
     &>.mh-activ-button {

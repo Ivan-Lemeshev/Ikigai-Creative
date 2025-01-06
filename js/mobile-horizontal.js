@@ -588,3 +588,15 @@ mhSubmitButton.addEventListener('click', (event) => {
         mhInputEmail.placeholder = "Invalid email";
     }
 })
+
+const mhUpperBlock = document.getElementById("mh-six-section-top-review-wrapper-text");
+const mhReviewsUpperName = document.getElementById("mh-six-section-top-review-name");
+const mhReviewsUpperImg = document.getElementById("mh-six-section-top-review-img");
+const mhReviewsUpperText0 = document.getElementById("mh-six-section-top-review-wrapper-text-0");
+const mhReviewsUpperText1 = document.getElementById("mh-six-section-top-review-wrapper-text-1");
+
+const mhLowerBlock = document.getElementById("mh-six-section-bottom-review-wrapper-text");
+const mhReviewsLowerName = document.getElementById("mh-six-section-bottom-review-name");
+const mhReviewsLowerImg = document.getElementById("mh-six-section-bottom-review-img");
+const mhReviewsLowerText1 = document.getElementById("mh-six-section-bottom-review-wrapper-text-0");
+const mhReviewsLowerText0 = document.getElementById("mh-six-section-bottom-review-wrapper-text-1");
