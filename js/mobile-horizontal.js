@@ -69,7 +69,7 @@ mhNavigationBlockContacts.addEventListener('click', () => {
         mhNavigationBlock.style.display = "";
     }, 500);
     window.scrollTo({
-        top: window.innerWidth * 2.3,
+        top: window.innerWidth * 2.25,
         behavior: 'smooth'
     });
 })
@@ -82,7 +82,7 @@ mhNavigationBlockReviews.addEventListener('click', () => {
         mhNavigationBlock.style.display = "";
     }, 500);
     window.scrollTo({
-        top: window.innerWidth * 3,
+        top: window.innerWidth * 2.7,
         behavior: 'smooth'
     });
 })
@@ -174,7 +174,7 @@ mhThirdSectionButtonServices.addEventListener('click', () => {
 
 mhThirdSectionButtonContacts.addEventListener('click', () => {
     window.scrollTo({
-        top: window.innerWidth * 2.3,
+        top: window.innerWidth * 2.25,
         behavior: 'smooth'
     });
 })
@@ -183,7 +183,7 @@ let mhActivNumber = 0;
 
 
 
-const mhLang = document.getElementById("mv-navigation-block-lang-button");
+const mhLang = document.getElementById("mh-navigation-block-lang-button");
 
 const mhSwitchLocalization = () => {
     mhSelectLang = mhSelectLang === "eng" ? "rus" : "eng";
@@ -270,9 +270,9 @@ const mhSetupAndTranslateForSelectService = (event) => {
         top: window.innerWidth * 2.3,
         behavior: 'smooth'
     });
-    
+
     let selCat = arrayPriceList.map((service) => service.title.eng)[mhActivNumber];
-    mhFiveSectionTitleInterestingService.src = `/img/svg/mobile-horizontal/interesting-svg ${selCat}.svg`;
+    mhFiveSectionTitleInterestingService.src = `/img/svg/mobile-horizontal/src/${selCat}.svg`;
 
     if (mhSelectLang === "eng") {
         mhTextarea.textContent = textForApplication.eng[mhNumberOfService];
@@ -434,7 +434,157 @@ thThirdSectionRightArrow.addEventListener('click', () => {
             createDivBlocks();
         }, 300);
     }
-
-
 })
 
+const capitalize = (str) => {
+    return str.split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+}
+
+const isValidEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+const mhInputFirstName = document.getElementById("mh-five-section-input-first-name");
+const mhInputLastName = document.getElementById("mh-five-section-input-last-name");
+const mhInputPhone = document.getElementById("mh-five-section-input-phone");
+const mhInputEmail = document.getElementById("mh-five-section-input-email");
+const mhSubmitButton = document.getElementById("mh-five-section-send-button");
+
+const mhFifvthSectionMainContent = document.getElementById("mh-five-section");
+const mhFifvthSectionTitle = document.getElementById("mh-five-section-title");
+
+const mhVoidInput = () => {
+    mhSubmitButton.className = "";
+}
+
+const mhAllInputsHave = () => {
+    if (mhInputFirstName.value.length && mhInputLastName.value.length && mhInputPhone.value.length && mhInputEmail.value.length && isValidEmail(mhInputEmail.value)) {
+        mhSubmitButton.classList = "mh-activ-button";
+        mhFifvthSectionMainContent.style.backgroundImage = "";
+        mhSubmitButton.style.border = "none";
+        mhSubmitButton.style.backgroundColor = "var(--accent)";
+        mhFifvthSectionTitle.textContent = "Contact us"
+        return true;
+    }
+    return false;
+}
+
+mhInputFirstName.addEventListener('input', () => {
+    if (mhSelectLang === "rus") {
+        mhInputFirstName.placeholder = "Имя";
+    } else {
+        mhInputFirstName.placeholder = "First Name";
+    }
+
+    const inputValue = mhInputFirstName.value;
+    let editValue = inputValue.replace(/[^a-zA-Zа-яА-ЯёЁ]/g, '');
+
+    if (editValue.length > 10) {
+        editValue = editValue.slice(0, 10);
+    }
+    if (editValue.length > 0) {
+        mhAllInputsHave();
+    } else {
+        mhVoidInput();
+    }
+    mhInputFirstName.value = capitalize(editValue);
+});
+
+mhInputLastName.addEventListener('input', () => {
+    if (mhSelectLang === "rus") {
+        mhInputLastName.placeholder = "Фамилия";
+    } else {
+        mhInputLastName.placeholder = "Last Name";
+    }
+    const inputValue = mhInputLastName.value;
+    let editValue = inputValue.replace(/[^a-zA-Zа-яА-ЯёЁ]/g, '');
+    if (editValue.length > 10) {
+        editValue = editValue.slice(0, 10);
+    }
+    if (editValue.length > 0) {
+        mhAllInputsHave();
+    } else {
+        mhVoidInput();
+    }
+    mhInputLastName.value = capitalize(editValue);
+});
+
+mhInputPhone.addEventListener('input', () => {
+    if (mhSelectLang === "rus") {
+        mhInputPhone.placeholder = "Телефон";
+    } else {
+        mhInputPhone.placeholder = "Phone";
+    }
+    const inputValue = mhInputPhone.value;
+    let editValue = inputValue.replace(/[^0-9+]/g, '');
+    if (editValue.length > 12) {
+        editValue = editValue.slice(0, 12);
+    }
+    if (editValue.length > 0) {
+        mhAllInputsHave();
+    } else {
+        mhVoidInput();
+    }
+    mhInputPhone.value = capitalize(editValue);
+
+
+});
+
+mhInputEmail.addEventListener('input', () => {
+    mhInputEmail.placeholder = "Email";
+    const inputValue = mhInputEmail.value;
+    let editValue = inputValue.replace(/[^a-zA-Z1-9@_\.-]/g, '');
+    if (editValue.length > 20) {
+        editValue = editValue.slice(0, 20);
+    }
+    if (editValue.length > 0) {
+        mhAllInputsHave();
+    } else {
+        mhVoidInput();
+    }
+    mhInputEmail.value = editValue;
+});
+
+mhAllInputsHave();
+
+mhSubmitButton.addEventListener('click', (event) => {
+    event.preventDefault
+
+    if (!mhAllInputsHave()) {
+        mhFifvthSectionMainContent.style.backgroundImage = "linear-gradient(180deg, rgba(252, 253, 253, 0.15) 0%, rgba(255, 79, 79, 0.15) 19.27%, rgba(252, 253, 253, 0.15) 28.53%, rgba(252, 253, 253, 0.15) 100%);";
+        mhSubmitButton.style.border = "0.057208237986270026vw solid var(--accent)";
+        mhSubmitButton.style.backgroundColor = "rgba(0, 136, 204, 0.2)";
+        mhSubmitButton.style.color = "var(--dtText)";
+        mhFifvthSectionTitle.textContent = "Fill in all required fields";
+    } else {
+        mhSendToApplication.style.display = "block";
+        setTimeout(() => {
+            mhSendToApplication.style.display = "none";
+        }, 5000);
+    }
+
+
+    if (mhInputFirstName.value.length < 1) {
+        mhInputFirstName.classList = "mh-fifvth-section-input-placeholder";
+        mhInputFirstName.placeholder = "Empty field";
+    }
+
+    if (mhInputLastName.value.length < 1) {
+        mhInputLastName.classList = "mh-fifvth-section-input-placeholder";
+        mhInputLastName.placeholder = "Empty field";
+
+    }
+
+    if (mhInputPhone.value.length < 1) {
+        mhInputPhone.classList = "mh-fifvth-section-input-placeholder";
+        mhInputPhone.placeholder = "Empty field";
+    }
+
+    if (mhInputEmail.value.length < 1) {
+        mhInputEmail.classList = "mh-fifvth-section-input-placeholder";
+        mhInputEmail.placeholder = "Invalid email";
+    }
+})

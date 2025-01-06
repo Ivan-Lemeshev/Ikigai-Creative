@@ -40,10 +40,10 @@ body {
 
     &>#mh-first-section-text {
         position: absolute;
-        width: 27.59496567505721vw;
+        width: 27.45995423340961vw;
         height: 4.233409610983982vw;
         bottom: 1.7162471395881007vw;
-        left: 33.98169336384439vw;
+        left: 30.778032036613272vw;
         font-size: 3.203661327231121vw;
         font-weight: 400;
         display: flex;
@@ -82,10 +82,10 @@ body {
 
     &>#mh-second-section-text {
         position: absolute;
-        width: 20.267734553775744vw;
+        width: 20.59496567505721vw;
         height: 3.6613272311212817vw;
         top: 0.5720823798627002vw;
-        left: 35.502517162471395vw;
+        left: 34.09610983981693vw;
         font-size: 2.745995423340961vw;
         font-weight: 400;
         display: flex;
@@ -375,7 +375,7 @@ body {
 
     &>#mh-four-section-title {
         position: absolute;
-        top: 4.576659038901601vw;
+        top: 3.576659038901601vw;
         left: 5.720823798627003vw;
         height: 2.745995423340961vw;
         width: 34.32494279176201vw;
@@ -387,10 +387,10 @@ body {
 
     &>#mh-four-section-text-0 {
         position: absolute;
-        top: 9.610983981693364vw;
+        top: 7.610983981693364vw;
         left: 5.720823798627003vw;
         width: 50.68649885583524vw;
-        height: 22.42562929061785vw;
+        height: auto;
         font-weight: 400;
         font-size: 1.8306636155606408vw;
         color: var(--ltText);
@@ -400,7 +400,7 @@ body {
 
     &>#mh-four-section-text-1 {
         position: absolute;
-        top: 33.86727688787185vw;
+        top: 35.56727688787185vw;
         left: 5.720823798627003vw;
         width: 50.68649885583524vw;
         height: 16.819221967963387vw;
@@ -424,7 +424,7 @@ body {
         background: rgba(0, 136, 204, 0.02);
         border: 0.057208237986270026vw solid var(--dtSeparationLine);
 
-        &>svg {
+        &>img {
             width: 20.340961098398168vw;
             height: 20.340961098398168vw;
             object-fit: contain;
@@ -721,12 +721,12 @@ body {
     width: 100.0vw;
     height: 45.9954233409611vw;
     position: relative;
-    background:
+    background-image:
         linear-gradient(180deg, rgba(252, 253, 253, 0.15) 0%, rgba(0, 136, 204, 0.15) 19.27%, rgba(252, 253, 253, 0.15) 28.53%, rgba(252, 253, 253, 0.15) 100%);
 
     &>#mh-five-section-title {
         position: absolute;
-        width: 12.784897025171624vw;
+        width: 28.11670480549199vw;
         height: 2.745995423340961vw;
         top: 4.576659038901601vw;
         left: 5.720823798627003vw;
@@ -750,15 +750,15 @@ body {
         height: 3.775743707093822vw;
         position: absolute;
         border-bottom: 0.11441647597254005vw solid var(--dtSeparationLine);
-        color: var(--dtSeparationLine);
+        color: #000000;
         font-weight: 400;
         font-size: 1.8306636155606408vw;
+        padding-left: 0.4576659038901602vw;
 
         &::placeholder {
             color: var(--dtSeparationLine);
             font-weight: 400;
             font-size: 1.8306636155606408vw;
-            padding-left: 0.5720823798627002vw;
         }
     }
 
@@ -780,6 +780,23 @@ body {
     &>#mh-five-section-input-email {
         top: 17.505720823798626vw;
         left: 37.75743707093822vw;
+    }
+
+    &>.mh-fifvth-section-input-placeholder {
+        width: 24.02745995423341vw;
+        height: 3.775743707093822vw;
+        position: absolute;
+        border-bottom: 0.11441647597254005vw solid var(--dtSeparationLine);
+        color: #000000;
+        font-weight: 400;
+        font-size: 1.8306636155606408vw;
+        padding-left: 0.4576659038901602vw;
+        
+        &::placeholder {
+            color: var(--bad);
+            font-weight: 400;
+            font-size: 1.8306636155606408vw;
+        }
     }
 
     &>#mh-textarea {
@@ -925,11 +942,18 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--accent);
         font-weight: 600;
         font-size: 1.8306636155606408vw;
         letter-spacing: 0.1em;
+        color: var(--ltMain);
+        background-color:rgba(0, 136, 204, 0.2);
+        border: 0.057208237986270026vw solid var(--accent);
+    }
+
+    &>.mh-activ-button {
         color: var(--dtText);
+        background-color: var(--accent);
+        border: none;
     }
 }
 
