@@ -313,7 +313,7 @@ body {
     &>#mh-third-section-text-1 {
         position: absolute;
         width: 34.89702517162471vw;
-        height: 7.208237986270023vw;
+        height: auto;
         top: 20.36613272311213vw;
         left: 5.720823798627003vw;
         font-size: 1.8306636155606408vw;

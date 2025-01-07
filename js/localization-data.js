@@ -739,6 +739,170 @@ const localizationWrapper = {
         eng: "Reviews",     
     },
 
+    "mh-navigation-block-language-button": {
+        rus: "Rus",
+        eng: "Eng",     
+    },
+
+    "mh-navigation-block-title": {
+        rus: "Навигация",
+        eng: "Navigation",     
+    },
+
+    "mh-navigation-block-main-content-intro-title": {
+        rus: "Интро",
+        eng: "Intro",     
+    },
+
+    "mh-navigation-block-main-content-intro-text": {
+        rus: "В этом разделе вас встретит наш великолепный логотип.",
+        eng: "In this section you will be greeted by our gorgeous logo.",     
+    },
+
+    "mh-navigation-block-main-content-about-us-title": {
+        rus: "Кто Мы",
+        eng: "About Us",     
+    },
+
+    "mh-navigation-block-main-content-about-us-text": {
+        rus: "Узнайте: кто мы, чем занимаемся и как воплощаем мечты в жизнь.",
+        eng: "Discover who we are, what we do, and how we bring digital innovation to life.",     
+    },
+
+    "mh-navigation-block-main-content-services-title": {
+        rus: "Услуги",
+        eng: "Services",     
+    },
+
+    "mh-navigation-block-main-content-services-text": {
+        rus: "Ознакомьтесь со списком наших услуг, призванных обеспечить ваш цифровой успех.",
+        eng: "Explore our range of cutting-edge solutions designed to drive your digital success.",     
+    },
+
+    "mh-navigation-block-main-content-contacts-title": {
+        rus: "Контакты",
+        eng: "Contacts",     
+    },
+
+    "mh-navigation-block-main-content-contacts-text": {
+        rus: "Каждый запрос делает мир ярче. Давайте вместе создадим что-то невероятное!",
+        eng: "Every request makes the world brighter. Let’s create something incredible together!",     
+    },
+
+    "mh-navigation-block-main-content-reviews-title": {
+        rus: "Отзывы",
+        eng: "Reviews",     
+    },
+
+    "mh-navigation-block-main-content-reviews-text": {
+        rus: "Критика делает нас лучше, а похвала - счастливее.",
+        eng: "Criticism makes us better, while praise makes us happiers.",     
+    },
+
+    "mh-third-section-title": {
+        rus: "Кто Мы",
+        eng: "Who We Are",     
+    },
+
+    "mh-third-section-text-0": {
+        rus: "Агентство с более чем 10-летним опытом работы, помогающее малому и среднему бизнесу реализовывать it-проекты. ",
+        eng: "Сreative agency with over 10 years of experience helping small and medium-sized businesses achieve success through digital projects."    
+    },
+
+    "mh-third-section-text-1": {
+        rus: "Мы специализируемся  на веб-дизайне, разработке, брендинге, продвижении и видеопроизводстве.",
+        eng: "We specialize in web design, development, branding, promotion, and video production.",     
+    },
+
+    "mh-third-section-button-services": {
+        rus: "Услуги",
+        eng: "Services.",     
+    },
+
+    "mh-third-section-button-contacts": {
+        rus: "Контакты",
+        eng: "Contacts",     
+    },
+
+    "mh-four-section-button-order": {
+        rus: "Заказать",
+        eng: "Order",     
+    },
+
+    "mh-four-section-others-services-title": {
+        rus: "Другие сервисы",
+        eng: "Others services",     
+    },
+
+    "mh-five-section-title-interesting": {
+        rus: "Интересует",
+        eng: "Interesting",     
+    },
+
+    "mh-five-section-interesting-change-button": {
+        rus: "Изменить",
+        eng: "Change",     
+    },
+
+    "mh-five-section-send-button": {
+        rus: "Отправить",
+        eng: "Send",     
+    },
+
+    "mh-five-section-title-interesting-name": {
+        rus: "Креативный дизайн",
+        eng: "Creative Design",     
+    },
+
+    "mh-six-section-title": {
+        rus: "Отзывы",
+        eng: "Reviews",     
+    },
+
+    "six-section-bottom-contact-us-question": {
+        rus: "Хотите оставить отзыв о нас?",
+        eng: "Would you like to leave a review?",     
+    },
+
+    "six-section-bottom-contact-us": {
+        rus: "Связаться",
+        eng: "Contact us",     
+    },
+
+    "six-section-bottom-more-button-text": {
+        rus: "Посмотреть другие отзывы",
+        eng: "Want even more reviews?",     
+    },
+
+    // "mh-third-section-right-services-h3-Setting up payment": {
+    //     rus: "Настройка оплаты",
+    //     eng: "Setting up payment",     
+    // },
+
+    // "mh-third-section-right-services-h3-Promotion on social networks": {
+    //     rus: "Продвижение в соц. сетях",
+    //     eng: "Promotion on social networks",     
+    // },
+
+    // "mh-third-section-right-services-h3-Support and content": {
+    //     rus: "Поддержка и контент",
+    //     eng: "Support and content",     
+    // },
+
+    // "mh-third-section-right-services-h3-Video production": {
+    //     rus: "Создание видео",
+    //     eng: "Video production",     
+    // },
+
+    // "mh-third-section-right-services-h3-Website design and development": {
+    //     rus: "Веб-дизайн и разработка",
+    //     eng: "Website design and development",     
+    // },
+
+    // "mh-third-section-right-services-h3-Creative Design": {
+    //     rus: "Креативный дизайн",
+    //     eng: "Creative Design",     
+    // },
 }
 
 export default localizationWrapper;

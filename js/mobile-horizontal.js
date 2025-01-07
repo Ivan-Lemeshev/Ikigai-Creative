@@ -190,14 +190,6 @@ const mhSwitchLocalmhLangization = () => {
 
         const element = document.getElementById(id); // получаю элемент который нужно по айди заменить 
         element.textContent = data[mhSelectLang]; //   обновляю текст
-
-        if (mhSelectLang === "rus") { // добавляем стили к русскому тексту 
-            const allStyles = data.styles;
-            for (let style in allStyles) {
-                const valueStyle = allStyles[style];
-                element.style[style] = valueStyle; // придумать как сбрасывать стили для ангийского языка
-            }
-        }
     }
 }
 
@@ -433,13 +425,16 @@ const createDivBlocks = () => {
             const divImg = document.createElement('img');
             const divH3 = document.createElement('h4');
 
-            div.id = `th-third-section-right-services-${buffer.length}`;
+            div.id = `mh-third-section-right-services-${buffer.length}`;
             div.classList = "mh-four-section-others-services";
             div.style.left = startDivLeft + (gapDivs + divWidth) * buffer.length + "vw";
             divImgWrapper.classList = "mh-four-section-others-services-wrapper-img";
             divImgWrapper.appendChild(divImg);
             divImg.src = `/img/svg/mobile-horizontal/src/${service.title.eng}.svg`;
-            divH3.textContent = service.title[mhSelectLang]
+
+            divH3.textContent = service.title[mhSelectLang];
+            divH3.id = `mh-third-section-right-services-h3-${service.title.eng}`;
+
             div.appendChild(divImgWrapper);
             div.appendChild(divH3);
             ServicesWrapper.appendChild(div);
