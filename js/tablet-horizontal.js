@@ -107,10 +107,10 @@ const thReviewsLowerImg = document.getElementById("th-reviews-lower-img");
 const thReviewsLowerUpperText = document.getElementById("th-reviews-lower-upper-text");
 const thReviewsLowerLowerText = document.getElementById("th-reviews-lower-lower-text");
 
+const thLang = document.getElementById("th-navigation-block-lang-button");
 let thSelectCategory = "";
 
 let thSelectLang = "eng";
-const thLang = document.getElementById("th-navigation-block-lang-button");
 const thSwitchLocalization = () => {
     thSelectLang = thSelectLang === "eng" ? "rus" : "eng";
     for (let id in localizationWrapper) { // перебираем все айдишники

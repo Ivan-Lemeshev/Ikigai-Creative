@@ -1,6 +1,7 @@
 
 import arrayPriceList from "./arrayPriceList.js"
 import localizationWrapper from "./localization-data.js";
+import themeWrapper from "./switchTheme-data.js";
 import { textForApplication } from "./slogans.js";
 import reviews from "./reviews.js";
 import dataContats from "./links.js";
@@ -91,6 +92,7 @@ const mhCentralTextUp = document.getElementById("mh-first-section-text");
 const mhCentralTextDown = document.getElementById("mh-second-section-text");
 let mhNumberOfActivAnimation = 0;
 let mhSelectLang = "eng";
+let mhSelectTheme = "light";
 
 
 const mhArrayFirstSectionSubTitlesLeft = [
@@ -183,7 +185,7 @@ let mhActivNumber = 0;
 
 const mhLang = document.getElementById("mh-navigation-block-language-text");
 
-const mhSwitchLocalmhLangization = () => {
+const mhSwitchLocalization = () => {
     mhSelectLang = mhSelectLang === "eng" ? "rus" : "eng";
     for (let id in localizationWrapper) { // перебираем все айдишники
         const data = localizationWrapper[id]; // пой айди получаю информацию 
@@ -275,7 +277,7 @@ const mhRefreshDataForLocalization = () => {
 }
 
 mhLang.addEventListener('click', () => {
-    mhSwitchLocalmhLangization();
+    mhSwitchLocalization();
     mhRefreshDataForLocalization();
 })
 
@@ -430,7 +432,7 @@ const createDivBlocks = () => {
             div.style.left = startDivLeft + (gapDivs + divWidth) * buffer.length + "vw";
             divImgWrapper.classList = "mh-four-section-others-services-wrapper-img";
             divImgWrapper.appendChild(divImg);
-            divImg.src = `/img/svg/mobile-horizontal/src/${service.title.eng}.svg`;
+            divImg.src = `/img/svg/mobile-horizontal/src/${[mhSelectTheme]}/${service.title.eng}.svg`;
 
             divH3.textContent = service.title[mhSelectLang];
             divH3.id = `mh-third-section-right-services-h3-${service.title.eng}`;
@@ -470,6 +472,7 @@ const movePlitka = (deltaGap) => {
 const thThirdSectionLeftArrow = document.getElementById("mh-four-section-others-services-left-arrow");
 const thThirdSectionRightArrow = document.getElementById("mh-four-section-others-services-right-arrow");
 let thThirdSectionAnimation = false;
+
 
 thThirdSectionLeftArrow.addEventListener('click', () => {
     if (!thThirdSectionAnimation) {
@@ -645,7 +648,6 @@ mhSubmitButton.addEventListener('click', (event) => {
     if (mhInputLastName.value.length < 1) {
         mhInputLastName.classList = "mh-fifvth-section-input-placeholder";
         mhInputLastName.placeholder = "Empty field";
-
     }
 
     if (mhInputPhone.value.length < 1) {
@@ -726,4 +728,74 @@ sixSectionBottomContactUs.addEventListener('click', () => {
         top: window.innerWidth * 2.25,
         behavior: 'smooth'
     });
+})
+
+
+const mhThemeButton = document.getElementById("mh-navigation-block-night-mode-switch-button-wrapper")
+
+
+const mhSwitchTheme = () => {
+    mhSelectTheme = mhSelectTheme === "light" ? "dark" : "light";
+    for (let id in themeWrapper) { // перебираем все айдишники
+        const data = themeWrapper[id]; // пой айди получаю информацию 
+        const element = document.getElementById(id); // получаю элемент который нужно по айди заменить 
+        const allStyles = data.styles;
+        element.style.color = allStyles[mhSelectTheme].color;
+        element.style.backgroundImage = allStyles[mhSelectTheme].backgroundImage;
+    }
+}
+
+const mhRefreshTheme = () => {
+
+    const service = arrayPriceList[mhActivNumber]
+
+    const nightModeMoonPath = document.getElementById("mh-navigation-block-night-mode-moon-path");
+    const languageSvgPath = document.getElementById("mh-navigation-block-language-svg-path");
+    const switchButtonBackRect = document.getElementById("mh-navigation-block-night-mode-switch-button-back-rect");
+    const switchButtonFace = document.getElementById("mh-navigation-block-night-mode-switch-button-face");
+    const switchButtonFaceRect1 = document.getElementById("mh-navigation-block-night-mode-switch-button-face-rect-1");
+    const switchButtonFaceRect2 = document.getElementById("mh-navigation-block-night-mode-switch-button-face-rect-2");
+    const mhFourSectionImgWrapper = document.getElementById("mh-four-section-img-wrapper");
+
+    mhFourSectionImg.src = `/img/svg/mobile-horizontal/src/${[mhSelectTheme]}/${service.title.eng}.svg`;
+    thThirdSectionLeftArrow.src = `/img/svg/mobile-horizontal/src/${[mhSelectTheme]}/mh-four-section-others-services-left-arrow.svg`;
+    thThirdSectionRightArrow.src = `/img/svg/mobile-horizontal/src/${[mhSelectTheme]}/mh-four-section-others-services-right-arrow.svg`;
+
+    if (mhSelectTheme === "dark") {
+        nightModeMoonPath.style.fill = "#F3F3F3"
+        languageSvgPath.style.fill = "#F3F3F3"
+        switchButtonBackRect.style.fill = "#007AB8"
+        switchButtonBackRect.style.fillOpacity = "1"
+        switchButtonFace.style.right = "0vw"
+        switchButtonFaceRect1.style.fill = "#2E2E2E"
+        switchButtonFaceRect2.style.stroke = "#007AB8"
+        switchButtonFaceRect2.style.strokeOpacity = "1"
+        mhFourSectionImgWrapper.style.border = "0.057208237986270026vw solid var(--outline)"
+        mhInputFirstName.classList = "mh-fifvth-section-input-placeholder-dark-theme";
+        mhInputLastName.classList = "mh-fifvth-section-input-placeholder-dark-theme";
+        mhInputPhone.classList = "mh-fifvth-section-input-placeholder-dark-theme";
+        mhInputEmail.classList = "mh-fifvth-section-input-placeholder-dark-theme";
+        mhTextarea.id = "mh-textarea-dark-theme"
+    } else {
+        nightModeMoonPath.style.fill = "#2E2E2E"
+        languageSvgPath.style.fill = "#2E2E2E"
+        switchButtonBackRect.style.fill = "#2E2E2E"
+        switchButtonBackRect.style.fillOpacity = "0.2"
+        switchButtonFace.style.right = ""
+        switchButtonFaceRect1.style.fill = "#D9D9D9"
+        switchButtonFaceRect2.style.stroke = "#2E2E2E"
+        switchButtonFaceRect2.style.strokeOpacity = "0.2"
+        mhFourSectionImgWrapper.style.border = ""
+        mhInputFirstName.classList = "mh-five-section-input";
+        mhInputLastName.classList = "mh-five-section-input";
+        mhInputPhone.classList = "mh-five-section-input";
+        mhInputEmail.classList = "mh-five-section-input";
+        mhTextarea.id = "mh-textarea"
+
+    }
+}
+
+mhThemeButton.addEventListener('click', () => {
+    mhSwitchTheme();
+    mhRefreshTheme();
 })
