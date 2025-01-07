@@ -756,6 +756,7 @@ const mhRefreshTheme = () => {
     const switchButtonFaceRect1 = document.getElementById("mh-navigation-block-night-mode-switch-button-face-rect-1");
     const switchButtonFaceRect2 = document.getElementById("mh-navigation-block-night-mode-switch-button-face-rect-2");
     const mhFourSectionImgWrapper = document.getElementById("mh-four-section-img-wrapper");
+    const mhSixSectionBottomImgPath = document.getElementById("mh-six-section-bottom-img-path");
 
     mhFourSectionImg.src = `/img/svg/mobile-horizontal/src/${[mhSelectTheme]}/${service.title.eng}.svg`;
     thThirdSectionLeftArrow.src = `/img/svg/mobile-horizontal/src/${[mhSelectTheme]}/mh-four-section-others-services-left-arrow.svg`;
@@ -775,7 +776,10 @@ const mhRefreshTheme = () => {
         mhInputLastName.classList = "mh-fifvth-section-input-placeholder-dark-theme";
         mhInputPhone.classList = "mh-fifvth-section-input-placeholder-dark-theme";
         mhInputEmail.classList = "mh-fifvth-section-input-placeholder-dark-theme";
-        mhTextarea.id = "mh-textarea-dark-theme"
+        mhTextarea.id = "mh-textarea-dark-theme";
+        mhSixSectionBottomImgPath.style.fill = "#EDEDED"
+        mhFooterEng.style.backgroundColor = "var(--dtMain)"
+        mhFooterRus.style.backgroundColor = "var(--dtMain)"
     } else {
         nightModeMoonPath.style.fill = "#2E2E2E"
         languageSvgPath.style.fill = "#2E2E2E"
@@ -791,7 +795,9 @@ const mhRefreshTheme = () => {
         mhInputPhone.classList = "mh-five-section-input";
         mhInputEmail.classList = "mh-five-section-input";
         mhTextarea.id = "mh-textarea"
-
+        mhSixSectionBottomImgPath.style.fill = "#2E2E2E"
+        mhFooterEng.style.backgroundColor = ""
+        mhFooterRus.style.backgroundColor = ""
     }
 }
 

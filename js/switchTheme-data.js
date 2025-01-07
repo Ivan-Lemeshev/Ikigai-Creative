@@ -818,13 +818,28 @@ const themeWrapper = {
     "six-section-bottom-contact-us": {
         styles: {
             light: {
-                color: "var(--ltText)",
+                color: "var(--dtText)",
                 backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
                 backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-six-section-bottom-line": {
+        styles: {
+            light: {
+                color: "",
+                backgroundImage: "linear-gradient(90deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%)",
+                background: ""
+            },
+            dark: {
+                color: "",
+                backgroundImage: "linear-gradient(90deg,rgba(237, 237, 237, 0) 0%,rgba(237, 237, 237, 0.8) 20.36%,rgba(237, 237, 237, 0) 100%)",
                 background: ""
             }
         }

@@ -1218,7 +1218,7 @@
             left: 0;
             bottom: 0;
             height: 3.8901601830663615vw;
-            background-color: var(--dtSeparationLine);
+            background: var(--dtSeparationLine);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1294,7 +1294,7 @@
         left: 5.720823798627003vw;
         width: 85.24027459954233vw;
         height: 0.057208237986270026vw;
-        background:
+        background-image:
             linear-gradient(90deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%);
 
     }
@@ -1309,6 +1309,7 @@
     font-size: 1.8306636155606408vw;
     font-weight: 600;
     letter-spacing: 0.1em;
+    background-color: #FCFDFD;
 
     &>#mh-footer-eng-0 {
         position: absolute;
@@ -1347,6 +1348,7 @@
     width: 100vw;
     height: 6.864988558352403vw;
     color: var(--ltText);
+    background-color: #FCFDFD;
 
     &>#mh-footer-rus-0 {
         position: absolute;
