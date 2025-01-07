@@ -987,6 +987,7 @@ body {
         width: 85.24027459954233vw;
         height: 31.23569794050343vw;
         overflow: visible;
+        transition: opacity 0.4s ease-in-out, left 0.4s ease-in-out;
 
         &>#mh-six-section-top-review-img {
             position: absolute;
@@ -1060,6 +1061,7 @@ body {
         width: 85.24027459954233vw;
         height: 31.23569794050343vw;
         overflow: visible;
+        transition: opacity 0.4s ease-in-out, left 0.4s ease-in-out;
 
         &>#mh-six-section-bottom-review-img {
             position: absolute;
@@ -1214,6 +1216,7 @@ body {
                 width: 3.4324942791762014vw;
                 height: 3.4324942791762014vw;
                 background-color: #2E2E2E;
+                pointer-events: all;
             }
 
             &>#six-section-bottom-more-button-score {
@@ -1231,6 +1234,8 @@ body {
             &>#six-section-bottom-more-right-button {
                 width: 3.4324942791762014vw;
                 height: 3.4324942791762014vw;
+                pointer-events: all;
+
             }
         }
 

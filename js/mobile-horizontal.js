@@ -2,7 +2,7 @@
 import arrayPriceList from "./arrayPriceList.js"
 import localizationWrapper from "./localization-data.js";
 import { textForApplication } from "./slogans.js";
-import reviews from "./reviews-mobile.js";
+import reviews from "./reviews.js";
 import dataContats from "./links.js";
 
 const mhNavButton = document.getElementById("mh-first-section-navigation-button");
@@ -181,11 +181,9 @@ mhThirdSectionButtonContacts.addEventListener('click', () => {
 
 let mhActivNumber = 0;
 
+const mhLang = document.getElementById("mh-navigation-block-language-text");
 
-
-const mhLang = document.getElementById("mh-navigation-block-lang-button");
-
-const mhSwitchLocalization = () => {
+const mhSwitchLocalmhLangization = () => {
     mhSelectLang = mhSelectLang === "eng" ? "rus" : "eng";
     for (let id in localizationWrapper) { // перебираем все айдишники
         const data = localizationWrapper[id]; // пой айди получаю информацию 
@@ -202,6 +200,93 @@ const mhSwitchLocalization = () => {
         }
     }
 }
+
+
+const mhUpperBlock = document.getElementById("mh-six-section-top-review-wrapper");
+const mhReviewsUpperName = document.getElementById("mh-six-section-top-review-name");
+const mhReviewsUpperImg = document.getElementById("mh-six-section-top-review-img");
+const mhReviewsUpperText0 = document.getElementById("mh-six-section-top-review-wrapper-text-0");
+const mhReviewsUpperText1 = document.getElementById("mh-six-section-top-review-wrapper-text-1");
+
+const mhLowerBlock = document.getElementById("mh-six-section-bottom-review-wrapper");
+const mhReviewsLowerName = document.getElementById("mh-six-section-bottom-review-name");
+const mhReviewsLowerImg = document.getElementById("mh-six-section-bottom-review-img");
+const mhReviewsLowerText1 = document.getElementById("mh-six-section-bottom-review-wrapper-text-0");
+const mhReviewsLowerText0 = document.getElementById("mh-six-section-bottom-review-wrapper-text-1");
+
+
+const mhInputFirstName = document.getElementById("mh-five-section-input-first-name");
+const mhInputLastName = document.getElementById("mh-five-section-input-last-name");
+const mhInputPhone = document.getElementById("mh-five-section-input-phone");
+const mhInputEmail = document.getElementById("mh-five-section-input-email");
+const mhSubmitButton = document.getElementById("mh-five-section-send-button");
+
+const mhFifvthSectionMainContent = document.getElementById("mh-five-section");
+const mhFifvthSectionTitle = document.getElementById("mh-five-section-title");
+
+const mhFourSectionTitle = document.getElementById("mh-four-section-title");
+const mhFourSectionText0 = document.getElementById("mh-four-section-text-0");
+const mhFourSectionText1 = document.getElementById("mh-four-section-text-1");
+
+const mhFooterEng = document.getElementById("mh-footer-eng");
+const mhFooterRus = document.getElementById("mh-footer-rus");
+
+const mhRefreshDataForLocalization = () => {
+    const current = arrayPriceList[mhActivNumber];
+
+    const currentReviewsTop = reviews[number].top;
+    const currentReviewsBottom = reviews[number].bottom;
+
+    mhReviewsUpperName.textContent = currentReviewsTop.title[mhSelectLang];
+    mhReviewsLowerName.textContent = currentReviewsBottom.title[mhSelectLang];
+    mhReviewsUpperText0.textContent = currentReviewsTop.upperText[mhSelectLang];
+    mhReviewsUpperText1.textContent = currentReviewsTop.lowerText[mhSelectLang];
+    mhReviewsLowerText1.textContent = currentReviewsBottom.upperText[mhSelectLang];
+    mhReviewsLowerText0.textContent = currentReviewsBottom.lowerText[mhSelectLang];
+
+    current.prices.map((serviceData, number) => {
+        const { nameOfServise, cost } = serviceData;
+        const mhPriceListServiceName = document.getElementById(`mh-price-list-service-name-${number}`);
+        const mhPriceListServiceCost = document.getElementById(`mh-price-list-service-cost-${number}`);
+        mhPriceListServiceCost.textContent = `£${cost}`;
+        mhPriceListServiceName.textContent = nameOfServise[mhSelectLang];
+    })
+
+    if (mhSelectLang === "rus") {
+        mhInputFirstName.placeholder = "Имя";
+        mhInputLastName.placeholder = "Фамилия";
+        mhInputPhone.placeholder = "Телефон";
+        mhTextarea.placeholder = "В этом поле вы можете указать указать любые дополнительные данные или пожелания по заказу."
+        mhFooterEng.style.display = "none";
+        mhFooterRus.style.display = "block";
+    } else {
+        mhInputFirstName.placeholder = "First Name";
+        mhInputLastName.placeholder = "Last Name";
+        mhInputPhone.placeholder = "Phone";
+        mhTextarea.placeholder = "In this field, you can provide any additional details or requests for your order, including your preferred method of contact.";
+        mhFooterEng.style.display = "block";
+        mhFooterRus.style.display = "none";
+    }
+
+    for (let index = 0; index < arrayPriceList.length; index++) {
+        if (mhSelectLang === "rus") {
+            mhFourSectionTitle.textContent = current.title.rus;
+            mhFourSectionText0.textContent = current.description.rus[0];
+            mhFourSectionText1.textContent = current.description.rus[1];
+        } else {
+            mhFourSectionTitle.textContent = current.title.eng;
+            mhFourSectionText0.textContent = current.description.eng[0];
+            mhFourSectionText1.textContent = current.description.eng[1];
+        }
+
+    }
+}
+
+mhLang.addEventListener('click', () => {
+    mhSwitchLocalmhLangization();
+    mhRefreshDataForLocalization();
+})
+
 
 const mhFourSectionButtonOfPriceList = document.getElementById("mh-four-section-button-price-list");
 const mhFourPriceListWrapper = document.getElementById("mh-price-list-wrapper");
@@ -225,9 +310,7 @@ mhFourPriceListXMark.addEventListener('click', () => {
     }, 300);
 })
 
-const mhFourSectionTitle = document.getElementById("mh-four-section-title");
-const mhFourSectionText0 = document.getElementById("mh-four-section-text-0");
-const mhFourSectionText1 = document.getElementById("mh-four-section-text-1");
+
 
 const thActivService = () => {
     const currentService = arrayPriceList[mhActivNumber];
@@ -447,14 +530,6 @@ const isValidEmail = (email) => {
     return regex.test(email);
 }
 
-const mhInputFirstName = document.getElementById("mh-five-section-input-first-name");
-const mhInputLastName = document.getElementById("mh-five-section-input-last-name");
-const mhInputPhone = document.getElementById("mh-five-section-input-phone");
-const mhInputEmail = document.getElementById("mh-five-section-input-email");
-const mhSubmitButton = document.getElementById("mh-five-section-send-button");
-
-const mhFifvthSectionMainContent = document.getElementById("mh-five-section");
-const mhFifvthSectionTitle = document.getElementById("mh-five-section-title");
 
 const mhVoidInput = () => {
     mhSubmitButton.className = "";
@@ -589,14 +664,71 @@ mhSubmitButton.addEventListener('click', (event) => {
     }
 })
 
-const mhUpperBlock = document.getElementById("mh-six-section-top-review-wrapper-text");
-const mhReviewsUpperName = document.getElementById("mh-six-section-top-review-name");
-const mhReviewsUpperImg = document.getElementById("mh-six-section-top-review-img");
-const mhReviewsUpperText0 = document.getElementById("mh-six-section-top-review-wrapper-text-0");
-const mhReviewsUpperText1 = document.getElementById("mh-six-section-top-review-wrapper-text-1");
 
-const mhLowerBlock = document.getElementById("mh-six-section-bottom-review-wrapper-text");
-const mhReviewsLowerName = document.getElementById("mh-six-section-bottom-review-name");
-const mhReviewsLowerImg = document.getElementById("mh-six-section-bottom-review-img");
-const mhReviewsLowerText1 = document.getElementById("mh-six-section-bottom-review-wrapper-text-0");
-const mhReviewsLowerText0 = document.getElementById("mh-six-section-bottom-review-wrapper-text-1");
+const sixSectionBottomMoreLeftButton = document.getElementById("six-section-bottom-more-left-button");
+const sixSectionBottomMoreRightButton = document.getElementById("six-section-bottom-more-right-button");
+
+let number = 0;
+let float = false;
+
+const upperloadReviews = (numberActivReviews, direction) => {
+    if (!float) {
+        number = numberActivReviews >= 0 ? numberActivReviews % reviews.length : (reviews.length - 1);
+        const data = reviews[number];
+        float = true;
+        mhUpperBlock.style.opacity = "0";
+        mhLowerBlock.style.opacity = "0";
+        if (direction) {
+            mhUpperBlock.style.left = "-6vw";
+            mhLowerBlock.style.left = "-6vw";
+        } else {
+            mhUpperBlock.style.left = "14.5vw";
+            mhLowerBlock.style.left = "14.5vw";
+        }
+        setTimeout(() => {
+            mhUpperBlock.style.opacity = "";
+            mhLowerBlock.style.opacity = "";
+            mhUpperBlock.style.left = "";
+            mhLowerBlock.style.left = "";
+            float = false;
+        }, 500);
+        setTimeout(() => {
+            if (mhSelectLang === "eng") {
+                mhReviewsUpperName.textContent = data.top.title[mhSelectLang];
+                mhReviewsUpperText0.textContent = data.top.upperText[mhSelectLang];
+                mhReviewsUpperText1.textContent = data.top.lowerText[mhSelectLang];
+                mhReviewsLowerName.textContent = data.bottom.title[mhSelectLang];
+                mhReviewsLowerText1.textContent = data.bottom.upperText[mhSelectLang];
+                mhReviewsLowerText0.textContent = data.bottom.lowerText[mhSelectLang];
+            } else {
+                mhReviewsUpperName.textContent = data.top.title.rus;
+                mhReviewsUpperText0.textContent = data.top.upperText.rus;
+                mhReviewsUpperText1.textContent = data.top.lowerText.rus;
+                mhReviewsLowerName.textContent = data.bottom.title.rus;
+                mhReviewsLowerText1.textContent = data.bottom.upperText.rus;
+                mhReviewsLowerText0.textContent = data.bottom.lowerText.rus;
+            }
+            mhReviewsUpperImg.src = `/img/png/reviews-img-${data.top.title.eng}.png`;
+            mhReviewsLowerImg.src = `/img/png/reviews-img-${data.bottom.title.eng}.png`;
+        }, 400);
+    }
+}
+
+upperloadReviews(0);
+
+sixSectionBottomMoreLeftButton.addEventListener('click', () => {
+    upperloadReviews(--number, true)
+})
+
+sixSectionBottomMoreRightButton.addEventListener('click', () => {
+    upperloadReviews(++number, false)
+})
+
+const sixSectionBottomContactUs = document.getElementById("six-section-bottom-contact-us");
+
+sixSectionBottomContactUs.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 2.25,
+        behavior: 'smooth'
+    });
+})

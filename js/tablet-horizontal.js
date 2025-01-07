@@ -176,97 +176,34 @@ const thRefreshDataForLocalization = () => {
     })
 
     if (thSelectLang === "rus") {
-        thCentralText.style.fontFamily = "Lato";
         thInputFirstName.placeholder = "Имя";
-        thInputFirstName.style.fontFamily = "Lato";
-        thInputFirstName.style.fontSize = "1.94384vw";
-        thInputFirstName.style.lineHeight = "2.33261vw";
         thInputLastName.placeholder = "Фамилия";
-        thInputLastName.style.fontFamily = "Lato";
-        thInputLastName.style.fontSize = "1.94384vw";
-        thInputLastName.style.lineHeight = "2.33261vw";
         thInputPhone.placeholder = "Телефон";
-        thInputPhone.style.fontFamily = "Lato";
-        thInputPhone.style.fontSize = "1.94384vw";
-        thInputPhone.style.lineHeight = "2.33261vw";
-        thInputEmail.placeholder = "Email";
-        thInputEmail.style.fontFamily = "Lato";
-        thInputEmail.style.fontSize = "1.94384vw";
-        thInputEmail.style.lineHeight = "2.33261vw";
         thTextarea.placeholder = "В этом поле вы можете указать указать любые дополнительные данные или пожелания по заказу."
-        thTextarea.style.fontFamily = "Lato";
         thFooterEng.style.display = "none";
         thFooterRus.style.display = "block";
-        thReviewsUpperName.style.fontFamily = "Lato";
-        thReviewsUpperUpperText.style.fontFamily = "Lato";
-        thReviewsLowerName.style.fontFamily = "Lato";
-        thReviewsUpperUpperText.style.fontFamily = "Lato";
-        thReviewsUpperLowerText.style.fontFamily = "Lato";
-        thReviewsLowerUpperText.style.fontFamily = "Lato";
-        thReviewsLowerLowerText.style.fontFamily = "Lato";
-
-
     } else {
         thCentralText.style.fontFamily = "";
         thInputFirstName.placeholder = "First Name";
-        thInputFirstName.style.fontFamily = "";
-        thInputFirstName.style.fontSize = "";
-        thInputFirstName.style.lineHeight = "";
         thInputLastName.placeholder = "Last Name";
-        thInputLastName.style.fontFamily = "";
-        thInputLastName.style.fontSize = "";
-        thInputLastName.style.lineHeight = "";
         thInputPhone.placeholder = "Phone";
-        thInputPhone.style.fontFamily = "";
-        thInputPhone.style.fontSize = "";
-        thInputPhone.style.lineHeight = "";
-        thInputEmail.placeholder = "Email";
-        thInputEmail.style.fontFamily = "";
-        thInputEmail.style.fontSize = "";
-        thInputEmail.style.lineHeight = "";
         thTextarea.placeholder = "In this field, you can provide any additional details or requests for your order, including your preferred method of contact.";
-        thTextarea.style.fontFamily = "";
         thFooterEng.style.display = "block";
         thFooterRus.style.display = "none";
-        thReviewsUpperName.style.fontFamily = "";
-        thReviewsUpperUpperText.style.fontFamily = "";
-        thReviewsLowerName.style.fontFamily = "";
-        thReviewsUpperUpperText.style.fontFamily = "";
-        thReviewsUpperLowerText.style.fontFamily = "";
-        thReviewsLowerUpperText.style.fontFamily = "";
-        thReviewsLowerLowerText.style.fontFamily = "";
 
     }
 
     for (let index = 0; index < arrayPriceList.length; index++) {
         if (thSelectLang === "rus") {
             thThirdSectionTitle.textContent = current.title.rus;
-            thThirdSectionTitle.style.fontFamily = "Lato";
-            thThirdSectionTitle.style.fontSize = "2.80778vw";
             thThirdSectionText0.textContent = current.description.rus[0];
-            thThirdSectionText0.style.fontFamily = "Lato";
-            thThirdSectionText0.style.fontSize = "1.72786vw";
-            thThirdSectionText0.style.lineHeight = "2.24622vw";
             thThirdSectionText1.textContent = current.description.rus[1];
-            thThirdSectionText1.style.fontFamily = "Lato";
-            thThirdSectionText1.style.fontSize = "1.72786vw";
-            thThirdSectionText1.style.lineHeight = "2.24622vw";
         } else {
             thThirdSectionTitle.textContent = current.title.eng;
-            thThirdSectionTitle.style.fontFamily = "";
-            thThirdSectionTitle.style.fontSize = "";
             thThirdSectionText0.textContent = current.description.eng[0];
-            thThirdSectionText0.style.fontFamily = "";
-            thThirdSectionText0.style.fontSize = "";
-            thThirdSectionText1.style.lineHeight = "";
             thThirdSectionText1.textContent = current.description.eng[1];
-            thThirdSectionText1.style.fontFamily = "";
-            thThirdSectionText1.style.fontSize = "";
-            thThirdSectionText1.style.lineHeight = "";
         }
-
     }
-
 }
 
 
