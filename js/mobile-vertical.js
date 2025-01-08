@@ -179,7 +179,6 @@ const mvSwitchLocalization = () => {
 
         if (mvSelectLang === "rus") { // добавляем стили к русскому тексту 
             const allStyles = data.styles;
-            element.style.fontFamily = "'Lato'";
             for (let style in allStyles) {
                 const valueStyle = allStyles[style];
                 element.style[style] = valueStyle; // придумать как сбрасывать стили для ангийского языка
@@ -207,82 +206,27 @@ const mvRefreshDataForLocalization = () => {
         const mvPriceListServiceCost = document.getElementById(`mv-price-list-service-cost-${number}`);
         mvPriceListServiceCost.textContent = `£${cost}`;
         mvPriceListServiceName.textContent = nameOfServise[mvSelectLang];
-        if (mvSelectLang === "rus") {
-            mvPriceListServiceCost.style.fontFamily = "Lato";
-            mvPriceListServiceName.style.fontFamily = "Lato";
-
-        } else {
-            mvPriceListServiceCost.style.fontFamily = "";
-            mvPriceListServiceName.style.fontFamily = "";
-        }
-
     })
 
     if (mvSelectLang === "rus") {
-        mvCentralTextsecondBlockLeft.style.fontFamily = "Lato";
-        mvCentralTextsecondBlockRight.style.fontFamily = "Lato";
-        mvCentralTextsecondBlockLeftGradient.style.fontFamily = "Lato";
-        mvCentralTextsecondBlockRightGradient.style.fontFamily = "Lato";
         mvInputFirstName.placeholder = "Имя";
-        mvInputFirstName.style.fontFamily = "Lato";
-        mvInputFirstName.style.fontSize = "4.975124378109453vw";
-        mvInputFirstName.style.lineHeight = "5.970149253731343vw";
         mvInputLastName.placeholder = "Фамилия";
-        mvInputLastName.style.fontFamily = "Lato";
-        mvInputLastName.style.fontSize = "4.975124378109453vw";
-        mvInputLastName.style.lineHeight = "5.970149253731343vw";
         mvInputPhone.placeholder = "Телефон";
-        mvInputPhone.style.fontFamily = "Lato";
-        mvInputPhone.style.fontSize = "4.975124378109453vw";
-        mvInputPhone.style.lineHeight = "5.970149253731343vw";
         mvTextarea.placeholder = "В этом поле вы можете указать указать любые дополнительные данные или пожелания по заказу."
-        mvTextarea.style.fontFamily = "Lato";
         mvBlockTitle.textContent = reviews[number].title.rus;
-        mvBlockTitle.style.fontFamily = "Lato";
-        mvBlockTitle.style.fontSize = "4.975124378109453vw";
-        mvBlockTitle.style.lineHeight = "5.970149253731343vw";
         mvUpperBlock.textContent = reviews[number].upperText.rus;
-        mvUpperBlock.style.fontFamily = "Lato";
-        mvUpperBlock.style.fontSize = "4.975124378109453vw";
-        mvUpperBlock.style.lineHeight = "5.970149253731343vw";
         mvLowerBlock.textContent = reviews[number].lowerText.rus;
-        mvLowerBlock.style.fontFamily = "Lato";
-        mvLowerBlock.style.fontSize = "4.975124378109453vw";
-        mvLowerBlock.style.lineHeight = "5.970149253731343vw";
         mvFooterEng.style.display = "none";
         mvFooterRus.style.display = "flex";
 
     } else {
-        mvCentralTextsecondBlockLeft.style.fontFamily = "";
-        mvCentralTextsecondBlockRight.style.fontFamily = "";
-        mvCentralTextsecondBlockLeftGradient.style.fontFamily = "";
-        mvCentralTextsecondBlockRightGradient.style.fontFamily = "";
         mvInputFirstName.placeholder = "First Name";
-        mvInputFirstName.style.fontFamily = "";
-        mvInputFirstName.style.fontSize = "";
-        mvInputFirstName.style.lineHeight = "";
         mvInputLastName.placeholder = "Last Name";
-        mvInputLastName.style.fontFamily = "";
-        mvInputLastName.style.fontSize = "";
-        mvInputLastName.style.lineHeight = "";
         mvInputPhone.placeholder = "Phone";
-        mvInputPhone.style.fontFamily = "";
-        mvInputPhone.style.fontSize = "";
-        mvInputPhone.style.lineHeight = "";
         mvTextarea.placeholder = "In this field, you can provide any additional details or requests for your order, including your preferred method of contact.";
-        mvTextarea.style.fontFamily = "";
         mvBlockTitle.textContent = reviews[number].title.eng;
-        mvBlockTitle.style.fontFamily = "";
-        mvBlockTitle.style.fontSize = "";
-        mvBlockTitle.style.lineHeight = "";
         mvUpperBlock.textContent = reviews[number].upperText.eng;
-        mvUpperBlock.style.fontFamily = "";
-        mvUpperBlock.style.fontSize = "";
-        mvUpperBlock.style.lineHeight = "";
         mvLowerBlock.textContent = reviews[number].lowerText.eng;
-        mvLowerBlock.style.fontFamily = "";
-        mvLowerBlock.style.fontSize = "";
-        mvLowerBlock.style.lineHeight = "";
         mvFooterEng.style.display = "flex";
         mvFooterRus.style.display = "none";
 
@@ -292,26 +236,12 @@ const mvRefreshDataForLocalization = () => {
 
         if (mvSelectLang === "rus") {
             mvThirdSectionTitle.textContent = current.title.rus;
-            mvThirdSectionTitle.style.fontFamily = "Lato";
             mvThirdSectionText0.textContent = current.description.rus[0];
-            mvThirdSectionText0.style.fontFamily = "Lato";
-            mvThirdSectionText0.style.fontSize = "3.482587064676617vw";
-            mvThirdSectionText0.style.lineHeight = "4.8059701492537314vw";
             mvThirdSectionText1.textContent = current.description.rus[1];
-            mvThirdSectionText1.style.fontFamily = "Lato";
-            mvThirdSectionText1.style.fontSize = "3.482587064676617vw";
-            mvThirdSectionText1.style.lineHeight = "4.8059701492537314vw";
         } else {
             mvThirdSectionTitle.textContent = current.title.eng;
-            mvThirdSectionTitle.style.fontFamily = "";
             mvThirdSectionText0.textContent = current.description.eng[0];
-            mvThirdSectionText0.style.fontFamily = "";
-            mvThirdSectionText0.style.fontSize = "";
-            mvThirdSectionText1.style.lineHeight = "";
             mvThirdSectionText1.textContent = current.description.eng[1];
-            mvThirdSectionText1.style.fontFamily = "";
-            mvThirdSectionText1.style.fontSize = "";
-            mvThirdSectionText1.style.lineHeight = "";
         }
     }
 }
@@ -625,14 +555,8 @@ mvInputFirstName.addEventListener('input', () => {
     mvInputFirstName.classList = "mv-fifvth-section-input";
     if (mvSelectLang === "rus") {
         mvInputFirstName.placeholder = "Имя";
-        mvInputFirstName.style.fontFamily = "Lato";
-        mvInputFirstName.style.fontSize = "4.975124378109453vw";
-        mvInputFirstName.style.lineHeight = "5.970149253731343vw";
     } else {
         mvInputFirstName.placeholder = "First Name";
-        mvInputFirstName.style.fontFamily = "";
-        mvInputFirstName.style.fontSize = "";
-        mvInputFirstName.style.lineHeight = "";
     }
 
     const inputValue = mvInputFirstName.value;
@@ -655,14 +579,8 @@ mvInputLastName.addEventListener('input', () => {
 
     if (mvSelectLang === "rus") {
         mvInputLastName.placeholder = "Фамилия";
-        mvInputLastName.style.fontFamily = "Lato";
-        mvInputLastName.style.fontSize = "4.975124378109453vw";
-        mvInputLastName.style.lineHeight = "5.970149253731343vw";
     } else {
         mvInputLastName.placeholder = "Last Name";
-        mvInputLastName.style.fontFamily = "";
-        mvInputLastName.style.fontSize = "";
-        mvInputLastName.style.lineHeight = "";
     }
 
     const inputValue = mvInputLastName.value;
@@ -682,14 +600,8 @@ mvInputPhone.addEventListener('input', () => {
 
     if (mvSelectLang === "rus") {
         mvInputPhone.placeholder = "Телефон";
-        mvInputPhone.style.fontFamily = "Lato";
-        mvInputPhone.style.fontSize = "4.975124378109453vw";
-        mvInputPhone.style.lineHeight = "5.970149253731343vw";
     } else {
         mvInputPhone.placeholder = "Phone";
-        mvInputPhone.style.fontFamily = "";
-        mvInputPhone.style.fontSize = "";
-        mvInputPhone.style.lineHeight = "";
     }
     mvInputPhone.style.borderBottom = "";
     mvInputPhone.classList = "mv-fifvth-section-input";

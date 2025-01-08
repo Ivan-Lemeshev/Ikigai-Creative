@@ -1692,7 +1692,7 @@ const themeWrapper = {
         }
     },
 
-    "mv-sixth-section ": {
+    "mv-sixth-section": {
         styles: {
             light: {
                 color: "",
@@ -1757,6 +1757,188 @@ const themeWrapper = {
             dark: {
                 color: "",
                 background: `linear-gradient(270deg, #1C1C1C 0%, #D6D6D6 14.42%, #1C1C1C 100%);`
+            }
+        }
+    },
+
+    "mv-sixth-section-main-block-all-text-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-sixth-section-main-text-review-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-sixth-section-main-text-review-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-footer-eng-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-footer-eng-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-footer-eng-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-footer-eng-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-footer-eng-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-footer-rus-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-footer-rus-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-footer-rus-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-footer-rus-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-footer-rus": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--outline)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "mv-footer-eng": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--outline)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
             }
         }
     },
