@@ -480,6 +480,7 @@
         height: 9.950248756218906vw;
         border: 0.24875621890547264vw solid var(--ltSeparationLine);
         overflow: visible;
+        z-index: 10;
         background: var(--dtSeparationLine);
 
         &>p {
