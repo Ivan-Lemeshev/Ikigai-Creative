@@ -3,12 +3,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -18,11 +16,11 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "linear-gradient(180deg, #E7EFF3 0%, #D8E9F1 50.42%)"
+                background: "linear-gradient(180deg, #E7EFF3 0%, #D8E9F1 50.42%)"
             },
             dark: {
                 color: "",
-                backgroundImage: "linear-gradient(180deg, #1C1C1C 0%, #242A2C 100%)"
+                background: "linear-gradient(180deg, #1C1C1C 0%, #242A2C 100%)"
             }
         }
     },
@@ -31,11 +29,11 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "linear-gradient(180deg, #e7eff3cb 0%, #d8e9f1d8 50.42%)"
+                background: "linear-gradient(180deg, #e7eff3cb 0%, #d8e9f1d8 50.42%)"
             },
             dark: {
                 color: "",
-                backgroundImage: "linear-gradient(180deg, #1C1C1C 0%, #242A2C 100%)"
+                background: "linear-gradient(180deg, #1C1C1C 0%, #242A2C 100%)"
             }
         }
     },
@@ -44,12 +42,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -59,12 +55,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -74,12 +68,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -89,12 +81,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -104,12 +94,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -119,12 +107,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -134,12 +120,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -149,12 +133,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -164,12 +146,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -179,12 +159,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -194,12 +172,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -209,12 +185,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -224,12 +198,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -239,12 +211,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -254,12 +224,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -269,11 +237,11 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "linear-gradient(0deg, #E7EFF3 0%, #D8E9F1 50.42%)"
+                background: "linear-gradient(0deg, #E7EFF3 0%, #D8E9F1 50.42%)"
             },
             dark: {
                 color: "",
-                backgroundImage: "linear-gradient(0deg, #1C1C1C 0%, #242A2C 100%)"
+                background: "linear-gradient(0deg, #1C1C1C 0%, #242A2C 100%)"
             }
         }
     },
@@ -282,17 +250,17 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage:
-                    `linear-gradient(180deg, rgba(252, 253, 253, 0.1) 0%, rgba(0, 136, 204, 0.02) 52.95%, rgba(243, 243, 243, 0.1) 99%),
-                radial-gradient(67.13% 50% at 72.77% 50%, rgba(0, 136, 204, 0.1) 28.5%, rgba(243, 243, 243, 0) 100%),
-                radial-gradient(63.05% 43.41% at 37.01% 56.59%, rgba(0, 136, 204, 0.1) 0%, rgba(243, 243, 243, 0) 100%)`
+                background: `linear-gradient(180deg, rgba(252, 253, 253, 0.1) 0%, rgba(0, 136, 204, 0.02) 52.95%, rgba(243, 243, 243, 0.1) 99%),
+                            radial-gradient(67.13% 50% at 72.77% 50%, rgba(0, 136, 204, 0.1) 28.5%, rgba(243, 243, 243, 0) 100%),
+                            radial-gradient(63.05% 43.41% at 37.01% 56.59%, rgba(0, 136, 204, 0.1) 0%, rgba(243, 243, 243, 0) 100%),
+                            linear-gradient(0deg, #FCFDFD, #FCFDFD)`
             },
             dark: {
                 color: "",
-                backgroundImage:
-                    `linear-gradient(180deg, #1C1C1C 19.97%, rgba(36, 42, 44, 0.2) 52.95%, #1C1C1C 77.71%),
-                radial-gradient(63.93% 39.68% at 67.39% 55.97%, #242A2C 28.5%, rgba(28, 28, 28, 0) 100%),
-                radial-gradient(75.88% 52.24% at 18.82% 46.27%, #242A2C 0%, rgba(28, 28, 28, 0) 100%)`
+                background: `linear-gradient(180deg, #1C1C1C 19.97%, rgba(36, 42, 44, 0.2) 52.95%, #1C1C1C 77.71%),
+                            radial-gradient(63.93% 39.68% at 67.39% 55.97%, #242A2C 28.5%, rgba(28, 28, 28, 0) 100%),
+                            radial-gradient(75.88% 52.24% at 18.82% 46.27%, #242A2C 0%, rgba(28, 28, 28, 0) 100%),
+                            linear-gradient(0deg, #1C1C1C, #1C1C1C)`
             }
         }
     },
@@ -301,12 +269,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -316,12 +282,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -331,12 +295,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -345,13 +307,11 @@ const themeWrapper = {
     "mh-third-section-button-services": {
         styles: {
             light: {
-                color: "var(--ltText)",
-                backgroundImage: "",
+                color: "",
                 background: "var(--dtSeparationLine)"
             },
             dark: {
-                color: "var(--dtText)",
-                backgroundImage: "",
+                color: "",
                 background: "var(--dtBackgroundColor)"
             }
         }
@@ -360,13 +320,11 @@ const themeWrapper = {
     "mh-third-section-button-contacts": {
         styles: {
             light: {
-                color: "var(--ltText)",
-                backgroundImage: "",
+                color: "",
                 background: "var(--dtSeparationLine)"
             },
             dark: {
-                color: "var(--dtText)",
-                backgroundImage: "",
+                color: "",
                 background: "var(--dtBackgroundColor)"
             }
         }
@@ -376,15 +334,13 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage:
-                    `linear-gradient(176.13deg, rgba(250, 250, 250, 0) 4.53%, rgba(0, 136, 204, 0.2) 62.4%, rgba(250, 250, 250, 0.2) 98.52%),
-                    linear-gradient(180deg, rgba(252, 253, 253, 0) 95.43%, #FCFDFD 100%)`
+                background: `linear-gradient(176.13deg, rgba(250, 250, 250, 0) 4.53%, rgba(0, 136, 204, 0.2) 62.4%, rgba(250, 250, 250, 0.2) 98.52%),
+                            linear-gradient(180deg, rgba(252, 253, 253, 0) 95.43%, #FCFDFD 100%),
+                            linear-gradient(0deg, #FAFAFA, #FAFAFA);`
             },
             dark: {
                 color: "",
-                backgroundImage:
-                    `linear-gradient(0deg, #1C1C1C, #1C1C1C),
-                    linear-gradient(176.13deg, rgba(28, 28, 28, 0) 4.53%, rgba(0, 136, 204, 0.2) 62.4%, rgba(28, 28, 28, 0.2) 98.52%)`
+                background: `linear-gradient(176.13deg, rgba(28, 28, 28, 0) 4.53%, rgba(0, 136, 204, 0.2) 62.4%, rgba(28, 28, 28, 0.2) 98.52%), linear-gradient(0deg, #1C1C1C, #1C1C1C),`
             }
         }
     },
@@ -393,12 +349,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -408,12 +362,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -423,12 +375,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -438,12 +388,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -453,12 +401,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "",
                 background: "var(--dtSeparationLine)"
             },
             dark: {
                 color: "",
-                backgroundImage: "",
                 background: "var(--dtBackgroundColor)"
             }
         }
@@ -468,12 +414,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "",
                 background: "var(--dtSeparationLine)"
             },
             dark: {
                 color: "",
-                backgroundImage: "",
                 background: "var(--dtBackgroundColor)"
             }
         }
@@ -483,12 +427,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "",
                 background: "var(--dtSeparationLine)"
             },
             dark: {
                 color: "",
-                backgroundImage: "",
                 background: "var(--dtBackgroundColor)"
             }
         }
@@ -498,12 +440,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "",
                 background: "var(--dtSeparationLine)"
             },
             dark: {
                 color: "",
-                backgroundImage: "",
                 background: "var(--outline)"
             }
         }
@@ -513,12 +453,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "",
                 background: "var(--dtSeparationLine)"
             },
             dark: {
                 color: "",
-                backgroundImage: "",
                 background: "var(--outline)"
             }
         }
@@ -528,13 +466,12 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "linear-gradient(180deg, rgba(252, 253, 253, 0.15) 0%, rgba(0, 136, 204, 0.15) 19.27%, rgba(252, 253, 253, 0.15) 28.53%, rgba(252, 253, 253, 0.15) 100%)",
-                background: ""
+                background: `linear-gradient(180deg, rgba(252, 253, 253, 0.15) 0%, rgba(0, 136, 204, 0.15) 19.27%, rgba(252, 253, 253, 0.15) 28.53%, rgba(252, 253, 253, 0.15) 100%),
+                            linear-gradient(0deg, #FCFDFD, #FCFDFD);`
             },
             dark: {
                 color: "",
-                backgroundImage: "linear-gradient(0deg, #1C1C1C, #1C1C1C), linear-gradient(177.83deg, rgba(28, 28, 28, 0.1) 1.79%, rgba(0, 136, 204, 0.1) 11.18%, rgba(0, 136, 204, 0.1) 15.56%, rgba(28, 28, 28, 0.1) 31.6%, rgba(28, 28, 28, 0.1) 98.18%)",
-                background: ""
+                background: `linear-gradient(177.83deg, rgba(28, 28, 28, 0.1) 1.79%, rgba(0, 136, 204, 0.1) 11.18%, rgba(0, 136, 204, 0.1) 15.56%, rgba(28, 28, 28, 0.1) 31.6%, rgba(28, 28, 28, 0.1) 98.18%),linear-gradient(0deg, #1C1C1C, #1C1C1C);`
             }
         }
     },
@@ -543,12 +480,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -558,12 +493,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "",
                 background: "var(--dtSeparationLine)"
             },
             dark: {
                 color: "",
-                backgroundImage: "",
                 background: "var(--outline)"
             }
         }
@@ -573,12 +506,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -588,12 +519,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -603,12 +532,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "",
                 background: "var(--dtSeparationLine)"
             },
             dark: {
                 color: "",
-                backgroundImage: "",
                 background: "var(--dtBackgroundColor)"
             }
         }
@@ -618,19 +545,17 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: `radial-gradient(68.64% 25.91% at 26.54% 27.66%, rgba(0, 136, 204, 0.3) 0%, rgba(252, 253, 253, 0) 100%),
+                background: `radial-gradient(68.64% 25.91% at 26.54% 27.66%, rgba(0, 136, 204, 0.3) 0%, rgba(252, 253, 253, 0) 100%),
                             radial-gradient(19.59% 14.45% at 23.8% 85.4%, rgba(0, 136, 204, 0.3) 0%, rgba(252, 253, 253, 0) 100%),
-                            radial-gradient(82.45% 27.94% at 69.85% 56.86%, rgba(0, 136, 204, 0.3) 0%, rgba(252, 253, 253, 0) 100%)`,
-                background: ""
+                            radial-gradient(82.45% 27.94% at 69.85% 56.86%, rgba(0, 136, 204, 0.3) 0%, rgba(252, 253, 253, 0) 100%),
+                            linear-gradient(0deg, #FCFDFD, #FCFDFD);`
             },
             dark: {
                 color: "",
-                backgroundImage: `linear-gradient(0deg, #1C1C1C, #1C1C1C),
-                            radial-gradient(68.64% 25.91% at 26.54% 27.66%, rgba(0, 136, 204, 0.3) 0%, rgba(28, 28, 28, 0) 100%),
+                background: `radial-gradient(68.64% 25.91% at 26.54% 27.66%, rgba(0, 136, 204, 0.3) 0%, rgba(28, 28, 28, 0) 100%),
                             radial-gradient(19.59% 14.45% at 23.8% 85.4%, rgba(0, 136, 204, 0.3) 0%, rgba(28, 28, 28, 0) 100%),
-                            radial-gradient(82.45% 27.94% at 69.85% 56.86%, rgba(0, 136, 204, 0.3) 0%, rgba(28, 28, 28, 0) 100%)`
-                ,
-                background: ""
+                            radial-gradient(82.45% 27.94% at 69.85% 56.86%, rgba(0, 136, 204, 0.3) 0%, rgba(28, 28, 28, 0) 100%),
+                            linear-gradient(0deg, #1C1C1C, #1C1C1C);`
             }
         }
     },
@@ -639,12 +564,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -654,12 +577,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -669,12 +590,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -684,12 +603,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -699,12 +616,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -714,12 +629,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -729,12 +642,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -744,13 +655,12 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "linear-gradient(180deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%)",
-                background: ""
+                
+                background: "linear-gradient(180deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%)"
             },
             dark: {
                 color: "",
-                backgroundImage: "linear-gradient(180deg,rgba(237, 237, 237, 0) 0%,rgba(237, 237, 237, 0.5) 20.36%,rgba(237, 237, 237, 0) 100%)",
-                background: ""
+                background: "linear-gradient(180deg,rgba(237, 237, 237, 0) 0%,rgba(237, 237, 237, 0.5) 20.36%,rgba(237, 237, 237, 0) 100%)"
             }
         }
     },
@@ -759,13 +669,11 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "linear-gradient(180deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%)",
-                background: ""
+                background: "linear-gradient(180deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%)"
             },
             dark: {
                 color: "",
-                backgroundImage: "linear-gradient(180deg,rgba(237, 237, 237, 0) 0%,rgba(237, 237, 237, 0.5) 20.36%,rgba(237, 237, 237, 0) 100%)",
-                background: ""
+                background: "linear-gradient(180deg,rgba(237, 237, 237, 0) 0%,rgba(237, 237, 237, 0.5) 20.36%,rgba(237, 237, 237, 0) 100%)"
             }
         }
     },
@@ -774,13 +682,11 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "linear-gradient(180deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%)",
-                background: ""
+                background: "linear-gradient(180deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%)"
             },
             dark: {
                 color: "",
-                backgroundImage: "linear-gradient(180deg,rgba(237, 237, 237, 0) 0%,rgba(237, 237, 237, 0.5) 20.36%,rgba(237, 237, 237, 0) 100%)",
-                background: ""
+                background: "linear-gradient(180deg,rgba(237, 237, 237, 0) 0%,rgba(237, 237, 237, 0.5) 20.36%,rgba(237, 237, 237, 0) 100%)"
             }
         }
     },
@@ -789,12 +695,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -804,12 +708,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -819,12 +721,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--dtText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -834,13 +734,11 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "linear-gradient(90deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%)",
-                background: ""
+                background: "linear-gradient(90deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%)"
             },
             dark: {
                 color: "",
-                backgroundImage: "linear-gradient(90deg,rgba(237, 237, 237, 0) 0%,rgba(237, 237, 237, 0.8) 20.36%,rgba(237, 237, 237, 0) 100%)",
-                background: ""
+                background: "linear-gradient(90deg,rgba(237, 237, 237, 0) 0%,rgba(237, 237, 237, 0.8) 20.36%,rgba(237, 237, 237, 0) 100%)"
             }
         }
     },
@@ -849,13 +747,11 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "rgba(255, 255, 255, 0.4)",
-                background: ""
+                background: "rgba(255, 255, 255, 0.4)"
             },
             dark: {
                 color: "",
-                backgroundImage: "rgba(36, 36, 36, 0.8)",
-                background: ""
+                background: "rgba(36, 36, 36, 0.8)"
             }
         }
     },
@@ -864,12 +760,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -879,12 +773,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -894,12 +786,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -909,12 +799,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -924,12 +812,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -939,12 +825,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -954,12 +838,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -969,12 +851,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -984,12 +864,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -999,12 +877,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1014,12 +890,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1029,12 +903,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1044,12 +916,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1059,12 +929,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1074,12 +942,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1089,12 +955,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1104,12 +968,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1119,12 +981,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1134,12 +994,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1149,12 +1007,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1164,12 +1020,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1179,12 +1033,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1194,12 +1046,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1209,12 +1059,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1224,12 +1072,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1239,12 +1085,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                backgroundImage: "",
                 background: "rgba(255, 255, 255, 0.45)"
             },
             dark: {
                 color: "",
-                backgroundImage: "",
                 background: "rgba(36, 36, 36, 0.45)"
             }
         }
@@ -1254,12 +1098,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }
@@ -1269,12 +1111,10 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--ltText)",
-                backgroundImage: "",
                 background: ""
             },
             dark: {
                 color: "var(--outline)",
-                backgroundImage: "",
                 background: ""
             }
         }

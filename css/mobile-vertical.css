@@ -1,3 +1,7 @@
+body {
+    background: linear-gradient(180deg, #E7EFF3 0%, #D8E9F1 50.42%);
+}
+
 #mv-first-section {
     width: 100vw;
     height: 217.4129353233831vw;
@@ -76,6 +80,7 @@
         color: var(--darkBlue);
         opacity: 0.8;
         transition: top 0.2s ease-in-out, opacity 0.2s ease-in-out;
+        overflow: visible;
     }
 
     &>#mv-first-section-subtitle-block-right {
@@ -91,6 +96,8 @@
         color: var(--darkBlue);
         opacity: 0.8;
         transition: top 0.2s ease-in-out, opacity 0.2s ease-in-out;
+        overflow: visible;
+
     }
 
     &>#mv-first-section-subtitle-second-block-left {
@@ -107,6 +114,8 @@
         -webkit-text-fill-color: transparent;
         opacity: 0;
         transition: opacity 0.2s ease-in-out;
+        overflow: visible;
+
     }
 
     &>#mv-first-section-subtitle-second-block-right {
@@ -124,6 +133,8 @@
         -webkit-text-fill-color: transparent;
         opacity: 0;
         transition: opacity 0.2s ease-in-out;
+        overflow: visible;
+
     }
 }
 
@@ -164,6 +175,7 @@
         font-size: min(5.970149253731343vw, 2.745995423340961dvh);
         line-height: 2.745995423340961dvh;
         color: var(--secondBlue);
+        overflow: visible;
     }
 
     &>#mv-navigation-block-title-line {
@@ -191,6 +203,7 @@
             position: absolute;
             top: 0;
             left: 0;
+            overflow: visible;
         }
 
         &>.mv-navigation-block-item-text {
@@ -201,6 +214,8 @@
             position: absolute;
             left: 0;
             top: 3.8901601830663615dvh;
+            overflow: visible;
+
         }
     }
 
@@ -630,6 +645,7 @@
         line-height: 5.970149253731343vw;
         text-align: left;
         color: var(--blue);
+        overflow: visible;
     }
 
     &>.mv-wrapper-fourth-section-lines-buttons {
@@ -841,6 +857,7 @@
                     line-height: 4.975124378109453vw;
                     color: var(--darkBlue);
                     transition: color 0.3s ease-in-out;
+                    overflow: visible;
                 }
 
             }
@@ -1177,6 +1194,7 @@
                 line-height: 4.776119402985075vw;
                 color: var(--lightBlue);
                 transition: opacity 0.3s ease-in-out;
+                overflow: visible;
             }
 
             &>#mv-sixth-section-main-text-review-1 {

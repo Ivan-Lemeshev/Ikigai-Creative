@@ -773,7 +773,7 @@ const mhSwitchTheme = () => {
         const element = document.getElementById(id); // получаю элемент который нужно по айди заменить 
         const allStyles = data.styles;
         element.style.color = allStyles[mhSelectTheme].color;
-        element.style.backgroundImage = allStyles[mhSelectTheme].backgroundImage;
+        element.style.background = allStyles[mhSelectTheme].background;
     }
 }
 
