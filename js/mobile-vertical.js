@@ -274,8 +274,8 @@ const mvRefreshTheme = () => {
 mvLang.addEventListener('click', () => {
     mvSwitchLocalization();
     mvRefreshDataForLocalization();
-    mvSwitchTheme();
-    mvRefreshTheme();
+    // mvSwitchTheme();
+    // mvRefreshTheme();
 })
 
 

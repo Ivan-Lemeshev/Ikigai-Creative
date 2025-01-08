@@ -298,7 +298,7 @@
     &>.mv-second-section-text {
         width: 75.87064676616916vw;
         font-weight: 300;
-        font-size: 5.970149253731343vw;
+        font-size: 5.870149253731343vw;
         line-height: 8.358208955223882vw;
         position: absolute;
         left: 12.437810945273633vw;
@@ -464,7 +464,7 @@
         position: absolute;
         height: auto;
         width: 75.12437810945273vw;
-        top: 157.4726368159204vw;
+        top: 164.4726368159204vw;
         left: 12.437810945273633vw;
         font-size: 3.9800995024875623vw;
         font-weight: 300;
@@ -474,7 +474,7 @@
 
     &>#mv-third-section-button-order {
         position: absolute;
-        top: 206.726368159204vw;
+        top: 220.726368159204vw;
         left: 12.437810945273633vw;
         width: 75.12437810945273vw;
         height: 9.950248756218906vw;
@@ -1180,7 +1180,7 @@
                 align-items: center;
                 margin-left: 23.134328358208954vw;
                 font-weight: 300;
-                font-size: 5.472636815920398vw;
+                font-size: 5.272636815920398vw;
                 line-height: 5.472636815920398vw;
                 color: var(--ltText);
                 transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out;
@@ -1216,6 +1216,7 @@
                 font-weight: 300;
                 line-height: 4.776119402985075vw;
                 color: var(--ltText);
+                overflow: visible;
                 transition: opacity 0.3s ease-in-out;
             }
         }
@@ -1321,7 +1322,7 @@
         left: 5.472636815920398vw;
         width: 14.676616915422885vw;
         height: 4.975124378109453vw;
-        font-size: 4.477611940298507vw;
+        font-size: 4.377611940298507vw;
         font-weight: 700;
         line-height: 4.477611940298507vw;
         letter-spacing: 0.1em;
@@ -1334,7 +1335,7 @@
         left: 25.12437810945274vw;
         width: 24.62686567164179vw;
         height: 4.975124378109453vw;
-        font-size: 4.477611940298507vw;
+        font-size: 4.377611940298507vw;
         font-weight: 700;
         line-height: 4.477611940298507vw;
         letter-spacing: 0.1em;
@@ -1347,7 +1348,7 @@
         left: 54.72636815920397vw;
         width: 23.134328358208954vw;
         height: 4.975124378109453vw;
-        font-size: 4.477611940298507vw;
+        font-size: 4.377611940298507vw;
         font-weight: 700;
         line-height: 4.477611940298507vw;
         letter-spacing: 0.1em;
@@ -1360,7 +1361,7 @@
         left: 82.83582089552239vw;
         width: 11.691542288557214vw;
         height: 4.975124378109453vw;
-        font-size: 4.477611940298507vw;
+        font-size: 4.377611940298507vw;
         font-weight: 700;
         line-height: 4.477611940298507vw;
         letter-spacing: 0.1em;
