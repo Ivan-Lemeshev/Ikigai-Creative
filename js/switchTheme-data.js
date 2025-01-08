@@ -1120,6 +1120,647 @@ const themeWrapper = {
         }
     },
 
+    "mv-first-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(166.39deg, rgba(0, 76, 123, 0.2) 4.94%, rgba(232, 232, 232, 0.2) 14.94%, rgba(232, 232, 232, 0.2) 35.08%, rgba(0, 76, 123, 0.2) 69.97%, rgba(232, 232, 232, 0.2) 89.82%),
+                            linear-gradient(180deg, rgba(232, 232, 232, 0) 92.39%, #E8E8E8 100%),
+                            linear-gradient(0deg, #E8E8E8, #E8E8E8)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(166.39deg, rgba(0, 76, 123, 0.2) 4.94%, rgba(28, 28, 28, 0.2) 14.94%, rgba(28, 28, 28, 0.2) 35.08%, rgba(0, 76, 123, 0.2) 69.97%, rgba(28, 28, 28, 0.2) 89.82%),
+                            linear-gradient(180deg, rgba(28, 28, 28, 0) 92.39%, #1C1C1C 100%),
+                            linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+
+    "mv-second-section": {
+        styles: {
+            light: {
+                color: "",
+                background: "var(--outline)"
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "mv-navigation-block-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-navigation-block-lang-button": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-navigation-block-item-title-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-navigation-block-item-text-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-navigation-block-item-title-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-navigation-block-item-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-navigation-block-item-title-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-navigation-block-item-text-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-navigation-block-item-title-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-navigation-block-item-text-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-navigation-block-item-title-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-navigation-block-item-text-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-second-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-second-section-text-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-second-section-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-third-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(180deg, rgba(232, 232, 232, 0.2) 0%, rgba(0, 136, 204, 0.2) 13.4%, rgba(232, 232, 232, 0.2) 24.28%, rgba(232, 232, 232, 0.2) 52.1%, rgba(0, 136, 204, 0.2) 71.42%, rgba(0, 136, 204, 0.2) 83.92%, rgba(232, 232, 232, 0.2) 100%),
+                            linear-gradient(0deg, #E8E8E8, #E8E8E8)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(180deg, rgba(28, 28, 28, 0.2) 0%, rgba(0, 136, 204, 0.2) 13.4%, rgba(28, 28, 28, 0.2) 24.28%, rgba(28, 28, 28, 0.2) 52.1%, rgba(0, 136, 204, 0.2) 71.42%, rgba(0, 136, 204, 0.2) 83.92%, rgba(28, 28, 28, 0.2) 100%), linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+
+    "mv-third-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-third-section-wrapper-img": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(232, 232, 232, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(232, 232, 232, 0.08) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%)`
+            }
+        }
+    },
+
+    "mv-price-list-button": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(0deg, rgba(0, 136, 204, 0.02), rgba(0, 136, 204, 0.02)),
+                            linear-gradient(179.79deg, rgba(232, 232, 232, 0.16) 0.23%, rgba(0, 136, 204, 0.08) 61.99%, rgba(232, 232, 232, 0.16) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(0deg, rgba(0, 136, 204, 0.05), rgba(0, 136, 204, 0.05)),
+                            linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%)`
+            }
+        }
+    },
+
+    "mv-button-more-lower-part-buttons-0": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(0deg, rgba(0, 136, 204, 0.02), rgba(0, 136, 204, 0.02)),
+                            linear-gradient(179.79deg, rgba(232, 232, 232, 0.16) 0.23%, rgba(0, 136, 204, 0.08) 61.99%, rgba(232, 232, 232, 0.16) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(0deg, rgba(0, 136, 204, 0.05), rgba(0, 136, 204, 0.05)),
+                            linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%)`
+            }
+        }
+    },
+
+    "mv-button-more-lower-part-buttons-1": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(0deg, rgba(0, 136, 204, 0.02), rgba(0, 136, 204, 0.02)),
+                            linear-gradient(179.79deg, rgba(232, 232, 232, 0.16) 0.23%, rgba(0, 136, 204, 0.08) 61.99%, rgba(232, 232, 232, 0.16) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(0deg, rgba(0, 136, 204, 0.05), rgba(0, 136, 204, 0.05)),
+                            linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%)`
+            }
+        }
+    },
+
+    "mv-button-more-lower-part-buttons-2": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(0deg, rgba(0, 136, 204, 0.02), rgba(0, 136, 204, 0.02)),
+                            linear-gradient(179.79deg, rgba(232, 232, 232, 0.16) 0.23%, rgba(0, 136, 204, 0.08) 61.99%, rgba(232, 232, 232, 0.16) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(0deg, rgba(0, 136, 204, 0.05), rgba(0, 136, 204, 0.05)),
+                            linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%)`
+            }
+        }
+    },
+
+    "mv-third-section-text-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-third-section-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-fourth-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-fourth-section-button-0": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(232, 232, 232, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(232, 232, 232, 0.08) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%);`
+            }
+        }
+    },
+
+    "mv-fourth-section-button-1": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(232, 232, 232, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(232, 232, 232, 0.08) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%);`
+            }
+        }
+    },
+
+    "mv-fourth-section-button-2": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(232, 232, 232, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(232, 232, 232, 0.08) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%);`
+            }
+        }
+    },
+
+    "mv-fourth-section-button-3": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(232, 232, 232, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(232, 232, 232, 0.08) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%);`
+            }
+        }
+    },
+
+    "mv-fourth-section-button-4": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(232, 232, 232, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(232, 232, 232, 0.08) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%);`
+            }
+        }
+    },
+
+    "mv-fourth-section-button-5": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(232, 232, 232, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(232, 232, 232, 0.08) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%);`
+            }
+        }
+    },
+
+    "mv-name-of-service-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-name-of-service-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-name-of-service-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-name-of-service-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-name-of-service-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-name-of-service-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-fifvth-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(180deg, rgba(232, 232, 232, 0.08) 0%, rgba(0, 136, 204, 0.08) 11.93%, rgba(0, 136, 204, 0.024) 46.93%, rgba(0, 136, 204, 0.048) 61.76%, rgba(232, 232, 232, 0.08) 79.38%, rgba(0, 136, 204, 0.08) 91.97%, rgba(232, 232, 232, 0.08) 100%), linear-gradient(0deg, #E8E8E8, #E8E8E8)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(180deg, rgba(28, 28, 28, 0.08) 0%, rgba(0, 136, 204, 0.08) 11.93%, rgba(0, 136, 204, 0.024) 46.93%, rgba(0, 136, 204, 0.048) 61.76%, rgba(28, 28, 28, 0.08) 79.38%, rgba(0, 136, 204, 0.08) 91.97%, rgba(28, 28, 28, 0.08) 100%), linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+
+    "mv-fifvth-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-fifvth-section-main-content-subtitle": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-fifvth-section-second-content": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(232, 232, 232, 0.1)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(32, 11, 0, 0.1)`
+            }
+        }
+    },
+
+    "mv-sixth-section ": {
+        styles: {
+            light: {
+                color: "",
+                background: `radial-gradient(163.06% 88.68% at 61.82% 30.09%, rgba(0, 136, 204, 0.1) 0%, rgba(232, 232, 232, 0) 100%),
+                            linear-gradient(180deg, #E8E8E8 0%, rgba(232, 232, 232, 0.1) 5.29%, rgba(232, 232, 232, 0.01) 95.55%, #E8E8E8 100%),
+                            linear-gradient(0deg, #E8E8E8, #E8E8E8)`
+            },
+            dark: {
+                color: "",
+                background: `radial-gradient(163.06% 88.68% at 61.82% 30.09%, rgba(0, 136, 204, 0.1) 0%, rgba(28, 28, 28, 0) 100%),
+                            linear-gradient(180deg, #1C1C1C 0%, rgba(28, 28, 28, 0.1) 5.29%, rgba(28, 28, 28, 0.01) 95.55%, #1C1C1C 100%),
+                            linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+
+    "mv-sixth-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-sixth-section-number-of-reviews": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-sixth-section-main-block-all-text-upper-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(270deg, rgba(46, 46, 46, 0) 0%, #2E2E2E 86.03%, rgba(46, 46, 46, 0) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(270deg, #1C1C1C 0%, #D6D6D6 86.03%, #1C1C1C 100%)`
+            }
+        }
+    },
+
+    "mv-sixth-section-main-block-all-text-lower-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(270deg, rgba(46, 46, 46, 0) 0%, #2E2E2E 86.03%, rgba(46, 46, 46, 0) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(270deg, #1C1C1C 0%, #D6D6D6 14.42%, #1C1C1C 100%);`
+            }
+        }
+    },
+
 }
 
 export default themeWrapper;

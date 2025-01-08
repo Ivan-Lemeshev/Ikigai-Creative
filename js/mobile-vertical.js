@@ -1,6 +1,7 @@
 import arrayPriceList from "./arrayPriceList.js";
 import localizationWrapper from "./localization-data.js";
 import reviews from "./reviews-mobile.js";
+import themeWrapper from "./switchTheme-data.js";
 import dataContats from "./links.js";
 
 const mvNavButton = document.getElementById("mv-nav-button");
@@ -313,7 +314,29 @@ const mvRefreshDataForLocalization = () => {
             mvThirdSectionText1.style.lineHeight = "";
         }
     }
+}
 
+let mvSelectTheme = "light";
+
+const mvSwitchTheme = () => {
+    mvSelectTheme = mvSelectTheme === "light" ? "dark" : "light";
+    for (let id in themeWrapper) { // перебираем все айдишники
+        const data = themeWrapper[id]; // пой айди получаю информацию 
+        const element = document.getElementById(id); // получаю элемент который нужно по айди заменить 
+        const allStyles = data.styles;
+        element.style.color = allStyles[mvSelectTheme].color;
+        element.style.background = allStyles[mvSelectTheme].background;
+    }
+}
+
+const mvRefreshTheme = () => {
+    const service = arrayPriceList[mvActivNumber]
+
+    if (mvSelectTheme === "dark") {
+
+    } else {
+
+    }
 
 
 }
@@ -321,7 +344,11 @@ const mvRefreshDataForLocalization = () => {
 mvLang.addEventListener('click', () => {
     mvSwitchLocalization();
     mvRefreshDataForLocalization();
+    mvSwitchTheme();
+    mvRefreshTheme();
 })
+
+
 
 
 
