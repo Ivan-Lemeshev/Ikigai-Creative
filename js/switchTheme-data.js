@@ -16,7 +16,7 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                background: "linear-gradient(180deg, #E7EFF3 0%, #D8E9F1 50.42%)"
+                background: "linear-gradient(180deg, #D8E9F1 0%, #FCFDFD 100%)"
             },
             dark: {
                 color: "",
@@ -336,11 +336,11 @@ const themeWrapper = {
                 color: "",
                 background: `linear-gradient(176.13deg, rgba(250, 250, 250, 0) 4.53%, rgba(0, 136, 204, 0.2) 62.4%, rgba(250, 250, 250, 0.2) 98.52%),
                             linear-gradient(180deg, rgba(252, 253, 253, 0) 95.43%, #FCFDFD 100%),
-                            linear-gradient(0deg, #FAFAFA, #FAFAFA);`
+                            linear-gradient(0deg, #FAFAFA, #FAFAFA)`
             },
             dark: {
                 color: "",
-                background: `linear-gradient(176.13deg, rgba(28, 28, 28, 0) 4.53%, rgba(0, 136, 204, 0.2) 62.4%, rgba(28, 28, 28, 0.2) 98.52%), linear-gradient(0deg, #1C1C1C, #1C1C1C),`
+                background: `linear-gradient(176.13deg, rgba(28, 28, 28, 0) 4.53%, rgba(0, 136, 204, 0.2) 62.4%, rgba(28, 28, 28, 0.2) 98.52%), linear-gradient(0deg, #1C1C1C, #1C1C1C)`
             }
         }
     },
@@ -467,11 +467,11 @@ const themeWrapper = {
             light: {
                 color: "",
                 background: `linear-gradient(180deg, rgba(252, 253, 253, 0.15) 0%, rgba(0, 136, 204, 0.15) 19.27%, rgba(252, 253, 253, 0.15) 28.53%, rgba(252, 253, 253, 0.15) 100%),
-                            linear-gradient(0deg, #FCFDFD, #FCFDFD);`
+                            linear-gradient(0deg, #FCFDFD, #FCFDFD)`
             },
             dark: {
                 color: "",
-                background: `linear-gradient(177.83deg, rgba(28, 28, 28, 0.1) 1.79%, rgba(0, 136, 204, 0.1) 11.18%, rgba(0, 136, 204, 0.1) 15.56%, rgba(28, 28, 28, 0.1) 31.6%, rgba(28, 28, 28, 0.1) 98.18%),linear-gradient(0deg, #1C1C1C, #1C1C1C);`
+                background: `linear-gradient(177.83deg, rgba(28, 28, 28, 0.1) 1.79%, rgba(0, 136, 204, 0.1) 11.18%, rgba(0, 136, 204, 0.1) 15.56%, rgba(28, 28, 28, 0.1) 31.6%, rgba(28, 28, 28, 0.1) 98.18%),linear-gradient(0deg, #1C1C1C, #1C1C1C)`
             }
         }
     },
@@ -548,14 +548,14 @@ const themeWrapper = {
                 background: `radial-gradient(68.64% 25.91% at 26.54% 27.66%, rgba(0, 136, 204, 0.3) 0%, rgba(252, 253, 253, 0) 100%),
                             radial-gradient(19.59% 14.45% at 23.8% 85.4%, rgba(0, 136, 204, 0.3) 0%, rgba(252, 253, 253, 0) 100%),
                             radial-gradient(82.45% 27.94% at 69.85% 56.86%, rgba(0, 136, 204, 0.3) 0%, rgba(252, 253, 253, 0) 100%),
-                            linear-gradient(0deg, #FCFDFD, #FCFDFD);`
+                            linear-gradient(0deg, #FCFDFD, #FCFDFD)`
             },
             dark: {
                 color: "",
                 background: `radial-gradient(68.64% 25.91% at 26.54% 27.66%, rgba(0, 136, 204, 0.3) 0%, rgba(28, 28, 28, 0) 100%),
                             radial-gradient(19.59% 14.45% at 23.8% 85.4%, rgba(0, 136, 204, 0.3) 0%, rgba(28, 28, 28, 0) 100%),
                             radial-gradient(82.45% 27.94% at 69.85% 56.86%, rgba(0, 136, 204, 0.3) 0%, rgba(28, 28, 28, 0) 100%),
-                            linear-gradient(0deg, #1C1C1C, #1C1C1C);`
+                            linear-gradient(0deg, #1C1C1C, #1C1C1C)`
             }
         }
     },
@@ -655,7 +655,7 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                
+
                 background: "linear-gradient(180deg, #2e2e2e00 0%, #2e2e2e5e 20.36%, #2e2e2e00 100%)"
             },
             dark: {
