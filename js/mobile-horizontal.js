@@ -408,6 +408,7 @@ const gapDivs = 1.7162471395881007;
 const startDivLeft = -18.87871853546911;
 const divWidth = 17.162471395881006;
 
+
 const resetBlocks = () => {
     while (buffer.length > 0) {
         ServicesWrapper.removeChild(buffer.shift().link)
@@ -428,7 +429,11 @@ const createDivBlocks = () => {
             const divH3 = document.createElement('h4');
 
             div.id = `mh-third-section-right-services-${buffer.length}`;
-            div.classList = "mh-four-section-others-services";
+            if (mhSelectTheme === "light") {
+                div.classList = "light";
+            } else {
+                div.classList = "dark";
+            }
             div.style.left = startDivLeft + (gapDivs + divWidth) * buffer.length + "vw";
             divImgWrapper.classList = "mh-four-section-others-services-wrapper-img";
             divImgWrapper.appendChild(divImg);
@@ -436,6 +441,7 @@ const createDivBlocks = () => {
 
             divH3.textContent = service.title[mhSelectLang];
             divH3.id = `mh-third-section-right-services-h3-${service.title.eng}`;
+
 
             div.appendChild(divImgWrapper);
             div.appendChild(divH3);
@@ -472,6 +478,7 @@ const movePlitka = (deltaGap) => {
 const thThirdSectionLeftArrow = document.getElementById("mh-four-section-others-services-left-arrow");
 const thThirdSectionRightArrow = document.getElementById("mh-four-section-others-services-right-arrow");
 let thThirdSectionAnimation = false;
+
 
 
 thThirdSectionLeftArrow.addEventListener('click', () => {
@@ -715,7 +722,7 @@ upperloadReviews(0);
 
 sixSectionBottomMoreLeftButton.addEventListener('click', () => {
     upperloadReviews(--number, true)
-        window.scrollTo({
+    window.scrollTo({
         top: window.innerWidth * 2.72,
         behavior: 'smooth'
     });
@@ -723,7 +730,7 @@ sixSectionBottomMoreLeftButton.addEventListener('click', () => {
 
 sixSectionBottomMoreRightButton.addEventListener('click', () => {
     upperloadReviews(++number, false)
-        window.scrollTo({
+    window.scrollTo({
         top: window.innerWidth * 2.72,
         behavior: 'smooth'
     });
@@ -765,7 +772,15 @@ const mhRefreshTheme = () => {
     const switchButtonFaceRect2 = document.getElementById("mh-navigation-block-night-mode-switch-button-face-rect-2");
     const mhFourSectionImgWrapper = document.getElementById("mh-four-section-img-wrapper");
     const mhSixSectionBottomImgPath = document.getElementById("mh-six-section-bottom-img-path");
+    const setImg = document.querySelectorAll("#mh-four-section-others-services-wrapper img")
 
+    for (let index = 0; index < setImg.length; index++) {
+        if (mhSelectTheme === "dark") {
+            setImg[index].src = setImg[index].src.replace("light", "dark")
+        } else {
+            setImg[index].src = setImg[index].src.replace("dark", "light")
+        }
+    }
     mhFourSectionImg.src = `/img/svg/mobile-horizontal/src/${[mhSelectTheme]}/${service.title.eng}.svg`;
     thThirdSectionLeftArrow.src = `/img/svg/mobile-horizontal/src/${[mhSelectTheme]}/mh-four-section-others-services-left-arrow.svg`;
     thThirdSectionRightArrow.src = `/img/svg/mobile-horizontal/src/${[mhSelectTheme]}/mh-four-section-others-services-right-arrow.svg`;
@@ -789,7 +804,7 @@ const mhRefreshTheme = () => {
         mhSixSectionBottomImgPath.style.fill = "#EDEDED"
         mhFooterEng.style.backgroundColor = "var(--dtMain)"
         mhFooterRus.style.backgroundColor = "var(--dtMain)"
-        
+
     } else {
         nightModeMoonPath.style.fill = "#2E2E2E"
         languageSvgPath.style.fill = "#2E2E2E"
@@ -815,3 +830,4 @@ mhThemeButton.addEventListener('click', () => {
     mhSwitchTheme();
     mhRefreshTheme();
 })
+
