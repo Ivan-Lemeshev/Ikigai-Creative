@@ -715,10 +715,18 @@ upperloadReviews(0);
 
 sixSectionBottomMoreLeftButton.addEventListener('click', () => {
     upperloadReviews(--number, true)
+        window.scrollTo({
+        top: window.innerWidth * 2.72,
+        behavior: 'smooth'
+    });
 })
 
 sixSectionBottomMoreRightButton.addEventListener('click', () => {
     upperloadReviews(++number, false)
+        window.scrollTo({
+        top: window.innerWidth * 2.72,
+        behavior: 'smooth'
+    });
 })
 
 const sixSectionBottomContactUs = document.getElementById("six-section-bottom-contact-us");
@@ -761,6 +769,7 @@ const mhRefreshTheme = () => {
     mhFourSectionImg.src = `/img/svg/mobile-horizontal/src/${[mhSelectTheme]}/${service.title.eng}.svg`;
     thThirdSectionLeftArrow.src = `/img/svg/mobile-horizontal/src/${[mhSelectTheme]}/mh-four-section-others-services-left-arrow.svg`;
     thThirdSectionRightArrow.src = `/img/svg/mobile-horizontal/src/${[mhSelectTheme]}/mh-four-section-others-services-right-arrow.svg`;
+    mhFourPriceListXMark.src = `/img/svg/mobile-horizontal/src/${[mhSelectTheme]}/mh-price-list-x-mark.svg`
 
     if (mhSelectTheme === "dark") {
         nightModeMoonPath.style.fill = "#F3F3F3"
@@ -780,6 +789,7 @@ const mhRefreshTheme = () => {
         mhSixSectionBottomImgPath.style.fill = "#EDEDED"
         mhFooterEng.style.backgroundColor = "var(--dtMain)"
         mhFooterRus.style.backgroundColor = "var(--dtMain)"
+        
     } else {
         nightModeMoonPath.style.fill = "#2E2E2E"
         languageSvgPath.style.fill = "#2E2E2E"

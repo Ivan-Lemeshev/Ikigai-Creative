@@ -874,6 +874,21 @@ const localizationWrapper = {
         eng: "Want even more reviews?",     
     },
 
+    "mh-five-section-title": {
+        rus: "Свяжитесь с нами",
+        eng: "Contact us",     
+    },
+
+    "mh-price-list-title": {
+        rus: "Прайс-лист",
+        eng: "Price list",     
+    },
+
+    "mh-price-list-footer": {
+        rus: "Цены ориентировочные — точная стоимость зависит от ваших пожеланий и особенностей заказа. Мы всегда готовы обсудить детали и предложить оптимальное решение!",
+        eng: "Prices are indicative and serve as a starting point. Each project is unique, so we’ll tailor the final cost to match your specific needs. Let’s discuss the details together!",     
+    },
+
     // "mh-third-section-right-services-h3-Setting up payment": {
     //     rus: "Настройка оплаты",
     //     eng: "Setting up payment",     

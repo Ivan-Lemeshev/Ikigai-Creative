@@ -380,7 +380,7 @@
 
     &>#mh-four-section-title {
         position: absolute;
-        top: 3.576659038901601vw;
+        top: 0;
         left: 5.720823798627003vw;
         height: 2.745995423340961vw;
         width: 34.32494279176201vw;
@@ -392,7 +392,7 @@
 
     &>#mh-four-section-text-0 {
         position: absolute;
-        top: 7.610983981693364vw;
+        top: 3.610983981693364vw;
         left: 5.720823798627003vw;
         width: 50.68649885583524vw;
         height: auto;
@@ -405,7 +405,7 @@
 
     &>#mh-four-section-text-1 {
         position: absolute;
-        top: 35.56727688787185vw;
+        top: 31.56727688787185vw;
         left: 5.720823798627003vw;
         width: 50.68649885583524vw;
         height: 16.819221967963387vw;
@@ -491,7 +491,7 @@
         position: absolute;
         top: 55.26315789473685vw;
         left: 5.720823798627003vw;
-        width: 18.162471395881006vw;
+        width: 19.162471395881006vw;
         height: 2.745995423340961vw;
         font-weight: 600;
         font-size: 2.059496567505721vw;
@@ -598,15 +598,14 @@
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    background-color: rgba(255, 255, 255, 0.4);
-    ;
+    background-image: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(1.1441647597254003vw);
 
     &>#mh-price-list-title {
         position: absolute;
         top: 3.4324942791762014vw;
         left: 2.2883295194508007vw;
-        width: 8.894736842105263vw;
+        width: 11.894736842105263vw;
         height: 2.745995423340961vw;
         font-size: 2.059496567505721vw;
         font-weight: 600;

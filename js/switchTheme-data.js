@@ -845,6 +845,261 @@ const themeWrapper = {
         }
     },
 
+    "mh-price-list-wrapper": {
+        styles: {
+            light: {
+                color: "",
+                backgroundImage: "rgba(255, 255, 255, 0.4)",
+                background: ""
+            },
+            dark: {
+                color: "",
+                backgroundImage: "rgba(36, 36, 36, 0.8)",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-footer": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-service-name-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-service-cost-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-service-name-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-service-cost-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-service-name-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-service-cost-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-service-name-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-service-cost-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-service-name-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-service-cost-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-service-name-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-service-cost-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-service-name-6": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-price-list-service-cost-6": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
 }
 
 export default themeWrapper;
