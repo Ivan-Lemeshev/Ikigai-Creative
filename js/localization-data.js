@@ -889,6 +889,16 @@ const localizationWrapper = {
         eng: "Prices are indicative and serve as a starting point. Each project is unique, so we’ll tailor the final cost to match your specific needs. Let’s discuss the details together!",     
     },
 
+    "mh-send-to-application-main-content-title": {
+        rus: "Отправляем заявку",
+        eng: "Sending an application",     
+    },
+
+    "mh-send-to-application-main-content-text": {
+        rus: "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд...",
+        eng: "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds...",     
+    },
+
     // "mh-third-section-right-services-h3-Setting up payment": {
     //     rus: "Настройка оплаты",
     //     eng: "Setting up payment",     

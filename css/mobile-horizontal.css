@@ -778,7 +778,7 @@
         width: 100vw;
         height: 45.9954233409611vw;
         z-index: 10;
-        background: gba(255, 255, 255, 0.45);
+        background: rgba(255, 255, 255, 0.45);
         backdrop-filter: blur(1.1441647597254003vw);
 
         &>#mh-send-to-application-main-content {

@@ -649,22 +649,39 @@ mhSubmitButton.addEventListener('click', (event) => {
 
     if (mhInputFirstName.value.length < 1) {
         mhInputFirstName.classList = "mh-fifvth-section-input-placeholder";
-        mhInputFirstName.placeholder = "Empty field";
+        if (mhSelectLang === "eng") {
+            mhInputFirstName.placeholder = "Empty field";
+        } else {
+            mhInputFirstName.placeholder = "Пустое поле";
+        }
     }
 
     if (mhInputLastName.value.length < 1) {
         mhInputLastName.classList = "mh-fifvth-section-input-placeholder";
-        mhInputLastName.placeholder = "Empty field";
+        if (mhSelectLang === "eng") {
+            mhInputLastName.placeholder = "Empty field";
+        } else {
+            mhInputLastName.placeholder = "Пустое поле";
+        }
     }
 
     if (mhInputPhone.value.length < 1) {
         mhInputPhone.classList = "mh-fifvth-section-input-placeholder";
-        mhInputPhone.placeholder = "Empty field";
+        if (mhSelectLang === "eng") {
+            mhInputPhone.placeholder = "Empty field";
+        } else {
+            mhInputPhone.placeholder = "Пустое поле";
+        }
     }
 
     if (mhInputEmail.value.length < 1) {
         mhInputEmail.classList = "mh-fifvth-section-input-placeholder";
-        mhInputEmail.placeholder = "Invalid email";
+        if (mhSelectLang === "eng") {
+            mhInputEmail.placeholder = "Invalid email";
+        } else {
+            mhInputEmail.placeholder = "Некорректный email";
+        }
+        
     }
 })
 
@@ -787,6 +804,7 @@ const mhRefreshTheme = () => {
     mhFourPriceListXMark.src = `/img/svg/mobile-horizontal/src/${[mhSelectTheme]}/mh-price-list-x-mark.svg`
 
     if (mhSelectTheme === "dark") {
+        mhSubmitButton.style.border = "none"
         nightModeMoonPath.style.fill = "#F3F3F3"
         languageSvgPath.style.fill = "#F3F3F3"
         switchButtonBackRect.style.fill = "#007AB8"
@@ -823,6 +841,7 @@ const mhRefreshTheme = () => {
         mhSixSectionBottomImgPath.style.fill = "#2E2E2E"
         mhFooterEng.style.backgroundColor = ""
         mhFooterRus.style.backgroundColor = ""
+        mhSubmitButton.style.border = ""
     }
 }
 

@@ -1100,6 +1100,186 @@ const themeWrapper = {
         }
     },
 
+    "mh-footer-eng-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-footer-eng-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-footer-eng-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-footer-eng-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-footer-eng-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-footer-rus-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-footer-rus-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-footer-rus-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-footer-rus-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-send-to-application": {
+        styles: {
+            light: {
+                color: "",
+                backgroundImage: "",
+                background: "rgba(255, 255, 255, 0.45)"
+            },
+            dark: {
+                color: "",
+                backgroundImage: "",
+                background: "rgba(36, 36, 36, 0.45)"
+            }
+        }
+    },
+
+    "mh-send-to-application-main-content-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
+    "mh-send-to-application-main-content-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                backgroundImage: "",
+                background: ""
+            },
+            dark: {
+                color: "var(--outline)",
+                backgroundImage: "",
+                background: ""
+            }
+        }
+    },
+
 }
 
 export default themeWrapper;
