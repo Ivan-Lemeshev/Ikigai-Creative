@@ -485,6 +485,7 @@ const movePlitka = (deltaGap) => {
 
 const thThirdSectionLeftArrow = document.getElementById("mh-four-section-others-services-left-arrow");
 const thThirdSectionRightArrow = document.getElementById("mh-four-section-others-services-right-arrow");
+const mhSendToApplication = document.getElementById("mh-send-to-application");
 let thThirdSectionAnimation = false;
 
 
@@ -551,10 +552,17 @@ const mhVoidInput = () => {
 const mhAllInputsHave = () => {
     if (mhInputFirstName.value.length && mhInputLastName.value.length && mhInputPhone.value.length && mhInputEmail.value.length && isValidEmail(mhInputEmail.value)) {
         mhSubmitButton.classList = "mh-activ-button";
-        mhFifvthSectionMainContent.style.backgroundImage = "";
-        mhSubmitButton.style.border = "none";
-        mhSubmitButton.style.backgroundColor = "var(--accent)";
         mhFifvthSectionTitle.textContent = "Contact us"
+        mhSubmitButton.style.border = "none";
+        mhSubmitButton.style.background = "var(--accent)";
+        
+        if (mhSelectTheme === "light") {
+            mhFifvthSectionMainContent.style.background = "linear-gradient(180deg, rgba(252, 253, 253, 0.15) 0%, rgba(0, 136, 204, 0.15) 19.27%, rgba(252, 253, 253, 0.15) 28.53%, rgba(252, 253, 253, 0.15) 100%), linear-gradient(0deg, #FCFDFD, #FCFDFD)";
+        } else {
+            mhFifvthSectionMainContent.style.background = "linear-gradient(rgba(28, 28, 28, 0.1) 5.79%, rgba(0, 136, 204, 0.1) 11.18%, rgba(0, 136, 204, 0.1) 15.56%, rgba(28, 28, 28, 0.1) 31.6%, rgba(28, 28, 28, 0.1) 38.18%), linear-gradient(0deg, rgb(28, 28, 28), rgb(28, 28, 28))";
+
+        }
+
         return true;
     }
     return false;
