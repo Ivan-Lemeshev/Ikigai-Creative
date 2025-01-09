@@ -950,7 +950,7 @@ const func = () => {
     }
 }
 
-func()
+func();
 
 
 
@@ -1002,13 +1002,10 @@ mvSixthSectionMainBlockArrowRight.addEventListener('click', () => {
 const mvThirdSectionButtonOrder = document.getElementById("mv-third-section-button-order");
 
 mvThirdSectionButtonOrder.addEventListener('click', () => {
-
     window.scrollTo({
         top: window.innerWidth * 8.5,
         behavior: 'smooth'
     });
-
-
 
     if (mvActivNumberSave !== null) {
         const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvActivNumber}`);

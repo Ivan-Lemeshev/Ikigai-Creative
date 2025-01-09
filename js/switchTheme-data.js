@@ -1696,7 +1696,7 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                background: `radial-gradient(163.06% 88.68% at 61.82% 30.09%, rgba(0, 136, 204, 0.1) 0%, rgba(232, 232, 232, 0) 100%),
+                background: `radial-gradient(163.06% 88.68% at 61.82% 30.09%, rgba(0, 136, 204, 0.1) 0%, rgba(232, 232, 232, 0) 30%),
                             linear-gradient(180deg, #E8E8E8 0%, rgba(232, 232, 232, 0.1) 5.29%, rgba(232, 232, 232, 0.01) 95.55%, #E8E8E8 100%),
                             linear-gradient(0deg, #E8E8E8, #E8E8E8)`
             },
