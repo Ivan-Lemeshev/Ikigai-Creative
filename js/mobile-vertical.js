@@ -350,7 +350,7 @@ const mvRefreshTheme = () => {
         dropListActivCircle5.style.border = "0.24875621890547264vw solid var(--ltElementBackground)";
         mvTextarea.classList = "mv-textarea-dark";
         mainBlockAllText.style.border = "0.24875621890547264vw solid rgba(214, 214, 214, 0.5)";
-        
+
     } else {
         mvLight.textContent = "Light"
         mvThirdSectionWrapperImg.style.border = "";
@@ -387,11 +387,19 @@ const mvRefreshTheme = () => {
 mvLang.addEventListener('click', () => {
     mvSwitchLocalization();
     mvRefreshDataForLocalization();
+    mvNavigationBlock.style.left = "";
+    setTimeout(() => {
+        mvNavigationBlock.style.display = "";
+    }, 500);
 })
 
 mvLight.addEventListener('click', () => {
     mvSwitchTheme();
     mvRefreshTheme();
+    mvNavigationBlock.style.left = "";
+    setTimeout(() => {
+        mvNavigationBlock.style.display = "";
+    }, 500);
 })
 
 
@@ -1011,7 +1019,7 @@ mvThirdSectionButtonOrder.addEventListener('click', () => {
             mvFifvthSectionDropListItemCircle.style.background = "";
             mvFifvthSectionDropListItemCircle.style.border = "";
             mvFifvthSectionDropListItemText.style.color = "";
-            
+
         } else {
             mvFifvthSectionDropListItemCircle.style.background = "";
             mvFifvthSectionDropListItemCircle.style.border = "0.24875621890547264vw solid var(--ltElementBackground)";
