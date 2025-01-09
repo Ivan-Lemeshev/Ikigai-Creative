@@ -57,7 +57,7 @@ mhNavigationBlockServices.addEventListener('click', () => {
         mhNavigationBlock.style.display = "";
     }, 500);
     window.scrollTo({
-        top: window.innerWidth * 1.4,
+        top: window.innerWidth * 1.35,
         behavior: 'smooth'
     });
 })
@@ -771,7 +771,15 @@ sixSectionBottomContactUs.addEventListener('click', () => {
 })
 
 
-const mhThemeButton = document.getElementById("mh-navigation-block-night-mode-switch-button-wrapper")
+const mhThemeButton = document.getElementById("mh-navigation-block-night-mode-switch-button-wrapper");
+const mhFiveSectionInterestingChangeButton = document.getElementById("mh-five-section-interesting-change-button");
+
+mhFiveSectionInterestingChangeButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 1.35,
+        behavior: 'smooth'
+    });
+})
 
 
 const mhSwitchTheme = () => {
