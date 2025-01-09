@@ -1017,6 +1017,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: visible;
     }
 
     &>#mh-five-section-title-interesting-service {
