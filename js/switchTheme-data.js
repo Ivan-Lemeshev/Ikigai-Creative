@@ -1756,7 +1756,7 @@ const themeWrapper = {
             },
             dark: {
                 color: "",
-                background: `linear-gradient(270deg, #1C1C1C 0%, #D6D6D6 14.42%, #1C1C1C 100%);`
+                background: `linear-gradient(270deg, #1C1C1C 0%, #D6D6D6 14.42%, #1C1C1C 100%)`
             }
         }
     },
@@ -1939,6 +1939,296 @@ const themeWrapper = {
             dark: {
                 color: "",
                 background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "mv-navigation-block": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(166.39deg, rgba(0, 76, 123, 0.2) 4.94%, rgba(232, 232, 232, 0.2) 14.94%, rgba(232, 232, 232, 0.2) 35.08%, rgba(0, 76, 123, 0.2) 69.97%, rgba(232, 232, 232, 0.2) 89.82%),
+                            linear-gradient(180deg, rgba(232, 232, 232, 0) 92.39%, #E8E8E8 100%),
+                            linear-gradient(0deg, #E8E8E8, #E8E8E8)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(166.39deg, rgba(0, 76, 123, 0.2) 4.94%, rgba(28, 28, 28, 0.2) 14.94%, rgba(28, 28, 28, 0.2) 35.08%, rgba(0, 76, 123, 0.2) 69.97%, rgba(28, 28, 28, 0.2) 89.82%),
+                            linear-gradient(180deg, rgba(28, 28, 28, 0) 92.39%, #1C1C1C 100%),
+                            linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+
+    "mv-navigation-block-light-button": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--outline)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-first-section-subtitle-second-block-left": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(90.45deg, rgba(0, 136, 204, 0.8) 0.18%, #D0D8DD 44.9%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(90.45deg, rgba(0, 136, 204, 0.8) 0.18%, #192126 44.9%)`
+            }
+        }
+    },
+
+    "mv-first-section-subtitle-second-block-right": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(90.45deg, rgba(0, 136, 204, 0.8) 0.18%, #D0D8DD 44.9%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(90.49deg, rgba(0, 136, 204, 0.8) 47.23%, #18232A 100%)`
+            }
+        }
+    },
+
+    "mv-wrapper-for-img-0": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(232, 232, 232, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(232, 232, 232, 0.08) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%)`
+            }
+        }
+    },
+
+    "mv-wrapper-for-img-1": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(232, 232, 232, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(232, 232, 232, 0.08) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%)`
+            }
+        }
+    },
+
+    "mv-wrapper-for-img-2": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(232, 232, 232, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(232, 232, 232, 0.08) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%)`
+            }
+        }
+    },
+
+    "mv-wrapper-for-img-3": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(232, 232, 232, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(232, 232, 232, 0.08) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%)`
+            }
+        }
+    },
+
+    "mv-wrapper-for-img-4": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(232, 232, 232, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(232, 232, 232, 0.08) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%)`
+            }
+        }
+    },
+
+    "mv-wrapper-for-img-5": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(232, 232, 232, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(232, 232, 232, 0.08) 99.87%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(179.79deg, rgba(28, 28, 28, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(28, 28, 28, 0.08) 99.87%)`
+            }
+        }
+    },
+
+    "mv-fifvth-section-drop-list-item-text-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-fifvth-section-drop-list-item-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-fifvth-section-drop-list-item-text-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-fifvth-section-drop-list-item-text-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-fifvth-section-drop-list-item-text-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-fifvth-section-drop-list-item-text-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-textarea-line-0": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtSeparationLine)`
+            },
+            dark: {
+                color: "",
+                background: `var(--ltSeparationLine)`
+            }
+        }
+    },
+
+    "mv-textarea-line-1": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtSeparationLine)`
+            },
+            dark: {
+                color: "",
+                background: `var(--ltSeparationLine)`
+            }
+        }
+    },
+
+    "mv-textarea-line-2": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtSeparationLine)`
+            },
+            dark: {
+                color: "",
+                background: `var(--ltSeparationLine)`
+            }
+        }
+    },
+
+    "mv-textarea-line-3": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtSeparationLine)`
+            },
+            dark: {
+                color: "",
+                background: `var(--ltSeparationLine)`
+            }
+        }
+    },
+
+    "mv-textarea-line-4": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtSeparationLine)`
+            },
+            dark: {
+                color: "",
+                background: `var(--ltSeparationLine)`
+            }
+        }
+    },
+
+    "mv-fifvth-section-second-content-logo": {
+        styles: {
+            light: {
+                color: "var(--dtMain)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
             }
         }
     },

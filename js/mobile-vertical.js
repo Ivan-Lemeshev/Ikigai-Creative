@@ -168,6 +168,7 @@ const nextSlogan = () => {
 
 let mvSelectLang = "eng";
 const mvLang = document.getElementById("mv-navigation-block-lang-button");
+const mvLight = document.getElementById("mv-navigation-block-light-button");
 
 const mvSwitchLocalization = () => {
     mvSelectLang = mvSelectLang === "eng" ? "rus" : "eng";
@@ -246,6 +247,23 @@ const mvRefreshDataForLocalization = () => {
     }
 }
 
+const mvPriceListButton = document.getElementById("mv-price-list-button");
+const mvPriceListWrapper = document.getElementById("mv-price-list-wrapper");
+const mvPriceListX = document.getElementById("mv-price-list-x-mark");
+
+const mvThirdSectionLeftArrow = document.getElementById("mv-third-section-left-arrow")
+const mvThirdSectionRightArrow = document.getElementById("mv-third-section-right-arrow")
+
+const mvFifvthSectionImgPath = document.getElementById("mv-fifvth-section-img-path");
+const mvFifvthSectionMainContent = document.getElementById("mv-fifvth-section-main-content");
+
+const mvInputFirstName = document.getElementById("mv-fifvth-section-input-first-name");
+const mvInputLastName = document.getElementById("mv-fifvth-section-input-last-name");
+const mvInputPhone = document.getElementById("mv-fifvth-section-input-phone");
+const mvInputEmail = document.getElementById("mv-fifvth-section-input-email");
+const mvTextarea = document.getElementById("mv-textarea");
+
+
 let mvSelectTheme = "light";
 
 const mvSwitchTheme = () => {
@@ -262,9 +280,104 @@ const mvSwitchTheme = () => {
 const mvRefreshTheme = () => {
     const service = arrayPriceList[mvActivNumber]
 
-    if (mvSelectTheme === "dark") {
+    const mvThirdSectionWrapperImg = document.getElementById("mv-third-section-wrapper-img");
+    const mvPriceListButtonImg = document.getElementById("mv-price-list-button-img");
+    const mvButtonMoreLowerPartButtons0 = document.getElementById("mv-button-more-lower-part-buttons-0");
+    const mvButtonMoreLowerPartButtons1 = document.getElementById("mv-button-more-lower-part-buttons-1");
+    const mvButtonMoreLowerPartButtons2 = document.getElementById("mv-button-more-lower-part-buttons-2");
+    const mvButtonMoreLowerPartButtonsImg1 = document.getElementById("mv-button-more-lower-part-buttons-0-img");
+    const mvButtonMoreLowerPartButtonsImg2 = document.getElementById("mv-button-more-lower-part-buttons-1-img");
+    const mvButtonMoreLowerPartButtonsImg3 = document.getElementById("mv-button-more-lower-part-buttons-2-img");
+    const mvWrapperForImg1 = document.getElementById("mv-wrapper-for-img-1");
+    const mvWrapperForImg2 = document.getElementById("mv-wrapper-for-img-2");
+    const mvWrapperForImg3 = document.getElementById("mv-wrapper-for-img-3");
+    const mvWrapperForImg4 = document.getElementById("mv-wrapper-for-img-4");
+    const mvWrapperForImg5 = document.getElementById("mv-wrapper-for-img-5");
+    const mvWrapperForImg0 = document.getElementById("mv-wrapper-for-img-0");
+    const mvFourthSectionImg1 = document.getElementById("mv-fourth-section-img-1");
+    const mvFourthSectionImg2 = document.getElementById("mv-fourth-section-img-2");
+    const mvFourthSectionImg3 = document.getElementById("mv-fourth-section-img-3");
+    const mvFourthSectionImg4 = document.getElementById("mv-fourth-section-img-4");
+    const mvFourthSectionImg5 = document.getElementById("mv-fourth-section-img-5");
+    const mvFourthSectionImg6 = document.getElementById("mv-fourth-section-img-6");
+    const dropListActivCircle0 = document.getElementById("mv-fifvth-section-drop-list-activ-circle-0");
+    const dropListActivCircle1 = document.getElementById("mv-fifvth-section-drop-list-activ-circle-1");
+    const dropListActivCircle2 = document.getElementById("mv-fifvth-section-drop-list-activ-circle-2");
+    const dropListActivCircle3 = document.getElementById("mv-fifvth-section-drop-list-activ-circle-3");
+    const dropListActivCircle4 = document.getElementById("mv-fifvth-section-drop-list-activ-circle-4");
+    const dropListActivCircle5 = document.getElementById("mv-fifvth-section-drop-list-activ-circle-5");
+    const mvSixthSectionLowerImg = document.getElementById("mv-sixth-section-lower-img");
+    const mainBlockAllText = document.getElementById("mv-sixth-section-main-block-all-text");
+    mvThirdSectionImg.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-third-section-img ${service.title.eng}.svg`;
+    mvPriceListButtonImg.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-third-section-right-four-buttons-0.svg`;
+    mvButtonMoreLowerPartButtonsImg1.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-third-section-right-four-buttons-1.svg`;
+    mvButtonMoreLowerPartButtonsImg2.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-third-section-right-four-buttons-2.svg`;
+    mvButtonMoreLowerPartButtonsImg3.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-third-section-right-four-buttons-3.svg`;
+    mvThirdSectionLeftArrow.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-third-section-left-arrow.svg`;
+    mvThirdSectionRightArrow.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-third-section-right-arrow.svg`;
+    mvFourthSectionImg1.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-fourth-section-service-0.svg`;
+    mvFourthSectionImg2.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-fourth-section-service-1.svg`;
+    mvFourthSectionImg3.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-fourth-section-service-2.svg`;
+    mvFourthSectionImg4.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-fourth-section-service-3.svg`;
+    mvFourthSectionImg5.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-fourth-section-service-4.svg`;
+    mvFourthSectionImg6.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-fourth-section-service-5.svg`;
+    mvSixthSectionLowerImg.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-sixth-section-lower-img.svg`;
 
+    if (mvSelectTheme === "dark") {
+        mvLight.textContent = "Night"
+        mvThirdSectionWrapperImg.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)"
+        mvPriceListButton.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
+        mvButtonMoreLowerPartButtons0.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
+        mvButtonMoreLowerPartButtons1.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
+        mvButtonMoreLowerPartButtons2.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
+        mvWrapperForImg1.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
+        mvWrapperForImg2.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
+        mvWrapperForImg3.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
+        mvWrapperForImg4.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
+        mvWrapperForImg5.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
+        mvWrapperForImg0.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
+        mvFifvthSectionImgPath.style.fill = "#F3F3F3";
+        mvFifvthSectionMainContent.style.border = "0.4975124378109453vw solid rgba(214, 214, 214, 0.5)";
+        mvInputFirstName.classList = "mv-fifvth-section-input-dark";
+        mvInputLastName.classList = "mv-fifvth-section-input-dark";
+        mvInputPhone.classList = "mv-fifvth-section-input-dark";
+        mvInputEmail.classList = "mv-fifvth-section-input-dark";
+        dropListActivCircle0.style.border = "0.24875621890547264vw solid var(--ltElementBackground)";
+        dropListActivCircle1.style.border = "0.24875621890547264vw solid var(--ltElementBackground)";
+        dropListActivCircle2.style.border = "0.24875621890547264vw solid var(--ltElementBackground)";
+        dropListActivCircle3.style.border = "0.24875621890547264vw solid var(--ltElementBackground)";
+        dropListActivCircle4.style.border = "0.24875621890547264vw solid var(--ltElementBackground)";
+        dropListActivCircle5.style.border = "0.24875621890547264vw solid var(--ltElementBackground)";
+        mvTextarea.classList = "mv-textarea-dark";
+        mainBlockAllText.style.border = "0.24875621890547264vw solid rgba(214, 214, 214, 0.5)";
+        
     } else {
+        mvLight.textContent = "Light"
+        mvThirdSectionWrapperImg.style.border = "";
+        mvPriceListButton.style.border = "";
+        mvButtonMoreLowerPartButtons0.style.border = "";
+        mvButtonMoreLowerPartButtons1.style.border = "";
+        mvButtonMoreLowerPartButtons2.style.border = "";
+        mvWrapperForImg1.style.border = "";
+        mvWrapperForImg2.style.border = "";
+        mvWrapperForImg3.style.border = "";
+        mvWrapperForImg4.style.border = "";
+        mvWrapperForImg5.style.border = "";
+        mvWrapperForImg0.style.border = "";
+        mvFifvthSectionImgPath.style.fill = "#1C1C1C";
+        mvFifvthSectionMainContent.style.border = "";
+        mvInputFirstName.classList = "mv-fifvth-section-input-light";
+        mvInputLastName.classList = "mv-fifvth-section-input-light";
+        mvInputPhone.classList = "mv-fifvth-section-input-light";
+        mvInputEmail.classList = "mv-fifvth-section-input-light";
+        dropListActivCircle0.style.border = "";
+        dropListActivCircle1.style.border = "";
+        dropListActivCircle2.style.border = "";
+        dropListActivCircle3.style.border = "";
+        dropListActivCircle4.style.border = "";
+        dropListActivCircle5.style.border = "";
+        mvTextarea.classList = "mv-textarea-light";
+        mainBlockAllText.style.border = "";
 
     }
 
@@ -274,8 +387,11 @@ const mvRefreshTheme = () => {
 mvLang.addEventListener('click', () => {
     mvSwitchLocalization();
     mvRefreshDataForLocalization();
-    // mvSwitchTheme();
-    // mvRefreshTheme();
+})
+
+mvLight.addEventListener('click', () => {
+    mvSwitchTheme();
+    mvRefreshTheme();
 })
 
 
@@ -379,14 +495,12 @@ const mvChangeIdeasText = () => {
 
 mvChangeIdeasText();
 
-
-
 const mvActivService = () => {
     const currentService = arrayPriceList[mvActivNumber];
 
     mvThirdSectionTitle.textContent = currentService.title[mvSelectLang];
 
-    mvThirdSectionImg.src = `/img/svg/mobile-vertical/mv-third-section-img ${currentService.title.eng}.svg`;
+    mvThirdSectionImg.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-third-section-img ${currentService.title.eng}.svg`;
     mvThirdSectionText0.textContent = currentService.description[mvSelectLang][0];
     mvThirdSectionText1.textContent = currentService.description[mvSelectLang][1];
 
@@ -458,8 +572,6 @@ mvFourthSectionButton5.addEventListener('click', () => {
     });
 })
 
-const mvThirdSectionLeftArrow = document.getElementById("mv-third-section-left-arrow")
-const mvThirdSectionRightArrow = document.getElementById("mv-third-section-right-arrow")
 
 mvThirdSectionRightArrow.addEventListener('click', () => {
     mvActivNumber++;
@@ -494,9 +606,7 @@ mvSecondSectionButtonContacts.addEventListener('click', () => {
     });
 })
 
-const mvPriceListButton = document.getElementById("mv-price-list-button");
-const mvPriceListWrapper = document.getElementById("mv-price-list-wrapper");
-const mvPriceListX = document.getElementById("mv-price-list-x-mark");
+
 
 mvPriceListButton.addEventListener('click', () => {
     mvPriceListWrapper.style.display = "block";
@@ -539,10 +649,7 @@ const isValidEmail = (email) => {
     return regex.test(email);
 }
 
-const mvInputFirstName = document.getElementById("mv-fifvth-section-input-first-name");
-const mvInputLastName = document.getElementById("mv-fifvth-section-input-last-name");
-const mvInputPhone = document.getElementById("mv-fifvth-section-input-phone");
-const mvInputEmail = document.getElementById("mv-fifvth-section-input-email");
+
 const mvSubmitButton = document.getElementById("mv-submit-button");
 
 
@@ -637,8 +744,8 @@ mvInputEmail.addEventListener('input', () => {
     mvInputEmail.value = editValue;
 });
 
-const mvFifvthSectionImgPath = document.getElementById("mv-fifvth-section-img-path");
-const mvFifvthSectionMainContent = document.getElementById("mv-fifvth-section-main-content");
+
+
 const mvFifvthSectionMainContentSubtitle = document.getElementById("mv-fifvth-section-main-content-subtitle");
 let mvActivNumberSave = null;
 
@@ -723,7 +830,6 @@ mvSubmitButton.addEventListener('click', (event) => {
 })
 
 
-const mvTextarea = document.getElementById("mv-textarea");
 let mvNumberOfText = 0;
 let mvOldActivService = null;
 
@@ -740,16 +846,24 @@ const setupAndTranslateForSelectService = (event) => {
     if (mvOldActivService !== null) {
         const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvOldActivService}`);
         const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${mvOldActivService}`);
-        mvFifvthSectionDropListItemCircle.style.backgroundColor = "";
-        mvFifvthSectionDropListItemText.style.color = "";
+        if (mvSelectTheme === "light") {
+            mvFifvthSectionDropListItemCircle.style.background = "";
+            mvFifvthSectionDropListItemCircle.style.border = "";
+            mvFifvthSectionDropListItemText.style.color = "";
+        } else {
+            mvFifvthSectionDropListItemCircle.style.background = "";
+            mvFifvthSectionDropListItemCircle.style.border = "0.24875621890547264vw solid var(--ltElementBackground)";
+            mvFifvthSectionDropListItemText.style.color = "var(--dtText)";
+        }
+
     }
 
     if (mvSelectLang === "eng") {
         mvTextarea.textContent = mvTextForApplication.eng[mvNumberOfText];
         const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvActivNumber}`);
         const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${mvActivNumber}`);
-        mvFifvthSectionDropListItemCircle.style.backgroundColor = "#0285CC";
-        mvFifvthSectionDropListItemText.style.color = "#0285CC";
+        mvFifvthSectionDropListItemCircle.style.background = "var(--accent)";
+        mvFifvthSectionDropListItemText.style.color = "var(--accent)";
     } else {
         mvTextarea.textContent = mvTextForApplication.rus[mvNumberOfText];
     }
@@ -768,14 +882,21 @@ for (let index = 0; index < arrayPriceList.length; index++) {
         if (mvOldActivService !== null) {
             const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvOldActivService}`);
             const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${mvOldActivService}`);
-            mvFifvthSectionDropListItemCircle.style.backgroundColor = "";
-            mvFifvthSectionDropListItemText.style.color = "";
+            if (mvSelectTheme === "light") {
+                mvFifvthSectionDropListItemCircle.style.background = "";
+                mvFifvthSectionDropListItemCircle.style.border = "";
+                mvFifvthSectionDropListItemText.style.color = "";
+            } else {
+                mvFifvthSectionDropListItemCircle.style.background = "";
+                mvFifvthSectionDropListItemCircle.style.border = "0.24875621890547264vw solid var(--ltElementBackground)";
+                mvFifvthSectionDropListItemText.style.color = "var(--dtText)";
+            }
         }
 
         const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${index}`);
         const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${index}`);
-        mvFifvthSectionDropListItemCircle.style.backgroundColor = "#0285CC";
-        mvFifvthSectionDropListItemText.style.color = "#0285CC";
+        mvFifvthSectionDropListItemCircle.style.backgroundColor = "var(--accent)";
+        mvFifvthSectionDropListItemText.style.color = "var(--accent)";
 
 
         mvOldActivService = index;
@@ -870,15 +991,23 @@ mvThirdSectionButtonOrder.addEventListener('click', () => {
     if (mvActivNumberSave !== null) {
         const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvActivNumber}`);
         const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${mvActivNumber}`);
-        mvFifvthSectionDropListItemCircle.style.backgroundColor = "";
-        mvFifvthSectionDropListItemText.style.color = "";
+        if (mvSelectTheme === "light") {
+            mvFifvthSectionDropListItemCircle.style.background = "";
+            mvFifvthSectionDropListItemCircle.style.border = "";
+            mvFifvthSectionDropListItemText.style.color = "";
+            
+        } else {
+            mvFifvthSectionDropListItemCircle.style.background = "";
+            mvFifvthSectionDropListItemCircle.style.border = "0.24875621890547264vw solid var(--ltElementBackground)";
+            mvFifvthSectionDropListItemText.style.color = "var(--dtText)";
+        }
     }
 
     mvActivNumberSave = mvActivNumber;
 
     const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvActivNumberSave}`);
     const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${mvActivNumberSave}`);
-    mvFifvthSectionDropListItemCircle.style.backgroundColor = "#0285CC";
-    mvFifvthSectionDropListItemText.style.color = "#0285CC";
+    mvFifvthSectionDropListItemCircle.style.backgroundColor = "var(--accent)";
+    mvFifvthSectionDropListItemText.style.color = "var(--accent)";
 
 })
