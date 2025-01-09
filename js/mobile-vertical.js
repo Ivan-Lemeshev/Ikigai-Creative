@@ -68,7 +68,7 @@ mvNavigationBlockItem3.addEventListener('click', () => {
         mvNavigationBlock.style.display = "";
     }, 500);
     window.scrollTo({
-        top: window.innerWidth * 8.75,
+        top: window.innerWidth * 8.55,
         behavior: 'smooth'
     });
 })
@@ -605,7 +605,7 @@ mvSecondSectionButtonServices.addEventListener('click', () => {
 
 mvSecondSectionButtonContacts.addEventListener('click', () => {
     window.scrollTo({
-        top: window.innerWidth * 8.75,
+        top: window.innerWidth * 8.5,
         behavior: 'smooth'
     });
 })
@@ -796,7 +796,7 @@ mvSubmitButton.addEventListener('click', (event) => {
 
     if (!mvAllInputsHave()) {
         window.scrollTo({
-            top: window.innerWidth * 8.75,
+            top: window.innerWidth * 8.5,
             behavior: 'smooth'
         });
 
@@ -1002,7 +1002,7 @@ const mvThirdSectionButtonOrder = document.getElementById("mv-third-section-butt
 mvThirdSectionButtonOrder.addEventListener('click', () => {
 
     window.scrollTo({
-        top: window.innerWidth * 8.75,
+        top: window.innerWidth * 8.5,
         behavior: 'smooth'
     });
 
