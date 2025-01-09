@@ -322,6 +322,8 @@ const mvRefreshTheme = () => {
     mvFourthSectionImg5.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-fourth-section-service-4.svg`;
     mvFourthSectionImg6.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-fourth-section-service-5.svg`;
     mvSixthSectionLowerImg.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-sixth-section-lower-img.svg`;
+    mvSixthSectionMainBlockArrowLeft.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-sixth-section-main-block-arrow-left.svg`;
+    mvSixthSectionMainBlockArrowRight.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-sixth-section-main-block-arrow-right.svg`;
 
     if (mvSelectTheme === "dark") {
         mvLight.textContent = "Night"
