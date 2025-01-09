@@ -16,7 +16,7 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                background: "linear-gradient(180deg, #D8E9F1 0%, #FCFDFD 100%)"
+                background: "linear-gradient(180deg, #E7EFF3 0%, #D8E9F1 50.42%)"
             },
             dark: {
                 color: "",
@@ -237,7 +237,7 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                background: "linear-gradient(0deg, #E7EFF3 0%, #D8E9F1 50.42%)"
+                background: "linear-gradient(180deg, #D8E9F1 0%, #FCFDFD 100%)"
             },
             dark: {
                 color: "",

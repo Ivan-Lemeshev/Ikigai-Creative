@@ -183,7 +183,7 @@ mhThirdSectionButtonContacts.addEventListener('click', () => {
 
 let mhActivNumber = 0;
 
-const mhLang = document.getElementById("mh-navigation-block-language-text");
+const mhLang = document.getElementById("mh-navigation-block-language-button");
 
 const mhSwitchLocalization = () => {
     mhSelectLang = mhSelectLang === "eng" ? "rus" : "eng";
@@ -555,7 +555,7 @@ const mhAllInputsHave = () => {
         mhFifvthSectionTitle.textContent = "Contact us"
         mhSubmitButton.style.border = "none";
         mhSubmitButton.style.background = "var(--accent)";
-        
+
         if (mhSelectTheme === "light") {
             mhFifvthSectionMainContent.style.background = "linear-gradient(180deg, rgba(252, 253, 253, 0.15) 0%, rgba(0, 136, 204, 0.15) 19.27%, rgba(252, 253, 253, 0.15) 28.53%, rgba(252, 253, 253, 0.15) 100%), linear-gradient(0deg, #FCFDFD, #FCFDFD)";
         } else {
@@ -784,7 +784,7 @@ const mhFiveSectionInterestingChangeButton = document.getElementById("mh-five-se
 
 mhFiveSectionInterestingChangeButton.addEventListener('click', () => {
     window.scrollTo({
-        top: window.innerWidth * 1.35,
+        top: window.innerWidth * 1.85,
         behavior: 'smooth'
     });
 })
@@ -918,3 +918,11 @@ mhThemeButton.addEventListener('click', () => {
     }, 500);
 })
 
+window.addEventListener('scroll', () => {
+    if ((window.innerHeight * 1.7) > window.scrollY) {
+        mhNavButton.style.opacity = "0"
+    } else {
+        mhNavButton.style.opacity = ""
+    }
+    
+})
