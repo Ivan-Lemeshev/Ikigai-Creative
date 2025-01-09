@@ -1141,7 +1141,7 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                background: "var(--outline)"
+                background: "var(--dtText)"
             },
             dark: {
                 color: "",
