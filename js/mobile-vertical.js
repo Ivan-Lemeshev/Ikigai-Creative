@@ -321,6 +321,7 @@ const mvRefreshTheme = () => {
     mvFourthSectionImg4.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-fourth-section-service-3.svg`;
     mvFourthSectionImg5.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-fourth-section-service-4.svg`;
     mvFourthSectionImg6.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-fourth-section-service-5.svg`;
+    mvPriceListX.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-price-list-x-mark.svg`;
     mvSixthSectionLowerImg.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-sixth-section-lower-img.svg`;
     mvSixthSectionMainBlockArrowLeft.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-sixth-section-main-block-arrow-left.svg`;
     mvSixthSectionMainBlockArrowRight.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-sixth-section-main-block-arrow-right.svg`;
@@ -1021,7 +1022,7 @@ mvThirdSectionButtonOrder.addEventListener('click', () => {
             mvFifvthSectionDropListItemText.style.color = "var(--dtText)";
         }
     }
-
+    mvOldActivService = mvActivNumber;
     mvActivNumberSave = mvActivNumber;
 
     const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvActivNumberSave}`);

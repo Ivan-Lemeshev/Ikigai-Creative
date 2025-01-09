@@ -334,13 +334,13 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                background: `linear-gradient(176.13deg, rgba(250, 250, 250, 0) 4.53%, rgba(0, 136, 204, 0.2) 62.4%, rgba(250, 250, 250, 0.2) 98.52%),
+                background: `linear-gradient(180deg, rgba(250, 250, 250, 0) 4.53%, rgba(0, 136, 204, 0.2) 62.4%, rgba(250, 250, 250, 0.2) 98.52%),
                             linear-gradient(180deg, rgba(252, 253, 253, 0) 95.43%, #FCFDFD 100%),
                             linear-gradient(0deg, #FAFAFA, #FAFAFA)`
             },
             dark: {
                 color: "",
-                background: `linear-gradient(176.13deg, rgba(28, 28, 28, 0) 4.53%, rgba(0, 136, 204, 0.2) 62.4%, rgba(28, 28, 28, 0.2) 98.52%), linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+                background: `linear-gradient(180deg, rgba(28, 28, 28, 0) 4.53%, rgba(0, 136, 204, 0.2) 62.4%, rgba(28, 28, 28, 0.2) 98.52%), linear-gradient(0deg, #1C1C1C, #1C1C1C)`
             }
         }
     },
@@ -471,7 +471,7 @@ const themeWrapper = {
             },
             dark: {
                 color: "",
-                background: `linear-gradient(177.83deg, rgba(28, 28, 28, 0.1) 1.79%, rgba(0, 136, 204, 0.1) 11.18%, rgba(0, 136, 204, 0.1) 15.56%, rgba(28, 28, 28, 0.1) 31.6%, rgba(28, 28, 28, 0.1) 98.18%),linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+                background: `linear-gradient(180deg, rgba(28, 28, 28, 0.1) 5.79%, rgba(0, 136, 204, 0.1) 11.18%, rgba(0, 136, 204, 0.1) 15.56%, rgba(28, 28, 28, 0.1) 31.6%, rgba(28, 28, 28, 0.1) 38.18%),linear-gradient(0deg, #1C1C1C, #1C1C1C)`
             }
         }
     },
@@ -2224,6 +2224,214 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "var(--dtMain)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-service-name-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-service-cost-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-service-name-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-service-cost-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-service-name-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-service-cost-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-service-name-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-service-cost-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-service-name-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-service-cost-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-service-name-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-service-cost-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-service-name-6": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-service-cost-6": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-price-list-footer": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
                 background: ``
             },
             dark: {

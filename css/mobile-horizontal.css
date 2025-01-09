@@ -165,9 +165,9 @@
                 width: 1.8306636155606408vw;
                 height: 1.8306636155606408vw;
                 position: absolute;
+                top: 0.5vw;
                 right: 1.1vw;
                 transition: right 0.3s ease-in-out;
-                /* следующее положение 0 vw */
             }
         }
     }
@@ -375,7 +375,7 @@
     position: relative;
     overflow: visible;
     background:
-        linear-gradient(176.13deg, rgba(250, 250, 250, 0) 4.53%, rgba(0, 136, 204, 0.2) 62.4%, rgba(250, 250, 250, 0.2) 98.52%),
+        linear-gradient(180deg, rgba(250, 250, 250, 0) 4.53%, rgba(0, 136, 204, 0.2) 62.4%, rgba(250, 250, 250, 0.2) 98.52%),
         linear-gradient(180deg, rgba(252, 253, 253, 0) 95.43%, #FCFDFD 100%),
         linear-gradient(0deg, #FAFAFA, #FAFAFA);
 
@@ -552,7 +552,6 @@
         overflow: hidden;
 
         &>.light {
-            color: var(--ltText);
             height: 100%;
             width: 17.162471395881006vw;
             display: flex;
@@ -572,9 +571,10 @@
                 justify-content: center;
                 align-items: center;
                 text-align: center;
+                color: var(--ltText);
             }
 
-            &>.mh-four-section-others-services-wrapper-img {
+            &>.mh-four-section-others-services-wrapper-img-light {
                 border: 0.057208237986270026vw solid var(--dtSeparationLine);
                 width: 100%;
                 height: 17.162471395881006vw;
@@ -591,7 +591,6 @@
         }
 
         &>.dark {
-            color: var(--outline);
             height: 100%;
             width: 17.162471395881006vw;
             display: flex;
@@ -611,9 +610,10 @@
                 justify-content: center;
                 align-items: center;
                 text-align: center;
+                color: var(--outline);
             }
 
-            &>.mh-four-section-others-services-wrapper-img {
+            &>.mh-four-section-others-services-wrapper-img-dark {
                 border: 0.057208237986270026vw solid var(--outline);
                 width: 100%;
                 height: 17.162471395881006vw;
