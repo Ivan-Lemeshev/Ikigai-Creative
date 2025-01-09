@@ -79,7 +79,7 @@ mvNavigationBlockItem4.addEventListener('click', () => {
         mvNavigationBlock.style.display = "";
     }, 500);
     window.scrollTo({
-        top: window.innerWidth * 12.1,
+        top: window.innerWidth * 11.8,
         behavior: 'smooth'
     });
 })
