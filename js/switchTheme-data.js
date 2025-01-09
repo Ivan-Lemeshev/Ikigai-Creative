@@ -1702,7 +1702,7 @@ const themeWrapper = {
             },
             dark: {
                 color: "",
-                background: `radial-gradient(163.06% 88.68% at 61.82% 30.09%, rgba(0, 136, 204, 0.1) 0%, rgba(28, 28, 28, 0) 100%),
+                background: `radial-gradient(163.06% 88.68% at 61.82% 30.09%, rgba(0, 136, 204, 0.1) 0%, rgba(28, 28, 28, 0) 30%),
                             linear-gradient(180deg, #1C1C1C 0%, rgba(28, 28, 28, 0.1) 5.29%, rgba(28, 28, 28, 0.01) 95.55%, #1C1C1C 100%),
                             linear-gradient(0deg, #1C1C1C, #1C1C1C)`
             }
