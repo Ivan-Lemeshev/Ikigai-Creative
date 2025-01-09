@@ -555,6 +555,7 @@
                 font-size: 5.970149253731343vw;
                 font-weight: 400;
                 line-height: 5.970149253731343vw;
+                overflow: visible;
                 color: #EAF8FF;
             }
 
@@ -771,7 +772,7 @@
             position: absolute;
             left: 4.975124378109453vw;
             border-bottom: 0.24875621890547264vw solid var(--dtSeparationLine);
-            color: #02A6FF;
+            color: var(--dtMain);
             text-align: center;
             font-weight: 300;
             font-size: 4.975124378109453vw;
@@ -826,8 +827,6 @@
                 font-size: 4.975124378109453vw;
                 line-height: 4.975124378109453vw;
             }
-
-
         }
 
         &>#mv-fifvth-section-input-first-name {
@@ -1164,7 +1163,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Lato';
         }
     }
 

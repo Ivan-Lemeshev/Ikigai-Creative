@@ -659,7 +659,11 @@ const mvVoidInput = () => {
 
 mvInputFirstName.addEventListener('input', () => {
     mvInputFirstName.style.borderBottom = "";
-    mvInputFirstName.classList = "mv-fifvth-section-input";
+    if (mvSelectTheme === "light") {
+        mvInputFirstName.classList = "mv-fifvth-section-input-light";
+    } else {
+        mvInputFirstName.classList = "mv-fifvth-section-input-dark";
+    }
     if (mvSelectLang === "rus") {
         mvInputFirstName.placeholder = "Имя";
     } else {
@@ -682,7 +686,11 @@ mvInputFirstName.addEventListener('input', () => {
 
 mvInputLastName.addEventListener('input', () => {
     mvInputLastName.style.borderBottom = "";
-    mvInputLastName.classList = "mv-fifvth-section-input";
+    if (mvSelectTheme === "light") {
+        mvInputLastName.classList = "mv-fifvth-section-input-light";
+    } else {
+        mvInputLastName.classList = "mv-fifvth-section-input-dark";
+    }
 
     if (mvSelectLang === "rus") {
         mvInputLastName.placeholder = "Фамилия";
@@ -711,7 +719,11 @@ mvInputPhone.addEventListener('input', () => {
         mvInputPhone.placeholder = "Phone";
     }
     mvInputPhone.style.borderBottom = "";
-    mvInputPhone.classList = "mv-fifvth-section-input";
+    if (mvSelectTheme === "light") {
+        mvInputPhone.classList = "mv-fifvth-section-input-light";
+    } else {
+        mvInputPhone.classList = "mv-fifvth-section-input-dark";
+    }
     const inputValue = mvInputPhone.value;
     let editValue = inputValue.replace(/[^0-9+]/g, '');
     if (editValue.length > 12) {
@@ -730,7 +742,11 @@ mvInputPhone.addEventListener('input', () => {
 mvInputEmail.addEventListener('input', () => {
     mvInputEmail.placeholder = "Email";
     mvInputEmail.style.borderBottom = "";
-    mvInputEmail.classList = "mv-fifvth-section-input";
+    if (mvSelectTheme === "light") {
+        mvInputEmail.classList = "mv-fifvth-section-input-light";
+    } else {
+        mvInputEmail.classList = "mv-fifvth-section-input-dark";
+    }
     const inputValue = mvInputEmail.value;
     let editValue = inputValue.replace(/[^a-zA-Z1-9@_\.-]/g, '');
     if (editValue.length > 20) {
@@ -752,14 +768,14 @@ let mvActivNumberSave = null;
 const mvAllInputsHave = () => {
     if (mvInputFirstName.value.length && mvInputLastName.value.length && mvInputPhone.value.length && mvInputEmail.value.length && isValidEmail(mvInputEmail.value) && mvActivNumberSave !== null) {
         mvSubmitButton.classList = "mv-activ-button";
-        mvFifvthSectionImgPath.style.fill = "#009AEC";
-        mvFifvthSectionMainContent.style.backgroundColor = "rgba(0, 63, 98, 0.07)";
-        mvFifvthSectionMainContent.style.border = "0.4975124378109453vw solid rgba(0, 154, 236, 0.5)";
-        mvSubmitButton.style.border = "0.24875621890547264vw solid #0285CC";
-        mvSubmitButton.style.backgroundColor = "rgba(0, 154, 236, 0.05)";
-        mvSubmitButton.style.color = "#0285CC";
+        mvFifvthSectionImgPath.style.fill = "#0088CC";
+        mvFifvthSectionMainContent.style.background = "rgba(0, 136, 204, 0.01)";
+        mvFifvthSectionMainContent.style.border = "0.4975124378109453vw solid rgba(46, 46, 46, 0.5)";
+        mvSubmitButton.style.border = "";
+        mvSubmitButton.style.background = "rgba(0, 154, 236, 0.05)";
+        mvSubmitButton.style.color = "#0088CC";
         mvFifvthSectionMainContentSubtitle.textContent = "The service you're interested in:"
-        mvFifvthSectionMainContentSubtitle.style.color = "#005380"
+        mvFifvthSectionMainContentSubtitle.style.color = "#2B2B2B"
         mvFifvthSectionMainContentSubtitle.style.justifyContent = ""
         return true;
     }
@@ -780,12 +796,12 @@ mvSubmitButton.addEventListener('click', (event) => {
             behavior: 'smooth'
         });
 
-        mvFifvthSectionImgPath.style.fill = "#EC5200";
+        mvFifvthSectionImgPath.style.fill = "#ff4f4f";
         mvFifvthSectionMainContent.style.backgroundColor = "rgba(127, 45, 0, 0.07)";
-        mvFifvthSectionMainContent.style.border = "0.4975124378109453vw solid rgba(127, 45, 0, 0.5)";
-        mvSubmitButton.style.border = "0.24875621890547264vw solid var(--secondBrown)";
+        mvFifvthSectionMainContent.style.border = "0.4975124378109453vw solid rgba(255, 79, 79, 0.5)";
+        mvSubmitButton.style.border = "0.24875621890547264vw solid var(--bad)";
         mvSubmitButton.style.backgroundColor = "rgba(236, 82, 0, 0.05)";
-        mvSubmitButton.style.color = "var(--secondBrown)";
+        mvSubmitButton.style.color = "var(--bad)";
     } else {
         mvSendToApplication.style.display = "block";
         setTimeout(() => {
@@ -796,31 +812,31 @@ mvSubmitButton.addEventListener('click', (event) => {
 
     if (mvActivNumberSave === null) {
         mvFifvthSectionMainContentSubtitle.textContent = "Choose a service:"
-        mvFifvthSectionMainContentSubtitle.style.color = "#EC5200"
+        mvFifvthSectionMainContentSubtitle.style.color = "var(--bad)"
         mvFifvthSectionMainContentSubtitle.style.justifyContent = "flex-start"
     }
 
     if (mvInputFirstName.value.length < 1) {
-        mvInputFirstName.style.borderBottom = "0.24875621890547264vw solid #EC5200";
+        mvInputFirstName.style.borderBottom = "0.24875621890547264vw solid var(--bad)";
         mvInputFirstName.classList = "mv-fifvth-section-input-placeholder";
         mvInputFirstName.placeholder = "Empty field";
     }
 
     if (mvInputLastName.value.length < 1) {
-        mvInputLastName.style.borderBottom = "0.24875621890547264vw solid #EC5200";
+        mvInputLastName.style.borderBottom = "0.24875621890547264vw solid var(--bad)";
         mvInputLastName.classList = "mv-fifvth-section-input-placeholder";
         mvInputLastName.placeholder = "Empty field";
 
     }
 
     if (mvInputPhone.value.length < 1) {
-        mvInputPhone.style.borderBottom = "0.24875621890547264vw solid #EC5200";
+        mvInputPhone.style.borderBottom = "0.24875621890547264vw solid var(--bad)";
         mvInputPhone.classList = "mv-fifvth-section-input-placeholder";
         mvInputPhone.placeholder = "Empty field";
     }
 
     if (mvInputEmail.value.length < 1) {
-        mvInputEmail.style.borderBottom = "0.24875621890547264vw solid #EC5200";
+        mvInputEmail.style.borderBottom = "0.24875621890547264vw solid var(--bad)";
         mvInputEmail.classList = "mv-fifvth-section-input-placeholder";
         mvInputEmail.placeholder = "Invalid email";
     }
