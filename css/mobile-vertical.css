@@ -316,12 +316,12 @@
 
     &>#mv-second-section-text-0 {
         top: 25.870646766169152vw;
-        height: 42.28855721393035vw;
+        min-height: 42.28855721393035vw;
     }
 
     &>#mv-second-section-text-1 {
         top: 73.13432835820896vw;
-        height: 33.83084577114428vw;
+        min-height: 33.83084577114428vw;
     }
 
     &>#mv-second-section-img {
@@ -374,7 +374,7 @@
 
     &>#mv-third-section-title {
         width: 59.70149253731343vw;
-        height: 9.950248756218906vw;
+        min-height: 9.950248756218906vw;
         position: absolute;
         top: 8.45771144278607vw;
         left: 12.437810945273633vw;
@@ -384,7 +384,7 @@
         color: var(--ltText);
         display: flex;
         align-items: center;
-        overflow: visible;
+        overflow: hidden;
     }
 
     &>#mv-third-section-left-arrow {
