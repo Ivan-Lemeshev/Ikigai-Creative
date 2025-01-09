@@ -350,7 +350,7 @@ const mhFiveSectionTitleInterestingService = document.getElementById("mh-five-se
 const mhSetupAndTranslateForSelectService = (event) => {
     event.preventDefault();
     window.scrollTo({
-        top: window.innerWidth * 2.3,
+        top: window.innerWidth * 2.25,
         behavior: 'smooth'
     });
 
