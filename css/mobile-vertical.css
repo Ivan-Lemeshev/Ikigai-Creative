@@ -172,12 +172,12 @@
     &>#mv-navigation-block-light-button {
         position: absolute;
         width: 14.676616915422885vw;
-        height: 5.970149253731343vw;
+        height: 2.745995423340961dvh;
         overflow: visible;
-        top: 8.955223880597014vw;
+        top: 4.118993135011442dvh;
         left: 63.18407960199005vw;
         font-weight: 600;
-        font-size: 5.970149253731343vw;
+        font-size: min(5.970149253731343vw, 2.745995423340961dvh);
         color: var(--ltText);
         display: flex;
         justify-content: center;
