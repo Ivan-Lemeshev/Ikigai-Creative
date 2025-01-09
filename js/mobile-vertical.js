@@ -57,7 +57,7 @@ mvNavigationBlockItem2.addEventListener('click', () => {
         mvNavigationBlock.style.display = "";
     }, 500);
     window.scrollTo({
-        top: window.innerWidth * 6.5,
+        top: window.innerWidth * 6.7,
         behavior: 'smooth'
     });
 })
@@ -402,10 +402,6 @@ mvLight.addEventListener('click', () => {
     }, 500);
 })
 
-
-
-
-
 const mvChangeIdeasText = () => {
     mvCentralTextsecondBlockLeft.textContent = mvArrayFirstSectionSubTitlesLeft[mvNumberOfActivSlogan][mvSelectLang];
     mvCentralTextsecondBlockRight.textContent = mvArrayFirstSectionSubTitlesRight[mvNumberOfActivSlogan][mvSelectLang];
@@ -602,7 +598,7 @@ const mvSecondSectionButtonContacts = document.getElementById("mv-second-section
 
 mvSecondSectionButtonServices.addEventListener('click', () => {
     window.scrollTo({
-        top: window.innerWidth * 6.5,
+        top: window.innerWidth * 6.7,
         behavior: 'smooth'
     });
 })
