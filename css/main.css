@@ -1,4 +1,3 @@
-
 #header-first-section {
     display: flex;
     position: absolute;
@@ -13,6 +12,7 @@
 #header-logo-first-section {
     position: absolute;
     left: 1.45833vw;
+    top: 1.45833vw;
     object-fit: contain;
     cursor: pointer;
     opacity: 0;
@@ -60,18 +60,11 @@
     position: relative;
     width: 100vw;
     height: 56.25vw;
+    background:
+        radial-gradient(104.05% 50% at 50% 50%, rgba(0, 136, 204, 0.5) 0%, #E8E8E8 100%),
+        linear-gradient(0deg, #E8E8E8, #E8E8E8);
 }
 
-#background-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    width: 100vw;
-    height: 56.25vw;
-}
 
 #ikigai-logo-text {
     position: absolute;
@@ -85,7 +78,7 @@
 
 #animation-text {
     font-weight: 400;
-    color: var(--lightBlue);
+    color: var(--ltText);
     position: absolute;
     opacity: 0;
     font-size: 1.45833vw;
@@ -126,7 +119,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    color: var(--lightBlue);
+    color: var(--ltText);
     top: 26vw;
     flex-direction: column;
     overflow: visible;
@@ -147,8 +140,8 @@
 }
 
 #central-text-first-section-down {
-    font-size: 1.25vw;
-    font-weight: 700;
+    font-size: 1.6625vw;
+    font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -239,6 +232,7 @@
     position: relative;
     width: 100vw;
     height: 56.25vw;
+    background: var(--dtText);
 }
 
 #second-section-title-eng {
@@ -320,40 +314,27 @@
     font-weight: 600;
     font-size: 1.875vw;
     cursor: pointer;
-    background-color: var(--deepDarkBlue);
-    transition: background-color 0.4s ease-in-out, opacity 0.3s ease-in-out, color 0.4s ease-in-out;
+    background: var(--dtSeparationLine);
+    transition: background 0.4s ease-in-out, opacity 0.3s ease-in-out, color 0.4s ease-in-out;
     opacity: 0;
+    color: var(--dtText);
 }
 
 #second-section-button-services {
-    box-shadow: 0px 0px 8px 3px var(--blue);
     left: 7.29167vw;
-    color: var(--blue);
-}
-
-#second-section-button-services:hover {
-    background-color: var(--darkBlue);
-    color: #00A5FF;
 }
 
 #second-section-button-contacts {
-    box-shadow: 0px 0px 8px 3px var(--orangeRed);
     left: 24.11458vw;
-    color: var(--orangeRed);
-}
-
-#second-section-button-contacts:hover {
-    background-color: #A13B02;
-    color: #FF945B;
-
 }
 
 #third-section {
     position: relative;
     width: 100vw;
     height: 83.95833vw;
-    background: linear-gradient(180deg, #000D15 0%, #000D15 4.39%, #002D49 33%, #000D15 62.8%, #000D15 100%);
     overflow: visible;
+    background:
+        linear-gradient(180deg, #E8E8E8 4.39%, rgba(0, 136, 204, 0.4) 33%, rgba(0, 136, 204, 0.1) 67.57%, rgba(0, 136, 204, 0.1) 80.01%, rgba(0, 136, 204, 0) 90.37%);
 }
 
 
@@ -382,8 +363,9 @@
     &>#third-section-main-content-left-part {
         width: 34.89583vw;
         height: 34.89583vw;
-        background-image: linear-gradient(145.28deg, rgba(0, 34, 53, 0.8) 18.9%, rgba(0, 17, 27, 0.6) 95.94%);
         box-shadow: 0px 0px 8px 0px rgba(2, 133, 204, 0);
+        background:
+            linear-gradient(92.04deg, rgba(0, 136, 204, 0.05) 1.72%, rgba(0, 136, 204, 0.2) 98.36%), linear-gradient(0deg, #E8E8E8, #E8E8E8);
         transform-style: preserve-3d;
         transform-origin: left;
         transition: transform 0.5s ease-in-out, box-shadow 1s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out, background-image 0.5s ease-in-out;
@@ -405,8 +387,9 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(179.79deg, rgba(0, 0, 0, 0.2) 0.23%, rgba(0, 41, 63, 0.3) 61.99%, rgba(0, 0, 0, 0.2) 99.87%);
             border: 0.05208vw solid #2196F3;
+            /* background:
+                linear-gradient(92.04deg, rgba(0, 136, 204, 0.05) 1.72%, rgba(0, 136, 204, 0.2) 98.36%), linear-gradient(0deg, #E8E8E8, #E8E8E8); */
             opacity: 0;
             transition: opacity ease-in-out 0.5s;
         }
@@ -501,13 +484,14 @@
     #third-section-main-content-right-part-button-more {
         width: 14.0625vw;
         height: 3.59375vw;
-        font-weight: 600;
-        font-size: 1.875vw;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        font-size: 1.66667vw;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: var(--secondBlue);
-        background-color: rgba(0, 13, 21, 0.1);
+        color: var(--dtText);
+        background: var(--ltText);
         box-shadow: 0px 0px 8px 3px rgba(2, 133, 204, 0);
         overflow: visible;
         position: absolute;
@@ -1002,13 +986,15 @@
 
 }
 
-
-
-
 #four-section {
     position: relative;
     width: 100vw;
     height: 56.25vw;
+    /* background:
+        linear-gradient(0deg, #E8E8E8 0.93%, rgba(232, 232, 232, 0) 50.51%, #E8E8E8 99.17%),
+        linear-gradient(90deg, rgba(0, 136, 204, 0.4) 33.77%, rgba(0, 136, 204, 0) 58.63%, rgba(0, 136, 204, 0.4) 77.29%),
+        linear-gradient(0deg, #E8E8E8, #E8E8E8); */
+
 }
 
 #four-section-title {
@@ -1018,26 +1004,6 @@
     position: absolute;
     top: 2.60417vw;
     left: 7.29167vw;
-}
-
-#four-section-backgound-gradient-one {
-    position: absolute;
-    width: 100vw;
-    height: 41.66667vw;
-    top: 9.16667vw;
-    left: 0;
-    z-index: 1;
-    background: linear-gradient(90deg, rgba(2, 133, 204, 0.2) 0%, rgba(236, 82, 0, 0.2) 100%);
-}
-
-#four-section-backgound-gradient-two {
-    position: absolute;
-    width: 100vw;
-    height: 41.66667vw;
-    top: 9.16667vw;
-    left: 0;
-    z-index: 1;
-    background: linear-gradient(1.03deg, #010D15 0.93%, rgba(1, 13, 21, 0.2) 50.51%, #010D15 99.17%);
 }
 
 #main-send-form {
@@ -1224,7 +1190,7 @@
 
 #empty-field-1 {
     left: 46.5vw;
-    top: 8.8vw; 
+    top: 8.8vw;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
@@ -1694,18 +1660,19 @@
 }
 
 .reviews-name {
-    font-weight: 400;
-    font-size: 1.66667vw;
-    color: var(--blue);
+    font-weight: 300;
+    font-size: 1.5625vw;
+    color: var(--ltText);
     width: 16vw;
     position: absolute;
+    overflow: visible;
 }
 
 .reviews-text {
     font-weight: 300;
     font-size: 1.45833vw;
     line-height: 1.71875vw;
-    color: var(--blue);
+    color: var(--ltText);
     margin-top: 3.38542vw;
 }
 
@@ -1714,7 +1681,7 @@
     font-weight: 300;
     font-size: 1.45833vw;
     line-height: 1.71875vw;
-    color: var(--blue);
+    color: var(--ltText);
 }
 
 #footer {
@@ -1732,15 +1699,16 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    overflow: visible;
 }
 
 .footer-content-eng {
     font-weight: 700;
     font-size: 2.1875vw;
-    font-family: "Josefin Sans";
     letter-spacing: 0.1em;
-    color: var(--blue);
+    color: var(--ltText);
     line-height: 2.1875vw;
+    overflow: visible;
 }
 
 #footer-content-rus {
@@ -1757,8 +1725,8 @@
 .footer-content-rus {
     font-weight: 700;
     font-size: 2.1875vw;
-    font-family: "Lato";
     letter-spacing: 0.1em;
     line-height: 2.625vw;
-    color: var(--blue);
+    color: var(--ltText);
+    overflow: visible;
 }

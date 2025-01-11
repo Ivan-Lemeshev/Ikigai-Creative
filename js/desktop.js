@@ -331,7 +331,7 @@ const refreshDataForLocalization = () => {
 }
 
 
-if(selectLang === "eng") {
+if (selectLang === "eng") {
     for (let index = 0; index < textForApplication.eng.length; index++) {
         const button = document.getElementById(`button-more-lower-part-buttons-${index}`);
         button.addEventListener('click', (event) => {
@@ -498,52 +498,50 @@ const changeIdeasText = () => {
 
 const startAnimation = () => {
     setTimeout(() => {
-        backgroundGradient.style.opacity = "1";
+        ikigaiLogoText.style.opacity = "1";
+        creativeLogoText.style.opacity = "1";
         setTimeout(() => {
-            ikigaiLogoText.style.opacity = "1";
-            creativeLogoText.style.opacity = "1";
+            ikigaiLogoText.style.left = "7.44792vw";
+            creativeLogoText.style.left = "72.23958vw";
             setTimeout(() => {
-                ikigaiLogoText.style.left = "7.44792vw";
-                creativeLogoText.style.left = "72.23958vw";
+                ideasText.style.opacity = "1";
                 setTimeout(() => {
-                    ideasText.style.opacity = "1";
+                    centralImg.style.opacity = "1";
+                    centralImg.style.rotate = "360deg";
+                    ikigaiLogoText.style.opacity = "0.5";
+                    creativeLogoText.style.opacity = "0.5";
                     setTimeout(() => {
-                        centralImg.style.opacity = "1";
-                        centralImg.style.rotate = "360deg";
-                        ikigaiLogoText.style.opacity = "0.5";
-                        creativeLogoText.style.opacity = "0.5";
+                        ideasText.style.opacity = "0";
+                        centralText.style.opacity = "1";
                         setTimeout(() => {
-                            ideasText.style.opacity = "0";
-                            centralText.style.opacity = "1";
+                            headerFirstSection.style.opacity = "1";
                             setTimeout(() => {
-                                headerFirstSection.style.opacity = "1";
+                                headerLogoFirstSection.style.opacity = "1";
                                 setTimeout(() => {
-                                    headerLogoFirstSection.style.opacity = "1";
+                                    headerNavInfo.style.opacity = "1";
                                     setTimeout(() => {
-                                        headerNavInfo.style.opacity = "1";
+                                        headerNavServices.style.opacity = "1";
                                         setTimeout(() => {
-                                            headerNavServices.style.opacity = "1";
+                                            headerNavContacts.style.opacity = "1";
                                             setTimeout(() => {
-                                                headerNavContacts.style.opacity = "1";
+                                                headerNavReviews.style.opacity = "1";
                                                 setTimeout(() => {
-                                                    headerNavReviews.style.opacity = "1";
-                                                    setTimeout(() => {
-                                                        headerDividingLine.style.opacity = "1";
-                                                        headerLanguageButton.style.opacity = "1";
-                                                        setInterval(changeIdeasText, timeOfAnimation);
-                                                    }, 300);
+                                                    headerDividingLine.style.opacity = "1";
+                                                    headerLanguageButton.style.opacity = "1";
+                                                    setInterval(changeIdeasText, timeOfAnimation);
                                                 }, 300);
                                             }, 300);
                                         }, 300);
                                     }, 300);
                                 }, 300);
-                            }, 1200);
-                        }, 1100);
-                    }, 900);
-                }, 700);
-            }, 600);
-        }, 400);
-    }, 200);
+                            }, 300);
+                        }, 1200);
+                    }, 1100);
+                }, 900);
+            }, 700);
+        }, 600);
+    }, 400);
+
 };
 
 startAnimation();
@@ -1157,7 +1155,7 @@ submitButtonFourthSection.addEventListener('mouseenter', () => {
 );
 
 document.addEventListener('click', () => {
-    
+
     errorImgFirstName.style.pointerEvents = "none";
     errorImgLastName.style.pointerEvents = "none";
     errorImgPhone.style.pointerEvents = "none";
@@ -1391,7 +1389,7 @@ const uploadLinks = () => {
 
     const alternativeContactPhone = document.getElementById("alternative-contact-phone");
     alternativeContactPhone.addEventListener('click', () => {
-        window.location.href = `tel:${dataContats.Phone}`; 
+        window.location.href = `tel:${dataContats.Phone}`;
     })
 }
 
