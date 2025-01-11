@@ -238,12 +238,13 @@
 #second-section-title-eng {
     position: absolute;
     display: flex;
-    font-weight: 500;
-    font-size: 2.1875vw;
+    font-weight: 400;
+    font-size: 1.875vw;
     top: 11.45833vw;
     left: 7.29167vw;
-    color: var(--blue);
+    color: var(--ltText);
     transition: opacity 0.1s ease-in-out;
+    letter-spacing: 0.1em;
 
     &>div {
         opacity: 0;
@@ -258,9 +259,9 @@
     line-height: 2.625vw;
     top: 11.45833vw;
     left: 7.29167vw;
-    color: var(--blue);
+    letter-spacing: 0.1em;
+    color: var(--ltText);
     transition: opacity 0.1s ease-in-out;
-    font-family: 'Lato';
 
     &>div {
         opacity: 0;
@@ -281,14 +282,15 @@
 
 #second-section-text {
     position: absolute;
-    width: 37.96875vw;
-    height: 14.6875vw;
+    width: 30.72917vw;
+    height: 15.05208vw;
     top: 15.67708vw;
     left: 7.29167vw;
-    color: var(--blue);
+    color: var(--ltText);
+    letter-spacing: 0.1em;
     font-weight: 400;
-    font-size: 1.875vw;
-    line-height: 2.39583vw;
+    font-size: 1.45833vw;
+    line-height: 1.89583vw;
     opacity: 0;
     overflow: visible;
     transition: opacity 0.3s ease-in-out;
@@ -311,8 +313,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 600;
-    font-size: 1.875vw;
+    font-weight: 400;
+    font-size: 1.66667vw;
     cursor: pointer;
     background: var(--dtSeparationLine);
     transition: background 0.4s ease-in-out, opacity 0.3s ease-in-out, color 0.4s ease-in-out;
@@ -342,9 +344,10 @@
     position: absolute;
     top: 3.125vw;
     left: 7.29167vw;
-    font-weight: 500;
-    font-size: 2.1875vw;
-    color: var(--blue);
+    font-weight: 400;
+    font-size: 1.875vw;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
 
 }
 
@@ -423,7 +426,7 @@
     #third-section-main-content-right-part-title {
         font-weight: 400;
         font-size: 1.875vw;
-        color: var(--secondBlue);
+        color: var(--ltText);
         text-align: right;
         width: 29.42708vw;
         height: 3.17708vw;
@@ -446,7 +449,7 @@
         justify-content: flex-end;
         align-items: end;
         flex-wrap: wrap;
-        color: var(--secondBlue);
+        color: var(--ltText);
         text-align: right;
         line-height: 2.44792vw;
         opacity: 1;
@@ -565,7 +568,7 @@
             line-height: 1.61458vw;
             font-size: 1.35417vw;
             font-weight: 300;
-            color: var(--secondBlue);
+            color: var(--ltText);
             display: flex;
             justify-content: center;
             align-items: flex-end;
@@ -621,7 +624,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        color: var(--secondBlue);
+        color: var(--ltText);
         opacity: 1;
         transition: opacity 0.2s ease-in-out;
     }
@@ -657,7 +660,7 @@
             transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 
             & rect {
-                stroke: var(--secondBlue);
+                stroke: var(--ltText);
                 transition: stroke 0.3s ease-in-out;
             }
         }
@@ -828,7 +831,7 @@
         height: 3.17708vw;
         display: flex;
         align-items: center;
-        color: var(--secondBlue);
+        color: var(--ltText);
         position: absolute;
         top: 10.72917vw;
         left: 39.58333vw;
@@ -843,7 +846,7 @@
         overflow: hidden;
 
         &>.button-more-price {
-            color: var(--secondBlue);
+            color: var(--ltText);
             font-weight: 300;
             font-size: 1.875vw;
             width: 100%;
@@ -852,6 +855,7 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 1.04167vw;
+            overflow: visible;
 
             &>.button-more-price-services {
                 width: fit-content;
@@ -866,7 +870,7 @@
     &>#button-more-description-title {
         font-weight: 400;
         font-size: 1.875vw;
-        color: var(--secondBlue);
+        color: var(--ltText);
         position: absolute;
         top: 41.97917vw;
         left: 7.29167vw;
@@ -878,7 +882,7 @@
         font-weight: 300;
         font-size: 1.875vw;
         line-height: 2.39583vw;
-        color: var(--secondBlue);
+        color: var(--ltText);
         text-align: justify;
         position: absolute;
         left: 7.8125vw;
@@ -972,7 +976,7 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        color: var(--secondBlue);
+                        color: var(--ltText);
                         width: 24.47917vw;
                         height: 3.64583vw;
                         margin-top: 0.26042vw;
@@ -1000,7 +1004,7 @@
 #four-section-title {
     font-weight: 500;
     font-size: 2.1875vw;
-    color: var(--blue);
+    color: var(--ltText);
     position: absolute;
     top: 2.60417vw;
     left: 7.29167vw;
@@ -1021,7 +1025,7 @@
 #main-send-form-title {
     font-weight: 400;
     font-size: 1.875vw;
-    color: var(--blue);
+    color: var(--ltText);
     position: absolute;
     top: 2.34375vw;
     left: 2.34375vw;
@@ -1046,13 +1050,13 @@
     position: absolute;
     font-weight: 300;
     font-size: 1.5625vw;
-    color: var(--blue);
+    color: var(--ltText);
     border-bottom: 0.05208vw solid var(--blue);
     padding-left: 0.52083vw;
 
     &::placeholder {
         font-size: 1.5625vw;
-        color: var(--darkBlue);
+        color: var(--ltText);
         font-weight: 300;
     }
 }
@@ -1154,7 +1158,7 @@
     z-index: 5;
 
     & div {
-        color: var(--blue);
+        color: var(--ltText);
         margin-left: 0.78125vw;
         overflow: visible;
     }
@@ -1213,7 +1217,7 @@
     width: 21.61458vw;
     height: 3.125vw;
     position: absolute;
-    color: var(--blue);
+    color: var(--ltText);
     font-weight: 300;
     font-size: 1.5625vw;
     top: 17.1875vw;
@@ -1249,7 +1253,7 @@
     overflow: hidden;
 
     &>#choice-of-service-placeholder {
-        color: var(--darkBlue);
+        color: var(--ltText);
         font-weight: 300;
         font-size: 1.5625vw;
         transition: color ease-in-out 0.3s;
@@ -1299,13 +1303,12 @@
         display: flex;
         align-items: center;
         padding-left: 0.52083vw;
-        color: #01679F;
+        color: var(--ltText);
         font-size: 1.35417vw;
         text-align: left;
         font-weight: 300;
         cursor: pointer;
         background-color: rgba(0, 0, 0, 0.5);
-        color: #01679F;
     }
 
     &>.drop-list-item:first-child {
@@ -1328,7 +1331,7 @@
 #textarea-title {
     font-weight: 300;
     font-size: 1.5625vw;
-    color: var(--blue);
+    color: var(--ltText);
     position: absolute;
     top: 22.13542vw;
     left: 2.86458vw;
@@ -1339,7 +1342,7 @@
     height: 7.77083vw;
     position: absolute;
     font-weight: 300;
-    color: var(--blue);
+    color: var(--ltText);
     top: 24vw;
     left: 2.86458vw;
     overflow: hidden;
@@ -1352,7 +1355,7 @@
 
     &::placeholder {
         font-size: 1.5625vw;
-        color: var(--darkBlue);
+        color: var(--ltText);
         font-weight: 300;
     }
 }
@@ -1389,7 +1392,7 @@
         line-height: 1.5625vw;
         text-align: justify;
         font-size: 1.5625vw;
-        color: var(--blue);
+        color: var(--ltText);
         overflow: visible;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
@@ -1407,7 +1410,7 @@
     left: 13.85417vw;
     background-color: rgba(0, 13, 21, 0.8);
     border: 0.05208vw solid var(--deepDarkBlue);
-    color: var(--darkBlue);
+    color: var(--ltText);
     font-weight: 600;
     font-size: 1.875vw;
     display: flex;
@@ -1418,8 +1421,8 @@
 }
 
 #send-form-submit.send-form-submit-activ {
-    color: var(--blue);
-    box-shadow: 0px 0px 8px 3px var(--blue);
+    color: var(--ltText);
+    box-shadow: 0px 0px 8px 3px var(--ltText);
     border: transparent;
     cursor: pointer;
 
@@ -1562,7 +1565,7 @@
     left: 7.29167vw;
     font-weight: 500;
     font-size: 2.1875vw;
-    color: var(--blue);
+    color: var(--ltText);
 }
 
 #left-part-reviews {
@@ -1611,7 +1614,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--blue);
+    color: var(--ltText);
     font-weight: 400;
     font-size: 1.875vw;
 }
