@@ -1,28 +1,8 @@
 const localizationWrapper = {
-    "nav-info-first-section": {
-        rus: "Инфо",
-        eng: "Info",
-    },
-
-    "nav-services-first-section": {
-        rus: "Услуги",
-        eng: "Services",
-
-    },
-
-    "nav-contacts-first-section": {
-        rus: "Контакты",
-        eng: "Сontacts",
-    },
-
-    "nav-reviews-first-section": {
-        rus: "Отзывы",
-        eng: "Reviews",
-    },
 
     "language-button-first-section": {
-        rus: "Rus",
-        eng: "Eng",
+        rus: "Язык",
+        eng: "Language",
     },
 
     "central-text-first-section-up": {
@@ -36,11 +16,13 @@ const localizationWrapper = {
     },
 
     "second-section-text": {
-        rus: `Креативное агентство с более чем 10-летним опытом работы, помогающее малому и среднему бизнесу реализовывать цифровые проекты. Мы специализируемся на веб-дизайне, разработке, брендинге, продвижении и видеопроизводстве.`,
-        eng: `Сreative agency with over 10 years of experience helping small and medium-sized
-            businesses achieve success
-            through digital projects. We specialize in web design, development, branding, promotion, and video
-            production.`,
+        rus: `Креативное агентство с более чем 10-летним опытом работы, помогающее малому и среднему бизнесу реализовывать цифровые проекты.`,
+        eng: `Сreative agency with over 10 years of experience helping small and medium-sized businesses achieve success through digital projects.`,
+    },
+
+    "second-section-text-1": {
+        rus: `Мы специализируемся на веб-дизайне, разработке, брендинге, продвижении и видеопроизводстве.`,
+        eng: `We specialize in web design, development, branding, promotion, and video production.`,
     },
 
     "second-section-button-services": {

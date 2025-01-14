@@ -14,14 +14,14 @@ const centralTextUp = document.getElementById("central-text-first-section-up");
 const centralTextDown = document.getElementById("central-text-first-section-down");
 
 
-const headerFirstSection = document.getElementById("header-first-section");
+const navigationWrapper = document.getElementById("navigation-button-first-section-big-wrapper");
 const headerLogoFirstSection = document.getElementById("header-logo-first-section");
-const headerNavInfo = document.getElementById("nav-info-first-section");
-const headerNavServices = document.getElementById("nav-services-first-section");
-const headerNavContacts = document.getElementById("nav-contacts-first-section");
-const headerNavReviews = document.getElementById("nav-reviews-first-section");
-const headerDividingLine = document.getElementById("header-dividing-line-first-section");
-const headerLanguageButton = document.getElementById("language-button-first-section");
+const headerNavInfo = document.getElementById("navigation-button-first-section-choice-info");
+const headerNavServices = document.getElementById("navigation-button-first-section-choice-services");
+const headerNavContacts = document.getElementById("navigation-button-first-section-choice-contacts");
+const headerNavReviews = document.getElementById("navigation-button-first-section-choice-reviews");
+// const headerDividingLine = document.getElementById("header-dividing-line-first-section");
+// const headerLanguageButton = document.getElementById("language-button-first-section");
 
 let animationisActiv = false;
 let animationIsGone = false;
@@ -29,18 +29,20 @@ let numberOfActivAnimation = 0;
 const timeOfAnimation = 4000;
 let angel = 360;
 
-const secondHeader = document.getElementById("second-header");
-const secondHeaderLogoHover = document.getElementById("second-header-logo-hover");
-const secondHeaderNavigation = document.getElementById("second-header-navigation");
-const secondHeaderLogoActiv = document.getElementById("second-header-logo-activ");
-const secondHeaderNavMain = document.getElementById("second-nav-main");
-const secondHeaderNavInfo = document.getElementById("second-nav-info");
-const secondHeaderNavServices = document.getElementById("second-nav-services");
-const secondHeaderNavContacts = document.getElementById("second-nav-contacts");
-const secondHeaderNavReviews = document.getElementById("second-nav-reviews");
-const secondHeaderLanguageButton = document.getElementById("second-language-button");
-const secondHeaderDividingLine = document.getElementById("second-header-dividing-line");
+
+// const secondHeaderLogoHover = document.getElementById("second-header-logo-hover");
+// const secondHeaderNavigation = document.getElementById("second-header-navigation");
+// const secondHeaderLogoActiv = document.getElementById("second-header-logo-activ");
+// const secondHeaderNavMain = document.getElementById("second-nav-main");
+// const secondHeaderNavInfo = document.getElementById("second-nav-info");
+// const secondHeaderNavServices = document.getElementById("second-nav-services");
+// const secondHeaderNavContacts = document.getElementById("second-nav-contacts");
+// const secondHeaderNavReviews = document.getElementById("second-nav-reviews");
+// const secondHeaderLanguageButton = document.getElementById("second-language-button");
+// const secondHeaderDividingLine = document.getElementById("second-header-dividing-line");
+
 const secondSectionText = document.getElementById("second-section-text");
+const secondSectionText1 = document.getElementById("second-section-text-1");
 const secondSectionButtonServices = document.getElementById("second-section-button-services");
 const secondSectionButtonContacts = document.getElementById("second-section-button-contacts");
 
@@ -119,7 +121,7 @@ const arrayCard = [
 ];
 
 let selectLang = "eng";
-const lang = document.getElementById("language-button-first-section");
+const lang = document.getElementById("language-button-first-section-wrapper");
 let numberOfService = 0;
 
 const isValidEmail = (email) => {
@@ -182,12 +184,6 @@ const refreshDataForLocalization = () => {
         } else {
             htmlBlock.textContent = currentTitle;
         }
-
-        if (selectLang === "rus") {
-            htmlBlock.style.fontFamily = "Lato";
-        } else {
-            htmlBlock.style.fontFamily = "";
-        }
     }
 
     const currentReviewsTop = reviews[number].top;
@@ -204,83 +200,33 @@ const refreshDataForLocalization = () => {
 
 
     if (selectLang === "rus") {
-        buttonMoreTitle.style.fontFamily = "Lato";
-        buttonMoreTitle.style.fontSize = "1.77083vw";
-        buttonMoreTitle.style.lineHeight = "2.125vw";
-        reviewsUpperName.style.fontFamily = "Lato";
-        reviewsUpperUpperText.style.fontFamily = "Lato";
-        reviewsLowerName.style.fontFamily = "Lato";
-        reviewsUpperUpperText.style.fontFamily = "Lato";
-        reviewsUpperLowerText.style.fontFamily = "Lato";
-        reviewsLowerUpperText.style.fontFamily = "Lato";
-        reviewsLowerLowerText.style.fontFamily = "Lato";
         inputFirstName.placeholder = "Имя";
-        inputFirstName.style.fontFamily = "Lato";
-        inputFirstName.style.lineHeight = "1.875vw";
         inputLastName.placeholder = "Фамилия";
-        inputLastName.style.fontFamily = "Lato";
-        inputLastName.style.lineHeight = "1.875vw";
         inputPhone.placeholder = "Телефон";
-        inputPhone.style.fontFamily = "Lato";
-        inputPhone.style.lineHeight = "1.875vw";
-        inputEmail.style.fontFamily = "Lato";
-        inputEmail.style.lineHeight = "1.875vw";
         textarea.placeholder = "В этом поле вы можете указать любые дополнительные данные или пожелания по заказу.";
-        textarea.style.fontFamily = "Lato";
         footerContentEng.style.display = "none";
         footerContentRus.style.display = "flex";
-        secondHeaderLanguageButton.textContent = "Rus";
-        secondHeaderLanguageButton.style.fontFamily = "Lato";
-        secondHeaderNavMain.textContent = "Главная";
-        secondHeaderNavMain.style.fontFamily = "Lato";
-        secondHeaderNavInfo.textContent = "Инфо";
-        secondHeaderNavInfo.style.fontFamily = "Lato";
-        secondHeaderNavServices.textContent = "Услуги";
-        secondHeaderNavServices.style.fontFamily = "Lato";
-        secondHeaderNavContacts.textContent = "Контакты";
-        secondHeaderNavContacts.style.fontFamily = "Lato";
-        secondHeaderNavReviews.textContent = "Отзывы";
-        secondHeaderNavReviews.style.fontFamily = "Lato";
+        // secondHeaderLanguageButton.textContent = "Rus";
+        // secondHeaderNavMain.textContent = "Главная";
+        // secondHeaderNavInfo.textContent = "Инфо";
+        // secondHeaderNavServices.textContent = "Услуги";
+        // secondHeaderNavContacts.textContent = "Контакты";
+        // secondHeaderNavReviews.textContent = "Отзывы";
 
 
     } else {
-        buttonMoreTitle.style.fontFamily = "";
-        buttonMoreTitle.style.fontSize = "";
-        buttonMoreTitle.style.lineHeight = "";
-        reviewsUpperName.style.fontFamily = "";
-        reviewsUpperUpperText.style.fontFamily = "";
-        reviewsLowerName.style.fontFamily = "";
-        reviewsUpperUpperText.style.fontFamily = "";
-        reviewsUpperLowerText.style.fontFamily = "";
-        reviewsLowerUpperText.style.fontFamily = "";
-        reviewsLowerLowerText.style.fontFamily = "";
         inputFirstName.placeholder = "First Name";
-        inputFirstName.style.fontFamily = "";
-        inputFirstName.style.lineHeight = "";
         inputLastName.placeholder = "Last Name";
-        inputLastName.style.fontFamily = "";
-        inputLastName.style.lineHeight = "";
         inputPhone.placeholder = "Phone";
-        inputPhone.style.fontFamily = "";
-        inputPhone.style.lineHeight = "";
-        inputEmail.style.fontFamily = "";
-        inputEmail.style.lineHeight = "";
         textarea.placeholder = "In this field, you can provide any additional details or requests for your order, including your preferred method of contact.";
-        textarea.style.fontFamily = "";
         footerContentEng.style.display = "flex";
         footerContentRus.style.display = "none";
-        secondHeaderLanguageButton.textContent = "Eng";
-        secondHeaderNavMain.textContent = "Main";
-        secondHeaderNavMain.style.fontFamily = "";
-        secondHeaderNavInfo.textContent = "Info";
-        secondHeaderNavInfo.style.fontFamily = "";
-        secondHeaderNavServices.textContent = "Services";
-        secondHeaderNavServices.style.fontFamily = "";
-        secondHeaderNavContacts.textContent = "Contacts";
-        secondHeaderNavContacts.style.fontFamily = "";
-        secondHeaderNavReviews.textContent = "Reviews";
-        secondHeaderNavReviews.style.fontFamily = "";
-
+        // secondHeaderLanguageButton.textContent = "Eng";
+        // secondHeaderNavMain.textContent = "Main";
+        // secondHeaderNavInfo.textContent = "Info";
+        // secondHeaderNavServices.textContent = "Services";
+        // secondHeaderNavContacts.textContent = "Contacts";
+        // secondHeaderNavReviews.textContent = "Reviews";
     }
 
     for (let index = 0; index < arrayDataOfService.length; index++) {
@@ -292,20 +238,8 @@ const refreshDataForLocalization = () => {
 
             if (selectLang === "rus") {
                 priceName.textContent = nameOfServise.rus;
-                priceName.style.fontSize = "1.77083vw";
-                priceName.style.lineHeight = "2.125vw";
-                priceName.style.fontFamily = "Lato";
-                priceMoney.style.fontSize = "1.77083vw";
-                priceMoney.style.lineHeight = "2.125vw";
-                priceMoney.style.fontFamily = "Lato";
             } else {
                 priceName.textContent = nameOfServise.eng;
-                priceName.style.fontSize = "";
-                priceName.style.lineHeight = "";
-                priceName.style.fontFamily = "";
-                priceMoney.style.fontSize = "";
-                priceMoney.style.lineHeight = "";
-                priceMoney.style.fontFamily = "";
             }
             priceMoney.textContent = `£${cost}`;
         })
@@ -314,17 +248,12 @@ const refreshDataForLocalization = () => {
             current.description.eng.map((selfText, number) => {
                 const textBlock = document.getElementById(`button-more-description-text-${number}`);
                 textBlock.textContent = selfText;
-                textBlock.style.fontFamily = "";
-                textBlock.style.lineHeight = "";
             })
 
         } else {
             current.description.rus.map((selfText, number) => {
                 const textBlock = document.getElementById(`button-more-description-text-${number}`);
                 textBlock.textContent = selfText;
-                textBlock.style.fontFamily = "Lato";
-                textBlock.style.lineHeight = "2.4375vw";
-                textBlock.style.fontSize = "1.66667vw";
             })
         }
     }
@@ -354,7 +283,6 @@ if (selectLang === "eng") {
 
 
 const switchLocalization = () => {
-    selectLang = selectLang === "eng" ? "rus" : "eng";
     for (let id in localizationWrapper) { // перебираем все айдишники
         const data = localizationWrapper[id]; // пой айди получаю информацию 
 
@@ -363,7 +291,6 @@ const switchLocalization = () => {
 
         if (selectLang === "rus") { // добавляем стили к русскому тексту 
             const allStyles = data.styles;
-            element.style.fontFamily = "'Lato'";
             for (let style in allStyles) {
                 const valueStyle = allStyles[style];
                 element.style[style] = valueStyle; // придумать как сбрасывать стили для ангийского языка
@@ -374,9 +301,96 @@ const switchLocalization = () => {
     animationIsGone = false;
 }
 
-lang.addEventListener('click', () => {
+const langChoiceWrapper = document.getElementById("language-button-first-section-big-wrapper");
+const langChoice = document.getElementById("language-button-first-section-wrapper");
+const langUpperPart = document.getElementById("language-button-first-section-choice");
+const langEng = document.getElementById("language-button-first-section-choice-eng");
+const langEngCheckbox = document.getElementById("language-button-first-section-choice-eng-checkbox");
+const langRus = document.getElementById("language-button-first-section-choice-rus");
+const langRusCheckbox = document.getElementById("language-button-first-section-choice-rus-checkbox");
+
+langChoice.addEventListener('click', () => {
+    langUpperPart.style.display = "block"
+    setTimeout(() => {
+        langUpperPart.style.opacity = "1"
+    }, 1);
+})
+
+langChoiceWrapper.addEventListener('mouseleave', () => {
+    langUpperPart.style.opacity = ""
+    setTimeout(() => {
+        langUpperPart.style.display = ""
+    }, 300);
+
+})
+
+langEng.addEventListener('click', () => {
+    selectLang = "eng";
     switchLocalization();
     refreshDataForLocalization();
+    langEngCheckbox.style.opacity = "1";
+    langRusCheckbox.style.opacity = "0";
+})
+
+langRus.addEventListener('click', () => {
+    selectLang = "rus";
+    switchLocalization();
+    refreshDataForLocalization();
+    langEngCheckbox.style.opacity = "0";
+    langRusCheckbox.style.opacity = "1";
+})
+const themeChoiceWrapper = document.getElementById("theme-button-first-section-big-wrapper");
+const themeChoice = document.getElementById("theme-button-first-section-wrapper");
+const themeUpperPart = document.getElementById("theme-button-first-section-choice");
+const themeLight = document.getElementById("theme-button-first-section-choice-light-wrapper");
+const themeLightCheckbox = document.getElementById("theme-button-first-section-choice-light-checkbox");
+const themeDark = document.getElementById("theme-button-first-section-choice-dark-wrapper");
+const themeDarkCheckbox = document.getElementById("theme-button-first-section-choice-dark-checkbox");
+
+let selectTheme = "light";
+
+themeChoice.addEventListener('click', () => {
+    themeUpperPart.style.display = "block"
+    setTimeout(() => {
+        themeUpperPart.style.opacity = "1"
+    }, 1);
+})
+
+themeChoiceWrapper.addEventListener('mouseleave', () => {
+    themeUpperPart.style.opacity = ""
+    setTimeout(() => {
+        themeUpperPart.style.display = ""
+    }, 300);
+})
+
+themeLight.addEventListener('click', () => {
+    selectTheme = "light";
+    themeLightCheckbox.style.opacity = "1";
+    themeDarkCheckbox.style.opacity = "0";
+})
+
+themeDark.addEventListener('click', () => {
+    selectTheme = "dark";
+    themeLightCheckbox.style.opacity = "0";
+    themeDarkCheckbox.style.opacity = "1";
+})
+
+const navigationButtonFirstSectionBigWrapper = document.getElementById("navigation-button-first-section-big-wrapper");
+const navigationButtonFirstSectionWrapper = document.getElementById("navigation-button-first-section-wrapper");
+const navigationButtonFirstSectionChoiceWrapper = document.getElementById("navigation-button-first-section-choice-wrapper");
+
+navigationButtonFirstSectionWrapper.addEventListener('click', () => {
+    navigationButtonFirstSectionChoiceWrapper.style.display = "flex"
+    setTimeout(() => {
+        navigationButtonFirstSectionChoiceWrapper.style.opacity = "1"
+    }, 1);
+})
+
+navigationButtonFirstSectionBigWrapper.addEventListener('mouseleave', () => {
+    navigationButtonFirstSectionChoiceWrapper.style.opacity = ""
+    setTimeout(() => {
+        navigationButtonFirstSectionChoiceWrapper.style.display = "none"
+    }, 300);
 })
 
 const setActivElement = (number) => {
@@ -514,23 +528,15 @@ const startAnimation = () => {
                         ideasText.style.opacity = "0";
                         centralText.style.opacity = "1";
                         setTimeout(() => {
-                            headerFirstSection.style.opacity = "1";
+                            headerLogoFirstSection.style.opacity = "1";
                             setTimeout(() => {
-                                headerLogoFirstSection.style.opacity = "1";
+                                langChoiceWrapper.style.opacity = "1";
                                 setTimeout(() => {
-                                    headerNavInfo.style.opacity = "1";
+                                    themeChoiceWrapper.style.opacity = "1";
                                     setTimeout(() => {
-                                        headerNavServices.style.opacity = "1";
+                                        navigationWrapper.style.opacity = "1";
                                         setTimeout(() => {
-                                            headerNavContacts.style.opacity = "1";
-                                            setTimeout(() => {
-                                                headerNavReviews.style.opacity = "1";
-                                                setTimeout(() => {
-                                                    headerDividingLine.style.opacity = "1";
-                                                    headerLanguageButton.style.opacity = "1";
-                                                    setInterval(changeIdeasText, timeOfAnimation);
-                                                }, 300);
-                                            }, 300);
+                                            setInterval(changeIdeasText, timeOfAnimation);
                                         }, 300);
                                     }, 300);
                                 }, 300);
@@ -556,25 +562,25 @@ window.addEventListener('scroll', () => {
     if (!animationisActiv) {
         if (scrollY > window.innerHeight) {
             animationisActiv = true;
-            secondHeader.style.display = "flex";
+            // secondHeader.style.display = "flex";
             setTimeout(() => {
-                secondHeader.style.opacity = "1";
+                // secondHeader.style.opacity = "1";
                 animationisActiv = false;
             }, 1);
         } else {
             animationisActiv = true;
-            secondHeader.style.opacity = "0";
+            // secondHeader.style.opacity = "0";
             setTimeout(() => {
-                secondHeader.style.display = "none";
+                // secondHeader.style.display = "none";
                 animationisActiv = false;
             }, 300);
         }
     }
     if (scrollY > width * 0.5625 && scrollY < width * 1.125) {
-        secondHeaderNavInfo.classList.add("second-header-text-none-clickable");
-        secondHeaderNavServices.classList = "second-header-text";
-        secondHeaderNavContacts.classList = "second-header-text";
-        secondHeaderNavReviews.classList = "second-header-text";
+        // secondHeaderNavInfo.classList.add("second-header-text-none-clickable");
+        // secondHeaderNavServices.classList = "second-header-text";
+        // secondHeaderNavContacts.classList = "second-header-text";
+        // secondHeaderNavReviews.classList = "second-header-text";
 
         if (!animationIsGone) {
             if (selectLang === "eng") {
@@ -602,16 +608,17 @@ window.addEventListener('scroll', () => {
 
             setTimeout(() => {
                 secondSectionText.style.opacity = "1";
+                secondSectionText1.style.opacity = "1";
                 secondSectionButtonServices.style.opacity = "1";
                 secondSectionButtonContacts.style.opacity = "1";
             }, 200);
         };
 
     } else if (scrollY > width * 1.125 && scrollY < width * 1.965 && !activAnimationThirdSection) {
-        secondHeaderNavInfo.classList = "second-header-text";
-        secondHeaderNavServices.classList.add("second-header-text-none-clickable");
-        secondHeaderNavContacts.classList = "second-header-text";
-        secondHeaderNavReviews.classList = "second-header-text";
+        // secondHeaderNavInfo.classList = "second-header-text";
+        // secondHeaderNavServices.classList.add("second-header-text-none-clickable");
+        // secondHeaderNavContacts.classList = "second-header-text";
+        // secondHeaderNavReviews.classList = "second-header-text";
         thirdSectionImage.style.transform = "rotate3d(0, 1, 0, 30deg)";
         thirdSectionText.style.transform = "rotate3d(0, 1, 0, 0deg)";
         thirdSectionText.style.opacity = "1";
@@ -641,62 +648,62 @@ window.addEventListener('scroll', () => {
             }, 300);
         }, 500);
     } else if (scrollY > width * 1.965 && scrollY < width * 2.527) {
-        secondHeaderNavInfo.classList = "second-header-text";
-        secondHeaderNavServices.classList = "second-header-text";
-        secondHeaderNavContacts.classList.add("second-header-text-none-clickable");
-        secondHeaderNavReviews.classList = "second-header-text";
+        // secondHeaderNavInfo.classList = "second-header-text";
+        // secondHeaderNavServices.classList = "second-header-text";
+        // secondHeaderNavContacts.classList.add("second-header-text-none-clickable");
+        // secondHeaderNavReviews.classList = "second-header-text";
     } else if (scrollY > width * 2.527 && scrollY < width * 3.089) {
-        secondHeaderNavInfo.classList = "second-header-text";
-        secondHeaderNavServices.classList = "second-header-text";
-        secondHeaderNavContacts.classList = "second-header-text";
-        secondHeaderNavReviews.classList.add("second-header-text-none-clickable");
+        // secondHeaderNavInfo.classList = "second-header-text";
+        // secondHeaderNavServices.classList = "second-header-text";
+        // secondHeaderNavContacts.classList = "second-header-text";
+        // secondHeaderNavReviews.classList.add("second-header-text-none-clickable");
     }
 
 });
 
-secondHeaderLogoHover.addEventListener('click', () => {
-    secondHeaderNavigation.style.pointerEvents = "all";
-    secondHeaderLogoHover.style.opacity = "0";
-    secondHeaderLogoActiv.style.opacity = "1";
-    secondHeaderNavMain.style.opacity = "1";
-    secondHeaderNavMain.style.pointerEvents = "all";
-    secondHeaderNavInfo.style.opacity = "1";
-    secondHeaderNavInfo.style.pointerEvents = "all";
-    secondHeaderNavServices.style.opacity = "1";
-    secondHeaderNavServices.style.pointerEvents = "all";
-    secondHeaderNavContacts.style.opacity = "1";
-    secondHeaderNavContacts.style.pointerEvents = "all";
-    secondHeaderNavReviews.style.opacity = "1";
-    secondHeaderNavReviews.style.pointerEvents = "all";
-    secondHeaderLanguageButton.style.opacity = "1";
-    secondHeaderLanguageButton.style.pointerEvents = "all";
-    secondHeaderDividingLine.style.opacity = "1";
-    secondHeaderDividingLine.style.pointerEvents = "all";
-});
+// secondHeaderLogoHover.addEventListener('click', () => {
+//     secondHeaderNavigation.style.pointerEvents = "all";
+//     secondHeaderLogoHover.style.opacity = "0";
+//     secondHeaderLogoActiv.style.opacity = "1";
+//     secondHeaderNavMain.style.opacity = "1";
+//     secondHeaderNavMain.style.pointerEvents = "all";
+//     secondHeaderNavInfo.style.opacity = "1";
+//     secondHeaderNavInfo.style.pointerEvents = "all";
+//     secondHeaderNavServices.style.opacity = "1";
+//     secondHeaderNavServices.style.pointerEvents = "all";
+//     secondHeaderNavContacts.style.opacity = "1";
+//     secondHeaderNavContacts.style.pointerEvents = "all";
+//     secondHeaderNavReviews.style.opacity = "1";
+//     secondHeaderNavReviews.style.pointerEvents = "all";
+//     secondHeaderLanguageButton.style.opacity = "1";
+//     secondHeaderLanguageButton.style.pointerEvents = "all";
+//     secondHeaderDividingLine.style.opacity = "1";
+//     secondHeaderDividingLine.style.pointerEvents = "all";
+// });
 
-secondHeader.addEventListener('mouseleave', () => {
-    secondHeaderNavigation.style.pointerEvents = "";
-    secondHeaderLogoHover.style.opacity = "0.5";
-    secondHeaderLogoActiv.style.opacity = "0";
-    secondHeaderNavMain.style.opacity = "0";
-    secondHeaderNavMain.style.pointerEvents = "none";
-    secondHeaderNavInfo.style.opacity = "0";
-    secondHeaderNavInfo.style.pointerEvents = "none";
-    secondHeaderNavServices.style.opacity = "0";
-    secondHeaderNavServices.style.pointerEvents = "none";
-    secondHeaderNavContacts.style.opacity = "0";
-    secondHeaderNavContacts.style.pointerEvents = "none";
-    secondHeaderNavReviews.style.opacity = "0";
-    secondHeaderNavReviews.style.pointerEvents = "none";
-    secondHeaderLanguageButton.style.opacity = "0";
-    secondHeaderLanguageButton.style.pointerEvents = "none";
-    secondHeaderDividingLine.style.opacity = "0";
-    secondHeaderDividingLine.style.pointerEvents = "none";
-});
+// secondHeader.addEventListener('mouseleave', () => {
+//     secondHeaderNavigation.style.pointerEvents = "";
+//     secondHeaderLogoHover.style.opacity = "0.5";
+//     secondHeaderLogoActiv.style.opacity = "0";
+//     secondHeaderNavMain.style.opacity = "0";
+//     secondHeaderNavMain.style.pointerEvents = "none";
+//     secondHeaderNavInfo.style.opacity = "0";
+//     secondHeaderNavInfo.style.pointerEvents = "none";
+//     secondHeaderNavServices.style.opacity = "0";
+//     secondHeaderNavServices.style.pointerEvents = "none";
+//     secondHeaderNavContacts.style.opacity = "0";
+//     secondHeaderNavContacts.style.pointerEvents = "none";
+//     secondHeaderNavReviews.style.opacity = "0";
+//     secondHeaderNavReviews.style.pointerEvents = "none";
+//     secondHeaderLanguageButton.style.opacity = "0";
+//     secondHeaderLanguageButton.style.pointerEvents = "none";
+//     secondHeaderDividingLine.style.opacity = "0";
+//     secondHeaderDividingLine.style.pointerEvents = "none";
+// });
 
-secondHeaderLogoHover.addEventListener('mouseenter', () => {
-    secondHeaderLogoHover.style.opacity = "1";
-});
+// secondHeaderLogoHover.addEventListener('mouseenter', () => {
+//     secondHeaderLogoHover.style.opacity = "1";
+// });
 
 const lightAnimation = (data, id) => {
     const letter = document.getElementById(id);
@@ -748,7 +755,6 @@ thirdSectionButtonMore.addEventListener('click', () => {
             buttonMoreTitle.style.fontFamily = "";
         } else {
             buttonMoreTitle.textContent = selCat.rus;
-            buttonMoreTitle.style.fontFamily = "Lato";
         }
 
         category.prices.map((serviceData, number) => {
@@ -758,16 +764,8 @@ thirdSectionButtonMore.addEventListener('click', () => {
 
             if (selectLang === "rus") {
                 priceName.textContent = nameOfServise.rus;
-                priceName.style.fontSize = "1.77083vw";
-                priceName.style.lineHeight = "2.125vw";
-                priceMoney.style.fontSize = "1.77083vw";
-                priceMoney.style.lineHeight = "2.125vw";
             } else {
                 priceName.textContent = nameOfServise.eng;
-                priceName.style.fontSize = "";
-                priceName.style.lineHeight = "";
-                priceMoney.style.fontSize = "";
-                priceMoney.style.lineHeight = "";
             }
             priceMoney.textContent = `£${cost}`;
         })
@@ -776,16 +774,11 @@ thirdSectionButtonMore.addEventListener('click', () => {
             category.description.eng.map((selfText, number) => {
                 const textBlock = document.getElementById(`button-more-description-text-${number}`);
                 textBlock.textContent = selfText;
-                textBlock.style.fontFamily = "";
-                textBlock.style.lineHeight = "";
             })
         } else {
             category.description.rus.map((selfText, number) => {
                 const textBlock = document.getElementById(`button-more-description-text-${number}`);
                 textBlock.textContent = selfText;
-                textBlock.style.fontFamily = "Lato";
-                textBlock.style.lineHeight = "2.4375vw";
-                textBlock.style.fontSize = "1.66667vw";
             })
         }
     }, 1);
@@ -963,7 +956,6 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
             newDropListPoint.textContent = textSelectCategoty;
             newDropListPoint.classList = "drop-list-item";
             newDropListPoint.id = textSelectCategoty;
-            newDropListPoint.style.fontFamily = "Lato";
 
             newDropListPoint.addEventListener('click', (event) => {
                 event.stopPropagation();
@@ -1298,12 +1290,24 @@ reviewsArrowRight.addEventListener('click', () => {
     upperloadReviews(++number, false)
 })
 
+const infoArrow = document.getElementById("navigation-button-first-section-choice-info-arrow");
+
 headerNavInfo.addEventListener('click', () => {
     window.scrollTo({
         top: window.innerWidth * 0.563,
         behavior: 'smooth'
     });
 })
+
+headerNavInfo.addEventListener('mouseenter', () => {
+    infoArrow.style.opacity = "1";
+})
+
+headerNavInfo.addEventListener('mouseleave', () => {
+    infoArrow.style.opacity = "";
+})
+
+const servicesArrow = document.getElementById("navigation-button-first-section-choice-services-arrow");
 
 
 headerNavServices.addEventListener('click', () => {
@@ -1313,12 +1317,21 @@ headerNavServices.addEventListener('click', () => {
     });
 })
 
-secondSectionButtonServices.addEventListener('click', () => {
-    window.scrollTo({
-        top: window.innerWidth * 1.13,
-        behavior: 'smooth'
-    });
+headerNavServices.addEventListener('mouseenter', () => {
+    servicesArrow.style.opacity = "1";
 })
+
+headerNavServices.addEventListener('mouseleave', () => {
+    servicesArrow.style.opacity = "";
+})
+// secondSectionButtonServices.addEventListener('click', () => {
+//     window.scrollTo({
+//         top: window.innerWidth * 1.13,
+//         behavior: 'smooth'
+//     });
+// })
+
+const contactsArrow = document.getElementById("navigation-button-first-section-choice-contacts-arrow");
 
 headerNavContacts.addEventListener('click', () => {
     window.scrollTo({
@@ -1327,12 +1340,21 @@ headerNavContacts.addEventListener('click', () => {
     });
 })
 
-secondSectionButtonContacts.addEventListener('click', () => {
-    window.scrollTo({
-        top: window.innerWidth * 1.97,
-        behavior: 'smooth'
-    });
+headerNavContacts.addEventListener('mouseenter', () => {
+    contactsArrow.style.opacity = "1";
 })
+
+headerNavContacts.addEventListener('mouseleave', () => {
+    contactsArrow.style.opacity = "";
+})
+// secondSectionButtonContacts.addEventListener('click', () => {
+//     window.scrollTo({
+//         top: window.innerWidth * 1.97,
+//         behavior: 'smooth'
+//     });
+// })
+
+const reviewsArrow = document.getElementById("navigation-button-first-section-choice-reviews-arrow");
 
 headerNavReviews.addEventListener('click', () => {
     window.scrollTo({
@@ -1340,53 +1362,58 @@ headerNavReviews.addEventListener('click', () => {
         behavior: 'smooth'
     });
 })
-
-secondHeaderNavMain.addEventListener('click', () => {
-    window.scrollTo({
-        top: window.innerWidth * -0.1,
-        behavior: 'smooth'
-    });
+headerNavReviews.addEventListener('mouseenter', () => {
+    reviewsArrow.style.opacity = "1";
 })
 
-secondHeaderNavInfo.addEventListener('click', () => {
-    window.scrollTo({
-        top: window.innerWidth * 0.563,
-        behavior: 'smooth'
-    });
+headerNavReviews.addEventListener('mouseleave', () => {
+    reviewsArrow.style.opacity = "";
 })
+// secondHeaderNavMain.addEventListener('click', () => {
+//     window.scrollTo({
+//         top: window.innerWidth * -0.1,
+//         behavior: 'smooth'
+//     });
+// })
+
+// secondHeaderNavInfo.addEventListener('click', () => {
+//     window.scrollTo({
+//         top: window.innerWidth * 0.563,
+//         behavior: 'smooth'
+//     });
+// })
 
 
-secondHeaderNavServices.addEventListener('click', () => {
-    window.scrollTo({
-        top: window.innerWidth * 1.13,
-        behavior: 'smooth'
-    });
-})
+// secondHeaderNavServices.addEventListener('click', () => {
+//     window.scrollTo({
+//         top: window.innerWidth * 1.13,
+//         behavior: 'smooth'
+//     });
+// })
 
-secondHeaderNavContacts.addEventListener('click', () => {
-    window.scrollTo({
-        top: window.innerWidth * 1.97,
-        behavior: 'smooth'
-    });
-})
+// secondHeaderNavContacts.addEventListener('click', () => {
+//     window.scrollTo({
+//         top: window.innerWidth * 1.97,
+//         behavior: 'smooth'
+//     });
+// })
 
-secondHeaderNavReviews.addEventListener('click', () => {
-    window.scrollTo({
-        top: window.innerWidth * 2.528,
-        behavior: 'smooth'
-    });
-})
+// secondHeaderNavReviews.addEventListener('click', () => {
+//     window.scrollTo({
+//         top: window.innerWidth * 2.528,
+//         behavior: 'smooth'
+//     });
+// })
 
 
 
-secondHeaderLanguageButton.addEventListener('click', () => {
-    switchLocalization()
-    refreshDataForLocalization()
+// secondHeaderLanguageButton.addEventListener('click', () => {
+//     switchLocalization()
+//     refreshDataForLocalization()
 
-});
+// });
 
 const uploadLinks = () => {
-
     const alternativeContactPhone = document.getElementById("alternative-contact-phone");
     alternativeContactPhone.addEventListener('click', () => {
         window.location.href = `tel:${dataContats.Phone}`;
