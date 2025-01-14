@@ -796,52 +796,88 @@
         overflow: hidden;
     }
 
-    #third-section-main-content-right-part-paragraph {
-        font-size: 1.875vw;
-        font-weight: 300;
+    /* #third-section-main-content-right-part-paragraph {
+
         height: 18.125vw;
         display: flex;
         justify-content: flex-end;
         align-items: end;
         flex-wrap: wrap;
-        color: var(--ltText);
-        text-align: right;
-        line-height: 2.44792vw;
+
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out; */
+
+    /* &>div {
+        width: 41.66667vw;
+        height: 5vw;
+        position: absolute;
+        left: 11.97917vw;
+    } */
+
+    & #third-section-main-content-right-part-paragraph-1 {
+        top: 5.78125vw;
         opacity: 1;
         transition: opacity 0.3s ease-in-out;
-
-        &>div {
-            width: 41.66667vw;
-            height: 5vw;
-            position: absolute;
-            left: 11.97917vw;
-        }
-
-        &>#third-section-main-content-right-part-paragraph-1 {
-            top: 5.78125vw;
-            opacity: 1;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        &>#third-section-main-content-right-part-paragraph-2 {
-            top: 12.34375vw;
-            opacity: 1;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        &>#third-section-main-content-right-part-paragraph-3 {
-            top: 18.90625vw;
-            opacity: 1;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-
+        font-size: 1.45833vw;
+        font-weight: 300;
+        color: var(--ltText);
+        line-height: 2.04167vw;
+        letter-spacing: 0.1em;
+        position: absolute;
+        right: 3.64583vw;
+        height: 5vw;
+        text-align: right;
+        width: 40.625vw;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
     }
+
+    & #third-section-main-content-right-part-paragraph-2 {
+        top: 12.34375vw;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+        font-size: 1.45833vw;
+        font-weight: 300;
+        color: var(--ltText);
+        line-height: 2.04167vw;
+        letter-spacing: 0.1em;
+        position: absolute;
+        right: 3.64583vw;
+        height: 5vw;
+        text-align: right;
+        width: 40.625vw;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    & #third-section-main-content-right-part-paragraph-3 {
+        top: 18.90625vw;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+        font-size: 1.45833vw;
+        font-weight: 300;
+        color: var(--ltText);
+        line-height: 2.04167vw;
+        letter-spacing: 0.1em;
+        position: absolute;
+        right: 3.64583vw;
+        height: 5vw;
+        text-align: right;
+        width: 40.625vw;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+
+
 
     #third-section-main-content-right-part-button-order,
     #third-section-main-content-right-part-button-more {
-        width: 14.0625vw;
-        height: 3.59375vw;
+        width: 19.27083vw;
+        height: 3.38542vw;
         font-weight: 300;
         letter-spacing: 0.1em;
         font-size: 1.66667vw;
@@ -855,25 +891,37 @@
         position: absolute;
         top: 28.69792vw;
         cursor: pointer;
-        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 1s ease-in-out;
+        transition: background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 1s ease-in-out, border-width 0.4s ease-in-out, border-style 0.4s ease-in-out, border-color 0.4s ease-in-out;
     }
 
     #third-section-main-content-right-part-button-order {
-        left: 22.91667vw;
+        left: 13.02083vw;
     }
 
     #third-section-main-content-right-part-button-order:hover {
-        background-color: var(--darkBlue);
-        color: #00A5FF;
+        background: #007AB8;
+        color: var(--ltElementBackground);
+    }
+
+    #third-section-main-content-right-part-button-order:active {
+        border-width: 0.10417vw 0.10417vw 0px 0.10417vw;
+        border-style: solid;
+        border-color: var(--dtSeparationLine);
     }
 
     #third-section-main-content-right-part-button-more {
-        left: 39.58333vw;
+        left: 34.375vw;
     }
 
     #third-section-main-content-right-part-button-more:hover {
-        background-color: var(--darkBlue);
-        color: #00A5FF;
+        background: #007AB8;
+        color: var(--ltElementBackground);
+    }
+
+    #third-section-main-content-right-part-button-more:active {
+        border-width: 0.10417vw 0.10417vw 0px 0.10417vw;
+        border-style: solid;
+        border-color: var(--dtSeparationLine);
     }
 
 }
