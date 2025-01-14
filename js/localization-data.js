@@ -1,10 +1,5 @@
 const localizationWrapper = {
-
-    "language-button-first-section": {
-        rus: "Язык",
-        eng: "Language",
-    },
-
+    
     "central-text-first-section-up": {
         rus: "IT АГЕНСТВО",
         eng: "DIGITAL AGENCY",

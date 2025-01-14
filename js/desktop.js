@@ -634,13 +634,6 @@ window.addEventListener('scroll', () => {
                             thirdSectionLowerPartDivFourth.style.opacity = "1";
                             setTimeout(() => {
                                 thirdSectionLowerPartDivFifth.style.opacity = "1";
-                                setTimeout(() => {
-
-                                    thirdSectionImage.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
-                                    thirdSectionButtonOrder.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
-                                    thirdSectionButtonMore.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 1)";
-
-                                }, 250);
                             }, 250);
                         }, 250);
                     }, 250);
@@ -1324,12 +1317,13 @@ headerNavServices.addEventListener('mouseenter', () => {
 headerNavServices.addEventListener('mouseleave', () => {
     servicesArrow.style.opacity = "";
 })
-// secondSectionButtonServices.addEventListener('click', () => {
-//     window.scrollTo({
-//         top: window.innerWidth * 1.13,
-//         behavior: 'smooth'
-//     });
-// })
+
+secondSectionButtonServices.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 1.13,
+        behavior: 'smooth'
+    });
+})
 
 const contactsArrow = document.getElementById("navigation-button-first-section-choice-contacts-arrow");
 
@@ -1347,12 +1341,13 @@ headerNavContacts.addEventListener('mouseenter', () => {
 headerNavContacts.addEventListener('mouseleave', () => {
     contactsArrow.style.opacity = "";
 })
-// secondSectionButtonContacts.addEventListener('click', () => {
-//     window.scrollTo({
-//         top: window.innerWidth * 1.97,
-//         behavior: 'smooth'
-//     });
-// })
+
+secondSectionButtonContacts.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 1.97,
+        behavior: 'smooth'
+    });
+})
 
 const reviewsArrow = document.getElementById("navigation-button-first-section-choice-reviews-arrow");
 
