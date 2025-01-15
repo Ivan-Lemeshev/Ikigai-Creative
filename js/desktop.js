@@ -438,7 +438,11 @@ const title = document.getElementById("third-section-main-content-right-part-tit
 
 const upLoadActivServise = () => {
     const data = arrayDataOfService[activNumber];
-    imgBlock.src = `/img/svg/third-section-lower-part ${data.title.eng}.svg`;
+    if (selectTheme === "light") {
+        imgBlock.src = `/img/svg/desktop/src/light/third-section-lower-part ${data.title.eng}.svg`;
+    } else {
+        imgBlock.src = `/img/svg/desktop/src/dark/third-section-lower-part ${data.title.eng}.svg`;
+    }
     if (selectLang === "eng") {
         firstParagraph.textContent = data.text.eng[0];
         secondParagraph.textContent = data.text.eng[1];
@@ -735,10 +739,9 @@ thirdSectionButtonMore.addEventListener('click', () => {
         thirdSectionImage.style.transform = "rotate3d(0, 1, 0, 0deg)";
         thirdSectionImage.style.width = "28.125vw";
         thirdSectionImage.style.height = "28.125vw";
-        thirdSectionImage.style.boxShadow = "0px 0px 8px 0px rgba(2, 133, 204, 0)";
-        thirdSectionImage.style.backgroundImage = "linear-gradient(145.28deg, rgba(0, 34, 53, 0) 18.9%, rgba(0, 17, 27, 0) 95.94%)";
+        thirdSectionImage.style.background = `linear-gradient(0deg, rgba(232, 232, 232, 0.6), rgba(232, 232, 232, 0.6)), linear-gradient(179.79deg, rgba(255, 255, 255, 0.12) 0.23%, rgba(0, 136, 204, 0.5) 61.99%, rgba(255, 255, 255, 0.12) 99.87%)`
         thirdSectionMainContentRightPartLine.style.height = "70.57292vw";
-        thirdSectionMainContentRightPartLine.style.backgroundImage = "linear-gradient(to bottom, rgba(0, 154, 236, 0) 0%, rgba(0, 154, 236, 0.3) 25%, rgba(0, 87, 134, 0) 100%)";
+        thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, rgba(46, 46, 46, 0.3) 25%, rgba(46, 46, 46, 0) 100%)";  
         thirdSectionMainContentRightPartLine.style.top = "-10vw";
 
         let selCat = arrayDataOfService.map((service) => service.title)[activNumber];
@@ -841,7 +844,7 @@ const updateActivService = () => {
     const currentService = arrayDataOfService[activNumber];
 
     buttonMoreTitle.textContent = currentService.title[selectLang];
-    imgBlock.src = `/img/svg/third-section-lower-part ${currentService.title.eng}.svg`;
+    imgBlock.src = `/img/svg/desktop/src/${[selectTheme]}/third-section-lower-part ${currentService.title.eng}.svg`;
 
 
     for (let index = 0; index < currentService.prices.length; index++) {

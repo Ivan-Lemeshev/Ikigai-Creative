@@ -745,9 +745,6 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            border: 0.05208vw solid #2196F3;
-            /* background:
-                linear-gradient(92.04deg, rgba(0, 136, 204, 0.05) 1.72%, rgba(0, 136, 204, 0.2) 98.36%), linear-gradient(0deg, #E8E8E8, #E8E8E8); */
             opacity: 0;
             transition: opacity ease-in-out 0.5s;
         }
@@ -1031,9 +1028,10 @@
         position: absolute;
         top: 4.16667vw;
         right: 14.16667vw;
-        font-weight: 500;
-        font-size: 2.1875vw;
+        font-weight: 400;
+        font-size: 1.875vw;
         display: flex;
+        letter-spacing: 0.1em;
         align-items: center;
         justify-content: flex-end;
         color: var(--ltText);
@@ -1058,6 +1056,7 @@
             width: 2.1875vw;
             height: 2.1875vw;
             transform: rotate(0deg);
+            overflow: visible;
             transition: transform 0.3s ease-in-out;
         }
 
@@ -1260,7 +1259,8 @@
         &>.button-more-price {
             color: var(--ltText);
             font-weight: 300;
-            font-size: 1.875vw;
+            font-size: 1.77083vw;
+            letter-spacing: 0.1em;
             width: 100%;
             height: 2.08333vw;
             display: flex;
@@ -1280,8 +1280,9 @@
     }
 
     &>#button-more-description-title {
-        font-weight: 400;
-        font-size: 1.875vw;
+        font-weight: 300;
+        font-size: 1.77083vw;
+        letter-spacing: 0.1em;
         color: var(--ltText);
         position: absolute;
         top: 41.97917vw;
@@ -1289,54 +1290,57 @@
 
     }
 
-    &>#button-more-description-text {
+    &>#button-more-description-text-0 {
+        height: auto;
         width: 80.72917vw;
         font-weight: 300;
-        font-size: 1.875vw;
-        line-height: 2.39583vw;
+        font-size: 1.66667vw;
+        line-height: 2.33333vw;
         color: var(--ltText);
         text-align: justify;
-        position: absolute;
-        left: 7.8125vw;
         overflow: visible;
-
-        &>#button-more-description-text-0 {
-            position: absolute;
-            height: 12.23958vw;
-            top: 45.46875vw;
-        }
-
-        &>#button-more-description-text-1 {
-            position: absolute;
-            height: 9.79167vw;
-            top: 58.75vw;
-        }
+        margin-top: 45.3125vw;
+        margin-left: 7.8125vw;
+        letter-spacing: 0.1em;
     }
+
+    &>#button-more-description-text-1 {
+        height: auto;
+        width: 80.72917vw;
+        font-weight: 300;
+        font-size: 1.66667vw;
+        line-height: 2.33333vw;
+        color: var(--ltText);
+        text-align: justify;
+        overflow: visible;
+        margin-left: 7.8125vw;
+        letter-spacing: 0.1em;
+        margin-top: 1.04167vw;
+    }
+
 
     &>#button-more-lower-part {
         position: absolute;
-        width: 81.25vw;
-        height: 10.41667vw;
-        bottom: 0.83333vw;
-        left: 7.29167vw;
+        width: 80.9375vw;
+        height: 3.38542vw;
+        bottom: 8.02083vw;
+        left: 7.8125vw;
 
         &>.button-more-lower-part-button-arrows {
-            width: 6.77083vw;
-            height: 6.77083vw;
+            width: 3.38542vw;
+            height: 3.38542vw;
             position: absolute;
             display: flex;
             justify-content: center;
             align-items: center;
-            top: 1.82292vw;
-            background-color: rgba(0, 125, 202, 0.1);
-            border: 2px solid var(--darkBlue);
+            background: #2E2E2E;
             cursor: pointer;
 
             &>img {
                 object-fit: contain;
                 pointer-events: none;
-                width: 4.16667vw;
-                height: 4.16667vw;
+                width: 2.08333vw;
+                height: 2.08333vw;
             }
         }
 
@@ -1345,61 +1349,28 @@
         }
 
         &>#button-more-lower-part-buttons {
-            width: 59.375vw;
-            height: 10.41667vw;
+            width: 70vw;
+            height: 3.38542vw;
             position: absolute;
-            left: 10.9375vw;
+            left: 5.46875vw;
             display: flex;
-            flex-direction: column;
             justify-content: space-between;
 
-            &>.button-more-lower-part-buttons-wrapper {
+            &>.button-more-lower-part-buttons {
+                width: 15.9375vw;
+                height: 100%;
                 display: flex;
-                justify-content: space-between;
-
-                &>.button-more-lower-part-buttons {
-                    width: 28.64583vw;
-                    height: 4.16667vw;
-                    display: flex;
-                    border: 0.10417vw solid var(--darkBlue);
-                    background-color: rgba(0, 125, 202, 0.1);
-                    cursor: pointer;
-
-                    &>img {
-                        object-fit: contain;
-                        pointer-events: none;
-                        width: 2.08333vw;
-                        height: 2.08333vw;
-                        margin-top: 1.04167vw;
-                        margin-left: 1.04167vw;
-                    }
-
-                    &>.button-more-lower-part-buttons-line {
-                        width: 0.05208vw;
-                        height: 3.125vw;
-                        background-color: var(--darkBlue);
-                        margin-top: 0.52083vw;
-                        margin-left: 1.04167vw;
-                    }
-
-                    &>.button-more-lower-part-buttons-text {
-                        font-weight: 400;
-                        font-size: 1.875vw;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        color: var(--ltText);
-                        width: 24.47917vw;
-                        height: 3.64583vw;
-                        margin-top: 0.26042vw;
-
-                    }
-                }
+                background: #2E2E2E;
+                cursor: pointer;
+                font-weight: 400;
+                font-size: 1.66667vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--dtText);
             }
         }
     }
-
-
 }
 
 #four-section {
@@ -1414,11 +1385,12 @@
 }
 
 #four-section-title {
-    font-weight: 500;
-    font-size: 2.1875vw;
+    font-weight: 400;
+    font-size: 1.875vw;
     color: var(--ltText);
     position: absolute;
     top: 2.60417vw;
+    letter-spacing: 0.1em;
     left: 7.29167vw;
 }
 
@@ -1428,15 +1400,14 @@
     height: 41.66667vw;
     top: 9.16667vw;
     left: 7.29167vw;
-    background-color: rgba(0, 83, 128, 0.07);
-    border: 0.10417vw solid rgba(0, 154, 236, 0.5);
+    border: 0.10417vw solid #2B2B2B80;
     z-index: 2;
     overflow: visible;
 }
 
 #main-send-form-title {
-    font-weight: 400;
-    font-size: 1.875vw;
+    font-weight: 350;
+    font-size: 1.66667vw;
     color: var(--ltText);
     position: absolute;
     top: 2.34375vw;
@@ -1463,7 +1434,7 @@
     font-weight: 300;
     font-size: 1.5625vw;
     color: var(--ltText);
-    border-bottom: 0.05208vw solid var(--blue);
+    border-bottom: 0.05208vw solid var(--dtSeparationLine);
     padding-left: 0.52083vw;
 
     &::placeholder {
@@ -1652,16 +1623,14 @@
     width: 21.875vw;
     height: 3.125vw;
     position: absolute;
-    border-bottom-color: rgba(2, 133, 204, 1);
-    border-bottom-width: 0.05208vw;
-    border-bottom-style: solid;
+    border-bottom: 0.05208vw solid var(--dtSeparationLine);
     padding-left: 0.52083vw;
     padding-right: 0.52083vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    transition: border-bottom-color ease-in-out 0.3s;
+    transition: border-bottom ease-in-out 0.3s;
     overflow: hidden;
 
     &>#choice-of-service-placeholder {
@@ -1776,8 +1745,8 @@
     width: 45.83333vw;
     height: 3.64583vw;
     background: transparent;
-    border-bottom: 0.05208vw solid var(--blue);
-    border-top: 0.05208vw solid var(--blue);
+    border-bottom: 0.05208vw solid var(--dtSeparationLine);
+    border-top: 0.05208vw solid var(--dtSeparationLine);
     position: absolute;
     top: 28.38542vw;
     left: 2.34375vw;
