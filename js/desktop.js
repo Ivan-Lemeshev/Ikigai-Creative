@@ -323,6 +323,8 @@ const refreshTheme = () => {
     const themeButtonChoiceDark = document.getElementById("theme-button-first-section-choice-dark");
     const languageChoiceCheckboxPathEng = document.getElementById("language-button-first-section-choice-eng-checkbox-path");
     const languageChoiceCheckboxPathRus = document.getElementById("language-button-first-section-choice-rus-checkbox-path");
+    const themeChoiceCheckboxPathLight = document.getElementById("theme-button-first-section-choice-light-checkbox-path");
+    const themeChoiceCheckboxPathDark = document.getElementById("theme-button-first-section-choice-dark-checkbox-path");
 
     firstSectionBackgroundImg.src = `/img/first-section-desktop-background-${[selectTheme]}.jpg`;
     themeButtonChoiceLight.src = `/img/svg/desktop/src/${[selectTheme]}/theme-button-first-section-choice-light-${[selectTheme]}.svg`;
@@ -334,12 +336,16 @@ const refreshTheme = () => {
         navigationButtonFirstSectionSvgPath.style.fill = "#2E2E2E";
         languageChoiceCheckboxPathEng.style.fill = "#2E2E2E";
         languageChoiceCheckboxPathRus.style.fill = "#2E2E2E";
+        themeChoiceCheckboxPathLight.style.fill = "#2E2E2E";
+        themeChoiceCheckboxPathDark.style.fill = "#2E2E2E";
     } else {
         languageButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
         themeButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
         navigationButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
         languageChoiceCheckboxPathEng.style.fill = "#F3F3F3";
         languageChoiceCheckboxPathRus.style.fill = "#F3F3F3";
+        themeChoiceCheckboxPathLight.style.fill = "#F3F3F3";
+        themeChoiceCheckboxPathDark.style.fill = "#F3F3F3";
     }
 }
 
