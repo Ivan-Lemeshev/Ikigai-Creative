@@ -741,7 +741,7 @@ thirdSectionButtonMore.addEventListener('click', () => {
         thirdSectionImage.style.height = "28.125vw";
         thirdSectionImage.style.background = `linear-gradient(0deg, rgba(232, 232, 232, 0.6), rgba(232, 232, 232, 0.6)), linear-gradient(179.79deg, rgba(255, 255, 255, 0.12) 0.23%, rgba(0, 136, 204, 0.5) 61.99%, rgba(255, 255, 255, 0.12) 99.87%)`
         thirdSectionMainContentRightPartLine.style.height = "70.57292vw";
-        thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, rgba(46, 46, 46, 0.3) 25%, rgba(46, 46, 46, 0) 100%)";  
+        thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, rgba(46, 46, 46, 0.3) 25%, rgba(46, 46, 46, 0) 100%)";
         thirdSectionMainContentRightPartLine.style.top = "-10vw";
 
         let selCat = arrayDataOfService.map((service) => service.title)[activNumber];
@@ -784,6 +784,8 @@ let oldActivService = null;
 let activAnmimationTitle = true;
 const buttonMoreInterestBlock = document.getElementById("interest-block");
 const buttonMoreTitleSvgBlock = document.getElementById("button-more-title-svg-block");
+const buttonMoreTitleSvg = document.getElementById("button-more-title-svg");
+const buttonMoreTitleSvgPath = document.getElementById("button-more-title-svg-path");
 
 buttonMoreTitleSvgBlock.addEventListener('click', () => {
     if (oldActivService !== null) {
@@ -986,7 +988,7 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
         dropListWrapper.style.height = "";
         fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
         newDropListWrapper.style.pointerEvents = "none";
-        fourthSectionChoiceOfServiceArrow.style.rotate = "";
+        fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
     });
 });
 
@@ -1011,9 +1013,11 @@ inputFirstName.addEventListener('input', () => {
     }
     if (editValue.length > 0) {
         correctImgFirstName.style.opacity = 1;
+        correctImgFirstName.style.display = "block";
         allInputsHave();
     } else {
         correctImgFirstName.style.opacity = 0;
+        correctImgFirstName.style.display = "none";
         voidInput();
     }
     inputFirstName.value = capitalize(editValue);
@@ -1193,40 +1197,119 @@ document.addEventListener('click', () => {
 })
 
 const emptyFieldFirstName = document.getElementById("empty-field-0");
+let emptyFieldFirstNameChecked = false;
 const emptyFieldLastName = document.getElementById("empty-field-1");
+let emptyFieldLastNameChecked = false;
 const emptyFieldPhone = document.getElementById("empty-field-2");
+let emptyFieldPhoneChecked = false;
 const emptyFieldEmail = document.getElementById("empty-field-3");
+let emptyFieldEmailChecked = false;
 
 errorImgFirstName.addEventListener('mouseenter', () => {
-    emptyFieldFirstName.style.opacity = "1";
+    emptyFieldFirstNameChecked = true;
+    emptyFieldFirstName.style.display = "flex";
+    setTimeout(() => {
+        emptyFieldFirstName.style.opacity = "1";
+    }, 1);
 })
 
 errorImgFirstName.addEventListener('mouseleave', () => {
-    emptyFieldFirstName.style.opacity = "0";
+
+    if (emptyFieldFirstNameChecked) {
+        emptyFieldFirstName.addEventListener('mouseleave', () => {
+            emptyFieldFirstName.style.opacity = "0";
+            setTimeout(() => {
+                emptyFieldFirstName.style.display = "none";
+            }, 300);
+
+            emptyFieldFirstNameChecked = false;
+        })
+    } else {
+        emptyFieldFirstName.style.opacity = "0";
+        setTimeout(() => {
+            emptyFieldFirstName.style.display = "none";
+        }, 300);
+    }
 })
 
+
+
 errorImgLastName.addEventListener('mouseenter', () => {
-    emptyFieldLastName.style.opacity = "1";
+    emptyFieldLastNameChecked = true;
+    emptyFieldLastName.style.display = "flex";
+    setTimeout(() => {
+        emptyFieldLastName.style.opacity = "1";
+    }, 1);
 })
 
 errorImgLastName.addEventListener('mouseleave', () => {
-    emptyFieldLastName.style.opacity = "0";
+    if (emptyFieldLastNameChecked) {
+        emptyFieldLastName.addEventListener('mouseleave', () => {
+            emptyFieldLastName.style.opacity = "0";
+            setTimeout(() => {
+                emptyFieldLastName.style.display = "none";
+            }, 300);
+
+            emptyFieldLastNameChecked = false;
+        })
+    } else {
+        emptyFieldLastName.style.opacity = "0";
+        setTimeout(() => {
+            emptyFieldLastName.style.display = "none";
+        }, 300);
+    }
 })
 
 errorImgPhone.addEventListener('mouseenter', () => {
-    emptyFieldPhone.style.opacity = "1";
+    emptyFieldPhoneChecked = false;
+    emptyFieldPhone.style.display = "flex";
+    setTimeout(() => {
+        emptyFieldPhone.style.opacity = "1";
+    }, 1);
 })
 
 errorImgPhone.addEventListener('mouseleave', () => {
-    emptyFieldPhone.style.opacity = "0";
+    if (emptyFieldPhoneChecked) {
+        emptyFieldPhone.addEventListener('mouseleave', () => {
+            emptyFieldPhone.style.opacity = "0";
+            setTimeout(() => {
+                emptyFieldPhone.style.display = "none";
+            }, 300);
+
+            emptyFieldPhoneChecked = false;
+        })
+    } else {
+        emptyFieldPhone.style.opacity = "0";
+        setTimeout(() => {
+            emptyFieldPhone.style.display = "none";
+        }, 300);
+    }
 })
 
 errorImgEmail.addEventListener('mouseenter', () => {
-    emptyFieldEmail.style.opacity = "1";
+    emptyFieldEmailChecked = true;
+    emptyFieldEmail.style.display = "flex";
+    setTimeout(() => {
+        emptyFieldEmail.style.opacity = "1";
+    }, 1);
 })
 
 errorImgEmail.addEventListener('mouseleave', () => {
-    emptyFieldEmail.style.opacity = "0";
+    if (emptyFieldEmailChecked) {
+        emptyFieldEmail.addEventListener('mouseleave', () => {
+            emptyFieldEmail.style.opacity = "0";
+            setTimeout(() => {
+                emptyFieldEmail.style.display = "none";
+            }, 300);
+
+            emptyFieldEmailChecked = false;
+        })
+    } else {
+        emptyFieldEmail.style.opacity = "0";
+        setTimeout(() => {
+            emptyFieldEmail.style.display = "none";
+        }, 300);
+    }
 })
 
 
