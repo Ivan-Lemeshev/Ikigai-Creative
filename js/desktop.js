@@ -3,6 +3,7 @@ import arrayDataOfService from "./Services.js";
 import { ideasArrayUp, ideasArrayDown, textForApplication } from "./slogans.js";
 import reviews from "./reviews.js";
 import dataContats from "./links.js";
+import themeWrapper from "./switchTheme-data.js"
 
 const backgroundGradient = document.getElementById("background-gradient");
 const ikigaiLogoText = document.getElementById("ikigai-logo-text");
@@ -301,6 +302,47 @@ const switchLocalization = () => {
     animationIsGone = false;
 }
 
+let selectTheme = "light";
+
+const switchTheme = () => {
+    for (let id in themeWrapper) { // перебираем все айдишники
+        const data = themeWrapper[id]; // пой айди получаю информацию 
+        const element = document.getElementById(id); // получаю элемент который нужно по айди заменить 
+        const allStyles = data.styles;
+        element.style.color = allStyles[selectTheme].color;
+        element.style.background = allStyles[selectTheme].background;
+    }
+}
+
+const refreshTheme = () => {
+    const firstSectionBackgroundImg = document.getElementById("first-section-desktop-background");
+    const languageButtonFirstSectionSvgPath = document.getElementById("language-button-first-section-svg-path");
+    const themeButtonFirstSectionSvgPath = document.getElementById("theme-button-first-section-svg-path");
+    const navigationButtonFirstSectionSvgPath = document.getElementById("navigation-button-first-section-svg-path");
+    const themeButtonChoiceLight = document.getElementById("theme-button-first-section-choice-light");
+    const themeButtonChoiceDark = document.getElementById("theme-button-first-section-choice-dark");
+    const languageChoiceCheckboxPathEng = document.getElementById("language-button-first-section-choice-eng-checkbox-path");
+    const languageChoiceCheckboxPathRus = document.getElementById("language-button-first-section-choice-rus-checkbox-path");
+
+    firstSectionBackgroundImg.src = `/img/first-section-desktop-background-${[selectTheme]}.jpg`;
+    themeButtonChoiceLight.src = `/img/svg/desktop/src/${[selectTheme]}/theme-button-first-section-choice-light-${[selectTheme]}.svg`;
+    themeButtonChoiceDark.src = `/img/svg/desktop/src/${[selectTheme]}/theme-button-first-section-choice-night-${[selectTheme]}.svg`;
+
+    if (selectTheme === "light") {
+        languageButtonFirstSectionSvgPath.style.fill = "#2E2E2E";
+        themeButtonFirstSectionSvgPath.style.fill = "#2E2E2E";
+        navigationButtonFirstSectionSvgPath.style.fill = "#2E2E2E";
+        languageChoiceCheckboxPathEng.style.fill = "#2E2E2E";
+        languageChoiceCheckboxPathRus.style.fill = "#2E2E2E";
+    } else {
+        languageButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
+        themeButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
+        navigationButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
+        languageChoiceCheckboxPathEng.style.fill = "#F3F3F3";
+        languageChoiceCheckboxPathRus.style.fill = "#F3F3F3";
+    }
+}
+
 const langChoiceWrapper = document.getElementById("language-button-first-section-big-wrapper");
 const langChoice = document.getElementById("language-button-first-section-wrapper");
 const langUpperPart = document.getElementById("language-button-first-section-choice");
@@ -347,7 +389,6 @@ const themeLightCheckbox = document.getElementById("theme-button-first-section-c
 const themeDark = document.getElementById("theme-button-first-section-choice-dark-wrapper");
 const themeDarkCheckbox = document.getElementById("theme-button-first-section-choice-dark-checkbox");
 
-let selectTheme = "light";
 
 themeChoice.addEventListener('click', () => {
     themeUpperPart.style.display = "block"
@@ -365,12 +406,16 @@ themeChoiceWrapper.addEventListener('mouseleave', () => {
 
 themeLight.addEventListener('click', () => {
     selectTheme = "light";
+    switchTheme();
+    refreshTheme();
     themeLightCheckbox.style.opacity = "1";
     themeDarkCheckbox.style.opacity = "0";
 })
 
 themeDark.addEventListener('click', () => {
     selectTheme = "dark";
+    switchTheme();
+    refreshTheme();
     themeLightCheckbox.style.opacity = "0";
     themeDarkCheckbox.style.opacity = "1";
 })

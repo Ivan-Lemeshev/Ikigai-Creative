@@ -35,11 +35,6 @@ const localizationWrapper = {
         eng: "Our services",
     },
 
-    "third-section-title": {
-        rus: "Наши услуги",
-        eng: "Our services",
-    },
-
     "third-section-main-content-right-part-title": {
         rus: "Креативный дизайн",
         eng: "Creative design",
@@ -63,11 +58,6 @@ const localizationWrapper = {
     "third-section-main-content-right-part-button-order": {
         rus: "Заказать",
         eng: "Order",
-    },
-
-    "third-section-main-content-right-part-button-more": {
-        rus: "Подробнее",
-        eng: "More",
     },
 
     "third-section-main-content-right-part-button-more": {
@@ -195,7 +185,7 @@ const localizationWrapper = {
         eng: "Promotion on social networks",
     },
 
-    "interest-block-text-4": {
+    "interest-block-text-5": {
         rus: "Настройка оплаты",
         eng: "Setting up payment",
     },
