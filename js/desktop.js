@@ -153,8 +153,13 @@ const setupAndTranslateForSelectService = (event) => {
         if (selCat !== selectCategory && arrayDataOfService.map((service) => service.title.eng).includes(selCat)) {
             choiceOfServicePlaceholder.textContent = selCat;
             fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-            fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
-            choiceOfServicePlaceholder.style.color = "var(--blue)";
+            if (selectTheme === "light") {
+                fourthSectionChoiceOfService.style.borderBottomColor = "var(--dtSeparationLine)";
+                choiceOfServicePlaceholder.style.color = "var(--ltText)";
+            } else {
+                fourthSectionChoiceOfService.style.borderBottomColor = "var(--ltSeparationLine)";
+                choiceOfServicePlaceholder.style.color = "var(--dtText)";
+            }
             selectCategory = selCat;
             allInputsHave();
         }
@@ -164,8 +169,14 @@ const setupAndTranslateForSelectService = (event) => {
         if (selCat !== selectCategory && arrayDataOfService.map((service) => service.title.rus).includes(selCat)) {
             choiceOfServicePlaceholder.textContent = selCat;
             fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-            fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
-            choiceOfServicePlaceholder.style.color = "var(--blue)";
+            fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
+            if (selectTheme === "light") {
+                fourthSectionChoiceOfService.style.borderBottomColor = "var(--dtSeparationLine)";
+                choiceOfServicePlaceholder.style.color = "var(--ltText)";
+            } else {
+                fourthSectionChoiceOfService.style.borderBottomColor = "var(--ltSeparationLine)";
+                choiceOfServicePlaceholder.style.color = "var(--dtText)";
+            }
             selectCategory = selCat;
             allInputsHave();
         }
@@ -302,8 +313,10 @@ const switchLocalization = () => {
     animationIsGone = false;
 }
 const imgBlock = document.getElementById("third-section-creative-design-img");
+const buttonMoreInterestBlock = document.getElementById("interest-block");
 
 let selectTheme = "light";
+const textarea = document.getElementById("textarea");
 
 const switchTheme = () => {
     for (let id in themeWrapper) { // перебираем все айдишники
@@ -342,6 +355,11 @@ const refreshTheme = () => {
     const navigationButtonChoiceReviewsImgArrowPath = document.getElementById("navigation-button-first-section-choice-reviews-arrow-path");
     const modalNotificationVlockImg = document.getElementById("modal-notification-block-img");
     const buttonNoreTitleSvgPath = document.getElementById("button-more-title-svg-path");
+    const interestBlockSvg0 = document.getElementById("interest-block-svg-0");
+    const interestBlockSvgDark0 = document.getElementById("interest-block-svg-dark-0");
+    const mainSendForm = document.getElementById("main-send-form");
+    const mainSendFormSvg = document.getElementById("main-send-form-svg");
+    const alternativeSendFormSvgPath = document.getElementById("alternative-send-form-svg-path");
 
 
     imgBlock.src = `/img/svg/desktop/src/${[selectTheme]}/third-section-lower-part Creative Design.svg`;
@@ -349,6 +367,8 @@ const refreshTheme = () => {
     firstSectionBackgroundImg.src = `/img/first-section-desktop-background-${[selectTheme]}.jpg`;
     themeButtonChoiceLight.src = `/img/svg/desktop/src/${[selectTheme]}/theme-button-first-section-choice-light-${[selectTheme]}.svg`;
     themeButtonChoiceDark.src = `/img/svg/desktop/src/${[selectTheme]}/theme-button-first-section-choice-night-${[selectTheme]}.svg`;
+    mainSendFormSvg.src = `/img/svg/desktop/src/${[selectTheme]}/main-send-form-svg.svg`;
+    fourthSectionChoiceOfServiceArrow.src = `/img/svg/desktop/src/${[selectTheme]}/choice-of-service-arrow.svg`;
 
     if (selectTheme === "light") {
         languageButtonFirstSectionSvgPath.style.fill = "#2E2E2E";
@@ -373,6 +393,18 @@ const refreshTheme = () => {
         navigationButtonChoiceReviewImgPath3.style.fill = "#2E2E2E";
         navigationButtonChoiceReviewsImgArrowPath.style.fill = "#2E2E2E";
         // buttonNoreTitleSvgPath.style.fill = "#2E2E2E";
+        interestBlockSvg0.style.display = "block";
+        interestBlockSvgDark0.style.display = "none";
+        buttonMoreInterestBlock.style.border = "";
+        mainSendForm.style.border = "";
+        inputFirstName.classList = "input-light-theme";
+        inputLastName.classList = "input-light-theme";
+        inputPhone.classList = "input-light-theme";
+        inputEmail.classList = "input-light-theme";
+        fourthSectionChoiceOfService.style.borderBottom = "";
+        textarea.classList = "textarea-light";
+        alternativeSendFormSvgPath.style.fill = "#2E2E2E"
+
     } else {
         languageButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
         themeButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
@@ -396,6 +428,18 @@ const refreshTheme = () => {
         navigationButtonChoiceReviewImgPath3.style.fill = "#F3F3F3";
         navigationButtonChoiceReviewsImgArrowPath.style.fill = "#F3F3F3";
         // buttonNoreTitleSvgPath.style.fill = "#F3F3F3";
+        interestBlockSvg0.style.display = "none";
+        interestBlockSvgDark0.style.display = "block";
+        buttonMoreInterestBlock.style.border = "0.05208vw solid var(--ltSeparationLine)";
+        mainSendForm.style.border = "0.10417vw solid var(--ltSeparationLine)";
+        inputFirstName.classList = "input-dark-theme"
+        inputLastName.classList = "input-dark-theme"
+        inputPhone.classList = "input-dark-theme"
+        inputEmail.classList = "input-dark-theme"
+        fourthSectionChoiceOfService.style.borderBottom = "0.10417vw solid var(--ltSeparationLine)";
+        textarea.classList = "textarea-dark";
+        alternativeSendFormSvgPath.style.fill = "#D6D6D6"
+
     }
 }
 
@@ -888,7 +932,6 @@ thirdSectionButtonMore.addEventListener('click', () => {
 
 let oldActivService = null;
 let activAnmimationTitle = true;
-const buttonMoreInterestBlock = document.getElementById("interest-block");
 const buttonMoreTitleSvgBlock = document.getElementById("button-more-title-svg-block");
 const buttonMoreTitleSvg = document.getElementById("button-more-title-svg");
 const buttonMoreTitleSvgPath = document.getElementById("button-more-title-svg-path");
@@ -904,15 +947,12 @@ buttonMoreTitleSvgBlock.addEventListener('click', () => {
     const currentTitle = arrayDataOfService[activNumber].title[selectLang];
     const interestBlock = document.getElementById(`interest-block-${activNumber}`);
     const interestBlockSvg = document.getElementById(`interest-block-svg-${activNumber}`);
+    const interestBlockSvgDark = document.getElementById(`interest-block-svg-dark-${activNumber}`);
 
 
-    if (selectTheme === "light") {
-        interestBlock.classList = "nonActivService-light";
-        interestBlockSvg.classList = "nonActivServiceSvg-light";
-    } else {
-        interestBlock.classList = "nonActivService-dark";
-        interestBlockSvg.classList = "nonActivServiceSvg-dark";
-    }
+    interestBlock.classList = "nonActivService";
+    interestBlockSvg.classList = "nonActivServiceSvg";
+    interestBlockSvgDark.classList = "nonActivServiceSvg";
 
 
     if (activAnmimationTitle) {
@@ -1005,17 +1045,20 @@ interestBlockAllService.addEventListener('click', () => {
         thirdSectionLowerPart.style.display = "";
         thirdSectionImage.style.width = "34.89583vw";
         thirdSectionImage.style.height = "34.89583vw";
-        thirdSectionImage.style.backgroundImage = "linear-gradient(145.28deg, rgba(0, 34, 53, 0.8) 18.9%, rgba(0, 17, 27, 0.6) 95.94%)";
+        if (selectTheme === "light") {
+            thirdSectionImage.style.background = "linear-gradient(92.04deg, rgba(0, 136, 204, 0.05) 1.72%, rgba(0, 136, 204, 0.2) 98.36%), linear-gradient(0deg, #E8E8E8, #E8E8E8)";
+        } else {
+            thirdSectionImage.style.background = "linear-gradient(92.04deg, rgba(0, 136, 204, 0.05) 1.72%, rgba(0, 136, 204, 0.2) 98.36%), linear-gradient(0deg, #1C1C1C, #1C1C1C)";
+        }
         thirdSectionImageBackground.style.opacity = "0";
         buttonMoreInterestBlock.style.display = "";
         thirdSectionTitle.style.opacity = "1";
 
         thirdSectionMainContentRightPartLine.style.height = "";
-        thirdSectionMainContentRightPartLine.style.backgroundImage = "";
+        thirdSectionMainContentRightPartLine.style.background = "";
         thirdSectionMainContentRightPartLine.style.top = "";
         setTimeout(() => {
             thirdSectionImage.style.transform = "rotate3d(0, 1, 0, 30deg)";
-            thirdSectionImage.style.boxShadow = "rgb(2, 133, 204) 0px 0px 8px 0px";
         }, 500);
     })
 })
@@ -1033,7 +1076,12 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
     event.stopPropagation();
     const newDropListWrapper = document.createElement('div');
     newDropListWrapper.id = "drop-list";
-    dropListWrapper.style.height = "17.5vw"
+    if(selectTheme === "light") {
+        newDropListWrapper.classList = "drop-list-light";
+    } else {
+        newDropListWrapper.classList = "drop-list-dark";
+    }
+    dropListWrapper.style.height = "17.5vw";
 
     if (selectLang === "eng") {
         const actualityCategory = arrayDataOfService.map((service) => service.title.eng).filter((textCategory) => {
@@ -1042,7 +1090,12 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
         actualityCategory.forEach(textSelectCategoty => {
             const newDropListPoint = document.createElement('div');
             newDropListPoint.textContent = textSelectCategoty;
-            newDropListPoint.classList = "drop-list-item";
+            if(selectTheme === "light") {
+                newDropListPoint.classList = "drop-list-item-light";
+            } else {
+                newDropListPoint.classList = "drop-list-item-dark";
+            }
+
             newDropListPoint.id = textSelectCategoty;
             newDropListPoint.style.fontFamily = "";
 
@@ -1052,7 +1105,11 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
                 choiceOfServicePlaceholder.textContent = textSelectCategoty;
                 newDropListWrapper.style.opacity = "0";
                 fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-                fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+                if (selectTheme === "light") {
+                    fourthSectionChoiceOfService.style.borderBottomColor = "var(--dtSeparationLine)";
+                } else {
+                    fourthSectionChoiceOfService.style.borderBottomColor = "var(--ltSeparationLine)";
+                }
                 newDropListWrapper.style.pointerEvents = "none";
                 allInputsHave();
             });
@@ -1074,7 +1131,11 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
                 choiceOfServicePlaceholder.textContent = textSelectCategoty;
                 newDropListWrapper.style.opacity = "0";
                 fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-                fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+                if (selectTheme === "light") {
+                    fourthSectionChoiceOfService.style.borderBottomColor = "var(--dtSeparationLine)";
+                } else {
+                    fourthSectionChoiceOfService.style.borderBottomColor = "var(--ltSeparationLine)";
+                }
                 newDropListWrapper.style.pointerEvents = "none";
                 allInputsHave();
             });
@@ -1084,9 +1145,15 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
 
     newDropListWrapper.style.opacity = "1";
     fourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
-    fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 0)";
+
+    fourthSectionChoiceOfService.style.borderBottomColor = "rgba(214, 214, 214, 0)";
+
     newDropListWrapper.style.pointerEvents = "all";
-    choiceOfServicePlaceholder.style.color = "var(--blue)";
+    if (selectTheme === "light") {
+        choiceOfServicePlaceholder.style.color = "var(--ltText)";
+    } else {
+        choiceOfServicePlaceholder.style.color = "var(--dtText)";
+    }
     const possibleDublicate = document.getElementById("drop-list");
     if (possibleDublicate) {
         dropListWrapper.removeChild(possibleDublicate);
@@ -1095,18 +1162,26 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
 
     dropListWrapper.addEventListener('mouseleave', () => {
         if (!selectCategory) {
-            choiceOfServicePlaceholder.style.color = "var(--darkBlue)";
+            if (selectTheme === "light") {
+                choiceOfServicePlaceholder.style.color = "var(--ltText)";
+            } else {
+                choiceOfServicePlaceholder.style.color = "var(--dtText)";
+            }
+
         };
         newDropListWrapper.style.opacity = "0";
         dropListWrapper.style.height = "";
-        fourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+        if (selectTheme === "light") {
+            fourthSectionChoiceOfService.style.borderBottomColor = "var(--dtSeparationLine)";
+        } else {
+            fourthSectionChoiceOfService.style.borderBottomColor = "var(--ltSeparationLine)";
+        }
         newDropListWrapper.style.pointerEvents = "none";
         fourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
     });
 });
 
 
-const textarea = document.getElementById("textarea");
 
 
 
