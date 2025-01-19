@@ -2558,6 +2558,578 @@ const themeWrapper = {
         }
     },
 
+    "navigation-button-first-section-choice-intro-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "navigation-button-first-section-choice-info-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "navigation-button-first-section-choice-services-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "navigation-button-first-section-choice-contacts-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "navigation-button-first-section-choice-reviews-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "second-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "second-section-title-eng": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "second-section-title-rus": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "second-section-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "second-section-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "third-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(180deg, #E8E8E8 4.39%, rgba(0, 136, 204, 0.4) 33%, rgba(0, 136, 204, 0.1) 67.57%, rgba(0, 136, 204, 0.1) 80.01%, rgba(0, 136, 204, 0) 90.37%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(180deg, #1C1C1C 4.39%, rgba(0, 136, 204, 0.4) 33%, rgba(0, 136, 204, 0.1) 67.57%, rgba(0, 136, 204, 0.1) 80.01%, rgba(0, 136, 204, 0) 90.37%), linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+
+    "third-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "third-section-main-content-right-part-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "third-section-main-content-right-part-paragraph-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "third-section-main-content-right-part-paragraph-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "third-section-main-content-right-part-paragraph-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "third-section-main-content-left-part": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(92.04deg, rgba(0, 136, 204, 0.05) 1.72%, rgba(0, 136, 204, 0.2) 98.36%), linear-gradient(0deg, #E8E8E8, #E8E8E8)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(92.04deg, rgba(0, 136, 204, 0.05) 1.72%, rgba(0, 136, 204, 0.2) 98.36%), linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+
+    "third-section-div-in-div-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "third-section-div-in-div-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "third-section-div-in-div-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "third-section-div-in-div-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "third-section-div-in-div-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "modal-notification-block-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-title-of-price": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-price-services-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-price-money-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-price-services-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-price-money-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-price-services-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-price-money-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-price-services-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-price-money-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-price-services-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-price-money-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-price-services-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-price-money-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-price-services-6": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-price-money-6": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-description-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-description-text-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "button-more-description-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "third-section-main-content-right-part-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, rgba(46, 46, 46, 0.6) 56%, rgba(46, 46, 46, 0) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(to bottom, rgba(214, 214, 214, 0) 0%, rgba(214, 214, 214, 0.6) 56%, rgba(214, 214, 214, 0) 100%)`
+            }
+        }
+    },
+
+    "interest-block": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(232, 232, 232, 0.4)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(28, 28, 28, 0.4)`
+            }
+        }
+    },
+
 }
 
 export default themeWrapper;

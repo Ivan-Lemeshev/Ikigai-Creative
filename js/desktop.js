@@ -301,6 +301,7 @@ const switchLocalization = () => {
 
     animationIsGone = false;
 }
+const imgBlock = document.getElementById("third-section-creative-design-img");
 
 let selectTheme = "light";
 
@@ -325,7 +326,26 @@ const refreshTheme = () => {
     const languageChoiceCheckboxPathRus = document.getElementById("language-button-first-section-choice-rus-checkbox-path");
     const themeChoiceCheckboxPathLight = document.getElementById("theme-button-first-section-choice-light-checkbox-path");
     const themeChoiceCheckboxPathDark = document.getElementById("theme-button-first-section-choice-dark-checkbox-path");
+    const navigationButtonChoiceIntroImgPath = document.getElementById("navigation-button-first-section-choice-intro-img-path");
+    const navigationButtonChoiceInfoImgPath = document.getElementById("navigation-button-first-section-choice-info-img-path");
+    const navigationButtonChoiceServicesImgPath = document.getElementById("navigation-button-first-section-choice-services-img-path");
+    const navigationButtonChoiceContactsImgPath0 = document.getElementById("navigation-button-first-section-choice-contacts-img-path-0");
+    const navigationButtonChoiceContactsImgPath1 = document.getElementById("navigation-button-first-section-choice-contacts-img-path-1");
+    const navigationButtonChoiceReviewImgPath0 = document.getElementById("navigation-button-first-section-choice-reviews-img-path-0");
+    const navigationButtonChoiceReviewImgPath1 = document.getElementById("navigation-button-first-section-choice-reviews-img-path-1");
+    const navigationButtonChoiceReviewImgPath2 = document.getElementById("navigation-button-first-section-choice-reviews-img-path-2");
+    const navigationButtonChoiceReviewImgPath3 = document.getElementById("navigation-button-first-section-choice-reviews-img-path-3");
+    const navigationButtonChoiceInfoImgArrowPath = document.getElementById("navigation-button-first-section-choice-info-img-path");
+    const navigationButtonChoiceContactsImgArrowPath = document.getElementById("navigation-button-first-section-choice-contacts-arrow-path");
+    const navigationButtonChoiceIntroImgArrowPath = document.getElementById("navigation-button-first-section-choice-intro-arrow-path");
+    const navigationButtonChoiceServicesImgArrowPath = document.getElementById("navigation-button-first-section-choice-services-arrow-path");
+    const navigationButtonChoiceReviewsImgArrowPath = document.getElementById("navigation-button-first-section-choice-reviews-arrow-path");
+    const modalNotificationVlockImg = document.getElementById("modal-notification-block-img");
+    const buttonNoreTitleSvgPath = document.getElementById("button-more-title-svg-path");
 
+
+    imgBlock.src = `/img/svg/desktop/src/${[selectTheme]}/third-section-lower-part Creative Design.svg`;
+    modalNotificationVlockImg.src = `/img/svg/desktop/src/${[selectTheme]}/modal-notification.svg`;
     firstSectionBackgroundImg.src = `/img/first-section-desktop-background-${[selectTheme]}.jpg`;
     themeButtonChoiceLight.src = `/img/svg/desktop/src/${[selectTheme]}/theme-button-first-section-choice-light-${[selectTheme]}.svg`;
     themeButtonChoiceDark.src = `/img/svg/desktop/src/${[selectTheme]}/theme-button-first-section-choice-night-${[selectTheme]}.svg`;
@@ -338,6 +358,21 @@ const refreshTheme = () => {
         languageChoiceCheckboxPathRus.style.fill = "#2E2E2E";
         themeChoiceCheckboxPathLight.style.fill = "#2E2E2E";
         themeChoiceCheckboxPathDark.style.fill = "#2E2E2E";
+        navigationButtonChoiceIntroImgPath.style.stroke = "#2E2E2E";
+        navigationButtonChoiceIntroImgArrowPath.style.fill = "#2E2E2E";
+        navigationButtonChoiceInfoImgPath.style.fill = "#2E2E2E";
+        navigationButtonChoiceInfoImgArrowPath.style.fill = "#2E2E2E";
+        navigationButtonChoiceServicesImgPath.style.fill = "#2E2E2E";
+        navigationButtonChoiceServicesImgArrowPath.style.fill = "#2E2E2E";
+        navigationButtonChoiceContactsImgPath0.style.fill = "#2E2E2E";
+        navigationButtonChoiceContactsImgPath1.style.fill = "#2E2E2E";
+        navigationButtonChoiceContactsImgArrowPath.style.fill = "#2E2E2E";
+        navigationButtonChoiceReviewImgPath0.style.fill = "#2E2E2E";
+        navigationButtonChoiceReviewImgPath1.style.fill = "#2E2E2E";
+        navigationButtonChoiceReviewImgPath2.style.fill = "#2E2E2E";
+        navigationButtonChoiceReviewImgPath3.style.fill = "#2E2E2E";
+        navigationButtonChoiceReviewsImgArrowPath.style.fill = "#2E2E2E";
+        // buttonNoreTitleSvgPath.style.fill = "#2E2E2E";
     } else {
         languageButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
         themeButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
@@ -346,6 +381,21 @@ const refreshTheme = () => {
         languageChoiceCheckboxPathRus.style.fill = "#F3F3F3";
         themeChoiceCheckboxPathLight.style.fill = "#F3F3F3";
         themeChoiceCheckboxPathDark.style.fill = "#F3F3F3";
+        navigationButtonChoiceIntroImgPath.style.stroke = "#F3F3F3";
+        navigationButtonChoiceIntroImgArrowPath.style.fill = "#F3F3F3";
+        navigationButtonChoiceInfoImgPath.style.fill = "#F3F3F3";
+        navigationButtonChoiceInfoImgArrowPath.style.fill = "#F3F3F3";
+        navigationButtonChoiceServicesImgPath.style.fill = "#F3F3F3";
+        navigationButtonChoiceServicesImgArrowPath.style.fill = "#F3F3F3";
+        navigationButtonChoiceContactsImgPath0.style.fill = "#F3F3F3";
+        navigationButtonChoiceContactsImgPath1.style.fill = "#F3F3F3";
+        navigationButtonChoiceContactsImgArrowPath.style.fill = "#F3F3F3";
+        navigationButtonChoiceReviewImgPath0.style.fill = "#F3F3F3";
+        navigationButtonChoiceReviewImgPath1.style.fill = "#F3F3F3";
+        navigationButtonChoiceReviewImgPath2.style.fill = "#F3F3F3";
+        navigationButtonChoiceReviewImgPath3.style.fill = "#F3F3F3";
+        navigationButtonChoiceReviewsImgArrowPath.style.fill = "#F3F3F3";
+        // buttonNoreTitleSvgPath.style.fill = "#F3F3F3";
     }
 }
 
@@ -484,7 +534,6 @@ const customization = (number) => {
 const firstParagraph = document.getElementById("third-section-main-content-right-part-paragraph-1");
 const secondParagraph = document.getElementById("third-section-main-content-right-part-paragraph-2");
 const thirdParagraph = document.getElementById("third-section-main-content-right-part-paragraph-3");
-const imgBlock = document.getElementById("third-section-creative-design-img");
 const title = document.getElementById("third-section-main-content-right-part-title");
 
 const upLoadActivServise = () => {
@@ -790,16 +839,22 @@ thirdSectionButtonMore.addEventListener('click', () => {
         thirdSectionImage.style.transform = "rotate3d(0, 1, 0, 0deg)";
         thirdSectionImage.style.width = "28.125vw";
         thirdSectionImage.style.height = "28.125vw";
-        thirdSectionImage.style.background = `linear-gradient(0deg, rgba(232, 232, 232, 0.6), rgba(232, 232, 232, 0.6)), linear-gradient(179.79deg, rgba(255, 255, 255, 0.12) 0.23%, rgba(0, 136, 204, 0.5) 61.99%, rgba(255, 255, 255, 0.12) 99.87%)`
+
+        if (selectTheme === "light") {
+            thirdSectionImage.style.background = `linear-gradient(0deg, rgba(232, 232, 232, 0.6), rgba(232, 232, 232, 0.6)), linear-gradient(179.79deg, rgba(255, 255, 255, 0.12) 0.23%, rgba(0, 136, 204, 0.5) 61.99%, rgba(255, 255, 255, 0.12) 99.87%)`
+            thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, rgba(46, 46, 46, 0.3) 25%, rgba(46, 46, 46, 0) 100%)";
+        } else {
+            thirdSectionImage.style.background = `linear-gradient(179.79deg, rgba(0, 0, 0, 0.12) 0.23%, rgba(0, 136, 204, 0.18) 61.99%, rgba(0, 0, 0, 0.12) 99.87%), linear-gradient(0deg, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4))`
+            thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(214, 214, 214, 0) 0%, rgba(214, 214, 214, 0.3) 25%, rgba(214, 214, 214, 0) 100%)";
+        }
         thirdSectionMainContentRightPartLine.style.height = "70.57292vw";
-        thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, rgba(46, 46, 46, 0.3) 25%, rgba(46, 46, 46, 0) 100%)";
+
         thirdSectionMainContentRightPartLine.style.top = "-10vw";
 
         let selCat = arrayDataOfService.map((service) => service.title)[activNumber];
         const category = arrayDataOfService[activNumber]
         if (selCat !== selectCategory && arrayDataOfService.map((service) => service.title).includes(selCat) && selectLang === "eng") {
             buttonMoreTitle.textContent = selCat.eng;
-            buttonMoreTitle.style.fontFamily = "";
         } else {
             buttonMoreTitle.textContent = selCat.rus;
         }
@@ -850,8 +905,15 @@ buttonMoreTitleSvgBlock.addEventListener('click', () => {
     const interestBlock = document.getElementById(`interest-block-${activNumber}`);
     const interestBlockSvg = document.getElementById(`interest-block-svg-${activNumber}`);
 
-    interestBlock.classList = "nonActivService";
-    interestBlockSvg.classList = "nonActivServiceSvg";
+
+    if (selectTheme === "light") {
+        interestBlock.classList = "nonActivService-light";
+        interestBlockSvg.classList = "nonActivServiceSvg-light";
+    } else {
+        interestBlock.classList = "nonActivService-dark";
+        interestBlockSvg.classList = "nonActivServiceSvg-dark";
+    }
+
 
     if (activAnmimationTitle) {
         setTimeout(() => {
