@@ -20,6 +20,10 @@ body {
     font-family: 'Segoe UI';
 }
 
+#desktop {
+    overflow: hidden;
+}
+
 * {
     translate: none;
 }

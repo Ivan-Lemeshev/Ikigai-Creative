@@ -85,22 +85,22 @@ const localizationWrapper = {
         eng: "Description",
     },
 
-    "button-more-lower-part-buttons-text-order": {
-        rus: "Заказать услугу",
-        eng: "Order a Service",
+    "button-more-lower-part-buttons-0": {
+        rus: "Заказать",
+        eng: "Order",
     },
 
-    "button-more-lower-part-buttons-text-consultation": {
-        rus: "Получить консультацию",
-        eng: "Get a Consultation",
+    "button-more-lower-part-buttons-1": {
+        rus: "Консультация",
+        eng: "Consultation",
     },
 
-    "button-more-lower-part-buttons-text-questions": {
+    "button-more-lower-part-buttons-2": {
         rus: "Задать вопрос",
         eng: "Got Questions",
     },
 
-    "button-more-lower-part-buttons-text-review": {
+    "button-more-lower-part-buttons-3": {
         rus: "Оставить отзыв",
         eng: "Leave a Review",
     },
