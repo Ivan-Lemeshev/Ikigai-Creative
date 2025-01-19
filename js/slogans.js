@@ -47,7 +47,7 @@ export const ideasArrayDown = [
     },
 
     {
-        eng: "LONDON",
+        eng: "London",
         rus: "Лондон"
     }
 

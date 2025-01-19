@@ -355,11 +355,20 @@ const refreshTheme = () => {
     const navigationButtonChoiceReviewsImgArrowPath = document.getElementById("navigation-button-first-section-choice-reviews-arrow-path");
     const modalNotificationVlockImg = document.getElementById("modal-notification-block-img");
     const buttonNoreTitleSvgPath = document.getElementById("button-more-title-svg-path");
-    const interestBlockSvg0 = document.getElementById("interest-block-svg-0");
-    const interestBlockSvgDark0 = document.getElementById("interest-block-svg-dark-0");
     const mainSendForm = document.getElementById("main-send-form");
     const mainSendFormSvg = document.getElementById("main-send-form-svg");
     const alternativeSendFormSvgPath = document.getElementById("alternative-send-form-svg-path");
+    const alternativeContactPhoneSvg = document.getElementById("alternative-contact-phone-svg");
+    const alternativeContactEmailSvg = document.getElementById("alternative-contact-email-svg");
+    const alternativeContactFacebookSvg = document.getElementById("alternative-contact-facebook-svg");
+    const alternativeContactTelegramSvg = document.getElementById("alternative-contact-telegram-svg");
+    const alternativeContactTwitterSvg = document.getElementById("alternative-contact-twitter-svg");
+    const alternativeContactVkSvg = document.getElementById("alternative-contact-vk-svg");
+    const alternativeContactWhatsappSvg = document.getElementById("alternative-contact-whatsapp-svg");
+    const reviewsSvg = document.getElementById("reviews-svg");
+    const reviewsArrowLeftPath = document.getElementById("reviews-arrow-left-path");
+    const reviewsArrowRightPath = document.getElementById("reviews-arrow-right-path");
+
 
 
     imgBlock.src = `/img/svg/desktop/src/${[selectTheme]}/third-section-lower-part Creative Design.svg`;
@@ -369,6 +378,7 @@ const refreshTheme = () => {
     themeButtonChoiceDark.src = `/img/svg/desktop/src/${[selectTheme]}/theme-button-first-section-choice-night-${[selectTheme]}.svg`;
     mainSendFormSvg.src = `/img/svg/desktop/src/${[selectTheme]}/main-send-form-svg.svg`;
     fourthSectionChoiceOfServiceArrow.src = `/img/svg/desktop/src/${[selectTheme]}/choice-of-service-arrow.svg`;
+    reviewsSvg.src = `/img/svg/desktop/src/${[selectTheme]}/reviews-svg.svg`;
 
     if (selectTheme === "light") {
         languageButtonFirstSectionSvgPath.style.fill = "#2E2E2E";
@@ -379,6 +389,8 @@ const refreshTheme = () => {
         themeChoiceCheckboxPathLight.style.fill = "#2E2E2E";
         themeChoiceCheckboxPathDark.style.fill = "#2E2E2E";
         navigationButtonChoiceIntroImgPath.style.stroke = "#2E2E2E";
+        reviewsArrowLeftPath.style.stroke = "#2E2E2E";
+        reviewsArrowRightPath.style.stroke = "#2E2E2E";
         navigationButtonChoiceIntroImgArrowPath.style.fill = "#2E2E2E";
         navigationButtonChoiceInfoImgPath.style.fill = "#2E2E2E";
         navigationButtonChoiceInfoImgArrowPath.style.fill = "#2E2E2E";
@@ -392,9 +404,6 @@ const refreshTheme = () => {
         navigationButtonChoiceReviewImgPath2.style.fill = "#2E2E2E";
         navigationButtonChoiceReviewImgPath3.style.fill = "#2E2E2E";
         navigationButtonChoiceReviewsImgArrowPath.style.fill = "#2E2E2E";
-        // buttonNoreTitleSvgPath.style.fill = "#2E2E2E";
-        interestBlockSvg0.style.display = "block";
-        interestBlockSvgDark0.style.display = "none";
         buttonMoreInterestBlock.style.border = "";
         mainSendForm.style.border = "";
         inputFirstName.classList = "input-light-theme";
@@ -403,9 +412,18 @@ const refreshTheme = () => {
         inputEmail.classList = "input-light-theme";
         fourthSectionChoiceOfService.style.borderBottom = "";
         textarea.classList = "textarea-light";
-        alternativeSendFormSvgPath.style.fill = "#2E2E2E"
-
+        alternativeSendFormSvgPath.style.fill = "#2E2E2E";
+        alternativeContactPhoneSvg.classList = "fill";
+        alternativeContactEmailSvg.classList = "stroke";
+        alternativeContactFacebookSvg.classList = "fill";
+        alternativeContactTelegramSvg.classList = "fill";
+        alternativeContactTwitterSvg.classList = "stroke";
+        alternativeContactVkSvg.classList = "stroke";
+        alternativeContactWhatsappSvg.classList = "stroke";
+        document.documentElement.style.setProperty('--svgColor', '#2E2E2E');
+        thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, rgba(46, 46, 46, 0.3) 25%, rgba(46, 46, 46, 0) 100%)";
     } else {
+        thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(214, 214, 214, 0) 0%, rgba(214, 214, 214, 0.3) 25%, rgba(214, 214, 214, 0) 100%)";
         languageButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
         themeButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
         navigationButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
@@ -427,9 +445,8 @@ const refreshTheme = () => {
         navigationButtonChoiceReviewImgPath2.style.fill = "#F3F3F3";
         navigationButtonChoiceReviewImgPath3.style.fill = "#F3F3F3";
         navigationButtonChoiceReviewsImgArrowPath.style.fill = "#F3F3F3";
-        // buttonNoreTitleSvgPath.style.fill = "#F3F3F3";
-        interestBlockSvg0.style.display = "none";
-        interestBlockSvgDark0.style.display = "block";
+        reviewsArrowLeftPath.style.stroke = "#D6D6D6";
+        reviewsArrowRightPath.style.stroke = "#D6D6D6";
         buttonMoreInterestBlock.style.border = "0.05208vw solid var(--ltSeparationLine)";
         mainSendForm.style.border = "0.10417vw solid var(--ltSeparationLine)";
         inputFirstName.classList = "input-dark-theme"
@@ -439,7 +456,14 @@ const refreshTheme = () => {
         fourthSectionChoiceOfService.style.borderBottom = "0.10417vw solid var(--ltSeparationLine)";
         textarea.classList = "textarea-dark";
         alternativeSendFormSvgPath.style.fill = "#D6D6D6"
-
+        alternativeContactPhoneSvg.classList = "fill-dark";
+        alternativeContactEmailSvg.classList = "stroke-dark";
+        alternativeContactFacebookSvg.classList = "fill-dark";
+        alternativeContactTelegramSvg.classList = "fill-dark";
+        alternativeContactTwitterSvg.classList = "stroke-dark";
+        alternativeContactVkSvg.classList = "stroke-dark";
+        alternativeContactWhatsappSvg.classList = "stroke-dark";
+        document.documentElement.style.setProperty('--svgColor', '#F3F3F3');
     }
 }
 
@@ -695,7 +719,6 @@ const startAnimation = () => {
             }, 700);
         }, 600);
     }, 400);
-
 };
 
 startAnimation();
@@ -947,12 +970,10 @@ buttonMoreTitleSvgBlock.addEventListener('click', () => {
     const currentTitle = arrayDataOfService[activNumber].title[selectLang];
     const interestBlock = document.getElementById(`interest-block-${activNumber}`);
     const interestBlockSvg = document.getElementById(`interest-block-svg-${activNumber}`);
-    const interestBlockSvgDark = document.getElementById(`interest-block-svg-dark-${activNumber}`);
 
 
     interestBlock.classList = "nonActivService";
     interestBlockSvg.classList = "nonActivServiceSvg";
-    interestBlockSvgDark.classList = "nonActivServiceSvg";
 
 
     if (activAnmimationTitle) {
@@ -1047,7 +1068,9 @@ interestBlockAllService.addEventListener('click', () => {
         thirdSectionImage.style.height = "34.89583vw";
         if (selectTheme === "light") {
             thirdSectionImage.style.background = "linear-gradient(92.04deg, rgba(0, 136, 204, 0.05) 1.72%, rgba(0, 136, 204, 0.2) 98.36%), linear-gradient(0deg, #E8E8E8, #E8E8E8)";
+            thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, rgba(46, 46, 46, 0.6) 56%, rgba(46, 46, 46, 0) 100%)";
         } else {
+            thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(214, 214, 214, 0) 0%, rgba(214, 214, 214, 0.6) 56%, rgba(214, 214, 214, 0) 100%)";
             thirdSectionImage.style.background = "linear-gradient(92.04deg, rgba(0, 136, 204, 0.05) 1.72%, rgba(0, 136, 204, 0.2) 98.36%), linear-gradient(0deg, #1C1C1C, #1C1C1C)";
         }
         thirdSectionImageBackground.style.opacity = "0";
@@ -1055,7 +1078,7 @@ interestBlockAllService.addEventListener('click', () => {
         thirdSectionTitle.style.opacity = "1";
 
         thirdSectionMainContentRightPartLine.style.height = "";
-        thirdSectionMainContentRightPartLine.style.background = "";
+
         thirdSectionMainContentRightPartLine.style.top = "";
         setTimeout(() => {
             thirdSectionImage.style.transform = "rotate3d(0, 1, 0, 30deg)";
@@ -1076,7 +1099,7 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
     event.stopPropagation();
     const newDropListWrapper = document.createElement('div');
     newDropListWrapper.id = "drop-list";
-    if(selectTheme === "light") {
+    if (selectTheme === "light") {
         newDropListWrapper.classList = "drop-list-light";
     } else {
         newDropListWrapper.classList = "drop-list-dark";
@@ -1090,7 +1113,7 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
         actualityCategory.forEach(textSelectCategoty => {
             const newDropListPoint = document.createElement('div');
             newDropListPoint.textContent = textSelectCategoty;
-            if(selectTheme === "light") {
+            if (selectTheme === "light") {
                 newDropListPoint.classList = "drop-list-item-light";
             } else {
                 newDropListPoint.classList = "drop-list-item-dark";
@@ -1181,12 +1204,6 @@ fourthSectionChoiceOfService.addEventListener('click', (event) => {
     });
 });
 
-
-
-
-
-
-
 thirdSectionButtonOrder.addEventListener('click', setupAndTranslateForSelectService);
 
 const voidInput = () => {
@@ -1265,9 +1282,6 @@ inputEmail.addEventListener('input', () => {
 const submitButtonFourthSection = document.getElementById('send-form-submit');
 const requiredFieldsText = document.getElementById("required-fields");
 const correctlyText = document.getElementById("correctly");
-
-
-
 
 
 submitButtonFourthSection.addEventListener('mouseenter', () => {

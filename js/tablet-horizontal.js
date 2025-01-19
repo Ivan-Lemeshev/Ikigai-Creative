@@ -13,6 +13,19 @@ const thNavigationBlockItem2 = document.getElementById("th-navigation-block-item
 const thNavigationBlockItem3 = document.getElementById("th-navigation-block-item-3");
 const thNavigationBlockItem4 = document.getElementById("th-navigation-block-item-4");
 
+let thSelectTheme = "light";
+
+// const thSwitchTheme = () => {
+//     thSelectTheme = thSelectTheme === "light" ? "dark" : "light";
+//     for (let id in themeWrapper) { // перебираем все айдишники
+//         const data = themeWrapper[id]; // пой айди получаю информацию 
+//         const element = document.getElementById(id); // получаю элемент который нужно по айди заменить 
+//         const allStyles = data.styles;
+//         element.style.color = allStyles[thSelectTheme].color;
+//         element.style.background = allStyles[thSelectTheme].background;
+//     }
+// }
+
 thNavButton.addEventListener('click', () => {
     thNavigationBlock.style.display = "block";
     setTimeout(() => {
@@ -568,7 +581,7 @@ const thActivService = () => {
 
     thThirdSectionTitle.textContent = currentTitle;
 
-    thThirdSectionImg.src = `/img/svg/tablet-horizontal/th-third-section-img ${currentService.title.eng}.svg`;
+    thThirdSectionImg.src = `/img/svg/tablet-horizontal/src/${[thSelectTheme]}/th-third-section-img ${currentService.title.eng}.svg`;
     thThirdSectionText0.textContent = currentService.description[thSelectLang][0];
     thThirdSectionText1.textContent = currentService.description[thSelectLang][1];
 
@@ -826,7 +839,7 @@ const createDivBlocks = () => {
             div.id = `th-third-section-right-services-${buffer.length}`;
             div.classList = "th-third-section-right-services";
             div.style.top = startDivTop + (gapDivs + divHeight) * buffer.length + "vw";
-            divImg.src = `/img/svg/tablet-horizontal/src/${service.title.eng}.svg`;
+            divImg.src = `/img/svg/tablet-horizontal/src/${[thSelectTheme]}/${service.title.eng}.svg`;
             divH3.textContent = service.title[thSelectLang]
             div.appendChild(divImg);
             div.appendChild(divH3);

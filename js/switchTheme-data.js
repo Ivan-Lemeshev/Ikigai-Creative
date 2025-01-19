@@ -2692,7 +2692,7 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                background: `linear-gradient(180deg, #E8E8E8 4.39%, rgba(0, 136, 204, 0.4) 33%, rgba(0, 136, 204, 0.1) 67.57%, rgba(0, 136, 204, 0.1) 80.01%, rgba(0, 136, 204, 0) 90.37%)`
+                background: `linear-gradient(180deg, #E8E8E8 4.39%, rgba(0, 136, 204, 0.4) 33%, rgba(0, 136, 204, 0.1) 67.57%, rgba(0, 136, 204, 0.1) 80.01%, rgba(0, 136, 204, 0) 90.37%), #E8E8E8`
             },
             dark: {
                 color: "",
@@ -3238,11 +3238,15 @@ const themeWrapper = {
         styles: {
             light: {
                 color: "",
-                background: `var(--ltMain)`
+                background: ` linear-gradient(1.03deg, #E8E8E8 0.93%, rgba(232, 232, 232, 0.2) 50.51%, #E8E8E8 99.17%),
+                            linear-gradient(90deg, rgba(0, 136, 204, 0.4) 33.77%, rgba(0, 136, 204, 0) 58.63%, rgba(0, 136, 204, 0.4) 77.29%),
+                            linear-gradient(0deg, #E8E8E8, #E8E8E8)`
             },
             dark: {
                 color: "",
-                background: `var(--dtMain)`
+                background: `linear-gradient(1.03deg, #1C1C1C 0.93%, rgba(28, 28, 28, 0.2) 50.51%, #1C1C1C 99.17%),
+                            linear-gradient(90deg, rgba(0, 136, 204, 0.4) 33.77%, rgba(0, 136, 204, 0) 58.63%, rgba(0, 136, 204, 0.4) 77.29%),
+                            linear-gradient(0deg, #1C1C1C, #1C1C1C)`
             }
         }
     },
@@ -3416,6 +3420,468 @@ const themeWrapper = {
         }
     },
 
+    "footer": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "five-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "footer-content-eng-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "footer-content-eng-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "footer-content-eng-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "footer-content-eng-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "footer-content-eng-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "footer-content-rus-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "footer-content-rus-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "footer-content-rus-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "footer-content-rus-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "five-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "reviews-upper-name": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "reviews-upper-upper-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "reviews-upper-lower-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "reviews-lower-name": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "reviews-lower-upper-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "reviews-lower-lower-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "other-reviews-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-central-text-first-section": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-first-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(180.68deg, rgba(232, 232, 232, 0) 73.4%, rgba(232, 232, 232, 0.2) 76.77%, #E8E8E8 99.39%),
+        radial-gradient(40.28% 48.45% at 37.9% 51.55%, rgba(232, 232, 232, 0.1) 0%, rgba(232, 232, 232, 0.02) 24.72%, rgba(2, 166, 255, 0.05) 44.73%, rgba(2, 166, 255, 0.05) 62.74%, rgba(232, 232, 232, 0) 100%),
+        linear-gradient(137.96deg, rgba(232, 232, 232, 0.02) 6.33%, rgba(2, 166, 255, 0.1) 44.97%, rgba(232, 232, 232, 0.02) 81.43%),
+        linear-gradient(218.28deg, rgba(232, 232, 232, 0.02) 22.63%, rgba(0, 136, 204, 0.1) 55.34%, rgba(232, 232, 232, 0.02) 87.99%),
+        #E8E8E8`
+            },
+            dark: {
+                color: "",
+                background: ` linear-gradient(180.68deg, rgba(28, 28, 28, 0) 73.4%, rgba(28, 28, 28, 0.2) 76.77%, #1C1C1C 99.39%),
+                            radial-gradient(40.28% 48.45% at 37.9% 51.55%, rgba(28, 28, 28, 0.1) 0%, rgba(28, 28, 28, 0.02) 24.72%, rgba(2, 166, 255, 0.05) 44.73%, rgba(2, 166, 255, 0.05) 62.74%, rgba(28, 28, 28, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+                            linear-gradient(137.96deg, rgba(28, 28, 28, 0.02) 6.33%, rgba(2, 166, 255, 0.1) 44.97%, rgba(28, 28, 28, 0.02) 81.43%),
+                            linear-gradient(218.28deg, rgba(28, 28, 28, 0.02) 22.63%, rgba(0, 136, 204, 0.1) 55.34%, rgba(28, 28, 28, 0.02) 87.99%),
+                            linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+
+    "th-second-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "th-second-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-second-section-text-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-second-section-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-third-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "th-third-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-third-section-title-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtSeparationLine)`
+            },
+            dark: {
+                color: "",
+                background: `var(--ltSeparationLine)`
+            }
+        }
+    },
+
+    "th-third-section-main-img-wrapper": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(165.07deg, rgba(0, 136, 204, 0.08) 6%, rgba(0, 136, 204, 0.04) 73.43%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(165.07deg, rgba(0, 136, 204, 0.08) 6%, rgba(0, 136, 204, 0.04) 73.43%)`
+            }
+        }
+    },
+
+    "th-third-section-title-of-service": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-third-section-text-about-service-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-third-section-text-about-service-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-third-section-black-blocks-top": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(180deg, #E8E8E8 43.55%, rgba(232, 232, 232, 0) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(180deg, #1C1C1C 43.55%, rgba(28, 28, 28, 0) 100%)`
+            }
+        }
+    },
+
+    "th-third-section-black-blocks-bottom": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(180deg, rgba(232, 232, 232, 0) 0%, #E8E8E8 38.38%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, #1C1C1C 38.38%)`
+            }
+        }
+    },
+
+    "th-price-list-block": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(232, 232, 232, 0.8)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(28, 28, 28, 0.8)`
+            }
+        }
+    },
 
 }
 

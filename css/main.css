@@ -555,7 +555,7 @@
 }
 
 #central-text-first-section-down {
-    font-size: 1.6625vw;
+    font-size: 1.25vw;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -700,7 +700,8 @@
     height: 83.95833vw;
     overflow: visible;
     background:
-        linear-gradient(180deg, #E8E8E8 4.39%, rgba(0, 136, 204, 0.4) 33%, rgba(0, 136, 204, 0.1) 67.57%, rgba(0, 136, 204, 0.1) 80.01%, rgba(0, 136, 204, 0) 90.37%);
+        linear-gradient(180deg, #E8E8E8 4.39%, rgba(0, 136, 204, 0.4) 33%, rgba(0, 136, 204, 0.1) 67.57%, rgba(0, 136, 204, 0.1) 80.01%, rgba(0, 136, 204, 0) 90.37%),
+        #E8E8E8;
 }
 
 
@@ -1233,16 +1234,7 @@
                 height: 2.60417vw;
                 object-fit: contain;
                 pointer-events: none;
-
-                & path {
-                    fill: var(--dtSeparationLine);
-                    opacity: 0.5;
-                }
-
-                & circle {
-                    stroke: var(--dtSeparationLine);
-                    opacity: 0.5;
-                }
+                opacity: 0.5;
             }
         }
 
@@ -1410,10 +1402,12 @@
     position: relative;
     width: 100vw;
     height: 56.25vw;
-    /* background:
-        linear-gradient(0deg, #E8E8E8 0.93%, rgba(232, 232, 232, 0) 50.51%, #E8E8E8 99.17%),
+    background: linear-gradient(1.03deg, #E8E8E8 0.93%, rgba(232, 232, 232, 0.2) 50.51%, #E8E8E8 99.17%),
         linear-gradient(90deg, rgba(0, 136, 204, 0.4) 33.77%, rgba(0, 136, 204, 0) 58.63%, rgba(0, 136, 204, 0.4) 77.29%),
-        linear-gradient(0deg, #E8E8E8, #E8E8E8); */
+        linear-gradient(0deg, #E8E8E8, #E8E8E8);
+
+
+
 
 }
 
@@ -1483,13 +1477,15 @@
     border-bottom: 0.05208vw solid var(--ltSeparationLine);
     padding-left: 0.52083vw;
     color: var(--dtText);
+
     &::placeholder {
         font-size: 1.5625vw;
         font-weight: 300;
         color: var(--dtText);
     }
-    
+
 }
+
 #input-first-name {
     top: 7.29167vw;
     left: 2.34375vw;
@@ -1753,7 +1749,7 @@
 
 }
 
-.drop-list-dark  {
+.drop-list-dark {
     width: 21.875vw;
     height: auto;
     position: absolute;
@@ -1921,14 +1917,19 @@
 
 #send-form-submit.send-form-submit-activ {
     color: var(--ltText);
-    box-shadow: 0px 0px 8px 3px var(--ltText);
-    border: transparent;
+    background: rgba(243, 243, 243, 0.6);
+    border: 0.05208vw solid rgba(46, 46, 46, 0.6);
     cursor: pointer;
 
     &:hover {
-        color: #00A5FF;
-        background-color: var(--darkBlue);
-        box-shadow: 0px 0px 14px 4px var(--blue);
+        color: var(--ltElementBackground);
+        background: var(--secondAccent);
+    }
+
+    &:active {
+        border-width: 0.10417vw 0.10417vw 0px 0.10417vw;
+        border-style: solid;
+        border-color: var(--dtSeparationLine);
     }
 
 }
@@ -1973,12 +1974,14 @@
     height: 3.125vw;
     margin-left: 2.34375vw;
     cursor: pointer;
+    overflow: visible;
 
     &>svg {
         height: 3.125vw;
         width: 3.125vw;
         object-fit: contain;
         pointer-events: all;
+        overflow: visible;
 
         &.fill path {
             fill: var(--dtSeparationLine);
@@ -1990,26 +1993,31 @@
             transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
         }
 
-        &.circle {
+        & circle {
             stroke: var(--dtSeparationLine);
             transition: stroke 0.3s ease-in-out;
         }
+
         &.fill-dark path {
-            fill: var(--dtSeparationLine);
+            fill: var(--ltSeparationLine);
             transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+        }
+
+        &.fill-dark circle {
+            stroke: var(--ltSeparationLine);
+            transition: stroke 0.3s ease-in-out, stroke 0.3s ease-in-out;
         }
 
         &.stroke-dark path {
-            stroke: var(--dtSeparationLine);
+            stroke: var(--ltSeparationLine);
             transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
         }
 
-        &.circle-dark {
-            stroke: var(--dtSeparationLine);
-            transition: stroke 0.3s ease-in-out;
+        &.stroke-dark circle {
+            stroke: var(--ltSeparationLine);
+            transition: stroke 0.3s ease-in-out, stroke 0.3s ease-in-out;
         }
     }
-
 
 
     &>div {
@@ -2020,22 +2028,31 @@
         transition: color 0.3s ease-in-out;
     }
 
-    &:hover {
-        & svg.fill path {
-            fill: var(--secondAccent);
+    &:hover svg {
+
+        &.fill path {
+            fill: var(--secondAccent) !important;
         }
 
-        & svg.stroke path {
-            stroke: var(--secondAccent);
+        &.stroke path {
+            stroke: var(--secondAccent) !important;
         }
 
-        &.circle {
-            stroke: var(--secondAccent);
+        &.fill-dark path {
+            fill: var(--secondAccent) !important;
         }
 
-        & div {
-            color: var(--secondAccent);
+        &.stroke-dark path {
+            stroke: var(--secondAccent) !important;
         }
+
+        & circle {
+            stroke: var(--secondAccent) !important;
+        }
+    }
+
+    &:hover div {
+        color: var(--secondAccent) !important;
     }
 }
 
@@ -2073,6 +2090,7 @@
     width: 100vw;
     height: 56.25vw;
     overflow: hidden;
+    background: var(--dtText);
 }
 
 #five-section-title {
@@ -2242,6 +2260,7 @@
     width: 100vw;
     height: 13.33333vw;
     overflow: visible;
+    background: var(--dtText);
 }
 
 #footer-content-eng {
