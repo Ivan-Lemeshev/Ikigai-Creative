@@ -103,43 +103,112 @@
     top: 0;
     right: -100vw;
     transition: right 0.5s ease-in-out;
-    background: linear-gradient(166.39deg, rgba(0, 76, 123, 0.2) 4.94%, rgba(0, 13, 21, 0.2) 14.94%, rgba(0, 13, 21, 0.2) 35.08%, rgba(0, 76, 123, 0.2) 69.97%, rgba(0, 13, 21, 0.2) 89.82%);
+    background: linear-gradient(0deg, rgba(0, 136, 204, 0.1), rgba(0, 136, 204, 0.1)),
+        linear-gradient(0deg, rgba(232, 232, 232, 0.6), rgba(232, 232, 232, 0.6));
     backdrop-filter: blur(2.4875621890547266vw);
 
 
 
     &>#th-navigation-block-title {
         width: 13.49892vw;
-        height: 3.10881dvh;
+        height: 5.05181dvh;
         position: absolute;
-        top: 4.66321dvh;
-        left: 1.94384vw;
-        font-size: min(2.59179vw, 3.10881dvh);
+        top: 4.40415dvh;
+        left: 2.33161dvh;
+        font-size: min(2.37581vw, 2.84974dvh);
+        letter-spacing: 0.1em;
         font-weight: 600;
-        line-height: 3.10881dvh;
-        color: var(--secondBlue);
+        color: var(--ltText);
         overflow: visible;
+        transition: opacity 0.3s ease-in-out;
     }
 
     &>#th-navigation-block-lang-button {
-        width: 4.85961vw;
+        width: 2.59179vw;
         height: 3.10881dvh;
         position: absolute;
-        top: 4.66321dvh;
+        top: 5dvh;
+        right: 6.2635vw;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &>#th-navigation-block-theme-button {
+        width: 2.59179vw;
+        height: 3.10881dvh;
+        position: absolute;
+        top: 5dvh;
         right: 1.94384vw;
-        font-weight: 600;
-        font-size: min(2.59179vw, 3.10881dvh);
-        line-height: 3.10881dvh;
-        color: var(--secondBlue);
+        transition: right 0.3s ease-in-out;
+    }
+
+    &>#th-navigation-block-menu-button {
+        width: 2.59179vw;
+        height: 3.10881dvh;
+        position: absolute;
+        top: 5dvh;
+        right: -3vw;
+        transition: right 0.3s ease-in-out;
+    }
+
+    &>#th-navigation-block-lang-button-menu {
+        position: absolute;
+        top: 4.40415dvh;
+        left: 16.95464vw;
+        width: 14.79482vw;
+        height: 3.75648dvw;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        
+        &>#th-navigation-block-lang-button-menu-eng {
+            font-weight: 400;
+            font-size: min(2.37581vw, 2.84974dvh); 
+            letter-spacing: 0.1em;
+            color: var(--ltText);
+            width: 4.42765vw;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        &>#th-navigation-block-lang-switch-button-background {
+            position: absolute;
+            left: 5.50756vw;
+            top: 1.13342dvh;
+            width: 3.86069vw;
+            height: 2.13731dvh;
+        }
+
+        &>#th-navigation-block-lang-switch-button-face {
+            position: absolute;
+            left: 5.50756vw;
+            top: 0.7772dvh;
+            width: 2.37581vw;
+            height: 2.84974dvh;
+            transition: left 0.3s ease-in-out;
+        } 
+
+        &>#th-navigation-block-lang-button-menu-rus {
+            font-weight: 400;
+            font-size: min(2.37581vw, 2.84974dvh); 
+            letter-spacing: 0.1em;
+            color: var(--ltText);
+            width: 4.42765vw;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
     }
 
     &>#th-navigation-block-title-line {
         width: 39.30886vw;
-        height: 0.12953dvw;
+        height: 0.06477dvh;
         position: absolute;
         top: 8.80829dvh;
         left: 1.94384vw;
-        background-color: var(--darkBlue);
+        background-color: var(--dtSeparationLine);
     }
 
     &>.th-navigation-block-item {
@@ -151,23 +220,24 @@
 
 
         &>.th-navigation-block-item-title {
-            font-weight: 400;
-            font-size: min(2.59179vw, 3.10881dvh);
-            line-height: 3.10881dvh;
-            color: var(--secondBlue);
+            font-weight: 350;
+            font-size: min(2.59179vw, 2.84974dvh);
+            color: var(--ltText);
             position: absolute;
             top: 0;
             left: 0;
+            letter-spacing: 0.1em;
         }
 
         &>.th-navigation-block-item-text {
             font-weight: 300;
-            font-size: min(2.15983vw, 2.59067dvh);
-            line-height: 2.59067dvh;
-            color: var(--secondBlue);
+            font-size: min(1.72786vw, 2.07254dvh);
+            line-height: 2.90155dvh;
+            color: var(--ltText);
             position: absolute;
             left: 0;
             top: 4.40415dvh;
+            letter-spacing: 0.1em;
         }
     }
 
@@ -399,10 +469,11 @@
                 left: 3.23974vw;
                 width: 18.89849vw;
                 height: 3.56371vw;
-                font-size: 3.02376vw;
-                font-weight: 400;
-                line-height: 3.02376vw;
-                color: #EAF8FF;
+                font-size: 2.80778vw;
+                font-weight: 350;
+                letter-spacing: 0.1em;
+                color: var(--ltText);
+                overflow: visible;
             }
 
             &>#th-price-list-x-mark {
@@ -421,7 +492,7 @@
                 left: 3.23974vw;
                 width: 47.5162vw;
                 height: 0.10799vw;
-                background: rgba(0, 154, 236, 0.6)
+                background: rgba(46, 46, 46, 0.6);
             }
 
             &>#th-price-list-item-wrapper {
@@ -442,9 +513,9 @@
                     justify-content: space-between;
                     align-items: center;
                     overflow: visible;
-                    color: #EAF8FF;
-                    font-size: 2.37581vw;
-                    line-height: 2.37581vw;
+                    color: var(--ltText);
+                    font-size: 2.15983vw;
+                    letter-spacing: 0.1em;
                     font-weight: 300;
 
                     &>.th-price-list-service-name {
@@ -470,7 +541,7 @@
                 left: 3.23974vw;
                 width: 47.5162vw;
                 height: 0.10799vw;
-                background: rgba(0, 154, 236, 0.6)
+                background: rgba(46, 46, 46, 0.6);
             }
 
             &>#th-price-list-footer {
@@ -479,11 +550,12 @@
                 position: absolute;
                 bottom: 2.4838vw;
                 left: 3.23974vw;
-                font-size: 1.94384vw;
+                font-size: 1.6vw;
                 font-weight: 300;
-                line-height: 2.72138vw;
-                color: #EAF8FF;
+                line-height: 2.41901vw;
+                color: var(--ltText);
                 overflow: visible;
+                letter-spacing: 0.1em;
             }
         }
     }
@@ -715,39 +787,18 @@
     width: 100vw;
     height: 83.36933vw;
     overflow: visible;
-
-    &>#th-four-section-blue-gradient {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 83.36933vw;
-        background:
-            radial-gradient(80.13% 43.52% at 17.01% 51.49%, rgba(0, 83, 128, 0.2) 0%, rgba(0, 0, 0, 0) 100%),
-            radial-gradient(84.34% 46.98% at 89.9% 55.12%, rgba(236, 82, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
-        opacity: 1;
-        transition: opacity 0.3s ease-in-out;
-    }
-
-    &>#th-four-section-red-gradient {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 83.36933vw;
-        background:
-            radial-gradient(80.13% 43.52% at 17.01% 51.49%, rgba(236, 82, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%),
-            radial-gradient(84.34% 46.98% at 89.9% 55.12%, rgba(236, 82, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-    }
+    background:
+        radial-gradient(80.13% 43.52% at 17.01% 51.49%, rgba(0, 136, 204, 0.2) 0%, rgba(232, 232, 232, 0) 100%),
+        radial-gradient(84.34% 46.98% at 89.9% 55.12%, rgba(0, 136, 204, 0.2) 0%, rgba(232, 232, 232, 0) 100%),
+        linear-gradient(0deg, #E8E8E8, #E8E8E8);
 
     &>#th-four-section-title {
         width: 48.59611vw;
         height: 3.86371vw;
         font-weight: 400;
-        font-size: 3.02376vw;
-        color: var(--blue);
+        font-size: 2.80778vw;
+        color: var(--ltText);
+        letter-spacing: 0.1em;
         position: absolute;
         top: 5.39957vw;
         left: 5.39957vw;
@@ -764,15 +815,15 @@
         height: 67.38661vw;
         top: 12.20302vw;
         left: 5.39957vw;
-        background-color: rgba(0, 83, 128, 0.07);
-        border: 0.10417vw solid rgba(0, 154, 236, 0.5);
+        border: 0.054vw solid rgba(46, 46, 46, 0.5);
         z-index: 2;
         overflow: visible;
 
         &>#th-main-send-form-title {
-            font-weight: 400;
-            font-size: 2.59179vw;
-            color: var(--blue);
+            font-weight: 350;
+            letter-spacing: 0.1em;
+            font-size: 2.37581vw;
+            color: var(--ltText);
             position: absolute;
             top: 4.9676vw;
             left: 30.56156vw;
@@ -781,26 +832,49 @@
             will-change: transform;
         }
 
-
-        &>#th-input-first-name,
-        &>#th-input-last-name,
-        &>#th-input-phone,
-        &>#th-input-email {
+        &>.th-input-light-theme {
             width: 34.4676vw;
             height: 5.054vw;
             position: absolute;
             font-weight: 300;
-            font-size: 2.15983vw;
-            color: var(--blue);
-            border-bottom: 0.10799vw solid var(--blue);
+            font-size: 1.94384vw;
+            color: var(--ltText);
+            border-bottom: 0.054vw solid var(--dtSeparationLine);
             padding-left: 0.83045vw;
             transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
             text-rendering: optimizeLegibility;
             will-change: transform;
+            letter-spacing: 0.1em;
 
             &::placeholder {
-                font-size: 2.15983vw;
-                color: var(--darkBlue);
+                font-size: 1.94384vw;
+                color: var(--ltText);
+                font-weight: 300;
+                transition: opacity 0.3s ease-in-out;
+                text-rendering: optimizeLegibility;
+                will-change: transform;
+                letter-spacing: 0.1em;
+            }
+        }
+
+        &>.th-input-dark-theme {
+            width: 34.4676vw;
+            height: 5.054vw;
+            position: absolute;
+            font-weight: 300;
+            font-size: 1.94384vw;
+            color: var(--dtText);
+            border-bottom: 0.054vw solid var(--ltSeparationLine);
+            padding-left: 0.83045vw;
+            transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
+            text-rendering: optimizeLegibility;
+            will-change: transform;
+            letter-spacing: 0.1em;
+
+            &::placeholder {
+                font-size: 1.94384vw;
+                letter-spacing: 0.1em;
+                color: var(--dtText);
                 font-weight: 300;
                 transition: opacity 0.3s ease-in-out;
                 text-rendering: optimizeLegibility;
@@ -843,10 +917,10 @@
             width: 34.4676vw;
             height: 5.054vw;
             position: absolute;
-            color: var(--blue);
+            color: var(--ltText);
             font-weight: 300;
-            font-size: 2.15983vw;
-            line-height: 2.15983vw;
+            font-size: 1.94384vw;
+            letter-spacing: 0.1em;
             top: 31.92225vw;
             left: 4.53564vw;
             display: flex;
@@ -870,8 +944,8 @@
                 width: 34.88229vw;
                 height: 5.054vw;
                 position: absolute;
-                border-bottom-color: rgba(2, 133, 204, 1);
-                border-bottom-width: 0.10799vw;
+                border-bottom-color: rgba(46, 46, 46, 1);
+                border-bottom-width: 0.054vw;
                 border-bottom-style: solid;
                 padding-left: 1.07991vw;
                 padding-right: 1.07991vw;
@@ -883,11 +957,12 @@
                 overflow: hidden;
 
                 &>#th-choice-of-service-placeholder {
-                    color: var(--darkBlue);
+                    color: var(--ltText);
                     font-weight: 300;
-                    font-size: 2.15983vw;
+                    font-size: 1.8vw;
                     transition: color ease-in-out 0.3s;
                     overflow: hidden;
+                    letter-spacing: 0.1em;
                     text-rendering: optimizeLegibility;
                     will-change: transform;
                 }
@@ -907,17 +982,18 @@
             }
         }
 
-        &>#th-textarea {
+        &>.th-textarea-light {
             width: 73.08639vw;
             height: 12.35421vw;
             position: absolute;
             font-weight: 300;
-            color: var(--blue);
+            color: var(--ltText);
             top: 41.2959vw;
             left: 3.7797vw;
             overflow: hidden;
             line-height: 300%;
-            font-size: 2.15983vw;
+            font-size: 1.94384vw;
+            letter-spacing: 0.1em;
             word-wrap: break-word;
             overflow-y: hidden;
             text-rendering: optimizeLegibility;
@@ -926,7 +1002,8 @@
 
 
             &::placeholder {
-                font-size: 2.15983vw;
+                font-size: 1.94384vw;
+                letter-spacing: 0.1em;
                 text-rendering: optimizeLegibility;
                 will-change: transform;
                 color: var(--darkBlue);
@@ -938,8 +1015,8 @@
             width: 73.08639vw;
             height: 6.50022vw;
             background: transparent;
-            border-bottom: 0.10799vw solid var(--blue);
-            border-top: 0.10799vw solid var(--blue);
+            border-bottom: 0.10799vw solid var(--dtSeparationLine);
+            border-top: 0.10799vw solid var(--dtSeparationLine);
             position: absolute;
             bottom: 13.1365vw;
             left: 3.7797vw;
@@ -952,12 +1029,11 @@
             height: 4.53564vw;
             left: 27.32181vw;
             bottom: 4.92765vw;
-            background-color: rgba(0, 13, 21, 0.8);
-            border: 0.10799vw solid var(--deepDarkBlue);
-            color: var(--darkBlue);
-            font-weight: 600;
-            font-size: 2.37581vw;
-            line-height: 2.37581vw;
+            background: rgba(46, 46, 46, 0.6);
+            color: rgba(232, 232, 232, 0.6);
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            font-size: 2.15983vw;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -967,11 +1043,14 @@
         }
 
         &>#th-send-form-submit.th-send-form-submit-activ {
-            color: var(--blue);
-            background-color: #004C7B;
-            border: 0.10799vw solid var(--secondBlue);
+            color: var(--dtText);
+            background: var(--dtSeparationLine);
             text-rendering: optimizeLegibility;
             will-change: transform;
+
+            &:active {
+                background: var(--accent);
+            }
         }
     }
 
@@ -979,8 +1058,8 @@
         position: absolute;
         top: 12.20302vw;
         right: 5.39957vw;
-        background: rgba(127, 45, 0, 0.1);
-        border: 0.10799vw solid rgba(236, 82, 0, 0.5);
+        background: rgba(0, 136, 204, 0.02);
+        border: 0.054vw solid rgba(43, 43, 43, 0.5);
         width: 7.5594vw;
         height: 67.38661vw;
         display: flex;
@@ -1002,11 +1081,11 @@
     height: auto;
     position: absolute;
     z-index: 10;
-    border: 0.10799vw solid #015A8C;
+    border: 0.054vw solid rgba(46, 46, 46, 0.5);
     border-bottom-left-radius: 0.52083vw;
     border-bottom-right-radius: 0.52083vw;
     text-align: left;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(232, 232, 232, 0.7);
     opacity: 0;
     top: 5.07559vw;
     display: inline-block;
@@ -1024,13 +1103,12 @@
         display: flex;
         align-items: center;
         padding-left: 0.52083vw;
-        color: #01679F;
-        font-size: 2.15983vw;
+        color: var(--ltText);
+        font-size: 1.9vw;
+        letter-spacing: 0.1em;
         text-align: left;
         font-weight: 300;
         cursor: pointer;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #01679F;
         overflow: visible;
         text-rendering: optimizeLegibility;
         will-change: transform;
@@ -1051,9 +1129,10 @@
     overflow: visible;
     width: 100vw;
     height: 83.36933vw;
-    background: linear-gradient(0deg, #000D15, #000D15),
-        linear-gradient(70.49deg, rgba(0, 154, 236, 0.2) 7.13%, rgba(0, 154, 236, 0.14) 50.94%, rgba(0, 154, 236, 0.2) 94.31%),
-        linear-gradient(180deg, #000D15 0%, rgba(0, 13, 21, 0.4) 50.5%, #000D15 100%);
+    background:
+        linear-gradient(180deg, #E8E8E8 0%, rgba(232, 232, 232, 0.4) 50.5%, #E8E8E8 100%),
+        linear-gradient(70.49deg, rgba(0, 136, 204, 0.2) 7.13%, rgba(0, 136, 204, 0.14) 50.94%, rgba(0, 136, 204, 0.2) 94.31%),
+        linear-gradient(0deg, #E8E8E8, #E8E8E8);
 
 
     &>#th-five-section-title {
@@ -1063,9 +1142,10 @@
         width: 16.73866vw;
         height: 3.56371vw;
         font-weight: 400;
+        letter-spacing: 0.1em;
         font-size: 3.02376vw;
-        line-height: 3.02376vw;
-        color: var(--blue);
+        overflow: visible;
+        color: var(--ltText);
         text-rendering: optimizeLegibility;
         will-change: transform;
     }
@@ -1144,7 +1224,7 @@
         pointer-events: none;
         width: 10.79914vw;
         height: 13.82289vw;
-        border: 0.21598vw solid var(--lightBlue);
+        border: 0.10799vw solid rgba(46, 46, 46, 0.6);
         position: absolute;
         left: 0;
         top: 0;
@@ -1161,31 +1241,32 @@
         text-rendering: optimizeLegibility;
         will-change: transform;
         flex-wrap: wrap;
-        line-height: 1.75vw;
         overflow: visible;
-        border: 1px solid rgba(0, 154, 236, 0.5);
-        background: rgba(0, 83, 128, 0.05);
+        border: 0.054vw solid rgba(46, 46, 46, 0.5);
+        background: rgba(0, 136, 204, 0.03);
 
     }
 
     .th-reviews-name {
-        font-weight: 300;
-        font-size: 2.15983vw;
-        color: var(--lightBlue);
+        font-weight: 350;
+        font-size: 1.94384vw;
+        color: var(--ltText);
         width: 21.59827vw;
         height: 2.59179vw;
         position: absolute;
         left: 11.87905vw;
         top: 1.07991vw;
+        letter-spacing: 0.1em;
         text-rendering: optimizeLegibility;
         will-change: transform;
     }
 
     .th-reviews-text {
         font-weight: 300;
-        font-size: 2.15983vw;
-        line-height: 2.59179vw;
-        color: var(--blue);
+        font-size: 1.72786vw;
+        letter-spacing: 0.1em;
+        line-height: 2.41901vw;
+        color: var(--ltText);
         margin-top: 1.61987vw;
         margin-left: 1.61987vw;
         text-rendering: optimizeLegibility;
@@ -1193,10 +1274,10 @@
     }
 
     .th-second-reviews-text {
-        margin-top: 2.59179vw;
         font-weight: 300;
-        font-size: 2.15983vw;
-        line-height: 2.59179vw;
+        letter-spacing: 0.1em;
+        font-size: 1.72786vw;
+        line-height: 2.41901vw;
         color: var(--blue);
         margin-left: 1.61987vw;
         text-rendering: optimizeLegibility;
@@ -1210,7 +1291,7 @@
     height: 6.47948vw;
     position: relative;
     overflow: visible;
-
+    background: var(--dtText);
 
     &>#th-footer-eng-0 {
         width: 9.71922vw;
@@ -1221,7 +1302,7 @@
         font-weight: 700;
         line-height: 2.80778vw;
         letter-spacing: 0.1em;
-        color: var(--blue);
+        color: var(--ltText);
         overflow: visible;
         display: flex;
         align-items: center;
@@ -1238,7 +1319,7 @@
         font-weight: 700;
         line-height: 2.80778vw;
         letter-spacing: 0.1em;
-        color: var(--blue);
+        color: var(--ltText);
         overflow: visible;
         display: flex;
         text-rendering: optimizeLegibility;
@@ -1257,7 +1338,7 @@
         letter-spacing: 0.1em;
         text-rendering: optimizeLegibility;
         will-change: transform;
-        color: var(--blue);
+        color: var(--ltText);
         overflow: visible;
         display: flex;
         align-items: center;
@@ -1274,7 +1355,7 @@
         font-weight: 700;
         line-height: 2.80778vw;
         letter-spacing: 0.1em;
-        color: var(--blue);
+        color: var(--ltText);
         overflow: visible;
         display: flex;
         align-items: center;
@@ -1291,7 +1372,7 @@
         font-weight: 700;
         line-height: 2.80778vw;
         letter-spacing: 0.1em;
-        color: var(--blue);
+        color: var(--ltText);
         overflow: visible;
         display: flex;
         align-items: center;
@@ -1303,6 +1384,7 @@
     height: 6.47948vw;
     position: relative;
     display: none;
+    background: var(--dtText);
 
     &>#th-footer-rus-0 {
         position: absolute;
@@ -1315,8 +1397,7 @@
         letter-spacing: 0.1em;
         text-rendering: optimizeLegibility;
         will-change: transform;
-        color: var(--blue);
-        font-family: 'Lato';
+        color: var(--ltText);
         display: flex;
         align-items: center;
     }
@@ -1332,8 +1413,7 @@
         font-weight: 700;
         line-height: 2.80778vw;
         letter-spacing: 0.1em;
-        color: var(--blue);
-        font-family: 'Lato';
+        color: var(--ltText);
         display: flex;
         align-items: center;
     }
@@ -1349,8 +1429,7 @@
         font-weight: 700;
         line-height: 2.80778vw;
         letter-spacing: 0.1em;
-        color: var(--blue);
-        font-family: 'Lato';
+        color: var(--ltText);
         display: flex;
         align-items: center;
     }
@@ -1366,8 +1445,7 @@
         font-weight: 700;
         line-height: 2.80778vw;
         letter-spacing: 0.1em;
-        color: var(--blue);
-        font-family: 'Lato';
+        color: var(--ltText);
         display: flex;
         align-items: center;
     }

@@ -120,7 +120,15 @@ const thReviewsLowerImg = document.getElementById("th-reviews-lower-img");
 const thReviewsLowerUpperText = document.getElementById("th-reviews-lower-upper-text");
 const thReviewsLowerLowerText = document.getElementById("th-reviews-lower-lower-text");
 
+const thLangBackground = document.getElementById("th-navigation-block-lang-switch-button-background");
+const thLangFace = document.getElementById("th-navigation-block-lang-switch-button-face");
 const thLang = document.getElementById("th-navigation-block-lang-button");
+const thLangMenu = document.getElementById("th-navigation-block-lang-button-menu");
+const thNavigationTitle = document.getElementById("th-navigation-block-title");
+
+const thNavigationBlockThemeButton = document.getElementById("th-navigation-block-theme-button");
+const thNavigationBlockMenuButton = document.getElementById("th-navigation-block-menu-button");
+
 let thSelectCategory = "";
 
 let thSelectLang = "eng";
@@ -131,17 +139,28 @@ const thSwitchLocalization = () => {
 
         const element = document.getElementById(id); // получаю элемент который нужно по айди заменить 
         element.textContent = data[thSelectLang]; //   обновляю текст
-
-        if (thSelectLang === "rus") { // добавляем стили к русскому тексту 
-            const allStyles = data.styles;
-            element.style.fontFamily = "'Lato'";
-            for (let style in allStyles) {
-                const valueStyle = allStyles[style];
-                element.style[style] = valueStyle; // придумать как сбрасывать стили для ангийского языка
-            }
-        }
     }
 }
+
+thLang.addEventListener('click', () => {
+    thLangMenu.style.display = "block";
+
+    setTimeout(() => {
+        thLangMenu.style.opacity = "1";
+        setTimeout(() => {
+            thLang.style.opacity = "0";
+            thNavigationTitle.style.opacity = "0"
+            thNavigationBlockThemeButton.style.right = "6.2635vw";
+            thNavigationBlockMenuButton.style.right = "1.94384vw";
+            setTimeout(() => {
+                thLang.style.display = "none";
+                thNavigationTitle.textContent = "Language"
+                thNavigationTitle.style.opacity = "1";
+            }, 300);
+        }, 1);
+    }, 1);
+})
+
 
 const thInputFirstName = document.getElementById("th-input-first-name");
 const thInputLastName = document.getElementById("th-input-last-name");
@@ -173,19 +192,6 @@ const thRefreshDataForLocalization = () => {
         const thPriceListServiceCost = document.getElementById(`th-price-list-service-cost-${number}`);
         thPriceListServiceCost.textContent = `£${cost}`;
         thPriceListServiceName.textContent = nameOfServise[thSelectLang];
-
-        if (thSelectLang === "rus") {
-            thPriceListServiceName.style.fontFamily = "Lato";
-            thPriceListServiceName.style.fontSize = "2.15983vw";
-            thPriceListServiceCost.style.fontFamily = "Lato";
-            thPriceListServiceCost.style.fontSize = "2.15983vw";
-        } else {
-            thPriceListServiceName.style.fontFamily = "";
-            thPriceListServiceName.style.fontSize = "";
-            thPriceListServiceCost.style.fontFamily = "";
-            thPriceListServiceCost.style.fontSize = "";
-        }
-
     })
 
     if (thSelectLang === "rus") {
@@ -223,8 +229,6 @@ const thRefreshDataForLocalization = () => {
 const thFourSectionTitle = document.getElementById("th-four-section-title");
 const thMainSendForm = document.getElementById("th-main-send-form");
 const thMainSendFormTitle = document.getElementById("th-main-send-form-title");
-const thFourSectionBlueGradient = document.getElementById("th-four-section-blue-gradient");
-const thFourSectionRedGradient = document.getElementById("th-four-section-red-gradient");
 const thChoiceServecesTitle = document.getElementById("th-choice-serveces-title");
 
 const thFourthSectionChoiceOfService = document.getElementById("th-choice-of-service");
@@ -256,8 +260,6 @@ const allInputsHave = () => {
         thFourSectionTitle.style.color = "";
         thMainSendForm.style.border = "";
         thMainSendFormTitle.style.color = "";
-        thFourSectionBlueGradient.style.opacity = "1";
-        thFourSectionRedGradient.style.opacity = "0";
     }
 }
 
@@ -278,12 +280,8 @@ thInputFirstName.addEventListener('input', () => {
     } else {
         if (thSelectLang === "rus") {
             thInputFirstName.placeholder = "Укажите ваше имя";
-            thInputFirstName.style.fontFamily = "Lato";
-            thInputFirstName.style.fontSize = "1.94384vw";
         } else {
             thInputFirstName.placeholder = "Enter your first name";
-            thInputFirstName.style.fontFamily = "";
-            thInputFirstName.style.fontSize = "";
         }
         thInputFirstName.style.borderBottom = "0.10799vw solid var(--orangeRed)";
         thInputFirstName.classList = "th-input-placeholder";
@@ -309,12 +307,8 @@ thInputLastName.addEventListener('input', () => {
         thInputLastName.style.color = "var(--orangeRed)";
         if (thSelectLang === "rus") {
             thInputLastName.placeholder = "Укажите вашу фамилию";
-            thInputLastName.style.fontFamily = "Lato";
-            thInputLastName.style.fontSize = "1.94384vw";
         } else {
             thInputLastName.placeholder = "Enter your last name";
-            thInputLastName.style.fontFamily = "";
-            thInputLastName.style.fontSize = "";
         }
         voidInput();
     }
@@ -337,12 +331,8 @@ thInputPhone.addEventListener('input', () => {
         thInputPhone.style.color = "var(--orangeRed)";
         if (thSelectLang === "rus") {
             thInputPhone.placeholder = "Напишите ваш телефон";
-            thInputPhone.style.fontFamily = "Lato";
-            thInputPhone.style.fontSize = "1.94384vw";
         } else {
             thInputPhone.placeholder = "Enter the phone number";
-            thInputPhone.style.fontFamily = "";
-            thInputPhone.style.fontSize = "";
         }
         voidInput();
 
@@ -368,12 +358,8 @@ thInputEmail.addEventListener('input', () => {
         thInputEmail.style.color = "var(--orangeRed)";
         if (thSelectLang === "rus") {
             thInputEmail.placeholder = "Введите корректный email";
-            thInputEmail.style.fontFamily = "Lato";
-            thInputEmail.style.fontSize = "1.94384vw";
         } else {
             thInputEmail.placeholder = "Enter a valid email";
-            thInputEmail.style.fontFamily = "";
-            thInputEmail.style.fontSize = "";
         }
         voidInput();
     }
@@ -393,12 +379,8 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         thInputFirstName.style.color = "var(--orangeRed)";
         if (thSelectLang === "rus") {
             thInputFirstName.placeholder = "Укажите ваше имя";
-            thInputFirstName.style.fontFamily = "Lato";
-            thInputFirstName.style.fontSize = "1.94384vw";
         } else {
             thInputFirstName.placeholder = "Enter your first name";
-            thInputFirstName.style.fontFamily = "";
-            thInputFirstName.style.fontSize = "";
         }
 
     } else {
@@ -414,12 +396,8 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         thInputLastName.style.color = "var(--orangeRed)";
         if (thSelectLang === "rus") {
             thInputLastName.placeholder = "Укажите вашу фамилию";
-            thInputLastName.style.fontFamily = "Lato";
-            thInputLastName.style.fontSize = "1.94384vw";
         } else {
             thInputLastName.placeholder = "Enter your last name";
-            thInputLastName.style.fontFamily = "";
-            thInputLastName.style.fontSize = "";
         }
 
     } else {
@@ -434,12 +412,8 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         thInputPhone.style.color = "var(--orangeRed)";
         if (thSelectLang === "rus") {
             thInputPhone.placeholder = "Напишите ваш телефон";
-            thInputPhone.style.fontFamily = "Lato";
-            thInputPhone.style.fontSize = "1.94384vw";
         } else {
             thInputPhone.placeholder = "Enter the phone number";
-            thInputPhone.style.fontFamily = "";
-            thInputPhone.style.fontSize = "";
         }
 
     } else {
@@ -454,12 +428,8 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         thInputEmail.style.color = "var(--orangeRed)";
         if (thSelectLang === "rus") {
             thInputEmail.placeholder = "Введите корректный email";
-            thInputEmail.style.fontFamily = "Lato";
-            thInputEmail.style.fontSize = "1.94384vw";
         } else {
             thInputEmail.placeholder = "Enter a valid email";
-            thInputEmail.style.fontFamily = "";
-            thInputEmail.style.fontSize = "";
         }
     } else {
         thInputEmail.style.borderBottom = "0.10799vw solid var(--blue)";
@@ -486,12 +456,8 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         thInputEmail.style.color = "var(--orangeRed)";
         if (thSelectLang === "rus") {
             thInputEmail.placeholder = "Введите корректный email";
-            thInputEmail.style.fontFamily = "Lato";
-            thInputEmail.style.fontSize = "1.94384vw";
         } else {
             thInputEmail.placeholder = "Enter a valid email";
-            thInputEmail.style.fontFamily = "";
-            thInputEmail.style.fontSize = "";
         }
     } else {
         thInputEmail.style.borderBottom = "0.10799vw solid var(--blue)";
@@ -503,8 +469,6 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         thFourSectionTitle.style.color = "var(--orangeRed)";
         thMainSendForm.style.border = "0.21598vw solid rgba(236, 82, 0, 0.5)";
         thMainSendFormTitle.style.color = "var(--orangeRed)";
-        thFourSectionBlueGradient.style.opacity = "0";
-        thFourSectionRedGradient.style.opacity = "1";
         if (thSelectLang === "rus") {
             thFourSectionTitle.textContent = "Заполните все обязательные поля";
         } else {
@@ -534,9 +498,24 @@ const thChangeIdeasText = () => {
 setInterval(thChangeIdeasText, 4000);
 
 
-thLang.addEventListener('click', () => {
+thLangBackground.addEventListener('click', () => {
     thSwitchLocalization();
     thRefreshDataForLocalization();
+    if (thSelectLang === "rus") {
+        thLangFace.style.left = "7.01944vw";
+    } else {
+        thLangFace.style.left = "5.50756vw";
+    }
+})
+
+thLangFace.addEventListener('click', () => {
+    thSwitchLocalization();
+    thRefreshDataForLocalization();
+    if (thSelectLang === "rus") {
+        thLangFace.style.left = "7.01944vw";
+    } else {
+        thLangFace.style.left = "5.50756vw";
+    }
 })
 
 thSecondSectionButtonServices.addEventListener('click', () => {
@@ -644,7 +623,6 @@ thFourthSectionChoiceOfService.addEventListener('click', (event) => {
             newDropListPoint.textContent = textSelectCategoty;
             newDropListPoint.classList = "th-drop-list-item";
             newDropListPoint.id = textSelectCategoty;
-            newDropListPoint.style.fontFamily = "Lato";
 
             newDropListPoint.addEventListener('click', (event) => {
 

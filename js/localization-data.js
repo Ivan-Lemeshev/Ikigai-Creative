@@ -431,11 +431,6 @@ const localizationWrapper = {
         eng: "Eng",
     },
 
-    "th-navigation-block-title": {
-        rus: "Навигация",
-        eng: "Navigation",
-    },
-
     "th-navigation-block-item-title-0": {
         rus: "Интро",
         eng: "Intro",

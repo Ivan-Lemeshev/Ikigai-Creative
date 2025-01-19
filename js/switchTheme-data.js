@@ -3883,6 +3883,509 @@ const themeWrapper = {
         }
     },
 
+    "th-price-list-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-title-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(46, 46, 46, 0.6)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(214, 214, 214, 0.6)`
+            }
+        }
+    },
+
+    "th-price-list-service-name-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-service-cost-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-service-name-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-service-cost-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-service-name-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-service-cost-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-service-name-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-service-cost-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-service-name-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-service-cost-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-service-name-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-service-cost-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-service-name-6": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-service-cost-6": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-price-list-footer-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(46, 46, 46, 0.6)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(214, 214, 214, 0.6)`
+            }
+        }
+    },
+
+    "th-price-list-footer": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-four-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `radial-gradient(80.13% 43.52% at 17.01% 51.49%, rgba(0, 136, 204, 0.2) 0%, rgba(232, 232, 232, 0) 100%),
+        radial-gradient(84.34% 46.98% at 89.9% 55.12%, rgba(0, 136, 204, 0.2) 0%, rgba(232, 232, 232, 0) 100%),
+        linear-gradient(0deg, #E8E8E8, #E8E8E8)`
+            },
+            dark: {
+                color: "",
+                background: `radial-gradient(80.13% 43.52% at 17.01% 51.49%, rgba(0, 136, 204, 0.2) 0%, rgba(28, 28, 28, 0) 100%),
+                            radial-gradient(84.34% 46.98% at 89.9% 55.12%, rgba(0, 136, 204, 0.2) 0%, rgba(28, 28, 28, 0) 100%), 
+                            linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+
+    "th-four-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-main-send-form-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-choice-serveces-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-choice-of-service-placeholder": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-five-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(180deg, #E8E8E8 0%, rgba(232, 232, 232, 0.4) 50.5%, #E8E8E8 100%),
+                            linear-gradient(70.49deg, rgba(0, 136, 204, 0.2) 7.13%, rgba(0, 136, 204, 0.14) 50.94%, rgba(0, 136, 204, 0.2) 94.31%),
+                            linear-gradient(0deg, #E8E8E8, #E8E8E8)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(70.49deg, rgba(0, 136, 204, 0.2) 7.13%, rgba(0, 136, 204, 0.14) 50.94%, rgba(0, 136, 204, 0.2) 94.31%),
+                            linear-gradient(180deg, #1C1C1C 0%, rgba(28, 28, 28, 0.4) 50.5%, #1C1C1C 100%),
+                            linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+
+    "th-five-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-footer-eng": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "th-footer-rus": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "th-footer-eng-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-footer-eng-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-footer-eng-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-footer-eng-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-footer-eng-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-footer-rus-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-footer-rus-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-footer-rus-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-footer-rus-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "th-navigation-block": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(0deg, rgba(0, 136, 204, 0.1), rgba(0, 136, 204, 0.1)),
+        linear-gradient(0deg, rgba(232, 232, 232, 0.6), rgba(232, 232, 232, 0.6))`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(0deg, rgba(0, 136, 204, 0.1), rgba(0, 136, 204, 0.1)),
+                            linear-gradient(0deg, rgba(28, 28, 28, 0.6), rgba(28, 28, 28, 0.6))`
+            }
+        }
+    },
+
+    "th-navigation-block-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
 }
 
 export default themeWrapper;

@@ -20,8 +20,8 @@ export const ideasArrayUp = [
     },
 
     {
-        eng: "DIGITAL AGENCY",
-        rus: "IT АГЕНСТВО"
+        eng: "Digital Agency",
+        rus: "IT Агенство"
     }
 ];
 
