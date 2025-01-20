@@ -870,6 +870,16 @@ const localizationWrapper = {
         rus: "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд...",
         eng: "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds...",     
     },
+
+    "tv-send-to-application-main-content-title": {
+        rus: "Отправляем вашу заявку",
+        eng: "Sending an application",     
+    },
+
+    "tv-send-to-application-main-content-text": {
+        rus: "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд...",
+        eng: "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds...",     
+    },
 }
 
 export default localizationWrapper;

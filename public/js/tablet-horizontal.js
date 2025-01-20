@@ -1183,8 +1183,6 @@ thThirdSectionBottomArrow.addEventListener('click', () => {
     }
 })
 
-let numberOfCallback = 200;
-
 const sendToApplicationMainContent = document.getElementById("th-send-to-application-main-content");
 const sendToApplicationWrapper = document.getElementById("th-send-to-application-wrapper");
 const sendToApplicationMainContentTitle = document.getElementById("th-send-to-application-main-content-title");
@@ -1192,7 +1190,8 @@ const sendToApplicationMainContentText = document.getElementById("th-send-to-app
 const sendToApplicationMainContentImg = document.getElementById("th-send-to-application-main-content-img");
 const sendToApplicationMainContentImgSecces = document.getElementById("th-send-to-application-main-content-img-secces");
 const sendToApplicationMainContentImgWrong = document.getElementById("th-send-to-application-main-content-img-wrong");
-
+const url = 'https://ikigaiicreative.com/api/sendRequest'; // Замените на ваш URL
+const data = { text: 'text Test' }; // Замените на ваши данные
 thSubmitButtonFourthSection.addEventListener('click', () => {
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";
@@ -1201,40 +1200,48 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
             setTimeout(() => {
                 sendToApplicationMainContent.style.opacity = "0"
                 setTimeout(() => {
-                    if (numberOfCallback === 200) {
-                        if (thSelectLang === "eng") {
-                            sendToApplicationMainContentTitle.textContent = "Successfully";
-                            sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
-                        } else {
-                            sendToApplicationMainContentTitle.textContent = "Успешно";
-                            sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
-                        }
-                        sendToApplicationMainContentImg.style.display = "none"
-                        sendToApplicationMainContentImgSecces.style.display = "block"
-                        sendToApplicationMainContent.style.border = "0.05208vw solid var(--success)";
+                    fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json', // Указываем, что данные в формате JSON
+                        },
+                        body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
+                    })
+                        .then(() => {
+                            if (thSelectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Successfully";
+                                sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Успешно";
+                                sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
+                            }
+                            sendToApplicationMainContentImg.style.display = "none"
+                            sendToApplicationMainContentImgSecces.style.display = "block"
+                            sendToApplicationMainContent.style.border = "0.05208vw solid var(--success)";
 
-                        setTimeout(() => {
-                            sendToApplicationMainContent.style.opacity = "1"
-                        }, 300);
-                    }
+                            setTimeout(() => {
+                                sendToApplicationMainContent.style.opacity = "1"
+                            }, 300);
+                        }) //если все хорошо
 
-                    if (numberOfCallback === 500) {
-                        if (thSelectLang === "eng") {
-                            sendToApplicationMainContentTitle.textContent = "Something went wrong";
-                            sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
-                        } else {
-                            sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
-                            sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
-                        }
-                        sendToApplicationMainContentImg.style.display = "none"
-                        sendToApplicationMainContentImgWrong.style.display = "block"
-                        sendToApplicationMainContent.style.border = "0.05208vw solid var(--bad)";
+                        .catch(() => {
+                            if (thSelectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Something went wrong";
+                                sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
+                                sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
+                            }
+                            sendToApplicationMainContentImg.style.display = "none"
+                            sendToApplicationMainContentImgWrong.style.display = "block"
+                            sendToApplicationMainContent.style.border = "0.05208vw solid var(--bad)";
 
 
-                        setTimeout(() => {
-                            sendToApplicationMainContent.style.opacity = "1"
-                        }, 300);
-                    }
+                            setTimeout(() => {
+                                sendToApplicationMainContent.style.opacity = "1"
+                            }, 300);
+                        }) // если все плохо
+
                     setTimeout(() => {
                         sendToApplicationWrapper.style.opacity = "";
                         setTimeout(() => {

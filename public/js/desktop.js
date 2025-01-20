@@ -1740,7 +1740,6 @@ submitButtonFourthSection.addEventListener('click', () => {
             setTimeout(() => {
                 sendToApplicationMainContent.style.opacity = "0"
                 setTimeout(() => {
-
                     fetch(url, {
                         method: 'POST',
                         headers: {
