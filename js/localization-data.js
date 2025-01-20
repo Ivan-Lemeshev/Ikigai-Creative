@@ -851,35 +851,15 @@ const localizationWrapper = {
         eng: "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds...",     
     },
 
-    // "mh-third-section-right-services-h3-Setting up payment": {
-    //     rus: "Настройка оплаты",
-    //     eng: "Setting up payment",     
-    // },
+    "send-to-application-main-content-title": {
+        rus: "Отправляем вашу заявку",
+        eng: "Sending an application",     
+    },
 
-    // "mh-third-section-right-services-h3-Promotion on social networks": {
-    //     rus: "Продвижение в соц. сетях",
-    //     eng: "Promotion on social networks",     
-    // },
-
-    // "mh-third-section-right-services-h3-Support and content": {
-    //     rus: "Поддержка и контент",
-    //     eng: "Support and content",     
-    // },
-
-    // "mh-third-section-right-services-h3-Video production": {
-    //     rus: "Создание видео",
-    //     eng: "Video production",     
-    // },
-
-    // "mh-third-section-right-services-h3-Website design and development": {
-    //     rus: "Веб-дизайн и разработка",
-    //     eng: "Website design and development",     
-    // },
-
-    // "mh-third-section-right-services-h3-Creative Design": {
-    //     rus: "Креативный дизайн",
-    //     eng: "Creative Design",     
-    // },
+    "send-to-application-main-content-text": {
+        rus: "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд...",
+        eng: "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds...",     
+    },
 }
 
 export default localizationWrapper;

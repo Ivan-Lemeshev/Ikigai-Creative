@@ -129,10 +129,12 @@ const isValidEmail = (email) => {
     return regex.test(email);
 }
 
+let applicationShow = false;
 
 const allInputsHave = () => {
     if (inputFirstName.value.length && inputLastName.value.length && inputPhone.value.length && inputEmail.value.length && isValidEmail(inputEmail.value) && selectCategory) {
         submitButtonFourthSection.className = "send-form-submit-activ";
+        applicationShow = true;
     }
 }
 
@@ -314,6 +316,15 @@ const switchLocalization = () => {
 const imgBlock = document.getElementById("third-section-creative-design-img");
 const buttonMoreInterestBlock = document.getElementById("interest-block");
 
+
+const sendToApplicationMainContent = document.getElementById("send-to-application-main-content");
+const sendToApplicationWrapper = document.getElementById("send-to-application-wrapper");
+const sendToApplicationMainContentTitle = document.getElementById("send-to-application-main-content-title");
+const sendToApplicationMainContentText = document.getElementById("send-to-application-main-content-text");
+const sendToApplicationMainContentImg = document.getElementById("send-to-application-main-content-img");
+const sendToApplicationMainContentImgSecces = document.getElementById("send-to-application-main-content-img-secces");
+const sendToApplicationMainContentImgWrong = document.getElementById("send-to-application-main-content-img-wrong");
+
 let selectTheme = "light";
 const textarea = document.getElementById("textarea");
 
@@ -409,6 +420,7 @@ const refreshTheme = () => {
         inputPhone.classList = "input-light-theme";
         inputEmail.classList = "input-light-theme";
         fourthSectionChoiceOfService.style.borderBottom = "";
+        sendToApplicationMainContent.style.border = "";
         textarea.classList = "textarea-light";
         alternativeSendFormSvgPath.style.fill = "#2E2E2E";
         alternativeContactPhoneSvg.classList = "fill";
@@ -462,6 +474,7 @@ const refreshTheme = () => {
         alternativeContactVkSvg.classList = "stroke-dark";
         alternativeContactWhatsappSvg.classList = "stroke-dark";
         document.documentElement.style.setProperty('--svgColor', '#F3F3F3');
+        sendToApplicationMainContent.style.border = " 0.05208vw solid var(--ltSeparationLine)";
     }
 }
 
@@ -1233,10 +1246,12 @@ inputLastName.addEventListener('input', () => {
         editValue = editValue.slice(0, 10);
     }
     if (editValue.length > 0) {
-        correctImgLastName.style.opacity = 1;
+        correctImgLastName.style.opacity = "1";
+        correctImgLastName.style.display = "block";
         allInputsHave();
     } else {
-        correctImgLastName.style.opacity = 0;
+        correctImgLastName.style.opacity = "";
+        correctImgLastName.style.display = "block";
         voidInput();
     }
     inputLastName.value = capitalize(editValue);
@@ -1249,10 +1264,12 @@ inputPhone.addEventListener('input', () => {
         editValue = editValue.slice(0, 12);
     }
     if (editValue.length > 0) {
-        correctImgPhone.style.opacity = 1;
+        correctImgPhone.style.opacity = "1";
+        correctImgPhone.style.display = "block";
         allInputsHave();
     } else {
-        correctImgPhone.style.opacity = 0;
+        correctImgPhone.style.opacity = "";
+        correctImgPhone.style.display = "";
         voidInput();
     }
     inputPhone.value = capitalize(editValue);
@@ -1267,10 +1284,13 @@ inputEmail.addEventListener('input', () => {
         editValue = editValue.slice(0, 20);
     }
     if (editValue.length > 0) {
-        correctImgEmail.style.opacity = 1;
+        correctImgEmail.style.opacity = "1";
+        correctImgEmail.style.display = "block";
         allInputsHave();
     } else {
-        correctImgEmail.style.opacity = 0;
+        correctImgEmail.style.opacity = "";
+        correctImgEmail.style.display = "";
+
         voidInput();
     }
     inputEmail.value = editValue;
@@ -1702,3 +1722,72 @@ const uploadLinks = () => {
 }
 
 uploadLinks()
+
+let numberOfCallback = 500;
+
+submitButtonFourthSection.addEventListener('click', () => {
+    if (applicationShow) {
+        sendToApplicationWrapper.style.display = "block";
+        setTimeout(() => {
+            sendToApplicationWrapper.style.opacity = "1";
+            setTimeout(() => {
+                sendToApplicationMainContent.style.opacity = "0"
+                setTimeout(() => {
+                    if (numberOfCallback === 200) {
+                        if (selectLang === "eng") {
+                            sendToApplicationMainContentTitle.textContent = "Successfully";
+                            sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
+                        } else {
+                            sendToApplicationMainContentTitle.textContent = "Успешно";
+                            sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
+                        }
+                        sendToApplicationMainContentImg.style.display = "none"
+                        sendToApplicationMainContentImgSecces.style.display = "block"
+                        sendToApplicationMainContent.style.border = "0.05208vw solid var(--success)";
+
+                        setTimeout(() => {
+                            sendToApplicationMainContent.style.opacity = "1"
+                        }, 300);
+                    }
+
+                    if (numberOfCallback === 500) {
+                        if (selectLang === "eng") {
+                            sendToApplicationMainContentTitle.textContent = "Something went wrong";
+                            sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
+                        } else {
+                            sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
+                            sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
+                        }
+                        sendToApplicationMainContentImg.style.display = "none"
+                        sendToApplicationMainContentImgWrong.style.display = "block"
+                        sendToApplicationMainContent.style.border = "0.05208vw solid var(--bad)";
+
+
+                        setTimeout(() => {
+                            sendToApplicationMainContent.style.opacity = "1"
+                        }, 300);
+                    }
+                    setTimeout(() => {
+                        sendToApplicationWrapper.style.opacity = "";
+                        setTimeout(() => {
+                            sendToApplicationWrapper.style.display = "";
+                            if (selectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Sending an application";
+                                sendToApplicationMainContentText.textContent = "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds..."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Отправляем вашу заявку";
+                                sendToApplicationMainContentText.textContent = "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд..."
+                            }
+                            sendToApplicationMainContent.style.border = "";
+                            sendToApplicationMainContentImgWrong.style.display = "";
+                            sendToApplicationMainContentImgSecces.style.display = "";
+                            sendToApplicationMainContentImg.style.display = "";
+                        }, 300);
+                    }, 3000);
+                }, 300);
+            }, 3000);
+        }, 300);
+    }
+
+
+})

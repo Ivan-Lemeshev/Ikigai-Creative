@@ -2304,30 +2304,84 @@
     overflow: visible;
 }
 
-#interest-block-svg-dark-0 {
+#send-to-application-wrapper {
+    width: 100vw;
+    height: 56.25vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(0.41667vw);
+    background: rgba(232, 232, 232, 0.3);
+    z-index: 50;
     display: none;
-}
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 
-#interest-block-svg-dark-1 {
-    display: none;
-}
+    &>#send-to-application-main-content {
+        width: 46.875vw;
+        height: 20.83333vw;
+        margin-top: 17.70833vw;
+        margin-left: 26.5625vw;
+        background: rgba(232, 232, 232, 0.4);
+        border: 0.05208vw solid var(--ltText);
+        backdrop-filter: blur(0.41667vw);
+        transition: opacity 0.3s ease-in-out;
 
-#interest-block-svg-dark-2 {
-    display: none;
-}
 
-#interest-block-svg-dark-3 {
-    display: none;
-}
 
-#interest-block-svg-dark-4 {
-    display: none;
-}
+        &>#send-to-application-main-content-title {
+            width: 20.83333vw;
+            height: 2.1875vw;
+            margin-top: 5.20833vw;
+            margin-left: 5.20833vw;
+            font-weight: 400;
+            font-size: 1.5625vw;
+            letter-spacing: 0.1em;
+            color: var(--ltText);
+        }
 
-#interest-block-svg-dark-5 {
-    display: none;
-}
+        &>#send-to-application-main-content-text {
+            width: 20.83333vw;
+            height: 7.1875vw;
+            margin-top: 1.04167vw;
+            margin-left: 5.20833vw;
+            font-weight: 300;
+            font-size: 1.14583vw;
+            line-height: 1.60417vw;
+            letter-spacing: 0.1em;
+            color: var(--ltText);
+        }
 
-#interest-block-svg-dark-6 {
-    display: none;
+        &>#send-to-application-main-content-img {
+            width: 10.41667vw;
+            height: 10.41667vw;
+            position: absolute;
+            top: 5.20833vw;
+            left: 31.25vw;
+            object-fit: contain;
+            pointer-events: none;
+        }
+
+        &>#send-to-application-main-content-img-secces {
+            width: 10.41667vw;
+            height: 10.41667vw;
+            position: absolute;
+            top: 5.20833vw;
+            left: 31.25vw;
+            object-fit: contain;
+            pointer-events: none;
+            display: none;
+        }
+
+        &>#send-to-application-main-content-img-wrong {
+            width: 10.41667vw;
+            height: 10.41667vw;
+            position: absolute;
+            top: 5.20833vw;
+            left: 31.25vw;
+            object-fit: contain;
+            pointer-events: none;
+            display: none;
+        }
+    }
 }
