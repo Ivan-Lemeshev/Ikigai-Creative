@@ -212,16 +212,16 @@ const thReviewsLowerLowerText = document.getElementById("th-reviews-lower-lower-
 
 const thLangBackground = document.getElementById("th-navigation-block-lang-switch-button-background");
 const thLangFace = document.getElementById("th-navigation-block-lang-switch-button-face");
-const thLang = document.getElementById("th-navigation-block-lang-button");
+const thLangWrapperImg = document.getElementById("th-navigation-block-lang-button");
 const thLangMenu = document.getElementById("th-navigation-block-lang-button-menu");
 const thNavigationTitle = document.getElementById("th-navigation-block-title");
 
-const thNavigationBlockThemeButton = document.getElementById("th-navigation-block-theme-button");
+const thNavigationBlockThemeButtonWrapper = document.getElementById("th-navigation-block-theme-button");
 const thNavigationBlockThemeButtonMenu = document.getElementById("th-navigation-block-theme-button-menu");
 const thThemeBackground = document.getElementById("th-navigation-block-theme-switch-button-background");
 const thThemeFace = document.getElementById("th-navigation-block-theme-switch-button-face");
 
-const thNavigationBlockMenuButton = document.getElementById("th-navigation-block-menu-button");
+const thNavigationBlockMenuButtonwrapper = document.getElementById("th-navigation-block-menu-button");
 
 let thSelectCategory = "";
 
@@ -236,59 +236,113 @@ const thSwitchLocalization = () => {
     }
 }
 
-// let nightMode = false;
-// let language = false;
-
-// document.addEventListener('click', () => {
-//     console.log(nightMode + 'mode')
-//     console.log(language + ' lang')
-// })
-
-thLang.addEventListener('click', () => {
+let nightMode = false;
+let language = false;
 
 
-    thLang.style.opacity = "0";
-    thLang.style.display = "none";
-    thNavigationBlockThemeButton.style.right = "6.2635vw";
-    thNavigationBlockMenuButton.style.right = "1.94384vw";
-    thLangMenu.style.display = "block";
-    thNavigationTitle.style.opacity = "0"
-    thNavigationBlockThemeButtonMenu.style.display = "";
-    setTimeout(() => {
-        thLangMenu.style.opacity = "1";
+thLangWrapperImg.addEventListener('click', () => {
+    nightMode = true;
+    if (!language) {
+        language = true;
+        thLangWrapperImg.style.opacity = "0";
+        thNavigationBlockThemeButtonWrapper.style.right = "6.2635vw";
+        thNavigationBlockMenuButtonwrapper.style.right = "1.94384vw";
+        thLangMenu.style.display = "block";
+        thNavigationTitle.style.opacity = "0";
+
         setTimeout(() => {
-            thNavigationTitle.textContent = "Language";
+            thLangMenu.style.opacity = "1";
             setTimeout(() => {
+                thLangWrapperImg.style.display = "none";
+                thNavigationTitle.textContent = "Language";
+                setTimeout(() => {
+                    thNavigationTitle.style.opacity = "1";
+                }, 1);
+            }, 300);
+        }, 1);
+    } else {
+        thLangWrapperImg.style.opacity = "0";
+        thNavigationBlockThemeButtonWrapper.style.right = "6.2635vw";
+        thNavigationBlockThemeButtonMenu.style.opacity = "";
+        thLangMenu.style.display = "block";
+        thNavigationTitle.textContent = "Language";
+        thNavigationTitle.style.opacity = "";
+        setTimeout(() => {
+            thLangMenu.style.opacity = "1";
+            thLangWrapperImg.style.display = "none";
+            thNavigationBlockThemeButtonWrapper.style.display = "";
+            thNavigationBlockThemeButtonMenu.style.display = "";
+            setTimeout(() => {
+                thNavigationBlockThemeButtonWrapper.style.opacity = "";
+            }, 1);
+        }, 300);
+
+
+    }
+
+});
+
+thNavigationBlockThemeButtonWrapper.addEventListener('click', () => {
+    language = true;
+    if (!nightMode) {
+        nightMode = true;
+        thNavigationBlockThemeButtonWrapper.style.opacity = "0";
+        thNavigationBlockThemeButtonMenu.style.display = "block";
+        thNavigationTitle.style.opacity = "0"
+        thNavigationBlockMenuButtonwrapper.style.right = "1.94384vw";
+        setTimeout(() => {
+            thNavigationBlockThemeButtonWrapper.style.display = "none";
+            thNavigationBlockThemeButtonMenu.style.opacity = "1";
+        }, 1);
+    } else {
+        thNavigationBlockThemeButtonWrapper.style.opacity = "0";
+        thNavigationBlockThemeButtonMenu.style.display = "block";
+        thNavigationTitle.style.opacity = "0";
+        thNavigationBlockThemeButtonWrapper.style.right = "";
+        thLangWrapperImg.style.display = "";
+        thLangMenu.style.opacity = "";
+        thNavigationTitle.style.opacity = "0";
+        setTimeout(() => {
+            thNavigationBlockThemeButtonWrapper.style.display = "none";
+            thNavigationBlockThemeButtonMenu.style.opacity = "1";
+        }, 1);
+
+        setTimeout(() => {
+            thLangWrapperImg.style.opacity = "";
+            thLangMenu.style.display = "";
+        }, 300);
+    }
+})
+
+
+thNavigationBlockMenuButtonwrapper.addEventListener('click', () => {
+    language = false;
+    nightMode = false;
+    thLangWrapperImg.style.display = "";
+    thNavigationBlockThemeButtonWrapper.style.right = "";
+    thNavigationBlockMenuButtonwrapper.style.right = "";
+    thNavigationBlockThemeButtonWrapper.style.opacity = "";
+
+    thNavigationTitle.style.opacity = "0";
+    thNavigationBlockMenuButtonwrapper.style.right = "";
+    setTimeout(() => {
+        thLangWrapperImg.style.opacity = "";
+        thLangMenu.style.opacity = "0";
+        thNavigationBlockThemeButtonWrapper.style.display = "";
+        setTimeout(() => {
+            if (thSelectLang === "eng") {
+                thNavigationTitle.textContent = "Navigation";
+            } else {
+                thNavigationTitle.textContent = "Навигация";
+            }
+            thLangMenu.style.display = "";
+            setTimeout(() => {
+                thNavigationBlockThemeButtonMenu.style.display = "";
+                thNavigationBlockThemeButtonMenu.style.opacity = "";
                 thNavigationTitle.style.opacity = "1";
             }, 1);
         }, 300);
     }, 1);
-
-
-    if (nightMode) {
-        thLang.style.opacity = "1";
-        thLang.style.display = "block";
-    }
-});
-
-thNavigationBlockThemeButton.addEventListener('click', () => {
-
-    thNavigationBlockThemeButton.style.opacity = "0";
-    thLang.style.display = "";
-    thLangMenu.style.display = "";
-    thNavigationBlockThemeButtonMenu.style.display = "block";
-    thNavigationTitle.style.opacity = "0"
-    setTimeout(() => {
-        thNavigationBlockThemeButton.style.display = "none";
-        thLang.style.opacity = "";
-        thNavigationBlockThemeButtonMenu.style.opacity = "1";
-    }, 1);
-
-})
-
-
-thNavigationBlockMenuButton.addEventListener('click', () => {
-
 })
 
 
@@ -411,6 +465,7 @@ const allInputsHave = () => {
         thFourSectionTitle.textContent = "Contact us";
         thFourSectionTitle.style.color = "";
         thMainSendForm.style.border = "";
+        thFourSection.style.background = "";
         thMainSendFormTitle.style.color = "";
     }
 }
@@ -545,8 +600,6 @@ const thFourSection = document.getElementById("th-four-section")
 
 thSubmitButtonFourthSection.addEventListener('click', () => {
 
-
-
     if (!thInputFirstName.value.length) {
         resultChecked = false;
         thInputFirstName.style.borderBottom = "0.054vw solid var(--bad)";
@@ -670,8 +723,8 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         thFourSectionTitle.style.color = "var(--bad)";
         thMainSendForm.style.border = "0.21598vw solid rgba(255, 79, 79, 0.5)";
         thMainSendFormTitle.style.color = "var(--bad)";
-        thFourSection.style.background = `radial - gradient(80.13 % 43.52 % at 17.01 % 51.49 %, rgba(255, 79, 79, 0.2) 0 %, rgba(232, 232, 232, 0) 100 %),
-        radial - gradient(84.34 % 46.98 % at 89.9 % 55.12 %, rgba(0, 136, 204, 0.2) 0 %, rgba(232, 232, 232, 0) 100 %),
+        thFourSection.style.background = `radial-gradient(80.13% 43.52% at 17.01% 51.49%, rgba(255, 79, 79, 0.2) 0%, rgba(232, 232, 232, 0) 100%),
+        radial-gradient(84.34% 46.98% at 89.9% 55.12%, rgba(0, 136, 204, 0.2) 0%, rgba(232, 232, 232, 0) 100%),
         linear-gradient(0deg, #E8E8E8, #E8E8E8)`;
         if (thSelectLang === "rus") {
             thFourSectionTitle.textContent = "Заполните все обязательные поля";

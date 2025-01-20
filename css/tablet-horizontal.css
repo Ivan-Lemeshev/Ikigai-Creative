@@ -138,7 +138,7 @@
         position: absolute;
         top: 5dvh;
         right: 1.94384vw;
-        transition: right 0.3s ease-in-out;
+        transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
 
     &>#th-navigation-block-menu-button {
