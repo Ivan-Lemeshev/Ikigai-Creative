@@ -7,6 +7,7 @@ const app = express();
 const port = 3000;
 
 const bodyParser = require('body-parser');
+const { request } = require('http');
 app.use(bodyParser.json());
 // Обслуживание всех статических файлов из папки 'public'
 app.use(express.static(path.join(__dirname, 'public')));
@@ -18,18 +19,14 @@ app.get('/', (req, res) => {
 
 app.post('/api/sendRequest', async (req, res) => {
     try {
-      const { text } = req.body;
-  
-      // Проверка на обязательные поля
-      if ( !text) {
-        return res.status(400).send('Недостающие обязательные данные');
-      }
+      const { text } = req.body.data;
   
       // Отправка почты через mailer
       const result = await mailer.sendEmail(text);
       res.status(200).send(result);
     } catch (error) {
       res.status(500).send('Ошибка при отправке почты: ' + error.message);
+      console.log(error.message)
     }
   });
 

@@ -1190,9 +1190,12 @@ const sendToApplicationMainContentText = document.getElementById("th-send-to-app
 const sendToApplicationMainContentImg = document.getElementById("th-send-to-application-main-content-img");
 const sendToApplicationMainContentImgSecces = document.getElementById("th-send-to-application-main-content-img-secces");
 const sendToApplicationMainContentImgWrong = document.getElementById("th-send-to-application-main-content-img-wrong");
-const url = 'https://ikigaiicreative.com/api/sendRequest'; // Замените на ваш URL
-const data = { text: 'text Test' }; // Замените на ваши данные
+
+const url = 'http://localhost:3000/api/sendRequest'; // Замените на ваш URL
+
+
 thSubmitButtonFourthSection.addEventListener('click', () => {
+    const data = { text: `First Name: ${thInputFirstName.value} thTextarea.value` }; // Замените на ваши данные
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";
         setTimeout(() => {
