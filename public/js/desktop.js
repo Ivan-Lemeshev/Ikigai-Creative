@@ -4,6 +4,7 @@ import { ideasArrayUp, ideasArrayDown, textForApplication } from "./slogans.js";
 import reviews from "./reviews.js";
 import dataContats from "./links.js";
 import themeWrapper from "./switchTheme-data.js"
+import url from "./url.js"
 
 const ikigaiLogoText = document.getElementById("ikigai-logo-text");
 const creativeLogoText = document.getElementById("creative-logo-text");
@@ -135,8 +136,6 @@ const allInputsHave = () => {
     if (inputFirstName.value.length && inputLastName.value.length && inputPhone.value.length && inputEmail.value.length && isValidEmail(inputEmail.value) && selectCategory) {
         submitButtonFourthSection.className = "send-form-submit-activ";
         applicationShow = true;
-    } else {
-        applicationShow = false;
     }
 }
 
@@ -1725,14 +1724,16 @@ const uploadLinks = () => {
 
 uploadLinks()
 
-let numberOfCallback = 500;
-
-const url = 'https://ikigaiicreative.com/api/sendRequest'; // Замените на ваш URL
-const data = { text: 'text Test' }; // Замените на ваши данные
-
-
-
 submitButtonFourthSection.addEventListener('click', () => {
+    const data = {
+        text: `
+    First Name: ${inputFirstName.value}, 
+    Last Name: ${inputLastName.value}, 
+    Phone: ${inputPhone.value}, 
+    Email: ${inputEmail.value}, 
+    Service: ${choiceOfServicePlaceholder.textContent},
+    Text: ${textarea.value}`
+    }; 
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";
         setTimeout(() => {
@@ -1762,7 +1763,7 @@ submitButtonFourthSection.addEventListener('click', () => {
                             setTimeout(() => {
                                 sendToApplicationMainContent.style.opacity = "1"
                             }, 300);
-                        }) //если все хорошо
+                        })
 
                         .catch(() => {
                             if (selectLang === "eng") {
@@ -1780,7 +1781,7 @@ submitButtonFourthSection.addEventListener('click', () => {
                             setTimeout(() => {
                                 sendToApplicationMainContent.style.opacity = "1"
                             }, 300);
-                        }) // если все плохо
+                        })
 
                     setTimeout(() => {
                         sendToApplicationWrapper.style.opacity = "";

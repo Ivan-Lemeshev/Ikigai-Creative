@@ -5,6 +5,7 @@ import themeWrapper from "./switchTheme-data.js";
 import { textForApplication } from "./slogans.js";
 import reviews from "./reviews.js";
 import dataContats from "./links.js";
+import url from "./url.js"
 
 const mhNavButton = document.getElementById("mh-first-section-navigation-button");
 const mhNavigationBlock = document.getElementById("mh-navigation-block");
@@ -13,7 +14,7 @@ const mhNavigationBlockAboutUs = document.getElementById("mh-navigation-block-ma
 const mhNavigationBlockServices = document.getElementById("mh-navigation-block-main-content-services");
 const mhNavigationBlockContacts = document.getElementById("mh-navigation-block-main-content-contacts");
 const mhNavigationBlockReviews = document.getElementById("mh-navigation-block-main-content-reviews");
-
+let applicationShow = false;
 mhNavButton.addEventListener('click', () => {
     mhNavigationBlock.style.display = "block";
     setTimeout(() => {
@@ -485,7 +486,6 @@ const movePlitka = (deltaGap) => {
 
 const thThirdSectionLeftArrow = document.getElementById("mh-four-section-others-services-left-arrow");
 const thThirdSectionRightArrow = document.getElementById("mh-four-section-others-services-right-arrow");
-const mhSendToApplication = document.getElementById("mh-send-to-application");
 let thThirdSectionAnimation = false;
 
 
@@ -555,7 +555,7 @@ const mhAllInputsHave = () => {
         mhFifvthSectionTitle.textContent = "Contact us"
         mhSubmitButton.style.border = "none";
         mhSubmitButton.style.background = "var(--accent)";
-
+        applicationShow = true;
         if (mhSelectTheme === "light") {
             mhFifvthSectionMainContent.style.background = "linear-gradient(180deg, rgba(252, 253, 253, 0.15) 0%, rgba(0, 136, 204, 0.15) 19.27%, rgba(252, 253, 253, 0.15) 28.53%, rgba(252, 253, 253, 0.15) 100%), linear-gradient(0deg, #FCFDFD, #FCFDFD)";
         } else {
@@ -655,13 +655,7 @@ mhSubmitButton.addEventListener('click', (event) => {
         mhSubmitButton.style.backgroundColor = "rgba(0, 136, 204, 0.2)";
         mhSubmitButton.style.color = "var(--dtText)";
         mhFifvthSectionTitle.textContent = "Fill in all required fields";
-    } else {
-        mhSendToApplication.style.display = "block";
-        setTimeout(() => {
-            mhSendToApplication.style.display = "none";
-        }, 5000);
     }
-
 
     if (mhInputFirstName.value.length < 1) {
         mhInputFirstName.classList = "mh-fifvth-section-input-placeholder";
@@ -924,5 +918,98 @@ window.addEventListener('scroll', () => {
     } else {
         mhNavButton.style.opacity = ""
     }
-    
+
+})
+
+
+const sendToApplicationMainContent = document.getElementById("mh-send-to-application-main-content");
+const sendToApplicationWrapper = document.getElementById("mh-send-to-application-wrapper");
+const sendToApplicationMainContentTitle = document.getElementById("mh-send-to-application-main-content-title");
+const sendToApplicationMainContentText = document.getElementById("mh-send-to-application-main-content-text");
+const sendToApplicationMainContentImg = document.getElementById("mh-send-to-application-main-content-img");
+const sendToApplicationMainContentImgSecces = document.getElementById("mh-send-to-application-main-content-img-secces");
+const sendToApplicationMainContentImgWrong = document.getElementById("mh-send-to-application-main-content-img-wrong");
+
+
+
+mhSubmitButton.addEventListener('click', () => {
+    const data = {
+        text: `
+    First Name: ${mhInputFirstName.value}, 
+    Last Name: ${mhInputLastName.value}, 
+    Phone: ${mhInputPhone.value}, 
+    Email: ${mhInputEmail.value}, 
+    Service: ${titleInterestingName.textContent},
+    Text: ${mhTextarea.value}`
+    };
+    if (applicationShow) {
+        sendToApplicationWrapper.style.display = "block";
+        setTimeout(() => {
+            sendToApplicationWrapper.style.opacity = "1";
+            setTimeout(() => {
+                sendToApplicationMainContent.style.opacity = "0"
+                setTimeout(() => {
+                    fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json', // Указываем, что данные в формате JSON
+                        },
+                        body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
+                    })
+                        .then(() => {
+                            if (mhSelectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Successfully";
+                                sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Успешно";
+                                sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
+                            }
+                            sendToApplicationMainContentImg.style.display = "none"
+                            sendToApplicationMainContentImgSecces.style.display = "block"
+                            sendToApplicationMainContent.style.border = "0.05208vw solid var(--success)";
+
+                            setTimeout(() => {
+                                sendToApplicationMainContent.style.opacity = "1"
+                            }, 300);
+                        })
+
+                        .catch(() => {
+                            if (mhSelectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Something went wrong";
+                                sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
+                                sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
+                            }
+                            sendToApplicationMainContentImg.style.display = "none"
+                            sendToApplicationMainContentImgWrong.style.display = "block"
+                            sendToApplicationMainContent.style.border = "0.05208vw solid var(--bad)";
+
+
+                            setTimeout(() => {
+                                sendToApplicationMainContent.style.opacity = "1"
+                            }, 300);
+                        })
+
+                    setTimeout(() => {
+                        sendToApplicationWrapper.style.opacity = "";
+                        setTimeout(() => {
+                            sendToApplicationWrapper.style.display = "";
+                            if (mhSelectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Sending an application";
+                                sendToApplicationMainContentText.textContent = "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds..."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Отправляем вашу заявку";
+                                sendToApplicationMainContentText.textContent = "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд..."
+                            }
+                            sendToApplicationMainContent.style.border = "";
+                            sendToApplicationMainContentImgWrong.style.display = "";
+                            sendToApplicationMainContentImgSecces.style.display = "";
+                            sendToApplicationMainContentImg.style.display = "";
+                        }, 300);
+                    }, 3000);
+                }, 300);
+            }, 3000);
+        }, 300);
+    }
 })

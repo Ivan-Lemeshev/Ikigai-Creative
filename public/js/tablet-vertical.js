@@ -4,6 +4,7 @@ import { ideasArrayUp, ideasArrayDown, textForApplication } from "./slogans.js";
 import reviews from "./reviews.js";
 import dataContats from "./links.js";
 import themeWrapper from "./switchTheme-data.js"
+import url from "./url.js"
 
 
 const tvNavButton = document.getElementById("tv-nav-button");
@@ -347,10 +348,13 @@ const isValidEmail = (email) => {
     return regex.test(email);
 }
 
+let applicationShow = false;
+
 
 const allInputsHave = () => {
     if (tvInputFirstName.value.length && tvInputLastName.value.length && tvInputPhone.value.length && tvInputEmail.value.length && isValidEmail(tvInputEmail.value) && tvSelectCategory) {
         tvSubmitButtonFourthSection.className = "th-send-form-submit-activ";
+        applicationShow = true;
         tvSubmitButtonFourthSection.style.border = "";
         tvSubmitButtonFourthSection.style.color = "";
         tvFourSectionTitle.textContent = "Contact us";
@@ -1058,3 +1062,97 @@ tvThirdSectionBottomArrow.addEventListener('click', () => {
         }, 300);
     }
 })
+
+
+const sendToApplicationMainContent = document.getElementById("tv-send-to-application-main-content");
+const sendToApplicationWrapper = document.getElementById("tv-send-to-application-wrapper");
+const sendToApplicationMainContentTitle = document.getElementById("tv-send-to-application-main-content-title");
+const sendToApplicationMainContentText = document.getElementById("tv-send-to-application-main-content-text");
+const sendToApplicationMainContentImg = document.getElementById("tv-send-to-application-main-content-img");
+const sendToApplicationMainContentImgSecces = document.getElementById("tv-send-to-application-main-content-img-secces");
+const sendToApplicationMainContentImgWrong = document.getElementById("tv-send-to-application-main-content-img-wrong");
+
+
+
+tvSubmitButtonFourthSection.addEventListener('click', () => {
+    const data = {
+        text: `
+    First Name: ${tvInputFirstName.value}, 
+    Last Name: ${tvInputLastName.value}, 
+    Phone: ${tvInputPhone.value}, 
+    Email: ${tvInputEmail.value}, 
+    Service: ${tvChoiceOfServicePlaceholder.textContent},
+    Text: ${tvTextarea.value}`
+    }; 
+    if (applicationShow) {
+        sendToApplicationWrapper.style.display = "block";
+        setTimeout(() => {
+            sendToApplicationWrapper.style.opacity = "1";
+            setTimeout(() => {
+                sendToApplicationMainContent.style.opacity = "0"
+                setTimeout(() => {
+                    fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json', // Указываем, что данные в формате JSON
+                        },
+                        body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
+                    })
+                        .then(() => {
+                            if (tvSelectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Successfully";
+                                sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Успешно";
+                                sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
+                            }
+                            sendToApplicationMainContentImg.style.display = "none"
+                            sendToApplicationMainContentImgSecces.style.display = "block"
+                            sendToApplicationMainContent.style.border = "0.05208vw solid var(--success)";
+
+                            setTimeout(() => {
+                                sendToApplicationMainContent.style.opacity = "1"
+                            }, 300);
+                        }) //если все хорошо
+
+                        .catch(() => {
+                            if (tvSelectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Something went wrong";
+                                sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
+                                sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
+                            }
+                            sendToApplicationMainContentImg.style.display = "none"
+                            sendToApplicationMainContentImgWrong.style.display = "block"
+                            sendToApplicationMainContent.style.border = "0.05208vw solid var(--bad)";
+
+
+                            setTimeout(() => {
+                                sendToApplicationMainContent.style.opacity = "1"
+                            }, 300);
+                        }) // если все плохо
+
+                    setTimeout(() => {
+                        sendToApplicationWrapper.style.opacity = "";
+                        setTimeout(() => {
+                            sendToApplicationWrapper.style.display = "";
+                            if (tvSelectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Sending an application";
+                                sendToApplicationMainContentText.textContent = "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds..."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Отправляем вашу заявку";
+                                sendToApplicationMainContentText.textContent = "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд..."
+                            }
+                            sendToApplicationMainContent.style.border = "";
+                            sendToApplicationMainContentImgWrong.style.display = "";
+                            sendToApplicationMainContentImgSecces.style.display = "";
+                            sendToApplicationMainContentImg.style.display = "";
+                        }, 300);
+                    }, 3000);
+                }, 300);
+            }, 3000);
+        }, 300);
+    }
+})
+

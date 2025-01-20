@@ -4,6 +4,7 @@ import { ideasArrayUp, ideasArrayDown, textForApplication } from "./slogans.js";
 import reviews from "./reviews.js";
 import dataContats from "./links.js";
 import themeWrapper from "./switchTheme-data.js"
+import url from "./url.js"
 
 const thNavButton = document.getElementById("th-nav-button");
 const thNavigationBlock = document.getElementById("th-navigation-block");
@@ -1191,11 +1192,18 @@ const sendToApplicationMainContentImg = document.getElementById("th-send-to-appl
 const sendToApplicationMainContentImgSecces = document.getElementById("th-send-to-application-main-content-img-secces");
 const sendToApplicationMainContentImgWrong = document.getElementById("th-send-to-application-main-content-img-wrong");
 
-const url = 'http://localhost:3000/api/sendRequest'; // Замените на ваш URL
 
 
 thSubmitButtonFourthSection.addEventListener('click', () => {
-    const data = { text: `First Name: ${thInputFirstName.value} thTextarea.value` }; // Замените на ваши данные
+    const data = {
+        text: `
+    First Name: ${thInputFirstName.value}, 
+    Last Name: ${thInputLastName.value}, 
+    Phone: ${thInputPhone.value}, 
+    Email: ${thInputEmail.value}, 
+    Service: ${thChoiceOfServicePlaceholder.textContent},
+    Text: ${thTextarea.value}`
+    }; // Замените на ваши данные
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";
         setTimeout(() => {
@@ -1266,7 +1274,5 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
             }, 3000);
         }, 300);
     }
-
-
 })
 
