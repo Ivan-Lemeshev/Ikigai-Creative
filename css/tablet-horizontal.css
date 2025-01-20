@@ -1565,3 +1565,86 @@
         align-items: center;
     }
 }
+
+#th-send-to-application-wrapper {
+    width: 100vw;
+    height: 83.36933vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(1.07991vw);
+    background: rgba(232, 232, 232, 0.3);
+    z-index: 50;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    &>#th-send-to-application-main-content {
+        width: 64.79482vw;
+        height: 28.07775vw;
+        margin-top: 27.86177vw;
+        margin-left: 17.60259vw;
+        background: rgba(232, 232, 232, 0.4);
+        border: 0.10799vw solid var(--ltText);
+        backdrop-filter: blur(1.07991vw);
+        transition: opacity 0.3s ease-in-out;
+
+
+
+        &>#th-send-to-application-main-content-title {
+            width: 30.91793vw;
+            height: 2.37581vw;
+            margin-top: 6.15551vw;
+            margin-left: 5.72354vw;
+            font-weight: 400;
+            font-size: 2.15983vw;
+            letter-spacing: 0.1em;
+            color: var(--ltText);
+            overflow: visible;
+        }
+
+        &>#th-send-to-application-main-content-text {
+            width: 31.42549vw;
+            height: 9.71922vw;
+            margin-top: 3.23974vw;
+            margin-left: 5.72354vw;
+            font-weight: 300;
+            font-size: 1.72786vw;
+            line-height: 2.41901vw;
+            letter-spacing: 0.1em;
+            color: var(--ltText);
+        }
+
+        &>#th-send-to-application-main-content-img {
+            width: 15.33477vw;
+            height: 15.33477vw;
+            position: absolute;
+            top: 6.15551vw;
+            left: 43.62851vw;
+            object-fit: contain;
+            pointer-events: none;
+        }
+
+        &>#th-send-to-application-main-content-img-secces {
+            width: 15.33477vw;
+            height: 15.33477vw;
+            position: absolute;
+            top: 6.15551vw;
+            left: 43.62851vw;
+            object-fit: contain;
+            pointer-events: none;
+            display: none;
+        }
+
+        &>#th-send-to-application-main-content-img-wrong {
+            width: 15.33477vw;
+            height: 15.33477vw;
+            position: absolute;
+            top: 6.15551vw;
+            left: 43.62851vw;
+            object-fit: contain;
+            pointer-events: none;
+            display: none;
+        }
+    }
+}

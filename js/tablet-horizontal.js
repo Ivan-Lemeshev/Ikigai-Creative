@@ -456,10 +456,12 @@ const isValidEmail = (email) => {
     return regex.test(email);
 }
 
+let applicationShow = false;
 
 const allInputsHave = () => {
     if (thInputFirstName.value.length && thInputLastName.value.length && thInputPhone.value.length && thInputEmail.value.length && isValidEmail(thInputEmail.value) && thSelectCategory) {
         thSubmitButtonFourthSection.className = "th-send-form-submit-activ";
+        applicationShow = true;
         thSubmitButtonFourthSection.style.border = "";
         thSubmitButtonFourthSection.style.color = "";
         thFourSectionTitle.textContent = "Contact us";
@@ -1177,6 +1179,81 @@ thThirdSectionBottomArrow.addEventListener('click', () => {
 
             resetBlocks();
             createDivBlocks();
+        }, 300);
+    }
+})
+
+let numberOfCallback = 200;
+
+const sendToApplicationMainContent = document.getElementById("th-send-to-application-main-content");
+const sendToApplicationWrapper = document.getElementById("th-send-to-application-wrapper");
+const sendToApplicationMainContentTitle = document.getElementById("th-send-to-application-main-content-title");
+const sendToApplicationMainContentText = document.getElementById("th-send-to-application-main-content-text");
+const sendToApplicationMainContentImg = document.getElementById("th-send-to-application-main-content-img");
+const sendToApplicationMainContentImgSecces = document.getElementById("th-send-to-application-main-content-img-secces");
+const sendToApplicationMainContentImgWrong = document.getElementById("th-send-to-application-main-content-img-wrong");
+
+thSubmitButtonFourthSection.addEventListener('click', () => {
+    if (applicationShow) {
+        sendToApplicationWrapper.style.display = "block";
+        setTimeout(() => {
+            sendToApplicationWrapper.style.opacity = "1";
+            setTimeout(() => {
+                sendToApplicationMainContent.style.opacity = "0"
+                setTimeout(() => {
+                    if (numberOfCallback === 200) {
+                        if (thSelectLang === "eng") {
+                            sendToApplicationMainContentTitle.textContent = "Successfully";
+                            sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
+                        } else {
+                            sendToApplicationMainContentTitle.textContent = "Успешно";
+                            sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
+                        }
+                        sendToApplicationMainContentImg.style.display = "none"
+                        sendToApplicationMainContentImgSecces.style.display = "block"
+                        sendToApplicationMainContent.style.border = "0.05208vw solid var(--success)";
+
+                        setTimeout(() => {
+                            sendToApplicationMainContent.style.opacity = "1"
+                        }, 300);
+                    }
+
+                    if (numberOfCallback === 500) {
+                        if (thSelectLang === "eng") {
+                            sendToApplicationMainContentTitle.textContent = "Something went wrong";
+                            sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
+                        } else {
+                            sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
+                            sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
+                        }
+                        sendToApplicationMainContentImg.style.display = "none"
+                        sendToApplicationMainContentImgWrong.style.display = "block"
+                        sendToApplicationMainContent.style.border = "0.05208vw solid var(--bad)";
+
+
+                        setTimeout(() => {
+                            sendToApplicationMainContent.style.opacity = "1"
+                        }, 300);
+                    }
+                    setTimeout(() => {
+                        sendToApplicationWrapper.style.opacity = "";
+                        setTimeout(() => {
+                            sendToApplicationWrapper.style.display = "";
+                            if (thSelectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Sending an application";
+                                sendToApplicationMainContentText.textContent = "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds..."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Отправляем вашу заявку";
+                                sendToApplicationMainContentText.textContent = "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд..."
+                            }
+                            sendToApplicationMainContent.style.border = "";
+                            sendToApplicationMainContentImgWrong.style.display = "";
+                            sendToApplicationMainContentImgSecces.style.display = "";
+                            sendToApplicationMainContentImg.style.display = "";
+                        }, 300);
+                    }, 3000);
+                }, 300);
+            }, 3000);
         }, 300);
     }
 

@@ -135,6 +135,8 @@ const allInputsHave = () => {
     if (inputFirstName.value.length && inputLastName.value.length && inputPhone.value.length && inputEmail.value.length && isValidEmail(inputEmail.value) && selectCategory) {
         submitButtonFourthSection.className = "send-form-submit-activ";
         applicationShow = true;
+    } else {
+        applicationShow = false;
     }
 }
 
@@ -1725,6 +1727,11 @@ uploadLinks()
 
 let numberOfCallback = 500;
 
+const url = 'https://ikigaiicreative.com/api/sendRequest'; // Замените на ваш URL
+const data = { text: 'text Test' }; // Замените на ваши данные
+
+
+
 submitButtonFourthSection.addEventListener('click', () => {
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";
@@ -1733,40 +1740,49 @@ submitButtonFourthSection.addEventListener('click', () => {
             setTimeout(() => {
                 sendToApplicationMainContent.style.opacity = "0"
                 setTimeout(() => {
-                    if (numberOfCallback === 200) {
-                        if (selectLang === "eng") {
-                            sendToApplicationMainContentTitle.textContent = "Successfully";
-                            sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
-                        } else {
-                            sendToApplicationMainContentTitle.textContent = "Успешно";
-                            sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
-                        }
-                        sendToApplicationMainContentImg.style.display = "none"
-                        sendToApplicationMainContentImgSecces.style.display = "block"
-                        sendToApplicationMainContent.style.border = "0.05208vw solid var(--success)";
 
-                        setTimeout(() => {
-                            sendToApplicationMainContent.style.opacity = "1"
-                        }, 300);
-                    }
+                    fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json', // Указываем, что данные в формате JSON
+                        },
+                        body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
+                    })
+                        .then(() => {
+                            if (selectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Successfully";
+                                sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Успешно";
+                                sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
+                            }
+                            sendToApplicationMainContentImg.style.display = "none"
+                            sendToApplicationMainContentImgSecces.style.display = "block"
+                            sendToApplicationMainContent.style.border = "0.05208vw solid var(--success)";
 
-                    if (numberOfCallback === 500) {
-                        if (selectLang === "eng") {
-                            sendToApplicationMainContentTitle.textContent = "Something went wrong";
-                            sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
-                        } else {
-                            sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
-                            sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
-                        }
-                        sendToApplicationMainContentImg.style.display = "none"
-                        sendToApplicationMainContentImgWrong.style.display = "block"
-                        sendToApplicationMainContent.style.border = "0.05208vw solid var(--bad)";
+                            setTimeout(() => {
+                                sendToApplicationMainContent.style.opacity = "1"
+                            }, 300);
+                        }) //если все хорошо
+
+                        .catch(() => {
+                            if (selectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Something went wrong";
+                                sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
+                                sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
+                            }
+                            sendToApplicationMainContentImg.style.display = "none"
+                            sendToApplicationMainContentImgWrong.style.display = "block"
+                            sendToApplicationMainContent.style.border = "0.05208vw solid var(--bad)";
 
 
-                        setTimeout(() => {
-                            sendToApplicationMainContent.style.opacity = "1"
-                        }, 300);
-                    }
+                            setTimeout(() => {
+                                sendToApplicationMainContent.style.opacity = "1"
+                            }, 300);
+                        }) // если все плохо
+
                     setTimeout(() => {
                         sendToApplicationWrapper.style.opacity = "";
                         setTimeout(() => {
@@ -1788,6 +1804,4 @@ submitButtonFourthSection.addEventListener('click', () => {
             }, 3000);
         }, 300);
     }
-
-
 })

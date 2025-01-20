@@ -5731,6 +5731,84 @@ const themeWrapper = {
             }
         }
     },
+    
+    "send-to-application-main-content-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "th-send-to-application-wrapper": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(232, 232, 232, 0.3)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(28, 28, 28, 0.3)`
+            }
+        }
+    },
+    
+    "th-send-to-application-main-content": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(232, 232, 232, 0.4)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(28, 28, 28, 0.4)`
+            }
+        }
+    },
+    
+    "th-send-to-application-main-content-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "th-send-to-application-main-content-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "th-send-to-application-main-content-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
 
 }
 
