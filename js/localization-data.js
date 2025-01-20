@@ -426,11 +426,6 @@ const localizationWrapper = {
         eng: "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds...",
     },
 
-    "th-navigation-block-lang-button": {
-        rus: "Rus",
-        eng: "Eng",
-    },
-
     "th-navigation-block-item-title-0": {
         rus: "Интро",
         eng: "Intro",

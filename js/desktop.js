@@ -5,7 +5,6 @@ import reviews from "./reviews.js";
 import dataContats from "./links.js";
 import themeWrapper from "./switchTheme-data.js"
 
-const backgroundGradient = document.getElementById("background-gradient");
 const ikigaiLogoText = document.getElementById("ikigai-logo-text");
 const creativeLogoText = document.getElementById("creative-logo-text");
 const ideasText = document.getElementById("animation-text");
@@ -354,7 +353,6 @@ const refreshTheme = () => {
     const navigationButtonChoiceServicesImgArrowPath = document.getElementById("navigation-button-first-section-choice-services-arrow-path");
     const navigationButtonChoiceReviewsImgArrowPath = document.getElementById("navigation-button-first-section-choice-reviews-arrow-path");
     const modalNotificationVlockImg = document.getElementById("modal-notification-block-img");
-    const buttonNoreTitleSvgPath = document.getElementById("button-more-title-svg-path");
     const mainSendForm = document.getElementById("main-send-form");
     const mainSendFormSvg = document.getElementById("main-send-form-svg");
     const alternativeSendFormSvgPath = document.getElementById("alternative-send-form-svg-path");

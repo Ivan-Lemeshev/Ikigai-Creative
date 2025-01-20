@@ -1047,11 +1047,11 @@
 
             <div id="th-navigation-block-lang-button-menu">
                 <p id="th-navigation-block-lang-button-menu-eng">Eng</p>
-                
+
                 <svg id="th-navigation-block-lang-switch-button-background" viewBox="0 0 36 18" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <rect id="th-navigation-block-lang-switch-button-background-rect" y="0.75" width="35.75"
-                        height="16.5" rx="8.25" fill="#2E2E2E" fill-opacity="0.2" />
+                        height="16.5" rx="8.25" fill="var(--svgColor)" fill-opacity="0.2" />
                 </svg>
 
                 <svg id="th-navigation-block-lang-switch-button-face" viewBox="0 0 22 22" fill="none"
@@ -1059,7 +1059,7 @@
                     <rect id="th-navigation-block-lang-switch-button-face-rect-fill" width="22" height="22" rx="11"
                         fill="#D9D9D9" />
                     <rect id="th-navigation-block-lang-switch-button-face-rect-stroke" x="1" y="1" width="20"
-                        height="20" rx="10" stroke="#2E2E2E" stroke-opacity="0.2" stroke-width="2" />
+                        height="20" rx="10" stroke="var(--svgColor)" stroke-opacity="0.2" stroke-width="2" />
                 </svg>
 
                 <p id="th-navigation-block-lang-button-menu-rus">Rus</p>
@@ -1078,6 +1078,40 @@
                     </clipPath>
                 </defs>
             </svg>
+
+            <div id="th-navigation-block-theme-button-menu">
+                <svg id="th-navigation-block-theme-button-menu-svg-moon" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3824_842)">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M10.9031 1.73199C5.71615 2.27968 1.67442 6.66785 1.67442 12C1.67442 17.7026 6.29734 22.3256 12 22.3256C17.3321 22.3256 21.7203 18.2839 22.268 13.0969C20.787 14.977 18.4885 16.186 15.907 16.186C11.4373 16.186 7.81395 12.5627 7.81395 8.09302C7.81395 5.51149 9.02305 3.21299 10.9031 1.73199ZM0 12C0 5.37258 5.37258 0 12 0C12.7999 0 13.2004 0.637686 13.269 1.1456C13.3351 1.63421 13.1545 2.25561 12.5927 2.59498C10.7305 3.72034 9.48837 5.76203 9.48837 8.09302C9.48837 11.6379 12.3621 14.5116 15.907 14.5116C18.238 14.5116 20.2797 13.2695 21.405 11.4073C21.7443 10.8455 22.3658 10.6649 22.8544 10.731C23.3623 10.7996 24 11.2001 24 12C24 18.6275 18.6275 24 12 24C5.37258 24 0 18.6275 0 12Z"
+                            fill="var(--svgColor)" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_3824_842">
+                            <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                <p id="th-navigation-block-theme-button-menu-title">Night mode</p>
+
+                <svg id="th-navigation-block-theme-switch-button-background" viewBox="0 0 36 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect id="th-navigation-block-theme-switch-button-background-rect" y="0.75" width="35.75"
+                        height="16.5" rx="8.25" fill="var(--svgColor)" fill-opacity="0.2" />
+                </svg>
+
+                <svg id="th-navigation-block-theme-switch-button-face" viewBox="0 0 22 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect id="th-navigation-block-theme-switch-button-face-rect-fill" width="22" height="22" rx="11"
+                        fill="#D9D9D9" />
+                    <rect id="th-navigation-block-theme-switch-button-face-rect-stroke" x="1" y="1" width="20"
+                        height="20" rx="10" stroke="var(--svgColor)" stroke-opacity="0.2" stroke-width="2" />
+                </svg>
+
+
+            </div>
 
             <svg id="th-navigation-block-menu-button" viewBox="0 0 24 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -1387,7 +1421,7 @@
             <div class="th-block-with-reviews" id="th-upper-block-with-reviews">
                 <img class="th-reviews-img" id="th-reviews-upper-img" src="" alt="reviews-img">
                 <h4 class="th-reviews-name" id="th-reviews-upper-name"></h4>
-                <div class="th-reviews-text-wrapper">
+                <div class="th-reviews-text-wrapper" id="th-reviews-text-wrapper-0">
                     <div class="th-reviews-text" id="th-reviews-upper-upper-text"></div>
                     <div class="th-second-reviews-text" id="th-reviews-upper-lower-text"> </div>
                 </div>
@@ -1396,7 +1430,7 @@
                 <img class="th-reviews-img" id="th-reviews-lower-img" src="" alt="reviews-img">
 
                 <h4 class="th-reviews-name" id="th-reviews-lower-name"></h4>
-                <div class="th-reviews-text-wrapper">
+                <div class="th-reviews-text-wrapper" id="th-reviews-text-wrapper-1">
                     <div class="th-reviews-text" id="th-reviews-lower-upper-text"></div>
                     <div class="th-second-reviews-text" id="th-reviews-lower-lower-text"></div>
                 </div>

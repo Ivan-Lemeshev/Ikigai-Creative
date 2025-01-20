@@ -3,7 +3,7 @@ import arrayPriceList from "./arrayPriceList.js";
 import { ideasArrayUp, ideasArrayDown, textForApplication } from "./slogans.js";
 import reviews from "./reviews.js";
 import dataContats from "./links.js";
-
+import themeWrapper from "./switchTheme-data.js"
 
 const thNavButton = document.getElementById("th-nav-button");
 const thNavigationBlock = document.getElementById("th-navigation-block");
@@ -13,18 +13,110 @@ const thNavigationBlockItem2 = document.getElementById("th-navigation-block-item
 const thNavigationBlockItem3 = document.getElementById("th-navigation-block-item-3");
 const thNavigationBlockItem4 = document.getElementById("th-navigation-block-item-4");
 
+const thThirdSectionImg = document.getElementById("th-third-section-main-img");
+const thThirdSectionTopArrow = document.getElementById("th-third-section-top-arrow");
+const thThirdSectionBottomArrow = document.getElementById("th-third-section-bottom-arrow");
+
+const thPriceListXMark = document.getElementById("th-price-list-x-mark");
+
+const thMainSendForm = document.getElementById("th-main-send-form");
+const thInputFirstName = document.getElementById("th-input-first-name");
+const thInputLastName = document.getElementById("th-input-last-name");
+const thInputPhone = document.getElementById("th-input-phone");
+const thInputEmail = document.getElementById("th-input-email");
+const thTextarea = document.getElementById("th-textarea");
+const thFourthSectionChoiceOfService = document.getElementById("th-choice-of-service");
+
+const thReviewsArrowLeft = document.getElementById("th-five-section-button-left");
+const thReviewsArrowRight = document.getElementById("th-five-section-button-right");
+
 let thSelectTheme = "light";
 
-// const thSwitchTheme = () => {
-//     thSelectTheme = thSelectTheme === "light" ? "dark" : "light";
-//     for (let id in themeWrapper) { // перебираем все айдишники
-//         const data = themeWrapper[id]; // пой айди получаю информацию 
-//         const element = document.getElementById(id); // получаю элемент который нужно по айди заменить 
-//         const allStyles = data.styles;
-//         element.style.color = allStyles[thSelectTheme].color;
-//         element.style.background = allStyles[thSelectTheme].background;
-//     }
-// }
+const thSwitchTheme = () => {
+    thSelectTheme = thSelectTheme === "light" ? "dark" : "light";
+    for (let id in themeWrapper) { // перебираем все айдишники
+        const data = themeWrapper[id]; // пой айди получаю информацию 
+        const element = document.getElementById(id); // получаю элемент который нужно по айди заменить 
+        const allStyles = data.styles;
+        element.style.color = allStyles[thSelectTheme].color;
+        element.style.background = allStyles[thSelectTheme].background;
+    }
+}
+
+const thRefreshTheme = () => {
+
+    const thPriceListBlock = document.getElementById("th-price-list-block");
+    const thPlaceholderTextarea = document.getElementById("th-placeholder-textarea");
+    const thFourSectionContacts = document.getElementById("th-four-section-contacts");
+    const thReviewsTextWrapper0 = document.getElementById("th-reviews-text-wrapper-0");
+    const thReviewsTextWrapper1 = document.getElementById("th-reviews-text-wrapper-1");
+
+    thThirdSectionImg.src = `/img/svg/tablet-horizontal/src/${[thSelectTheme]}/th-third-section-img Creative Design.svg`;
+    thThirdSectionTopArrow.src = `/img/svg/tablet-horizontal/src/${[thSelectTheme]}/th-third-section-top-arrow.svg`;
+    thThirdSectionBottomArrow.src = `/img/svg/tablet-horizontal/src/${[thSelectTheme]}/th-third-section-bottom-arrow.svg`;
+    thPriceListXMark.src = `/img/svg/tablet-horizontal/src/${[thSelectTheme]}/th-price-list-x-mark.svg`;
+    thReviewsArrowLeft.src = `/img/svg/tablet-horizontal/src/${[thSelectTheme]}/th-five-section-button-left.svg`;
+    thReviewsArrowRight.src = `/img/svg/tablet-horizontal/src/${[thSelectTheme]}/th-five-section-button-right.svg`;
+
+
+    const setImg = document.querySelectorAll("#th-third-section-right-services-wrapper img");
+    for (let index = 0; index < setImg.length; index++) {
+        if (thSelectTheme === "dark") {
+            setImg[index].src = setImg[index].src.replace("light", "dark")
+        } else {
+            setImg[index].src = setImg[index].src.replace("dark", "light")
+        }
+    }
+
+    const setH3 = document.querySelectorAll("#th-third-section-right-services-wrapper h3");
+    for (let index = 0; index < setH3.length; index++) {
+        if (thSelectTheme === "dark") {
+            setH3[index].classList = setH3[index].classList.replace("light", "dark")
+        } else {
+            setH3[index].classList = setH3[index].classList.replace("dark", "light")
+        }
+    }
+
+    // const dropList = document.getElementById("th-drop-list");
+
+
+
+
+    if (thSelectTheme === "light") {
+        thPriceListBlock.style.border = "0.054vw solid var(--dtSeparationLine)";
+        thMainSendForm.style.border = "0.054vw solid var(--dtSeparationLine)";
+        thInputFirstName.classList = "th-input-light-theme";
+        thInputLastName.classList = "th-input-light-theme";
+        thInputPhone.classList = "th-input-light-theme";
+        thInputEmail.classList = "th-input-light-theme";
+        thTextarea.classList = "th-textarea-light";
+        thFourthSectionChoiceOfService.style.borderBottom = "0.054vw solid var(--dtSeparationLine)";
+        thPlaceholderTextarea.style.borderBottom = "0.054vw solid var(--dtSeparationLine)";
+        thPlaceholderTextarea.style.borderTop = "0.054vw solid var(--dtSeparationLine)";
+        thFourSectionContacts.style.border = "0.054vw solid rgba(43, 43, 43, 0.5)";
+        thReviewsTextWrapper0.style.border = "0.054vw solid rgba(46, 46, 46, 0.5)";
+        thReviewsTextWrapper1.style.border = "0.054vw solid rgba(46, 46, 46, 0.5)";
+        // dropList.style.background = "rgba(232, 232, 232, 0.7)";
+        document.documentElement.style.setProperty('--svgColor', '#2E2E2E');
+
+    } else {
+        thPriceListBlock.style.border = "0.054vw solid var(--ltSeparationLine)";
+        thMainSendForm.style.border = "0.054vw solid var(--ltSeparationLine)";
+        thInputFirstName.classList = "th-input-dark-theme";
+        thInputLastName.classList = "th-input-dark-theme";
+        thInputPhone.classList = "th-input-dark-theme";
+        thInputEmail.classList = "th-input-dark-theme";
+        thTextarea.classList = "th-textarea-dark";
+        thFourthSectionChoiceOfService.style.borderBottom = "0.054vw solid var(--ltSeparationLine)";
+        thPlaceholderTextarea.style.borderBottom = "0.054vw solid var(--ltSeparationLine)";
+        thPlaceholderTextarea.style.borderTop = "0.054vw solid var(--ltSeparationLine)";
+        thFourSectionContacts.style.border = "0.054vw solid rgba(214, 214, 214, 0.5)";
+        thReviewsTextWrapper0.style.border = "0.054vw solid rgba(214, 214, 214, 0.5)";
+        thReviewsTextWrapper1.style.border = "0.054vw solid rgba(214, 214, 214, 0.5)";
+        // dropList.style.background = "rgba(28, 28, 28, 0.7)";
+        document.documentElement.style.setProperty('--svgColor', '#F3F3F3');
+    }
+}
 
 thNavButton.addEventListener('click', () => {
     thNavigationBlock.style.display = "block";
@@ -96,14 +188,12 @@ const thSecondSectionButtonServices = document.getElementById("th-second-section
 const thSecondSectionButtonContacts = document.getElementById("th-second-section-button-contacts");
 const thThirdSectionButtonOfPriceList = document.getElementById("th-third-section-button-price-list");
 const thPriceListWrapper = document.getElementById("th-price-list-wrapper");
-const thPriceListXMark = document.getElementById("th-price-list-x-mark");
 
 let thAngel = 0;
 let thNumberOfActivAnimation = 0;
 let thActivNumber = 0;
 
 const thThirdSectionTitle = document.getElementById("th-third-section-title-of-service");
-const thThirdSectionImg = document.getElementById("th-third-section-main-img");
 const thThirdSectionText0 = document.getElementById("th-third-section-text-about-service-0");
 const thThirdSectionText1 = document.getElementById("th-third-section-text-about-service-1");
 
@@ -127,6 +217,10 @@ const thLangMenu = document.getElementById("th-navigation-block-lang-button-menu
 const thNavigationTitle = document.getElementById("th-navigation-block-title");
 
 const thNavigationBlockThemeButton = document.getElementById("th-navigation-block-theme-button");
+const thNavigationBlockThemeButtonMenu = document.getElementById("th-navigation-block-theme-button-menu");
+const thThemeBackground = document.getElementById("th-navigation-block-theme-switch-button-background");
+const thThemeFace = document.getElementById("th-navigation-block-theme-switch-button-face");
+
 const thNavigationBlockMenuButton = document.getElementById("th-navigation-block-menu-button");
 
 let thSelectCategory = "";
@@ -142,31 +236,91 @@ const thSwitchLocalization = () => {
     }
 }
 
-thLang.addEventListener('click', () => {
-    thLangMenu.style.display = "block";
+// let nightMode = false;
+// let language = false;
 
+// document.addEventListener('click', () => {
+//     console.log(nightMode + 'mode')
+//     console.log(language + ' lang')
+// })
+
+thLang.addEventListener('click', () => {
+
+
+    thLang.style.opacity = "0";
+    thLang.style.display = "none";
+    thNavigationBlockThemeButton.style.right = "6.2635vw";
+    thNavigationBlockMenuButton.style.right = "1.94384vw";
+    thLangMenu.style.display = "block";
+    thNavigationTitle.style.opacity = "0"
+    thNavigationBlockThemeButtonMenu.style.display = "";
     setTimeout(() => {
         thLangMenu.style.opacity = "1";
         setTimeout(() => {
-            thLang.style.opacity = "0";
-            thNavigationTitle.style.opacity = "0"
-            thNavigationBlockThemeButton.style.right = "6.2635vw";
-            thNavigationBlockMenuButton.style.right = "1.94384vw";
+            thNavigationTitle.textContent = "Language";
             setTimeout(() => {
-                thLang.style.display = "none";
-                thNavigationTitle.textContent = "Language"
                 thNavigationTitle.style.opacity = "1";
-            }, 300);
-        }, 1);
+            }, 1);
+        }, 300);
     }, 1);
+
+
+    if (nightMode) {
+        thLang.style.opacity = "1";
+        thLang.style.display = "block";
+    }
+});
+
+thNavigationBlockThemeButton.addEventListener('click', () => {
+
+    thNavigationBlockThemeButton.style.opacity = "0";
+    thLang.style.display = "";
+    thLangMenu.style.display = "";
+    thNavigationBlockThemeButtonMenu.style.display = "block";
+    thNavigationTitle.style.opacity = "0"
+    setTimeout(() => {
+        thNavigationBlockThemeButton.style.display = "none";
+        thLang.style.opacity = "";
+        thNavigationBlockThemeButtonMenu.style.opacity = "1";
+    }, 1);
+
 })
 
 
-const thInputFirstName = document.getElementById("th-input-first-name");
-const thInputLastName = document.getElementById("th-input-last-name");
-const thInputPhone = document.getElementById("th-input-phone");
-const thInputEmail = document.getElementById("th-input-email");
-const thTextarea = document.getElementById("th-textarea");
+thNavigationBlockMenuButton.addEventListener('click', () => {
+
+})
+
+
+thThemeBackground.addEventListener('click', () => {
+    thSwitchTheme();
+    thRefreshTheme();
+    if (thSelectTheme === "dark") {
+        thThemeFace.style.right = "0vw";
+    } else {
+        thThemeFace.style.right = "1.4vw";
+    }
+    thNavigationBlock.style.right = "";
+    setTimeout(() => {
+        thNavigationBlock.style.display = "";
+    }, 500);
+})
+
+thThemeFace.addEventListener('click', () => {
+    thSwitchTheme();
+    thRefreshTheme();
+    if (thSelectTheme === "dark") {
+        thThemeFace.style.right = "0vw";
+    } else {
+        thThemeFace.style.right = "1.4vw";
+    }
+    thNavigationBlock.style.right = "";
+    setTimeout(() => {
+        thNavigationBlock.style.display = "";
+    }, 500);
+})
+
+
 const thSubmitButtonFourthSection = document.getElementById("th-send-form-submit");
 const thFooterEng = document.getElementById("th-footer-eng");
 const thFooterRus = document.getElementById("th-footer-rus")
@@ -227,11 +381,9 @@ const thRefreshDataForLocalization = () => {
 
 
 const thFourSectionTitle = document.getElementById("th-four-section-title");
-const thMainSendForm = document.getElementById("th-main-send-form");
 const thMainSendFormTitle = document.getElementById("th-main-send-form-title");
 const thChoiceServecesTitle = document.getElementById("th-choice-serveces-title");
 
-const thFourthSectionChoiceOfService = document.getElementById("th-choice-of-service");
 const thFourthSectionChoiceOfServiceArrow = document.getElementById("th-choice-of-service-arrow");
 const thFourthSectionChoiceOfServiceArrowPath = document.getElementById("th-choice-of-service-arrow-path");
 const thChoiceOfServicePlaceholder = document.getElementById("th-choice-of-service-placeholder");
@@ -274,8 +426,13 @@ thInputFirstName.addEventListener('input', () => {
         editValue = editValue.slice(0, 10);
     }
     if (editValue.length > 0) {
-        thInputFirstName.style.borderBottom = "0.10799vw solid var(--blue)";
-        thInputFirstName.style.color = "var(--blue)";
+        if (thSelectTheme === "light") {
+            thInputFirstName.style.borderBottom = "0.054vw solid var(--dtSeparationLine)";
+            thInputFirstName.style.color = "var(--ltText)";
+        } else {
+            thInputFirstName.style.borderBottom = "0.054vw solid var(--ltSeparationLine)";
+            thInputFirstName.style.color = "var(--dtText)";
+        }
         allInputsHave();
     } else {
         if (thSelectLang === "rus") {
@@ -283,9 +440,9 @@ thInputFirstName.addEventListener('input', () => {
         } else {
             thInputFirstName.placeholder = "Enter your first name";
         }
-        thInputFirstName.style.borderBottom = "0.10799vw solid var(--orangeRed)";
+        thInputFirstName.style.borderBottom = "0.054vw solid var(--bad)";
         thInputFirstName.classList = "th-input-placeholder";
-        thInputFirstName.style.color = "var(--orangeRed)";
+        thInputFirstName.style.color = "var(--bad)";
         voidInput();
     }
     thInputFirstName.value = capitalize(editValue);
@@ -298,13 +455,18 @@ thInputLastName.addEventListener('input', () => {
         editValue = editValue.slice(0, 10);
     }
     if (editValue.length > 0) {
-        thInputLastName.style.borderBottom = "0.10799vw solid var(--blue)";
-        thInputLastName.style.color = "var(--blue)";
+        if (thSelectTheme === "light") {
+            thInputLastName.style.borderBottom = "0.054vw solid var(--dtSeparationLine)";
+            thInputLastName.style.color = "var(--ltText)";
+        } else {
+            thInputLastName.style.borderBottom = "0.054vw solid var(--ltSeparationLine)";
+            thInputLastName.style.color = "var(--dtText)";
+        }
         allInputsHave();
     } else {
-        thInputLastName.style.borderBottom = "0.10799vw solid var(--orangeRed)";
+        thInputLastName.style.borderBottom = "0.054vw solid var(--bad)";
         thInputLastName.classList = "th-input-placeholder";
-        thInputLastName.style.color = "var(--orangeRed)";
+        thInputLastName.style.color = "var(--bad)";
         if (thSelectLang === "rus") {
             thInputLastName.placeholder = "Укажите вашу фамилию";
         } else {
@@ -322,13 +484,18 @@ thInputPhone.addEventListener('input', () => {
         editValue = editValue.slice(0, 12);
     }
     if (editValue.length > 0) {
-        thInputPhone.style.borderBottom = "0.10799vw solid var(--blue)";
-        thInputPhone.style.color = "var(--blue)";
+        if (thSelectTheme === "light") {
+            thInputPhone.style.borderBottom = "0.054vw solid var(--dtSeparationLine)";
+            thInputPhone.style.color = "var(--ltText)";
+        } else {
+            thInputPhone.style.borderBottom = "0.054vw solid var(--ltSeparationLine)";
+            thInputPhone.style.color = "var(--dtText)";
+        }
         allInputsHave();
     } else {
-        thInputPhone.style.borderBottom = "0.10799vw solid var(--orangeRed)";
+        thInputPhone.style.borderBottom = "0.054vw solid var(--bad)";
         thInputPhone.classList = "th-input-placeholder";
-        thInputPhone.style.color = "var(--orangeRed)";
+        thInputPhone.style.color = "var(--bad)";
         if (thSelectLang === "rus") {
             thInputPhone.placeholder = "Напишите ваш телефон";
         } else {
@@ -349,13 +516,18 @@ thInputEmail.addEventListener('input', () => {
         editValue = editValue.slice(0, 20);
     }
     if (editValue.length > 0) {
-        thInputEmail.style.borderBottom = "0.10799vw solid var(--blue)";
-        thInputEmail.style.color = "var(--blue)";
+        if (thSelectTheme === "light") {
+            thInputEmail.style.borderBottom = "0.054vw solid var(--dtSeparationLine)";
+            thInputEmail.style.color = "var(--ltText)";
+        } else {
+            thInputEmail.style.borderBottom = "0.054vw solid var(--ltSeparationLine)";
+            thInputEmail.style.color = "var(--dtText)";
+        }
         allInputsHave();
     } else {
-        thInputEmail.style.borderBottom = "0.10799vw solid var(--orangeRed)";
+        thInputEmail.style.borderBottom = "0.054vw solid var(--bad)";
         thInputEmail.classList = "th-input-placeholder";
-        thInputEmail.style.color = "var(--orangeRed)";
+        thInputEmail.style.color = "var(--bad)";
         if (thSelectLang === "rus") {
             thInputEmail.placeholder = "Введите корректный email";
         } else {
@@ -369,14 +541,17 @@ thInputEmail.addEventListener('input', () => {
 allInputsHave();
 let resultChecked = "";
 
+const thFourSection = document.getElementById("th-four-section")
 
 thSubmitButtonFourthSection.addEventListener('click', () => {
 
+
+
     if (!thInputFirstName.value.length) {
         resultChecked = false;
-        thInputFirstName.style.borderBottom = "0.10799vw solid var(--orangeRed)";
+        thInputFirstName.style.borderBottom = "0.054vw solid var(--bad)";
         thInputFirstName.classList = "th-input-placeholder";
-        thInputFirstName.style.color = "var(--orangeRed)";
+        thInputFirstName.style.color = "var(--bad)";
         if (thSelectLang === "rus") {
             thInputFirstName.placeholder = "Укажите ваше имя";
         } else {
@@ -384,16 +559,22 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         }
 
     } else {
-        thInputFirstName.style.borderBottom = "0.10799vw solid var(--blue)";
-        thInputFirstName.style.color = "var(--blue)";
+        if (thSelectTheme === "light") {
+            thInputFirstName.style.borderBottom = "0.054vw solid var(--dtSeparationLine)";
+            thInputFirstName.style.color = "var(--ltText)";
+        } else {
+            thInputFirstName.style.borderBottom = "0.054vw solid var(--ltSeparationLine)";
+            thInputFirstName.style.color = "var(--dtText)";
+        }
+
 
 
     }
     if (!thInputLastName.value.length) {
         resultChecked = false;
-        thInputLastName.style.borderBottom = "0.10799vw solid var(--orangeRed)";
+        thInputLastName.style.borderBottom = "0.054vw solid var(--bad)";
         thInputLastName.classList = "th-input-placeholder";
-        thInputLastName.style.color = "var(--orangeRed)";
+        thInputLastName.style.color = "var(--bad)";
         if (thSelectLang === "rus") {
             thInputLastName.placeholder = "Укажите вашу фамилию";
         } else {
@@ -401,15 +582,20 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         }
 
     } else {
-        thInputLastName.style.borderBottom = "0.10799vw solid var(--blue)";
-        thInputLastName.style.color = "var(--blue)";
+        if (thSelectTheme === "light") {
+            thInputLastName.style.borderBottom = "0.054vw solid var(--dtSeparationLine)";
+            thInputLastName.style.color = "var(--ltText)";
+        } else {
+            thInputLastName.style.borderBottom = "0.054vw solid var(--ltSeparationLine)";
+            thInputLastName.style.color = "var(--dtText)";
+        }
 
     }
     if (!thInputPhone.value.length) {
         resultChecked = false;
-        thInputPhone.style.borderBottom = "0.10799vw solid var(--orangeRed)";
+        thInputPhone.style.borderBottom = "0.054vw solid var(--bad)";
         thInputPhone.classList = "th-input-placeholder";
-        thInputPhone.style.color = "var(--orangeRed)";
+        thInputPhone.style.color = "var(--bad)";
         if (thSelectLang === "rus") {
             thInputPhone.placeholder = "Напишите ваш телефон";
         } else {
@@ -417,58 +603,76 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
         }
 
     } else {
-        thInputPhone.style.borderBottom = "0.10799vw solid var(--blue)";
-        thInputPhone.style.color = "var(--blue)";
+        if (thSelectTheme === "light") {
+            thInputPhone.style.borderBottom = "0.054vw solid var(--dtSeparationLine)";
+            thInputPhone.style.color = "var(--ltText)";
+        } else {
+            thInputPhone.style.borderBottom = "0.054vw solid var(--ltSeparationLine)";
+            thInputPhone.style.color = "var(--dtText)";
+        }
 
     }
     if (!thInputEmail.value.length) {
         resultChecked = false;
-        thInputEmail.style.borderBottom = "0.10799vw solid var(--orangeRed)";
+        thInputEmail.style.borderBottom = "0.054vw solid var(--bad)";
         thInputEmail.classList = "th-input-placeholder";
-        thInputEmail.style.color = "var(--orangeRed)";
+        thInputEmail.style.color = "var(--bad)";
         if (thSelectLang === "rus") {
             thInputEmail.placeholder = "Введите корректный email";
         } else {
             thInputEmail.placeholder = "Enter a valid email";
         }
     } else {
-        thInputEmail.style.borderBottom = "0.10799vw solid var(--blue)";
-        thInputEmail.style.color = "var(--blue)";
+        if (thSelectTheme === "light") {
+            thInputEmail.style.borderBottom = "0.054vw solid var(--dtSeparationLine)";
+            thInputEmail.style.color = "var(--ltText)";
+        } else {
+            thInputEmail.style.borderBottom = "0.054vw solid var(--ltSeparationLine)";
+            thInputEmail.style.color = "var(--dtText)";
+        }
 
     }
 
     if (!thSelectCategory) {
         resultChecked = false;
-        thChoiceServecesTitle.style.color = "var(--orangeRed)";
-        thChoiceOfServicePlaceholder.style.color = "var(--orangeRed)";
-        thFourthSectionChoiceOfService.style.borderBottomColor = "var(--orangeRed)";
-        thFourthSectionChoiceOfServiceArrowPath.style.fill = "#EC5200";
-        thFourthSectionChoiceOfServiceArrowPath.style.stroke = "#EC5200";
+        thChoiceServecesTitle.style.color = "var(--bad)";
+        thChoiceOfServicePlaceholder.style.color = "var(--bad)";
+        thFourthSectionChoiceOfService.style.borderBottomColor = "var(--bad)";
+        thFourthSectionChoiceOfServiceArrowPath.style.fill = "var(--bad)";
+        thFourthSectionChoiceOfServiceArrowPath.style.stroke = "var(--bad)";
     } else {
         thChoiceServecesTitle.style.color = "";
         thChoiceOfServicePlaceholder.style.color = "";
         thFourthSectionChoiceOfService.style.borderBottomColor = "";
-        thFourthSectionChoiceOfServiceArrowPath.style.fill = "#0285CC";
-        thFourthSectionChoiceOfServiceArrowPath.style.stroke = "#0285CC";
+        thFourthSectionChoiceOfServiceArrowPath.style.fill = "var(--accent)";
+        thFourthSectionChoiceOfServiceArrowPath.style.stroke = "var(--accent)";
     } if (!isValidEmail(thInputEmail.value)) {
-        thInputEmail.style.borderBottom = "0.10799vw solid var(--orangeRed)";
+        thInputEmail.style.borderBottom = "0.054vw solid var(--bad)";
         thInputEmail.classList = "th-input-placeholder";
-        thInputEmail.style.color = "var(--orangeRed)";
+        thInputEmail.style.color = "var(--bad)";
         if (thSelectLang === "rus") {
             thInputEmail.placeholder = "Введите корректный email";
         } else {
             thInputEmail.placeholder = "Enter a valid email";
         }
     } else {
-        thInputEmail.style.borderBottom = "0.10799vw solid var(--blue)";
-        thInputEmail.style.color = "var(--blue)";
+        if (thSelectTheme === "light") {
+            thInputEmail.style.borderBottom = "0.054vw solid var(--dtSeparationLine)";
+            thInputEmail.style.color = "var(--ltText)";
+        } else {
+            thInputEmail.style.borderBottom = "0.054vw solid var(--ltSeparationLine)";
+            thInputEmail.style.color = "var(--dtText)";
+        }
     }
     if (!resultChecked) {
-        thSubmitButtonFourthSection.style.border = "0.10799vw solid var(--secondBrown)";
-        thSubmitButtonFourthSection.style.color = "var(--secondBrown)";
-        thFourSectionTitle.style.color = "var(--orangeRed)";
-        thMainSendForm.style.border = "0.21598vw solid rgba(236, 82, 0, 0.5)";
-        thMainSendFormTitle.style.color = "var(--orangeRed)";
+        thSubmitButtonFourthSection.style.border = "0.054vw solid var(--bad)";
+        thSubmitButtonFourthSection.style.color = "var(--bad)";
+        thFourSectionTitle.style.color = "var(--bad)";
+        thMainSendForm.style.border = "0.21598vw solid rgba(255, 79, 79, 0.5)";
+        thMainSendFormTitle.style.color = "var(--bad)";
+        thFourSection.style.background = `radial - gradient(80.13 % 43.52 % at 17.01 % 51.49 %, rgba(255, 79, 79, 0.2) 0 %, rgba(232, 232, 232, 0) 100 %),
+        radial - gradient(84.34 % 46.98 % at 89.9 % 55.12 %, rgba(0, 136, 204, 0.2) 0 %, rgba(232, 232, 232, 0) 100 %),
+        linear-gradient(0deg, #E8E8E8, #E8E8E8)`;
         if (thSelectLang === "rus") {
             thFourSectionTitle.textContent = "Заполните все обязательные поля";
         } else {
@@ -506,6 +710,10 @@ thLangBackground.addEventListener('click', () => {
     } else {
         thLangFace.style.left = "5.50756vw";
     }
+    thNavigationBlock.style.right = "";
+    setTimeout(() => {
+        thNavigationBlock.style.display = "";
+    }, 500);
 })
 
 thLangFace.addEventListener('click', () => {
@@ -516,6 +724,10 @@ thLangFace.addEventListener('click', () => {
     } else {
         thLangFace.style.left = "5.50756vw";
     }
+    thNavigationBlock.style.right = "";
+    setTimeout(() => {
+        thNavigationBlock.style.display = "";
+    }, 500);
 })
 
 thSecondSectionButtonServices.addEventListener('click', () => {
@@ -647,9 +859,17 @@ thFourthSectionChoiceOfService.addEventListener('click', (event) => {
 
     newDropListWrapper.style.opacity = "1";
     thFourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
-    thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 0)";
     newDropListWrapper.style.pointerEvents = "all";
-    thChoiceOfServicePlaceholder.style.color = "var(--blue)";
+
+    if (thSelectTheme === "light") {
+        thFourthSectionChoiceOfService.style.borderBottomColor = "var(--dtSeparationLine)";
+        thChoiceOfServicePlaceholder.style.color = "var(--ltText)";
+    } else {
+        thFourthSectionChoiceOfService.style.borderBottomColor = "var(--ltSeparationLine)";
+        thChoiceOfServicePlaceholder.style.color = "var(--dtText)";
+    }
+
+
     const possibleDublicate = document.getElementById("th-drop-list");
     if (possibleDublicate) {
         thDropListWrapper.removeChild(possibleDublicate);
@@ -657,12 +877,13 @@ thFourthSectionChoiceOfService.addEventListener('click', (event) => {
     thDropListWrapper.appendChild(newDropListWrapper);
 
     document.addEventListener('click', () => {
-        if (!thSelectCategory) {
-            thChoiceOfServicePlaceholder.style.color = "var(--darkBlue)";
-        };
         newDropListWrapper.style.opacity = "0";
         thDropListWrapper.style.height = "";
-        thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
+        if (thSelectTheme === "light") {
+            thFourthSectionChoiceOfService.style.borderBottomColor = "var(--dtSeparationLine)";
+        } else {
+            thFourthSectionChoiceOfService.style.borderBottomColor = "var(--ltSeparationLine)";
+        }
         newDropListWrapper.style.pointerEvents = "none";
         thFourthSectionChoiceOfServiceArrow.style.rotate = "";
     });
@@ -682,8 +903,13 @@ const thSetupAndTranslateForSelectService = (event) => {
         if (selCat !== thSelectCategory && arrayPriceList.map((service) => service.title.eng).includes(selCat)) {
             thChoiceOfServicePlaceholder.textContent = selCat;
             thFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-            thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
-            thChoiceOfServicePlaceholder.style.color = "var(--blue)";
+            if (thSelectTheme === "light") {
+                thFourthSectionChoiceOfService.style.borderBottomColor = "var(--dtSeparationLine)";
+                thChoiceOfServicePlaceholder.style.color = "var(--ltText)";
+            } else {
+                thFourthSectionChoiceOfService.style.borderBottomColor = "var(--ltSeparationLine)";
+                thChoiceOfServicePlaceholder.style.color = "var(--dtText)";
+            }
             thSelectCategory = selCat;
             allInputsHave();
         }
@@ -693,8 +919,13 @@ const thSetupAndTranslateForSelectService = (event) => {
         if (selCat !== thSelectCategory && arrayPriceList.map((service) => service.title.rus).includes(selCat)) {
             thChoiceOfServicePlaceholder.textContent = selCat;
             thFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-            thFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
-            thChoiceOfServicePlaceholder.style.color = "var(--blue)";
+            if (thSelectTheme === "light") {
+                thFourthSectionChoiceOfService.style.borderBottomColor = "var(--dtSeparationLine)";
+                thChoiceOfServicePlaceholder.style.color = "var(--ltText)";
+            } else {
+                thFourthSectionChoiceOfService.style.borderBottomColor = "var(--ltSeparationLine)";
+                thChoiceOfServicePlaceholder.style.color = "var(--dtText)";
+            }
             thSelectCategory = selCat;
             allInputsHave();
         }
@@ -729,8 +960,6 @@ buttonReview.addEventListener('click', (event) => {
 })
 
 
-const thReviewsArrowLeft = document.getElementById("th-five-section-button-left");
-const thReviewsArrowRight = document.getElementById("th-five-section-button-right");
 
 let number = 0;
 let float = false;
@@ -818,7 +1047,12 @@ const createDivBlocks = () => {
             div.classList = "th-third-section-right-services";
             div.style.top = startDivTop + (gapDivs + divHeight) * buffer.length + "vw";
             divImg.src = `/img/svg/tablet-horizontal/src/${[thSelectTheme]}/${service.title.eng}.svg`;
-            divH3.textContent = service.title[thSelectLang]
+            divH3.textContent = service.title[thSelectLang];
+            if (thSelectTheme === "light") {
+                divH3.classList = `th-third-section-right-services-h3-light`;
+            } else {
+                divH3.classList = `false`;
+            }
             div.appendChild(divImg);
             div.appendChild(divH3);
             thThirdSectionRightServicesWrapper.appendChild(div);
@@ -849,8 +1083,6 @@ const movePlitka = (deltaGap) => {
     }
 }
 
-const thThirdSectionTopArrow = document.getElementById("th-third-section-top-arrow");
-const thThirdSectionBottomArrow = document.getElementById("th-third-section-bottom-arrow");
 let thThirdSectionAnimation = false;
 
 thThirdSectionTopArrow.addEventListener('click', () => {
