@@ -4647,6 +4647,289 @@ const themeWrapper = {
             }
         }
     },
+
+    "tv-first-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(180deg, rgba(0, 136, 204, 0.1) 0%, rgba(0, 136, 204, 0.3) 3.71%, rgba(0, 136, 204, 0) 42.69%, rgba(0, 136, 204, 0) 51.14%, rgba(0, 136, 204, 0.2) 89.98%, rgba(0, 136, 204, 0) 100%),
+                            linear-gradient(90deg, rgba(232, 232, 232, 0.1) 0%, rgba(232, 232, 232, 0) 49.5%, rgba(232, 232, 232, 0.1) 100%),
+                            linear-gradient(0deg, #E8E8E8, #E8E8E8)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(180deg, rgba(0, 136, 204, 0.04) 0%, rgba(0, 136, 204, 0.12) 3.71%, rgba(0, 136, 204, 0) 42.69%, rgba(0, 136, 204, 0) 51.14%, rgba(0, 136, 204, 0.08) 89.98%, rgba(0, 136, 204, 0) 100%), linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+
+    "tv-central-text-first-section-up": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-central-text-first-section-down": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-second-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(180deg, rgba(232, 232, 232, 0) 0%, rgba(0, 136, 204, 0.2) 60.56%, rgba(232, 232, 232, 0.2) 100%),
+                            linear-gradient(270deg, rgba(232, 232, 232, 0) 0%, rgba(232, 232, 232, 0.6) 39.79%),
+                            linear-gradient(0deg, #E8E8E8, #E8E8E8)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, rgba(0, 136, 204, 0.2) 60.56%, rgba(28, 28, 28, 0.2) 100%),
+                            linear-gradient(270deg, rgba(28, 28, 28, 0) 0%, rgba(28, 28, 28, 0.6) 39.79%),
+                            linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+
+    "tv-second-section-text-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-second-section-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-third-section-title-of-service": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-third-section-text-about-service-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-third-section-text-about-service-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-price-list-block": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(232, 232, 232, 0.4)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(28, 28, 28, 0.4)`
+            }
+        }
+    },
+
+    "tv-price-list-title-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(43, 43, 43, 0.6)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(214, 214, 214, 0.6)`
+            }
+        }
+    },
+
+    "tv-price-list-footer-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(43, 43, 43, 0.6)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(214, 214, 214, 0.6)`
+            }
+        }
+    },
+
+    "tv-four-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(180deg, rgba(232, 232, 232, 0) 0%, rgba(0, 136, 204, 0.24) 22.13%, rgba(0, 136, 204, 0.03) 81.71%, rgba(0, 136, 204, 0.24) 87.91%, rgba(232, 232, 232, 0) 97.73%),
+                            linear-gradient(270deg, rgba(232, 232, 232, 0.8) 0%, rgba(232, 232, 232, 0.08) 6.56%, rgba(232, 232, 232, 0) 50.5%, rgba(232, 232, 232, 0.08) 93.54%, rgba(232, 232, 232, 0.8) 100%),
+                            linear-gradient(0deg, #E8E8E8, #E8E8E8)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, rgba(0, 136, 204, 0.24) 22.13%, rgba(0, 136, 204, 0.03) 81.71%, rgba(0, 136, 204, 0.24) 87.91%, rgba(28, 28, 28, 0) 97.73%),
+                            linear-gradient(270deg, rgba(28, 28, 28, 0.8) 0%, rgba(28, 28, 28, 0.08) 6.56%, rgba(28, 28, 28, 0) 50.5%, rgba(28, 28, 28, 0.08) 93.54%, rgba(28, 28, 28, 0.8) 100%),
+                            linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+
+    "tv-four-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-main-send-form-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-input-first-name": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-input-last-name": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-input-phone": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-input-email": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-choice-serveces-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-textarea": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
 }
 
 export default themeWrapper;

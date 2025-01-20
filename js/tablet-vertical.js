@@ -269,8 +269,6 @@ const tvRefreshDataForLocalization = () => {
 const tvFourSectionTitle = document.getElementById("tv-four-section-title");
 const tvMainSendForm = document.getElementById("tv-main-send-form");
 const tvMainSendFormTitle = document.getElementById("tv-main-send-form-title");
-const tvFourSectionBlueGradient = document.getElementById("tv-four-section-blue-gradient");
-const tvFourSectionRedGradient = document.getElementById("tv-four-section-red-gradient");
 const tvChoiceServecesTitle = document.getElementById("tv-choice-serveces-title");
 
 const tvFourthSectionChoiceOfService = document.getElementById("tv-choice-of-service");
@@ -302,8 +300,6 @@ const allInputsHave = () => {
         tvMainSendForm.style.border = "";
         tvMainSendForm.style.backgroundColor = "";
         tvMainSendFormTitle.style.color = "";
-        tvFourSectionBlueGradient.style.opacity = "1";
-        tvFourSectionRedGradient.style.opacity = "0";
     }
 }
 
@@ -547,8 +543,6 @@ tvSubmitButtonFourthSection.addEventListener('click', () => {
         tvMainSendForm.style.border = "0.21598vw solid rgba(236, 82, 0, 0.5)";
         tvMainSendForm.style.backgroundColor = "rgba(236, 82, 0, 0.07)";
         tvMainSendFormTitle.style.color = "var(--orangeRed)";
-        tvFourSectionBlueGradient.style.opacity = "0";
-        tvFourSectionRedGradient.style.opacity = "1";
         if (tvSelectLang === "rus") {
             tvFourSectionTitle.textContent = "Заполните все обязательные поля";
         } else {
@@ -609,7 +603,7 @@ tvPriceListXMark.addEventListener('click', () => {
     }, 300);
 })
 
-
+let tvSelectTheme = "light";
 
 const tvActivService = () => {
     const currentService = arrayPriceList[tvActivNumber];
@@ -621,7 +615,7 @@ const tvActivService = () => {
 
     tvThirdSectionTitle.textContent = currentTitle;
 
-    tvThirdSectionImg.src = `/img/svg/tablet-horizontal/th-third-section-img ${currentService.title.eng}.svg`;
+    tvThirdSectionImg.src = `/img/svg/tablet-vertical/src/${[tvSelectTheme]}/tv-third-section-img ${currentService.title.eng}.svg`;
     tvThirdSectionText0.textContent = currentService.description[tvSelectLang][0];
     tvThirdSectionText1.textContent = currentService.description[tvSelectLang][1];
 
@@ -887,7 +881,7 @@ const createDivBlocks = () => {
             div.id = `tv-third-section-right-services-${buffer.length}`;
             div.classList = "tv-third-section-right-services";
             div.style.top = startDivTop + (gapDivs + divHeight) * buffer.length + "vw";
-            divImg.src = `/img/svg/tablet-vertical/src/${service.title.eng}.svg`;
+            divImg.src = `/img/svg/tablet-vertical/src/${[tvSelectTheme]}/${service.title.eng}.svg`;
             divH3.textContent = service.title[tvSelectLang]
             div.appendChild(divImg);
             div.appendChild(divH3);

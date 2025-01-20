@@ -1,9 +1,11 @@
 #tv-first-section {
     width: 100vw;
     height: 119.94819vw;
-    background: linear-gradient(180deg, #000d1500 0%, #000d152f 80%, #000d15 100%),
-        linear-gradient(180deg, rgba(0, 154, 236, 0.024) 0%, rgba(0, 154, 236, 0.06) 3.71%, rgba(0, 154, 236, 0) 42.69%, rgba(0, 154, 236, 0) 51.14%, rgba(0, 154, 236, 0.06) 89.34%, rgba(0, 154, 236, 0) 100%),
-        linear-gradient(90deg, rgba(0, 13, 21, 0.6) 0%, rgba(0, 13, 21, 0) 49.5%, rgba(0, 13, 21, 0.6) 100%);
+    background:
+        linear-gradient(180deg, rgba(0, 136, 204, 0.1) 0%, rgba(0, 136, 204, 0.3) 3.71%, rgba(0, 136, 204, 0) 42.69%, rgba(0, 136, 204, 0) 51.14%, rgba(0, 136, 204, 0.2) 89.98%, rgba(0, 136, 204, 0) 100%),
+        linear-gradient(90deg, rgba(232, 232, 232, 0.1) 0%, rgba(232, 232, 232, 0) 49.5%, rgba(232, 232, 232, 0.1) 100%),
+        linear-gradient(0deg, #E8E8E8, #E8E8E8);
+
 
     &>#tv-first-section-img-circle {
         position: absolute;
@@ -51,15 +53,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: var(--lightBlue);
+        color: var(--ltText);
+        letter-spacing: 0.1em;
         transition: opacity 0.5s ease-in-out;
 
         &>#tv-central-text-first-section-up {
-            font-size: 3.10881vw;
-            font-weight: 400;
-            line-height: 3.10881vw;
+            font-size: 2.84974vw;
+            font-weight: 500;
             width: 100%;
-            height: 8.0013vw;
+            height: 4.40415vw;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -67,14 +69,14 @@
 
         &>#tv-central-text-first-section-down {
             font-size: 2.33161vw;
-            font-weight: 700;
-            line-height: 2.33161vw;
+            font-weight: 500;
             overflow: visible;
             width: 32.03238vw;
             height: 2.3614vw;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 1.78368vw;
         }
     }
 
@@ -242,12 +244,17 @@
     width: 100vw;
     height: 119.94819vw;
     position: relative;
+    background:
+        linear-gradient(180deg, rgba(232, 232, 232, 0) 0%, rgba(0, 136, 204, 0.2) 60.56%, rgba(232, 232, 232, 0.2) 100%),
+        linear-gradient(270deg, rgba(232, 232, 232, 0) 0%, rgba(232, 232, 232, 0.6) 39.79%),
+        linear-gradient(0deg, #E8E8E8, #E8E8E8);
 
     &>#tv-second-section-title {
-        font-weight: 600;
-        font-size: 3.62694vw;
-        color: var(--blue);
+        font-weight: 400;
+        font-size: 3.36788vw;
+        color: var(--ltText);
         position: absolute;
+        letter-spacing: 0.1em;
         top: 6.47668vw;
         left: 6.47668vw;
         text-rendering: optimizeLegibility;
@@ -256,12 +263,13 @@
 
     &>.tv-second-section-text {
         width: 87.04663vw;
-        font-weight: 500;
-        font-size: 3.10881vw;
-        line-height: 4.35233vw;
+        font-weight: 350;
+        font-size: 2.84974vw;
+        line-height: 3.98964vw;
         position: absolute;
         left: 6.47668vw;
-        color: var(--blue);
+        color: var(--ltText);
+        letter-spacing: 0.1em;
         text-rendering: optimizeLegibility;
         will-change: transform;
     }
@@ -311,7 +319,7 @@
             display: flex;
             align-items: center;
             width: 45.59585vw;
-            color: var(--blue);
+            color: var(--dtText);
             text-rendering: optimizeLegibility;
             will-change: transform;
         }
@@ -339,7 +347,7 @@
             display: flex;
             align-items: center;
             width: 54.92228vw;
-            color: var(--blue);
+            color: var(--dtText);
         }
 
         &>.second-section-click {
@@ -359,18 +367,26 @@
     height: 119.94819vw;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(180deg, #E8E8E8 12.25%, rgba(232, 232, 232, 0.1) 16.84%, rgba(0, 136, 204, 0.1) 24.33%, rgba(0, 136, 204, 0.05) 54.9%, rgba(232, 232, 232, 0.05) 70.83%, #E8E8E8 84.86%),
+        linear-gradient(270deg, rgba(232, 232, 232, 0) 0%, rgba(0, 136, 204, 0.1) 17.67%, rgba(232, 232, 232, 0) 100%),
+        linear-gradient(0deg, #E8E8E8, #E8E8E8);
 
     &>#tv-third-section-title {
         position: absolute;
-        width: 20.20725vw;
+        width: 23vw;
         height: 4.27461vw;
-        top: 6.47668vw;
+        overflow: visible;
+        top: 5.9vw;
         left: 6.47668vw;
-        font-size: 3.62694vw;
+        font-size: 3.1vw;
+        letter-spacing: 0.1em;
         font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         text-rendering: optimizeLegibility;
         will-change: transform;
-        color: var(--blue);
+        color: var(--ltText);
     }
 
     &>#tv-third-section-title-line {
@@ -393,8 +409,8 @@
         align-items: center;
         width: 35.49223vw;
         height: 35.49223vw;
-        background: rgba(0, 154, 236, 0.05);
-        border: 0.10799vw solid var(--secondBlue);
+        background: rgba(0, 154, 236, 0.02);
+        border: 0.06477vw solid var(--ltText);
 
         &>img {
             width: 26.0272vw;
@@ -420,8 +436,8 @@
             position: absolute;
             top: 21.11399vw;
             left: 17.61658vw;
-            background: rgba(0, 63, 98, 0.4);
-            border: 0.12953vw solid var(--darkBlue);
+            background: rgba(232, 232, 232, 0.4);
+            border: 0.12953vw solid var(--ltText);
             backdrop-filter: blur(1.29534vw);
 
             &>#tv-price-list-title {
@@ -430,11 +446,11 @@
                 left: 3.88601vw;
                 width: 22.66839vw;
                 height: 4.27461vw;
-                font-size: 3.62694vw;
+                font-size: 3.36788vw;
                 font-weight: 400;
-                line-height: 3.62694vw;
-                color: #EAF8FF;
-
+                color: var(--ltText);
+                overflow: visible;
+                letter-spacing: 0.1em;
             }
 
             &>#tv-price-list-x-mark {
@@ -453,7 +469,7 @@
                 left: 3.88601vw;
                 width: 56.99482vw;
                 height: 0.12953vw;
-                background: rgba(0, 154, 236, 0.6)
+                background: rgba(43, 43, 43, 0.6);
             }
 
             &>#tv-price-list-item-wrapper {
@@ -474,10 +490,10 @@
                     justify-content: space-between;
                     align-items: center;
                     overflow: visible;
-                    color: #EAF8FF;
-                    font-size: 2.84974vw;
-                    line-height: 2.84974vw;
-                    font-weight: 300;
+                    color: var(--ltText);
+                    font-size: 2.59067vw;
+                    font-weight: 350;
+                    letter-spacing: 0.1em;
 
                     &>.tv-price-list-service-name {
                         width: 44.04145vw;
@@ -502,7 +518,7 @@
                 left: 3.88601vw;
                 width: 56.99482vw;
                 height: 0.12953vw;
-                background: rgba(0, 154, 236, 0.6)
+                background: rgba(43, 43, 43, 0.6);
             }
 
             &>#tv-price-list-footer {
@@ -511,11 +527,12 @@
                 position: absolute;
                 bottom: 2.97927vw;
                 left: 3.88601vw;
-                font-size: 2.33161vw;
-                font-weight: 300;
-                line-height: 3.26425vw;
-                color: #EAF8FF;
+                font-size: 1.94301vw;
+                font-weight: 350;
+                line-height: 2.72021vw;
+                color: var(--ltText);
                 overflow: visible;
+                letter-spacing: 0.1em;
             }
         }
     }
@@ -537,8 +554,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 0.24875621890547264vw solid var(--secondBlue);
-            background: linear-gradient(179.79deg, rgba(0, 0, 0, 0.2) 0.23%, rgba(0, 41, 63, 0.3) 61.99%, rgba(0, 0, 0, 0.2) 99.87%);
+            border: 0.06477vw solid var(--ltText);
+            background: rgba(0, 154, 236, 0.02);
 
             &>.tv-third-section-right-four-buttons {
                 object-fit: contain;
@@ -553,8 +570,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 0.24875621890547264vw solid var(--orangeRed);
-            background: linear-gradient(179.79deg, rgba(0, 0, 0, 0.2) 0.23%, rgba(0, 41, 63, 0.3) 61.99%, rgba(0, 0, 0, 0.2) 99.87%);
+            border: 0.24875621890547264vw solid var(--success);
+            background: rgba(76, 175, 80, 0.06);
 
         }
     }
@@ -567,9 +584,10 @@
         height: 3.75648vw;
         display: flex;
         align-items: center;
-        font-weight: 300;
-        font-size: 3.10881vw;
-        color: var(--secondBlue);
+        font-weight: 350;
+        font-size: 2.84974vw;
+        color: var(--ltText);
+        letter-spacing: 0.1em;
         overflow: visible;
         text-rendering: optimizeLegibility;
         will-change: transform;
@@ -582,9 +600,10 @@
         width: 61.65803vw;
         height: auto;
         font-weight: 300;
-        font-size: 2.33161vw;
-        line-height: 3.03109vw;
-        color: var(--secondBlue);
+        font-size: 2.07254vw;
+        line-height: 2.90155vw;
+        color: var(--ltText);
+        letter-spacing: 0.1em;
         text-rendering: optimizeLegibility;
         will-change: transform;
     }
@@ -596,9 +615,10 @@
         width: 61.65803vw;
         height: auto;
         font-weight: 300;
-        font-size: 2.33161vw;
-        line-height: 3.03109vw;
-        color: var(--secondBlue);
+        font-size: 2.07254vw;
+        line-height: 2.90155vw;
+        color: var(--ltText);
+        letter-spacing: 0.1em;
         text-rendering: optimizeLegibility;
         will-change: transform;
     }
@@ -635,14 +655,14 @@
         flex-direction: column;
         justify-content: space-between;
         transition: top 0.3s ease-in-out;
-        overflow: visible;
+        overflow: hidden;
 
         &>.tv-third-section-right-services {
             width: 20.72539vw;
             height: 20.72539vw;
             position: absolute;
-            background: rgba(0, 154, 236, 0.05);
-            border: 0.10799vw solid var(--secondBlue);
+            background: rgba(0, 154, 236, 0.02);
+            border: 0.10799vw solid var(--ltText);
             z-index: 1;
             transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
 
@@ -663,9 +683,10 @@
                 left: 3.45466vw;
                 bottom: 2.07254vw;
                 font-weight: 300;
-                font-size: 1.81347vw;
-                line-height: 2.17617vw;
-                color: var(--secondBlue);
+                font-size: 1.5544vw;
+                line-height: 1.86528vw;
+                letter-spacing: 0.1em;
+                color: var(--ltText);
                 display: flex;
                 text-align: center;
                 justify-content: center;
@@ -711,12 +732,12 @@
 
     &>#tv-third-section-black-blocks-top {
         top: 8.57876vw;
-        background: linear-gradient(180deg, #000D15 43.55%, rgba(0, 13, 21, 0) 100%);
+        background: linear-gradient(180deg, #E8E8E8 43.55%, rgba(232, 232, 232, 0) 100%);
     }
 
     &>#tv-third-section-black-blocks-bottom {
         height: 21.96891vw;
-        background: linear-gradient(180deg, rgba(0, 13, 21, 0) 0%, #000D15 38.38%);
+        background: linear-gradient(180deg, rgba(232, 232, 232, 0) 0%, #E8E8E8 38.38%);
         bottom: -5vw;
     }
 
@@ -735,46 +756,26 @@
     width: 100vw;
     height: 119.94819vw;
     overflow: visible;
-
-    &>#tv-four-section-blue-gradient {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 119.94819vw;
-        background:
-            linear-gradient(180deg, rgba(0, 13, 21, 0) 0%, rgba(0, 154, 236, 0.12) 22.13%, rgba(191, 96, 45, 0.015) 81.71%, rgba(236, 82, 0, 0.12) 87.91%, rgba(0, 13, 21, 0) 97.73%),
-            linear-gradient(270deg, rgba(0, 13, 21, 0.6) 0%, rgba(0, 0, 0, 0.06) 6.56%, rgba(0, 0, 0, 0) 50.5%, rgba(0, 0, 0, 0.06) 93.54%, rgba(0, 13, 21, 0.6) 100%);
-        opacity: 1;
-        transition: opacity 0.3s ease-in-out;
-    }
-
-    &>#tv-four-section-red-gradient {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 119.94819vw;
-        background:
-            linear-gradient(180deg, rgba(0, 13, 21, 0) 0%, rgba(236, 82, 0, 0.12) 22.13%, rgba(191, 96, 45, 0.015) 81.71%, rgba(236, 82, 0, 0.12) 87.91%, rgba(0, 13, 21, 0) 97.73%),
-            linear-gradient(270deg, rgba(0, 13, 21, 0.6) 0%, rgba(0, 0, 0, 0.06) 6.56%, rgba(0, 0, 0, 0) 50.5%, rgba(0, 0, 0, 0.06) 93.54%, rgba(0, 13, 21, 0.6) 100%);
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-    }
+    background:
+        linear-gradient(180deg, rgba(232, 232, 232, 0) 0%, rgba(0, 136, 204, 0.24) 22.13%, rgba(0, 136, 204, 0.03) 81.71%, rgba(0, 136, 204, 0.24) 87.91%, rgba(232, 232, 232, 0) 97.73%),
+        linear-gradient(270deg, rgba(232, 232, 232, 0.8) 0%, rgba(232, 232, 232, 0.08) 6.56%, rgba(232, 232, 232, 0) 50.5%, rgba(232, 232, 232, 0.08) 93.54%, rgba(232, 232, 232, 0.8) 100%),
+        linear-gradient(0deg, #E8E8E8, #E8E8E8);
 
     &>#tv-four-section-title {
         width: 54.15544vw;
         height: 4.53368vw;
         font-weight: 400;
-        font-size: 3.62694vw;
-        color: var(--blue);
+        font-size: 3.36788vw;
+        color: var(--ltText);
         position: absolute;
         top: 6.47668vw;
+        letter-spacing: 0.1em;
         left: 6.47668vw;
         display: flex;
         align-items: center;
         text-rendering: optimizeLegibility;
         will-change: transform;
+        overflow: visible;
     }
 
     &>#tv-main-send-form {
@@ -783,15 +784,16 @@
         height: 80.82902vw;
         top: 17.48705vw;
         left: 6.47668vw;
-        background-color: rgba(0, 83, 128, 0.07);
-        border: 0.10417vw solid rgba(0, 154, 236, 0.5);
+        background: rgba(0, 136, 204, 0.03);
+        border: 0.12953vw solid rgba(43, 43, 43, 0.5);
         z-index: 2;
         overflow: visible;
 
         &>#tv-main-send-form-title {
             font-weight: 400;
-            font-size: 3.10881vw;
-            color: var(--blue);
+            letter-spacing: 0.1em;
+            font-size: 2.84974vw;
+            color: var(--ltText);
             position: absolute;
             top: 6.47668vw;
             left: 28.49741vw;
@@ -801,25 +803,49 @@
         }
 
 
-        &>#tv-input-first-name,
-        &>#tv-input-last-name,
-        &>#tv-input-phone,
-        &>#tv-input-email {
+        &>.tv-input-light {
             width: 35.06347vw;
             height: 5.18135vw;
             position: absolute;
             font-weight: 300;
-            font-size: 2.59067vw;
-            color: var(--blue);
-            border-bottom: 0.12953vw solid var(--blue);
+            font-size: 2.33161vw;
+            color: var(--ltText);
+            border-bottom: 0.12953vw solid var(--ltText);
             padding-left: 0.64767vw;
+            letter-spacing: 0.1em;
             transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
             text-rendering: optimizeLegibility;
             will-change: transform;
 
             &::placeholder {
-                font-size: 2.59067vw;
-                color: var(--darkBlue);
+                font-size: 2.33161vw;
+                color: var(--ltText);
+                letter-spacing: 0.1em;
+                font-weight: 300;
+                transition: opacity 0.3s ease-in-out;
+                text-rendering: optimizeLegibility;
+                will-change: transform;
+            }
+        }
+
+        &>.tv-input-dark {
+            width: 35.06347vw;
+            height: 5.18135vw;
+            position: absolute;
+            font-weight: 300;
+            font-size: 2.33161vw;
+            color: var(--dtText);
+            border-bottom: 0.12953vw solid var(--ltSeparationLine);
+            padding-left: 0.64767vw;
+            letter-spacing: 0.1em;
+            transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
+            text-rendering: optimizeLegibility;
+            will-change: transform;
+
+            &::placeholder {
+                font-size: 2.33161vw;
+                color: var(--dtText);
+                letter-spacing: 0.1em;
                 font-weight: 300;
                 transition: opacity 0.3s ease-in-out;
                 text-rendering: optimizeLegibility;
@@ -828,8 +854,8 @@
         }
 
         &>.tv-input-placeholder::placeholder {
-            font-size: 2.59067vw;
-            color: var(--orangeRed) !important;
+            font-size: 2.33161vw;
+            color: var(--bad) !important;
             font-weight: 300;
             transition: opacity 0.3s ease-in-out;
             text-rendering: optimizeLegibility;
@@ -862,10 +888,11 @@
             width: 35.12565vw;
             height: 5.18135vw;
             position: absolute;
-            color: var(--blue);
+            color: var(--ltText);
             font-weight: 300;
-            font-size: 2.59067vw;
-            line-height: 2.59067vw;
+            font-size: 2.33161vw;
+            overflow: visible;
+            letter-spacing: 0.1em;
             top: 39.37824vw;
             left: 6.34715vw;
             display: flex;
@@ -877,17 +904,18 @@
 
 
 
-        &>#tv-textarea {
+        &>.tv-textarea-light {
             width: 74.35233vw;
             height: 11.65803vw;
             position: absolute;
             font-weight: 300;
-            color: var(--blue);
+            color: var(--ltText);
             top: 51.03627vw;
             left: 6.34715vw;
             overflow: hidden;
+            letter-spacing: 0.1em;
             line-height: 250%;
-            font-size: 2.59067vw;
+            font-size: 2.33161vw;
             word-wrap: break-word;
             overflow-y: hidden;
             padding-top: 0.84197vw;
@@ -895,8 +923,35 @@
             will-change: transform;
 
             &::placeholder {
-                font-size: 2.59067vw;
-                color: var(--darkBlue);
+                font-size: 2.33161vw;
+                color: var(--ltText);
+                font-weight: 300;
+                text-rendering: optimizeLegibility;
+                will-change: transform;
+            }
+        }
+
+        &>.tv-textarea-dark {
+            width: 74.35233vw;
+            height: 11.65803vw;
+            position: absolute;
+            font-weight: 300;
+            color: var(--dtText);
+            top: 51.03627vw;
+            left: 6.34715vw;
+            overflow: hidden;
+            letter-spacing: 0.1em;
+            line-height: 250%;
+            font-size: 2.33161vw;
+            word-wrap: break-word;
+            overflow-y: hidden;
+            padding-top: 0.84197vw;
+            text-rendering: optimizeLegibility;
+            will-change: transform;
+
+            &::placeholder {
+                font-size: 2.33161vw;
+                color: var(--dtText);
                 font-weight: 300;
                 text-rendering: optimizeLegibility;
                 will-change: transform;
@@ -907,8 +962,8 @@
             width: 74.35233vw;
             height: 6.47668vw;
             background: transparent;
-            border-bottom: 0.12953vw solid var(--blue);
-            border-top: 0.12953vw solid var(--blue);
+            border-bottom: 0.12953vw solid var(--ltText);
+            border-top: 0.12953vw solid var(--ltText);
             position: absolute;
             bottom: 16.13472vw;
             left: 6.34715vw;
@@ -921,12 +976,11 @@
             height: 5.18135vw;
             left: 25.3886vw;
             bottom: 6.47668vw;
-            background-color: rgba(0, 13, 21, 0.8);
-            border: 0.10799vw solid var(--deepDarkBlue);
-            color: var(--darkBlue);
-            font-weight: 600;
-            font-size: 2.84974vw;
-            line-height: 2.84974vw;
+            background: rgba(46, 46, 46, 0.6);
+            color: rgba(232, 232, 232, 0.6);
+            letter-spacing: 0.1em;
+            font-weight: 400;
+            font-size: 2.59067vw;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -936,9 +990,9 @@
         }
 
         &>#tv-send-form-submit.th-send-form-submit-activ {
-            color: var(--blue);
-            background-color: #004C7B;
-            border: 0.12953vw solid var(--secondBlue);
+            color: var(--ltElementBackground);
+            background: var(--accent);
+            letter-spacing: 0.1em; 
             text-rendering: optimizeLegibility;
             will-change: transform;
         }
@@ -948,8 +1002,8 @@
         position: absolute;
         bottom: 9.97409vw;
         right: 6.47668vw;
-        background: rgba(127, 45, 0, 0.1);
-        border: 0.10799vw solid rgba(236, 82, 0, 0.5);
+        background: rgba(0, 136, 204, 0.03);
+        border: 0.10799vw solid rgba(43, 43, 43, 0.5);
         width: 87.04663vw;
         height: 9.06736vw;
         display: flex;
@@ -981,9 +1035,7 @@
         width: 35.12565vw;
         height: 5.18135vw;
         position: absolute;
-        border-bottom-color: rgba(2, 133, 204, 1);
-        border-bottom-width: 0.12953vw;
-        border-bottom-style: solid;
+        border-bottom: 0.12953vw solid var(--ltText);
         padding-left: 0.85492vw;
         padding-right: 0.85492vw;
         display: flex;
@@ -996,9 +1048,10 @@
         will-change: transform;
 
         &>#tv-choice-of-service-placeholder {
-            color: var(--darkBlue);
+            color: var(--ltText);
             font-weight: 300;
-            font-size: 2.59067vw;
+            font-size: 2.33161vw;
+            letter-spacing: 0.1em;
             transition: color ease-in-out 0.3s;
             overflow: hidden;
             text-rendering: optimizeLegibility;
