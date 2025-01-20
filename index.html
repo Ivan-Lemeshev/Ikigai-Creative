@@ -1487,9 +1487,89 @@
         </section>
 
         <div id="tv-navigation-block">
-            <h2 id="tv-navigation-block-title">Navigation</h2>
-            <h3 id="tv-navigation-block-lang-button">Eng</h3>
-            <div id="tv-navigation-block-title-line"></div>
+            <h2 id="tv-navigation-block-title">Menu</h2>
+
+            <svg id="tv-navigation-block-title-x-mark" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M17.2193 4.19471C17.4014 4.00611 17.5022 3.75351 17.5 3.49131C17.4977 3.22911 17.3925 2.9783 17.2071 2.79289C17.0217 2.60749 16.7709 2.50232 16.5087 2.50004C16.2465 2.49776 15.9939 2.59855 15.8053 2.78071L10.0123 8.57371L4.21929 2.78071C4.03069 2.59855 3.77808 2.49776 3.51589 2.50004C3.25369 2.50232 3.00288 2.60749 2.81747 2.79289C2.63206 2.9783 2.52689 3.22911 2.52461 3.49131C2.52234 3.75351 2.62313 4.00611 2.80529 4.19471L8.59829 9.98771L2.80529 15.7807C2.70978 15.873 2.6336 15.9833 2.58119 16.1053C2.52878 16.2273 2.50119 16.3585 2.50004 16.4913C2.49888 16.6241 2.52419 16.7558 2.57447 16.8787C2.62475 17.0016 2.699 17.1132 2.79289 17.2071C2.88679 17.301 2.99844 17.3753 3.12133 17.4255C3.24423 17.4758 3.37591 17.5011 3.50869 17.5C3.64147 17.4988 3.77269 17.4712 3.89469 17.4188C4.0167 17.3664 4.12704 17.2902 4.21929 17.1947L10.0123 11.4017L15.8053 17.1947C15.9939 17.3769 16.2465 17.4777 16.5087 17.4754C16.7709 17.4731 17.0217 17.3679 17.2071 17.1825C17.3925 16.9971 17.4977 16.7463 17.5 16.4841C17.5022 16.2219 17.4014 15.9693 17.2193 15.7807L11.4263 9.98771L17.2193 4.19471Z"
+                    fill="var(--svgColor)" />
+            </svg>
+
+            <div id="tv-navigation-block-top-line"></div>
+            <div id="tv-navigation-block-bottom-line"></div>
+
+            <div id="tv-navigation-block-lang-button-wrapper">
+                <p id="tv-navigation-block-lang-button-text">Language</p>
+                <svg id="tv-navigation-block-lang-button-background" viewBox="0 0 36 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect id="tv-navigation-block-lang-button-background-rect" y="0.75" width="35.75" height="16.5"
+                        rx="8.25" fill="#0088CC" fill-opacity="0.6" />
+                </svg>
+
+                <svg id="tv-navigation-block-lang-button-face" viewBox="0 0 22 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect width="22" height="22" rx="11" fill="#D9D9D9" />
+                    <rect id="tv-navigation-block-lang-button-face-stroke" x="1" y="1" width="20" height="20" rx="10"
+                        stroke="#0088CC" stroke-opacity="0.6" stroke-width="2" />
+                </svg>
+
+                <svg id="tv-navigation-block-lang-button-flag" viewBox="0 0 22 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3933_11987)">
+                        <path
+                            d="M11 0C14.037 0 16.7875 1.23148 18.7778 3.22223C20.7685 5.21254 22 7.96297 22 11C22 14.037 20.7685 16.7875 18.7778 18.7778C16.7875 20.7685 14.037 22 11 22C7.96297 22 5.21254 20.7685 3.22223 18.7778C1.23148 16.7875 0 14.037 0 11C0 7.96297 1.23148 5.21254 3.22223 3.22223C5.21254 1.23148 7.96297 0 11 0Z"
+                            fill="#999999" />
+                        <path
+                            d="M10.9985 0.837891C13.8043 0.837891 16.3464 1.9757 18.185 3.81434L18.2318 3.86504C20.0425 5.70023 21.1614 8.22078 21.1614 11.0004C21.1614 13.8067 20.0228 16.3483 18.1841 18.187L18.1334 18.2338C16.2974 20.0454 13.7764 21.1638 10.9985 21.1638C8.19562 21.1638 5.65445 20.0247 3.81496 18.1848C1.97418 16.3483 0.835938 13.8067 0.835938 11.0004C0.835938 8.19414 1.97375 5.65297 3.81238 3.81434C5.65102 1.9757 8.19262 0.837891 10.9985 0.837891Z"
+                            fill="white" />
+                        <path
+                            d="M11.0016 1.70117C16.1372 1.70117 20.3004 5.86441 20.3004 10.9996C20.3004 16.1352 16.1372 20.2989 11.0016 20.2989C5.86637 20.2989 1.70312 16.1352 1.70312 10.9996C1.70312 5.86441 5.86637 1.70117 11.0016 1.70117Z"
+                            fill="#FEFEFE" />
+                        <path
+                            d="M7.8827 7.71434V2.23582C6.10723 2.86746 4.58055 4.02375 3.48828 5.51648L7.8827 7.71434ZM7.8827 14.2843V19.7628C6.10809 19.1311 4.58184 17.9757 3.48871 16.4821L7.8827 14.2843ZM14.0938 14.2843V19.7701C15.8749 19.1414 17.4063 17.9852 18.5029 16.4898L14.0938 14.2843ZM14.0938 7.71434V2.22852C15.8749 2.85715 17.4071 4.01344 18.5033 5.50918L14.0938 7.71434Z"
+                            fill="#012169" />
+                        <path
+                            d="M19.2645 14.1007H17.1972L19.3177 15.1629C19.4557 14.8874 19.5803 14.6043 19.6911 14.3142L19.2645 14.1007ZM18.8631 6.03285L15.1498 7.89469H17.217L19.3203 6.84195C19.1815 6.56437 19.0286 6.2941 18.8631 6.03285ZM9.12856 12.8589V20.1098C9.73355 20.2332 10.36 20.2989 11.0016 20.2989C11.6358 20.2989 12.2558 20.2349 12.8548 20.1141V12.8589H20.1139C20.2355 12.2582 20.3004 11.6368 20.3004 10.9996C20.3004 10.3602 20.2355 9.73547 20.1127 9.13176H12.8548V1.88637C12.2448 1.76305 11.6239 1.70101 11.0016 1.70117C10.36 1.70117 9.73355 1.76734 9.12856 1.89023V9.13176H1.8909C1.76586 9.74651 1.70295 10.3723 1.70313 10.9996C1.70313 11.6368 1.76801 12.2582 1.88961 12.8589H9.12856ZM2.71375 7.89941H4.78098L2.68023 6.84754C2.54273 7.12297 2.4177 7.40699 2.30727 7.6966L2.71375 7.89941ZM6.83316 14.1054H4.76594L2.67895 15.15C2.81834 15.4288 2.97165 15.7004 3.13828 15.9638L6.85207 14.1054H6.83316Z"
+                            fill="#C8102E" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_3933_11987">
+                            <rect width="22" height="22" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+
+            </div>
+
+            <div id="tv-navigation-block-theme-button-wrapper">
+                <p id="tv-navigation-block-theme-button-text">Night mode</p>
+                <svg id="tv-navigation-block-theme-button-face" viewBox="0 0 22 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect width="22" height="22" rx="11" fill="#D9D9D9" />
+                    <rect id="tv-navigation-block-theme-button-face-rect" x="1" y="1" width="20" height="20" rx="10"
+                        stroke="#2E2E2E" stroke-opacity="0.2" stroke-width="2" />
+                </svg>
+                <svg id="tv-navigation-block-theme-button-background" viewBox="0 0 36 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect id="tv-navigation-block-theme-button-background-rect" y="0.75" width="35.75" height="16.5"
+                        rx="8.25" fill="#2E2E2E" fill-opacity="0.2" />
+                </svg>
+                <svg id="tv-navigation-block-theme-button-moon" viewBox="0 0 22 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3933_11979)">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.99455 1.58765C5.23981 2.0897 1.53488 6.11219 1.53488 11C1.53488 16.2274 5.77256 20.4651 11 20.4651C15.8878 20.4651 19.9103 16.7602 20.4123 12.0055C19.0548 13.7289 16.9478 14.8372 14.5814 14.8372C10.4842 14.8372 7.16279 11.5158 7.16279 7.4186C7.16279 5.0522 8.27113 2.94524 9.99455 1.58765ZM0 11C0 4.92487 4.92487 0 11 0C11.7333 0 12.1004 0.584545 12.1632 1.05014C12.2238 1.49803 12.0583 2.06764 11.5433 2.37873C9.83625 3.41031 8.69767 5.28186 8.69767 7.4186C8.69767 10.6681 11.3319 13.3023 14.5814 13.3023C16.7182 13.3023 18.5897 12.1637 19.6212 10.4567C19.9323 9.94175 20.502 9.77619 20.9498 9.83676C21.4154 9.89959 22 10.2667 22 11C22 17.0752 17.0752 22 11 22C4.92487 22 0 17.0752 0 11Z"
+                            fill="var(--svgColor)" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_3933_11979">
+                            <rect width="22" height="22" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+
+            </div>
 
             <div class="tv-navigation-block-item" id="tv-navigation-block-item-0">
                 <div class="tv-navigation-block-item-title" id="tv-navigation-block-item-title-0">Intro</div>
@@ -1521,22 +1601,6 @@
                 <div class="tv-navigation-block-item-text" id="tv-navigation-block-item-text-4">Criticism makes us
                     better, while praise makes us happiers. </div>
             </div>
-
-            <img class="tv-nav-img" id="tv-nav-img-phone" src="/img/svg/tablet-vertical/tv-nav-img-phone.svg"
-                alt="tv-nav-img-phone">
-            <img class="tv-nav-img" id="tv-nav-img-email" src="/img/svg/tablet-vertical/tv-nav-img-email.svg"
-                alt="tv-nav-img-email">
-            <img class="tv-nav-img" id="tv-nav-img-facebook" src="/img/svg/tablet-vertical/tv-nav-img-facebook.svg"
-                alt="tv-nav-img-facebook">
-            <img class="tv-nav-img" id="tv-nav-img-telegram" src="/img/svg/tablet-vertical/tv-nav-img-telegram.svg"
-                alt="tv-nav-img-telegram">
-            <img class="tv-nav-img" id="tv-nav-img-x" src="/img/svg/tablet-vertical/tv-nav-img-x.svg"
-                alt="tv-nav-img-x">
-            <img class="tv-nav-img" id="tv-nav-img-vk" src="/img/svg/tablet-vertical/tv-nav-img-vk.svg"
-                alt="tv-nav-img-vk">
-            <img class="tv-nav-img" id="tv-nav-img-whatsapp" src="/img/svg/tablet-vertical/tv-nav-img-whatsapp.svg"
-                alt="tv-nav-img-whatsapp">
-            <img id="tv-nav-img-logo" src="/img/svg/tablet-vertical/tv-nav-img-logo.svg" alt="tv-nav-img-whatsapp">
         </div>
 
 
@@ -1578,8 +1642,8 @@
         <section id="tv-third-section">
 
             <h2 id="tv-third-section-title">Our services</h2>
-            <img id="tv-third-section-title-line" src="/img/svg/tablet-vertical/src/light/tv-third-section-title-line.svg"
-                alt="title-line">
+            <img id="tv-third-section-title-line"
+                src="/img/svg/tablet-vertical/src/light/tv-third-section-title-line.svg" alt="title-line">
 
             <div class="tv-third-section-black-blocks" id="tv-third-section-black-blocks-top"></div>
             <div class="tv-third-section-black-blocks" id="tv-third-section-black-blocks-bottom"></div>
@@ -1677,12 +1741,14 @@
 
             <img id="tv-third-section-top-arrow" src="/img/svg/tablet-vertical/src/light/tv-third-section-top-arrow.svg"
                 alt="tv-third-section-top-arrow">
-            <img id="tv-third-section-bottom-arrow" src="/img/svg/tablet-vertical/src/light/tv-third-section-bottom-arrow.svg"
+            <img id="tv-third-section-bottom-arrow"
+                src="/img/svg/tablet-vertical/src/light/tv-third-section-bottom-arrow.svg"
                 alt="tv-third-section-bottom-arrow">
 
             <div id="tv-third-section-right-services-wrapper"></div>
 
-            <img id="tv-third-section-bootom-line" src="/img/svg/tablet-vertical/src/light/tv-third-section-bootom-line.svg"
+            <img id="tv-third-section-bootom-line"
+                src="/img/svg/tablet-vertical/src/light/tv-third-section-bootom-line.svg"
                 alt="third-section-bootom-line">
         </section>
 
@@ -1705,7 +1771,7 @@
                         <svg id="tv-choice-of-service-arrow" viewBox="0 0 16 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path id="tv-choice-of-service-arrow-path" d="M11.5 14.0622L1 8L11.5 1.93782L11.5 14.0622Z"
-                                fill="#2E2E2E" stroke="#2E2E2E" />
+                                fill="var(--svgColor)" stroke="var(--svgColor)" />
                         </svg>
 
                     </div>
@@ -1759,9 +1825,10 @@
 
             </div>
 
-            <img id="tv-five-section-button-left" src="/img/svg/tablet-vertical/tv-five-section-button-left.svg" alt="">
-            <img id="tv-five-section-button-right" src="/img/svg/tablet-vertical/tv-five-section-button-right.svg"
-                alt="">
+            <img id="tv-five-section-button-left"
+                src="/img/svg/tablet-vertical/src/light/tv-five-section-button-left.svg" alt="">
+            <img id="tv-five-section-button-right"
+                src="/img/svg/tablet-vertical/src/light/tv-five-section-button-right.svg" alt="">
         </section>
 
 

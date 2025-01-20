@@ -3,6 +3,7 @@ import arrayPriceList from "./arrayPriceList.js";
 import { ideasArrayUp, ideasArrayDown, textForApplication } from "./slogans.js";
 import reviews from "./reviews.js";
 import dataContats from "./links.js";
+import themeWrapper from "./switchTheme-data.js"
 
 
 const tvNavButton = document.getElementById("tv-nav-button");
@@ -12,6 +13,7 @@ const tvNavigationBlockItem1 = document.getElementById("tv-navigation-block-item
 const tvNavigationBlockItem2 = document.getElementById("tv-navigation-block-item-2");
 const tvNavigationBlockItem3 = document.getElementById("tv-navigation-block-item-3");
 const tvNavigationBlockItem4 = document.getElementById("tv-navigation-block-item-4");
+const tvNavigationBlockTitleXMark = document.getElementById("tv-navigation-block-title-x-mark");
 
 tvNavButton.addEventListener('click', () => {
     tvNavigationBlock.style.display = "block";
@@ -29,6 +31,13 @@ tvNavigationBlockItem0.addEventListener('click', () => {
         top: window.innerWidth * 0,
         behavior: 'smooth'
     });
+})
+
+tvNavigationBlockTitleXMark.addEventListener('click', () => {
+    tvNavigationBlock.style.left = "";
+    setTimeout(() => {
+        tvNavigationBlock.style.display = "";
+    }, 500);
 })
 
 tvNavigationBlockItem1.addEventListener('click', () => {
@@ -87,6 +96,11 @@ const tvThirdSectionButtonOfPriceList = document.getElementById("tv-price-list-b
 const tvPriceListWrapper = document.getElementById("tv-price-list-wrapper");
 const tvPriceListXMark = document.getElementById("tv-price-list-x-mark");
 
+const tvThirdSectionButtonOfConsultation = document.getElementById("tv-consultation-button");
+const tvThirdSectionButtonOfReview = document.getElementById("tv-review-button");
+const tvThirdSectionButtonOfQuestion = document.getElementById("tv-question-button");
+const tvThirdSectionButtonOfOrder = document.getElementById("tv-button-more-lower-part-buttons-3");
+
 let tvAngel = 0;
 let tvNumberOfActivAnimation = 0;
 let tvActivNumber = 0;
@@ -102,17 +116,148 @@ const tvReviewsUpperName = document.getElementById("tv-reviews-name-left");
 const tvReviewsUpperImg = document.getElementById("tv-reviews-photo-left");
 const tvReviewsUpperUpperText = document.getElementById("tv-reviews-upper-text-left");
 const tvReviewsUpperLowerText = document.getElementById("tv-reviews-lower-text-left");
+const tvFourthSectionChoiceOfService = document.getElementById("tv-choice-of-service");
 
 const tvLowerBlock = document.getElementById("tv-reviews-wrapper-right");
 const tvReviewsLowerName = document.getElementById("tv-reviews-name-right");
 const tvReviewsLowerImg = document.getElementById("tv-reviews-photo-right");
 const tvReviewsLowerUpperText = document.getElementById("tv-reviews-upper-text-right");
 const tvReviewsLowerLowerText = document.getElementById("tv-reviews-lower-text-right");
+const tvNavigationBlockThemeButtonWrapper = document.getElementById("tv-navigation-block-theme-button-wrapper");
+const tvNavigationBlockThemeButtonFace = document.getElementById("tv-navigation-block-theme-button-face");
+const tvNavigationBlockThemeButtonRect = document.getElementById("tv-navigation-block-theme-button-face-rect");
+const tvNavigationBlockThemeButtonRectBackground = document.getElementById("tv-navigation-block-theme-button-background-rect");
 
-let tvSelectCategory = "";
+const tvThirdSectionRightServicesWrapper = document.getElementById("tv-third-section-right-services-wrapper");
+const tvMainSendForm = document.getElementById("tv-main-send-form");
+const tvFourSection = document.getElementById("tv-four-section");
+
+const tvInputFirstName = document.getElementById("tv-input-first-name");
+const tvInputLastName = document.getElementById("tv-input-last-name");
+const tvInputPhone = document.getElementById("tv-input-phone");
+const tvInputEmail = document.getElementById("tv-input-email");
+const tvTextarea = document.getElementById("tv-textarea");
+
+const tvThirdSectionTopArrow = document.getElementById("tv-third-section-top-arrow");
+const tvThirdSectionBottomArrow = document.getElementById("tv-third-section-bottom-arrow");
 
 let tvSelectLang = "eng";
-const tvLang = document.getElementById("tv-navigation-block-lang-button");
+let tvSelectCategory = "";
+let tvSelectTheme = "light";
+
+const tvSwitchTheme = () => {
+    tvSelectTheme = tvSelectTheme === "light" ? "dark" : "light";
+    for (let id in themeWrapper) { // перебираем все айдишники
+        const data = themeWrapper[id]; // пой айди получаю информацию 
+        const element = document.getElementById(id); // получаю элемент который нужно по айди заменить 
+        const allStyles = data.styles;
+        element.style.color = allStyles[tvSelectTheme].color;
+        element.style.background = allStyles[tvSelectTheme].background;
+    }
+}
+
+const tvRefreshTheme = () => {
+
+    const currentService = arrayPriceList[tvActivNumber];
+
+    const tvThirdSAectionTitleLine = document.getElementById("tv-third-section-title-line");
+    const tvThirdSAectionBootomLine = document.getElementById("tv-third-section-bootom-line");
+    const tvThirdSectionMainImgWrapper = document.getElementById("tv-third-section-main-img-wrapper");
+    const tvThirdSectionTightFiveButtons0 = document.getElementById("tv-third-section-right-five-buttons-0");
+    const tvThirdSectionTightFiveButtons1 = document.getElementById("tv-third-section-right-five-buttons-1");
+    const tvThirdSectionTightFiveButtons2 = document.getElementById("tv-third-section-right-five-buttons-2");
+    const tvThirdSectionTightFiveButtons3 = document.getElementById("tv-third-section-right-five-buttons-3");
+    const tvThirdSectionRightservices0 = document.getElementById("tv-third-section-right-services-1");
+    const tvThirdSectionRightservices1 = document.getElementById("tv-third-section-right-services-2");
+    const tvThirdSectionRightservices2 = document.getElementById("tv-third-section-right-services-3");
+    const tvThirdSectionRightservices3 = document.getElementById("tv-third-section-right-services-4");
+    const tvThirdSectionRightservices4 = document.getElementById("tv-third-section-right-services-5");
+    const tvPlaceholderTextarea = document.getElementById("tv-placeholder-textarea");
+    const tvFourSectionContacts = document.getElementById("tv-four-section-contacts");
+
+    tvThirdSAectionTitleLine.src = `/img/svg/tablet-vertical/src/${tvSelectTheme}/tv-third-section-title-line.svg`
+    tvThirdSAectionBootomLine.src = `/img/svg/tablet-vertical/src/${tvSelectTheme}/tv-third-section-bootom-line.svg`
+    tvThirdSectionImg.src = `/img/svg/tablet-vertical/src/${[tvSelectTheme]}/tv-third-section-img ${currentService.title.eng}.svg`;
+    tvThirdSectionTightFiveButtons0.src = `/img/svg/tablet-vertical/src/${[tvSelectTheme]}/tv-third-section-right-five-buttons-0.svg`;
+    tvThirdSectionTightFiveButtons1.src = `/img/svg/tablet-vertical/src/${[tvSelectTheme]}/tv-third-section-right-five-buttons-1.svg`;
+    tvThirdSectionTightFiveButtons2.src = `/img/svg/tablet-vertical/src/${[tvSelectTheme]}/tv-third-section-right-five-buttons-2.svg`;
+    tvThirdSectionTightFiveButtons3.src = `/img/svg/tablet-vertical/src/${[tvSelectTheme]}/tv-third-section-right-five-buttons-3.svg`;
+    tvThirdSectionTopArrow.src = `/img/svg/tablet-vertical/src/${[tvSelectTheme]}/tv-third-section-top-arrow.svg`;
+    tvThirdSectionBottomArrow.src = `/img/svg/tablet-vertical/src/${[tvSelectTheme]}/tv-third-section-bottom-arrow.svg`;
+    tvPriceListXMark.src = `/img/svg/tablet-vertical/src/${[tvSelectTheme]}/tv-price-list-x-mark.svg`;
+
+    const setImg = document.querySelectorAll("#tv-third-section-right-services-wrapper img");
+    for (let index = 0; index < setImg.length; index++) {
+        if (tvSelectTheme === "dark") {
+            setImg[index].src = setImg[index].src.replace("light", "dark")
+        } else {
+            setImg[index].src = setImg[index].src.replace("dark", "light")
+        }
+    }
+
+    const setH3 = document.querySelectorAll("#tv-third-section-right-services-wrapper h3");
+    for (let index = 0; index < setH3.length; index++) {
+        if (tvSelectTheme === "dark") {
+            setH3[index].classList = setH3[index].classList.replace("light", "dark")
+        } else {
+            setH3[index].classList = setH3[index].classList.replace("dark", "light")
+        }
+    }
+
+    if (tvSelectTheme === "dark") {
+        tvNavigationBlockThemeButtonRect.style.stroke = "#0088CC";
+        tvNavigationBlockThemeButtonRect.style.strokeOpacity = "0.6";
+        tvNavigationBlockThemeButtonRectBackground.style.fill = "#0088CC";
+        tvNavigationBlockThemeButtonRectBackground.style.fillOpacity = "0.6";
+        tvNavigationBlockThemeButtonFace.style.left = "22.53886vw";
+        document.documentElement.style.setProperty('--svgColor', '#F3F3F3');
+        tvThirdSectionMainImgWrapper.style.border = "0.06477vw solid var(--ltSeparationLine)";
+        tvThirdSectionButtonOfPriceList.style.border = "0.06477vw solid var(--ltSeparationLine)";
+        tvThirdSectionButtonOfConsultation.style.border = "0.06477vw solid var(--ltSeparationLine)";
+        tvThirdSectionButtonOfReview.style.border = "0.06477vw solid var(--ltSeparationLine)";
+        tvThirdSectionButtonOfQuestion.style.border = "0.06477vw solid var(--ltSeparationLine)";
+        tvThirdSectionRightservices0.style.border = "0.06477vw solid var(--ltSeparationLine)";
+        tvThirdSectionRightservices1.style.border = "0.06477vw solid var(--ltSeparationLine)";
+        tvThirdSectionRightservices2.style.border = "0.06477vw solid var(--ltSeparationLine)";
+        tvThirdSectionRightservices3.style.border = "0.06477vw solid var(--ltSeparationLine)";
+        tvThirdSectionRightservices4.style.border = "0.06477vw solid var(--ltSeparationLine)";
+        tvMainSendForm.style.border = "0.06477vw solid var(--ltSeparationLine)";
+        tvInputFirstName.classList = "tv-input-dark";
+        tvInputLastName.classList = "tv-input-dark";
+        tvInputPhone.classList = "tv-input-dark";
+        tvInputEmail.classList = "tv-input-dark";
+        tvTextarea.classList = "tv-textarea-dark";
+        tvPlaceholderTextarea.style.borderTop = "0.06477vw solid var(--ltSeparationLine)";
+        tvPlaceholderTextarea.style.borderBottom = "0.06477vw solid var(--ltSeparationLine)";
+        tvFourthSectionChoiceOfService.style.borderBottom = "0.06477vw solid var(--ltSeparationLine)";
+        tvFourSectionContacts.style.border = "0.06477vw solid var(--ltSeparationLine)";
+
+    } else {
+        tvNavigationBlockThemeButtonRect.style.stroke = "";
+        tvNavigationBlockThemeButtonRect.style.strokeOpacity = "";
+        tvNavigationBlockThemeButtonRectBackground.style.fill = "";
+        tvNavigationBlockThemeButtonRectBackground.style.fillOpacity = "";
+        tvNavigationBlockThemeButtonFace.style.left = "";
+        document.documentElement.style.setProperty('--svgColor', '#2E2E2E');
+        tvThirdSectionMainImgWrapper.style.border = "";
+        tvThirdSectionButtonOfConsultation.style.border = "";
+        tvThirdSectionButtonOfReview.style.border = "";
+        tvThirdSectionButtonOfQuestion.style.border = "";
+        tvThirdSectionRightServicesWrapper.style.border = "";
+        tvMainSendForm.style.border = "";
+        tvInputFirstName.classList = "tv-input-light";
+        tvInputLastName.classList = "tv-input-light";
+        tvInputPhone.classList = "tv-input-light";
+        tvInputEmail.classList = "tv-input-light";
+        tvTextarea.classList = "tv-textarea-light";
+        tvPlaceholderTextarea.style.borderTop = "";
+        tvPlaceholderTextarea.style.borderBottom = "";
+        tvFourthSectionChoiceOfService.style.borderBottom = "";
+        tvFourSectionContacts.style.border = "";
+    }
+}
+
+const tvLang = document.getElementById("tv-navigation-block-lang-button-wrapper");
 
 const tvSwitchLocalization = () => {
     tvSelectLang = tvSelectLang === "eng" ? "rus" : "eng";
@@ -121,23 +266,10 @@ const tvSwitchLocalization = () => {
 
         const element = document.getElementById(id); // получаю элемент который нужно по айди заменить 
         element.textContent = data[tvSelectLang]; //   обновляю текст
-
-        if (tvSelectLang === "rus") { // добавляем стили к русскому тексту 
-            const allStyles = data.styles;
-            element.style.fontFamily = "'Lato'";
-            for (let style in allStyles) {
-                const valueStyle = allStyles[style];
-                element.style[style] = valueStyle; // придумать как сбрасывать стили для ангийского языка
-            }
-        }
     }
 }
 
-const tvInputFirstName = document.getElementById("tv-input-first-name");
-const tvInputLastName = document.getElementById("tv-input-last-name");
-const tvInputPhone = document.getElementById("tv-input-phone");
-const tvInputEmail = document.getElementById("tv-input-email");
-const tvTextarea = document.getElementById("tv-textarea");
+
 const tvSubmitButtonFourthSection = document.getElementById("tv-send-form-submit");
 const tvFooterEng = document.getElementById("tv-footer-eng");
 const tvFooterRus = document.getElementById("tv-footer-rus")
@@ -160,118 +292,44 @@ const tvRefreshDataForLocalization = () => {
         const tvPriceListServiceCost = document.getElementById(`tv-price-list-service-cost-${number}`);
         tvPriceListServiceCost.textContent = `£${cost}`;
         tvPriceListServiceName.textContent = nameOfServise[tvSelectLang];
-
-        if (tvSelectLang === "rus") {
-            tvPriceListServiceName.style.fontFamily = "Lato";
-            tvPriceListServiceName.style.fontSize = "2.59067vw";
-            tvPriceListServiceCost.style.fontFamily = "Lato";
-            tvPriceListServiceCost.style.fontSize = "2.59067vw";
-        } else {
-            tvPriceListServiceName.style.fontFamily = "";
-            tvPriceListServiceName.style.fontSize = "";
-            tvPriceListServiceCost.style.fontFamily = "";
-            tvPriceListServiceCost.style.fontSize = "";
-        }
     })
 
     if (tvSelectLang === "rus") {
-        tvCentralText.style.fontFamily = "Lato";
         tvInputFirstName.placeholder = "Имя";
-        tvInputFirstName.style.fontFamily = "Lato";
-        tvInputFirstName.style.fontSize = "2.33161vw";
-        tvInputFirstName.style.lineHeight = "2.79793vw";
         tvInputLastName.placeholder = "Фамилия";
-        tvInputLastName.style.fontFamily = "Lato";
-        tvInputLastName.style.fontSize = "2.33161vw";
-        tvInputLastName.style.lineHeight = "2.79793vw";
         tvInputPhone.placeholder = "Телефон";
-        tvInputPhone.style.fontFamily = "Lato";
-        tvInputPhone.style.fontSize = "2.33161vw";
-        tvInputPhone.style.lineHeight = "2.79793vw";
         tvInputEmail.placeholder = "Email";
-        tvInputEmail.style.fontFamily = "Lato";
-        tvInputEmail.style.fontSize = "2.33161vw";
-        tvInputEmail.style.lineHeight = "2.79793vw";
         tvTextarea.placeholder = "В этом поле вы можете указать указать любые дополнительные данные или пожелания по заказу."
-        tvTextarea.style.fontFamily = "Lato";
         tvFooterEng.style.display = "none";
         tvFooterRus.style.display = "block";
-        tvReviewsUpperName.style.fontFamily = "Lato";
-        tvReviewsUpperUpperText.style.fontFamily = "Lato";
-        tvReviewsLowerName.style.fontFamily = "Lato";
-        tvReviewsUpperUpperText.style.fontFamily = "Lato";
-        tvReviewsUpperLowerText.style.fontFamily = "Lato";
-        tvReviewsLowerUpperText.style.fontFamily = "Lato";
-        tvReviewsLowerLowerText.style.fontFamily = "Lato";
-
-
     } else {
-        tvCentralText.style.fontFamily = "";
         tvInputFirstName.placeholder = "First Name";
-        tvInputFirstName.style.fontFamily = "";
-        tvInputFirstName.style.fontSize = "";
-        tvInputFirstName.style.lineHeight = "";
         tvInputLastName.placeholder = "Last Name";
-        tvInputLastName.style.fontFamily = "";
-        tvInputLastName.style.fontSize = "";
-        tvInputLastName.style.lineHeight = "";
         tvInputPhone.placeholder = "Phone";
-        tvInputPhone.style.fontFamily = "";
-        tvInputPhone.style.fontSize = "";
-        tvInputPhone.style.lineHeight = "";
         tvInputEmail.placeholder = "Email";
-        tvInputEmail.style.fontFamily = "";
-        tvInputEmail.style.fontSize = "";
-        tvInputEmail.style.lineHeight = "";
         tvTextarea.placeholder = "In tvis field, you can provide any additional details or requests for your order, including your preferred metvod of contact.";
-        tvTextarea.style.fontFamily = "";
         tvFooterEng.style.display = "block";
         tvFooterRus.style.display = "none";
-        tvReviewsUpperName.style.fontFamily = "";
-        tvReviewsUpperUpperText.style.fontFamily = "";
-        tvReviewsLowerName.style.fontFamily = "";
-        tvReviewsUpperUpperText.style.fontFamily = "";
-        tvReviewsUpperLowerText.style.fontFamily = "";
-        tvReviewsLowerUpperText.style.fontFamily = "";
-        tvReviewsLowerLowerText.style.fontFamily = "";
     }
 
     for (let index = 0; index < arrayPriceList.length; index++) {
         if (tvSelectLang === "rus") {
             tvThirdSectionTitle.textContent = current.title.rus;
-            tvThirdSectionTitle.style.fontFamily = "Lato";
-            tvThirdSectionTitle.style.fontSize = "2.84974vw";
             tvThirdSectionText0.textContent = current.description.rus[0];
-            tvThirdSectionText0.style.fontFamily = "Lato";
-            tvThirdSectionText0.style.fontSize = "2.07254vw";
-            tvThirdSectionText0.style.lineHeight = "2.6943vw";
             tvThirdSectionText1.textContent = current.description.rus[1];
-            tvThirdSectionText1.style.fontFamily = "Lato";
-            tvThirdSectionText1.style.fontSize = "2.07254vw";
-            tvThirdSectionText1.style.lineHeight = "2.6943vw";
         } else {
             tvThirdSectionTitle.textContent = current.title.eng;
-            tvThirdSectionTitle.style.fontFamily = "";
-            tvThirdSectionTitle.style.fontSize = "";
             tvThirdSectionText0.textContent = current.description.eng[0];
-            tvThirdSectionText0.style.fontFamily = "";
-            tvThirdSectionText0.style.fontSize = "";
-            tvThirdSectionText1.style.lineHeight = "";
             tvThirdSectionText1.textContent = current.description.eng[1];
-            tvThirdSectionText1.style.fontFamily = "";
-            tvThirdSectionText1.style.fontSize = "";
-            tvThirdSectionText1.style.lineHeight = "";
         }
 
     }
 }
 
 const tvFourSectionTitle = document.getElementById("tv-four-section-title");
-const tvMainSendForm = document.getElementById("tv-main-send-form");
 const tvMainSendFormTitle = document.getElementById("tv-main-send-form-title");
 const tvChoiceServecesTitle = document.getElementById("tv-choice-serveces-title");
 
-const tvFourthSectionChoiceOfService = document.getElementById("tv-choice-of-service");
 const tvFourthSectionChoiceOfServiceArrow = document.getElementById("tv-choice-of-service-arrow");
 const tvFourthSectionChoiceOfServiceArrowPath = document.getElementById("tv-choice-of-service-arrow-path");
 const tvChoiceOfServicePlaceholder = document.getElementById("tv-choice-of-service-placeholder");
@@ -298,7 +356,7 @@ const allInputsHave = () => {
         tvFourSectionTitle.textContent = "Contact us";
         tvFourSectionTitle.style.color = "";
         tvMainSendForm.style.border = "";
-        tvMainSendForm.style.backgroundColor = "";
+        tvFourSection.style.background = "";
         tvMainSendFormTitle.style.color = "";
     }
 }
@@ -314,22 +372,23 @@ tvInputFirstName.addEventListener('input', () => {
         editValue = editValue.slice(0, 10);
     }
     if (editValue.length > 0) {
-        tvInputFirstName.style.borderBottom = "0.12953vw solid var(--blue)";
-        tvInputFirstName.style.color = "var(--blue)";
+        if (tvSelectTheme === "light") {
+            tvInputFirstName.style.borderBottom = "0.12953vw solid var(--ltText)";
+            tvInputFirstName.style.color = "var(--ltText)";
+        } else {
+            tvInputLastName.style.borderBottom = "0.12953vw solid var(--ltSeparationLine)";
+            tvInputFirstName.style.color = "var(--dtText)";
+        }
         allInputsHave();
     } else {
         if (tvSelectLang === "rus") {
             tvInputFirstName.placeholder = "Укажите ваше имя";
-            tvInputFirstName.style.fontFamily = "Lato";
-            tvInputFirstName.style.fontSize = "2.33161vw";
         } else {
             tvInputFirstName.placeholder = "Enter your first name";
-            tvInputFirstName.style.fontFamily = "";
-            tvInputFirstName.style.fontSize = "";
         }
-        tvInputFirstName.style.borderBottom = "0.12953vw solid var(--orangeRed)";
-        tvInputFirstName.classList = "th-input-placeholder";
-        tvInputFirstName.style.color = "var(--orangeRed)";
+        tvInputFirstName.classList = "tv-input-placeholder";
+        tvInputFirstName.style.borderBottom = "0.12953vw solid var(--bad)";
+        tvInputFirstName.style.color = "var(--bad)";
         voidInput();
     }
     tvInputFirstName.value = capitalize(editValue);
@@ -342,21 +401,22 @@ tvInputLastName.addEventListener('input', () => {
         editValue = editValue.slice(0, 10);
     }
     if (editValue.length > 0) {
-        tvInputLastName.style.borderBottom = "0.12953vw solid var(--blue)";
-        tvInputLastName.style.color = "var(--blue)";
+        if (tvSelectTheme === "light") {
+            tvInputLastName.style.borderBottom = "0.12953vw solid var(--ltText)";
+            tvInputLastName.style.color = "var(--ltText)";
+        } else {
+            tvInputLastName.style.borderBottom = "0.12953vw solid var(--ltSeparationLine)";
+            tvInputLastName.style.color = "var(--dtText)";
+        }
         allInputsHave();
     } else {
-        tvInputLastName.style.borderBottom = "0.12953vw solid var(--orangeRed)";
+        tvInputLastName.style.borderBottom = "0.12953vw solid var(--bad)";
         tvInputLastName.classList = "th-input-placeholder";
-        tvInputLastName.style.color = "var(--orangeRed)";
+        tvInputLastName.style.color = "var(--bad)";
         if (tvSelectLang === "rus") {
             tvInputLastName.placeholder = "Укажите вашу фамилию";
-            tvInputLastName.style.fontFamily = "Lato";
-            tvInputLastName.style.fontSize = "2.33161vw";
         } else {
             tvInputLastName.placeholder = "Enter your last name";
-            tvInputLastName.style.fontFamily = "";
-            tvInputLastName.style.fontSize = "";
         }
         voidInput();
     }
@@ -370,21 +430,22 @@ tvInputPhone.addEventListener('input', () => {
         editValue = editValue.slice(0, 12);
     }
     if (editValue.length > 0) {
-        tvInputPhone.style.borderBottom = "0.12953vw solid var(--blue)";
-        tvInputPhone.style.color = "var(--blue)";
+        if (tvSelectTheme === "light") {
+            tvInputPhone.style.borderBottom = "0.12953vw solid var(--ltText)";
+            tvInputPhone.style.color = "var(--ltText)";
+        } else {
+            tvInputPhone.style.borderBottom = "0.12953vw solid var(--ltSeparationLine)";
+            tvInputPhone.style.color = "var(--dtText)";
+        }
         allInputsHave();
     } else {
-        tvInputPhone.style.borderBottom = "0.12953vw solid var(--orangeRed)";
+        tvInputPhone.style.borderBottom = "0.12953vw solid var(--bad)";
         tvInputPhone.classList = "th-input-placeholder";
-        tvInputPhone.style.color = "var(--orangeRed)";
+        tvInputPhone.style.color = "var(--bad)";
         if (tvSelectLang === "rus") {
             tvInputPhone.placeholder = "Напишите ваш телефон";
-            tvInputPhone.style.fontFamily = "Lato";
-            tvInputPhone.style.fontSize = "2.33161vw";
         } else {
             tvInputPhone.placeholder = "Enter the phone number";
-            tvInputPhone.style.fontFamily = "";
-            tvInputPhone.style.fontSize = "";
         }
         voidInput();
     }
@@ -398,21 +459,22 @@ tvInputEmail.addEventListener('input', () => {
         editValue = editValue.slice(0, 20);
     }
     if (editValue.length > 0) {
-        tvInputEmail.style.borderBottom = "0.12953vw solid var(--blue)";
-        tvInputEmail.style.color = "var(--blue)";
+        if (tvSelectTheme === "light") {
+            tvInputEmail.style.borderBottom = "0.12953vw solid var(--ltText)";
+            tvInputEmail.style.color = "var(--ltText)";
+        } else {
+            tvInputEmail.style.borderBottom = "0.12953vw solid var(--ltSeparationLine)";
+            tvInputEmail.style.color = "var(--dtText)";
+        }
         allInputsHave();
     } else {
-        tvInputEmail.style.borderBottom = "0.12953vw solid var(--orangeRed)";
+        tvInputEmail.style.borderBottom = "0.12953vw solid var(--bad)";
         tvInputEmail.classList = "th-input-placeholder";
-        tvInputEmail.style.color = "var(--orangeRed)";
+        tvInputEmail.style.color = "var(--bad)";
         if (tvSelectLang === "rus") {
             tvInputEmail.placeholder = "Введите корректный email";
-            tvInputEmail.style.fontFamily = "Lato";
-            tvInputEmail.style.fontSize = "2.33161vw";
         } else {
             tvInputEmail.placeholder = "Enter a valid email";
-            tvInputEmail.style.fontFamily = "";
-            tvInputEmail.style.fontSize = "";
         }
         voidInput();
     }
@@ -427,122 +489,137 @@ tvSubmitButtonFourthSection.addEventListener('click', () => {
 
     if (!tvInputFirstName.value.length) {
         resultChecked = false;
-        tvInputFirstName.style.borderBottom = "0.12953vw solid var(--orangeRed)";
+        tvInputFirstName.style.borderBottom = "0.12953vw solid var(--bad)";
         tvInputFirstName.classList = "tv-input-placeholder";
-        tvInputFirstName.style.color = "var(--orangeRed)";
+        tvInputFirstName.style.color = "var(--bad)";
         if (tvSelectLang === "rus") {
             tvInputFirstName.placeholder = "Укажите ваше имя";
-            tvInputFirstName.style.fontFamily = "Lato";
-            tvInputFirstName.style.fontSize = "2.33161vw";
         } else {
             tvInputFirstName.placeholder = "Enter your first name";
-            tvInputFirstName.style.fontFamily = "";
-            tvInputFirstName.style.fontSize = "";
         }
 
     } else {
-        tvInputFirstName.style.borderBottom = "0.12953vw solid var(--blue)";
-        tvInputFirstName.style.color = "var(--blue)";
-
+        if (tvSelectTheme === "light") {
+            tvInputFirstName.style.borderBottom = "0.12953vw solid var(--ltText)";
+            tvInputFirstName.style.color = "var(--ltText)";
+        } else {
+            tvInputFirstName.style.borderBottom = "0.12953vw solid var(--ltSeparationLine)";
+            tvInputFirstName.style.color = "var(--dtText)";
+        }
 
     }
     if (!tvInputLastName.value.length) {
         resultChecked = false;
-        tvInputLastName.style.borderBottom = "0.12953vw solid var(--orangeRed)";
+        tvInputLastName.style.borderBottom = "0.12953vw solid var(--bad)";
         tvInputLastName.classList = "tv-input-placeholder";
-        tvInputLastName.style.color = "var(--orangeRed)";
+        tvInputLastName.style.color = "var(--bad)";
         if (tvSelectLang === "rus") {
             tvInputLastName.placeholder = "Укажите вашу фамилию";
-            tvInputLastName.style.fontFamily = "Lato";
-            tvInputLastName.style.fontSize = "2.33161vw";
         } else {
             tvInputLastName.placeholder = "Enter your last name";
-            tvInputLastName.style.fontFamily = "";
-            tvInputLastName.style.fontSize = "";
         }
 
     } else {
-        tvInputLastName.style.borderBottom = "0.12953vw solid var(--blue)";
-        tvInputLastName.style.color = "var(--blue)";
+        if (tvSelectTheme === "light") {
+            tvInputLastName.style.borderBottom = "0.12953vw solid var(--ltText)";
+            tvInputLastName.style.color = "var(--ltText)";
+        } else {
+            tvInputLastName.style.borderBottom = "0.12953vw solid var(--ltSeparationLine)";
+            tvInputLastName.style.color = "var(--dtText)";
+        }
 
     }
     if (!tvInputPhone.value.length) {
         resultChecked = false;
-        tvInputPhone.style.borderBottom = "0.12953vw solid var(--orangeRed)";
+        tvInputPhone.style.borderBottom = "0.12953vw solid var(--bad)";
         tvInputPhone.classList = "tv-input-placeholder";
-        tvInputPhone.style.color = "var(--orangeRed)";
+        tvInputPhone.style.color = "var(--bad)";
         if (tvSelectLang === "rus") {
             tvInputPhone.placeholder = "Напишите ваш телефон";
-            tvInputPhone.style.fontFamily = "Lato";
-            tvInputPhone.style.fontSize = "2.33161vw";
         } else {
             tvInputPhone.placeholder = "Enter the phone number";
-            tvInputPhone.style.fontFamily = "";
-            tvInputPhone.style.fontSize = "";
         }
 
     } else {
-        tvInputPhone.style.borderBottom = "0.12953vw solid var(--blue)";
-        tvInputPhone.style.color = "var(--blue)";
+        if (tvSelectTheme === "light") {
+            tvInputPhone.style.borderBottom = "0.12953vw solid var(--ltText)";
+            tvInputPhone.style.color = "var(--ltText)";
+        } else {
+            tvInputPhone.style.borderBottom = "0.12953vw solid var(--ltSeparationLine)";
+            tvInputPhone.style.color = "var(--dtText)";
+        }
 
     }
     if (!tvInputEmail.value.length) {
         resultChecked = false;
-        tvInputEmail.style.borderBottom = "0.12953vw solid var(--orangeRed)";
+        tvInputEmail.style.borderBottom = "0.12953vw solid var(--bad)";
         tvInputEmail.classList = "tv-input-placeholder";
-        tvInputEmail.style.color = "var(--orangeRed)";
+        tvInputEmail.style.color = "var(--bad)";
         if (tvSelectLang === "rus") {
             tvInputEmail.placeholder = "Введите корректный email";
-            tvInputEmail.style.fontFamily = "Lato";
-            tvInputEmail.style.fontSize = "2.33161vw";
         } else {
             tvInputEmail.placeholder = "Enter a valid email";
-            tvInputEmail.style.fontFamily = "";
-            tvInputEmail.style.fontSize = "";
         }
     } else {
-        tvInputEmail.style.borderBottom = "0.12953vw solid var(--blue)";
-        tvInputEmail.style.color = "var(--blue)";
+        if (tvSelectTheme === "light") {
+            tvInputEmail.style.borderBottom = "0.12953vw solid var(--ltText)";
+            tvInputEmail.style.color = "var(--ltText)";
+        } else {
+            tvInputEmail.style.borderBottom = "0.12953vw solid var(--ltSeparationLine)";
+            tvInputEmail.style.color = "var(--dtText)";
+        }
 
     }
 
     if (!tvSelectCategory) {
         resultChecked = false;
-        tvChoiceServecesTitle.style.color = "var(--orangeRed)";
-        tvChoiceOfServicePlaceholder.style.color = "var(--orangeRed)";
-        tvFourthSectionChoiceOfService.style.borderBottomColor = "var(--orangeRed)";
-        tvFourthSectionChoiceOfServiceArrowPath.style.fill = "#EC5200";
-        tvFourthSectionChoiceOfServiceArrowPath.style.stroke = "#EC5200";
+        tvChoiceServecesTitle.style.color = "var(--bad)";
+        tvChoiceOfServicePlaceholder.style.color = "var(--bad)";
+        tvFourthSectionChoiceOfService.style.borderBottomColor = "var(--bad)";
+        tvFourthSectionChoiceOfServiceArrowPath.style.fill = "var(--bad)";
+        tvFourthSectionChoiceOfServiceArrowPath.style.stroke = "var(--bad)";
     } else {
         tvChoiceServecesTitle.style.color = "";
         tvChoiceOfServicePlaceholder.style.color = "";
         tvFourthSectionChoiceOfService.style.borderBottomColor = "";
-        tvFourthSectionChoiceOfServiceArrowPath.style.fill = "#0285CC";
-        tvFourthSectionChoiceOfServiceArrowPath.style.stroke = "#0285CC";
+        tvFourthSectionChoiceOfServiceArrowPath.style.fill = "";
+        tvFourthSectionChoiceOfServiceArrowPath.style.stroke = "";
     } if (!isValidEmail(tvInputEmail.value)) {
-        tvInputEmail.style.borderBottom = "0.12953vw solid var(--orangeRed)";
+        tvInputEmail.style.borderBottom = "0.12953vw solid var(--bad)";
         tvInputEmail.classList = "tv-input-placeholder";
-        tvInputEmail.style.color = "var(--orangeRed)";
+        tvInputEmail.style.color = "var(--bad)";
         if (tvSelectLang === "rus") {
             tvInputEmail.placeholder = "Введите корректный email";
-            tvInputEmail.style.fontFamily = "Lato";
-            tvInputEmail.style.fontSize = "2.33161vw";
         } else {
             tvInputEmail.placeholder = "Enter a valid email";
-            tvInputEmail.style.fontFamily = "";
-            tvInputEmail.style.fontSize = "";
         }
     } else {
-        tvInputEmail.style.borderBottom = "0.12953vw solid var(--blue)";
-        tvInputEmail.style.color = "var(--blue)";
+        if (tvSelectTheme === "light") {
+            tvInputEmail.style.borderBottom = "0.12953vw solid var(--ltText)";
+            tvInputEmail.style.color = "var(--ltText)";
+        } else {
+            tvInputEmail.style.borderBottom = "0.12953vw solid var(--ltSeparationLine)";
+            tvInputEmail.style.color = "var(--dtText)";
+        }
     }
     if (!resultChecked) {
-        tvSubmitButtonFourthSection.style.border = "0.12953vw solid var(--secondBrown)";
-        tvSubmitButtonFourthSection.style.color = "var(--secondBrown)";
-        tvFourSectionTitle.style.color = "var(--orangeRed)";
-        tvMainSendForm.style.border = "0.21598vw solid rgba(236, 82, 0, 0.5)";
-        tvMainSendForm.style.backgroundColor = "rgba(236, 82, 0, 0.07)";
-        tvMainSendFormTitle.style.color = "var(--orangeRed)";
+        tvSubmitButtonFourthSection.style.border = "0.12953vw solid var(--bad)";
+        tvSubmitButtonFourthSection.style.color = "var(--bad)";
+        tvFourSectionTitle.style.color = "var(--bad)";
+        tvMainSendForm.style.border = "0.21598vw solid rgba(255, 79, 79, 0.5)";
+
+        if (tvSelectTheme === "dark") {
+            tvFourSection.style.background = `linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, rgba(255, 79, 79, 0.24) 22.13%, rgba(0, 136, 204, 0.03) 81.71%, rgba(0, 136, 204, 0.24) 87.91%, rgba(28, 28, 28, 0) 97.73%),
+            linear-gradient(270deg, rgba(28, 28, 28, 0.8) 0%, rgba(28, 28, 28, 0.08) 6.56%, rgba(28, 28, 28, 0) 50.5%, rgba(28, 28, 28, 0.08) 93.54%, rgba(28, 28, 28, 0.8) 100%),
+            linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+        } else {
+            tvFourSection.style.background = `
+            linear-gradient(180deg, rgba(232, 232, 232, 0) 0%, rgba(255, 79, 79, 0.24) 22.13%, rgba(0, 136, 204, 0.03) 81.71%, rgba(0, 136, 204, 0.24) 87.91%, rgba(232, 232, 232, 0) 97.73%),
+            linear-gradient(270deg, rgba(232, 232, 232, 0.8) 0%, rgba(232, 232, 232, 0.08) 6.56%, rgba(232, 232, 232, 0) 50.5%, rgba(232, 232, 232, 0.08) 93.54%, rgba(232, 232, 232, 0.8) 100%),
+            linear-gradient(0deg, #E8E8E8, #E8E8E8)`
+        }
+
+        tvMainSendFormTitle.style.color = "var(--bad)";
         if (tvSelectLang === "rus") {
             tvFourSectionTitle.textContent = "Заполните все обязательные поля";
         } else {
@@ -569,10 +646,28 @@ const tvChangeIdeasText = () => {
 
 setInterval(tvChangeIdeasText, 4000);
 
+const tvNavigationBlockLangButtonFace = document.getElementById("tv-navigation-block-lang-button-face");
+const tvNavigationBlockLangButtonFaceStroke = document.getElementById("tv-navigation-block-lang-button-face-stroke");
+const tvNavigationBlockLangButtonBakgroundRect = document.getElementById("tv-navigation-block-lang-button-background-rect");
+
 
 tvLang.addEventListener('click', () => {
     tvSwitchLocalization();
     tvRefreshDataForLocalization();
+    if (tvSelectLang === "rus") {
+        tvNavigationBlockLangButtonFace.style.left = "20.72539vw";
+        tvNavigationBlockLangButtonFaceStroke.style.stroke = "rgba(46, 46, 46, 0.2)";
+        tvNavigationBlockLangButtonBakgroundRect.style.fill = "rgba(46, 46, 46, 0.2)";
+    } else {
+        tvNavigationBlockLangButtonFace.style.left = "";
+        tvNavigationBlockLangButtonFaceStroke.style.stroke = "";
+        tvNavigationBlockLangButtonBakgroundRect.style.fill = "";
+    }
+})
+
+tvNavigationBlockThemeButtonWrapper.addEventListener('click', () => {
+    tvSwitchTheme();
+    tvRefreshTheme();
 })
 
 tvSecondSectionButtonServices.addEventListener('click', () => {
@@ -603,7 +698,6 @@ tvPriceListXMark.addEventListener('click', () => {
     }, 300);
 })
 
-let tvSelectTheme = "light";
 
 const tvActivService = () => {
     const currentService = arrayPriceList[tvActivNumber];
@@ -646,7 +740,6 @@ tvFourthSectionChoiceOfService.addEventListener('click', (event) => {
             newDropListPoint.textContent = textSelectCategoty;
             newDropListPoint.classList = "tv-drop-list-item";
             newDropListPoint.id = textSelectCategoty;
-            newDropListPoint.style.fontFamily = "";
 
             newDropListPoint.addEventListener('click', (event) => {
 
@@ -655,13 +748,12 @@ tvFourthSectionChoiceOfService.addEventListener('click', (event) => {
                 tvChoiceOfServicePlaceholder.textContent = textSelectCategoty;
                 newDropListWrapper.style.opacity = "0";
                 tvFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-                tvFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
                 newDropListWrapper.style.pointerEvents = "none";
                 tvChoiceServecesTitle.style.color = "";
                 tvChoiceOfServicePlaceholder.style.color = "";
                 tvFourthSectionChoiceOfService.style.borderBottomColor = "";
-                tvFourthSectionChoiceOfServiceArrowPath.style.fill = "#0285CC";
-                tvFourthSectionChoiceOfServiceArrowPath.style.stroke = "#0285CC";
+                tvFourthSectionChoiceOfServiceArrowPath.style.fill = "var(--svgColor)";
+                tvFourthSectionChoiceOfServiceArrowPath.style.stroke = "var(--svgColor)";
                 if (resultChecked !== null) {
                     allInputsHave();
                 }
@@ -678,7 +770,6 @@ tvFourthSectionChoiceOfService.addEventListener('click', (event) => {
             newDropListPoint.textContent = textSelectCategoty;
             newDropListPoint.classList = "tv-drop-list-item";
             newDropListPoint.id = textSelectCategoty;
-            newDropListPoint.style.fontFamily = "Lato";
 
             newDropListPoint.addEventListener('click', (event) => {
 
@@ -687,7 +778,6 @@ tvFourthSectionChoiceOfService.addEventListener('click', (event) => {
                 tvChoiceOfServicePlaceholder.textContent = textSelectCategoty;
                 newDropListWrapper.style.opacity = "0";
                 tvFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-                tvFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
                 newDropListWrapper.style.pointerEvents = "none";
                 if (resultChecked !== null) {
                     allInputsHave();
@@ -705,7 +795,11 @@ tvFourthSectionChoiceOfService.addEventListener('click', (event) => {
     tvFourthSectionChoiceOfServiceArrow.style.rotate = "-90deg";
     tvFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 0)";
     newDropListWrapper.style.pointerEvents = "all";
-    tvChoiceOfServicePlaceholder.style.color = "var(--blue)";
+    if (tvSelectTheme === "light") {
+        tvChoiceOfServicePlaceholder.style.color = "var(--ltText)";
+    } else {
+        tvChoiceOfServicePlaceholder.style.color = "var(--dtText)";
+    }
     const possibleDublicate = document.getElementById("tv-drop-list");
     if (possibleDublicate) {
         tvDropListWrapper.removeChild(possibleDublicate);
@@ -714,11 +808,14 @@ tvFourthSectionChoiceOfService.addEventListener('click', (event) => {
 
     document.addEventListener('click', () => {
         if (!tvSelectCategory) {
-            tvChoiceOfServicePlaceholder.style.color = "var(--darkBlue)";
+            if (tvSelectTheme === "light") {
+                tvChoiceOfServicePlaceholder.style.color = "var(--ltText)";
+            } else {
+                tvChoiceOfServicePlaceholder.style.color = "var(--dtText)";
+            }
         };
         newDropListWrapper.style.opacity = "0";
         tvDropListWrapper.style.height = "";
-        tvFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
         newDropListWrapper.style.pointerEvents = "none";
         tvFourthSectionChoiceOfServiceArrow.style.rotate = "";
     });
@@ -737,8 +834,11 @@ const tvSetupAndTranslateForSelectService = (event) => {
         if (selCat !== tvSelectCategory && arrayPriceList.map((service) => service.title.eng).includes(selCat)) {
             tvChoiceOfServicePlaceholder.textContent = selCat;
             tvFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-            tvFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
-            tvChoiceOfServicePlaceholder.style.color = "var(--blue)";
+            if (tvSelectTheme === "light") {
+                tvChoiceOfServicePlaceholder.style.color = "var(--ltText)";
+            } else {
+                tvChoiceOfServicePlaceholder.style.color = "var(--dtText)";
+            }
             tvSelectCategory = selCat;
             allInputsHave();
         }
@@ -748,18 +848,17 @@ const tvSetupAndTranslateForSelectService = (event) => {
         if (selCat !== tvSelectCategory && arrayPriceList.map((service) => service.title.rus).includes(selCat)) {
             tvChoiceOfServicePlaceholder.textContent = selCat;
             tvFourthSectionChoiceOfServiceArrow.style.rotate = "0deg";
-            tvFourthSectionChoiceOfService.style.borderBottomColor = "rgba(2, 133, 204, 1)";
-            tvChoiceOfServicePlaceholder.style.color = "var(--blue)";
+            if (tvSelectTheme === "light") {
+                tvChoiceOfServicePlaceholder.style.color = "var(--ltText)";
+            } else {
+                tvChoiceOfServicePlaceholder.style.color = "var(--dtText)";
+            }
             tvSelectCategory = selCat;
             allInputsHave();
         }
     }
 }
 
-const tvThirdSectionButtonOfConsultation = document.getElementById("tv-consultation-button");
-const tvThirdSectionButtonOfReview = document.getElementById("tv-review-button");
-const tvThirdSectionButtonOfQuestion = document.getElementById("tv-question-button");
-const tvThirdSectionButtonOfOrder = document.getElementById("tv-button-more-lower-part-buttons-3");
 
 
 tvThirdSectionButtonOfOrder.addEventListener('click', (event) => {
@@ -853,7 +952,6 @@ tvReviewsArrowRight.addEventListener('click', () => {
 
 let scrollLvl = 1;
 const visableBlocks = 5;
-const tvThirdSectionRightServicesWrapper = document.getElementById("tv-third-section-right-services-wrapper");
 const buffer = [];
 const gapDivs = 2.59067;
 const startDivTop = -23.31606;
@@ -863,7 +961,7 @@ const resetBlocks = () => {
     while (buffer.length > 0) {
         tvThirdSectionRightServicesWrapper.removeChild(buffer.shift().link)
     }
-    
+
 }
 
 const createDivBlocks = () => {
@@ -873,7 +971,7 @@ const createDivBlocks = () => {
     while (buffer.length < (visableBlocks + 2)) {
         if (i !== tvActivNumber) {
             const div = document.createElement('div');
-            
+
             const service = arrayPriceList[i];
             const divImg = document.createElement('img');
             const divH3 = document.createElement('h3');
@@ -883,6 +981,11 @@ const createDivBlocks = () => {
             div.style.top = startDivTop + (gapDivs + divHeight) * buffer.length + "vw";
             divImg.src = `/img/svg/tablet-vertical/src/${[tvSelectTheme]}/${service.title.eng}.svg`;
             divH3.textContent = service.title[tvSelectLang]
+            if (tvSelectTheme === "light") {
+                divH3.classList = `tv-third-section-right-services-h3-light`;
+            } else {
+                divH3.classList = `false`;
+            }
             div.appendChild(divImg);
             div.appendChild(divH3);
             tvThirdSectionRightServicesWrapper.appendChild(div);
@@ -904,15 +1007,13 @@ const createDivBlocks = () => {
     }
 }
 
-createDivBlocks();const movePlitka = (deltaGap) => {
+createDivBlocks(); const movePlitka = (deltaGap) => {
     for (let index = 0; index < buffer.length; index++) {
         const newTop = startDivTop + (gapDivs + divHeight) * index + deltaGap + "vw";
         buffer[index].link.style.top = newTop;
     }
 }
 
-const tvThirdSectionTopArrow = document.getElementById("tv-third-section-top-arrow");
-const tvThirdSectionBottomArrow = document.getElementById("tv-third-section-bottom-arrow");
 let tvThirdSectionAnimation = false;
 
 tvThirdSectionTopArrow.addEventListener('click', () => {
@@ -956,6 +1057,4 @@ tvThirdSectionBottomArrow.addEventListener('click', () => {
             createDivBlocks();
         }, 300);
     }
-
-
 })

@@ -566,11 +566,6 @@ const localizationWrapper = {
         eng: "Choose a service",    
     },
 
-    "tv-navigation-block-lang-button": {
-        rus: "Rus",
-        eng: "Eng",     
-    },
-
     "tv-navigation-block-title": {
         rus: "Навигация",
         eng: "Navigation",      

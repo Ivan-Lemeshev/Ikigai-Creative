@@ -4930,6 +4930,756 @@ const themeWrapper = {
             }
         }
     },
+
+    "tv-five-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(356deg, rgba(232, 232, 232, 0.2) 6.93%, rgba(0, 136, 204, 0.12) 25.48%, rgba(0, 136, 204, 0.2) 52.65%, rgba(0, 136, 204, 0.12) 76.18%, rgba(232, 232, 232, 0.2) 95.03%),
+                            linear-gradient(180deg, #E8E8E8 0%, rgba(232, 232, 232, 0) 5.61%, rgba(232, 232, 232, 0) 95.93%, #E8E8E8 100%),
+                            linear-gradient(0deg, #E8E8E8, #E8E8E8)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(356deg, rgba(28, 28, 28, 0.2) 6.93%, rgba(0, 136, 204, 0.12) 25.48%, rgba(0, 136, 204, 0.2) 52.65%, rgba(0, 136, 204, 0.12) 76.18%, rgba(28, 28, 28, 0.2) 95.03%),
+                            linear-gradient(180deg, #1C1C1C 0%, rgba(28, 28, 28, 0) 5.61%, rgba(28, 28, 28, 0) 95.93%, #1C1C1C 100%),
+                            linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+
+    "tv-five-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-reviews-name-left": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-reviews-upper-text-left": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-reviews-lower-text-left": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-reviews-name-right": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-reviews-upper-text-right": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-reviews-lower-text-right": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-footer-eng": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "tv-footer-rus": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "tv-footer-eng-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-footer-eng-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-footer-eng-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-footer-eng-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-footer-eng-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-footer-rus-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-footer-rus-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-footer-rus-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-footer-rus-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-navigation-block": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(232, 232, 232, 0.2)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(28, 28, 28, 0.2)`
+            }
+        }
+    },
+
+    "tv-navigation-block-lang-button-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-navigation-block-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-navigation-block-theme-button-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-navigation-block-item-title-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-navigation-block-item-text-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-navigation-block-item-title-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-navigation-block-item-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-navigation-block-item-title-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-navigation-block-item-text-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-navigation-block-item-title-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-navigation-block-item-text-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-navigation-block-item-title-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-navigation-block-item-text-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-second-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "tv-third-section": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(180deg, #E8E8E8 12.25%, rgba(232, 232, 232, 0.1) 16.84%, rgba(0, 136, 204, 0.1) 24.33%, rgba(0, 136, 204, 0.05) 54.9%, rgba(232, 232, 232, 0.05) 70.83%, #E8E8E8 84.86%),
+                            linear-gradient(270deg, rgba(232, 232, 232, 0) 0%, rgba(0, 136, 204, 0.1) 17.67%, rgba(232, 232, 232, 0) 100%),
+                            linear-gradient(0deg, #E8E8E8, #E8E8E8)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(270deg, rgba(28, 28, 28, 0) 0%, rgba(0, 136, 204, 0.1) 17.67%, rgba(28, 28, 28, 0) 100%),
+                            linear-gradient(180deg, #1C1C1C 12.25%, rgba(28, 28, 28, 0.1) 16.84%, rgba(0, 136, 204, 0.1) 24.33%, rgba(0, 136, 204, 0.05) 54.9%, rgba(28, 28, 28, 0.05) 70.83%, #1C1C1C 84.86%),
+                            linear-gradient(0deg, #1C1C1C, #1C1C1C)`
+            }
+        }
+    },
+    
+    "tv-third-section-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-third-section-black-blocks-top": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(180deg, #E8E8E8 43.55%, rgba(232, 232, 232, 0) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(180deg, #1C1C1C 43.55%, rgba(28, 28, 28, 0) 100%)`
+            }
+        }
+    },
+    
+    "tv-third-section-black-blocks-bottom": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(180deg, rgba(232, 232, 232, 0) 0%, #E8E8E8 38.38%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, #1C1C1C 38.38%)`
+            }
+        }
+    },
+    
+    "tv-choice-of-service-placeholder": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-reviews-wrapper-text-left": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(232, 232, 232, 0.5)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(28, 28, 28, 0.5)`
+            }
+        }
+    },
+    
+    "tv-reviews-wrapper-text-right": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(232, 232, 232, 0.5)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(28, 28, 28, 0.5)`
+            }
+        }
+    },
+    
+    "tv-price-list-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-service-name-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-service-cost-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-service-name-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-service-cost-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-service-name-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-service-cost-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-service-name-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-service-cost-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-service-name-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-service-cost-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-service-name-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-service-cost-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-service-name-6": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-service-cost-6": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "tv-price-list-footer": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
 }
 
 export default themeWrapper;
