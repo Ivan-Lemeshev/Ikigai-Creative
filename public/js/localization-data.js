@@ -416,16 +416,6 @@ const localizationWrapper = {
         eng: "The service you're interested in:",
     },
 
-    "mv-send-to-application-main-content-title": {
-        rus: "Отправляем вашу заявку",
-        eng: "Sending an application",
-    },
-
-    "mv-send-to-application-main-content-text": {
-        rus: "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд...",
-        eng: "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds...",
-    },
-
     "th-navigation-block-item-title-0": {
         rus: "Интро",
         eng: "Intro",
@@ -877,6 +867,16 @@ const localizationWrapper = {
     },
 
     "tv-send-to-application-main-content-text": {
+        rus: "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд...",
+        eng: "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds...",     
+    },
+
+    "mv-send-to-application-main-content-title": {
+        rus: "Отправляем вашу заявку",
+        eng: "Sending an application",     
+    },
+
+    "mv-send-to-application-main-content-text": {
         rus: "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд...",
         eng: "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds...",     
     },

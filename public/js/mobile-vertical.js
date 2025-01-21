@@ -3,6 +3,7 @@ import localizationWrapper from "./localization-data.js";
 import reviews from "./reviews-mobile.js";
 import themeWrapper from "./switchTheme-data.js";
 import dataContats from "./links.js";
+import url from "./url.js"
 
 const mvNavButton = document.getElementById("mv-nav-button");
 const mvNavigationBlock = document.getElementById("mv-navigation-block");
@@ -767,6 +768,8 @@ mvInputEmail.addEventListener('input', () => {
     mvInputEmail.value = editValue;
 });
 
+let applicationShow = false;
+
 
 
 const mvFifvthSectionMainContentSubtitle = document.getElementById("mv-fifvth-section-main-content-subtitle");
@@ -776,6 +779,7 @@ const mvAllInputsHave = () => {
     if (mvInputFirstName.value.length && mvInputLastName.value.length && mvInputPhone.value.length && mvInputEmail.value.length && isValidEmail(mvInputEmail.value) && mvActivNumberSave !== null) {
         mvSubmitButton.classList = "mv-activ-button";
         mvFifvthSectionImgPath.style.fill = "#0088CC";
+        applicationShow = true;
         mvFifvthSectionMainContent.style.background = "rgba(0, 136, 204, 0.01)";
         mvFifvthSectionMainContent.style.border = "0.4975124378109453vw solid rgba(46, 46, 46, 0.5)";
         mvSubmitButton.style.border = "";
@@ -791,7 +795,6 @@ const mvAllInputsHave = () => {
 
 mvAllInputsHave()
 
-const mvSendToApplication = document.getElementById("mv-send-to-application");
 
 
 mvSubmitButton.addEventListener('click', (event) => {
@@ -804,18 +807,12 @@ mvSubmitButton.addEventListener('click', (event) => {
         });
 
         mvFifvthSectionImgPath.style.fill = "#ff4f4f";
-        mvFifvthSectionMainContent.style.backgroundColor = "rgba(127, 45, 0, 0.07)";
+        mvFifvthSectionMainContent.style.background = "rgba(127, 45, 0, 0.07)";
         mvFifvthSectionMainContent.style.border = "0.4975124378109453vw solid rgba(255, 79, 79, 0.5)";
         mvSubmitButton.style.border = "0.24875621890547264vw solid var(--bad)";
-        mvSubmitButton.style.backgroundColor = "rgba(236, 82, 0, 0.05)";
+        mvSubmitButton.style.background = "rgba(236, 82, 0, 0.05)";
         mvSubmitButton.style.color = "var(--bad)";
-    } else {
-        mvSendToApplication.style.display = "block";
-        setTimeout(() => {
-            mvSendToApplication.style.display = "none";
-
-        }, 5000);
-    }
+    } 
 
     if (mvActivNumberSave === null) {
         mvFifvthSectionMainContentSubtitle.textContent = "Choose a service:"
@@ -1031,3 +1028,96 @@ mvThirdSectionButtonOrder.addEventListener('click', () => {
     mvFifvthSectionDropListItemText.style.color = "var(--accent)";
 
 })
+
+
+const sendToApplicationMainContent = document.getElementById("mv-send-to-application-main-content");
+const sendToApplicationWrapper = document.getElementById("mv-send-to-application-wrapper");
+const sendToApplicationMainContentTitle = document.getElementById("mv-send-to-application-main-content-title");
+const sendToApplicationMainContentText = document.getElementById("mv-send-to-application-main-content-text");
+const sendToApplicationMainContentImg = document.getElementById("mv-send-to-application-main-content-img");
+const sendToApplicationMainContentImgSecces = document.getElementById("mv-send-to-application-main-content-img-secces");
+const sendToApplicationMainContentImgWrong = document.getElementById("mv-send-to-application-main-content-img-wrong");
+
+
+mvSubmitButton.addEventListener('click', () => {
+    const data = {
+        text: `
+    First Name: ${mvInputFirstName.value}, 
+    Last Name: ${mvInputLastName.value}, 
+    Phone: ${mvInputPhone.value}, 
+    Email: ${mvInputEmail.value}, 
+    Service: ${arrayPriceList[mvActivNumber].title[mvSelectLang]},
+    Text: ${mvTextarea.value}`
+    }; 
+    if (applicationShow) {
+        sendToApplicationWrapper.style.display = "block";
+        setTimeout(() => {
+            sendToApplicationWrapper.style.opacity = "1";
+            setTimeout(() => {
+                sendToApplicationMainContent.style.opacity = "0"
+                setTimeout(() => {
+                    fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json', // Указываем, что данные в формате JSON
+                        },
+                        body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
+                    })
+                        .then(() => {
+                            if (mvSelectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Successfully";
+                                sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Успешно";
+                                sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
+                            }
+                            sendToApplicationMainContentImg.style.display = "none"
+                            sendToApplicationMainContentImgSecces.style.display = "block"
+                            sendToApplicationMainContent.style.border = "0.12437810945273632vw solid var(--success)";
+
+                            setTimeout(() => {
+                                sendToApplicationMainContent.style.opacity = "1"
+                            }, 300);
+                        }) //если все хорошо
+
+                        .catch(() => {
+                            if (mvSelectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Something went wrong";
+                                sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
+                                sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
+                            }
+                            sendToApplicationMainContentImg.style.display = "none"
+                            sendToApplicationMainContentImgWrong.style.display = "block"
+                            sendToApplicationMainContent.style.border = "0.12437810945273632vw solid var(--bad)";
+
+
+                            setTimeout(() => {
+                                sendToApplicationMainContent.style.opacity = "1"
+                            }, 300);
+                        }) // если все плохо
+
+                    setTimeout(() => {
+                        sendToApplicationWrapper.style.opacity = "";
+                        setTimeout(() => {
+                            sendToApplicationWrapper.style.display = "";
+                            if (mvSelectLang === "eng") {
+                                sendToApplicationMainContentTitle.textContent = "Sending an application";
+                                sendToApplicationMainContentText.textContent = "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds..."
+                            } else {
+                                sendToApplicationMainContentTitle.textContent = "Отправляем вашу заявку";
+                                sendToApplicationMainContentText.textContent = "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд..."
+                            }
+                            sendToApplicationMainContent.style.border = "";
+                            sendToApplicationMainContentImgWrong.style.display = "";
+                            sendToApplicationMainContentImgSecces.style.display = "";
+                            sendToApplicationMainContentImg.style.display = "";
+                        }, 300);
+                    }, 3000);
+                }, 300);
+            }, 3000);
+        }, 300);
+    }
+})
+

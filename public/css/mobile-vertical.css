@@ -1423,3 +1423,86 @@
         color: var(--ltText);
     }
 }
+
+
+#mv-send-to-application-wrapper {
+    width: 100vw;
+    height: 217.4129353233831vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(2.4875621890547266vw);
+    background: rgba(232, 232, 232, 0.3);
+    z-index: 50;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    &>#mv-send-to-application-main-content {
+        width: 68.65671641791045vw;
+        height: 121.89054726368158vw;
+        margin-top: 47.51243781094527vw;
+        margin-left: 15.671641791044777vw;
+        background: rgba(232, 232, 232, 0.4);
+        border: 0.12437810945273632vw solid var(--ltText);
+        backdrop-filter: blur(2.4875621890547266vw);
+        transition: opacity 0.3s ease-in-out;
+
+        &>#mv-send-to-application-main-content-title {
+            width: 58.70646766169154vw;
+            height: 14.925373134328357vw;
+            margin-top: 9.950248756218906vw;
+            margin-left: 4.975124378109453vw;
+            font-weight: 400;
+            font-size: 5.472636815920398vw;
+            line-height: 7.6616915422885565vw;
+            letter-spacing: 0.1em;
+            color: var(--ltText);
+            overflow: visible;
+            text-align: center;
+        }
+
+        &>#mv-send-to-application-main-content-text {
+            width: 58.70646766169154vw;
+            height: 34.82587064676617vw;
+            margin-top: 7.462686567164178vw;
+            margin-left: 4.975124378109453vw;
+            font-weight: 300;
+            font-size: 4.975124378109453vw;
+            line-height: 6.965174129353234vw;
+            letter-spacing: 0.1em;
+            color: var(--ltText);
+            text-align: center;
+            overflow: visible;
+        }
+
+        &>#mv-send-to-application-main-content-img {
+            width: 39.800995024875625vw;
+            height: 39.800995024875625vw;
+            margin-top: 7.462686567164178vw;
+            margin-left: 14.427860696517413vw;
+            object-fit: contain;
+            pointer-events: none;
+        }
+
+        &>#mv-send-to-application-main-content-img-secces {
+            width: 39.800995024875625vw;
+            height: 39.800995024875625vw;
+            margin-top: 7.462686567164178vw;
+            margin-left: 14.427860696517413vw;
+            object-fit: contain;
+            pointer-events: none;
+            display: none;
+        }
+
+        &>#mv-send-to-application-main-content-img-wrong {
+            width: 39.800995024875625vw;
+            height: 39.800995024875625vw;
+            margin-top: 7.462686567164178vw;
+            margin-left: 14.427860696517413vw;
+            object-fit: contain;
+            pointer-events: none;
+            display: none;
+        }
+    }
+}
