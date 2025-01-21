@@ -1081,7 +1081,7 @@ const themeWrapper = {
         }
     },
 
-    "mh-send-to-application": {
+    "mh-send-to-application-wrapper": {
         styles: {
             light: {
                 color: "",
@@ -5928,6 +5928,175 @@ const themeWrapper = {
     },
     
     "mv-send-to-application-main-content-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+    
+    "second-header-wrapper": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(0deg, rgba(232, 232, 232, 0) 0%, rgba(232, 232, 232, 0.8) 35%, rgba(232, 232, 232, 0.8) 65%, rgba(232, 232, 232, 0) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(0deg, rgba(28, 28, 28, 0) 0%, rgba(28, 28, 28, 0.8) 35%, rgba(28, 28, 28, 0.8) 65%, rgba(28, 28, 28, 0) 100%)`
+            }
+        }
+    },
+        
+    "second-language-button-first-section": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+        
+    "second-theme-button-first-section": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+        
+    "second-navigation-button-first-section": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+        
+    "second-navigation-button-first-section-choice-intro-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+        
+    "second-navigation-button-first-section-choice-info-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+        
+    "second-navigation-button-first-section-choice-services-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+        
+    "second-navigation-button-first-section-choice-contacts-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+        
+    "second-navigation-button-first-section-choice-reviews-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+        
+    "second-language-button-first-section-choice-eng-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+        
+    "second-language-button-first-section-choice-rus-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+        
+    "second-theme-button-first-section-choice-light-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+        
+    "second-theme-button-first-section-choice-dark-text": {
         styles: {
             light: {
                 color: "var(--ltText)",

@@ -18,11 +18,14 @@ const centralTextDown = document.getElementById("central-text-first-section-down
 const navigationWrapper = document.getElementById("navigation-button-first-section-big-wrapper");
 const headerLogoFirstSection = document.getElementById("header-logo-first-section");
 const headerNavInfo = document.getElementById("navigation-button-first-section-choice-info");
+const headerNavIntroSecond = document.getElementById("second-navigation-button-first-section-choice-intro");
+const headerNavInfoSecond = document.getElementById("second-navigation-button-first-section-choice-info");
 const headerNavServices = document.getElementById("navigation-button-first-section-choice-services");
+const headerNavServicesSecond = document.getElementById("second-navigation-button-first-section-choice-services");
 const headerNavContacts = document.getElementById("navigation-button-first-section-choice-contacts");
+const headerNavContactsSecond = document.getElementById("second-navigation-button-first-section-choice-contacts");
 const headerNavReviews = document.getElementById("navigation-button-first-section-choice-reviews");
-// const headerDividingLine = document.getElementById("header-dividing-line-first-section");
-// const headerLanguageButton = document.getElementById("language-button-first-section");
+const headerNavReviewsSecond = document.getElementById("second-navigation-button-first-section-choice-reviews");
 
 let animationisActiv = false;
 let animationIsGone = false;
@@ -31,16 +34,8 @@ const timeOfAnimation = 4000;
 let angel = 360;
 
 
-// const secondHeaderLogoHover = document.getElementById("second-header-logo-hover");
-// const secondHeaderNavigation = document.getElementById("second-header-navigation");
-// const secondHeaderLogoActiv = document.getElementById("second-header-logo-activ");
-// const secondHeaderNavMain = document.getElementById("second-nav-main");
-// const secondHeaderNavInfo = document.getElementById("second-nav-info");
-// const secondHeaderNavServices = document.getElementById("second-nav-services");
-// const secondHeaderNavContacts = document.getElementById("second-nav-contacts");
-// const secondHeaderNavReviews = document.getElementById("second-nav-reviews");
-// const secondHeaderLanguageButton = document.getElementById("second-language-button");
-// const secondHeaderDividingLine = document.getElementById("second-header-dividing-line");
+const secondHeaderLogoStart = document.getElementById("second-header-logo-start");
+const secondHeader = document.getElementById("second-header-wrapper");
 
 const secondSectionText = document.getElementById("second-section-text");
 const secondSectionText1 = document.getElementById("second-section-text-1");
@@ -122,7 +117,6 @@ const arrayCard = [
 ];
 
 let selectLang = "eng";
-const lang = document.getElementById("language-button-first-section-wrapper");
 let numberOfService = 0;
 
 const isValidEmail = (email) => {
@@ -220,14 +214,6 @@ const refreshDataForLocalization = () => {
         textarea.placeholder = "В этом поле вы можете указать любые дополнительные данные или пожелания по заказу.";
         footerContentEng.style.display = "none";
         footerContentRus.style.display = "flex";
-        // secondHeaderLanguageButton.textContent = "Rus";
-        // secondHeaderNavMain.textContent = "Главная";
-        // secondHeaderNavInfo.textContent = "Инфо";
-        // secondHeaderNavServices.textContent = "Услуги";
-        // secondHeaderNavContacts.textContent = "Контакты";
-        // secondHeaderNavReviews.textContent = "Отзывы";
-
-
     } else {
         inputFirstName.placeholder = "First Name";
         inputLastName.placeholder = "Last Name";
@@ -235,12 +221,6 @@ const refreshDataForLocalization = () => {
         textarea.placeholder = "In this field, you can provide any additional details or requests for your order, including your preferred method of contact.";
         footerContentEng.style.display = "flex";
         footerContentRus.style.display = "none";
-        // secondHeaderLanguageButton.textContent = "Eng";
-        // secondHeaderNavMain.textContent = "Main";
-        // secondHeaderNavInfo.textContent = "Info";
-        // secondHeaderNavServices.textContent = "Services";
-        // secondHeaderNavContacts.textContent = "Contacts";
-        // secondHeaderNavReviews.textContent = "Reviews";
     }
 
     for (let index = 0; index < arrayDataOfService.length; index++) {
@@ -480,12 +460,19 @@ const refreshTheme = () => {
 }
 
 const langChoiceWrapper = document.getElementById("language-button-first-section-big-wrapper");
+const langChoiceWrapperSecond = document.getElementById("second-language-button-first-section-big-wrapper");
 const langChoice = document.getElementById("language-button-first-section-wrapper");
+const langChoiceSecond = document.getElementById("second-language-button-first-section-wrapper");
 const langUpperPart = document.getElementById("language-button-first-section-choice");
+const langUpperPartSecond = document.getElementById("second-language-button-first-section-choice");
 const langEng = document.getElementById("language-button-first-section-choice-eng");
+const langEngSecond = document.getElementById("second-language-button-first-section-choice-eng");
 const langEngCheckbox = document.getElementById("language-button-first-section-choice-eng-checkbox");
+const langEngCheckboxSecond = document.getElementById("second-language-button-first-section-choice-eng-checkbox");
 const langRus = document.getElementById("language-button-first-section-choice-rus");
+const langRusSecond = document.getElementById("second-language-button-first-section-choice-rus");
 const langRusCheckbox = document.getElementById("language-button-first-section-choice-rus-checkbox");
+const langRusCheckboxSecond = document.getElementById("second-language-button-first-section-choice-rus-checkbox");
 
 langChoice.addEventListener('click', () => {
     langUpperPart.style.display = "block"
@@ -494,12 +481,25 @@ langChoice.addEventListener('click', () => {
     }, 1);
 })
 
+langChoiceSecond.addEventListener('click', () => {
+    langUpperPartSecond.style.display = "block"
+    setTimeout(() => {
+        langUpperPartSecond.style.opacity = "1"
+    }, 1);
+})
+
 langChoiceWrapper.addEventListener('mouseleave', () => {
     langUpperPart.style.opacity = ""
     setTimeout(() => {
         langUpperPart.style.display = ""
     }, 300);
+})
 
+langChoiceWrapperSecond.addEventListener('mouseleave', () => {
+    langUpperPartSecond.style.opacity = ""
+    setTimeout(() => {
+        langUpperPartSecond.style.display = ""
+    }, 300);
 })
 
 langEng.addEventListener('click', () => {
@@ -517,13 +517,37 @@ langRus.addEventListener('click', () => {
     langEngCheckbox.style.opacity = "0";
     langRusCheckbox.style.opacity = "1";
 })
+
+langEngSecond.addEventListener('click', () => {
+    selectLang = "eng";
+    switchLocalization();
+    refreshDataForLocalization();
+    langEngCheckboxSecond.style.opacity = "1";
+    langRusCheckboxSecond.style.opacity = "0";
+})
+
+langRusSecond.addEventListener('click', () => {
+    selectLang = "rus";
+    switchLocalization();
+    refreshDataForLocalization();
+    langEngCheckboxSecond.style.opacity = "0";
+    langRusCheckboxSecond.style.opacity = "1";
+})
+
 const themeChoiceWrapper = document.getElementById("theme-button-first-section-big-wrapper");
+const themeChoiceWrapperSecond = document.getElementById("second-theme-button-first-section-big-wrapper");
 const themeChoice = document.getElementById("theme-button-first-section-wrapper");
+const themeChoiceSecond = document.getElementById("second-theme-button-first-section-wrapper");
 const themeUpperPart = document.getElementById("theme-button-first-section-choice");
+const themeUpperPartSecond = document.getElementById("second-theme-button-first-section-choice");
 const themeLight = document.getElementById("theme-button-first-section-choice-light-wrapper");
+const themeLightSecond = document.getElementById("second-theme-button-first-section-choice-light-wrapper");
 const themeLightCheckbox = document.getElementById("theme-button-first-section-choice-light-checkbox");
+const themeLightCheckboxSecond = document.getElementById("second-theme-button-first-section-choice-light-checkbox");
 const themeDark = document.getElementById("theme-button-first-section-choice-dark-wrapper");
+const themeDarkSecond = document.getElementById("second-theme-button-first-section-choice-dark-wrapper");
 const themeDarkCheckbox = document.getElementById("theme-button-first-section-choice-dark-checkbox");
+const themeDarkCheckboxSecond = document.getElementById("second-theme-button-first-section-choice-dark-checkbox");
 
 
 themeChoice.addEventListener('click', () => {
@@ -556,9 +580,42 @@ themeDark.addEventListener('click', () => {
     themeDarkCheckbox.style.opacity = "1";
 })
 
+themeChoiceSecond.addEventListener('click', () => {
+    themeUpperPartSecond.style.display = "block"
+    setTimeout(() => {
+        themeUpperPartSecond.style.opacity = "1"
+    }, 1);
+})
+
+themeChoiceWrapperSecond.addEventListener('mouseleave', () => {
+    themeUpperPartSecond.style.opacity = ""
+    setTimeout(() => {
+        themeUpperPartSecond.style.display = ""
+    }, 300);
+})
+
+themeLightSecond.addEventListener('click', () => {
+    selectTheme = "light";
+    switchTheme();
+    refreshTheme();
+    themeLightCheckboxSecond.style.opacity = "1";
+    themeDarkCheckboxSecond.style.opacity = "0";
+})
+
+themeDarkSecond.addEventListener('click', () => {
+    selectTheme = "dark";
+    switchTheme();
+    refreshTheme();
+    themeLightCheckboxSecond.style.opacity = "0";
+    themeDarkCheckboxSecond.style.opacity = "1";
+})
+
 const navigationButtonFirstSectionBigWrapper = document.getElementById("navigation-button-first-section-big-wrapper");
+const navigationButtonFirstSectionBigWrapperSecond = document.getElementById("second-navigation-button-first-section-big-wrapper");
 const navigationButtonFirstSectionWrapper = document.getElementById("navigation-button-first-section-wrapper");
+const navigationButtonFirstSectionWrapperSecond = document.getElementById("second-navigation-button-first-section-wrapper");
 const navigationButtonFirstSectionChoiceWrapper = document.getElementById("navigation-button-first-section-choice-wrapper");
+const navigationButtonFirstSectionChoiceWrapperSecond = document.getElementById("second-navigation-button-first-section-choice-wrapper");
 
 navigationButtonFirstSectionWrapper.addEventListener('click', () => {
     navigationButtonFirstSectionChoiceWrapper.style.display = "flex"
@@ -571,6 +628,20 @@ navigationButtonFirstSectionBigWrapper.addEventListener('mouseleave', () => {
     navigationButtonFirstSectionChoiceWrapper.style.opacity = ""
     setTimeout(() => {
         navigationButtonFirstSectionChoiceWrapper.style.display = "none"
+    }, 300);
+})
+
+navigationButtonFirstSectionWrapperSecond.addEventListener('click', () => {
+    navigationButtonFirstSectionChoiceWrapperSecond.style.display = "flex"
+    setTimeout(() => {
+        navigationButtonFirstSectionChoiceWrapperSecond.style.opacity = "1"
+    }, 1);
+})
+
+navigationButtonFirstSectionBigWrapperSecond.addEventListener('mouseleave', () => {
+    navigationButtonFirstSectionChoiceWrapperSecond.style.opacity = ""
+    setTimeout(() => {
+        navigationButtonFirstSectionChoiceWrapperSecond.style.display = "none"
     }, 300);
 })
 
@@ -737,6 +808,15 @@ startAnimation();
 let activAnimationThirdSection = false;
 const secondSectionTitleEng = document.getElementById("second-section-title-eng");
 const secondSectionTitleRus = document.getElementById("second-section-title-rus");
+const secondHeaderLangWrapper = document.getElementById("second-language-button-first-section-big-wrapper");
+const secondHeaderThemeWrapper = document.getElementById("second-theme-button-first-section-big-wrapper");
+const secondHeaderNavWrapper = document.getElementById("second-navigation-button-first-section-big-wrapper");
+
+const introArrowSecond = document.getElementById("second-navigation-button-first-section-choice-intro-arrow");
+const infoArrowSecond = document.getElementById("second-navigation-button-first-section-choice-info-arrow");
+const servicesArrowSecond = document.getElementById("second-navigation-button-first-section-choice-services-arrow");
+const contactsArrowSecond = document.getElementById("second-navigation-button-first-section-choice-contacts-arrow");
+const reviewsArrowSecond = document.getElementById("second-navigation-button-first-section-choice-reviews-arrow");
 
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
@@ -745,26 +825,19 @@ window.addEventListener('scroll', () => {
     if (!animationisActiv) {
         if (scrollY > window.innerHeight) {
             animationisActiv = true;
-            // secondHeader.style.display = "flex";
-            setTimeout(() => {
-                // secondHeader.style.opacity = "1";
-                animationisActiv = false;
-            }, 1);
+            secondHeader.style.display = "none";
+            animationisActiv = false;
+
         } else {
             animationisActiv = true;
-            // secondHeader.style.opacity = "0";
-            setTimeout(() => {
-                // secondHeader.style.display = "none";
-                animationisActiv = false;
-            }, 300);
+            secondHeaderLogoStart.style.opacity = "0";
+            secondHeaderLogoStart.style.display = "none";
+            animationisActiv = false;
         }
+        introArrowSecond.style.opacity = "0"
     }
     if (scrollY > width * 0.5625 && scrollY < width * 1.125) {
-        // secondHeaderNavInfo.classList.add("second-header-text-none-clickable");
-        // secondHeaderNavServices.classList = "second-header-text";
-        // secondHeaderNavContacts.classList = "second-header-text";
-        // secondHeaderNavReviews.classList = "second-header-text";
-
+        infoArrowSecond.style.opacity = "1";
         if (!animationIsGone) {
             if (selectLang === "eng") {
                 lightAnimation([33, 100, 66, 133, 86, 78, 189], 'letter-W');
@@ -797,11 +870,13 @@ window.addEventListener('scroll', () => {
             }, 200);
         };
 
+        secondHeaderLogoStart.style.opacity = "0.5";
+        secondHeaderLogoStart.style.display = "block";
+
+
     } else if (scrollY > width * 1.125 && scrollY < width * 1.965 && !activAnimationThirdSection) {
-        // secondHeaderNavInfo.classList = "second-header-text";
-        // secondHeaderNavServices.classList.add("second-header-text-none-clickable");
-        // secondHeaderNavContacts.classList = "second-header-text";
-        // secondHeaderNavReviews.classList = "second-header-text";
+        infoArrowSecond.style.opacity = "0";
+        servicesArrowSecond.style.opacity = "1";
         thirdSectionImage.style.transform = "rotate3d(0, 1, 0, 30deg)";
         thirdSectionText.style.transform = "rotate3d(0, 1, 0, 0deg)";
         thirdSectionText.style.opacity = "1";
@@ -823,63 +898,39 @@ window.addEventListener('scroll', () => {
                 }, 250);
             }, 300);
         }, 500);
-    } else if (scrollY > width * 1.965 && scrollY < width * 2.527) {
-        // secondHeaderNavInfo.classList = "second-header-text";
-        // secondHeaderNavServices.classList = "second-header-text";
-        // secondHeaderNavContacts.classList.add("second-header-text-none-clickable");
-        // secondHeaderNavReviews.classList = "second-header-text";
-    } else if (scrollY > width * 2.527 && scrollY < width * 3.089) {
-        // secondHeaderNavInfo.classList = "second-header-text";
-        // secondHeaderNavServices.classList = "second-header-text";
-        // secondHeaderNavContacts.classList = "second-header-text";
-        // secondHeaderNavReviews.classList.add("second-header-text-none-clickable");
+    } else if (scrollY > width * 1.965 && scrollY < width * 2.528) {
+        servicesArrowSecond.style.opacity = "0";
+        contactsArrowSecond.style.opacity = "1";
+    } else if (scrollY > width * 2.528 && scrollY < width * 4) {
+        contactsArrowSecond.style.opacity = "0";
+        reviewsArrowSecond.style.opacity = "1";
     }
-
 });
 
-// secondHeaderLogoHover.addEventListener('click', () => {
-//     secondHeaderNavigation.style.pointerEvents = "all";
-//     secondHeaderLogoHover.style.opacity = "0";
-//     secondHeaderLogoActiv.style.opacity = "1";
-//     secondHeaderNavMain.style.opacity = "1";
-//     secondHeaderNavMain.style.pointerEvents = "all";
-//     secondHeaderNavInfo.style.opacity = "1";
-//     secondHeaderNavInfo.style.pointerEvents = "all";
-//     secondHeaderNavServices.style.opacity = "1";
-//     secondHeaderNavServices.style.pointerEvents = "all";
-//     secondHeaderNavContacts.style.opacity = "1";
-//     secondHeaderNavContacts.style.pointerEvents = "all";
-//     secondHeaderNavReviews.style.opacity = "1";
-//     secondHeaderNavReviews.style.pointerEvents = "all";
-//     secondHeaderLanguageButton.style.opacity = "1";
-//     secondHeaderLanguageButton.style.pointerEvents = "all";
-//     secondHeaderDividingLine.style.opacity = "1";
-//     secondHeaderDividingLine.style.pointerEvents = "all";
-// });
+secondHeaderLogoStart.addEventListener('click', () => {
+    secondHeaderLangWrapper.style.opacity = "1";
+    secondHeaderThemeWrapper.style.opacity = "1";
+    secondHeaderNavWrapper.style.opacity = "1";
+    secondHeader.style.display = "block";
+    setTimeout(() => {
+        secondHeader.style.opacity = "1";
+    }, 300);
+});
 
-// secondHeader.addEventListener('mouseleave', () => {
-//     secondHeaderNavigation.style.pointerEvents = "";
-//     secondHeaderLogoHover.style.opacity = "0.5";
-//     secondHeaderLogoActiv.style.opacity = "0";
-//     secondHeaderNavMain.style.opacity = "0";
-//     secondHeaderNavMain.style.pointerEvents = "none";
-//     secondHeaderNavInfo.style.opacity = "0";
-//     secondHeaderNavInfo.style.pointerEvents = "none";
-//     secondHeaderNavServices.style.opacity = "0";
-//     secondHeaderNavServices.style.pointerEvents = "none";
-//     secondHeaderNavContacts.style.opacity = "0";
-//     secondHeaderNavContacts.style.pointerEvents = "none";
-//     secondHeaderNavReviews.style.opacity = "0";
-//     secondHeaderNavReviews.style.pointerEvents = "none";
-//     secondHeaderLanguageButton.style.opacity = "0";
-//     secondHeaderLanguageButton.style.pointerEvents = "none";
-//     secondHeaderDividingLine.style.opacity = "0";
-//     secondHeaderDividingLine.style.pointerEvents = "none";
-// });
+secondHeader.addEventListener('mouseleave', () => {
+    secondHeaderLangWrapper.style.opacity = "";
+    secondHeaderThemeWrapper.style.opacity = "";
+    secondHeaderNavWrapper.style.opacity = "";
+    secondHeaderLogoStart.style.opacity = "0.5";
+    secondHeader.style.opacity = "";
+    setTimeout(() => {
+        secondHeader.style.display = "none";
+    }, 300);
+});
 
-// secondHeaderLogoHover.addEventListener('mouseenter', () => {
-//     secondHeaderLogoHover.style.opacity = "1";
-// });
+secondHeaderLogoStart.addEventListener('mouseenter', () => {
+    secondHeaderLogoStart.style.opacity = "1";
+});
 
 const lightAnimation = (data, id) => {
     const letter = document.getElementById(id);
@@ -968,8 +1019,6 @@ thirdSectionButtonMore.addEventListener('click', () => {
 let oldActivService = null;
 let activAnmimationTitle = true;
 const buttonMoreTitleSvgBlock = document.getElementById("button-more-title-svg-block");
-const buttonMoreTitleSvg = document.getElementById("button-more-title-svg");
-const buttonMoreTitleSvgPath = document.getElementById("button-more-title-svg-path");
 
 buttonMoreTitleSvgBlock.addEventListener('click', () => {
     if (oldActivService !== null) {
@@ -1671,49 +1720,77 @@ headerNavReviews.addEventListener('mouseenter', () => {
 headerNavReviews.addEventListener('mouseleave', () => {
     reviewsArrow.style.opacity = "";
 })
-// secondHeaderNavMain.addEventListener('click', () => {
-//     window.scrollTo({
-//         top: window.innerWidth * -0.1,
-//         behavior: 'smooth'
-//     });
-// })
-
-// secondHeaderNavInfo.addEventListener('click', () => {
-//     window.scrollTo({
-//         top: window.innerWidth * 0.563,
-//         behavior: 'smooth'
-//     });
-// })
 
 
-// secondHeaderNavServices.addEventListener('click', () => {
-//     window.scrollTo({
-//         top: window.innerWidth * 1.13,
-//         behavior: 'smooth'
-//     });
-// })
+headerNavIntroSecond.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 0,
+        behavior: 'smooth'
+    });
+})
 
-// secondHeaderNavContacts.addEventListener('click', () => {
-//     window.scrollTo({
-//         top: window.innerWidth * 1.97,
-//         behavior: 'smooth'
-//     });
-// })
+headerNavInfoSecond.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 0.563,
+        behavior: 'smooth'
+    });
+})
 
-// secondHeaderNavReviews.addEventListener('click', () => {
-//     window.scrollTo({
-//         top: window.innerWidth * 2.528,
-//         behavior: 'smooth'
-//     });
-// })
+headerNavInfoSecond.addEventListener('mouseenter', () => {
+    infoArrowSecond.style.opacity = "1";
+})
+
+headerNavInfoSecond.addEventListener('mouseleave', () => {
+    infoArrowSecond.style.opacity = "";
+})
 
 
 
-// secondHeaderLanguageButton.addEventListener('click', () => {
-//     switchLocalization()
-//     refreshDataForLocalization()
+headerNavServicesSecond.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 1.13,
+        behavior: 'smooth'
+    });
+})
 
-// });
+headerNavServicesSecond.addEventListener('mouseenter', () => {
+    servicesArrowSecond.style.opacity = "1";
+})
+
+headerNavServicesSecond.addEventListener('mouseleave', () => {
+    servicesArrowSecond.style.opacity = "";
+})
+
+
+headerNavContactsSecond.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 1.97,
+        behavior: 'smooth'
+    });
+})
+
+headerNavContactsSecond.addEventListener('mouseenter', () => {
+    contactsArrowSecond.style.opacity = "1";
+})
+
+headerNavContactsSecond.addEventListener('mouseleave', () => {
+    contactsArrowSecond.style.opacity = "";
+})
+
+
+headerNavReviewsSecond.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 2.528,
+        behavior: 'smooth'
+    });
+})
+headerNavReviewsSecond.addEventListener('mouseenter', () => {
+    reviewsArrowSecond.style.opacity = "1";
+})
+
+headerNavReviewsSecond.addEventListener('mouseleave', () => {
+    reviewsArrowSecond.style.opacity = "";
+})
 
 const uploadLinks = () => {
     const alternativeContactPhone = document.getElementById("alternative-contact-phone");
@@ -1733,7 +1810,7 @@ submitButtonFourthSection.addEventListener('click', () => {
     Email: ${inputEmail.value}, 
     Service: ${choiceOfServicePlaceholder.textContent},
     Text: ${textarea.value}`
-    }; 
+    };
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";
         setTimeout(() => {
