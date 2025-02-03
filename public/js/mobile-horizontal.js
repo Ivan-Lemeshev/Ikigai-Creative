@@ -1013,3 +1013,28 @@ mhSubmitButton.addEventListener('click', () => {
         }, 300);
     }
 })
+
+const uploadLinks = () => {
+    const alternativeContactPhone = document.getElementById("mh-five-section-contacts-phone");
+    alternativeContactPhone.addEventListener('click', () => {
+        window.location.href = `tel:${dataContats.Phone}`;
+    })
+
+    const alternativeContactEmail = document.getElementById("mh-five-section-contacts-email");
+    alternativeContactEmail.addEventListener('click', () => {
+        window.location.href = `email:${dataContats.Email}`;
+    })
+
+    const alternativeContactFacebook = document.getElementById("mh-five-section-contacts-facebook");
+    alternativeContactFacebook.addEventListener('click', () => {
+        window.location.href = `${dataContats.Facebook}`;
+    })
+
+    const alternativeContactTelegram = document.getElementById("mh-five-section-contacts-telegram");
+    alternativeContactTelegram.addEventListener('click', () => {
+        window.location.href = `${dataContats.Telegram}`;
+    })
+
+}
+
+uploadLinks()

@@ -352,9 +352,6 @@ const refreshTheme = () => {
     const alternativeContactEmailSvg = document.getElementById("alternative-contact-email-svg");
     const alternativeContactFacebookSvg = document.getElementById("alternative-contact-facebook-svg");
     const alternativeContactTelegramSvg = document.getElementById("alternative-contact-telegram-svg");
-    const alternativeContactTwitterSvg = document.getElementById("alternative-contact-twitter-svg");
-    const alternativeContactVkSvg = document.getElementById("alternative-contact-vk-svg");
-    const alternativeContactWhatsappSvg = document.getElementById("alternative-contact-whatsapp-svg");
     const reviewsSvg = document.getElementById("reviews-svg");
     const reviewsArrowLeftPath = document.getElementById("reviews-arrow-left-path");
     const reviewsArrowRightPath = document.getElementById("reviews-arrow-right-path");
@@ -408,9 +405,6 @@ const refreshTheme = () => {
         alternativeContactEmailSvg.classList = "stroke";
         alternativeContactFacebookSvg.classList = "fill";
         alternativeContactTelegramSvg.classList = "fill";
-        alternativeContactTwitterSvg.classList = "stroke";
-        alternativeContactVkSvg.classList = "stroke";
-        alternativeContactWhatsappSvg.classList = "stroke";
         document.documentElement.style.setProperty('--svgColor', '#2E2E2E');
         thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, rgba(46, 46, 46, 0.3) 25%, rgba(46, 46, 46, 0) 100%)";
     } else {
@@ -451,9 +445,6 @@ const refreshTheme = () => {
         alternativeContactEmailSvg.classList = "stroke-dark";
         alternativeContactFacebookSvg.classList = "fill-dark";
         alternativeContactTelegramSvg.classList = "fill-dark";
-        alternativeContactTwitterSvg.classList = "stroke-dark";
-        alternativeContactVkSvg.classList = "stroke-dark";
-        alternativeContactWhatsappSvg.classList = "stroke-dark";
         document.documentElement.style.setProperty('--svgColor', '#F3F3F3');
         sendToApplicationMainContent.style.border = " 0.05208vw solid var(--ltSeparationLine)";
     }
@@ -1797,6 +1788,22 @@ const uploadLinks = () => {
     alternativeContactPhone.addEventListener('click', () => {
         window.location.href = `tel:${dataContats.Phone}`;
     })
+
+    const alternativeContactEmail = document.getElementById("alternative-contact-email");
+    alternativeContactEmail.addEventListener('click', () => {
+        window.location.href = `email:${dataContats.Email}`;
+    })
+
+    const alternativeContactFacebook = document.getElementById("alternative-contact-facebook");
+    alternativeContactFacebook.addEventListener('click', () => {
+        window.location.href = `${dataContats.Facebook}`;
+    })
+
+    const alternativeContactTelegram = document.getElementById("alternative-contact-telegram");
+    alternativeContactTelegram.addEventListener('click', () => {
+        window.location.href = `${dataContats.Telegram}`;
+    })
+
 }
 
 uploadLinks()

@@ -1276,3 +1276,27 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
     }
 })
 
+const uploadLinks = () => {
+    const alternativeContactPhone = document.getElementById("th-four-section-contacts-phone");
+    alternativeContactPhone.addEventListener('click', () => {
+        window.location.href = `tel:${dataContats.Phone}`;
+    })
+
+    const alternativeContactEmail = document.getElementById("th-four-section-contacts-email");
+    alternativeContactEmail.addEventListener('click', () => {
+        window.location.href = `email:${dataContats.Email}`;
+    })
+
+    const alternativeContactFacebook = document.getElementById("th-four-section-contacts-facebook");
+    alternativeContactFacebook.addEventListener('click', () => {
+        window.location.href = `${dataContats.Facebook}`;
+    })
+
+    const alternativeContactTelegram = document.getElementById("th-four-section-contacts-telegram");
+    alternativeContactTelegram.addEventListener('click', () => {
+        window.location.href = `${dataContats.Telegram}`;
+    })
+
+}
+
+uploadLinks()

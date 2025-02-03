@@ -354,6 +354,7 @@ const mvRefreshTheme = () => {
         dropListActivCircle5.style.border = "0.24875621890547264vw solid var(--ltElementBackground)";
         mvTextarea.classList = "mv-textarea-dark";
         mainBlockAllText.style.border = "0.24875621890547264vw solid rgba(214, 214, 214, 0.5)";
+        document.documentElement.style.setProperty('--svgColor', '#F3F3F3');
 
     } else {
         mvLight.textContent = "Light"
@@ -382,6 +383,7 @@ const mvRefreshTheme = () => {
         dropListActivCircle5.style.border = "";
         mvTextarea.classList = "mv-textarea-light";
         mainBlockAllText.style.border = "";
+        document.documentElement.style.setProperty('--svgColor', '#2E2E2E');
 
     }
 
@@ -1121,3 +1123,28 @@ mvSubmitButton.addEventListener('click', () => {
     }
 })
 
+
+const uploadLinks = () => {
+    const alternativeContactPhone = document.getElementById("mv-fifvth-section-second-content-svg-phone");
+    alternativeContactPhone.addEventListener('click', () => {
+        window.location.href = `tel:${dataContats.Phone}`;
+    })
+
+    const alternativeContactEmail = document.getElementById("mv-fifvth-section-second-content-svg-email");
+    alternativeContactEmail.addEventListener('click', () => {
+        window.location.href = `email:${dataContats.Email}`;
+    })
+
+    const alternativeContactFacebook = document.getElementById("mv-fifvth-section-second-content-svg-facebook");
+    alternativeContactFacebook.addEventListener('click', () => {
+        window.location.href = `${dataContats.Facebook}`;
+    })
+
+    const alternativeContactTelegram = document.getElementById("mv-fifvth-section-second-content-svg-telegram");
+    alternativeContactTelegram.addEventListener('click', () => {
+        window.location.href = `${dataContats.Telegram}`;
+    })
+
+}
+
+uploadLinks()

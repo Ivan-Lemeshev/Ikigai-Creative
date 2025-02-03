@@ -1016,38 +1016,23 @@
 
         &>#mv-fifvth-section-second-content-svg-phone {
             top: 2.9850746268656714vw;
-            left: 4.975124378109453vw;
+            left: 12.189054726368159vw;
         }
 
         &>#mv-fifvth-section-second-content-svg-email {
             position: absolute;
             top: 2.9850746268656714vw;
-            left: 19.402985074626866vw;
+            left: 26.616915422885572vw;
         }
 
         &>#mv-fifvth-section-second-content-svg-facebook {
             top: 2.9850746268656714vw;
-            left: 33.83084577114428vw;
+            left: 41.04477611940299vw;
         }
 
         &>#mv-fifvth-section-second-content-svg-telegram {
             top: 2.9850746268656714vw;
-            left: 48.258706467661696vw;
-        }
-
-        &>#mv-fifvth-section-second-content-svg-x {
-            top: 2.9850746268656714vw;
-            right: 4.975124378109453vw;
-        }
-
-        &>#mv-fifvth-section-second-content-svg-whatsapp {
-            bottom: 2.4875621890547266vw;
-            left: 4.975124378109453vw;
-        }
-
-        &>#mv-fifvth-section-second-content-svg-vk {
-            bottom: 2.4875621890547266vw;
-            left: 19.402985074626866vw;
+            left: 55.472636815920396vw;
         }
 
         &>#mv-fifvth-section-second-content-logo {
@@ -1055,7 +1040,7 @@
             height: 5.721393034825871vw;
             position: absolute;
             bottom: 3.233830845771144vw;
-            right: 4.975124378109453vw;
+            right: 19.402985074626866vw;
             color: var(--dtMain);
             font-weight: 300;
             font-size: 3.482587064676617vw;
