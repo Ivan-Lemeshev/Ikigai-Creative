@@ -1321,8 +1321,8 @@ inputPhone.addEventListener('input', () => {
 inputEmail.addEventListener('input', () => {
     const inputValue = inputEmail.value;
     let editValue = inputValue.replace(/[^a-zA-Z0-9@_\.-]/g, '');
-    if (editValue.length > 20) {
-        editValue = editValue.slice(0, 20);
+    if (editValue.length > 30) {
+        editValue = editValue.slice(0, 30);
     }
     if (editValue.length > 0) {
         correctImgEmail.style.opacity = "1";
