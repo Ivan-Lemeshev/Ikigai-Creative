@@ -1,3 +1,3 @@
-const url = 'http://localhost:3000/api/sendRequest'; // Замените на ваш URL
+const url = 'http://ikigaiicreative.com/api/sendRequest'; // Замените на ваш URL
 
 export default url
