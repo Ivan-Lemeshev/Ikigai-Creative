@@ -923,6 +923,7 @@
             word-wrap: break-word;
             line-height: 250%;
             overflow-y: hidden;
+            letter-spacing: 0.1em;
 
             &::placeholder {
                 font-size: 4.975124378109453vw;
