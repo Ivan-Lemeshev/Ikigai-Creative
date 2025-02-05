@@ -1320,18 +1320,19 @@ inputPhone.addEventListener('input', () => {
 
 inputEmail.addEventListener('input', () => {
     const inputValue = inputEmail.value;
-    let editValue = inputValue.replace(/[^a-zA-Z1-9@_\.-]/g, '');
+    let editValue = inputValue.replace(/[^a-zA-Z0-9@_\.-]/g, '');
     if (editValue.length > 20) {
         editValue = editValue.slice(0, 20);
     }
     if (editValue.length > 0) {
         correctImgEmail.style.opacity = "1";
         correctImgEmail.style.display = "block";
+        errorImgEmail.style.opacity = "";
+        errorImgEmail.style.display = "";
         allInputsHave();
     } else {
         correctImgEmail.style.opacity = "";
         correctImgEmail.style.display = "";
-
         voidInput();
     }
     inputEmail.value = editValue;
