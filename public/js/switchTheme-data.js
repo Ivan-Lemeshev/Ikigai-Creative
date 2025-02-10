@@ -3381,45 +3381,6 @@ const themeWrapper = {
         }
     },
 
-    "alternative-contact-twitter": {
-        styles: {
-            light: {
-                color: "var(--ltText)",
-                background: ``
-            },
-            dark: {
-                color: "var(--dtText)",
-                background: ``
-            }
-        }
-    },
-
-    "alternative-contact-vk": {
-        styles: {
-            light: {
-                color: "var(--ltText)",
-                background: ``
-            },
-            dark: {
-                color: "var(--dtText)",
-                background: ``
-            }
-        }
-    },
-
-    "alternative-contact-whatsapp": {
-        styles: {
-            light: {
-                color: "var(--ltText)",
-                background: ``
-            },
-            dark: {
-                color: "var(--dtText)",
-                background: ``
-            }
-        }
-    },
-
     "footer": {
         styles: {
             light: {

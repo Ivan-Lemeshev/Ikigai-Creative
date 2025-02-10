@@ -248,44 +248,25 @@
 
     &>.mv-nav-img {
         object-fit: contain;
-        width: 12.437810945273633vw;
-        height: 5.720823798627003dvh;
+        width: 14.925373134328357vw;
         position: absolute;
+        bottom: 10.869565217391305dvh;
     }
 
     &>#mv-nav-img-phone {
-        bottom: 12.013729977116705dvh;
         left: 4.975124378109453vw;
     }
 
     &>#mv-nav-img-email {
-        bottom: 12.013729977116705dvh;
-        left: 24.191542288557212vw;
+        left: 29.850746268656714vw;
     }
 
     &>#mv-nav-img-facebook {
-        bottom: 12.013729977116705dvh;
-        left: 43.407960199004975vw;
+        left: 54.72636815920397vw;
     }
 
     &>#mv-nav-img-telegram {
-        bottom: 12.013729977116705dvh;
-        right: 24.937810945273633vw;
-    }
-
-    &>#mv-nav-img-x {
-        bottom: 12.013729977116705dvh;
-        right: 5.721393034825871vw;
-    }
-
-    &>#mv-nav-img-vk {
-        bottom: 3.203661327231121dvh;
-        left: 33.83084577114428vw;
-    }
-
-    &>#mv-nav-img-whatsapp {
-        bottom: 3.203661327231121dvh;
-        right: 34.32835820895522vw;
+        left: 79.60199004975125vw;
     }
 }
 
