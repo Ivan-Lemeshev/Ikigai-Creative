@@ -1807,6 +1807,7 @@ const uploadLinks = () => {
 
 }
 
+
 uploadLinks()
 
 submitButtonFourthSection.addEventListener('click', () => {
@@ -1817,7 +1818,11 @@ submitButtonFourthSection.addEventListener('click', () => {
     Phone: ${inputPhone.value}, 
     Email: ${inputEmail.value}, 
     Service: ${choiceOfServicePlaceholder.textContent},
-    Text: ${textarea.value}`
+    Text: ${textarea.value}`,
+        service: `${choiceOfServicePlaceholder.textContent}`,
+        price: `${arrayDataOfService[arrayDataOfService.map((category) => category.title[selectLang]).findIndex(el => el === choiceOfServicePlaceholder.textContent)].prices[0].cost}`
+
+
     };
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";
