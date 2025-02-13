@@ -1082,8 +1082,11 @@ tvSubmitButtonFourthSection.addEventListener('click', () => {
     Phone: ${tvInputPhone.value}, 
     Email: ${tvInputEmail.value}, 
     Service: ${tvChoiceOfServicePlaceholder.textContent},
-    Text: ${tvTextarea.value}`
-    }; 
+    Text: ${tvTextarea.value}`,
+        service: `${tvChoiceOfServicePlaceholder.textContent}`,
+        price: arrayPriceList[arrayPriceList.map((category) => category.title[tvSelectLang]).findIndex(el => el === tvChoiceOfServicePlaceholder.textContent)].prices[0].cost * 100
+
+    };
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";
         setTimeout(() => {
@@ -1098,6 +1101,14 @@ tvSubmitButtonFourthSection.addEventListener('click', () => {
                         },
                         body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
                     })
+
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.url) {
+                                window.location.href = data.url;  // Переход на страницу оплаты
+                            }
+                        })
+
                         .then(() => {
                             if (tvSelectLang === "eng") {
                                 sendToApplicationMainContentTitle.textContent = "Successfully";
@@ -1113,7 +1124,7 @@ tvSubmitButtonFourthSection.addEventListener('click', () => {
                             setTimeout(() => {
                                 sendToApplicationMainContent.style.opacity = "1"
                             }, 300);
-                        }) //если все хорошо
+                        }) 
 
                         .catch(() => {
                             if (tvSelectLang === "eng") {
@@ -1131,7 +1142,7 @@ tvSubmitButtonFourthSection.addEventListener('click', () => {
                             setTimeout(() => {
                                 sendToApplicationMainContent.style.opacity = "1"
                             }, 300);
-                        }) // если все плохо
+                        }) 
 
                     setTimeout(() => {
                         sendToApplicationWrapper.style.opacity = "";

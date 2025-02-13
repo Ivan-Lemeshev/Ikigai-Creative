@@ -1810,6 +1810,40 @@ const uploadLinks = () => {
 
 uploadLinks()
 
+const choiceServecesTitleWrapper = document.getElementById("choice-serveces-title-wrapper");
+const choiceServecesTitleText = document.getElementById("choice-serveces-title");
+const choiceServecesSquare = document.getElementById("choice-serveces-square");
+const choiceServecesCheckbox = document.getElementById("choice-serveces-checkbox");
+let checkbox = false;
+
+choiceServecesTitleWrapper.addEventListener('click', () => {
+    if (!checkbox) {
+        checkbox = true;
+        choiceServecesTitleText.style.color = "var(--success)";
+        choiceServecesSquare.style.opacity = "0";
+        setTimeout(() => {
+            choiceServecesSquare.style.display = "none";
+            choiceServecesCheckbox.style.display = "block";
+            choiceServecesCheckbox.style.opacity = "1";
+        }, 300);
+    } else {
+        checkbox = false;
+        if (selectTheme === "light") {
+            choiceServecesTitleText.style.color = "var(--ltText)";
+        } else {
+            choiceServecesTitleText.style.color = "var(--dtText)";
+        }
+
+        choiceServecesCheckbox.style.opacity = "";
+        setTimeout(() => {
+            choiceServecesCheckbox.style.display = "";
+            choiceServecesSquare.style.display = "";
+            choiceServecesSquare.style.opacity = "";
+        }, 300);
+    }
+})
+
+
 submitButtonFourthSection.addEventListener('click', () => {
     const data = {
         text: `
@@ -1818,11 +1852,11 @@ submitButtonFourthSection.addEventListener('click', () => {
     Phone: ${inputPhone.value}, 
     Email: ${inputEmail.value}, 
     Service: ${choiceOfServicePlaceholder.textContent},
+    HasPrepaymant: ${checkbox},
     Text: ${textarea.value}`,
+        hasPrepaymant: checkbox,
         service: `${choiceOfServicePlaceholder.textContent}`,
-        price: `${arrayDataOfService[arrayDataOfService.map((category) => category.title[selectLang]).findIndex(el => el === choiceOfServicePlaceholder.textContent)].prices[0].cost}`
-
-
+        price: arrayDataOfService[arrayDataOfService.map((category) => category.title[selectLang]).findIndex(el => el === choiceOfServicePlaceholder.textContent)].prices[0].cost * 100
     };
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";
@@ -1838,6 +1872,12 @@ submitButtonFourthSection.addEventListener('click', () => {
                         },
                         body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
                     })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.url) {
+                                window.location.href = data.url;  // Переход на страницу оплаты
+                            }
+                        })
                         .then(() => {
                             if (selectLang === "eng") {
                                 sendToApplicationMainContentTitle.textContent = "Successfully";
@@ -1854,6 +1894,7 @@ submitButtonFourthSection.addEventListener('click', () => {
                                 sendToApplicationMainContent.style.opacity = "1"
                             }, 300);
                         })
+
 
                         .catch(() => {
                             if (selectLang === "eng") {
@@ -1894,4 +1935,6 @@ submitButtonFourthSection.addEventListener('click', () => {
             }, 3000);
         }, 300);
     }
+
+
 })

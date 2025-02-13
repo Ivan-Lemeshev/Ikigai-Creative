@@ -940,7 +940,9 @@ mhSubmitButton.addEventListener('click', () => {
     Phone: ${mhInputPhone.value}, 
     Email: ${mhInputEmail.value}, 
     Service: ${titleInterestingName.textContent},
-    Text: ${mhTextarea.value}`
+    Text: ${mhTextarea.value}`,
+        service: `${titleInterestingName.textContent}`,
+        price: arrayPriceList[arrayPriceList.map((category) => category.title[mhSelectLang]).findIndex(el => el === titleInterestingName.textContent)].prices[0].cost * 100
     };
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";
@@ -956,6 +958,14 @@ mhSubmitButton.addEventListener('click', () => {
                         },
                         body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
                     })
+
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.url) {
+                                window.location.href = data.url;  // Переход на страницу оплаты
+                            }
+                        })
+
                         .then(() => {
                             if (mhSelectLang === "eng") {
                                 sendToApplicationMainContentTitle.textContent = "Successfully";

@@ -20,30 +20,32 @@ app.get('/', (req, res) => {
 
 app.post('/api/sendRequest', async (req, res) => {
   // try {
-  //   res.status(200).send(result);
   // } catch (error) {
   //   res.status(500).send('Ошибка при отправке почты: ' + error.message);
   //   console.log(error.message)
   // }
 
   try {
-    const { text, service, price } = req.body.data;
+    const { text, service, price, hasPrepaymant } = req.body.data;
     const result = await mailer.sendEmail(text);
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
-      line_items: [{
-        price_data: {
-          currency: 'gbp',
-          product_data: { name: service },
-          unit_amount: price,
-        },
-        quantity: 1,
-      }],
-      mode: 'payment',
-      success_url: 'https://ikigaiicreative.com/',
-      cancel_url: 'https://ikigaiicreative.com/',
-    });
-    res.json({ url: session.url });
+    if (hasPrepaymant) {
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ['card'],
+        line_items: [{
+          price_data: {
+            currency: 'gbp',
+            product_data: { name: service },
+            unit_amount: price,
+          },
+          quantity: 1,
+        }],
+        mode: 'payment',
+        success_url: 'https://ikigaiicreative.com/',
+        cancel_url: 'https://ikigaiicreative.com/',
+      });
+      res.json({ url: session.url });
+    }
+    res.status(200).send(result);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

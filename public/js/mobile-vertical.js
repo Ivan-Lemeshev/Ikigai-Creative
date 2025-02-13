@@ -814,7 +814,7 @@ mvSubmitButton.addEventListener('click', (event) => {
         mvSubmitButton.style.border = "0.24875621890547264vw solid var(--bad)";
         mvSubmitButton.style.background = "rgba(236, 82, 0, 0.05)";
         mvSubmitButton.style.color = "var(--bad)";
-    } 
+    }
 
     if (mvActivNumberSave === null) {
         mvFifvthSectionMainContentSubtitle.textContent = "Choose a service:"
@@ -1049,8 +1049,11 @@ mvSubmitButton.addEventListener('click', () => {
     Phone: ${mvInputPhone.value}, 
     Email: ${mvInputEmail.value}, 
     Service: ${arrayPriceList[mvActivNumber].title[mvSelectLang]},
-    Text: ${mvTextarea.value}`
-    }; 
+    Text: ${mvTextarea.value}`,
+        service: `${arrayPriceList[mvActivNumber].title[mvSelectLang]}`,
+        price: arrayPriceList[arrayPriceList.map((category) => category.title[mvSelectLang]).findIndex(el => el === `${arrayPriceList[mvActivNumber].title[mvSelectLang]}`.textContent)].prices[0].cost * 100
+
+    };
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";
         setTimeout(() => {
@@ -1065,6 +1068,14 @@ mvSubmitButton.addEventListener('click', () => {
                         },
                         body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
                     })
+
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.url) {
+                                window.location.href = data.url;  // Переход на страницу оплаты
+                            }
+                        })
+                        
                         .then(() => {
                             if (mvSelectLang === "eng") {
                                 sendToApplicationMainContentTitle.textContent = "Successfully";

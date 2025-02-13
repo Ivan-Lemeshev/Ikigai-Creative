@@ -116,8 +116,8 @@ const localizationWrapper = {
     },
 
     "choice-serveces-title": {
-        rus: "Заинтересовавшая услуга:",
-        eng: "The service you're interested in:",
+        rus: "Минимальная предоплата",
+        eng: "Minimum prepayment",
     },
 
     "choice-of-service-placeholder": {
