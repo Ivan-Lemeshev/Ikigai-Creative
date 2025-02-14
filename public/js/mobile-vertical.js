@@ -735,8 +735,8 @@ mvInputPhone.addEventListener('input', () => {
     }
     const inputValue = mvInputPhone.value;
     let editValue = inputValue.replace(/[^0-9+]/g, '');
-    if (editValue.length > 12) {
-        editValue = editValue.slice(0, 12);
+    if (editValue.length > 15) {
+        editValue = editValue.slice(0, 15);
     }
     if (editValue.length > 0) {
         mvAllInputsHave();
@@ -758,8 +758,8 @@ mvInputEmail.addEventListener('input', () => {
     }
     const inputValue = mvInputEmail.value;
     let editValue = inputValue.replace(/[^a-zA-Z1-9@_\.-]/g, '');
-    if (editValue.length > 30) {
-        editValue = editValue.slice(0, 30);
+    if (editValue.length > 40) {
+        editValue = editValue.slice(0, 40);
     }
     if (editValue.length > 0) {
         mvAllInputsHave();
