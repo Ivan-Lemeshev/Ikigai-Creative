@@ -537,8 +537,8 @@ const localizationWrapper = {
     },
 
     "th-choice-serveces-title": {
-        rus: "Заинтересовавшая вас услуга:",
-        eng: "The service you're interested in:",
+        rus: "Минимальная предоплата",
+        eng: "Minimum prepayment",
     },
 
     "th-send-form-submit": {
@@ -662,8 +662,8 @@ const localizationWrapper = {
     },
 
     "tv-choice-serveces-title": {
-        rus: "Заинтересовавшая вас услуга:",
-        eng: "The service you're interested in:",       
+        rus: "Минимальная предоплата",
+        eng: "Minimum prepayment",       
     },
 
     "tv-choice-of-service-placeholder": {

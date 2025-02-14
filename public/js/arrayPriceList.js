@@ -35,7 +35,7 @@ const arrayPriceList = [
                     eng: "Web Design",
                     rus: "Дизайн сайтов"
                 },
-                cost: 500
+                cost: 1
             },
 
             {

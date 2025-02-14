@@ -15,6 +15,7 @@ const tvNavigationBlockItem2 = document.getElementById("tv-navigation-block-item
 const tvNavigationBlockItem3 = document.getElementById("tv-navigation-block-item-3");
 const tvNavigationBlockItem4 = document.getElementById("tv-navigation-block-item-4");
 const tvNavigationBlockTitleXMark = document.getElementById("tv-navigation-block-title-x-mark");
+const choiceServecesSquare = document.getElementById("tv-choice-serveces-square");
 
 tvNavButton.addEventListener('click', () => {
     tvNavigationBlock.style.display = "block";
@@ -232,6 +233,7 @@ const tvRefreshTheme = () => {
         tvPlaceholderTextarea.style.borderBottom = "0.06477vw solid var(--ltSeparationLine)";
         tvFourthSectionChoiceOfService.style.borderBottom = "0.06477vw solid var(--ltSeparationLine)";
         tvFourSectionContacts.style.border = "0.06477vw solid var(--ltSeparationLine)";
+        choiceServecesSquare.style.border = "0.12953vw var(--ltSeparationLine) solid";
 
     } else {
         tvNavigationBlockThemeButtonRect.style.stroke = "";
@@ -255,6 +257,7 @@ const tvRefreshTheme = () => {
         tvPlaceholderTextarea.style.borderBottom = "";
         tvFourthSectionChoiceOfService.style.borderBottom = "";
         tvFourSectionContacts.style.border = "";
+        choiceServecesSquare.style.border = "";
     }
 }
 
@@ -1072,6 +1075,38 @@ const sendToApplicationMainContentImg = document.getElementById("tv-send-to-appl
 const sendToApplicationMainContentImgSecces = document.getElementById("tv-send-to-application-main-content-img-secces");
 const sendToApplicationMainContentImgWrong = document.getElementById("tv-send-to-application-main-content-img-wrong");
 
+const choiceServecesTitleWrapper = document.getElementById("tv-choice-serveces-title-wrapper");
+const choiceServecesTitleText = document.getElementById("tv-choice-serveces-title");
+const choiceServecesCheckbox = document.getElementById("tv-choice-serveces-checkbox");
+let checkbox = false;
+
+choiceServecesTitleWrapper.addEventListener('click', () => {
+    if (!checkbox) {
+        checkbox = true;
+        choiceServecesTitleText.style.color = "var(--success)";
+        choiceServecesSquare.style.opacity = "0";
+        setTimeout(() => {
+            choiceServecesSquare.style.display = "none";
+            choiceServecesCheckbox.style.display = "block";
+            choiceServecesCheckbox.style.opacity = "1";
+        }, 300);
+    } else {
+        checkbox = false;
+        if (tvSelectTheme === "light") {
+            choiceServecesTitleText.style.color = "var(--ltText)";
+        } else {
+            choiceServecesTitleText.style.color = "var(--dtText)";
+        }
+
+        choiceServecesCheckbox.style.opacity = "";
+        setTimeout(() => {
+            choiceServecesCheckbox.style.display = "";
+            choiceServecesSquare.style.display = "";
+            choiceServecesSquare.style.opacity = "";
+        }, 300);
+    }
+})
+
 
 
 tvSubmitButtonFourthSection.addEventListener('click', () => {
@@ -1083,6 +1118,7 @@ tvSubmitButtonFourthSection.addEventListener('click', () => {
     Email: ${tvInputEmail.value}, 
     Service: ${tvChoiceOfServicePlaceholder.textContent},
     Text: ${tvTextarea.value}`,
+        hasPrepaymant: checkbox,
         service: `${tvChoiceOfServicePlaceholder.textContent}`,
         price: arrayPriceList[arrayPriceList.map((category) => category.title[tvSelectLang]).findIndex(el => el === tvChoiceOfServicePlaceholder.textContent)].prices[0].cost * 100
 
@@ -1124,7 +1160,7 @@ tvSubmitButtonFourthSection.addEventListener('click', () => {
                             setTimeout(() => {
                                 sendToApplicationMainContent.style.opacity = "1"
                             }, 300);
-                        }) 
+                        })
 
                         .catch(() => {
                             if (tvSelectLang === "eng") {
@@ -1142,7 +1178,7 @@ tvSubmitButtonFourthSection.addEventListener('click', () => {
                             setTimeout(() => {
                                 sendToApplicationMainContent.style.opacity = "1"
                             }, 300);
-                        }) 
+                        })
 
                     setTimeout(() => {
                         sendToApplicationWrapper.style.opacity = "";

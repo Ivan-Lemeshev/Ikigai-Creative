@@ -2194,32 +2194,6 @@ const themeWrapper = {
         }
     },
 
-    "mv-textarea-line-3": {
-        styles: {
-            light: {
-                color: "",
-                background: `var(--dtSeparationLine)`
-            },
-            dark: {
-                color: "",
-                background: `var(--ltSeparationLine)`
-            }
-        }
-    },
-
-    "mv-textarea-line-4": {
-        styles: {
-            light: {
-                color: "",
-                background: `var(--dtSeparationLine)`
-            },
-            dark: {
-                color: "",
-                background: `var(--ltSeparationLine)`
-            }
-        }
-    },
-
     "mv-fifvth-section-second-content-logo": {
         styles: {
             light: {

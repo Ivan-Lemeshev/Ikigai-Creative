@@ -355,6 +355,7 @@ const refreshTheme = () => {
     const reviewsSvg = document.getElementById("reviews-svg");
     const reviewsArrowLeftPath = document.getElementById("reviews-arrow-left-path");
     const reviewsArrowRightPath = document.getElementById("reviews-arrow-right-path");
+    const choiceServecesSquare = document.getElementById("choice-serveces-square");
 
 
 
@@ -407,6 +408,7 @@ const refreshTheme = () => {
         alternativeContactTelegramSvg.classList = "fill";
         document.documentElement.style.setProperty('--svgColor', '#2E2E2E');
         thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, rgba(46, 46, 46, 0.3) 25%, rgba(46, 46, 46, 0) 100%)";
+        choiceServecesSquare.style.border = "";
     } else {
         thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(214, 214, 214, 0) 0%, rgba(214, 214, 214, 0.3) 25%, rgba(214, 214, 214, 0) 100%)";
         languageButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
@@ -447,6 +449,7 @@ const refreshTheme = () => {
         alternativeContactTelegramSvg.classList = "fill-dark";
         document.documentElement.style.setProperty('--svgColor', '#F3F3F3');
         sendToApplicationMainContent.style.border = " 0.05208vw solid var(--ltSeparationLine)";
+        choiceServecesSquare.style.border = "0.05208vw var(--ltSeparationLine) solid";
     }
 }
 
@@ -1935,6 +1938,4 @@ submitButtonFourthSection.addEventListener('click', () => {
             }, 3000);
         }, 300);
     }
-
-
 })

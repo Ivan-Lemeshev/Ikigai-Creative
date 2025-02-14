@@ -22,6 +22,7 @@ const mvBlockImg = document.getElementById("mv-sixth-section-main-block-photo");
 const mvnumberOfReviews = document.getElementById("mv-sixth-section-number-of-reviews");
 let number = 0;
 let float = false;
+const choiceServecesSquare = document.getElementById("mv-choice-serveces-square");
 
 mvNavButton.addEventListener('click', () => {
     mvNavigationBlock.style.display = "block";
@@ -355,7 +356,7 @@ const mvRefreshTheme = () => {
         mvTextarea.classList = "mv-textarea-dark";
         mainBlockAllText.style.border = "0.24875621890547264vw solid rgba(214, 214, 214, 0.5)";
         document.documentElement.style.setProperty('--svgColor', '#F3F3F3');
-
+        choiceServecesSquare.style.border = "0.12437810945273632vw var(--ltSeparationLine) solid";
     } else {
         mvLight.textContent = "Light"
         mvThirdSectionWrapperImg.style.border = "";
@@ -384,10 +385,8 @@ const mvRefreshTheme = () => {
         mvTextarea.classList = "mv-textarea-light";
         mainBlockAllText.style.border = "";
         document.documentElement.style.setProperty('--svgColor', '#2E2E2E');
-
+        choiceServecesSquare.style.border = "";
     }
-
-
 }
 
 mvLang.addEventListener('click', () => {
@@ -1040,6 +1039,38 @@ const sendToApplicationMainContentImg = document.getElementById("mv-send-to-appl
 const sendToApplicationMainContentImgSecces = document.getElementById("mv-send-to-application-main-content-img-secces");
 const sendToApplicationMainContentImgWrong = document.getElementById("mv-send-to-application-main-content-img-wrong");
 
+const choiceServecesTitleWrapper = document.getElementById("mv-choice-serveces-title-wrapper");
+const choiceServecesTitleText = document.getElementById("mv-choice-serveces-title");
+const choiceServecesCheckbox = document.getElementById("mv-choice-serveces-checkbox");
+let checkbox = false;
+
+choiceServecesTitleWrapper.addEventListener('click', () => {
+    if (!checkbox) {
+        checkbox = true;
+        choiceServecesTitleText.style.color = "var(--success)";
+        choiceServecesSquare.style.opacity = "0";
+        setTimeout(() => {
+            choiceServecesSquare.style.display = "none";
+            choiceServecesCheckbox.style.display = "block";
+            choiceServecesCheckbox.style.opacity = "1";
+        }, 300);
+    } else {
+        checkbox = false;
+        if (mvSelectTheme === "light") {
+            choiceServecesTitleText.style.color = "var(--ltText)";
+        } else {
+            choiceServecesTitleText.style.color = "var(--dtText)";
+        }
+
+        choiceServecesCheckbox.style.opacity = "";
+        setTimeout(() => {
+            choiceServecesCheckbox.style.display = "";
+            choiceServecesSquare.style.display = "";
+            choiceServecesSquare.style.opacity = "";
+        }, 300);
+    }
+})
+
 
 mvSubmitButton.addEventListener('click', () => {
     const data = {
@@ -1050,6 +1081,7 @@ mvSubmitButton.addEventListener('click', () => {
     Email: ${mvInputEmail.value}, 
     Service: ${arrayPriceList[mvActivNumber].title[mvSelectLang]},
     Text: ${mvTextarea.value}`,
+        hasPrepaymant: checkbox,
         service: `${arrayPriceList[mvActivNumber].title[mvSelectLang]}`,
         price: arrayPriceList[arrayPriceList.map((category) => category.title[mvSelectLang]).findIndex(el => el === `${arrayPriceList[mvActivNumber].title[mvSelectLang]}`.textContent)].prices[0].cost * 100
 
@@ -1075,7 +1107,7 @@ mvSubmitButton.addEventListener('click', () => {
                                 window.location.href = data.url;  // Переход на страницу оплаты
                             }
                         })
-                        
+
                         .then(() => {
                             if (mvSelectLang === "eng") {
                                 sendToApplicationMainContentTitle.textContent = "Successfully";

@@ -30,6 +30,7 @@ const thFourthSectionChoiceOfService = document.getElementById("th-choice-of-ser
 
 const thReviewsArrowLeft = document.getElementById("th-five-section-button-left");
 const thReviewsArrowRight = document.getElementById("th-five-section-button-right");
+const choiceServecesSquare = document.getElementById("th-choice-serveces-square");
 
 let thSelectTheme = "light";
 
@@ -78,11 +79,6 @@ const thRefreshTheme = () => {
         }
     }
 
-    // const dropList = document.getElementById("th-drop-list");
-
-
-
-
     if (thSelectTheme === "light") {
         thPriceListBlock.style.border = "0.054vw solid var(--dtSeparationLine)";
         thMainSendForm.style.border = "0.054vw solid var(--dtSeparationLine)";
@@ -97,7 +93,7 @@ const thRefreshTheme = () => {
         thFourSectionContacts.style.border = "0.054vw solid rgba(43, 43, 43, 0.5)";
         thReviewsTextWrapper0.style.border = "0.054vw solid rgba(46, 46, 46, 0.5)";
         thReviewsTextWrapper1.style.border = "0.054vw solid rgba(46, 46, 46, 0.5)";
-        // dropList.style.background = "rgba(232, 232, 232, 0.7)";
+        choiceServecesSquare.style.border = "";
         document.documentElement.style.setProperty('--svgColor', '#2E2E2E');
 
     } else {
@@ -114,7 +110,7 @@ const thRefreshTheme = () => {
         thFourSectionContacts.style.border = "0.054vw solid rgba(214, 214, 214, 0.5)";
         thReviewsTextWrapper0.style.border = "0.054vw solid rgba(214, 214, 214, 0.5)";
         thReviewsTextWrapper1.style.border = "0.054vw solid rgba(214, 214, 214, 0.5)";
-        // dropList.style.background = "rgba(28, 28, 28, 0.7)";
+        choiceServecesSquare.style.border = "0.10799vw var(--ltSeparationLine) solid";
         document.documentElement.style.setProperty('--svgColor', '#F3F3F3');
     }
 }
@@ -1193,6 +1189,38 @@ const sendToApplicationMainContentImgSecces = document.getElementById("th-send-t
 const sendToApplicationMainContentImgWrong = document.getElementById("th-send-to-application-main-content-img-wrong");
 
 
+const choiceServecesTitleWrapper = document.getElementById("th-choice-serveces-title-wrapper");
+const choiceServecesTitleText = document.getElementById("th-choice-serveces-title");
+const choiceServecesCheckbox = document.getElementById("th-choice-serveces-checkbox");
+let checkbox = false;
+
+choiceServecesTitleWrapper.addEventListener('click', () => {
+    if (!checkbox) {
+        checkbox = true;
+        choiceServecesTitleText.style.color = "var(--success)";
+        choiceServecesSquare.style.opacity = "0";
+        setTimeout(() => {
+            choiceServecesSquare.style.display = "none";
+            choiceServecesCheckbox.style.display = "block";
+            choiceServecesCheckbox.style.opacity = "1";
+        }, 300);
+    } else {
+        checkbox = false;
+        if (thSelectTheme === "light") {
+            choiceServecesTitleText.style.color = "var(--ltText)";
+        } else {
+            choiceServecesTitleText.style.color = "var(--dtText)";
+        }
+
+        choiceServecesCheckbox.style.opacity = "";
+        setTimeout(() => {
+            choiceServecesCheckbox.style.display = "";
+            choiceServecesSquare.style.display = "";
+            choiceServecesSquare.style.opacity = "";
+        }, 300);
+    }
+})
+
 
 thSubmitButtonFourthSection.addEventListener('click', () => {
     const data = {
@@ -1203,6 +1231,7 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
     Email: ${thInputEmail.value}, 
     Service: ${thChoiceOfServicePlaceholder.textContent},
     Text: ${thTextarea.value}`,
+        hasPrepaymant: checkbox,
         service: `${thChoiceOfServicePlaceholder.textContent}`,
         price: arrayPriceList[arrayPriceList.map((category) => category.title[thSelectLang]).findIndex(el => el === thChoiceOfServicePlaceholder.textContent)].prices[0].cost * 100
     };
