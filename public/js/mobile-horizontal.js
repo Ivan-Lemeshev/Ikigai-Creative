@@ -15,6 +15,8 @@ const mhNavigationBlockServices = document.getElementById("mh-navigation-block-m
 const mhNavigationBlockContacts = document.getElementById("mh-navigation-block-main-content-contacts");
 const mhNavigationBlockReviews = document.getElementById("mh-navigation-block-main-content-reviews");
 let applicationShow = false;
+const choiceServecesSquare = document.getElementById("mh-choice-serveces-square");
+
 mhNavButton.addEventListener('click', () => {
     mhNavigationBlock.style.display = "block";
     setTimeout(() => {
@@ -866,6 +868,7 @@ const mhRefreshTheme = () => {
         imgH3Wrapper3.style.color = "var(--dtText)";
         imgH3Wrapper4.style.color = "var(--dtText)";
         imgH3Wrapper5.style.color = "var(--dtText)";
+        choiceServecesSquare.style.border = "0.1144164vw var(--ltSeparationLine) solid"
 
     } else {
         nightModeMoonPath.style.fill = "#2E2E2E"
@@ -898,6 +901,7 @@ const mhRefreshTheme = () => {
         imgH3Wrapper3.style.color = "var(--ltText)";
         imgH3Wrapper4.style.color = "var(--ltText)";
         imgH3Wrapper5.style.color = "var(--ltText)";
+        choiceServecesSquare.style.border = ""
     }
 }
 
@@ -930,6 +934,38 @@ const sendToApplicationMainContentImg = document.getElementById("mh-send-to-appl
 const sendToApplicationMainContentImgSecces = document.getElementById("mh-send-to-application-main-content-img-secces");
 const sendToApplicationMainContentImgWrong = document.getElementById("mh-send-to-application-main-content-img-wrong");
 
+const choiceServecesTitleWrapper = document.getElementById("mh-choice-serveces-title-wrapper");
+const choiceServecesTitleText = document.getElementById("mh-choice-serveces-title");
+const choiceServecesCheckbox = document.getElementById("mh-choice-serveces-checkbox");
+let checkbox = false;
+
+choiceServecesTitleWrapper.addEventListener('click', () => {
+    if (!checkbox) {
+        checkbox = true;
+        choiceServecesTitleText.style.color = "var(--success)";
+        choiceServecesSquare.style.opacity = "0";
+        setTimeout(() => {
+            choiceServecesSquare.style.display = "none";
+            choiceServecesCheckbox.style.display = "block";
+            choiceServecesCheckbox.style.opacity = "1";
+        }, 300);
+    } else {
+        checkbox = false;
+        if (mhSelectTheme === "light") {
+            choiceServecesTitleText.style.color = "var(--ltText)";
+        } else {
+            choiceServecesTitleText.style.color = "var(--dtText)";
+        }
+
+        choiceServecesCheckbox.style.opacity = "";
+        setTimeout(() => {
+            choiceServecesCheckbox.style.display = "";
+            choiceServecesSquare.style.display = "";
+            choiceServecesSquare.style.opacity = "";
+        }, 300);
+    }
+})
+
 
 
 mhSubmitButton.addEventListener('click', () => {
@@ -941,6 +977,7 @@ mhSubmitButton.addEventListener('click', () => {
     Email: ${mhInputEmail.value}, 
     Service: ${titleInterestingName.textContent},
     Text: ${mhTextarea.value}`,
+        hasPrepaymant: checkbox,
         service: `${titleInterestingName.textContent}`,
         price: arrayPriceList[arrayPriceList.map((category) => category.title[mhSelectLang]).findIndex(el => el === titleInterestingName.textContent)].prices[0].cost * 100
     };
