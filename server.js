@@ -45,7 +45,7 @@ app.post('/api/sendRequest', async (req, res) => {
       });
       res.json({ url: session.url });
     }
-    res.status(200).send(result);
+    res.status(200).json({ message: 'ok'});
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
