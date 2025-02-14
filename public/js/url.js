@@ -1,4 +1,4 @@
-const url = 'https://ikigaiicreative.com/api/sendRequest'; 
+const url = 'https://ikigaiicreative/api/sendRequest'; 
 
 
 export default url
