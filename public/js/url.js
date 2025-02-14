@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/api/sendRequest'; 
+const url = 'https://ikigaiicreative.com/api/sendRequest'; 
 
 
 export default url
