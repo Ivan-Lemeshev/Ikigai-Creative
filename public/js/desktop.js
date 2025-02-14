@@ -1323,7 +1323,7 @@ inputPhone.addEventListener('input', () => {
 
 inputEmail.addEventListener('input', () => {
     const inputValue = inputEmail.value;
-    let editValue = inputValue.replace(/[^a-zA-Z0-9@_\.-]/g, '');
+    let editValue = inputValue.replace(/[^a-zA-Z0-9@_\.-0]/g, '');
     if (editValue.length > 30) {
         editValue = editValue.slice(0, 30);
     }
