@@ -461,7 +461,7 @@ tvInputPhone.addEventListener('input', () => {
 
 tvInputEmail.addEventListener('input', () => {
     const inputValue = tvInputEmail.value;
-    let editValue = inputValue.replace(/[^a-zA-Z1-9@_\.-]/g, '');
+    let editValue = inputValue.replace(/[^a-zA-Z0-9@_\.-]/g, '');
     if (editValue.length > 30) {
         editValue = editValue.slice(0, 30);
     }
