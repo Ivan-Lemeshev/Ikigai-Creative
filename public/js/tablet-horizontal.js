@@ -1233,7 +1233,8 @@ thSubmitButtonFourthSection.addEventListener('click', () => {
     Text: ${thTextarea.value}`,
         hasPrepaymant: checkbox,
         service: `${thChoiceOfServicePlaceholder.textContent}`,
-        price: arrayPriceList[arrayPriceList.map((category) => category.title[thSelectLang]).findIndex(el => el === thChoiceOfServicePlaceholder.textContent)].prices[0].cost * 100
+        price: arrayPriceList[arrayPriceList.map((category) => category.title[thSelectLang]).findIndex(el => el === thChoiceOfServicePlaceholder.textContent)].prices[0].cost * 100,
+        email: thInputEmail.value
     };
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";

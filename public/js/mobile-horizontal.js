@@ -979,7 +979,8 @@ mhSubmitButton.addEventListener('click', () => {
     Text: ${mhTextarea.value}`,
         hasPrepaymant: checkbox,
         service: `${titleInterestingName.textContent}`,
-        price: arrayPriceList[arrayPriceList.map((category) => category.title[mhSelectLang]).findIndex(el => el === titleInterestingName.textContent)].prices[0].cost * 100
+        price: arrayPriceList[arrayPriceList.map((category) => category.title[mhSelectLang]).findIndex(el => el === titleInterestingName.textContent)].prices[0].cost * 100,
+        email: mhInputEmail.value
     };
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";

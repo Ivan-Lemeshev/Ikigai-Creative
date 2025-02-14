@@ -26,11 +26,12 @@ app.post('/api/sendRequest', async (req, res) => {
   // }
 
   try {
-    const { text, service, price, hasPrepaymant } = req.body.data;
+    const { text, service, price, hasPrepaymant, email } = req.body.data;
     const result = await mailer.sendEmail(text);
     if (hasPrepaymant) {
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
+        customer_email: email, 
         line_items: [{
           price_data: {
             currency: 'gbp',

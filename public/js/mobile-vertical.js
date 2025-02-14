@@ -1083,7 +1083,8 @@ mvSubmitButton.addEventListener('click', () => {
     Text: ${mvTextarea.value}`,
         hasPrepaymant: checkbox,
         service: `${arrayPriceList[mvActivNumber].title[mvSelectLang]}`,
-        price: arrayPriceList[arrayPriceList.map((category) => category.title[mvSelectLang]).findIndex(el => el === arrayPriceList[mvActivNumber].title[mvSelectLang])].prices[0].cost * 100
+        price: arrayPriceList[arrayPriceList.map((category) => category.title[mvSelectLang]).findIndex(el => el === arrayPriceList[mvActivNumber].title[mvSelectLang])].prices[0].cost * 100,
+        email: mvInputEmail.value
     };
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";

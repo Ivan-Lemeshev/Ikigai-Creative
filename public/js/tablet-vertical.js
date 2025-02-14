@@ -1120,8 +1120,8 @@ tvSubmitButtonFourthSection.addEventListener('click', () => {
     Text: ${tvTextarea.value}`,
         hasPrepaymant: checkbox,
         service: `${tvChoiceOfServicePlaceholder.textContent}`,
-        price: arrayPriceList[arrayPriceList.map((category) => category.title[tvSelectLang]).findIndex(el => el === tvChoiceOfServicePlaceholder.textContent)].prices[0].cost * 100
-
+        price: arrayPriceList[arrayPriceList.map((category) => category.title[tvSelectLang]).findIndex(el => el === tvChoiceOfServicePlaceholder.textContent)].prices[0].cost * 100,
+        email: tvInputEmail.value
     };
     if (applicationShow) {
         sendToApplicationWrapper.style.display = "block";
