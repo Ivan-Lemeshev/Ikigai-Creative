@@ -35,7 +35,7 @@ const arrayDataOfService = [
                     eng: "Web Design",
                     rus: "Дизайн сайтов"
                 },
-                cost: 500
+                cost: 1
             },
 
             {
