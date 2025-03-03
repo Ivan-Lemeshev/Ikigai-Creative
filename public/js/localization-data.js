@@ -30,9 +30,29 @@ const localizationWrapper = {
         eng: "Contacts",
     },
 
+    "third-section-title-our": {
+        rus: "Наши",
+        eng: "Our",
+    },
+
+    "third-section-title-services": {
+        rus: "услуги",
+        eng: "services",
+    },
+
+    "third-section-title-courses": {
+        rus: "Курсы",
+        eng: "Courses",
+    },
+
     "third-section-title": {
-        rus: "Наши услуги",
-        eng: "Our services",
+        rus: "Наши",
+        eng: "Our",
+    },
+
+    "third-section-title": {
+        rus: "Наши",
+        eng: "Our",
     },
 
     "third-section-main-content-right-part-title": {

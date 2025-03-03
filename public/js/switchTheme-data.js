@@ -2675,7 +2675,85 @@ const themeWrapper = {
         }
     },
 
-    "third-section-title": {
+    "third-section-title-our": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "third-section-title-services": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "third-section-title-courses": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "courses-navigation-most-popular": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "courses-navigation-best-reviews": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "courses-navigation-recent-releases": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "courses-navigation-specialization-courses": {
         styles: {
             light: {
                 color: "var(--ltText)",
