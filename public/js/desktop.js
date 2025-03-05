@@ -1940,3 +1940,158 @@ submitButtonFourthSection.addEventListener('click', () => {
         }, 300);
     }
 })
+
+const thirdSectionTitleCourses = document.getElementById("third-section-title-courses");
+const thirdSectionTitleServices = document.getElementById("third-section-title-services");
+const thirdSectionMainContent = document.getElementById("third-section-main-content");
+const coursesNavigation = document.getElementById("courses-navigation");
+const coursesMainContent = document.getElementById("courses-main-content");
+const coursesNavigationMostPopular = document.getElementById("courses-navigation-most-popular");
+const coursesNavigationBestReviews = document.getElementById("courses-navigation-best-reviews");
+const coursesNavigationRecentReleases = document.getElementById("courses-navigation-recent-releases");
+const coursesNavigationSpecializationCourses = document.getElementById("courses-navigation-specialization-courses");
+const thirdSectionCoursesSvg = document.getElementById("third-section-courses-svg");
+const coursesTopLine = document.getElementById("courses-top-line");
+const coursesMiddleLine = document.getElementById("courses-middle-line");
+const wrapperCourseImgTop = document.getElementById("wrapper-for-course-img-top");
+const wrapperCourseImgBottom = document.getElementById("wrapper-for-course-img-bottom");
+const topCurseName = document.getElementById("top-curse-name");
+const bottomCurseName = document.getElementById("bottom-curse-name");
+const topCurseUpperText = document.getElementById("top-curse-upper-text");
+const topCurseLowerText = document.getElementById("top-curse-lower-text");
+const bottomCurseUpperText = document.getElementById("bottom-curse-upper-text");
+const bottomCurseLowerText = document.getElementById("bottom-curse-lower-text");
+const topCurseOrderButton = document.getElementById("top-curse-order-button");
+const topCurseMoreButton = document.getElementById("top-curse-more-button");
+const bottomCurseOrderButton = document.getElementById("bottom-curse-order-button");
+const bottomCurseMoreButton = document.getElementById("bottom-curse-more-button");
+let course = false;
+
+thirdSectionTitleCourses.addEventListener('click', () => {
+    if (!course) {
+        setTimeout(() => {
+            thirdSectionTitleServices.style.opacity = "0.6";
+            thirdSectionTitleCourses.style.opacity = "0.7";
+            thirdSectionTitleCourses.style.left = "24.42708vw";
+            setTimeout(() => {
+                thirdSectionTitleServices.style.opacity = "0.2";
+                thirdSectionTitleCourses.style.opacity = "0.9";
+                thirdSectionTitleCourses.style.left = "19.16667vw";
+                setTimeout(() => {
+                    thirdSectionTitleServices.style.opacity = "0";
+                    thirdSectionTitleCourses.style.opacity = "1";
+                    thirdSectionTitleCourses.style.left = "11.40625vw";
+                    thirdSectionTitleCourses.textContent = "courses";
+                    thirdSectionMainContent.style.opacity = "0";
+                    thirdSectionLowerPart.style.opacity = "0";
+                    setTimeout(() => {
+                        thirdSectionTitleServices.style.left = "27.34375vw";
+                        thirdSectionTitleServices.textContent = "Services";
+                        thirdSectionMainContent.style.display = "none";
+                        thirdSectionLowerPart.style.display = "none";
+                        coursesNavigation.style.display = "flex";
+                        coursesMainContent.style.display = "block";
+                        setTimeout(() => {
+                            thirdSectionTitleServices.style.opacity = "0.2";
+                            setTimeout(() => {
+                                thirdSectionTitleServices.style.opacity = "0.7";
+                                thirdSectionTitleServices.style.textDecoration = "underline";
+                                thirdSectionTitleCourses.style.textDecoration = "none";
+                                thirdSectionTitleCourses.style.cursor = "auto";
+                                thirdSectionTitleServices.style.cursor = "pointer";
+                                thirdSectionCoursesSvg.style.opacity = "1";
+                                setTimeout(() => {
+                                    coursesNavigation.style.opacity = "1";
+                                    coursesNavigationMostPopular.style.opacity = "1";
+                                    setTimeout(() => {
+                                        coursesNavigationBestReviews.style.opacity = "0.7";
+                                        setTimeout(() => {
+                                            coursesNavigationRecentReleases.style.opacity = "0.7";
+                                            setTimeout(() => {
+                                                coursesNavigationSpecializationCourses.style.opacity = "0.7";
+                                                setTimeout(() => {
+                                                    coursesMainContent.style.opacity = "1";
+                                                    setTimeout(() => {
+                                                        coursesTopLine.style.opacity = "1";
+                                                        coursesMiddleLine.style.opacity = "1";
+                                                        wrapperCourseImgTop.style.opacity = "1";
+                                                        wrapperCourseImgBottom.style.opacity = "1";
+                                                        setTimeout(() => {
+                                                            // добавить свг
+                                                            topCurseName.style.opacity = "1";
+                                                            bottomCurseName.style.opacity = "1";
+                                                            setTimeout(() => {
+                                                                topCurseUpperText.style.opacity = "1";
+                                                                topCurseLowerText.style.opacity = "1";
+                                                                bottomCurseUpperText.style.opacity = "1";
+                                                                bottomCurseLowerText.style.opacity = "1";
+                                                                setTimeout(() => {
+                                                                    topCurseOrderButton.style.opacity = "1";
+                                                                    topCurseMoreButton.style.opacity = "1";
+                                                                    bottomCurseOrderButton.style.opacity = "1";
+                                                                    bottomCurseMoreButton.style.opacity = "1";
+                                                                }, 300);
+                                                            }, 300);
+                                                        }, 300);
+                                                    }, 300);
+                                                }, 300);
+                                            }, 300);
+                                        }, 300);
+                                    }, 300);
+                                }, 300);
+                            }, 300);
+                        }, 300);
+                    }, 300);
+                }, 3);
+            }, 2);
+        }, 1);
+        course = true
+    }
+})
+
+thirdSectionTitleServices.addEventListener('click', () => {
+    if (course) {
+        setTimeout(() => {
+            thirdSectionTitleCourses.style.opacity = "0.6";
+            thirdSectionTitleServices.style.opacity = "0.7";
+            thirdSectionTitleServices.style.left = "24.42708vw";
+            thirdSectionTitleServices.style.textDecoration = "none";
+            thirdSectionCoursesSvg.style.opacity = "";
+            setTimeout(() => {
+                thirdSectionTitleCourses.style.opacity = "0.2";
+                thirdSectionTitleServices.style.opacity = "0.9";
+                thirdSectionTitleServices.style.left = "19.16667vw";
+                setTimeout(() => {
+                    thirdSectionTitleCourses.style.opacity = "0";
+                    thirdSectionTitleServices.style.opacity = "1";
+                    thirdSectionTitleServices.style.left = "11.40625vw";
+                    thirdSectionTitleServices.textContent = "services"
+                    coursesNavigation.style.opacity = "";
+                    coursesMainContent.style.opacity = "";
+                    thirdSectionMainContent.style.display = "";
+                    thirdSectionLowerPart.style.display = "";
+                    setTimeout(() => {
+                        thirdSectionTitleCourses.style.left = "27.34375vw";
+                        thirdSectionTitleCourses.textContent = "Courses"
+                        coursesNavigation.style.display = "";
+                        coursesMainContent.style.display = "";
+                        setTimeout(() => {
+                            thirdSectionTitleCourses.style.opacity = "0.2";
+                            thirdSectionMainContent.style.opacity = "";
+                            thirdSectionLowerPart.style.opacity = "";
+                            setTimeout(() => {
+                                thirdSectionTitleCourses.style.opacity = "0.7";
+                                thirdSectionTitleCourses.style.textDecoration = "underline";
+                                thirdSectionTitleServices.style.cursor = "auto";
+                                thirdSectionTitleCourses.style.cursor = "pointer"
+
+                            }, 300);
+                        }, 300);
+                    }, 300);
+                }, 3);
+            }, 2);
+        }, 1);
+        course = false
+    }
+})
+
