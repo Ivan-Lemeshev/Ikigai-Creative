@@ -3005,16 +3005,35 @@
 }
 
 #wrapper-for-course-img-top {
-    background: linear-gradient(162.95deg, rgba(232, 232, 232, 0.08) 7.55%, rgba(232, 232, 232, 0.4) 50.86%, rgba(232, 232, 232, 0.16) 91.28%);
-    border: 0.05208vw solid;
-    border-image-source: linear-gradient(150.82deg, #2B2B2B 6.57%, #919191 46.15%, #2B2B2B 90.74%);
+    background: linear-gradient(162.95deg, #8CB9CF 7.55%, #B1CCD9 50.86%, #B3CCD8 91.28%);
+    position: absolute;
+    top: 5.28229vw;
+    left: 5.28229vw;
+    width: 15.77292vw;
+    height: 19.62708vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    z-index: 1;
+}
+
+#border-for-course-img-top {
     position: absolute;
     top: 5.20833vw;
     left: 5.20833vw;
-    width: 15.625vw;
-    height: 19.47917vw;
-    opacity: 0;
+    width: 15.925vw;
+    height: 19.8vw;
     transition: opacity 0.3s ease-in-out;
+    background: linear-gradient(150.82deg, #2B2B2B 6.57%, #919191 46.15%, #2B2B2B 90.74%);
+    z-index: 0;
+}
+
+#course-img-top {
+    width: 10.41667vw;
+    height: 10.41667vw;
 }
 
 #top-curse-name {
@@ -3141,12 +3160,13 @@
     font-weight: 400;
     letter-spacing: 0.1em;
     position: absolute;
-    top: 21.875vw;  
-    left: 26.04167vw;  
+    top: 21.875vw;
+    left: 26.04167vw;
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
+
 #top-curse-more-button {
     width: 15.625vw;
     height: 2.8125vw;
@@ -3159,7 +3179,7 @@
     font-weight: 400;
     letter-spacing: 0.1em;
     position: absolute;
-    top: 21.875vw;    
+    top: 21.875vw;
     left: 44.79167vw;
     cursor: pointer;
     opacity: 0;
@@ -3178,12 +3198,13 @@
     font-weight: 400;
     letter-spacing: 0.1em;
     position: absolute;
-    top: 48.64583vw;  
-    left: 26.04167vw;  
-    cursor: pointer;  
+    top: 48.64583vw;
+    left: 26.04167vw;
+    cursor: pointer;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;  
+    transition: opacity 0.3s ease-in-out;
 }
+
 #bottom-curse-more-button {
     width: 15.625vw;
     height: 2.8125vw;
@@ -3198,7 +3219,7 @@
     position: absolute;
     top: 48.64583vw;
     left: 44.79167vw;
-    cursor: pointer;   
+    cursor: pointer;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out; 
+    transition: opacity 0.3s ease-in-out;
 }
