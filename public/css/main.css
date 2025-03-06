@@ -2965,19 +2965,7 @@
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-}
-
-.non-active-navigation-course {
-    font-weight: 350;
-    font-size: 1.66667vw;
-    letter-spacing: 0.1em;
-    color: var(--ltText);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
     cursor: pointer;
-    transition: opacity 0.3s ease-in-out;
 }
 
 #courses-main-content {
@@ -3048,6 +3036,7 @@
     color: var(--ltText);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    overflow: visible;
 }
 
 #top-curse-upper-text {
@@ -3134,6 +3123,7 @@
     color: var(--ltText);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    overflow: visible;
 }
 
 #bottom-curse-upper-text {
@@ -3238,6 +3228,31 @@
     top: 48.64583vw;
     left: 44.79167vw;
     cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#number-of-page {
+    position: absolute;
+    bottom: 4.16667vw;
+    left: 36.19792vw;
+    width: 13.02083vw;
+    height: 2.08333vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: visible;
+}
+
+.number-of-page {
+    height: 100%;
+    width: 2.08333vw;
+    cursor: pointer;
+    color: black;
+    letter-spacing: 0.1em;
+    font-size: 1.66667vw;
+    font-weight: 350;
+    overflow: visible;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }

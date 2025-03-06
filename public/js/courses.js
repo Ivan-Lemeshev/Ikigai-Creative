@@ -255,7 +255,133 @@ const coursesData = [
         },
         amountLessons: 25,
         freeLesson: "ссылка на урок"
+    },
+    {
+        title: {
+            rus: "Телеграм-боты на Python",
+            eng: "Telegram Bots with Python"
+        },
+        descriptionUp: {
+            rus: "Создайте собственных ботов для Telegram с использованием Python и aiogram. Автоматизируйте процессы и создавайте полезные инструменты!",
+            eng: "Build your own Telegram bots using Python and aiogram. Automate processes and create useful tools!"
+        },
+        descriptionDown: {
+            rus: "Начните создавать ботов уже сегодня!",
+            eng: "Start building bots today!"
+        },
+        cost: 18000,
+        popularity: 250,
+        MMR: 4.7,
+        releasesData: "10.04.2025",
+        isProfession: false,
+        who: {
+            rus: ["Разработчики", "Автоматизация", "Telegram API"],
+            eng: ["Developers", "Automation", "Telegram API"]
+        },
+        whatNeed: {
+            rus: ["ПК", "Python", "Интернет"],
+            eng: ["PC", "Python", "Internet"]
+        },
+        fullText: {
+            rus: ["Научитесь создавать ботов для Telegram, которые могут автоматизировать задачи, взаимодействовать с пользователями и работать с API."],
+            eng: ["Learn to build Telegram bots that automate tasks, interact with users, and work with APIs."]
+        },
+        time: {
+            rus: "15-20 часов",
+            eng: "15-20 hours"
+        },
+        amountLessons: 15,
+        freeLesson: "ссылка на урок"
+    },
+    {
+        title: {
+            rus: "Продажи: Искусство убеждения",
+            eng: "Sales: The Art of Persuasion"
+        },
+        descriptionUp: {
+            rus: "Научитесь продавать эффективно, используя проверенные техники убеждения и психологии покупателя.",
+            eng: "Learn to sell effectively using proven persuasion techniques and buyer psychology."
+        },
+        descriptionDown: {
+            rus: "Станьте мастером продаж и увеличьте свой доход!",
+            eng: "Become a sales expert and boost your income!"
+        },
+        cost: 22000,
+        popularity: 350,
+        MMR: 4.9,
+        releasesData: "20.05.2025",
+        isProfession: false,
+        who: {
+            rus: ["Бизнес", "Коммуникация", "Личные продажи"],
+            eng: ["Business", "Communication", "Personal Sales"]
+        },
+        whatNeed: {
+            rus: ["Желание развиваться", "Коммуникативные навыки"],
+            eng: ["Desire to grow", "Communication skills"]
+        },
+        fullText: {
+            rus: ["Курс поможет вам понять психологию клиента, освоить техники убеждения и улучшить ваши навыки продаж."],
+            eng: ["The course will help you understand buyer psychology, master persuasion techniques, and improve your sales skills."]
+        },
+        time: {
+            rus: "25-35 часов",
+            eng: "25-35 hours"
+        },
+        amountLessons: 18,
+        freeLesson: "ссылка на урок"
+    },
+    {
+        title: {
+            rus: "Нутрициология",
+            eng: "Nutrition Science"
+        },
+        descriptionUp: {
+            rus: "Разберитесь в основах правильного питания, научитесь подбирать рацион для себя и клиентов. Курс подойдет как для личного развития, так и для профессиональной деятельности.",
+            eng: "Understand the fundamentals of proper nutrition, learn to create personalized meal plans for yourself and clients. Suitable for both personal growth and professional practice."
+        },
+        descriptionDown: {
+            rus: "Начните изучать нутрициологию уже сегодня!",
+            eng: "Start learning nutrition science today!"
+        },
+        svgCode: `<svg id="course-img-nutrition" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="80" stroke="var(--svgColor)" stroke-width="10" fill="none"/>
+                    <path d="M50 120 C70 90, 130 90, 150 120" stroke="var(--svgColor)" stroke-width="8" fill="none"/>
+                    <circle cx="70" cy="80" r="8" fill="var(--svgColor)"/>
+                    <circle cx="130" cy="80" r="8" fill="var(--svgColor)"/>
+                  </svg>`,
+        cost: 18000,
+        popularity: 250,
+        MMR: 4.7,
+        releasesData: "10.04.2025",
+        isProfession: false,
+        who: {
+            rus: ["ЗОЖ", "Диетология", "Личный рост"],
+            eng: ["Healthy Lifestyle", "Dietetics", "Personal Growth"]
+        },
+        whatNeed: {
+            rus: ["Интерес к питанию", "Желание учиться", "Базовые знания биологии"],
+            eng: ["Interest in nutrition", "Willingness to learn", "Basic biology knowledge"]
+        },
+        fullText: {
+            rus: [
+                "Этот курс поможет вам разобраться в принципах здорового питания и нутрициологии. Вы узнаете, как правильно подбирать рацион, учитывать особенности организма и корректировать питание для достижения различных целей – от снижения веса до набора мышечной массы.",
+                "Мы разберем влияние макро- и микроэлементов на здоровье, научимся анализировать состав продуктов и составлять сбалансированные диеты. Также вы получите базовые знания по диетологии и сможете применять их в работе с клиентами или для собственного здоровья.",
+                "По окончании курса вы сможете грамотно подходить к вопросам питания, разбираться в современных тенденциях нутрициологии и применять полученные знания на практике."
+            ],
+            eng: [
+                "This course will help you understand the principles of healthy eating and nutrition science. You'll learn how to create balanced meal plans, consider individual body needs, and adjust nutrition for different goals – from weight loss to muscle gain.",
+                "We will cover the impact of macro- and micronutrients on health, analyze food compositions, and create well-balanced diets. You'll also gain basic knowledge of dietetics, which you can apply to working with clients or improving your own health.",
+                "By the end of the course, you'll be able to make informed decisions about nutrition, understand modern nutrition trends, and apply your knowledge in practice."
+            ]
+        },
+        time: {
+            rus: "15-25 часов",
+            eng: "15-25 hours"
+        },
+        amountLessons: 15,
+        freeLesson: "ссылка на бесплатный урок"
     }
+    
 ];
 
 export default coursesData;

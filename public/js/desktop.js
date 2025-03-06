@@ -5,6 +5,7 @@ import reviews from "./reviews.js";
 import dataContats from "./links.js";
 import themeWrapper from "./switchTheme-data.js"
 import url from "./url.js"
+import coursesData from "./courses.js"
 
 const ikigaiLogoText = document.getElementById("ikigai-logo-text");
 const creativeLogoText = document.getElementById("creative-logo-text");
@@ -1965,6 +1966,10 @@ const topCurseOrderButton = document.getElementById("top-curse-order-button");
 const topCurseMoreButton = document.getElementById("top-curse-more-button");
 const bottomCurseOrderButton = document.getElementById("bottom-curse-order-button");
 const bottomCurseMoreButton = document.getElementById("bottom-curse-more-button");
+const numberOfPage1 = document.getElementById("number-of-page-1");
+const numberOfPage2 = document.getElementById("number-of-page-2");
+const numberOfPage3 = document.getElementById("number-of-page-3");
+const numberOfPage4 = document.getElementById("number-of-page-4");
 let course = false;
 
 thirdSectionTitleCourses.addEventListener('click', () => {
@@ -2030,6 +2035,19 @@ thirdSectionTitleCourses.addEventListener('click', () => {
                                                                     topCurseMoreButton.style.opacity = "1";
                                                                     bottomCurseOrderButton.style.opacity = "1";
                                                                     bottomCurseMoreButton.style.opacity = "1";
+                                                                    coursesData.sort((a, b) => b.popularity - a.popularity)
+                                                                    setTimeout(() => {
+                                                                        numberOfPage1.style.opacity = "1";
+                                                                        setTimeout(() => {
+                                                                            numberOfPage2.style.opacity = "0.5";
+                                                                            setTimeout(() => {
+                                                                                numberOfPage3.style.opacity = "0.5";
+                                                                                setTimeout(() => {
+                                                                                    numberOfPage4.style.opacity = "0.5";
+                                                                                }, 100);
+                                                                            }, 100);
+                                                                        }, 100);
+                                                                    }, 100);
                                                                 }, 300);
                                                             }, 300);
                                                         }, 300);
@@ -2095,3 +2113,183 @@ thirdSectionTitleServices.addEventListener('click', () => {
     }
 })
 
+let sortedArray = []
+
+sortedArray = [...coursesData];
+
+coursesNavigationMostPopular.addEventListener('click', () => {
+    sortedArray = [...coursesData];
+    sortedArray.sort((a, b) => b.popularity - a.popularity);
+    coursesNavigationMostPopular.style.opacity = "1";
+    coursesNavigationBestReviews.style.opacity = "0.7";
+    coursesNavigationRecentReleases.style.opacity = "0.7";
+    coursesNavigationSpecializationCourses.style.opacity = "0.7";
+})
+
+coursesNavigationBestReviews.addEventListener('click', () => {
+    sortedArray = [...coursesData];
+    sortedArray.sort((a, b) => b.MMR - a.MMR);
+    coursesNavigationMostPopular.style.opacity = "0.7";
+    coursesNavigationBestReviews.style.opacity = "1";
+    coursesNavigationRecentReleases.style.opacity = "0.7";
+    coursesNavigationSpecializationCourses.style.opacity = "0.7";
+})
+
+let numberOfPage = 1;
+
+const visualVitrine = () => {
+    const indexUpperService = numberOfPage * 2 - 2;
+    const upperServise = sortedArray[indexUpperService];
+    const parserUp = new DOMParser();
+    const courseTopImg = parserUp.parseFromString(upperServise.svgCode, "image/svg+xml").documentElement;
+    courseTopImg.id = "course-img-top";
+    let oldSvgElementUp = document.getElementById(`course-img-top`);
+    if (oldSvgElementUp) {
+        wrapperCourseImgTop.removeChild(oldSvgElementUp);
+    }
+    wrapperCourseImgTop.appendChild(courseTopImg);
+    topCurseName.textContent = upperServise.title[selectLang];
+    topCurseUpperText.textContent = upperServise.descriptionUp[selectLang];
+    topCurseLowerText.textContent = upperServise.descriptionDown[selectLang];
+
+    const indexLowerService = numberOfPage * 2 - 1;
+    const lowerServise = sortedArray[indexLowerService];
+    const parserDown = new DOMParser();
+    const courseBottomImg = parserDown.parseFromString(lowerServise.svgCode, "image/svg+xml").documentElement;
+    courseBottomImg.id = "course-img-bottom";
+    let oldSvgElementDown = document.getElementById(`course-img-bottom`);
+    if (oldSvgElementDown) {
+        wrapperCourseImgBottom.removeChild(oldSvgElementDown);
+    }
+    wrapperCourseImgBottom.appendChild(courseBottomImg);
+    bottomCurseName.textContent = lowerServise.title[selectLang];
+    bottomCurseUpperText.textContent = lowerServise.descriptionUp[selectLang];
+    bottomCurseLowerText.textContent = lowerServise.descriptionDown[selectLang];
+}
+
+visualVitrine()
+
+
+numberOfPage1.addEventListener('click', () => {
+    numberOfPage1.style.opacity = "1";
+    numberOfPage2.style.opacity = "0.5";
+    numberOfPage3.style.opacity = "0.5";
+    numberOfPage4.style.opacity = "0.5";
+    numberOfPage = 1;
+    setTimeout(() => {
+        topCurseName.style.opacity = "0";
+        topCurseUpperText.style.opacity = "0";
+        topCurseLowerText.style.opacity = "0";
+        bottomCurseName.style.opacity = "0";
+        bottomCurseUpperText.style.opacity = "0";
+        bottomCurseLowerText.style.opacity = "0";
+        wrapperCourseImgBottom.style.opacity = "0";
+        wrapperCourseImgTop.style.opacity = "0";
+        setTimeout(() => {
+            visualVitrine();
+            setTimeout(() => {
+                topCurseName.style.opacity = "1";
+                topCurseUpperText.style.opacity = "1";
+                topCurseLowerText.style.opacity = "1";
+                bottomCurseName.style.opacity = "1";
+                bottomCurseUpperText.style.opacity = "1";
+                bottomCurseLowerText.style.opacity = "1";
+                wrapperCourseImgBottom.style.opacity = "1";
+                wrapperCourseImgTop.style.opacity = "1";
+            }, 300);
+        }, 300);
+    }, 1);
+})
+
+numberOfPage2.addEventListener('click', () => {
+    numberOfPage2.style.opacity = "1";
+    numberOfPage1.style.opacity = "0.5";
+    numberOfPage3.style.opacity = "0.5";
+    numberOfPage4.style.opacity = "0.5";
+    numberOfPage = 2;
+    setTimeout(() => {
+        topCurseName.style.opacity = "0";
+        topCurseUpperText.style.opacity = "0";
+        topCurseLowerText.style.opacity = "0";
+        bottomCurseName.style.opacity = "0";
+        bottomCurseUpperText.style.opacity = "0";
+        bottomCurseLowerText.style.opacity = "0";
+        wrapperCourseImgBottom.style.opacity = "0";
+        wrapperCourseImgTop.style.opacity = "0";
+        setTimeout(() => {
+            visualVitrine();
+            setTimeout(() => {
+                topCurseName.style.opacity = "1";
+                topCurseUpperText.style.opacity = "1";
+                topCurseLowerText.style.opacity = "1";
+                bottomCurseName.style.opacity = "1";
+                bottomCurseUpperText.style.opacity = "1";
+                bottomCurseLowerText.style.opacity = "1";
+                wrapperCourseImgBottom.style.opacity = "1";
+                wrapperCourseImgTop.style.opacity = "1";
+            }, 300);
+        }, 300);
+    }, 1);
+})
+
+numberOfPage3.addEventListener('click', () => {
+    numberOfPage3.style.opacity = "1";
+    numberOfPage1.style.opacity = "0.5";
+    numberOfPage2.style.opacity = "0.5";
+    numberOfPage4.style.opacity = "0.5";
+    numberOfPage = 3;
+    setTimeout(() => {
+        topCurseName.style.opacity = "0";
+        topCurseUpperText.style.opacity = "0";
+        topCurseLowerText.style.opacity = "0";
+        bottomCurseName.style.opacity = "0";
+        bottomCurseUpperText.style.opacity = "0";
+        bottomCurseLowerText.style.opacity = "0";
+        wrapperCourseImgBottom.style.opacity = "0";
+        wrapperCourseImgTop.style.opacity = "0";
+        setTimeout(() => {
+            visualVitrine();
+            setTimeout(() => {
+                topCurseName.style.opacity = "1";
+                topCurseUpperText.style.opacity = "1";
+                topCurseLowerText.style.opacity = "1";
+                bottomCurseName.style.opacity = "1";
+                bottomCurseUpperText.style.opacity = "1";
+                bottomCurseLowerText.style.opacity = "1";
+                wrapperCourseImgBottom.style.opacity = "1";
+                wrapperCourseImgTop.style.opacity = "1";
+            }, 300);
+        }, 300);
+    }, 1);
+})
+
+numberOfPage4.addEventListener('click', () => {
+    numberOfPage4.style.opacity = "1";
+    numberOfPage1.style.opacity = "0.5";
+    numberOfPage2.style.opacity = "0.5";
+    numberOfPage3.style.opacity = "0.5";
+    numberOfPage = 4;
+    setTimeout(() => {
+        topCurseName.style.opacity = "0";
+        topCurseUpperText.style.opacity = "0";
+        topCurseLowerText.style.opacity = "0";
+        bottomCurseName.style.opacity = "0";
+        bottomCurseUpperText.style.opacity = "0";
+        bottomCurseLowerText.style.opacity = "0";
+        wrapperCourseImgBottom.style.opacity = "0";
+        wrapperCourseImgTop.style.opacity = "0";
+        setTimeout(() => {
+            visualVitrine();
+            setTimeout(() => {
+                topCurseName.style.opacity = "1";
+                topCurseUpperText.style.opacity = "1";
+                topCurseLowerText.style.opacity = "1";
+                bottomCurseName.style.opacity = "1";
+                bottomCurseUpperText.style.opacity = "1";
+                bottomCurseLowerText.style.opacity = "1";
+                wrapperCourseImgBottom.style.opacity = "1";
+                wrapperCourseImgTop.style.opacity = "1";
+            }, 300);
+        }, 300);
+    }, 1);
+})
