@@ -43,7 +43,7 @@ const coursesData = [
         popularity: 300,
         MMR: 4.8,
         releasesData: "05.03.2025",
-        isProfession: false,
+        isProfession: true,
         who: {
             rus: ["IT",
                 "Востребованный",
@@ -273,7 +273,7 @@ const coursesData = [
         popularity: 250,
         MMR: 4.7,
         releasesData: "10.04.2025",
-        isProfession: false,
+        isProfession: true,
         who: {
             rus: ["Разработчики", "Автоматизация", "Telegram API"],
             eng: ["Developers", "Automation", "Telegram API"]

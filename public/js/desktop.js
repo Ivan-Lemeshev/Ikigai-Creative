@@ -2117,23 +2117,6 @@ let sortedArray = []
 
 sortedArray = [...coursesData];
 
-coursesNavigationMostPopular.addEventListener('click', () => {
-    sortedArray = [...coursesData];
-    sortedArray.sort((a, b) => b.popularity - a.popularity);
-    coursesNavigationMostPopular.style.opacity = "1";
-    coursesNavigationBestReviews.style.opacity = "0.7";
-    coursesNavigationRecentReleases.style.opacity = "0.7";
-    coursesNavigationSpecializationCourses.style.opacity = "0.7";
-})
-
-coursesNavigationBestReviews.addEventListener('click', () => {
-    sortedArray = [...coursesData];
-    sortedArray.sort((a, b) => b.MMR - a.MMR);
-    coursesNavigationMostPopular.style.opacity = "0.7";
-    coursesNavigationBestReviews.style.opacity = "1";
-    coursesNavigationRecentReleases.style.opacity = "0.7";
-    coursesNavigationSpecializationCourses.style.opacity = "0.7";
-})
 
 let numberOfPage = 1;
 
@@ -2293,3 +2276,130 @@ numberOfPage4.addEventListener('click', () => {
         }, 300);
     }, 1);
 })
+
+coursesNavigationMostPopular.addEventListener('click', () => {
+    sortedArray.sort((a, b) => b.popularity - a.popularity);
+    coursesNavigationMostPopular.style.opacity = "1";
+    coursesNavigationBestReviews.style.opacity = "0.7";
+    coursesNavigationRecentReleases.style.opacity = "0.7";
+    coursesNavigationSpecializationCourses.style.opacity = "0.7";
+    setTimeout(() => {
+        topCurseName.style.opacity = "0";
+        topCurseUpperText.style.opacity = "0";
+        topCurseLowerText.style.opacity = "0";
+        bottomCurseName.style.opacity = "0";
+        bottomCurseUpperText.style.opacity = "0";
+        bottomCurseLowerText.style.opacity = "0";
+        wrapperCourseImgBottom.style.opacity = "0";
+        wrapperCourseImgTop.style.opacity = "0";
+        setTimeout(() => {
+            visualVitrine();
+            setTimeout(() => {
+                topCurseName.style.opacity = "1";
+                topCurseUpperText.style.opacity = "1";
+                topCurseLowerText.style.opacity = "1";
+                bottomCurseName.style.opacity = "1";
+                bottomCurseUpperText.style.opacity = "1";
+                bottomCurseLowerText.style.opacity = "1";
+                wrapperCourseImgBottom.style.opacity = "1";
+                wrapperCourseImgTop.style.opacity = "1";
+            }, 300);
+        }, 300);
+    }, 1);
+})
+
+coursesNavigationBestReviews.addEventListener('click', () => {
+    sortedArray.sort((a, b) => b.MMR - a.MMR);
+    coursesNavigationMostPopular.style.opacity = "0.7";
+    coursesNavigationBestReviews.style.opacity = "1";
+    coursesNavigationRecentReleases.style.opacity = "0.7";
+    coursesNavigationSpecializationCourses.style.opacity = "0.7";
+    setTimeout(() => {
+        topCurseName.style.opacity = "0";
+        topCurseUpperText.style.opacity = "0";
+        topCurseLowerText.style.opacity = "0";
+        bottomCurseName.style.opacity = "0";
+        bottomCurseUpperText.style.opacity = "0";
+        bottomCurseLowerText.style.opacity = "0";
+        wrapperCourseImgBottom.style.opacity = "0";
+        wrapperCourseImgTop.style.opacity = "0";
+        setTimeout(() => {
+            visualVitrine();
+            setTimeout(() => {
+                topCurseName.style.opacity = "1";
+                topCurseUpperText.style.opacity = "1";
+                topCurseLowerText.style.opacity = "1";
+                bottomCurseName.style.opacity = "1";
+                bottomCurseUpperText.style.opacity = "1";
+                bottomCurseLowerText.style.opacity = "1";
+                wrapperCourseImgBottom.style.opacity = "1";
+                wrapperCourseImgTop.style.opacity = "1";
+            }, 300);
+        }, 300);
+    }, 1);
+})
+
+
+coursesNavigationRecentReleases.addEventListener('click', () => {
+    sortedArray.sort((a, b) => new Date(b.releasesData) - new Date(a.releasesData));
+    coursesNavigationMostPopular.style.opacity = "0.7";
+    coursesNavigationBestReviews.style.opacity = "0.7";
+    coursesNavigationRecentReleases.style.opacity = "1";
+    coursesNavigationSpecializationCourses.style.opacity = "0.7";
+    setTimeout(() => {
+        topCurseName.style.opacity = "0";
+        topCurseUpperText.style.opacity = "0";
+        topCurseLowerText.style.opacity = "0";
+        bottomCurseName.style.opacity = "0";
+        bottomCurseUpperText.style.opacity = "0";
+        bottomCurseLowerText.style.opacity = "0";
+        wrapperCourseImgBottom.style.opacity = "0";
+        wrapperCourseImgTop.style.opacity = "0";
+        setTimeout(() => {
+            visualVitrine();
+            setTimeout(() => {
+                topCurseName.style.opacity = "1";
+                topCurseUpperText.style.opacity = "1";
+                topCurseLowerText.style.opacity = "1";
+                bottomCurseName.style.opacity = "1";
+                bottomCurseUpperText.style.opacity = "1";
+                bottomCurseLowerText.style.opacity = "1";
+                wrapperCourseImgBottom.style.opacity = "1";
+                wrapperCourseImgTop.style.opacity = "1";
+            }, 300);
+        }, 300);
+    }, 1);
+})
+
+coursesNavigationSpecializationCourses.addEventListener('click', () => {
+    const filteredItems = sortedArray.filter(Prof => Prof.isProfession);
+    sortedArray = [...filteredItems]
+    coursesNavigationMostPopular.style.opacity = "0.7";
+    coursesNavigationBestReviews.style.opacity = "0.7";
+    coursesNavigationRecentReleases.style.opacity = "0.7";
+    coursesNavigationSpecializationCourses.style.opacity = "1";
+    setTimeout(() => {
+        topCurseName.style.opacity = "0";
+        topCurseUpperText.style.opacity = "0";
+        topCurseLowerText.style.opacity = "0";
+        bottomCurseName.style.opacity = "0";
+        bottomCurseUpperText.style.opacity = "0";
+        bottomCurseLowerText.style.opacity = "0";
+        wrapperCourseImgBottom.style.opacity = "0";
+        wrapperCourseImgTop.style.opacity = "0";
+        setTimeout(() => {
+            visualVitrine();
+            setTimeout(() => {
+                topCurseName.style.opacity = "1";
+                topCurseUpperText.style.opacity = "1";
+                topCurseLowerText.style.opacity = "1";
+                bottomCurseName.style.opacity = "1";
+                bottomCurseUpperText.style.opacity = "1";
+                bottomCurseLowerText.style.opacity = "1";
+                wrapperCourseImgBottom.style.opacity = "1";
+                wrapperCourseImgTop.style.opacity = "1";
+            }, 300);
+        }, 300);
+    }, 1);
+})
+
