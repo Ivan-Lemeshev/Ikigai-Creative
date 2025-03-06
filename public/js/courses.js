@@ -45,31 +45,43 @@ const coursesData = [
         releasesData: "05.03.2025",
         isProfession: false,
         who: {
-            rus: [
-
+            rus: ["IT",
+                "Востребованный",
+                "Легкий старт"
             ],
             eng: [
-
+                "IT",
+                "In demand",
+                "Easy start"
             ]
         },
         whatNeed: {
-            rus: [
-
+            rus: ["ПК",
+                "Стабильный интернет",
+                "Желание учиться"
             ],
-            eng: [
-
+            eng: ["PC",
+                "Internet connection",
+                "Desire to learn"
             ]
         },
         fullText: {
-            rus: ,
-            eng: 
+            rus: ["Хотите начать карьеру в сфере технологий, создавать современные веб-сайты и функциональные веб-приложения? Наш комплексный курс веб-разработки поможет вам пройти путь от новичка до опытного разработчика. Вы научитесь писать чистый, структурированный код на HTML, CSS и JavaScript, создавать адаптивные и интерактивные веб-сайты и работать с современными фреймворками для создания динамических приложений.",
+                "Курс также охватывает внутреннюю разработку, включая работу с базами данных, API и серверное программирование для создания полноценных веб-приложений. Благодаря практическим проектам, реальным примерам и опытному наставничеству вы приобретете практический опыт и создадите портфолио, которое продемонстрирует ваши навыки потенциальным работодателям или клиентам.",
+                "Независимо от того, хотите ли вы начать новую карьеру, продвинуться на своей нынешней должности или запустить собственные проекты, этот курс даст вам все необходимое для достижения успеха. К концу программы вы обретете уверенность и опыт, необходимые для работы веб-разработчиком, будь то фрилансер, в стартапе или в ведущей технологической компании."
+
+            ],
+            eng: [
+                "Want to start a career in tech, build modern websites, and create functional web applications? Our comprehensive web development course will take you from a complete beginner to a skilled developer. You’ll learn to write clean, structured code in HTML, CSS, and JavaScript, create responsive and interactive websites, and work with modern frameworks to build dynamic applications.",
+                "The course also covers back-end development, including working with databases, APIs, and server-side programming to create full-fledged web applications. Through hands-on projects, real-world examples, and expert mentorship, you’ll gain practical experience and build a portfolio that showcases your skills to potential employers or clients.",
+                "Whether you want to start a new career, advance in your current role, or launch your own projects, this course gives you everything you need to succeed. By the end of the program, you’ll have the confidence and expertise to work as a web developer, whether as a freelancer, in a startup, or within a leading tech company."]
         },
         time: {
-            rus: ,
-            eng: 
+            rus: "20-30 часов",
+            eng: "20-30 hours"
         },
         amountLessons: 20,
-        freeLesson: 
+        freeLesson: "ссылка на урок"
     },
     {
         title: {
@@ -103,32 +115,147 @@ const coursesData = [
         releasesData: "05.03.2025",
         isProfession: false,
         who: {
-            rus: [
-
-            ],
-            eng: [
-
-            ]
+            rus: ["Разработчики", "Командная работа", "Контроль версий"],
+            eng: ["Developers", "Team collaboration", "Version control"]
         },
         whatNeed: {
-            rus: [
-
-            ],
-            eng: [
-
-            ]
+            rus: ["ПК", "Стабильный интернет", "Базовые знания программирования"],
+            eng: ["PC", "Internet connection", "Basic programming knowledge"]
         },
         fullText: {
-            rus: ,
-            eng: 
+            rus: [
+                "Освойте Git — один из самых востребованных инструментов контроля версий, который используется разработчиками по всему миру. Вы научитесь работать с локальными и удаленными репозиториями, создавать коммиты, ветки и мержи, а также разбирать конфликтные ситуации.",
+                "Курс включает в себя работу с GitHub, GitFlow и CI/CD процессами, что поможет вам эффективно управлять проектами, взаимодействовать в команде и автоматизировать развертывание кода.",
+                "К концу курса вы получите практический опыт работы с Git и GitHub, научитесь организовывать свой код, оптимизировать рабочие процессы и уверенно использовать Git в реальных проектах."
+            ],
+            eng: [
+                "Master Git — one of the most in-demand version control tools used by developers worldwide. You'll learn how to work with local and remote repositories, create commits, branches, and merges, and resolve conflicts effectively.",
+                "The course covers GitHub, GitFlow, and CI/CD processes, helping you manage projects efficiently, collaborate in teams, and automate deployments.",
+                "By the end of the course, you'll have hands-on experience with Git and GitHub, learn how to structure your code, optimize workflows, and confidently use Git in real-world projects."
+            ]
         },
         time: {
-            rus: ,
-            eng: 
+            rus: "15-20 часов",
+            eng: "15-20 hours"
         },
         amountLessons: 10,
-        freeLesson: 
+        freeLesson: "ссылка на урок"
     },
-]
+
+    {
+        title: {
+            rus: "Шахматы",
+            eng: "Chess"
+        },
+        descriptionUp: {
+            rus: "Развивайте логическое мышление, обучаясь шахматам от базы до продвинутого уровня.",
+            eng: "Develop logical thinking by learning chess from basics to advanced strategies."
+        },
+        descriptionDown: {
+            rus: "Станьте уверенным игроком в шахматы!",
+            eng: "Become a confident chess player"
+        },
+        svgCode: `...`,
+        cost: 15000,
+        popularity: 270,
+        MMR: 4.6,
+        releasesData: "10.06.2025",
+        isProfession: false,
+        who: {
+            rus: ["Дети", "Взрослые", "Стратеги"],
+            eng: ["Kids", "Adults", "Strategists"]
+        },
+        whatNeed: {
+            rus: ["Желание учиться"],
+            eng: ["Desire to learn"]
+        },
+        fullText: {
+            rus: ["Освойте дебюты, миттельшпиль и эндшпиль..."],
+            eng: ["Master openings, middle game, and endgame..."]
+        },
+        time: {
+            rus: "12-18 часов",
+            eng: "12-18 hours"
+        },
+        amountLessons: 12,
+        freeLesson: "ссылка на урок"
+    },
+    {
+        title: {
+            rus: "React",
+            eng: "Master React"
+        },
+        descriptionUp: {
+            rus: "Изучите передовой фреймворк React и создавайте современные веб-приложения.",
+            eng: "Learn the cutting-edge React framework and build modern web applications."
+        },
+        descriptionDown: {
+            rus: "Погрузитесь в мир фронтенд-разработки с React!",
+            eng: "Dive into the world of frontend development with React!"
+        },
+        svgCode: `...`,
+        cost: 22000,
+        popularity: 320,
+        MMR: 4.9,
+        releasesData: "20.07.2025",
+        isProfession: true,
+        who: {
+            rus: ["Разработчики", "Фронтендеры"],
+            eng: ["Developers", "Frontend engineers"]
+        },
+        whatNeed: {
+            rus: ["Знание JS", "ПК"],
+            eng: ["JavaScript knowledge", "PC"]
+        },
+        fullText: {
+            rus: ["Научитесь создавать SPA с React и Redux..."],
+            eng: ["Learn to build SPAs with React and Redux..."]
+        },
+        time: {
+            rus: "25-35 часов",
+            eng: "25-35 hours"
+        },
+        amountLessons: 22,
+        freeLesson: "ссылка на урок"
+    },
+    {
+        title: {
+            rus: "Python",
+            eng: "Master Python"
+        },
+        descriptionUp: {
+            rus: "Освойте один из самых востребованных языков программирования с нуля.",
+            eng: "Master one of the most in-demand programming languages from scratch."
+        },
+        descriptionDown: {
+            rus: "Начните программировать на Python уже сегодня!",
+            eng: "Start coding in Python today!"
+        },
+        svgCode: `...`,
+        cost: 21000,
+        popularity: 350,
+        MMR: 4.9,
+        releasesData: "01.08.2025",
+        isProfession: true,
+        who: {
+            rus: ["Новички", "Разработчики"],
+            eng: ["Beginners", "Developers"]
+        },
+        whatNeed: {
+            rus: ["ПК", "Желание учиться"],
+            eng: ["PC", "Desire to learn"]
+        },
+        fullText: {
+            rus: ["Изучите основы Python, ООП, работу с библиотеками..."],
+            eng: ["Learn Python basics, OOP, working with libraries..."]
+        },
+        time: {
+            rus: "30-40 часов",
+            eng: "30-40 hours"
+        },
+        amountLessons: 25,
+        freeLesson: "ссылка на урок"
+    }
+];
 
 export default coursesData;

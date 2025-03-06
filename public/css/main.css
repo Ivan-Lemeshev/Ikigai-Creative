@@ -3092,16 +3092,34 @@
 }
 
 #wrapper-for-course-img-bottom {
-    background: linear-gradient(162.95deg, rgba(232, 232, 232, 0.08) 7.55%, rgba(232, 232, 232, 0.4) 50.86%, rgba(232, 232, 232, 0.16) 91.28%);
-    border: 0.05208vw solid;
-    border-image-source: linear-gradient(150.82deg, #2B2B2B 6.57%, #919191 46.15%, #2B2B2B 90.74%);
+    background: linear-gradient(162.95deg, #C0D2DB 7.55%, #D7DDE1 50.86%, #D0D9DD 91.28%);
+    position: absolute;
+    top: 32.1vw;
+    left: 5.28229vw;
+    width: 15.25vw;
+    height: 19.3vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#border-for-course-img-bottom {
+    background: linear-gradient(150.82deg, #2B2B2B 6.57%, #919191 46.15%, #2B2B2B 90.74%);
     position: absolute;
     top: 31.97917vw;
     left: 5.20833vw;
-    width: 15.625vw;
+    width: 15.4vw;
     height: 19.47917vw;
-    opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    z-index: 0;
+}
+
+#course-img-bottom {
+    width: 10.41667vw;
+    height: 10.41667vw;
 }
 
 #bottom-curse-name {
