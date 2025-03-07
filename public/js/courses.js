@@ -80,6 +80,17 @@ const coursesData = [
             rus: "20-30 часов",
             eng: "20-30 hours"
         },
+        label: {
+            rus: ["IT",
+                "Востребованный",
+                "Легкий старт"
+            ],
+            eng: [
+                "IT",
+                "In demand",
+                "Easy start"
+            ]
+        },
         amountLessons: 20,
         freeLesson: "ссылка на урок"
     },
@@ -139,6 +150,17 @@ const coursesData = [
             eng: "15-20 hours"
         },
         amountLessons: 10,
+        label: {
+            rus: ["IT",
+                "Востребованный",
+                "Легкий старт"
+            ],
+            eng: [
+                "IT",
+                "In demand",
+                "Easy start"
+            ]
+        },
         freeLesson: "ссылка на урок"
     },
 
@@ -178,6 +200,17 @@ const coursesData = [
             eng: "12-18 hours"
         },
         amountLessons: 12,
+        label: {
+            rus: ["IT",
+                "Востребованный",
+                "Легкий старт"
+            ],
+            eng: [
+                "IT",
+                "In demand",
+                "Easy start"
+            ]
+        },
         freeLesson: "ссылка на урок"
     },
     {
@@ -216,6 +249,17 @@ const coursesData = [
             eng: "25-35 hours"
         },
         amountLessons: 22,
+        label: {
+            rus: ["IT",
+                "Востребованный",
+                "Легкий старт"
+            ],
+            eng: [
+                "IT",
+                "In demand",
+                "Easy start"
+            ]
+        },
         freeLesson: "ссылка на урок"
     },
     {
@@ -254,6 +298,17 @@ const coursesData = [
             eng: "30-40 hours"
         },
         amountLessons: 25,
+        label: {
+            rus: ["IT",
+                "Востребованный",
+                "Легкий старт"
+            ],
+            eng: [
+                "IT",
+                "In demand",
+                "Easy start"
+            ]
+        },
         freeLesson: "ссылка на урок"
     },
     {
@@ -291,6 +346,17 @@ const coursesData = [
             eng: "15-20 hours"
         },
         amountLessons: 15,
+        label: {
+            rus: ["IT",
+                "Востребованный",
+                "Легкий старт"
+            ],
+            eng: [
+                "IT",
+                "In demand",
+                "Easy start"
+            ]
+        },
         freeLesson: "ссылка на урок"
     },
     {
@@ -326,6 +392,17 @@ const coursesData = [
         time: {
             rus: "25-35 часов",
             eng: "25-35 hours"
+        },
+        label: {
+            rus: ["IT",
+                "Востребованный",
+                "Легкий старт"
+            ],
+            eng: [
+                "IT",
+                "In demand",
+                "Easy start"
+            ]
         },
         amountLessons: 18,
         freeLesson: "ссылка на урок"
@@ -379,9 +456,20 @@ const coursesData = [
             eng: "15-25 hours"
         },
         amountLessons: 15,
+        label: {
+            rus: ["IT",
+                "Востребованный",
+                "Легкий старт"
+            ],
+            eng: [
+                "IT",
+                "In demand",
+                "Easy start"
+            ]
+        },
         freeLesson: "ссылка на бесплатный урок"
     }
-    
+
 ];
 
 export default coursesData;

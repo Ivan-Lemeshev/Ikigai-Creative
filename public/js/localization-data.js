@@ -45,16 +45,6 @@ const localizationWrapper = {
         eng: "Courses",
     },
 
-    "third-section-title": {
-        rus: "Наши",
-        eng: "Our",
-    },
-
-    "third-section-title": {
-        rus: "Наши",
-        eng: "Our",
-    },
-
     "third-section-main-content-right-part-title": {
         rus: "Креативный дизайн",
         eng: "Creative design",
@@ -899,6 +889,46 @@ const localizationWrapper = {
     "mv-send-to-application-main-content-text": {
         rus: "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд...",
         eng: "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds...",     
+    },
+
+    "courses-navigation-most-popular": {
+        rus: "Популярные",
+        eng: "Most popular",     
+    },
+
+    "courses-navigation-best-reviews": {
+        rus: "Лучшие отзывы",
+        eng: "Best by reviews",     
+    },
+
+    "courses-navigation-recent-releases": {
+        rus: "Недавние релизы",
+        eng: "Recent releases",     
+    },
+
+    "courses-navigation-specialization-courses": {
+        rus: "Курсы профессии",
+        eng: "Specialization courses",     
+    },
+
+    "top-curse-order-button": {
+        rus: "Поступить",
+        eng: "Order",     
+    },
+
+    "bottom-curse-order-button": {
+        rus: "Поступить",
+        eng: "Order",     
+    },
+
+    "top-curse-more-button": {
+        rus: "Подробнее",
+        eng: "More",     
+    },
+
+    "bottom-curse-more-button": {
+        rus: "Подробнее",
+        eng: "More",     
     },
 }
 

@@ -5406,7 +5406,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-third-section-title": {
         styles: {
             light: {
@@ -5419,7 +5419,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-third-section-black-blocks-top": {
         styles: {
             light: {
@@ -5432,7 +5432,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-third-section-black-blocks-bottom": {
         styles: {
             light: {
@@ -5445,7 +5445,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-choice-of-service-placeholder": {
         styles: {
             light: {
@@ -5458,7 +5458,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-reviews-wrapper-text-left": {
         styles: {
             light: {
@@ -5471,7 +5471,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-reviews-wrapper-text-right": {
         styles: {
             light: {
@@ -5484,7 +5484,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-title": {
         styles: {
             light: {
@@ -5497,7 +5497,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-service-name-0": {
         styles: {
             light: {
@@ -5510,7 +5510,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-service-cost-0": {
         styles: {
             light: {
@@ -5523,7 +5523,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-service-name-1": {
         styles: {
             light: {
@@ -5536,7 +5536,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-service-cost-1": {
         styles: {
             light: {
@@ -5549,7 +5549,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-service-name-2": {
         styles: {
             light: {
@@ -5562,7 +5562,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-service-cost-2": {
         styles: {
             light: {
@@ -5575,7 +5575,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-service-name-3": {
         styles: {
             light: {
@@ -5588,7 +5588,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-service-cost-3": {
         styles: {
             light: {
@@ -5601,7 +5601,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-service-name-4": {
         styles: {
             light: {
@@ -5614,7 +5614,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-service-cost-4": {
         styles: {
             light: {
@@ -5627,7 +5627,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-service-name-5": {
         styles: {
             light: {
@@ -5640,7 +5640,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-service-cost-5": {
         styles: {
             light: {
@@ -5653,7 +5653,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-service-name-6": {
         styles: {
             light: {
@@ -5666,7 +5666,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-service-cost-6": {
         styles: {
             light: {
@@ -5679,7 +5679,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-price-list-footer": {
         styles: {
             light: {
@@ -5692,7 +5692,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "send-to-application-wrapper": {
         styles: {
             light: {
@@ -5705,7 +5705,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "send-to-application-main-content": {
         styles: {
             light: {
@@ -5718,7 +5718,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "send-to-application-main-content-title": {
         styles: {
             light: {
@@ -5731,7 +5731,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "send-to-application-main-content-text": {
         styles: {
             light: {
@@ -5744,7 +5744,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "send-to-application-main-content-text": {
         styles: {
             light: {
@@ -5757,7 +5757,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "th-send-to-application-wrapper": {
         styles: {
             light: {
@@ -5770,7 +5770,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "th-send-to-application-main-content": {
         styles: {
             light: {
@@ -5783,7 +5783,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "th-send-to-application-main-content-title": {
         styles: {
             light: {
@@ -5796,7 +5796,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "th-send-to-application-main-content-text": {
         styles: {
             light: {
@@ -5809,7 +5809,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "th-send-to-application-main-content-text": {
         styles: {
             light: {
@@ -5822,7 +5822,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-send-to-application-wrapper": {
         styles: {
             light: {
@@ -5835,7 +5835,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-send-to-application-main-content": {
         styles: {
             light: {
@@ -5848,7 +5848,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-send-to-application-main-content-title": {
         styles: {
             light: {
@@ -5861,7 +5861,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-send-to-application-main-content-text": {
         styles: {
             light: {
@@ -5874,7 +5874,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "tv-send-to-application-main-content-text": {
         styles: {
             light: {
@@ -5887,7 +5887,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "mv-send-to-application-wrapper": {
         styles: {
             light: {
@@ -5900,7 +5900,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "mv-send-to-application-main-content": {
         styles: {
             light: {
@@ -5913,7 +5913,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "mv-send-to-application-main-content-title": {
         styles: {
             light: {
@@ -5926,7 +5926,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "mv-send-to-application-main-content-text": {
         styles: {
             light: {
@@ -5939,7 +5939,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "mv-send-to-application-main-content-text": {
         styles: {
             light: {
@@ -5952,7 +5952,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "second-header-wrapper": {
         styles: {
             light: {
@@ -5965,7 +5965,7 @@ const themeWrapper = {
             }
         }
     },
-        
+
     "second-language-button-first-section": {
         styles: {
             light: {
@@ -5978,7 +5978,7 @@ const themeWrapper = {
             }
         }
     },
-        
+
     "second-theme-button-first-section": {
         styles: {
             light: {
@@ -5991,7 +5991,7 @@ const themeWrapper = {
             }
         }
     },
-        
+
     "second-navigation-button-first-section": {
         styles: {
             light: {
@@ -6004,7 +6004,7 @@ const themeWrapper = {
             }
         }
     },
-        
+
     "second-navigation-button-first-section-choice-intro-text": {
         styles: {
             light: {
@@ -6017,7 +6017,7 @@ const themeWrapper = {
             }
         }
     },
-        
+
     "second-navigation-button-first-section-choice-info-text": {
         styles: {
             light: {
@@ -6030,7 +6030,7 @@ const themeWrapper = {
             }
         }
     },
-        
+
     "second-navigation-button-first-section-choice-services-text": {
         styles: {
             light: {
@@ -6043,7 +6043,7 @@ const themeWrapper = {
             }
         }
     },
-        
+
     "second-navigation-button-first-section-choice-contacts-text": {
         styles: {
             light: {
@@ -6056,7 +6056,7 @@ const themeWrapper = {
             }
         }
     },
-        
+
     "second-navigation-button-first-section-choice-reviews-text": {
         styles: {
             light: {
@@ -6069,7 +6069,7 @@ const themeWrapper = {
             }
         }
     },
-        
+
     "second-language-button-first-section-choice-eng-text": {
         styles: {
             light: {
@@ -6082,7 +6082,7 @@ const themeWrapper = {
             }
         }
     },
-        
+
     "second-language-button-first-section-choice-rus-text": {
         styles: {
             light: {
@@ -6095,7 +6095,7 @@ const themeWrapper = {
             }
         }
     },
-        
+
     "second-theme-button-first-section-choice-light-text": {
         styles: {
             light: {
@@ -6108,7 +6108,7 @@ const themeWrapper = {
             }
         }
     },
-        
+
     "second-theme-button-first-section-choice-dark-text": {
         styles: {
             light: {
@@ -6121,6 +6121,205 @@ const themeWrapper = {
             }
         }
     },
+
+    "courses-navigation": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(90.06deg, rgba(43, 43, 43, 0.04) 0.02%, rgba(255, 255, 255, 0.16) 45.87%, rgba(43, 43, 43, 0.06) 99.97%),
+                linear-gradient(342.54deg, rgba(43, 43, 43, 0.02) 12.67%, rgba(255, 255, 255, 0.06) 48.7%, rgba(43, 43, 43, 0.04) 88.75%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(90.06deg, rgba(28, 28, 28, 0.04) 0.02%, rgba(0, 0, 0, 0.16) 45.87%, rgba(28, 28, 28, 0.06) 99.97%),
+                linear-gradient(342.54deg, rgba(28, 28, 28, 0.02) 12.67%, rgba(0, 0, 0, 0.06) 48.7%, rgba(28, 28, 28, 0.04) 88.75%)`
+            }
+        }
+    },
+
+    "courses-navigation-most-popular": {
+        styles: {
+            light: {
+                color: "#000000",
+                background: ``
+            },
+            dark: {
+                color: "#FFFFFF",
+                background: ``
+            }
+        }
+    },
+
+    "courses-navigation-best-reviews": {
+        styles: {
+            light: {
+                color: "#000000",
+                background: ``
+            },
+            dark: {
+                color: "#FFFFFF",
+                background: ``
+            }
+        }
+    },
+
+    "courses-navigation-recent-releases": {
+        styles: {
+            light: {
+                color: "#000000",
+                background: ``
+            },
+            dark: {
+                color: "#FFFFFF",
+                background: ``
+            }
+        }
+    },
+
+    "courses-navigation-specialization-courses": {
+        styles: {
+            light: {
+                color: "#000000",
+                background: ``
+            },
+            dark: {
+                color: "#FFFFFF",
+                background: ``
+            }
+        }
+    },
+
+    "courses-top-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(90deg, rgba(46, 46, 46, 0.01) 0%, rgba(46, 46, 46, 0.1) 20.93%, rgba(46, 46, 46, 0.2) 57.66%, rgba(46, 46, 46, 0.2) 96.27%, rgba(46, 46, 46, 0.03) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(90deg, rgba(214, 214, 214, 0.01) 0%, rgba(214, 214, 214, 0.1) 20.93%, rgba(214, 214, 214, 0.2) 57.66%, rgba(214, 214, 214, 0.2) 96.27%, rgba(214, 214, 214, 0.03) 100%)`
+            }
+        }
+    },
+    
+    "courses-middle-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(90deg, rgba(46, 46, 46, 0.01) 0%, rgba(46, 46, 46, 0.4) 7.82%, rgba(46, 46, 46, 0.06) 27.47%, rgba(46, 46, 46, 0.02) 52.12%, rgba(46, 46, 46, 0.1) 54.97%, rgba(46, 46, 46, 0.02) 57.66%, rgba(46, 46, 46, 0.06) 82.41%, rgba(46, 46, 46, 0.3) 90.71%, rgba(46, 46, 46, 0.01) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(90deg, rgba(214, 214, 214, 0.01) 0%, rgba(214, 214, 214, 0.4) 7.82%, rgba(214, 214, 214, 0.06) 27.47%, rgba(214, 214, 214, 0.02) 52.12%, rgba(214, 214, 214, 0.1) 54.97%, rgba(214, 214, 214, 0.02) 57.66%, rgba(214, 214, 214, 0.06) 82.41%, rgba(214, 214, 214, 0.3) 90.71%, rgba(214, 214, 214, 0.01) 100%)`
+            }
+        }
+    },
+
+    "top-curse-name": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "top-curse-upper-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "top-curse-lower-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "bottom-curse-name": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "bottom-curse-upper-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "bottom-curse-lower-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "wrapper-for-course-img-top": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(162.95deg, #8CB9CF 7.55%, #B1CCD9 50.86%, #B3CCD8 91.28%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(162.95deg, rgba(28, 28, 28, 0.08) 7.55%, rgba(28, 28, 28, 0.4) 50.86%, rgba(28, 28, 28, 0.16) 91.28%)`
+            }
+        }
+    },
+
+    "wrapper-for-course-img-bottom": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(162.95deg, #C0D2DB 7.55%, #D7DDE1 50.86%, #D0D9DD 91.28%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(162.95deg, rgba(28, 28, 28, 0.08) 7.55%, rgba(28, 28, 28, 0.4) 50.86%, rgba(28, 28, 28, 0.16) 91.28%)`
+            }
+        }
+    },
+
+
 
 }
 

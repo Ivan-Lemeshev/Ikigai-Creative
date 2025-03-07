@@ -3044,7 +3044,7 @@
     top: 8.69792vw;
     left: 26.04167vw;
     width: 46.66667vw;
-    height: 7vw;
+    height: min-content;
     font-weight: 400;
     font-size: 1.25vw;
     letter-spacing: 0.1em;
@@ -3059,7 +3059,22 @@
     top: 18.38542vw;
     left: 26.04167vw;
     width: 46.66667vw;
-    height: auto;
+    height: min-content;
+    font-weight: 400;
+    font-size: 1.25vw;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+    line-height: 1.75vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#curse-more-button-down-text {   
+    position: absolute;
+    top: 33.19792vw;
+    left: 26.04167vw;
+    width: 46.66667vw;
+    height: min-content;
     font-weight: 400;
     font-size: 1.25vw;
     letter-spacing: 0.1em;
@@ -3255,4 +3270,83 @@
     overflow: visible;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+}
+
+.label-content {
+    width: fit-content;
+    background: var(--dtSeparationLine);
+    font-weight: 400;
+    font-size: 1.25vw;
+    letter-spacing: 0.1em;
+    color: var(--dtText);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.52083vw;
+    padding-right: 0.52083vw;
+    border-radius: 0.52083vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#label-1 {
+    margin-left: 42.1875vw;
+    margin-top: 5.36146vw;
+}
+
+#label-2{
+    margin-left: 45.41667vw;
+    margin-top: -1.6vw;
+}
+
+#label-3{
+    margin-left: 54.47917vw;
+    margin-top: -1.7vw;
+}
+
+.course-more-buttons {
+    width: 15.625vw;
+    height: 2.8125vw;
+    position: absolute;
+    left: 5.20833vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.45833vw;
+    letter-spacing: 0.1em;
+    color: var(--dtText);
+    background: var(--dtSeparationLine);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+}
+
+#course-more-study-button {
+    top: 26.25vw;
+}
+
+#course-more-counselling-button {
+    top: 30.10417vw;
+}
+
+#course-more-review-button {
+    top: 33.95833vw;
+}   
+
+#course-more-button-close {
+    width: 2.60417vw;
+    height: 2.60417vw;
+    position: absolute;
+    top: 4.63542vw;
+    right: 7.13542vw;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1 !important;
+    }
 }

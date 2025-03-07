@@ -1966,10 +1966,20 @@ const topCurseOrderButton = document.getElementById("top-curse-order-button");
 const topCurseMoreButton = document.getElementById("top-curse-more-button");
 const bottomCurseOrderButton = document.getElementById("bottom-curse-order-button");
 const bottomCurseMoreButton = document.getElementById("bottom-curse-more-button");
+const borderForCourseImgBottom = document.getElementById("border-for-course-img-bottom");
 const numberOfPage1 = document.getElementById("number-of-page-1");
 const numberOfPage2 = document.getElementById("number-of-page-2");
 const numberOfPage3 = document.getElementById("number-of-page-3");
 const numberOfPage4 = document.getElementById("number-of-page-4");
+const numberOfPageWrapper = document.getElementById("number-of-page");
+const label1 = document.getElementById("label-1");
+const label2 = document.getElementById("label-2");
+const label3 = document.getElementById("label-3");
+const courseMoreStudyButton = document.getElementById("course-more-study-button");
+const courseMoreCounsellingButton = document.getElementById("course-more-counselling-button");
+const courseMoreReviewButton = document.getElementById("course-more-review-button");
+const courseMoreCloseButton = document.getElementById("course-more-button-close");
+const courseMoreButtonDownText = document.getElementById("curse-more-button-down-text");
 let course = false;
 
 thirdSectionTitleCourses.addEventListener('click', () => {
@@ -1985,13 +1995,21 @@ thirdSectionTitleCourses.addEventListener('click', () => {
                 setTimeout(() => {
                     thirdSectionTitleServices.style.opacity = "0";
                     thirdSectionTitleCourses.style.opacity = "1";
-                    thirdSectionTitleCourses.style.left = "11.40625vw";
-                    thirdSectionTitleCourses.textContent = "courses";
+                    thirdSectionTitleCourses.style.left = "13.40625vw";
+                    if (selectLang === "eng") {
+                        thirdSectionTitleCourses.textContent = "courses"
+                    } else {
+                        thirdSectionTitleCourses.textContent = "курсы"
+                    }
                     thirdSectionMainContent.style.opacity = "0";
                     thirdSectionLowerPart.style.opacity = "0";
                     setTimeout(() => {
                         thirdSectionTitleServices.style.left = "27.34375vw";
-                        thirdSectionTitleServices.textContent = "Services";
+                        if (selectLang === "eng") {
+                            thirdSectionTitleServices.textContent = "Services"
+                        } else {
+                            thirdSectionTitleServices.textContent = "Услуги"
+                        }
                         thirdSectionMainContent.style.display = "none";
                         thirdSectionLowerPart.style.display = "none";
                         coursesNavigation.style.display = "flex";
@@ -2022,7 +2040,6 @@ thirdSectionTitleCourses.addEventListener('click', () => {
                                                         wrapperCourseImgTop.style.opacity = "1";
                                                         wrapperCourseImgBottom.style.opacity = "1";
                                                         setTimeout(() => {
-                                                            // добавить свг
                                                             topCurseName.style.opacity = "1";
                                                             bottomCurseName.style.opacity = "1";
                                                             setTimeout(() => {
@@ -2082,15 +2099,23 @@ thirdSectionTitleServices.addEventListener('click', () => {
                 setTimeout(() => {
                     thirdSectionTitleCourses.style.opacity = "0";
                     thirdSectionTitleServices.style.opacity = "1";
-                    thirdSectionTitleServices.style.left = "11.40625vw";
-                    thirdSectionTitleServices.textContent = "services"
+                    thirdSectionTitleServices.style.left = "13.40625vw";
+                    if (selectLang === "eng") {
+                        thirdSectionTitleServices.textContent = "services"
+                    } else {
+                        thirdSectionTitleServices.textContent = "услуги"
+                    }
                     coursesNavigation.style.opacity = "";
                     coursesMainContent.style.opacity = "";
                     thirdSectionMainContent.style.display = "";
                     thirdSectionLowerPart.style.display = "";
                     setTimeout(() => {
                         thirdSectionTitleCourses.style.left = "27.34375vw";
-                        thirdSectionTitleCourses.textContent = "Courses"
+                        if (selectLang === "eng") {
+                            thirdSectionTitleCourses.textContent = "Courses"
+                        } else {
+                            thirdSectionTitleCourses.textContent = "Курсы"
+                        }
                         coursesNavigation.style.display = "";
                         coursesMainContent.style.display = "";
                         setTimeout(() => {
@@ -2116,7 +2141,6 @@ thirdSectionTitleServices.addEventListener('click', () => {
 let sortedArray = []
 
 sortedArray = [...coursesData];
-
 
 let numberOfPage = 1;
 
@@ -2152,6 +2176,43 @@ const visualVitrine = () => {
 
 visualVitrine()
 
+topCurseMoreButton.addEventListener('click', () => {
+    setTimeout(() => {
+        topCurseUpperText.style.opacity = "";
+        topCurseLowerText.style.opacity = "";
+        coursesMiddleLine.style.opacity = "";
+        topCurseOrderButton.style.opacity = "";
+        topCurseMoreButton.style.opacity = "";
+        bottomCurseUpperText.style.opacity = "";
+        bottomCurseLowerText.style.opacity = "";
+        wrapperCourseImgBottom.style.opacity = "";
+        bottomCurseUpperText.style.opacity = "";
+        bottomCurseLowerText.style.opacity = "";
+        bottomCurseOrderButton.style.opacity = "";
+        bottomCurseMoreButton.style.opacity = "";
+        bottomCurseName.style.opacity = "";
+        borderForCourseImgBottom.style.opacity = "0";
+        numberOfPageWrapper.style.opacity = "0";
+        label1.style.opacity = "1";
+        label2.style.opacity = "1";
+        label3.style.opacity = "1";
+        courseMoreButtonDownText.style.opacity = "1";
+        courseMoreStudyButton.style.display = "flex";
+        courseMoreCounsellingButton.style.display = "flex";
+        courseMoreReviewButton.style.display = "flex";
+        courseMoreCloseButton.style.display = "block";
+        setTimeout(() => {
+            courseMoreStudyButton.style.opacity = "1";
+            courseMoreCounsellingButton.style.opacity = "1";
+            courseMoreReviewButton.style.opacity = "1";
+            courseMoreCloseButton.style.opacity = "0.7";
+            topCurseOrderButton.style.display = "none";
+            topCurseMoreButton.style.display = "none";
+            bottomCurseOrderButton.style.display = "none";
+            bottomCurseMoreButton.style.display = "none";
+        }, 300);
+    }, 1);
+})
 
 numberOfPage1.addEventListener('click', () => {
     numberOfPage1.style.opacity = "1";
@@ -2168,6 +2229,10 @@ numberOfPage1.addEventListener('click', () => {
         bottomCurseLowerText.style.opacity = "0";
         wrapperCourseImgBottom.style.opacity = "0";
         wrapperCourseImgTop.style.opacity = "0";
+        topCurseOrderButton.style.opacity = "0";
+        topCurseMoreButton.style.opacity = "0";
+        bottomCurseOrderButton.style.opacity = "0";
+        bottomCurseMoreButton.style.opacity = "0";
         setTimeout(() => {
             visualVitrine();
             setTimeout(() => {
@@ -2179,6 +2244,10 @@ numberOfPage1.addEventListener('click', () => {
                 bottomCurseLowerText.style.opacity = "1";
                 wrapperCourseImgBottom.style.opacity = "1";
                 wrapperCourseImgTop.style.opacity = "1";
+                topCurseOrderButton.style.opacity = "1";
+                topCurseMoreButton.style.opacity = "1";
+                bottomCurseOrderButton.style.opacity = "1";
+                bottomCurseMoreButton.style.opacity = "1";
             }, 300);
         }, 300);
     }, 1);
@@ -2199,6 +2268,10 @@ numberOfPage2.addEventListener('click', () => {
         bottomCurseLowerText.style.opacity = "0";
         wrapperCourseImgBottom.style.opacity = "0";
         wrapperCourseImgTop.style.opacity = "0";
+        topCurseOrderButton.style.opacity = "0";
+        topCurseMoreButton.style.opacity = "0";
+        bottomCurseOrderButton.style.opacity = "0";
+        bottomCurseMoreButton.style.opacity = "0";
         setTimeout(() => {
             visualVitrine();
             setTimeout(() => {
@@ -2210,6 +2283,10 @@ numberOfPage2.addEventListener('click', () => {
                 bottomCurseLowerText.style.opacity = "1";
                 wrapperCourseImgBottom.style.opacity = "1";
                 wrapperCourseImgTop.style.opacity = "1";
+                topCurseOrderButton.style.opacity = "1";
+                topCurseMoreButton.style.opacity = "1";
+                bottomCurseOrderButton.style.opacity = "1";
+                bottomCurseMoreButton.style.opacity = "1";
             }, 300);
         }, 300);
     }, 1);
@@ -2230,6 +2307,10 @@ numberOfPage3.addEventListener('click', () => {
         bottomCurseLowerText.style.opacity = "0";
         wrapperCourseImgBottom.style.opacity = "0";
         wrapperCourseImgTop.style.opacity = "0";
+        topCurseOrderButton.style.opacity = "0";
+        topCurseMoreButton.style.opacity = "0";
+        bottomCurseOrderButton.style.opacity = "0";
+        bottomCurseMoreButton.style.opacity = "0";
         setTimeout(() => {
             visualVitrine();
             setTimeout(() => {
@@ -2241,6 +2322,10 @@ numberOfPage3.addEventListener('click', () => {
                 bottomCurseLowerText.style.opacity = "1";
                 wrapperCourseImgBottom.style.opacity = "1";
                 wrapperCourseImgTop.style.opacity = "1";
+                topCurseOrderButton.style.opacity = "1";
+                topCurseMoreButton.style.opacity = "1";
+                bottomCurseOrderButton.style.opacity = "1";
+                bottomCurseMoreButton.style.opacity = "1";
             }, 300);
         }, 300);
     }, 1);
@@ -2261,6 +2346,10 @@ numberOfPage4.addEventListener('click', () => {
         bottomCurseLowerText.style.opacity = "0";
         wrapperCourseImgBottom.style.opacity = "0";
         wrapperCourseImgTop.style.opacity = "0";
+        topCurseOrderButton.style.opacity = "0";
+        topCurseMoreButton.style.opacity = "0";
+        bottomCurseOrderButton.style.opacity = "0";
+        bottomCurseMoreButton.style.opacity = "0";
         setTimeout(() => {
             visualVitrine();
             setTimeout(() => {
@@ -2272,6 +2361,10 @@ numberOfPage4.addEventListener('click', () => {
                 bottomCurseLowerText.style.opacity = "1";
                 wrapperCourseImgBottom.style.opacity = "1";
                 wrapperCourseImgTop.style.opacity = "1";
+                topCurseOrderButton.style.opacity = "1";
+                topCurseMoreButton.style.opacity = "1";
+                bottomCurseOrderButton.style.opacity = "1";
+                bottomCurseMoreButton.style.opacity = "1";
             }, 300);
         }, 300);
     }, 1);
@@ -2292,6 +2385,10 @@ coursesNavigationMostPopular.addEventListener('click', () => {
         bottomCurseLowerText.style.opacity = "0";
         wrapperCourseImgBottom.style.opacity = "0";
         wrapperCourseImgTop.style.opacity = "0";
+        topCurseOrderButton.style.opacity = "0";
+        topCurseMoreButton.style.opacity = "0";
+        bottomCurseOrderButton.style.opacity = "0";
+        bottomCurseMoreButton.style.opacity = "0";
         setTimeout(() => {
             visualVitrine();
             setTimeout(() => {
@@ -2303,6 +2400,10 @@ coursesNavigationMostPopular.addEventListener('click', () => {
                 bottomCurseLowerText.style.opacity = "1";
                 wrapperCourseImgBottom.style.opacity = "1";
                 wrapperCourseImgTop.style.opacity = "1";
+                topCurseOrderButton.style.opacity = "1";
+                topCurseMoreButton.style.opacity = "1";
+                bottomCurseOrderButton.style.opacity = "1";
+                bottomCurseMoreButton.style.opacity = "1";
             }, 300);
         }, 300);
     }, 1);
@@ -2323,6 +2424,10 @@ coursesNavigationBestReviews.addEventListener('click', () => {
         bottomCurseLowerText.style.opacity = "0";
         wrapperCourseImgBottom.style.opacity = "0";
         wrapperCourseImgTop.style.opacity = "0";
+        topCurseOrderButton.style.opacity = "0";
+        topCurseMoreButton.style.opacity = "0";
+        bottomCurseOrderButton.style.opacity = "0";
+        bottomCurseMoreButton.style.opacity = "0";
         setTimeout(() => {
             visualVitrine();
             setTimeout(() => {
@@ -2334,6 +2439,10 @@ coursesNavigationBestReviews.addEventListener('click', () => {
                 bottomCurseLowerText.style.opacity = "1";
                 wrapperCourseImgBottom.style.opacity = "1";
                 wrapperCourseImgTop.style.opacity = "1";
+                topCurseOrderButton.style.opacity = "1";
+                topCurseMoreButton.style.opacity = "1";
+                bottomCurseOrderButton.style.opacity = "1";
+                bottomCurseMoreButton.style.opacity = "1";
             }, 300);
         }, 300);
     }, 1);
@@ -2355,6 +2464,10 @@ coursesNavigationRecentReleases.addEventListener('click', () => {
         bottomCurseLowerText.style.opacity = "0";
         wrapperCourseImgBottom.style.opacity = "0";
         wrapperCourseImgTop.style.opacity = "0";
+        topCurseOrderButton.style.opacity = "0";
+        topCurseMoreButton.style.opacity = "0";
+        bottomCurseOrderButton.style.opacity = "0";
+        bottomCurseMoreButton.style.opacity = "0";
         setTimeout(() => {
             visualVitrine();
             setTimeout(() => {
@@ -2366,6 +2479,10 @@ coursesNavigationRecentReleases.addEventListener('click', () => {
                 bottomCurseLowerText.style.opacity = "1";
                 wrapperCourseImgBottom.style.opacity = "1";
                 wrapperCourseImgTop.style.opacity = "1";
+                topCurseOrderButton.style.opacity = "1";
+                topCurseMoreButton.style.opacity = "1";
+                bottomCurseOrderButton.style.opacity = "1";
+                bottomCurseMoreButton.style.opacity = "1";
             }, 300);
         }, 300);
     }, 1);
@@ -2387,6 +2504,10 @@ coursesNavigationSpecializationCourses.addEventListener('click', () => {
         bottomCurseLowerText.style.opacity = "0";
         wrapperCourseImgBottom.style.opacity = "0";
         wrapperCourseImgTop.style.opacity = "0";
+        topCurseOrderButton.style.opacity = "0";
+        topCurseMoreButton.style.opacity = "0";
+        bottomCurseOrderButton.style.opacity = "0";
+        bottomCurseMoreButton.style.opacity = "0";
         setTimeout(() => {
             visualVitrine();
             setTimeout(() => {
@@ -2398,6 +2519,10 @@ coursesNavigationSpecializationCourses.addEventListener('click', () => {
                 bottomCurseLowerText.style.opacity = "1";
                 wrapperCourseImgBottom.style.opacity = "1";
                 wrapperCourseImgTop.style.opacity = "1";
+                topCurseOrderButton.style.opacity = "1";
+                topCurseMoreButton.style.opacity = "1";
+                bottomCurseOrderButton.style.opacity = "1";
+                bottomCurseMoreButton.style.opacity = "1";
             }, 300);
         }, 300);
     }, 1);
