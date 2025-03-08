@@ -3399,3 +3399,117 @@
     left: 5.20833vw;
     z-index: 1;
 }
+
+#course-button-more-first-question {
+    width: 0.9375vw;
+    height: 1.5625vw;
+    overflow: visible;
+    position: absolute;
+    bottom: 10.98958vw;
+    left: 30.98958vw;
+    color: var(--ltText);
+    font-weight: 400;
+    font-size: 1.35417vw;
+}
+
+#course-button-more-first-question-text {
+    width: 25.88542vw;
+    height: 1.92708vw;
+    overflow: visible;
+    position: absolute;
+    bottom: 10.83333vw;
+    left: 39.79167vw;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+    font-weight: 350;
+    font-size: 1.25vw;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+    text-align: right;
+}
+
+#course-button-more-first-question-svg {
+    width: 1.875vw;
+    height: 1.875vw;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    right: 12.65625vw;
+    bottom: 10.83333vw;
+}
+
+#course-button-more-second-question {
+    width: 0.9375vw;
+    height: 1.5625vw;
+    overflow: visible;
+    position: absolute;
+    bottom: 7.86458vw;
+    left: 33.33333vw;
+    color: var(--ltText);
+    font-weight: 400;
+    font-size: 1.35417vw;
+}
+
+#course-button-more-second-question-text {
+    width: 24.01042vw;
+    height: 1.92708vw;
+    overflow: visible;
+    position: absolute;
+    bottom: 7.70833vw;
+    left: 41.875vw;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+    font-weight: 350;
+    font-size: 1.25vw;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+    text-align: right;
+}
+
+#course-button-more-second-question-svg {
+    width: 1.875vw;
+    height: 1.875vw;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    right: 12.65625vw;
+    bottom: 7.70833vw;
+}
+
+#course-button-more-third-question {
+    width: 0.9375vw;
+    height: 1.5625vw;
+    overflow: visible;
+    position: absolute;
+    bottom: 4.73958vw;
+    left: 35.57292vw;
+    color: var(--ltText);
+    font-weight: 400;
+    font-size: 1.35417vw;
+}
+
+#course-button-more-third-question-text {
+    width: 24.01042vw;
+    height: 1.92708vw;
+    overflow: visible;
+    position: absolute;
+    bottom: 4.58333vw;
+    left: 41.875vw;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+    font-weight: 350;
+    font-size: 1.25vw;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+    text-align: right;
+}
+
+#course-button-more-third-question-svg {
+    width: 1.875vw;
+    height: 1.875vw;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    right: 12.65625vw;
+    bottom: 4.58333vw;
+}
