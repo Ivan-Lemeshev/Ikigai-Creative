@@ -2979,6 +2979,7 @@
     height: 61.875vw;
     display: none;
     opacity: 0;
+    z-index: 0;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -3174,6 +3175,7 @@
 
 #top-curse-order-button {
     width: 15.625vw;
+    z-index: 2;
     height: 2.8125vw;
     background: var(--dtSeparationLine);
     display: flex;
@@ -3193,6 +3195,7 @@
 
 #top-curse-more-button {
     width: 15.625vw;
+    z-index: 2;
     height: 2.8125vw;
     background: var(--dtSeparationLine);
     display: flex;
@@ -3225,6 +3228,7 @@
     top: 48.64583vw;
     left: 26.04167vw;
     cursor: pointer;
+    z-index: 2;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
@@ -3245,6 +3249,7 @@
     left: 44.79167vw;
     cursor: pointer;
     opacity: 0;
+    z-index: 2;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -3346,8 +3351,51 @@
     display: none;
     transition: opacity 0.3s ease-in-out;
     cursor: pointer;
+    z-index: 2;
 
     &:hover {
         opacity: 1 !important;
     }
+}
+
+#course-button-more-question-mark {
+    position: absolute;
+    top: 45.375vw;
+    left: 28.64583vw;
+    width: 1.04167vw;
+    height: 1.92708vw;
+    overflow: visible;
+    font-weight: 400;
+    font-size: 2.08333vw;
+    color: var(--ltText);
+}
+
+#course-button-more-question-text {
+    position: absolute;
+    top: 45.98958vw;
+    left: 35.36458vw;
+    width: 30.3125vw;
+    height: 1.92708vw;
+    font-weight: 400;
+    font-size: 1.35417vw;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+    text-align: right;
+}
+
+#course-button-more-question-svg {
+    width: 1.875vw;
+    height: 1.875vw;
+    position: absolute;
+    top: 46.04167vw;
+    right: 12.65625vw;
+}
+
+#button-more-main-svg {
+    width: 75vw;
+    height: 57.70833vw;
+    position: absolute;
+    top: 2.08333vw;
+    left: 5.20833vw;
+    z-index: 1;
 }
