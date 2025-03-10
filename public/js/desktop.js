@@ -1980,6 +1980,20 @@ const courseMoreCounsellingButton = document.getElementById("course-more-counsel
 const courseMoreReviewButton = document.getElementById("course-more-review-button");
 const courseMoreCloseButton = document.getElementById("course-more-button-close");
 const courseMoreButtonDownText = document.getElementById("curse-more-button-down-text");
+const buttonMoreMainSvg = document.getElementById("button-more-main-svg");
+const courseButtonMoreQuestionMark = document.getElementById("course-button-more-question-mark");
+const courseButtonMoreQuestionText = document.getElementById("course-button-more-question-text");
+const courseButtonMoreQuestionSvg = document.getElementById("course-button-more-question-svg");
+const courseButtonMoreFirstQuestion = document.getElementById("course-button-more-first-question");
+const courseButtonMoreFirstQuestionText = document.getElementById("course-button-more-first-question-text");
+const courseButtonMoreFirstQuestionSvg = document.getElementById("course-button-more-first-question-svg");
+const courseButtonMoreSecondQuestion = document.getElementById("course-button-more-second-question");
+const courseButtonMoreSecondQuestionText = document.getElementById("course-button-more-second-question-text");
+const courseButtonMoreSecondQuestionSvg = document.getElementById("course-button-more-second-question-svg");
+const courseButtonMoreThirdQuestion = document.getElementById("course-button-more-third-question");
+const courseButtonMoreThirdQuestionText = document.getElementById("course-button-more-third-question-text");
+const courseButtonMoreThirdQuestionSvg = document.getElementById("course-button-more-third-question-svg");
+
 let course = false;
 
 thirdSectionTitleCourses.addEventListener('click', () => {
@@ -2200,22 +2214,104 @@ topCurseMoreButton.addEventListener('click', () => {
         label1.style.opacity = "1";
         label2.style.opacity = "1";
         label3.style.opacity = "1";
-        courseMoreButtonDownText.style.opacity = "1";
         courseMoreStudyButton.style.display = "flex";
         courseMoreCounsellingButton.style.display = "flex";
         courseMoreReviewButton.style.display = "flex";
         courseMoreCloseButton.style.display = "block";
         setTimeout(() => {
+            topCurseLowerText.style.top = "20.94792vw";
             courseMoreStudyButton.style.opacity = "1";
             courseMoreCounsellingButton.style.opacity = "1";
+            buttonMoreMainSvg.style.opacity = "1";
             courseMoreReviewButton.style.opacity = "1";
             courseMoreCloseButton.style.opacity = "0.7";
             topCurseOrderButton.style.display = "none";
             topCurseMoreButton.style.display = "none";
             bottomCurseOrderButton.style.display = "none";
             bottomCurseMoreButton.style.display = "none";
+            courseButtonMoreQuestionMark.style.opacity = "1";
+            courseButtonMoreQuestionText.style.opacity = "1";
+            courseButtonMoreQuestionSvg.style.opacity = "1";
+            courseButtonMoreFirstQuestion.style.opacity = "0.8";
+            courseButtonMoreFirstQuestionText.style.opacity = "0.8";
+            courseButtonMoreFirstQuestionSvg.style.opacity = "0.8";
+            courseButtonMoreSecondQuestion.style.opacity = "0.8";
+            courseButtonMoreSecondQuestionText.style.opacity = "0.8";
+            courseButtonMoreSecondQuestionSvg.style.opacity = "0.8";
+            courseButtonMoreThirdQuestion.style.opacity = "0.8";
+            courseButtonMoreThirdQuestionText.style.opacity = "0.8";
+            courseButtonMoreThirdQuestionSvg.style.opacity = "0.8";
+            topCurseUpperText.textContent = sortedArray[(numberOfPage - 1) * 2].fullText[selectLang][0];
+            topCurseLowerText.textContent = sortedArray[(numberOfPage - 1) * 2].fullText[selectLang][1];
+            courseMoreButtonDownText.textContent = sortedArray[(numberOfPage - 1) * 2].fullText[selectLang][2];
+            setTimeout(() => {
+                topCurseUpperText.style.opacity = "1";
+                topCurseLowerText.style.opacity = "1";
+                courseMoreButtonDownText.style.opacity = "1";
+            }, 1);
         }, 300);
     }, 1);
+})
+
+courseMoreCloseButton.addEventListener('click', () => {
+    topCurseUpperText.style.opacity = "";
+    topCurseLowerText.style.opacity = "";
+    courseMoreButtonDownText.style.opacity = "";
+    courseMoreStudyButton.style.opacity = "";
+    courseMoreCounsellingButton.style.opacity = "";
+    buttonMoreMainSvg.style.opacity = "";
+    courseMoreReviewButton.style.opacity = "";
+    courseMoreCloseButton.style.opacity = "";
+    topCurseOrderButton.style.display = "";
+    topCurseMoreButton.style.display = "";
+    bottomCurseOrderButton.style.display = "";
+    bottomCurseMoreButton.style.display = "";
+    courseButtonMoreQuestionMark.style.opacity = "";
+    courseButtonMoreQuestionText.style.opacity = "";
+    courseButtonMoreQuestionSvg.style.opacity = "";
+    courseButtonMoreFirstQuestion.style.opacity = "";
+    courseButtonMoreFirstQuestionText.style.opacity = "";
+    courseButtonMoreFirstQuestionSvg.style.opacity = "";
+    courseButtonMoreSecondQuestion.style.opacity = "";
+    courseButtonMoreSecondQuestionText.style.opacity = "";
+    courseButtonMoreSecondQuestionSvg.style.opacity = "";
+    courseButtonMoreThirdQuestion.style.opacity = "";
+    courseButtonMoreThirdQuestionText.style.opacity = "";
+    courseButtonMoreThirdQuestionSvg.style.opacity = "";
+    label1.style.opacity = "";
+    label2.style.opacity = "";
+    label3.style.opacity = "";
+    setTimeout(() => {
+        topCurseLowerText.style.top = "";
+        setTimeout(() => {
+            topCurseUpperText.style.opacity = "1";
+            topCurseLowerText.style.opacity = "1";
+            coursesMiddleLine.style.opacity = "1";
+            topCurseOrderButton.style.opacity = "1";
+            topCurseMoreButton.style.opacity = "1";
+            bottomCurseUpperText.style.opacity = "1";
+            bottomCurseLowerText.style.opacity = "1";
+            wrapperCourseImgBottom.style.opacity = "1";
+            bottomCurseUpperText.style.opacity = "1";
+            bottomCurseLowerText.style.opacity = "1";
+            bottomCurseOrderButton.style.opacity = "1";
+            bottomCurseMoreButton.style.opacity = "1";
+            bottomCurseName.style.opacity = "1";
+            borderForCourseImgBottom.style.opacity = "";
+            numberOfPageWrapper.style.opacity = "";
+            numberOfPage1.style.display = "";
+            numberOfPage2.style.display = "";
+            numberOfPage3.style.display = "";
+            numberOfPage4.style.display = "";
+            courseMoreStudyButton.style.display = "";
+            courseMoreCounsellingButton.style.display = "";
+            courseMoreReviewButton.style.display = "";
+            courseMoreCloseButton.style.display = "";
+            topCurseUpperText.textContent = sortedArray[(numberOfPage - 1) * 2].descriptionUp[selectLang];
+            topCurseLowerText.textContent = sortedArray[(numberOfPage - 1) * 2].descriptionDown[selectLang];
+            courseMoreButtonDownText.textContent = "";
+        }, 300);
+    }, 300);
 })
 
 numberOfPage1.addEventListener('click', () => {
@@ -2452,7 +2548,6 @@ coursesNavigationBestReviews.addEventListener('click', () => {
     }, 1);
 })
 
-
 coursesNavigationRecentReleases.addEventListener('click', () => {
     sortedArray.sort((a, b) => new Date(b.releasesData) - new Date(a.releasesData));
     coursesNavigationMostPopular.style.opacity = "0.7";
@@ -2532,3 +2627,115 @@ coursesNavigationSpecializationCourses.addEventListener('click', () => {
     }, 1);
 })
 
+courseButtonMoreFirstQuestionText.addEventListener('click', () => {
+    courseButtonMoreFirstQuestionText.style.opacity = "1";
+    courseButtonMoreFirstQuestion.style.opacity = "1";
+    courseButtonMoreFirstQuestionSvg.style.opacity = "1";
+    courseButtonMoreQuestionMark.style.opacity = "0.8";
+    courseButtonMoreQuestionText.style.opacity = "0.8";
+    courseButtonMoreQuestionSvg.style.opacity = "0.8";
+    courseButtonMoreSecondQuestion.style.opacity = "0.8";
+    courseButtonMoreSecondQuestionText.style.opacity = "0.8";
+    courseButtonMoreSecondQuestionSvg.style.opacity = "0.8";
+    courseButtonMoreThirdQuestion.style.opacity = "0.8";
+    courseButtonMoreThirdQuestionText.style.opacity = "0.8";
+    courseButtonMoreThirdQuestionSvg.style.opacity = "0.8";
+    topCurseUpperText.style.opacity = "";
+    topCurseLowerText.style.opacity = "";
+    courseMoreButtonDownText.style.opacity = "";
+    setTimeout(() => {
+        topCurseUpperText.textContent = sortedArray[(numberOfPage - 1) * 2].who[selectLang][0];
+        topCurseLowerText.textContent = sortedArray[(numberOfPage - 1) * 2].who[selectLang][1];
+        courseMoreButtonDownText.textContent = sortedArray[(numberOfPage - 1) * 2].who[selectLang][2];
+        setTimeout(() => {
+            topCurseUpperText.style.opacity = "1";
+            topCurseLowerText.style.opacity = "1";
+            courseMoreButtonDownText.style.opacity = "1";
+        }, 300);
+    }, 300);
+})
+
+
+courseButtonMoreSecondQuestionText.addEventListener('click', () => {
+    courseButtonMoreSecondQuestion.style.opacity = "1";
+    courseButtonMoreSecondQuestionText.style.opacity = "1";
+    courseButtonMoreSecondQuestionSvg.style.opacity = "1";
+    courseButtonMoreQuestionMark.style.opacity = "0.8";
+    courseButtonMoreQuestionText.style.opacity = "0.8";
+    courseButtonMoreQuestionSvg.style.opacity = "0.8";
+    courseButtonMoreFirstQuestionText.style.opacity = "0.8";
+    courseButtonMoreFirstQuestion.style.opacity = "0.8";
+    courseButtonMoreFirstQuestionSvg.style.opacity = "0.8";
+    courseButtonMoreThirdQuestion.style.opacity = "0.8";
+    courseButtonMoreThirdQuestionText.style.opacity = "0.8";
+    courseButtonMoreThirdQuestionSvg.style.opacity = "0.8";
+    topCurseUpperText.style.opacity = "";
+    topCurseLowerText.style.opacity = "";
+    courseMoreButtonDownText.style.opacity = "";
+    setTimeout(() => {
+        topCurseUpperText.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed[selectLang][0];
+        topCurseLowerText.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed[selectLang][1];
+        courseMoreButtonDownText.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed[selectLang][2];
+        setTimeout(() => {
+            topCurseUpperText.style.opacity = "1";
+            topCurseLowerText.style.opacity = "1";
+            courseMoreButtonDownText.style.opacity = "1";
+        }, 300);
+    }, 300);
+})
+
+courseButtonMoreThirdQuestionText.addEventListener('click', () => {
+    courseButtonMoreThirdQuestion.style.opacity = "1";
+    courseButtonMoreThirdQuestionText.style.opacity = "1";
+    courseButtonMoreThirdQuestionSvg.style.opacity = "1";
+    courseButtonMoreQuestionMark.style.opacity = "0.8";
+    courseButtonMoreQuestionText.style.opacity = "0.8";
+    courseButtonMoreQuestionSvg.style.opacity = "0.8";
+    courseButtonMoreFirstQuestion.style.opacity = "0.8";
+    courseButtonMoreFirstQuestionText.style.opacity = "0.8";
+    courseButtonMoreFirstQuestionSvg.style.opacity = "0.8";
+    courseButtonMoreSecondQuestion.style.opacity = "0.8";
+    courseButtonMoreSecondQuestionText.style.opacity = "0.8";
+    courseButtonMoreSecondQuestionSvg.style.opacity = "0.8";
+    topCurseUpperText.style.opacity = "";
+    topCurseLowerText.style.opacity = "";
+    courseMoreButtonDownText.style.opacity = "";
+    setTimeout(() => {
+        topCurseUpperText.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed[selectLang][0];
+        topCurseLowerText.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed[selectLang][1];
+        courseMoreButtonDownText.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed[selectLang][2];
+        setTimeout(() => {
+            topCurseUpperText.style.opacity = "1";
+            topCurseLowerText.style.opacity = "1";
+            courseMoreButtonDownText.style.opacity = "1";
+        }, 300);
+    }, 300);
+})
+
+courseButtonMoreQuestionText.addEventListener('click', () => {
+    courseButtonMoreQuestionText.style.opacity = "1";
+    courseButtonMoreQuestionMark.style.opacity = "1";
+    courseButtonMoreQuestionSvg.style.opacity = "1";
+    courseButtonMoreThirdQuestion.style.opacity = "0.8";
+    courseButtonMoreThirdQuestionText.style.opacity = "0.8";
+    courseButtonMoreThirdQuestionSvg.style.opacity = "0.8";
+    courseButtonMoreFirstQuestion.style.opacity = "0.8";
+    courseButtonMoreFirstQuestionText.style.opacity = "0.8";
+    courseButtonMoreFirstQuestionSvg.style.opacity = "0.8";
+    courseButtonMoreSecondQuestion.style.opacity = "0.8";
+    courseButtonMoreSecondQuestionText.style.opacity = "0.8";
+    courseButtonMoreSecondQuestionSvg.style.opacity = "0.8";
+    topCurseUpperText.style.opacity = "";
+    topCurseLowerText.style.opacity = "";
+    courseMoreButtonDownText.style.opacity = "";
+    setTimeout(() => {
+        topCurseUpperText.textContent = sortedArray[(numberOfPage - 1) * 2].fullText[selectLang][0];
+        topCurseLowerText.textContent = sortedArray[(numberOfPage - 1) * 2].fullText[selectLang][1];
+        courseMoreButtonDownText.textContent = sortedArray[(numberOfPage - 1) * 2].fullText[selectLang][2];
+        setTimeout(() => {
+            topCurseUpperText.style.opacity = "1";
+            topCurseLowerText.style.opacity = "1";
+            courseMoreButtonDownText.style.opacity = "1";
+        }, 300);
+    }, 300);
+})
