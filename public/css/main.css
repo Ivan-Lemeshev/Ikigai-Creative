@@ -3030,7 +3030,7 @@
     position: absolute;
     top: 5.20833vw;
     left: 26.04167vw;
-    width: 15.0625vw;
+    width: 20.67708vw;
     height: 1.92708vw;
     font-weight: 400;
     font-size: 1.45833vw;
@@ -3535,4 +3535,41 @@
     position: absolute;
     right: 12.65625vw;
     bottom: 4.58333vw;
+}
+
+.course-button-more-first-question-title {
+    font-weight: 400;
+    font-size: 1.25vw;
+    letter-spacing: 0.1em;
+    width: 42.70938vw;
+    height: 1.77083vw;
+    margin-left: 27.60417vw;
+    margin-top: 1.5625vw;
+    color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.course-button-more-first-question-text {
+    font-weight: 400;
+    font-size: 1.25vw;
+    letter-spacing: 0.1em;
+    width: 44.21875vw;
+    height: min-content;
+    margin-left: 27.60417vw;
+    margin-top: 0.78125vw;
+    color: var(--ltText);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#course-button-more-first-question-big-svg {
+    position: absolute;
+    top: 4.63542vw;
+    right: 13.59375vw;
+    width: 2.60417vw;
+    height: 2.60417vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }

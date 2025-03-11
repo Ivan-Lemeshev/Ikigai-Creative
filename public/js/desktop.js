@@ -1993,6 +1993,15 @@ const courseButtonMoreSecondQuestionSvg = document.getElementById("course-button
 const courseButtonMoreThirdQuestion = document.getElementById("course-button-more-third-question");
 const courseButtonMoreThirdQuestionText = document.getElementById("course-button-more-third-question-text");
 const courseButtonMoreThirdQuestionSvg = document.getElementById("course-button-more-third-question-svg");
+const courseButtonMoreFirstQuestionTitle0 = document.getElementById("course-button-more-first-question-title-0");
+const courseButtonMoreFirstQuestionText0 = document.getElementById("course-button-more-first-question-text-0");
+const courseButtonMoreFirstQuestionTitle1 = document.getElementById("course-button-more-first-question-title-1");
+const courseButtonMoreFirstQuestionText1 = document.getElementById("course-button-more-first-question-text-1");
+const courseButtonMoreFirstQuestionTitle2 = document.getElementById("course-button-more-first-question-title-2");
+const courseButtonMoreFirstQuestionText2 = document.getElementById("course-button-more-first-question-text-2");
+const courseButtonMoreFirstQuestionTitle3 = document.getElementById("course-button-more-first-question-title-3");
+const courseButtonMoreFirstQuestionText3 = document.getElementById("course-button-more-first-question-text-3");
+const courseButtonMoreFirstQuestionBigSvg = document.getElementById("course-button-more-first-question-big-svg");
 
 let course = false;
 
@@ -2643,14 +2652,35 @@ courseButtonMoreFirstQuestionText.addEventListener('click', () => {
     topCurseUpperText.style.opacity = "";
     topCurseLowerText.style.opacity = "";
     courseMoreButtonDownText.style.opacity = "";
+    label1.style.opacity = "";
+    label2.style.opacity = "";
+    label3.style.opacity = "";
+    topCurseName.style.opacity = "0";
     setTimeout(() => {
-        topCurseUpperText.textContent = sortedArray[(numberOfPage - 1) * 2].who[selectLang][0];
-        topCurseLowerText.textContent = sortedArray[(numberOfPage - 1) * 2].who[selectLang][1];
-        courseMoreButtonDownText.textContent = sortedArray[(numberOfPage - 1) * 2].who[selectLang][2];
+        if (selectLang === "eng") {
+            topCurseName.textContent = "Our course is suitable for";
+        } else {
+            topCurseName.textContent = "Наш курс подойдет";
+        }
+        courseButtonMoreFirstQuestionTitle0.textContent = sortedArray[(numberOfPage - 1) * 2].who.subtitles[selectLang][0];
+        courseButtonMoreFirstQuestionText0.textContent = sortedArray[(numberOfPage - 1) * 2].who.whoText[selectLang][0];
+        courseButtonMoreFirstQuestionTitle1.textContent = sortedArray[(numberOfPage - 1) * 2].who.subtitles[selectLang][1];
+        courseButtonMoreFirstQuestionText1.textContent = sortedArray[(numberOfPage - 1) * 2].who.whoText[selectLang][1];
+        courseButtonMoreFirstQuestionTitle2.textContent = sortedArray[(numberOfPage - 1) * 2].who.subtitles[selectLang][2];
+        courseButtonMoreFirstQuestionText2.textContent = sortedArray[(numberOfPage - 1) * 2].who.whoText[selectLang][2];
+        courseButtonMoreFirstQuestionTitle3.textContent = sortedArray[(numberOfPage - 1) * 2].who.subtitles[selectLang][3];
+        courseButtonMoreFirstQuestionText3.textContent = sortedArray[(numberOfPage - 1) * 2].who.whoText[selectLang][3];
         setTimeout(() => {
-            topCurseUpperText.style.opacity = "1";
-            topCurseLowerText.style.opacity = "1";
-            courseMoreButtonDownText.style.opacity = "1";
+            topCurseName.style.opacity = "1";
+            courseButtonMoreFirstQuestionTitle0.style.opacity = "1";
+            courseButtonMoreFirstQuestionText0.style.opacity = "1";
+            courseButtonMoreFirstQuestionTitle1.style.opacity = "1";
+            courseButtonMoreFirstQuestionText1.style.opacity = "1";
+            courseButtonMoreFirstQuestionTitle2.style.opacity = "1";
+            courseButtonMoreFirstQuestionText2.style.opacity = "1";
+            courseButtonMoreFirstQuestionTitle3.style.opacity = "1";
+            courseButtonMoreFirstQuestionText3.style.opacity = "1";
+            courseButtonMoreFirstQuestionBigSvg.style.opacity = "1";
         }, 300);
     }, 300);
 })

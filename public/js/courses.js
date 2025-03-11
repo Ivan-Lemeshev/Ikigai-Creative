@@ -45,15 +45,32 @@ const coursesData = [
         releasesData: "05.03.2025",
         isProfession: true,
         who: {
-            rus: ["IT",
-                "Востребованный",
-                "Легкий старт"
-            ],
-            eng: [
-                "IT",
-                "In demand",
-                "Easy start"
-            ]
+            subtitles: {
+                rus: ["Начинающим разработчикам",
+                    "Тем, кто хочет сменить профессию",
+                    "Дизайнерам и креативщикам",
+                    "Студентам и IT-специалистам"
+                ],
+                eng: [
+                    "Beginning developers",
+                    "Those looking for a career change",
+                    "Designers and creatives",
+                    "Students and IT professionals"
+                ]
+            },
+            whoText: {
+                rus: ["Если вы никогда не работали с программированием, этот курс даст прочную основу для старта в мире веб-разработки.",
+                    "Если вы ищете новые карьерные возможности и готовы учиться, курс поможет освоить востребованные навыки.",
+                    "Если вы уже занимаетесь дизайном, дополните его знаниями в области front-end и back-end разработки для создания более комплексных проектов",
+                    "Даже если вы уже работаете в IT, курс поможет углубить знания и освоить новые инструменты и технологии веб-разработки."
+                ],
+                eng: [
+                    "If you've never worked with programming, this course will give you a solid foundation to get started in the world of web development.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "If you're already involved in design, supplement it with knowledge of front-end and back-end development to create more complex projects.",
+                    "Even if you already work in IT, the course will help you deepen your knowledge and learn new web development tools and technologies."
+                ]
+            }
         },
         whatNeed: {
             rus: ["ПК",
