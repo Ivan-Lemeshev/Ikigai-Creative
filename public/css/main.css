@@ -3386,6 +3386,7 @@
     text-align: right;
     z-index: 2;
     cursor: pointer;
+    display: none;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
@@ -3431,6 +3432,7 @@
     overflow: visible;
     position: absolute;
     bottom: 10.83333vw;
+    display: none;
     left: 39.79167vw;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -3471,6 +3473,7 @@
     width: 24.01042vw;
     height: 1.92708vw;
     overflow: visible;
+    display: none;
     position: absolute;
     bottom: 7.70833vw;
     left: 41.66667vw;
@@ -3524,6 +3527,7 @@
     color: var(--ltText);
     text-align: right;
     z-index: 2;
+    display: none;
     cursor: pointer;
 }
 
