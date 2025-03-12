@@ -2981,6 +2981,9 @@
     opacity: 0;
     z-index: 0;
     transition: opacity 0.3s ease-in-out;
+    display: none;
+    flex-direction: column;
+    align-items: center;
 }
 
 #courses-top-line {
@@ -3071,7 +3074,7 @@
     transition: opacity 0.3s ease-in-out;
 }
 
-#curse-more-button-down-text {   
+#curse-more-button-down-text {
     position: absolute;
     top: 33.19792vw;
     left: 26.04167vw;
@@ -3256,11 +3259,8 @@
 #number-of-page {
     position: absolute;
     bottom: 4.16667vw;
-    left: 36.19792vw;
-    width: 13.02083vw;
     height: 2.08333vw;
     display: flex;
-    justify-content: space-around;
     align-items: center;
     overflow: visible;
 }
@@ -3274,9 +3274,19 @@
     font-size: 1.66667vw;
     font-weight: 350;
     overflow: visible;
-    opacity: 0;
     transition: opacity 0.3s ease-in-out;
     z-index: 2;
+
+    &:not(:first-of-type) {
+        margin-left: 1.5625vw;
+    }
+
+    &.number-of-page-active {
+        opacity: 1;
+    }
+    &.number-of-page-passive {
+        opacity: 0.5;
+    }
 }
 
 .label-content {
@@ -3301,12 +3311,12 @@
     margin-top: 5.36146vw;
 }
 
-#label-2{
+#label-2 {
     margin-left: 45.41667vw;
     margin-top: -1.6vw;
 }
 
-#label-3{
+#label-3 {
     margin-left: 54.47917vw;
     margin-top: -1.7vw;
 }
@@ -3340,7 +3350,7 @@
 
 #course-more-review-button {
     top: 33.95833vw;
-}   
+}
 
 #course-more-button-close {
     width: 2.60417vw;
