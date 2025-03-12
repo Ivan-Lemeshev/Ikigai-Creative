@@ -4,6 +4,7 @@ const coursesData = [
             rus: "Веб-разработка",
             eng: "Web Development"
         },
+        complexity: 2,
         descriptionUp: {
             rus: "Научитесь создавать современные веб-сайты и веб-приложения. Получите практический опыт в реальных проектах, получите экспертное наставничество и создайте портфолио, которое даст старт вашей карьере в ИТ!",
             eng: "Learn to build modern websites and web applications with HTML, CSS, JavaScript, React, API integration, and databases. Gain hands-on experience through real projects, get expert mentorship, and create a portfolio that kickstarts your career in IT!"
@@ -182,6 +183,7 @@ const coursesData = [
             rus: "Git",
             eng: "Master Git"
         },
+        complexity: 2,
         descriptionUp: {
             rus: "Изучите Git с самых азов до продвинутых рабочих процессов. Практические упражнения, реальные сценарии и лучшие практики помогут вам усовершенствовать свои навыки разработки.",
             eng: "Learn version control like a pro! Understand Git from the basics to advanced workflows, collaborate efficiently with GitHub, and confidently manage your projects. Hands-on exercises, real-world scenarios, and best practices to boost your development skills."
@@ -299,6 +301,7 @@ const coursesData = [
             rus: "Шахматы",
             eng: "Chess"
         },
+        complexity: 4,
         descriptionUp: {
             rus: "Развивайте логическое мышление, обучаясь шахматам от базы до продвинутого уровня.",
             eng: "Develop logical thinking by learning chess from basics to advanced strategies."
@@ -341,13 +344,62 @@ const coursesData = [
                 "Easy start"
             ]
         },
-        freeLesson: "ссылка на урок"
+        freeLesson: "ссылка на урок",
+        planOfLessons: {
+            rus: [
+                {
+                    duration: "5 недель",
+                    title: "Основы веб-верстки: HTML и CSS"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Базовый JavaScript: работа с DOM и событиями"
+                },
+                {
+                    duration: "10 недель",
+                    title: "Фронтенд-разработка: современные инструменты"
+                },
+                {
+                    duration: "9 недель",
+                    title: "Работа с API: взаимодействие фронтенда и бэкенда"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Управление проектом на удалённом сервере"
+                },
+
+            ],
+            eng: [
+                {
+                    duration: "5 weeks",
+                    title: "Web layout basics: HTML and CSS"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Basic JavaScript: working with DOM and events"
+                },
+                {
+                    duration: "10 weeks",
+                    title: "Frontend development: modern tools and frameworks"
+                },
+                {
+                    duration: "9 weeks",
+                    title: "Working with API: frontend and backend interaction"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Project management on a remote server"
+                },
+
+            ]
+        }
     },
     {
         title: {
             rus: "React",
             eng: "Master React"
         },
+        complexity: 5,
         descriptionUp: {
             rus: "Изучите передовой фреймворк React и создавайте современные веб-приложения.",
             eng: "Learn the cutting-edge React framework and build modern web applications."
@@ -445,6 +497,7 @@ const coursesData = [
             rus: "Python",
             eng: "Master Python"
         },
+        complexity: 3,
         descriptionUp: {
             rus: "Освойте один из самых востребованных языков программирования с нуля.",
             eng: "Master one of the most in-demand programming languages from scratch."
@@ -542,6 +595,7 @@ const coursesData = [
             rus: "Телеграм-боты на Python",
             eng: "Telegram Bots with Python"
         },
+        complexity: 4,
         descriptionUp: {
             rus: "Создайте собственных ботов для Telegram с использованием Python и aiogram. Автоматизируйте процессы и создавайте полезные инструменты!",
             eng: "Build your own Telegram bots using Python and aiogram. Automate processes and create useful tools!"
@@ -638,6 +692,7 @@ const coursesData = [
             rus: "Продажи: Искусство убеждения",
             eng: "Sales: The Art of Persuasion"
         },
+        complexity: 1,
         descriptionUp: {
             rus: "Научитесь продавать эффективно, используя проверенные техники убеждения и психологии покупателя.",
             eng: "Learn to sell effectively using proven persuasion techniques and buyer psychology."
@@ -734,6 +789,7 @@ const coursesData = [
             rus: "Нутрициология",
             eng: "Nutrition Science"
         },
+        complexity: 2,
         descriptionUp: {
             rus: "Разберитесь в основах правильного питания, научитесь подбирать рацион для себя и клиентов. Курс подойдет как для личного развития, так и для профессиональной деятельности.",
             eng: "Understand the fundamentals of proper nutrition, learn to create personalized meal plans for yourself and clients. Suitable for both personal growth and professional practice."

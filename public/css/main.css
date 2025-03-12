@@ -3668,3 +3668,55 @@
     top: 36.61458vw;
     position: absolute;
 }
+
+#course-button-more-second-question-title-img {
+    width: 10.52083vw;
+    height: 1.92708vw;
+    position: absolute;
+    top: 7.65625vw;
+    left: 26.04167vw;
+    font-weight: 400;
+    font-size: 1.04167vw;
+    overflow: visible;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#course-button-more-second-question-base-img {
+    position: absolute;
+    top: 8.15vw;
+    left: 37.65625vw;
+    object-fit: contain;
+    width: 8.90625vw;
+    height: 0.78125vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.course-button-more-second-question-division {
+    position: absolute;
+    top: 8.17vw;
+    object-fit: contain;
+    width: 1.71875vw;
+    height: 0.67708vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#course-button-more-second-question-division-2 {
+    left: 39.47917vw;
+}
+
+#course-button-more-second-question-division-3 {
+    left: 41.25vw;
+}
+
+#course-button-more-second-question-division-4 {
+    left: 43.02083vw;
+}
+
+#course-button-more-second-question-division-5 {
+    left: 44.81vw;
+}
