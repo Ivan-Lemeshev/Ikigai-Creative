@@ -106,6 +106,9 @@ const modalNotificationBlock = document.getElementById("modal-notification-block
 let showNotification = true;
 const interestBlockAllService = document.getElementById("interest-block-all-service");
 
+const thirdSectionTitleCourses = document.getElementById("third-section-title-courses");
+const thirdSectionTitleServices = document.getElementById("third-section-title-services");
+
 const massiv = [1, 2, 3, 4, 5];
 let activNumber = 0;
 
@@ -207,7 +210,6 @@ const refreshDataForLocalization = () => {
     const currentTitle = arrayDataOfService[activNumber].title[selectLang];
     buttonMoreTitle.textContent = currentTitle;
 
-
     if (selectLang === "rus") {
         inputFirstName.placeholder = "Имя";
         inputLastName.placeholder = "Фамилия";
@@ -215,6 +217,7 @@ const refreshDataForLocalization = () => {
         textarea.placeholder = "В этом поле вы можете указать любые дополнительные данные или пожелания по заказу.";
         footerContentEng.style.display = "none";
         footerContentRus.style.display = "flex";
+        thirdSectionTitleCourses.style.left = "13.40625vw";
     } else {
         inputFirstName.placeholder = "First Name";
         inputLastName.placeholder = "Last Name";
@@ -222,6 +225,7 @@ const refreshDataForLocalization = () => {
         textarea.placeholder = "In this field, you can provide any additional details or requests for your order, including your preferred method of contact.";
         footerContentEng.style.display = "flex";
         footerContentRus.style.display = "none";
+        thirdSectionTitleCourses.style.left = "11.66667vw";
     }
 
     for (let index = 0; index < arrayDataOfService.length; index++) {
@@ -1942,8 +1946,6 @@ submitButtonFourthSection.addEventListener('click', () => {
     }
 })
 
-const thirdSectionTitleCourses = document.getElementById("third-section-title-courses");
-const thirdSectionTitleServices = document.getElementById("third-section-title-services");
 const thirdSectionMainContent = document.getElementById("third-section-main-content");
 const coursesNavigation = document.getElementById("courses-navigation");
 const coursesMainContent = document.getElementById("courses-main-content");
@@ -1998,6 +2000,27 @@ const courseButtonMoreFirstQuestionText2 = document.getElementById("course-butto
 const courseButtonMoreFirstQuestionTitle3 = document.getElementById("course-button-more-first-question-title-3");
 const courseButtonMoreFirstQuestionText3 = document.getElementById("course-button-more-first-question-text-3");
 const courseButtonMoreFirstQuestionBigSvg = document.getElementById("course-button-more-first-question-big-svg");
+const courseButtonMoreSecondQuestionBigSvg = document.getElementById("course-button-more-second-question-big-svg");
+const courseButtonMoreThirdQuestionBigSvg = document.getElementById("course-button-more-third-question-big-svg");
+
+
+const courseButtonMoreThirdQuestionWrapper0 = document.getElementById("course-button-more-third-question-wrapper-0")
+const courseButtonMoreThirdQuestionWrapper1 = document.getElementById("course-button-more-third-question-wrapper-1")
+const courseButtonMoreThirdQuestionWrapper2 = document.getElementById("course-button-more-third-question-wrapper-2")
+const courseButtonMoreThirdQuestionWrapper3 = document.getElementById("course-button-more-third-question-wrapper-3")
+const courseButtonMoreThirdQuestionWrapper4 = document.getElementById("course-button-more-third-question-wrapper-4")
+
+const courseButtonMoreThirdQuestionWeeks0 = document.getElementById("course-button-more-third-question-weeks-0")
+const courseButtonMoreThirdQuestionWeeks1 = document.getElementById("course-button-more-third-question-weeks-1")
+const courseButtonMoreThirdQuestionWeeks2 = document.getElementById("course-button-more-third-question-weeks-2")
+const courseButtonMoreThirdQuestionWeeks3 = document.getElementById("course-button-more-third-question-weeks-3")
+const courseButtonMoreThirdQuestionWeeks4 = document.getElementById("course-button-more-third-question-weeks-4")
+
+const courseButtonMoreThirdQuestionText0 = document.getElementById("course-button-more-third-question-text-0")
+const courseButtonMoreThirdQuestionText1 = document.getElementById("course-button-more-third-question-text-1")
+const courseButtonMoreThirdQuestionText2 = document.getElementById("course-button-more-third-question-text-2")
+const courseButtonMoreThirdQuestionText3 = document.getElementById("course-button-more-third-question-text-3")
+const courseButtonMoreThirdQuestionText4 = document.getElementById("course-button-more-third-question-text-4")
 
 let course = false;
 let numberOfPage = 1;
@@ -2030,11 +2053,12 @@ thirdSectionTitleCourses.addEventListener('click', () => {
                 setTimeout(() => {
                     thirdSectionTitleServices.style.opacity = "0";
                     thirdSectionTitleCourses.style.opacity = "1";
-                    thirdSectionTitleCourses.style.left = "13.40625vw";
                     if (selectLang === "eng") {
                         thirdSectionTitleCourses.textContent = "courses"
+                        thirdSectionTitleCourses.style.left = "11.66667vw";
                     } else {
                         thirdSectionTitleCourses.textContent = "курсы"
+                        thirdSectionTitleCourses.style.left = "13.40625vw";
                     }
                     thirdSectionMainContent.style.opacity = "0";
                     thirdSectionLowerPart.style.opacity = "0";
@@ -2259,7 +2283,7 @@ const uploadNumbers = (amountPage, firstStart = false) => {
         })
         numberOfPageWrapper.appendChild(newPage);
     }
-    
+
 }
 
 
@@ -2280,10 +2304,6 @@ topCurseMoreButton.addEventListener('click', () => {
         bottomCurseName.style.opacity = "";
         borderForCourseImgBottom.style.opacity = "0";
         numberOfPageWrapper.style.opacity = "0";
-        numberOfPage1.style.display = "none";
-        numberOfPage2.style.display = "none";
-        numberOfPage3.style.display = "none";
-        numberOfPage4.style.display = "none";
         label1.style.opacity = "1";
         label2.style.opacity = "1";
         label3.style.opacity = "1";
@@ -2331,6 +2351,7 @@ topCurseMoreButton.addEventListener('click', () => {
 })
 
 courseMoreCloseButton.addEventListener('click', () => {
+    courseButtonMoreThirdQuestionBigSvg.style.opacity = "";
     topCurseUpperText.style.opacity = "";
     topCurseLowerText.style.opacity = "";
     courseMoreButtonDownText.style.opacity = "";
@@ -2368,6 +2389,11 @@ courseMoreCloseButton.addEventListener('click', () => {
     courseButtonMoreFirstQuestionText3.style.opacity = "";
     courseButtonMoreFirstQuestionBigSvg.style.opacity = "";
     topCurseName.style.opacity = "0"
+    courseButtonMoreThirdQuestionWrapper0.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper1.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper2.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper3.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper4.style.opacity = "";
     setTimeout(() => {
         topCurseLowerText.style.top = "";
         topCurseName.textContent = sortedArray[0].title[selectLang];
@@ -2388,10 +2414,6 @@ courseMoreCloseButton.addEventListener('click', () => {
             bottomCurseName.style.opacity = "1";
             borderForCourseImgBottom.style.opacity = "";
             numberOfPageWrapper.style.opacity = "";
-            numberOfPage1.style.display = "";
-            numberOfPage2.style.display = "";
-            numberOfPage3.style.display = "";
-            numberOfPage4.style.display = "";
             courseMoreStudyButton.style.display = "";
             courseMoreCounsellingButton.style.display = "";
             courseMoreReviewButton.style.display = "";
@@ -2594,12 +2616,32 @@ courseButtonMoreFirstQuestionText.addEventListener('click', () => {
     label2.style.opacity = "";
     label3.style.opacity = "";
     topCurseName.style.opacity = "0";
+    courseButtonMoreThirdQuestionBigSvg.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper0.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper1.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper2.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper3.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper4.style.opacity = "";
+    courseButtonMoreSecondQuestionBigSvg.style.opacity = "";
+    courseButtonMoreFirstQuestionTitle0.style.opacity = "";
+    courseButtonMoreFirstQuestionText0.style.opacity = "";
+    courseButtonMoreFirstQuestionTitle1.style.opacity = "";
+    courseButtonMoreFirstQuestionText1.style.opacity = "";
+    courseButtonMoreFirstQuestionTitle2.style.opacity = "";
+    courseButtonMoreFirstQuestionText2.style.opacity = "";
+    courseButtonMoreFirstQuestionTitle3.style.opacity = "";
+    courseButtonMoreFirstQuestionText3.style.opacity = "";
+
     setTimeout(() => {
         if (selectLang === "eng") {
             topCurseName.textContent = "Our course is suitable for";
         } else {
             topCurseName.textContent = "Наш курс подойдет";
         }
+        courseButtonMoreFirstQuestionText0.style.marginTop = "";
+        courseButtonMoreFirstQuestionTitle1.style.marginTop = "";
+        courseButtonMoreFirstQuestionTitle2.style.marginTop = "";
+        courseButtonMoreFirstQuestionTitle3.style.marginTop = "";
         courseButtonMoreFirstQuestionTitle0.textContent = sortedArray[(numberOfPage - 1) * 2].who.subtitles[selectLang][0];
         courseButtonMoreFirstQuestionText0.textContent = sortedArray[(numberOfPage - 1) * 2].who.whoText[selectLang][0];
         courseButtonMoreFirstQuestionTitle1.textContent = sortedArray[(numberOfPage - 1) * 2].who.subtitles[selectLang][1];
@@ -2639,14 +2681,51 @@ courseButtonMoreSecondQuestionText.addEventListener('click', () => {
     topCurseUpperText.style.opacity = "";
     topCurseLowerText.style.opacity = "";
     courseMoreButtonDownText.style.opacity = "";
+    courseButtonMoreThirdQuestionBigSvg.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper0.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper1.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper2.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper3.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper4.style.opacity = "";
+    topCurseName.style.opacity = "";
+    courseButtonMoreFirstQuestionTitle0.style.opacity = "";
+    courseButtonMoreFirstQuestionText0.style.opacity = "";
+    courseButtonMoreFirstQuestionTitle1.style.opacity = "";
+    courseButtonMoreFirstQuestionText1.style.opacity = "";
+    courseButtonMoreFirstQuestionTitle2.style.opacity = "";
+    courseButtonMoreFirstQuestionText2.style.opacity = "";
+    courseButtonMoreFirstQuestionTitle3.style.opacity = "";
+    courseButtonMoreFirstQuestionText3.style.opacity = "";
+    courseButtonMoreFirstQuestionBigSvg.style.opacity = "";
     setTimeout(() => {
-        topCurseUpperText.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed[selectLang][0];
-        topCurseLowerText.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed[selectLang][1];
-        courseMoreButtonDownText.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed[selectLang][2];
+        if(selectLang === "eng") {
+            topCurseName.textContent = "Necessary to start training";
+        } else {
+            topCurseName.textContent = "Необходимо для обучения";
+        }
+
+        courseButtonMoreFirstQuestionText0.style.marginTop = "1.04167vw";
+        courseButtonMoreFirstQuestionTitle1.style.marginTop = "1.04167vw";
+        courseButtonMoreFirstQuestionTitle2.style.marginTop = "1.04167vw";
+        courseButtonMoreFirstQuestionTitle3.style.marginTop = "1.04167vw";
+        courseButtonMoreFirstQuestionText0.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed.whatNeedText[selectLang][0];
+        courseButtonMoreFirstQuestionTitle1.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed.subtitles[selectLang][1];
+        courseButtonMoreFirstQuestionText1.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed.whatNeedText[selectLang][1];
+        courseButtonMoreFirstQuestionTitle2.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed.subtitles[selectLang][2];
+        courseButtonMoreFirstQuestionText2.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed.whatNeedText[selectLang][2];
+        courseButtonMoreFirstQuestionTitle3.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed.subtitles[selectLang][3];
+        courseButtonMoreFirstQuestionText3.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed.whatNeedText[selectLang][3];
         setTimeout(() => {
-            topCurseUpperText.style.opacity = "1";
-            topCurseLowerText.style.opacity = "1";
-            courseMoreButtonDownText.style.opacity = "1";
+            courseButtonMoreFirstQuestionText0.style.opacity = "1";
+            courseButtonMoreFirstQuestionTitle1.style.opacity = "1";
+            courseButtonMoreFirstQuestionText1.style.opacity = "1";
+            courseButtonMoreFirstQuestionTitle2.style.opacity = "1";
+            courseButtonMoreFirstQuestionText2.style.opacity = "1";
+            courseButtonMoreFirstQuestionTitle3.style.opacity = "1";
+            courseButtonMoreFirstQuestionText3.style.opacity = "1";
+            topCurseName.style.opacity = "1";
+            courseButtonMoreSecondQuestionBigSvg.style.opacity = "1";
+
         }, 300);
     }, 300);
 })
@@ -2667,19 +2746,52 @@ courseButtonMoreThirdQuestionText.addEventListener('click', () => {
     topCurseUpperText.style.opacity = "";
     topCurseLowerText.style.opacity = "";
     courseMoreButtonDownText.style.opacity = "";
+    label1.style.opacity = "";
+    label2.style.opacity = "";
+    label3.style.opacity = "";
+    topCurseName.style.opacity = "0"
+    courseButtonMoreSecondQuestionBigSvg.style.opacity = "";
+    courseButtonMoreFirstQuestionTitle0.style.opacity = "";
+    courseButtonMoreFirstQuestionText0.style.opacity = "";
+    courseButtonMoreFirstQuestionTitle1.style.opacity = "";
+    courseButtonMoreFirstQuestionText1.style.opacity = "";
+    courseButtonMoreFirstQuestionTitle2.style.opacity = "";
+    courseButtonMoreFirstQuestionText2.style.opacity = "";
+    courseButtonMoreFirstQuestionTitle3.style.opacity = "";
+    courseButtonMoreFirstQuestionText3.style.opacity = "";
+
     setTimeout(() => {
-        topCurseUpperText.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed[selectLang][0];
-        topCurseLowerText.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed[selectLang][1];
-        courseMoreButtonDownText.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed[selectLang][2];
+        courseButtonMoreThirdQuestionWeeks0.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][0].duration;
+        courseButtonMoreThirdQuestionWeeks1.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][1].duration;
+        courseButtonMoreThirdQuestionWeeks2.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][2].duration;
+        courseButtonMoreThirdQuestionWeeks3.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][3].duration;
+        courseButtonMoreThirdQuestionWeeks4.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][4].duration;
+
+        courseButtonMoreThirdQuestionText0.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][0].title;
+        courseButtonMoreThirdQuestionText1.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][1].title;
+        courseButtonMoreThirdQuestionText2.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][2].title;
+        courseButtonMoreThirdQuestionText3.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][3].title;
+        courseButtonMoreThirdQuestionText4.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][4].title;
+
+        if (selectLang === "eng") {
+            topCurseName.textContent = "Course outline";
+        } else {
+            topCurseName.textContent = "Общая структура курса";
+        }
         setTimeout(() => {
-            topCurseUpperText.style.opacity = "1";
-            topCurseLowerText.style.opacity = "1";
-            courseMoreButtonDownText.style.opacity = "1";
+            courseButtonMoreThirdQuestionBigSvg.style.opacity = "1";
+            courseButtonMoreThirdQuestionWrapper0.style.opacity = "1";
+            courseButtonMoreThirdQuestionWrapper1.style.opacity = "1";
+            courseButtonMoreThirdQuestionWrapper2.style.opacity = "1";
+            courseButtonMoreThirdQuestionWrapper3.style.opacity = "1";
+            courseButtonMoreThirdQuestionWrapper4.style.opacity = "1";
+            topCurseName.style.opacity = "1";
         }, 300);
     }, 300);
 })
 
 courseButtonMoreQuestionText.addEventListener('click', () => {
+    courseButtonMoreThirdQuestionBigSvg.style.opacity = "";
     courseButtonMoreQuestionText.style.opacity = "1";
     courseButtonMoreQuestionMark.style.opacity = "1";
     courseButtonMoreQuestionSvg.style.opacity = "1";
@@ -2705,6 +2817,14 @@ courseButtonMoreQuestionText.addEventListener('click', () => {
     courseButtonMoreFirstQuestionTitle3.style.opacity = "0";
     courseButtonMoreFirstQuestionText3.style.opacity = "0";
     courseButtonMoreFirstQuestionBigSvg.style.opacity = "0";
+    courseButtonMoreThirdQuestionBigSvg.style.opacity = "1";
+    courseButtonMoreThirdQuestionWrapper0.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper1.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper2.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper3.style.opacity = "";
+    courseButtonMoreThirdQuestionWrapper4.style.opacity = "";
+    courseButtonMoreSecondQuestionBigSvg.style.opacity = "";
+
     setTimeout(() => {
         topCurseName.textContent = sortedArray[0].title[selectLang];
         setTimeout(() => {

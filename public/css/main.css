@@ -3033,7 +3033,7 @@
     position: absolute;
     top: 5.20833vw;
     left: 26.04167vw;
-    width: 20.67708vw;
+    width: 21.67708vw;
     height: 1.92708vw;
     font-weight: 400;
     font-size: 1.45833vw;
@@ -3284,6 +3284,7 @@
     &.number-of-page-active {
         opacity: 1;
     }
+
     &.number-of-page-passive {
         opacity: 0.5;
     }
@@ -3307,17 +3308,16 @@
 }
 
 #label-1 {
-    margin-left: 42.1875vw;
     margin-top: 5.36146vw;
 }
 
 #label-2 {
-    margin-left: 45.41667vw;
+    margin-left: 12vw;
     margin-top: -1.6vw;
 }
 
 #label-3 {
-    margin-left: 54.47917vw;
+    margin-left: 29.2vw;
     margin-top: -1.7vw;
 }
 
@@ -3557,7 +3557,7 @@
     letter-spacing: 0.1em;
     width: 42.70938vw;
     height: 1.77083vw;
-    margin-left: 27.60417vw;
+    margin-left: 9.5vw;
     margin-top: 1.5625vw;
     color: black;
     opacity: 0;
@@ -3571,7 +3571,7 @@
     letter-spacing: 0.1em;
     width: 44.21875vw;
     height: min-content;
-    margin-left: 27.60417vw;
+    margin-left: 11vw;
     margin-top: 0.78125vw;
     color: var(--ltText);
     opacity: 0;
@@ -3586,4 +3586,85 @@
     height: 2.60417vw;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+}
+
+#course-button-more-second-question-big-svg {
+    position: absolute;
+    top: 4.63542vw;
+    right: 13.59375vw;
+    width: 2.60417vw;
+    height: 2.60417vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#course-button-more-third-question-big-svg {
+    position: absolute;
+    top: 4.63542vw;
+    right: 13.59375vw;
+    width: 2.60417vw;
+    height: 2.60417vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.course-button-more-third-question-wrapper {
+    width: 45.78125vw;
+    height: 5.72917vw;
+    position: absolute;
+    left: 26.04167vw;
+    background: var(--dtText);
+    opacity: 0.35;
+    border: 0.05208vw solid rgba(255, 0, 0, 0.1);
+    overflow: visible;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.course-button-more-third-question-text {
+    margin-top: 0.72917vw;
+    margin-left: 2.08333vw;
+    width: 39.85417vw;
+    height: 1.35417vw;
+    font-weight: 400;
+    font-size: 1.35417vw;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+    overflow: visible;
+}
+
+.course-button-more-third-question-weeks {
+    margin-top: 1.25vw;
+    margin-left: 2.08333vw;
+    width: 6vw;
+    height: 1.04167vw;
+    overflow: visible;
+    font-weight: 350;
+    font-size: 1.04167vw;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+}
+
+#course-button-more-third-question-wrapper-0 {
+    top: 8.69792vw;
+}
+
+#course-button-more-third-question-wrapper-1 {
+    top: 15.67708vw;
+    position: absolute;
+}
+
+#course-button-more-third-question-wrapper-2 {
+    top: 22.65625vw;
+    position: absolute;
+}
+
+#course-button-more-third-question-wrapper-3 {
+    top: 29.63542vw;
+    position: absolute;
+}
+
+#course-button-more-third-question-wrapper-4 {
+    top: 36.61458vw;
+    position: absolute;
 }

@@ -73,14 +73,32 @@ const coursesData = [
             }
         },
         whatNeed: {
-            rus: ["ПК",
-                "Стабильный интернет",
-                "Желание учиться"
-            ],
-            eng: ["PC",
-                "Internet connection",
-                "Desire to learn"
-            ]
+            subtitles: {
+                rus: ["",
+                    "Внимательность",
+                    "Желание учиться",
+                    "Базовое владение компьютером"
+                ],
+                eng: [
+                    "",
+                    "Attentiveness",
+                    "Willingness to learn",
+                    "Basic computer skills"
+                ]
+            },
+            whatNeedText: {
+                rus: ["Этот курс предназначен для начинающих и не требует большого опыта. Вам понадобятся только базовые навыки, которые будут полезны в процессе обучения.",
+                    "Важно быть внимательным при изучении новых понятий, следить за шагами и не пропускать важные детали. Это поможет усвоить материал быстрее и избежать ошибок.",
+                    "Стремление развиваться и осваивать новое — ключевой аспект успешного обучения. Важно быть готовым к трудностям, задавать вопросы и искать решения, если что-то непонятно.",
+                    "Знание основных функций компьютера: работа с файловой системой, использование браузера, установка программ и работа с текстовыми редакторами."
+                ],
+                eng: [
+                    "This course is designed for beginners and does not require much experience. You will only need basic skills that will be useful in the learning process:",
+                    "The desire to develop and learn new things is a key aspect of successful learning. It is important to be prepared for difficulties, ask questions and seek solutions when things are not clear.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "Knowledge of basic computer functions: working with the file system, using a browser, installing programmes and working with word processors."
+                ]
+            }
         },
         fullText: {
             rus: ["Хотите начать карьеру в сфере технологий, создавать современные веб-сайты и функциональные веб-приложения? Наш комплексный курс веб-разработки поможет вам пройти путь от новичка до опытного разработчика. Вы научитесь писать чистый, структурированный код на HTML, CSS и JavaScript, создавать адаптивные и интерактивные веб-сайты и работать с современными фреймворками для создания динамических приложений.",
@@ -109,7 +127,55 @@ const coursesData = [
             ]
         },
         amountLessons: 20,
-        freeLesson: "ссылка на урок"
+        freeLesson: "ссылка на урок",
+        planOfLessons: {
+            rus: [
+                {
+                    duration: "5 недель",
+                    title: "Основы веб-верстки: HTML и CSS"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Базовый JavaScript: работа с DOM и событиями"
+                },
+                {
+                    duration: "10 недель",
+                    title: "Фронтенд-разработка: современные инструменты"
+                },
+                {
+                    duration: "9 недель",
+                    title: "Работа с API: взаимодействие фронтенда и бэкенда"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Управление проектом на удалённом сервере"
+                },
+
+            ],
+            eng: [
+                {
+                    duration: "5 weeks",
+                    title: "Web layout basics: HTML and CSS"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Basic JavaScript: working with DOM and events"
+                },
+                {
+                    duration: "10 weeks",
+                    title: "Frontend development: modern tools and frameworks"
+                },
+                {
+                    duration: "9 weeks",
+                    title: "Working with API: frontend and backend interaction"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Project management on a remote server"
+                },
+
+            ]
+        }
     },
     {
         title: {
@@ -135,8 +201,7 @@ const coursesData = [
                                 <rect width="200" height="200" fill="white" />
                             </clipPath>
                         </defs>
-                    </svg>
-`,
+                    </svg>`,
         cost: 20000,
         popularity: 300,
         MMR: 4.8,
@@ -178,7 +243,55 @@ const coursesData = [
                 "Easy start"
             ]
         },
-        freeLesson: "ссылка на урок"
+        freeLesson: "ссылка на урок",
+        planOfLessons: {
+            rus: [
+                {
+                    duration: "5 недель",
+                    title: "Основы веб-верстки: HTML и CSS"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Базовый JavaScript: работа с DOM и событиями"
+                },
+                {
+                    duration: "10 недель",
+                    title: "Фронтенд-разработка: современные инструменты"
+                },
+                {
+                    duration: "9 недель",
+                    title: "Работа с API: взаимодействие фронтенда и бэкенда"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Управление проектом на удалённом сервере"
+                },
+
+            ],
+            eng: [
+                {
+                    duration: "5 weeks",
+                    title: "Web layout basics: HTML and CSS"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Basic JavaScript: working with DOM and events"
+                },
+                {
+                    duration: "10 weeks",
+                    title: "Frontend development: modern tools and frameworks"
+                },
+                {
+                    duration: "9 weeks",
+                    title: "Working with API: frontend and backend interaction"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Project management on a remote server"
+                },
+
+            ]
+        }
     },
 
     {
@@ -277,7 +390,55 @@ const coursesData = [
                 "Easy start"
             ]
         },
-        freeLesson: "ссылка на урок"
+        freeLesson: "ссылка на урок",
+        planOfLessons: {
+            rus: [
+                {
+                    duration: "5 недель",
+                    title: "Основы веб-верстки: HTML и CSS"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Базовый JavaScript: работа с DOM и событиями"
+                },
+                {
+                    duration: "10 недель",
+                    title: "Фронтенд-разработка: современные инструменты"
+                },
+                {
+                    duration: "9 недель",
+                    title: "Работа с API: взаимодействие фронтенда и бэкенда"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Управление проектом на удалённом сервере"
+                },
+
+            ],
+            eng: [
+                {
+                    duration: "5 weeks",
+                    title: "Web layout basics: HTML and CSS"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Basic JavaScript: working with DOM and events"
+                },
+                {
+                    duration: "10 weeks",
+                    title: "Frontend development: modern tools and frameworks"
+                },
+                {
+                    duration: "9 weeks",
+                    title: "Working with API: frontend and backend interaction"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Project management on a remote server"
+                },
+
+            ]
+        }
     },
     {
         title: {
@@ -326,7 +487,55 @@ const coursesData = [
                 "Easy start"
             ]
         },
-        freeLesson: "ссылка на урок"
+        freeLesson: "ссылка на урок",
+        planOfLessons: {
+            rus: [
+                {
+                    duration: "5 недель",
+                    title: "Основы веб-верстки: HTML и CSS"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Базовый JavaScript: работа с DOM и событиями"
+                },
+                {
+                    duration: "10 недель",
+                    title: "Фронтенд-разработка: современные инструменты"
+                },
+                {
+                    duration: "9 недель",
+                    title: "Работа с API: взаимодействие фронтенда и бэкенда"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Управление проектом на удалённом сервере"
+                },
+
+            ],
+            eng: [
+                {
+                    duration: "5 weeks",
+                    title: "Web layout basics: HTML and CSS"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Basic JavaScript: working with DOM and events"
+                },
+                {
+                    duration: "10 weeks",
+                    title: "Frontend development: modern tools and frameworks"
+                },
+                {
+                    duration: "9 weeks",
+                    title: "Working with API: frontend and backend interaction"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Project management on a remote server"
+                },
+
+            ]
+        }
     },
     {
         title: {
@@ -374,7 +583,55 @@ const coursesData = [
                 "Easy start"
             ]
         },
-        freeLesson: "ссылка на урок"
+        freeLesson: "ссылка на урок",
+        planOfLessons: {
+            rus: [
+                {
+                    duration: "5 недель",
+                    title: "Основы веб-верстки: HTML и CSS"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Базовый JavaScript: работа с DOM и событиями"
+                },
+                {
+                    duration: "10 недель",
+                    title: "Фронтенд-разработка: современные инструменты"
+                },
+                {
+                    duration: "9 недель",
+                    title: "Работа с API: взаимодействие фронтенда и бэкенда"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Управление проектом на удалённом сервере"
+                },
+
+            ],
+            eng: [
+                {
+                    duration: "5 weeks",
+                    title: "Web layout basics: HTML and CSS"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Basic JavaScript: working with DOM and events"
+                },
+                {
+                    duration: "10 weeks",
+                    title: "Frontend development: modern tools and frameworks"
+                },
+                {
+                    duration: "9 weeks",
+                    title: "Working with API: frontend and backend interaction"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Project management on a remote server"
+                },
+
+            ]
+        }
     },
     {
         title: {
@@ -422,7 +679,55 @@ const coursesData = [
             ]
         },
         amountLessons: 18,
-        freeLesson: "ссылка на урок"
+        freeLesson: "ссылка на урок",
+        planOfLessons: {
+            rus: [
+                {
+                    duration: "5 недель",
+                    title: "Основы веб-верстки: HTML и CSS"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Базовый JavaScript: работа с DOM и событиями"
+                },
+                {
+                    duration: "10 недель",
+                    title: "Фронтенд-разработка: современные инструменты"
+                },
+                {
+                    duration: "9 недель",
+                    title: "Работа с API: взаимодействие фронтенда и бэкенда"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Управление проектом на удалённом сервере"
+                },
+
+            ],
+            eng: [
+                {
+                    duration: "5 weeks",
+                    title: "Web layout basics: HTML and CSS"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Basic JavaScript: working with DOM and events"
+                },
+                {
+                    duration: "10 weeks",
+                    title: "Frontend development: modern tools and frameworks"
+                },
+                {
+                    duration: "9 weeks",
+                    title: "Working with API: frontend and backend interaction"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Project management on a remote server"
+                },
+
+            ]
+        }
     },
     {
         title: {
@@ -484,7 +789,55 @@ const coursesData = [
                 "Easy start"
             ]
         },
-        freeLesson: "ссылка на бесплатный урок"
+        freeLesson: "ссылка на бесплатный урок",
+        planOfLessons: {
+            rus: [
+                {
+                    duration: "5 недель",
+                    title: "Основы веб-верстки: HTML и CSS"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Базовый JavaScript: работа с DOM и событиями"
+                },
+                {
+                    duration: "10 недель",
+                    title: "Фронтенд-разработка: современные инструменты"
+                },
+                {
+                    duration: "9 недель",
+                    title: "Работа с API: взаимодействие фронтенда и бэкенда"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Управление проектом на удалённом сервере"
+                },
+
+            ],
+            eng: [
+                {
+                    duration: "5 weeks",
+                    title: "Web layout basics: HTML and CSS"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Basic JavaScript: working with DOM and events"
+                },
+                {
+                    duration: "10 weeks",
+                    title: "Frontend development: modern tools and frameworks"
+                },
+                {
+                    duration: "9 weeks",
+                    title: "Working with API: frontend and backend interaction"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Project management on a remote server"
+                },
+
+            ]
+        }
     }
 
 ];
