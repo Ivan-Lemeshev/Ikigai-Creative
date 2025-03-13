@@ -210,12 +210,61 @@ const coursesData = [
         releasesData: "05.03.2025",
         isProfession: false,
         who: {
-            rus: ["Разработчики", "Командная работа", "Контроль версий"],
-            eng: ["Developers", "Team collaboration", "Version control"]
+            subtitles: {
+                rus: ["Начинающим разработчикам",
+                    "Тем, кто хочет сменить профессию",
+                    "Дизайнерам и креативщикам",
+                    "Студентам и IT-специалистам"
+                ],
+                eng: [
+                    "Beginning developers",
+                    "Those looking for a career change",
+                    "Designers and creatives",
+                    "Students and IT professionals"
+                ]
+            },
+            whoText: {
+                rus: ["Если вы никогда не работали с программированием, этот курс даст прочную основу для старта в мире веб-разработки.",
+                    "Если вы ищете новые карьерные возможности и готовы учиться, курс поможет освоить востребованные навыки.",
+                    "Если вы уже занимаетесь дизайном, дополните его знаниями в области front-end и back-end разработки для создания более комплексных проектов",
+                    "Даже если вы уже работаете в IT, курс поможет углубить знания и освоить новые инструменты и технологии веб-разработки."
+                ],
+                eng: [
+                    "If you've never worked with programming, this course will give you a solid foundation to get started in the world of web development.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "If you're already involved in design, supplement it with knowledge of front-end and back-end development to create more complex projects.",
+                    "Even if you already work in IT, the course will help you deepen your knowledge and learn new web development tools and technologies."
+                ]
+            }
         },
+
         whatNeed: {
-            rus: ["ПК", "Стабильный интернет", "Базовые знания программирования"],
-            eng: ["PC", "Internet connection", "Basic programming knowledge"]
+            subtitles: {
+                rus: ["",
+                    "Внимательность",
+                    "Желание учиться",
+                    "Базовое владение компьютером"
+                ],
+                eng: [
+                    "",
+                    "Attentiveness",
+                    "Willingness to learn",
+                    "Basic computer skills"
+                ]
+            },
+            whatNeedText: {
+                rus: ["Этот курс предназначен для начинающих и не требует большого опыта. Вам понадобятся только базовые навыки, которые будут полезны в процессе обучения.",
+                    "Важно быть внимательным при изучении новых понятий, следить за шагами и не пропускать важные детали. Это поможет усвоить материал быстрее и избежать ошибок.",
+                    "Стремление развиваться и осваивать новое — ключевой аспект успешного обучения. Важно быть готовым к трудностям, задавать вопросы и искать решения, если что-то непонятно.",
+                    "Знание основных функций компьютера: работа с файловой системой, использование браузера, установка программ и работа с текстовыми редакторами."
+                ],
+                eng: [
+                    "This course is designed for beginners and does not require much experience. You will only need basic skills that will be useful in the learning process:",
+                    "The desire to develop and learn new things is a key aspect of successful learning. It is important to be prepared for difficulties, ask questions and seek solutions when things are not clear.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "Knowledge of basic computer functions: working with the file system, using a browser, installing programmes and working with word processors."
+                ]
+            }
         },
         fullText: {
             rus: [
@@ -317,12 +366,61 @@ const coursesData = [
         releasesData: "10.06.2025",
         isProfession: false,
         who: {
-            rus: ["Дети", "Взрослые", "Стратеги"],
-            eng: ["Kids", "Adults", "Strategists"]
+            subtitles: {
+                rus: ["Начинающим разработчикам",
+                    "Тем, кто хочет сменить профессию",
+                    "Дизайнерам и креативщикам",
+                    "Студентам и IT-специалистам"
+                ],
+                eng: [
+                    "Beginning developers",
+                    "Those looking for a career change",
+                    "Designers and creatives",
+                    "Students and IT professionals"
+                ]
+            },
+            whoText: {
+                rus: ["Если вы никогда не работали с программированием, этот курс даст прочную основу для старта в мире веб-разработки.",
+                    "Если вы ищете новые карьерные возможности и готовы учиться, курс поможет освоить востребованные навыки.",
+                    "Если вы уже занимаетесь дизайном, дополните его знаниями в области front-end и back-end разработки для создания более комплексных проектов",
+                    "Даже если вы уже работаете в IT, курс поможет углубить знания и освоить новые инструменты и технологии веб-разработки."
+                ],
+                eng: [
+                    "If you've never worked with programming, this course will give you a solid foundation to get started in the world of web development.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "If you're already involved in design, supplement it with knowledge of front-end and back-end development to create more complex projects.",
+                    "Even if you already work in IT, the course will help you deepen your knowledge and learn new web development tools and technologies."
+                ]
+            }
         },
+
         whatNeed: {
-            rus: ["Желание учиться"],
-            eng: ["Desire to learn"]
+            subtitles: {
+                rus: ["",
+                    "Внимательность",
+                    "Желание учиться",
+                    "Базовое владение компьютером"
+                ],
+                eng: [
+                    "",
+                    "Attentiveness",
+                    "Willingness to learn",
+                    "Basic computer skills"
+                ]
+            },
+            whatNeedText: {
+                rus: ["Этот курс предназначен для начинающих и не требует большого опыта. Вам понадобятся только базовые навыки, которые будут полезны в процессе обучения.",
+                    "Важно быть внимательным при изучении новых понятий, следить за шагами и не пропускать важные детали. Это поможет усвоить материал быстрее и избежать ошибок.",
+                    "Стремление развиваться и осваивать новое — ключевой аспект успешного обучения. Важно быть готовым к трудностям, задавать вопросы и искать решения, если что-то непонятно.",
+                    "Знание основных функций компьютера: работа с файловой системой, использование браузера, установка программ и работа с текстовыми редакторами."
+                ],
+                eng: [
+                    "This course is designed for beginners and does not require much experience. You will only need basic skills that will be useful in the learning process:",
+                    "The desire to develop and learn new things is a key aspect of successful learning. It is important to be prepared for difficulties, ask questions and seek solutions when things are not clear.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "Knowledge of basic computer functions: working with the file system, using a browser, installing programmes and working with word processors."
+                ]
+            }
         },
         fullText: {
             rus: ["Освойте дебюты, миттельшпиль и эндшпиль..."],
@@ -415,12 +513,61 @@ const coursesData = [
         releasesData: "20.07.2025",
         isProfession: true,
         who: {
-            rus: ["Разработчики", "Фронтендеры"],
-            eng: ["Developers", "Frontend engineers"]
+            subtitles: {
+                rus: ["Начинающим разработчикам",
+                    "Тем, кто хочет сменить профессию",
+                    "Дизайнерам и креативщикам",
+                    "Студентам и IT-специалистам"
+                ],
+                eng: [
+                    "Beginning developers",
+                    "Those looking for a career change",
+                    "Designers and creatives",
+                    "Students and IT professionals"
+                ]
+            },
+            whoText: {
+                rus: ["Если вы никогда не работали с программированием, этот курс даст прочную основу для старта в мире веб-разработки.",
+                    "Если вы ищете новые карьерные возможности и готовы учиться, курс поможет освоить востребованные навыки.",
+                    "Если вы уже занимаетесь дизайном, дополните его знаниями в области front-end и back-end разработки для создания более комплексных проектов",
+                    "Даже если вы уже работаете в IT, курс поможет углубить знания и освоить новые инструменты и технологии веб-разработки."
+                ],
+                eng: [
+                    "If you've never worked with programming, this course will give you a solid foundation to get started in the world of web development.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "If you're already involved in design, supplement it with knowledge of front-end and back-end development to create more complex projects.",
+                    "Even if you already work in IT, the course will help you deepen your knowledge and learn new web development tools and technologies."
+                ]
+            }
         },
+
         whatNeed: {
-            rus: ["Знание JS", "ПК"],
-            eng: ["JavaScript knowledge", "PC"]
+            subtitles: {
+                rus: ["",
+                    "Внимательность",
+                    "Желание учиться",
+                    "Базовое владение компьютером"
+                ],
+                eng: [
+                    "",
+                    "Attentiveness",
+                    "Willingness to learn",
+                    "Basic computer skills"
+                ]
+            },
+            whatNeedText: {
+                rus: ["Этот курс предназначен для начинающих и не требует большого опыта. Вам понадобятся только базовые навыки, которые будут полезны в процессе обучения.",
+                    "Важно быть внимательным при изучении новых понятий, следить за шагами и не пропускать важные детали. Это поможет усвоить материал быстрее и избежать ошибок.",
+                    "Стремление развиваться и осваивать новое — ключевой аспект успешного обучения. Важно быть готовым к трудностям, задавать вопросы и искать решения, если что-то непонятно.",
+                    "Знание основных функций компьютера: работа с файловой системой, использование браузера, установка программ и работа с текстовыми редакторами."
+                ],
+                eng: [
+                    "This course is designed for beginners and does not require much experience. You will only need basic skills that will be useful in the learning process:",
+                    "The desire to develop and learn new things is a key aspect of successful learning. It is important to be prepared for difficulties, ask questions and seek solutions when things are not clear.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "Knowledge of basic computer functions: working with the file system, using a browser, installing programmes and working with word processors."
+                ]
+            }
         },
         fullText: {
             rus: ["Научитесь создавать SPA с React и Redux..."],
@@ -513,12 +660,61 @@ const coursesData = [
         releasesData: "01.08.2025",
         isProfession: true,
         who: {
-            rus: ["Новички", "Разработчики"],
-            eng: ["Beginners", "Developers"]
+            subtitles: {
+                rus: ["Начинающим разработчикам",
+                    "Тем, кто хочет сменить профессию",
+                    "Дизайнерам и креативщикам",
+                    "Студентам и IT-специалистам"
+                ],
+                eng: [
+                    "Beginning developers",
+                    "Those looking for a career change",
+                    "Designers and creatives",
+                    "Students and IT professionals"
+                ]
+            },
+            whoText: {
+                rus: ["Если вы никогда не работали с программированием, этот курс даст прочную основу для старта в мире веб-разработки.",
+                    "Если вы ищете новые карьерные возможности и готовы учиться, курс поможет освоить востребованные навыки.",
+                    "Если вы уже занимаетесь дизайном, дополните его знаниями в области front-end и back-end разработки для создания более комплексных проектов",
+                    "Даже если вы уже работаете в IT, курс поможет углубить знания и освоить новые инструменты и технологии веб-разработки."
+                ],
+                eng: [
+                    "If you've never worked with programming, this course will give you a solid foundation to get started in the world of web development.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "If you're already involved in design, supplement it with knowledge of front-end and back-end development to create more complex projects.",
+                    "Even if you already work in IT, the course will help you deepen your knowledge and learn new web development tools and technologies."
+                ]
+            }
         },
+
         whatNeed: {
-            rus: ["ПК", "Желание учиться"],
-            eng: ["PC", "Desire to learn"]
+            subtitles: {
+                rus: ["",
+                    "Внимательность",
+                    "Желание учиться",
+                    "Базовое владение компьютером"
+                ],
+                eng: [
+                    "",
+                    "Attentiveness",
+                    "Willingness to learn",
+                    "Basic computer skills"
+                ]
+            },
+            whatNeedText: {
+                rus: ["Этот курс предназначен для начинающих и не требует большого опыта. Вам понадобятся только базовые навыки, которые будут полезны в процессе обучения.",
+                    "Важно быть внимательным при изучении новых понятий, следить за шагами и не пропускать важные детали. Это поможет усвоить материал быстрее и избежать ошибок.",
+                    "Стремление развиваться и осваивать новое — ключевой аспект успешного обучения. Важно быть готовым к трудностям, задавать вопросы и искать решения, если что-то непонятно.",
+                    "Знание основных функций компьютера: работа с файловой системой, использование браузера, установка программ и работа с текстовыми редакторами."
+                ],
+                eng: [
+                    "This course is designed for beginners and does not require much experience. You will only need basic skills that will be useful in the learning process:",
+                    "The desire to develop and learn new things is a key aspect of successful learning. It is important to be prepared for difficulties, ask questions and seek solutions when things are not clear.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "Knowledge of basic computer functions: working with the file system, using a browser, installing programmes and working with word processors."
+                ]
+            }
         },
         fullText: {
             rus: ["Изучите основы Python, ООП, работу с библиотеками..."],
@@ -610,12 +806,61 @@ const coursesData = [
         releasesData: "10.04.2025",
         isProfession: true,
         who: {
-            rus: ["Разработчики", "Автоматизация", "Telegram API"],
-            eng: ["Developers", "Automation", "Telegram API"]
+            subtitles: {
+                rus: ["Начинающим разработчикам",
+                    "Тем, кто хочет сменить профессию",
+                    "Дизайнерам и креативщикам",
+                    "Студентам и IT-специалистам"
+                ],
+                eng: [
+                    "Beginning developers",
+                    "Those looking for a career change",
+                    "Designers and creatives",
+                    "Students and IT professionals"
+                ]
+            },
+            whoText: {
+                rus: ["Если вы никогда не работали с программированием, этот курс даст прочную основу для старта в мире веб-разработки.",
+                    "Если вы ищете новые карьерные возможности и готовы учиться, курс поможет освоить востребованные навыки.",
+                    "Если вы уже занимаетесь дизайном, дополните его знаниями в области front-end и back-end разработки для создания более комплексных проектов",
+                    "Даже если вы уже работаете в IT, курс поможет углубить знания и освоить новые инструменты и технологии веб-разработки."
+                ],
+                eng: [
+                    "If you've never worked with programming, this course will give you a solid foundation to get started in the world of web development.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "If you're already involved in design, supplement it with knowledge of front-end and back-end development to create more complex projects.",
+                    "Even if you already work in IT, the course will help you deepen your knowledge and learn new web development tools and technologies."
+                ]
+            }
         },
+
         whatNeed: {
-            rus: ["ПК", "Python", "Интернет"],
-            eng: ["PC", "Python", "Internet"]
+            subtitles: {
+                rus: ["",
+                    "Внимательность",
+                    "Желание учиться",
+                    "Базовое владение компьютером"
+                ],
+                eng: [
+                    "",
+                    "Attentiveness",
+                    "Willingness to learn",
+                    "Basic computer skills"
+                ]
+            },
+            whatNeedText: {
+                rus: ["Этот курс предназначен для начинающих и не требует большого опыта. Вам понадобятся только базовые навыки, которые будут полезны в процессе обучения.",
+                    "Важно быть внимательным при изучении новых понятий, следить за шагами и не пропускать важные детали. Это поможет усвоить материал быстрее и избежать ошибок.",
+                    "Стремление развиваться и осваивать новое — ключевой аспект успешного обучения. Важно быть готовым к трудностям, задавать вопросы и искать решения, если что-то непонятно.",
+                    "Знание основных функций компьютера: работа с файловой системой, использование браузера, установка программ и работа с текстовыми редакторами."
+                ],
+                eng: [
+                    "This course is designed for beginners and does not require much experience. You will only need basic skills that will be useful in the learning process:",
+                    "The desire to develop and learn new things is a key aspect of successful learning. It is important to be prepared for difficulties, ask questions and seek solutions when things are not clear.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "Knowledge of basic computer functions: working with the file system, using a browser, installing programmes and working with word processors."
+                ]
+            }
         },
         fullText: {
             rus: ["Научитесь создавать ботов для Telegram, которые могут автоматизировать задачи, взаимодействовать с пользователями и работать с API."],
@@ -707,12 +952,61 @@ const coursesData = [
         releasesData: "20.05.2025",
         isProfession: false,
         who: {
-            rus: ["Бизнес", "Коммуникация", "Личные продажи"],
-            eng: ["Business", "Communication", "Personal Sales"]
+            subtitles: {
+                rus: ["Начинающим разработчикам",
+                    "Тем, кто хочет сменить профессию",
+                    "Дизайнерам и креативщикам",
+                    "Студентам и IT-специалистам"
+                ],
+                eng: [
+                    "Beginning developers",
+                    "Those looking for a career change",
+                    "Designers and creatives",
+                    "Students and IT professionals"
+                ]
+            },
+            whoText: {
+                rus: ["Если вы никогда не работали с программированием, этот курс даст прочную основу для старта в мире веб-разработки.",
+                    "Если вы ищете новые карьерные возможности и готовы учиться, курс поможет освоить востребованные навыки.",
+                    "Если вы уже занимаетесь дизайном, дополните его знаниями в области front-end и back-end разработки для создания более комплексных проектов",
+                    "Даже если вы уже работаете в IT, курс поможет углубить знания и освоить новые инструменты и технологии веб-разработки."
+                ],
+                eng: [
+                    "If you've never worked with programming, this course will give you a solid foundation to get started in the world of web development.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "If you're already involved in design, supplement it with knowledge of front-end and back-end development to create more complex projects.",
+                    "Even if you already work in IT, the course will help you deepen your knowledge and learn new web development tools and technologies."
+                ]
+            }
         },
+
         whatNeed: {
-            rus: ["Желание развиваться", "Коммуникативные навыки"],
-            eng: ["Desire to grow", "Communication skills"]
+            subtitles: {
+                rus: ["",
+                    "Внимательность",
+                    "Желание учиться",
+                    "Базовое владение компьютером"
+                ],
+                eng: [
+                    "",
+                    "Attentiveness",
+                    "Willingness to learn",
+                    "Basic computer skills"
+                ]
+            },
+            whatNeedText: {
+                rus: ["Этот курс предназначен для начинающих и не требует большого опыта. Вам понадобятся только базовые навыки, которые будут полезны в процессе обучения.",
+                    "Важно быть внимательным при изучении новых понятий, следить за шагами и не пропускать важные детали. Это поможет усвоить материал быстрее и избежать ошибок.",
+                    "Стремление развиваться и осваивать новое — ключевой аспект успешного обучения. Важно быть готовым к трудностям, задавать вопросы и искать решения, если что-то непонятно.",
+                    "Знание основных функций компьютера: работа с файловой системой, использование браузера, установка программ и работа с текстовыми редакторами."
+                ],
+                eng: [
+                    "This course is designed for beginners and does not require much experience. You will only need basic skills that will be useful in the learning process:",
+                    "The desire to develop and learn new things is a key aspect of successful learning. It is important to be prepared for difficulties, ask questions and seek solutions when things are not clear.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "Knowledge of basic computer functions: working with the file system, using a browser, installing programmes and working with word processors."
+                ]
+            }
         },
         fullText: {
             rus: ["Курс поможет вам понять психологию клиента, освоить техники убеждения и улучшить ваши навыки продаж."],
@@ -810,12 +1104,61 @@ const coursesData = [
         releasesData: "10.04.2025",
         isProfession: false,
         who: {
-            rus: ["ЗОЖ", "Диетология", "Личный рост"],
-            eng: ["Healthy Lifestyle", "Dietetics", "Personal Growth"]
+            subtitles: {
+                rus: ["Начинающим разработчикам",
+                    "Тем, кто хочет сменить профессию",
+                    "Дизайнерам и креативщикам",
+                    "Студентам и IT-специалистам"
+                ],
+                eng: [
+                    "Beginning developers",
+                    "Those looking for a career change",
+                    "Designers and creatives",
+                    "Students and IT professionals"
+                ]
+            },
+            whoText: {
+                rus: ["Если вы никогда не работали с программированием, этот курс даст прочную основу для старта в мире веб-разработки.",
+                    "Если вы ищете новые карьерные возможности и готовы учиться, курс поможет освоить востребованные навыки.",
+                    "Если вы уже занимаетесь дизайном, дополните его знаниями в области front-end и back-end разработки для создания более комплексных проектов",
+                    "Даже если вы уже работаете в IT, курс поможет углубить знания и освоить новые инструменты и технологии веб-разработки."
+                ],
+                eng: [
+                    "If you've never worked with programming, this course will give you a solid foundation to get started in the world of web development.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "If you're already involved in design, supplement it with knowledge of front-end and back-end development to create more complex projects.",
+                    "Even if you already work in IT, the course will help you deepen your knowledge and learn new web development tools and technologies."
+                ]
+            }
         },
+
         whatNeed: {
-            rus: ["Интерес к питанию", "Желание учиться", "Базовые знания биологии"],
-            eng: ["Interest in nutrition", "Willingness to learn", "Basic biology knowledge"]
+            subtitles: {
+                rus: ["",
+                    "Внимательность",
+                    "Желание учиться",
+                    "Базовое владение компьютером"
+                ],
+                eng: [
+                    "",
+                    "Attentiveness",
+                    "Willingness to learn",
+                    "Basic computer skills"
+                ]
+            },
+            whatNeedText: {
+                rus: ["Этот курс предназначен для начинающих и не требует большого опыта. Вам понадобятся только базовые навыки, которые будут полезны в процессе обучения.",
+                    "Важно быть внимательным при изучении новых понятий, следить за шагами и не пропускать важные детали. Это поможет усвоить материал быстрее и избежать ошибок.",
+                    "Стремление развиваться и осваивать новое — ключевой аспект успешного обучения. Важно быть готовым к трудностям, задавать вопросы и искать решения, если что-то непонятно.",
+                    "Знание основных функций компьютера: работа с файловой системой, использование браузера, установка программ и работа с текстовыми редакторами."
+                ],
+                eng: [
+                    "This course is designed for beginners and does not require much experience. You will only need basic skills that will be useful in the learning process:",
+                    "The desire to develop and learn new things is a key aspect of successful learning. It is important to be prepared for difficulties, ask questions and seek solutions when things are not clear.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "Knowledge of basic computer functions: working with the file system, using a browser, installing programmes and working with word processors."
+                ]
+            }
         },
         fullText: {
             rus: [

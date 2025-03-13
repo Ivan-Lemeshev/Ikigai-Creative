@@ -2003,35 +2003,30 @@ const courseButtonMoreFirstQuestionBigSvg = document.getElementById("course-butt
 const courseButtonMoreSecondQuestionBigSvg = document.getElementById("course-button-more-second-question-big-svg");
 const courseButtonMoreThirdQuestionBigSvg = document.getElementById("course-button-more-third-question-big-svg");
 
+const courseButtonMoreThirdQuestionWrapper0 = document.getElementById("course-button-more-third-question-wrapper-0");
+const courseButtonMoreThirdQuestionWrapper1 = document.getElementById("course-button-more-third-question-wrapper-1");
+const courseButtonMoreThirdQuestionWrapper2 = document.getElementById("course-button-more-third-question-wrapper-2");
+const courseButtonMoreThirdQuestionWrapper3 = document.getElementById("course-button-more-third-question-wrapper-3");
+const courseButtonMoreThirdQuestionWrapper4 = document.getElementById("course-button-more-third-question-wrapper-4");
 
-const courseButtonMoreThirdQuestionWrapper0 = document.getElementById("course-button-more-third-question-wrapper-0")
-const courseButtonMoreThirdQuestionWrapper1 = document.getElementById("course-button-more-third-question-wrapper-1")
-const courseButtonMoreThirdQuestionWrapper2 = document.getElementById("course-button-more-third-question-wrapper-2")
-const courseButtonMoreThirdQuestionWrapper3 = document.getElementById("course-button-more-third-question-wrapper-3")
-const courseButtonMoreThirdQuestionWrapper4 = document.getElementById("course-button-more-third-question-wrapper-4")
+const courseButtonMoreThirdQuestionWeeks0 = document.getElementById("course-button-more-third-question-weeks-0");
+const courseButtonMoreThirdQuestionWeeks1 = document.getElementById("course-button-more-third-question-weeks-1");
+const courseButtonMoreThirdQuestionWeeks2 = document.getElementById("course-button-more-third-question-weeks-2");
+const courseButtonMoreThirdQuestionWeeks3 = document.getElementById("course-button-more-third-question-weeks-3");
+const courseButtonMoreThirdQuestionWeeks4 = document.getElementById("course-button-more-third-question-weeks-4");
 
-const courseButtonMoreThirdQuestionWeeks0 = document.getElementById("course-button-more-third-question-weeks-0")
-const courseButtonMoreThirdQuestionWeeks1 = document.getElementById("course-button-more-third-question-weeks-1")
-const courseButtonMoreThirdQuestionWeeks2 = document.getElementById("course-button-more-third-question-weeks-2")
-const courseButtonMoreThirdQuestionWeeks3 = document.getElementById("course-button-more-third-question-weeks-3")
-const courseButtonMoreThirdQuestionWeeks4 = document.getElementById("course-button-more-third-question-weeks-4")
+const courseButtonMoreThirdQuestionText0 = document.getElementById("course-button-more-third-question-text-0");
+const courseButtonMoreThirdQuestionText1 = document.getElementById("course-button-more-third-question-text-1");
+const courseButtonMoreThirdQuestionText2 = document.getElementById("course-button-more-third-question-text-2");
+const courseButtonMoreThirdQuestionText3 = document.getElementById("course-button-more-third-question-text-3");
+const courseButtonMoreThirdQuestionText4 = document.getElementById("course-button-more-third-question-text-4");
 
-const courseButtonMoreThirdQuestionText0 = document.getElementById("course-button-more-third-question-text-0")
-const courseButtonMoreThirdQuestionText1 = document.getElementById("course-button-more-third-question-text-1")
-const courseButtonMoreThirdQuestionText2 = document.getElementById("course-button-more-third-question-text-2")
-const courseButtonMoreThirdQuestionText3 = document.getElementById("course-button-more-third-question-text-3")
-const courseButtonMoreThirdQuestionText4 = document.getElementById("course-button-more-third-question-text-4")
-
-const courseButtonMoreSecondQuestionTitleImg = document.getElementById("course-button-more-second-question-title-img")
-const courseButtonMoreSecondQuestionBaseImg = document.getElementById("course-button-more-second-question-base-img")
-
-const courseButtonMoreSecondQuestionDivision2 = document.getElementById("course-button-more-second-question-division-2")
-const courseButtonMoreSecondQuestionDivision3 = document.getElementById("course-button-more-second-question-division-3")
-const courseButtonMoreSecondQuestionDivision4 = document.getElementById("course-button-more-second-question-division-4")
-const courseButtonMoreSecondQuestionDivision5 = document.getElementById("course-button-more-second-question-division-5")
+const courseButtonMoreSecondQuestionTitleImg = document.getElementById("course-button-more-second-question-title-img");
+const courseButtonMoreSecondQuestionBaseImg = document.getElementById("course-button-more-second-question-base-img");
 
 let course = false;
 let numberOfPage = 1;
+let clickedTop = 0;
 
 const activeClassNumbersOfPage = () => {
     for (let index = 1; index <= Math.ceil(sortedArray.length / 2); index++) {
@@ -2296,6 +2291,8 @@ const uploadNumbers = (amountPage, firstStart = false) => {
 
 
 topCurseMoreButton.addEventListener('click', () => {
+    clickedTop = 0;
+    let score = (numberOfPage - 1) * 2 + clickedTop;
     setTimeout(() => {
         topCurseUpperText.style.opacity = "";
         topCurseLowerText.style.opacity = "";
@@ -2346,9 +2343,9 @@ topCurseMoreButton.addEventListener('click', () => {
             courseButtonMoreThirdQuestion.style.opacity = "0.8";
             courseButtonMoreThirdQuestionText.style.opacity = "0.8";
             courseButtonMoreThirdQuestionSvg.style.opacity = "0.8";
-            topCurseUpperText.textContent = sortedArray[(numberOfPage - 1) * 2].fullText[selectLang][0];
-            topCurseLowerText.textContent = sortedArray[(numberOfPage - 1) * 2].fullText[selectLang][1];
-            courseMoreButtonDownText.textContent = sortedArray[(numberOfPage - 1) * 2].fullText[selectLang][2];
+            topCurseUpperText.textContent = sortedArray[score].fullText[selectLang][0];
+            topCurseLowerText.textContent = sortedArray[score].fullText[selectLang][1];
+            courseMoreButtonDownText.textContent = sortedArray[score].fullText[selectLang][2];
             setTimeout(() => {
                 topCurseUpperText.style.opacity = "1";
                 topCurseLowerText.style.opacity = "1";
@@ -2358,7 +2355,76 @@ topCurseMoreButton.addEventListener('click', () => {
     }, 1);
 })
 
+
+bottomCurseMoreButton.addEventListener('click', () => {
+    clickedTop = 1;
+    let score = (numberOfPage - 1) * 2 + clickedTop;
+    setTimeout(() => {
+        topCurseUpperText.style.opacity = "";
+        topCurseLowerText.style.opacity = "";
+        coursesMiddleLine.style.opacity = "";
+        topCurseOrderButton.style.opacity = "";
+        topCurseMoreButton.style.opacity = "";
+        bottomCurseUpperText.style.opacity = "";
+        bottomCurseLowerText.style.opacity = "";
+        wrapperCourseImgBottom.style.top = "5.28229vw";
+        wrapperCourseImgTop.style.opacity = ""
+        bottomCurseUpperText.style.opacity = "";
+        bottomCurseLowerText.style.opacity = "";
+        bottomCurseOrderButton.style.opacity = "";
+        bottomCurseMoreButton.style.opacity = "";
+        bottomCurseName.style.opacity = "";
+        borderForCourseImgBottom.style.opacity = "0";
+        numberOfPageWrapper.style.opacity = "0";
+        label1.style.opacity = "1";
+        label2.style.opacity = "1";
+        label3.style.opacity = "1";
+        courseMoreStudyButton.style.display = "flex";
+        courseMoreCounsellingButton.style.display = "flex";
+        courseMoreReviewButton.style.display = "flex";
+        courseMoreCloseButton.style.display = "block";
+        courseButtonMoreQuestionText.style.display = "block";
+        courseButtonMoreFirstQuestionText.style.display = "block";
+        courseButtonMoreSecondQuestionText.style.display = "block";
+        courseButtonMoreThirdQuestionText.style.display = "block";
+        setTimeout(() => {
+            topCurseLowerText.style.top = "20.94792vw";
+            courseMoreStudyButton.style.opacity = "1";
+            courseMoreCounsellingButton.style.opacity = "1";
+            buttonMoreMainSvg.style.opacity = "1";
+            courseMoreReviewButton.style.opacity = "1";
+            courseMoreCloseButton.style.opacity = "0.7";
+            topCurseOrderButton.style.display = "none";
+            topCurseMoreButton.style.display = "none";
+            bottomCurseOrderButton.style.display = "none";
+            bottomCurseMoreButton.style.display = "none";
+            courseButtonMoreQuestionMark.style.opacity = "1";
+            courseButtonMoreQuestionText.style.opacity = "1";
+            courseButtonMoreQuestionSvg.style.opacity = "1";
+            courseButtonMoreFirstQuestion.style.opacity = "0.8";
+            courseButtonMoreFirstQuestionText.style.opacity = "0.8";
+            courseButtonMoreFirstQuestionSvg.style.opacity = "0.8";
+            courseButtonMoreSecondQuestion.style.opacity = "0.8";
+            courseButtonMoreSecondQuestionText.style.opacity = "0.8";
+            courseButtonMoreSecondQuestionSvg.style.opacity = "0.8";
+            courseButtonMoreThirdQuestion.style.opacity = "0.8";
+            courseButtonMoreThirdQuestionText.style.opacity = "0.8";
+            courseButtonMoreThirdQuestionSvg.style.opacity = "0.8";
+            topCurseUpperText.textContent = sortedArray[score].fullText[selectLang][0];
+            topCurseLowerText.textContent = sortedArray[score].fullText[selectLang][1];
+            courseMoreButtonDownText.textContent = sortedArray[score].fullText[selectLang][2];
+            setTimeout(() => {
+                topCurseUpperText.style.opacity = "1";
+                topCurseLowerText.style.opacity = "1";
+                courseMoreButtonDownText.style.opacity = "1";
+            }, 1);
+        }, 300);
+    }, 1);
+})
+
+
 courseMoreCloseButton.addEventListener('click', () => {
+    let score = (numberOfPage - 1) * 2 + clickedTop;
     courseButtonMoreThirdQuestionBigSvg.style.opacity = "";
     topCurseUpperText.style.opacity = "";
     topCurseLowerText.style.opacity = "";
@@ -2384,6 +2450,7 @@ courseMoreCloseButton.addEventListener('click', () => {
     courseButtonMoreThirdQuestion.style.opacity = "";
     courseButtonMoreThirdQuestionText.style.opacity = "";
     courseButtonMoreThirdQuestionSvg.style.opacity = "";
+    wrapperCourseImgTop.style.opacity = "1"
     label1.style.opacity = "";
     label2.style.opacity = "";
     label3.style.opacity = "";
@@ -2405,9 +2472,10 @@ courseMoreCloseButton.addEventListener('click', () => {
     courseButtonMoreFirstQuestionTitle0.style.display = "";
     courseButtonMoreSecondQuestionTitleImg.style.opacity = "";
     courseButtonMoreSecondQuestionBaseImg.style.opacity = "";
+    wrapperCourseImgBottom.style.top = "";
     setTimeout(() => {
         topCurseLowerText.style.top = "";
-        topCurseName.textContent = sortedArray[0].title[selectLang];
+        topCurseName.textContent = sortedArray[score].title[selectLang];
         setTimeout(() => {
             topCurseName.style.opacity = "1"
             topCurseUpperText.style.opacity = "1";
@@ -2429,8 +2497,8 @@ courseMoreCloseButton.addEventListener('click', () => {
             courseMoreCounsellingButton.style.display = "";
             courseMoreReviewButton.style.display = "";
             courseMoreCloseButton.style.display = "";
-            topCurseUpperText.textContent = sortedArray[(numberOfPage - 1) * 2].descriptionUp[selectLang];
-            topCurseLowerText.textContent = sortedArray[(numberOfPage - 1) * 2].descriptionDown[selectLang];
+            topCurseUpperText.textContent = sortedArray[score].descriptionUp[selectLang];
+            topCurseLowerText.textContent = sortedArray[score].descriptionDown[selectLang];
             courseMoreButtonDownText.textContent = "";
             courseButtonMoreQuestionText.style.display = "";
             courseButtonMoreFirstQuestionText.style.display = "";
@@ -2608,6 +2676,7 @@ coursesNavigationSpecializationCourses.addEventListener('click', () => {
 })
 
 courseButtonMoreFirstQuestionText.addEventListener('click', () => {
+    let score = (numberOfPage - 1) * 2 + clickedTop;
     courseButtonMoreFirstQuestionText.style.opacity = "1";
     courseButtonMoreFirstQuestion.style.opacity = "1";
     courseButtonMoreFirstQuestionSvg.style.opacity = "1";
@@ -2650,18 +2719,19 @@ courseButtonMoreFirstQuestionText.addEventListener('click', () => {
         } else {
             topCurseName.textContent = "Наш курс подойдет";
         }
+        courseButtonMoreFirstQuestionTitle0.style.display = "";
         courseButtonMoreFirstQuestionText0.style.marginTop = "";
         courseButtonMoreFirstQuestionTitle1.style.marginTop = "";
         courseButtonMoreFirstQuestionTitle2.style.marginTop = "";
         courseButtonMoreFirstQuestionTitle3.style.marginTop = "";
-        courseButtonMoreFirstQuestionTitle0.textContent = sortedArray[(numberOfPage - 1) * 2].who.subtitles[selectLang][0];
-        courseButtonMoreFirstQuestionText0.textContent = sortedArray[(numberOfPage - 1) * 2].who.whoText[selectLang][0];
-        courseButtonMoreFirstQuestionTitle1.textContent = sortedArray[(numberOfPage - 1) * 2].who.subtitles[selectLang][1];
-        courseButtonMoreFirstQuestionText1.textContent = sortedArray[(numberOfPage - 1) * 2].who.whoText[selectLang][1];
-        courseButtonMoreFirstQuestionTitle2.textContent = sortedArray[(numberOfPage - 1) * 2].who.subtitles[selectLang][2];
-        courseButtonMoreFirstQuestionText2.textContent = sortedArray[(numberOfPage - 1) * 2].who.whoText[selectLang][2];
-        courseButtonMoreFirstQuestionTitle3.textContent = sortedArray[(numberOfPage - 1) * 2].who.subtitles[selectLang][3];
-        courseButtonMoreFirstQuestionText3.textContent = sortedArray[(numberOfPage - 1) * 2].who.whoText[selectLang][3];
+        courseButtonMoreFirstQuestionTitle0.textContent = sortedArray[score].who.subtitles[selectLang][0];
+        courseButtonMoreFirstQuestionText0.textContent = sortedArray[score].who.whoText[selectLang][0];
+        courseButtonMoreFirstQuestionTitle1.textContent = sortedArray[score].who.subtitles[selectLang][1];
+        courseButtonMoreFirstQuestionText1.textContent = sortedArray[score].who.whoText[selectLang][1];
+        courseButtonMoreFirstQuestionTitle2.textContent = sortedArray[score].who.subtitles[selectLang][2];
+        courseButtonMoreFirstQuestionText2.textContent = sortedArray[score].who.whoText[selectLang][2];
+        courseButtonMoreFirstQuestionTitle3.textContent = sortedArray[score].who.subtitles[selectLang][3];
+        courseButtonMoreFirstQuestionText3.textContent = sortedArray[score].who.whoText[selectLang][3];
         setTimeout(() => {
             topCurseName.style.opacity = "1";
             courseButtonMoreFirstQuestionTitle0.style.opacity = "1";
@@ -2678,6 +2748,7 @@ courseButtonMoreFirstQuestionText.addEventListener('click', () => {
 })
 
 courseButtonMoreSecondQuestionText.addEventListener('click', () => {
+    let score = (numberOfPage - 1) * 2 + clickedTop;
     courseButtonMoreSecondQuestion.style.opacity = "1";
     courseButtonMoreSecondQuestionText.style.opacity = "1";
     courseButtonMoreSecondQuestionSvg.style.opacity = "1";
@@ -2701,7 +2772,6 @@ courseButtonMoreSecondQuestionText.addEventListener('click', () => {
     courseButtonMoreThirdQuestionWrapper4.style.opacity = "";
     topCurseName.style.opacity = "";
     courseButtonMoreFirstQuestionTitle0.style.opacity = "";
-    courseButtonMoreFirstQuestionTitle0.style.display = "none";
     courseButtonMoreFirstQuestionText0.style.opacity = "";
     courseButtonMoreFirstQuestionTitle1.style.opacity = "";
     courseButtonMoreFirstQuestionText1.style.opacity = "";
@@ -2713,24 +2783,27 @@ courseButtonMoreSecondQuestionText.addEventListener('click', () => {
     label1.style.opacity = "";
     label2.style.opacity = "";
     label3.style.opacity = "";
+
+    courseButtonMoreSecondQuestionBaseImg.classList = `complexity-${(sortedArray[score]).complexity}`;
+
     setTimeout(() => {
-        if(selectLang === "eng") {
+        if (selectLang === "eng") {
             topCurseName.textContent = "Necessary to start training";
         } else {
             topCurseName.textContent = "Необходимо для обучения";
         }
-
+        courseButtonMoreFirstQuestionTitle0.style.display = "none";
         courseButtonMoreFirstQuestionText0.style.marginTop = "3.04167vw";
         courseButtonMoreFirstQuestionTitle1.style.marginTop = "1.04167vw";
         courseButtonMoreFirstQuestionTitle2.style.marginTop = "1.04167vw";
         courseButtonMoreFirstQuestionTitle3.style.marginTop = "1.04167vw";
-        courseButtonMoreFirstQuestionText0.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed.whatNeedText[selectLang][0];
-        courseButtonMoreFirstQuestionTitle1.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed.subtitles[selectLang][1];
-        courseButtonMoreFirstQuestionText1.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed.whatNeedText[selectLang][1];
-        courseButtonMoreFirstQuestionTitle2.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed.subtitles[selectLang][2];
-        courseButtonMoreFirstQuestionText2.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed.whatNeedText[selectLang][2];
-        courseButtonMoreFirstQuestionTitle3.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed.subtitles[selectLang][3];
-        courseButtonMoreFirstQuestionText3.textContent = sortedArray[(numberOfPage - 1) * 2].whatNeed.whatNeedText[selectLang][3];
+        courseButtonMoreFirstQuestionText0.textContent = sortedArray[score].whatNeed.whatNeedText[selectLang][0];
+        courseButtonMoreFirstQuestionTitle1.textContent = sortedArray[score].whatNeed.subtitles[selectLang][1];
+        courseButtonMoreFirstQuestionText1.textContent = sortedArray[score].whatNeed.whatNeedText[selectLang][1];
+        courseButtonMoreFirstQuestionTitle2.textContent = sortedArray[score].whatNeed.subtitles[selectLang][2];
+        courseButtonMoreFirstQuestionText2.textContent = sortedArray[score].whatNeed.whatNeedText[selectLang][2];
+        courseButtonMoreFirstQuestionTitle3.textContent = sortedArray[score].whatNeed.subtitles[selectLang][3];
+        courseButtonMoreFirstQuestionText3.textContent = sortedArray[score].whatNeed.whatNeedText[selectLang][3];
         setTimeout(() => {
             courseButtonMoreSecondQuestionTitleImg.style.opacity = "1";
             courseButtonMoreSecondQuestionBaseImg.style.opacity = "1";
@@ -2749,6 +2822,7 @@ courseButtonMoreSecondQuestionText.addEventListener('click', () => {
 })
 
 courseButtonMoreThirdQuestionText.addEventListener('click', () => {
+    let score = (numberOfPage - 1) * 2 + clickedTop;
     courseButtonMoreThirdQuestion.style.opacity = "1";
     courseButtonMoreThirdQuestionText.style.opacity = "1";
     courseButtonMoreThirdQuestionSvg.style.opacity = "1";
@@ -2777,22 +2851,28 @@ courseButtonMoreThirdQuestionText.addEventListener('click', () => {
     courseButtonMoreFirstQuestionText2.style.opacity = "";
     courseButtonMoreFirstQuestionTitle3.style.opacity = "";
     courseButtonMoreFirstQuestionText3.style.opacity = "";
-    courseButtonMoreFirstQuestionTitle0.style.display = "";
     courseButtonMoreSecondQuestionTitleImg.style.opacity = "";
     courseButtonMoreSecondQuestionBaseImg.style.opacity = "";
 
     setTimeout(() => {
-        courseButtonMoreThirdQuestionWeeks0.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][0].duration;
-        courseButtonMoreThirdQuestionWeeks1.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][1].duration;
-        courseButtonMoreThirdQuestionWeeks2.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][2].duration;
-        courseButtonMoreThirdQuestionWeeks3.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][3].duration;
-        courseButtonMoreThirdQuestionWeeks4.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][4].duration;
+        courseButtonMoreFirstQuestionTitle0.style.display = "";
+        // courseButtonMoreFirstQuestionTitle0.style.display = "none";
+        courseButtonMoreFirstQuestionText0.style.marginTop = "";
+        courseButtonMoreFirstQuestionTitle1.style.marginTop = "";
+        courseButtonMoreFirstQuestionTitle2.style.marginTop = "";
+        courseButtonMoreFirstQuestionTitle3.style.marginTop = "";
 
-        courseButtonMoreThirdQuestionText0.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][0].title;
-        courseButtonMoreThirdQuestionText1.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][1].title;
-        courseButtonMoreThirdQuestionText2.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][2].title;
-        courseButtonMoreThirdQuestionText3.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][3].title;
-        courseButtonMoreThirdQuestionText4.textContent = sortedArray[(numberOfPage - 1) * 2].planOfLessons[selectLang][4].title;
+        courseButtonMoreThirdQuestionWeeks0.textContent = sortedArray[score].planOfLessons[selectLang][0].duration;
+        courseButtonMoreThirdQuestionWeeks1.textContent = sortedArray[score].planOfLessons[selectLang][1].duration;
+        courseButtonMoreThirdQuestionWeeks2.textContent = sortedArray[score].planOfLessons[selectLang][2].duration;
+        courseButtonMoreThirdQuestionWeeks3.textContent = sortedArray[score].planOfLessons[selectLang][3].duration;
+        courseButtonMoreThirdQuestionWeeks4.textContent = sortedArray[score].planOfLessons[selectLang][4].duration;
+
+        courseButtonMoreThirdQuestionText0.textContent = sortedArray[score].planOfLessons[selectLang][0].title;
+        courseButtonMoreThirdQuestionText1.textContent = sortedArray[score].planOfLessons[selectLang][1].title;
+        courseButtonMoreThirdQuestionText2.textContent = sortedArray[score].planOfLessons[selectLang][2].title;
+        courseButtonMoreThirdQuestionText3.textContent = sortedArray[score].planOfLessons[selectLang][3].title;
+        courseButtonMoreThirdQuestionText4.textContent = sortedArray[score].planOfLessons[selectLang][4].title;
 
         if (selectLang === "eng") {
             topCurseName.textContent = "Course outline";
@@ -2812,6 +2892,7 @@ courseButtonMoreThirdQuestionText.addEventListener('click', () => {
 })
 
 courseButtonMoreQuestionText.addEventListener('click', () => {
+    let score = (numberOfPage - 1) * 2 + clickedTop;
     courseButtonMoreThirdQuestionBigSvg.style.opacity = "";
     courseButtonMoreQuestionText.style.opacity = "1";
     courseButtonMoreQuestionMark.style.opacity = "1";
@@ -2849,7 +2930,7 @@ courseButtonMoreQuestionText.addEventListener('click', () => {
     courseButtonMoreSecondQuestionBaseImg.style.opacity = "";
 
     setTimeout(() => {
-        topCurseName.textContent = sortedArray[0].title[selectLang];
+        topCurseName.textContent = sortedArray[score].title[selectLang];
         setTimeout(() => {
             topCurseName.style.opacity = "1";
             topCurseUpperText.style.opacity = "1";
