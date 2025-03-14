@@ -68,3 +68,19 @@ export const textForApplication = {
         "Здравстуйте, я воспользовался вашей услугой и хочу оставить о ней отзыв"
     ]
 }
+
+// export const coursesTextForApplication = {
+//     eng: [
+//         "",
+//         "Hello, I want to get advice on the chosen course: ", 
+//         "Hello, I want to get an answer to the question:",
+//         "Hello, I have ended your course and I want to leave a review: "
+//     ],
+
+//     rus: [
+//         "",
+//         "Здравстуйте, я хочу учиться на следующем курсе: ",
+//         "Здравстуйте, я хочу задать вам несколько вопросов по курсу ",
+//         "Здравстуйте, я прошел ваш курс и хочу оставить о нем отзыв"
+//     ]
+// }

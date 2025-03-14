@@ -352,12 +352,12 @@ const coursesData = [
         },
         complexity: 4,
         descriptionUp: {
-            rus: "Развивайте логическое мышление, обучаясь шахматам от базы до продвинутого уровня.",
-            eng: "Develop logical thinking by learning chess from basics to advanced strategies."
+            rus: "Научитесь играть в шахматы с нуля, освоите стратегии, тактику и дебюты, улучшите свою игру с помощью практических упражнений и экспертного наставничества. Независимо от вашего уровня — новичок или будущий участник турниров — этот курс поможет вам глубже понять шахматы и отточить свои навыки!",
+            eng: "Learn to play chess from the ground up, master strategies, tactics, and openings, and improve your game through practical exercises and expert coaching. Whether you're a complete beginner or an aspiring tournament player, this course will help you develop a deep understanding of chess and refine your skills!"
         },
         descriptionDown: {
             rus: "Станьте уверенным игроком в шахматы!",
-            eng: "Become a confident chess player"
+            eng: "Начните свой путь в шахматах уже сегодня!"
         },
         svgCode: `...`,
         cost: 15000,
@@ -367,29 +367,29 @@ const coursesData = [
         isProfession: false,
         who: {
             subtitles: {
-                rus: ["Начинающим разработчикам",
-                    "Тем, кто хочет сменить профессию",
-                    "Дизайнерам и креативщикам",
-                    "Студентам и IT-специалистам"
+                rus: ["Начинающим и любителям",
+                    "Тем, кто хочет развивать мышление",
+                    "Любителям стратегий и решения задач",
+                    "Студентам и профессионалам"
                 ],
                 eng: [
-                    "Beginning developers",
-                    "Those looking for a career change",
-                    "Designers and creatives",
-                    "Students and IT professionals"
+                    "Beginners and casual players",
+                    "Those looking to sharpen their minds",
+                    "Strategy enthusiasts and problem solvers",
+                    "Students and professionals"
                 ]
             },
             whoText: {
-                rus: ["Если вы никогда не работали с программированием, этот курс даст прочную основу для старта в мире веб-разработки.",
-                    "Если вы ищете новые карьерные возможности и готовы учиться, курс поможет освоить востребованные навыки.",
-                    "Если вы уже занимаетесь дизайном, дополните его знаниями в области front-end и back-end разработки для создания более комплексных проектов",
-                    "Даже если вы уже работаете в IT, курс поможет углубить знания и освоить новые инструменты и технологии веб-разработки."
+                rus: ["Если вы никогда не играли в шахматы, этот курс даст вам прочную базу, чтобы понять игру и начать побеждать.",
+                    "Если вы хотите развить стратегическое мышление и навыки принятия решений, шахматы — идеальное упражнение для ума.",
+                    "Если вам нравится решать сложные задачи, изучение шахмат станет для вас увлекательным вызовом.",
+                    "Даже если вы уже играете в шахматы, этот курс поможет вам улучшить технику, освоить продвинутые стратегии и повысить рейтинг."
                 ],
                 eng: [
-                    "If you've never worked with programming, this course will give you a solid foundation to get started in the world of web development.",
-                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
-                    "If you're already involved in design, supplement it with knowledge of front-end and back-end development to create more complex projects.",
-                    "Even if you already work in IT, the course will help you deepen your knowledge and learn new web development tools and technologies."
+                    "If you've never played chess before, this course will give you a strong foundation to understand the game and start winning.",
+                    "If you're looking to enhance your strategic thinking and decision-making skills, chess is the perfect mental exercise.",
+                    "If you love solving complex problems, learning chess will challenge your mind and improve your analytical skills.",
+                    "Even if you already play chess, this course will help you refine your techniques, explore advanced strategies, and increase your rating."
                 ]
             }
         },
@@ -397,34 +397,39 @@ const coursesData = [
         whatNeed: {
             subtitles: {
                 rus: ["",
-                    "Внимательность",
+                    "Терпение и концентрация",
                     "Желание учиться",
-                    "Базовое владение компьютером"
+                    "Базовые знания правил шахмат (необязательно)"
                 ],
                 eng: [
                     "",
-                    "Attentiveness",
+                    "Patience and concentration",
                     "Willingness to learn",
-                    "Basic computer skills"
+                    "Basic knowledge of chess rules (optional)"
                 ]
             },
             whatNeedText: {
-                rus: ["Этот курс предназначен для начинающих и не требует большого опыта. Вам понадобятся только базовые навыки, которые будут полезны в процессе обучения.",
-                    "Важно быть внимательным при изучении новых понятий, следить за шагами и не пропускать важные детали. Это поможет усвоить материал быстрее и избежать ошибок.",
-                    "Стремление развиваться и осваивать новое — ключевой аспект успешного обучения. Важно быть готовым к трудностям, задавать вопросы и искать решения, если что-то непонятно.",
-                    "Знание основных функций компьютера: работа с файловой системой, использование браузера, установка программ и работа с текстовыми редакторами."
+                rus: ["Этот курс подходит для игроков любого уровня — от абсолютных новичков до тех, кто хочет улучшить свои шахматные навыки.",
+                    "Терпение и внимание к деталям — ключ к успешному обучению шахматам. Важно учиться анализировать ходы и думать наперед.",
+                    "Стремление развиваться и совершенствоваться необходимо. Шахматы требуют практики, стратегического мышления и умения учиться на ошибках.",
+                    "Знание базовых правил шахмат будет полезным, но не обязательным. Мы подробно разберем все шаг за шагом."
                 ],
                 eng: [
-                    "This course is designed for beginners and does not require much experience. You will only need basic skills that will be useful in the learning process:",
-                    "The desire to develop and learn new things is a key aspect of successful learning. It is important to be prepared for difficulties, ask questions and seek solutions when things are not clear.",
-                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
-                    "Knowledge of basic computer functions: working with the file system, using a browser, installing programmes and working with word processors."
+                    "This course is designed for players of all levels, from absolute beginners to those looking to improve their chess skills.",
+                    "Patience and focus are key to learning chess effectively. Paying attention to details and thinking ahead will help you succeed.",
+                    "A passion for learning and improving is essential. Chess requires practice, strategic thinking, and the ability to learn from mistakes.",
+                    "Familiarity with the basic rules of chess is helpful but not required. We will guide you through everything step by step."
                 ]
             }
         },
         fullText: {
-            rus: ["Освойте дебюты, миттельшпиль и эндшпиль..."],
-            eng: ["Master openings, middle game, and endgame..."]
+            rus: ["Хотите улучшить навыки игры в шахматы, развить стратегическое мышление и чаще побеждать? Наш комплексный курс поможет вам пройти путь от новичка до опытного игрока. Вы изучите основные принципы, продвинутые тактики и стратегии эндшпиля.",
+                "Курс охватывает ключевые аспекты шахмат, включая дебютные схемы, стратегии игры в середине партии и мастерство эндшпиля. Практические упражнения, разбор реальных партий и наставничество помогут вам набраться опыта и уверенно чувствовать себя за шахматной доской.",
+                "Независимо от того, хотите ли вы играть для удовольствия, участвовать в турнирах или использовать шахматы как инструмент для развития интеллекта, этот курс даст вам все необходимое для роста как шахматиста."
+            ],
+            eng: ["Want to improve your chess skills, develop strategic thinking, and win more games? Our comprehensive chess course will take you from a beginner to a skilled player. You’ll learn fundamental principles, advanced tactics, and endgame techniques to strengthen your game.",
+                "The course covers key aspects of chess, including openings, middle-game strategies, and endgame mastery. With practical exercises, real-game analysis, and expert guidance, you’ll gain hands-on experience and build the confidence to compete in chess tournaments or simply enjoy playing at a higher level.",
+                "Whether you aim to play for fun, compete in tournaments, or use chess as a tool for mental development, this course will provide everything you need to grow as a chess player."]
         },
         time: {
             rus: "12-18 часов",
@@ -432,13 +437,13 @@ const coursesData = [
         },
         amountLessons: 12,
         label: {
-            rus: ["IT",
-                "Востребованный",
+            rus: ["Шахматы",
+                "Стратегическое мышление",
                 "Легкий старт"
             ],
             eng: [
-                "IT",
-                "In demand",
+                "Chess",
+                "Strategic Thinking",
                 "Easy start"
             ]
         },
@@ -447,46 +452,46 @@ const coursesData = [
             rus: [
                 {
                     duration: "5 недель",
-                    title: "Основы веб-верстки: HTML и CSS"
+                    title: "Основы шахмат: правила и базовая стратегия"
                 },
                 {
                     duration: "4 недели",
-                    title: "Базовый JavaScript: работа с DOM и событиями"
+                    title: "Тактика и тактические задачи"
                 },
                 {
                     duration: "10 недель",
-                    title: "Фронтенд-разработка: современные инструменты"
+                    title: "Стратегия: как построить игру"
                 },
                 {
                     duration: "9 недель",
-                    title: "Работа с API: взаимодействие фронтенда и бэкенда"
+                    title: "Эндшпиль: завершаем партию правильно"
                 },
                 {
                     duration: "4 недели",
-                    title: "Управление проектом на удалённом сервере"
+                    title: "Практика и турнирная подготовка"
                 },
 
             ],
             eng: [
                 {
                     duration: "5 weeks",
-                    title: "Web layout basics: HTML and CSS"
+                    title: "Fundamentals of Chess: Rules and basic strategy"
                 },
                 {
                     duration: "4 weeks",
-                    title: "Basic JavaScript: working with DOM and events"
+                    title: "Tactics and tactical tasks"
                 },
                 {
                     duration: "10 weeks",
-                    title: "Frontend development: modern tools and frameworks"
+                    title: "Strategy: how to build a game"
                 },
                 {
                     duration: "9 weeks",
-                    title: "Working with API: frontend and backend interaction"
+                    title: "Endgame: Completing the game correctly"
                 },
                 {
                     duration: "4 weeks",
-                    title: "Project management on a remote server"
+                    title: "Practice and tournament preparation"
                 },
 
             ]
