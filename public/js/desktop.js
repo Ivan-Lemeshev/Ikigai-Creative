@@ -311,6 +311,19 @@ const sendToApplicationMainContentImg = document.getElementById("send-to-applica
 const sendToApplicationMainContentImgSecces = document.getElementById("send-to-application-main-content-img-secces");
 const sendToApplicationMainContentImgWrong = document.getElementById("send-to-application-main-content-img-wrong");
 
+const courseOrderButtonModalWindowContentImgLight1 = document.getElementById("course-order-button-modal-window-content-img-light-1");
+const courseOrderButtonModalWindowContentImgDark1 = document.getElementById("course-order-button-modal-window-content-img-dark-1");
+const courseOrderButtonModalWindowContentImgLight2 = document.getElementById("course-order-button-modal-window-content-img-light-2");
+const courseOrderButtonModalWindowContentImgDark2 = document.getElementById("course-order-button-modal-window-content-img-dark-2");
+const courseOrderButtonModalWindowContentImgLight3 = document.getElementById("course-order-button-modal-window-content-img-light-3");
+const courseOrderButtonModalWindowContentImgDark3 = document.getElementById("course-order-button-modal-window-content-img-dark-3");
+
+const courseOrderButtonModalWindowContentWrapper1 = document.getElementById("course-order-button-modal-window-content-wrapper-1");
+const courseOrderButtonModalWindowContentWrapper2 = document.getElementById("course-order-button-modal-window-content-wrapper-2");
+const courseOrderButtonModalWindowContentWrapper3 = document.getElementById("course-order-button-modal-window-content-wrapper-3");
+const courseOrderButtonModalWindowContentWrapper4 = document.getElementById("course-order-button-modal-window-content-wrapper-4");
+
+
 let selectTheme = "light";
 const textarea = document.getElementById("textarea");
 
@@ -414,6 +427,16 @@ const refreshTheme = () => {
         document.documentElement.style.setProperty('--svgColor', '#2E2E2E');
         thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, rgba(46, 46, 46, 0.3) 25%, rgba(46, 46, 46, 0) 100%)";
         choiceServecesSquare.style.border = "";
+        courseOrderButtonModalWindowContentImgLight1.style.display = "";
+        courseOrderButtonModalWindowContentImgDark1.style.display = "";
+        courseOrderButtonModalWindowContentImgLight2.style.display = "";
+        courseOrderButtonModalWindowContentImgDark2.style.display = "";
+        courseOrderButtonModalWindowContentImgLight3.style.display = "";
+        courseOrderButtonModalWindowContentImgDark3.style.display = "";
+        courseOrderButtonModalWindowContentWrapper1.style.border = "";
+        courseOrderButtonModalWindowContentWrapper2.style.border = "";
+        courseOrderButtonModalWindowContentWrapper3.style.border = "";
+        courseOrderButtonModalWindowContentWrapper4.style.border = "";
     } else {
         thirdSectionMainContentRightPartLine.style.background = "linear-gradient(to bottom, rgba(214, 214, 214, 0) 0%, rgba(214, 214, 214, 0.3) 25%, rgba(214, 214, 214, 0) 100%)";
         languageButtonFirstSectionSvgPath.style.fill = "#F3F3F3";
@@ -455,6 +478,16 @@ const refreshTheme = () => {
         document.documentElement.style.setProperty('--svgColor', '#F3F3F3');
         sendToApplicationMainContent.style.border = " 0.05208vw solid var(--ltSeparationLine)";
         choiceServecesSquare.style.border = "0.05208vw var(--ltSeparationLine) solid";
+        courseOrderButtonModalWindowContentImgLight1.style.display = "none";
+        courseOrderButtonModalWindowContentImgDark1.style.display = "block";
+        courseOrderButtonModalWindowContentImgLight2.style.display = "none";
+        courseOrderButtonModalWindowContentImgDark2.style.display = "block";
+        courseOrderButtonModalWindowContentImgLight3.style.display = "none";
+        courseOrderButtonModalWindowContentImgDark3.style.display = "block";
+        courseOrderButtonModalWindowContentWrapper1.style.border = "0.05208vw solid var(--dtText)";
+        courseOrderButtonModalWindowContentWrapper2.style.border = "0.05208vw solid var(--dtText)";
+        courseOrderButtonModalWindowContentWrapper3.style.border = "0.05208vw solid var(--dtText)";
+        courseOrderButtonModalWindowContentWrapper4.style.border = "0.05208vw solid var(--dtText)";
     }
 }
 
@@ -2024,6 +2057,8 @@ const courseButtonMoreThirdQuestionText4 = document.getElementById("course-butto
 const courseButtonMoreSecondQuestionTitleImg = document.getElementById("course-button-more-second-question-title-img");
 const courseButtonMoreSecondQuestionBaseImg = document.getElementById("course-button-more-second-question-base-img");
 
+const courseOrderButtonModalWindowTitle = document.getElementById("course-order-button-modal-window-title");
+
 let course = false;
 let numberOfPage = 1;
 let clickedTop = 0;
@@ -2033,10 +2068,20 @@ const activeClassNumbersOfPage = () => {
         const pageClass = document.getElementById(`number-of-page-${index}`);
         pageClass.style.opacity = "";
         if (index == numberOfPage) {
-            pageClass.classList = "number-of-page-active number-of-page";
+            if (selectTheme === "light") {
+                pageClass.classList = "number-of-page-active number-of-page number-of-page-light";
+            } else {
+                pageClass.classList = "number-of-page-active number-of-page number-of-page-dark";
+            }
         } else {
-            pageClass.classList = "number-of-page-passive number-of-page";
+            if (selectTheme === "light") {
+                pageClass.classList = "number-of-page-passive number-of-page number-of-page-light";
+            } else {
+                pageClass.classList = "number-of-page-passive number-of-page number-of-page-dark";
+            }
         }
+
+
     }
 
 }
@@ -2938,5 +2983,36 @@ courseButtonMoreQuestionText.addEventListener('click', () => {
             courseMoreButtonDownText.style.opacity = "1";
 
         }, 300);
+    }, 300);
+})
+
+const courseOrderButtonModalWindow = document.getElementById("course-order-button-modal-window");
+const courseOrderButtonModalWindowClose = document.getElementById("course-order-button-modal-window-close");
+
+
+topCurseOrderButton.addEventListener('click', () => {
+    clickedTop = 0
+    let score = (numberOfPage - 1) * 2 + clickedTop;
+    courseOrderButtonModalWindowTitle.textContent = sortedArray[score].title[selectLang];
+    courseOrderButtonModalWindow.style.display = "block";
+    setTimeout(() => {
+        courseOrderButtonModalWindow.style.opacity = "1";
+    }, 1);
+})
+
+bottomCurseOrderButton.addEventListener('click', () => {
+    clickedTop = 1
+    let score = (numberOfPage - 1) * 2 + clickedTop;
+    courseOrderButtonModalWindowTitle.textContent = sortedArray[score].title[selectLang];
+    courseOrderButtonModalWindow.style.display = "block";
+    setTimeout(() => {
+        courseOrderButtonModalWindow.style.opacity = "1";
+    }, 1);
+})
+
+courseOrderButtonModalWindowClose.addEventListener('click', () => {
+    courseOrderButtonModalWindow.style.opacity = "";
+    setTimeout(() => {
+        courseOrderButtonModalWindow.style.display = "";
     }, 300);
 })

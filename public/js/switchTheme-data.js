@@ -6201,7 +6201,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "courses-middle-line": {
         styles: {
             light: {
@@ -6280,6 +6280,123 @@ const themeWrapper = {
         }
     },
 
+    "curse-more-button-down-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-question-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-first-question-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-second-question-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-third-question-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-question-mark": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-first-question": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-second-question": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-third-question": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
     "bottom-curse-lower-text": {
         styles: {
             light: {
@@ -6301,7 +6418,7 @@ const themeWrapper = {
             },
             dark: {
                 color: "",
-                background: `linear-gradient(162.95deg, rgba(28, 28, 28, 0.08) 7.55%, rgba(28, 28, 28, 0.4) 50.86%, rgba(28, 28, 28, 0.16) 91.28%)`
+                background: `linear-gradient(162.95deg, #1C1C1C33 7.55%, #1C1C1C 50.86%, #1C1C1C66 91.28%)`
             }
         }
     },
@@ -6314,7 +6431,475 @@ const themeWrapper = {
             },
             dark: {
                 color: "",
-                background: `linear-gradient(162.95deg, rgba(28, 28, 28, 0.08) 7.55%, rgba(28, 28, 28, 0.4) 50.86%, rgba(28, 28, 28, 0.16) 91.28%)`
+                background: `linear-gradient(162.95deg, #1C1C1C33 7.55%, #1C1C1C 50.86%, #1C1C1C66 91.28%)`
+            }
+        }
+    },
+
+    "course-order-button-modal-window": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(90deg, rgba(232, 232, 232, 0.588) 0%, rgba(232, 232, 232, 0.98) 28.9%, rgba(232, 232, 232, 0.98) 71.24%, rgba(232, 232, 232, 0.588) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(90deg, rgba(28, 28, 28, 0.588) 0%, rgba(28, 28, 28, 0.98) 28.9%, rgba(28, 28, 28, 0.98) 71.24%, rgba(28, 28, 28, 0.588) 100%)`
+            }
+        }
+    },
+
+    "course-order-button-modal-window-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-order-button-modal-window-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-order-button-modal-window-text-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-order-button-modal-window-content-img-subtitle-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-order-button-modal-window-content-img-subtitle-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-order-button-modal-window-content-img-subtitle-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-order-button-modal-window-content-img-subtitle-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-order-button-modal-window-content-wrapper-1": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "course-order-button-modal-window-content-wrapper-2": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "course-order-button-modal-window-content-wrapper-3": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "course-order-button-modal-window-content-wrapper-4": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "course-button-more-first-question-title-0": {
+        styles: {
+            light: {
+                color: "black",
+                background: ``
+            },
+            dark: {
+                color: "white",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-first-question-text-0": {
+        styles: {
+            light: {
+                color: "black",
+                background: ``
+            },
+            dark: {
+                color: "white",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-first-question-title-1": {
+        styles: {
+            light: {
+                color: "black",
+                background: ``
+            },
+            dark: {
+                color: "white",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-first-question-text-1": {
+        styles: {
+            light: {
+                color: "black",
+                background: ``
+            },
+            dark: {
+                color: "white",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-first-question-title-2": {
+        styles: {
+            light: {
+                color: "black",
+                background: ``
+            },
+            dark: {
+                color: "white",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-first-question-text-2": {
+        styles: {
+            light: {
+                color: "black",
+                background: ``
+            },
+            dark: {
+                color: "white",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-first-question-title-3": {
+        styles: {
+            light: {
+                color: "black",
+                background: ``
+            },
+            dark: {
+                color: "white",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-first-question-text-3": {
+        styles: {
+            light: {
+                color: "black",
+                background: ``
+            },
+            dark: {
+                color: "white",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-second-question-title-img": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-third-question-wrapper-0": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "course-button-more-third-question-wrapper-1": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "course-button-more-third-question-wrapper-2": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "course-button-more-third-question-wrapper-3": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "course-button-more-third-question-wrapper-4": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "course-button-more-third-question-weeks-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-third-question-text-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-third-question-weeks-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-third-question-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-third-question-weeks-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-third-question-text-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-third-question-weeks-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-third-question-text-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-third-question-weeks-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "course-button-more-third-question-text-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
             }
         }
     },
