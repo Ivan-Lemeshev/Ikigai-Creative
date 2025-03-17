@@ -1191,3 +1191,58 @@ const uploadLinks = () => {
 }
 
 uploadLinks()
+
+const mvFourthSectionTitle = document.getElementById("mv-fourth-section-title");
+const mvFourthSectionTitleLeftLine = document.getElementById("mv-fourth-section-title-left-line");
+const mvFourthSectionTitleRightLine = document.getElementById("mv-fourth-section-title-right-line");
+
+
+const mvFourthSectionTitleCourses = document.getElementById("mv-fourth-section-title-courses");
+const mvFourthSectionTitleLeftLineCourses = document.getElementById("mv-fourth-section-title-courses-left-line");
+const mvFourthSectionTitleRightLineCourses = document.getElementById("mv-fourth-section-title-courses-right-line");
+
+const mvFourthSectionSubtitleTopLineCourses = document.getElementById("mv-fourth-section-subtitle-courses-top-line");
+const mvFourthSectionSubtitleBottomLineCourses = document.getElementById("mv-fourth-section-subtitle-courses-bottom-line");
+const mvFourthSectionSubtitleCourses = document.getElementById("mv-fourth-section-subtitle-courses");
+
+mvFourthSectionTitleCourses.addEventListener('click', () => {
+    mvFourthSectionTitle.style.opacity = "0.4";
+    mvFourthSectionTitleLeftLine.style.opacity = "0.4";
+    mvFourthSectionTitleRightLine.style.opacity = "0.4";
+    
+    mvFourthSectionTitleCourses.style.opacity = "1";
+    mvFourthSectionTitleLeftLineCourses.style.opacity = "1";
+    mvFourthSectionTitleRightLineCourses.style.opacity = "1";
+
+    mvFourthSectionTitleLeftLineCourses.style.height = "8.45771144278607vw";
+    mvFourthSectionTitleRightLineCourses.style.height = "8.45771144278607vw";
+
+    mvFourthSectionTitleLeftLineCourses.style.top = "-0.62vw";
+    mvFourthSectionTitleRightLineCourses.style.top = "-0.62vw";
+
+    mvFourthSectionSubtitleTopLineCourses.style.opacity = "1";
+    mvFourthSectionSubtitleBottomLineCourses.style.opacity = "1";
+    mvFourthSectionSubtitleCourses.style.opacity = "1";
+
+    
+})
+
+mvFourthSectionTitle.addEventListener('click', () => {
+    mvFourthSectionTitle.style.opacity = "";
+    mvFourthSectionTitleLeftLine.style.opacity = "";
+    mvFourthSectionTitleRightLine.style.opacity = "";
+
+    mvFourthSectionTitleCourses.style.opacity = "";
+    mvFourthSectionTitleLeftLineCourses.style.opacity = "";
+    mvFourthSectionTitleRightLineCourses.style.opacity = "";
+
+    mvFourthSectionTitleLeftLineCourses.style.height = "";
+    mvFourthSectionTitleRightLineCourses.style.height = "";
+
+    mvFourthSectionTitleLeftLineCourses.style.top = "";
+    mvFourthSectionTitleRightLineCourses.style.top = "";
+    
+    mvFourthSectionSubtitleTopLineCourses.style.opacity = "";
+    mvFourthSectionSubtitleBottomLineCourses.style.opacity = "";
+    mvFourthSectionSubtitleCourses.style.opacity = "";
+})

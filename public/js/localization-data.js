@@ -341,8 +341,8 @@ const localizationWrapper = {
     },
 
     "mv-fourth-section-title": {
-        rus: "Наши услуги",
-        eng: "Our services",
+        rus: "Услуги",
+        eng: "Services",
     },
 
     "mv-name-of-service-0": {
@@ -929,6 +929,11 @@ const localizationWrapper = {
     "bottom-curse-more-button": {
         rus: "Подробнее",
         eng: "More",     
+    },
+
+    "mv-fourth-section-title-courses": {
+        rus: "Курсы",
+        eng: "Courses",     
     },
 }
 

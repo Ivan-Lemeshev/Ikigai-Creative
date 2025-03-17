@@ -6904,6 +6904,97 @@ const themeWrapper = {
         }
     },
 
+    "mv-fourth-section-title-left-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--ltText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtText)`
+            }
+        }
+    },
+
+    "mv-fourth-section-title-right-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--ltText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtText)`
+            }
+        }
+    },
+
+    "mv-fourth-section-title-courses-left-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--ltText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtText)`
+            }
+        }
+    },
+
+    "mv-fourth-section-title-courses-right-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--ltText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtText)`
+            }
+        }
+    },
+    
+    "mv-fourth-section-subtitle-courses-top-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--ltText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtText)`
+            }
+        }
+    },
+
+    "mv-fourth-section-subtitle-courses-bottom-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--ltText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtText)`
+            }
+        }
+    },
+
+    "mv-fourth-section-subtitle-courses": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
 
 
 }

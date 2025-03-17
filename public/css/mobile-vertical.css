@@ -641,15 +641,19 @@
 
         &>#mv-fourth-section-title {
             position: absolute;
-            width: 34.57711442786069vw;
+            width: 21.641791044776117vw;
             height: 5.970149253731343vw;
-            left: 12.437810945273633vw;
+            left: 18.90547263681592vw;
             font-size: 5.970149253731343vw;
             font-weight: 400;
             line-height: 5.970149253731343vw;
             text-align: left;
             color: var(--ltText);
             overflow: visible;
+            letter-spacing: 0.1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         &>.mv-wrapper-fourth-section-lines-buttons {
@@ -1510,4 +1514,101 @@
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
     margin-top: 2.9875621890547266vw;
+}
+
+#mv-fourth-section-title-left-line {
+    position: absolute;
+    left: 12.437810945273633vw;
+    width: 0.19900497512437815vw;
+    height: 5.472636815920398vw;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    background: var(--ltText);
+    top: 0.24875621890547264vw;
+}
+
+#mv-fourth-section-title-right-line {
+    position: absolute;
+    left: 47.01492537313433vw;
+    width: 0.19900497512437815vw;
+    height: 5.472636815920398vw;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    background: var(--ltText);
+    top: 0.24875621890547264vw;
+}
+
+#mv-fourth-section-title-courses-left-line {
+    position: absolute;
+    left: 52.98507462686567vw;
+    width: 0.19900497512437815vw;
+    height: 5.472636815920398vw;
+    opacity: 0.4;
+    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out, top 0.3s ease-in-out;
+    background: var(--ltText);
+    top: 0.24875621890547264vw;
+}
+
+#mv-fourth-section-title-courses-right-line {
+    position: absolute;
+    right: 12.437810945273633vw;
+    width: 0.19900497512437815vw;
+    height: 5.472636815920398vw;
+    opacity: 0.4;
+    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out, top 0.3s ease-in-out;
+    background: var(--ltText);
+    top: 0.24875621890547264vw;
+}
+
+#mv-fourth-section-title-courses {
+    font-weight: 400;
+    position: absolute;
+    left: 59.70149253731343vw;
+    font-size: 5.472636815920398vw;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+    opacity: 0.4;
+    transition: opacity 0.3s ease-in-out;
+    width: 21.144278606965177vw;
+    height: 5.970149253731343vw;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mv-fourth-section-subtitle-courses-top-line {
+    position: absolute;
+    top: 7.711442786069651vw;
+    left: 12.437810945273633vw;
+    height: 0.19900497512437815vw;
+    width: 40.547263681592035vw;
+    background: var(--ltText);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mv-fourth-section-subtitle-courses-bottom-line {
+    position: absolute;
+    top: 16.169154228855724vw;
+    left: 12.437810945273633vw;
+    height: 0.19900497512437815vw;
+    width: 75.12437810945273vw;
+    background: var(--ltText);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mv-fourth-section-subtitle-courses {
+    position: absolute;
+    top: 9vw;
+    left: 20.149253731343283vw;
+    width: 30.34825870646766vw;
+    height: 5.970149253731343vw;
+    font-weight: 350;
+    font-size: 3.9800995024875623vw;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
