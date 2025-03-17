@@ -71,16 +71,18 @@ export const textForApplication = {
 
 export const coursesTextForApplication = {
     eng: [
-        "",
-        "Hello, I want to get advice on the chosen course ", 
         "Hello, I want to get an answer to the question ",
-        "Hello, I have ended your course and I want to leave a review "
+        "Hello, I have ended your course and I want to leave a review ",
+        "Hello, I want to sign up for a test lesson.",
+        "Hello, I want to study at your course and have made an advance payment.",
+        "Hello, I want to study according to my notes and have made an advance payment."
     ],
 
     rus: [
-        "",
-        "Здравстуйте, я хочу учиться на вашем курсе ",
         "Здравстуйте, я хочу задать вам несколько вопросов по курсу ",
-        "Здравстуйте, я прошел ваш курс и хочу оставить о нем отзыв "
+        "Здравстуйте, я прошел ваш курс и хочу оставить о нем отзыв ",
+        "Здравствуйте, я хочу записаться на пробный урок.",
+        "Здравствуйте, я хочу заниматься у вас на курсе и внес предоплату",
+        "Здравстуйте, я хочу заниматься по конспектам и внес предоплату"
     ]
 }

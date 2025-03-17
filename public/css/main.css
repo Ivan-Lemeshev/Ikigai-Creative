@@ -715,6 +715,7 @@
     font-size: 1.875vw;
     letter-spacing: 0.1em;
     color: var(--ltText);
+    transition: opacity 0.3s ease-in-out;
 }
 
 #third-section-title-services {

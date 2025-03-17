@@ -51,7 +51,9 @@ const thirdSectionButtonMore = document.getElementById("third-section-main-conte
 
 const thirdSectionImage = document.getElementById("third-section-main-content-left-part");
 const thirdSectionImageBackground = document.getElementById("third-section-main-content-left-part-background");
-const thirdSectionTitle = document.getElementById("third-section-title");
+const thirdSectionTitle = document.getElementById("third-section-title-our");
+const thirdSectionTitleServicesOpacity = document.getElementById("third-section-title-services");
+const thirdSectionTitleCoursesOpacity = document.getElementById("third-section-title-courses");
 const thirdSectionMainContentRightPartLine = document.getElementById("third-section-main-content-right-part-line");
 const thirdSectionLowerPart = document.getElementById("third-section-lower-part");
 const thirdSectionLowerPartDivFirst = document.getElementById("third-section-lower-part-1");
@@ -997,6 +999,8 @@ thirdSectionButtonMore.addEventListener('click', () => {
         thirdSectionLowerPart.style.opacity = "0";
         thirdSectionLowerPart.style.display = "none";
         thirdSectionTitle.style.opacity = "0";
+        thirdSectionTitleServicesOpacity.style.opacity = "0";
+        thirdSectionTitleCoursesOpacity.style.opacity = "0";
         thirdSectionImageBackground.style.opacity = "1";
         thirdSectionImage.style.transform = "rotate3d(0, 1, 0, 0deg)";
         thirdSectionImage.style.width = "28.125vw";
@@ -1169,6 +1173,8 @@ interestBlockAllService.addEventListener('click', () => {
         thirdSectionImageBackground.style.opacity = "0";
         buttonMoreInterestBlock.style.display = "";
         thirdSectionTitle.style.opacity = "1";
+        thirdSectionTitleServicesOpacity.style.opacity = "1";
+        thirdSectionTitleCoursesOpacity.style.opacity = "1";
 
         thirdSectionMainContentRightPartLine.style.height = "";
 
@@ -1988,7 +1994,6 @@ submitButtonFourthSection.addEventListener('click', () => {
         }
 
     } else {
-        let score = (numberOfPage - 1) * 2 + clickedTop;
         const data = {
             text: `
         First Name: ${inputFirstName.value}, 
@@ -3164,10 +3169,10 @@ courseMoreCounsellingButton.addEventListener('click', (event) => {
 
     choiceOfServicePlaceholder.textContent = sortedArray[score].title[selectLang];
     if (selectLang === "eng") {
-        textarea.textContent = coursesTextForApplication.eng[2];
+        textarea.textContent = coursesTextForApplication.eng[0];
 
     } else {
-        textarea.textContent = coursesTextForApplication.rus[2];
+        textarea.textContent = coursesTextForApplication.rus[0];
     }
 })
 
@@ -3223,9 +3228,120 @@ courseMoreReviewButton.addEventListener('click', (event) => {
 
     choiceOfServicePlaceholder.textContent = sortedArray[score].title[selectLang];
     if (selectLang === "eng") {
+        textarea.textContent = coursesTextForApplication.eng[1];
+
+    } else {
+        textarea.textContent = coursesTextForApplication.rus[1];
+    }
+})
+
+courseOrderButtonModalWindowContentWrapper1.addEventListener('click', (event) => {
+    event.preventDefault();
+    paymentCourse = true;
+    checkbox = false;
+    window.scrollTo({
+        top: window.innerWidth * 1.950625,
+        behavior: 'smooth'
+    });
+    let score = (numberOfPage - 1) * 2 + clickedTop;
+    choiceServecesTitleText.style.opacity = "0";
+    choiceServecesSquare.style.display = "none";
+    choiceServecesSquare.style.opacity = "0";
+    fourthSectionChoiceOfServiceArrow.style.display = "none";
+    fourthSectionChoiceOfServiceArrow.style.opacity = "0";
+    choiceOfCourseClose.style.display = "block"
+    fourthSectionChoiceOfService.style.pointerEvents = "none";
+    setTimeout(() => {
+        if (selectLang === "eng") {
+            choiceServecesTitleText.textContent = "Chosen course";
+        } else {
+            choiceServecesTitleText.textContent = "Выбранный курс";
+        }
+
+        setTimeout(() => {
+            choiceServecesTitleText.style.opacity = "1";
+        }, 300);
+    }, 1);
+
+    choiceOfServicePlaceholder.textContent = sortedArray[score].title[selectLang];
+    if (selectLang === "eng") {
+        textarea.textContent = coursesTextForApplication.eng[2];
+
+    } else {
+        textarea.textContent = coursesTextForApplication.rus[2];
+    }
+})
+
+courseOrderButtonModalWindowContentWrapper2.addEventListener('click', (event) => {
+    event.preventDefault();
+    paymentCourse = true;
+    checkbox = true;
+    window.scrollTo({
+        top: window.innerWidth * 1.950625,
+        behavior: 'smooth'
+    });
+    let score = (numberOfPage - 1) * 2 + clickedTop;
+    choiceServecesTitleText.style.opacity = "0";
+    choiceServecesSquare.style.display = "none";
+    choiceServecesSquare.style.opacity = "0";
+    fourthSectionChoiceOfServiceArrow.style.display = "none";
+    fourthSectionChoiceOfServiceArrow.style.opacity = "0";
+    choiceOfCourseClose.style.display = "block"
+    fourthSectionChoiceOfService.style.pointerEvents = "none";
+    setTimeout(() => {
+        if (selectLang === "eng") {
+            choiceServecesTitleText.textContent = "Chosen course";
+        } else {
+            choiceServecesTitleText.textContent = "Выбранный курс";
+        }
+
+        setTimeout(() => {
+            choiceServecesTitleText.style.opacity = "1";
+        }, 300);
+    }, 1);
+
+    choiceOfServicePlaceholder.textContent = sortedArray[score].title[selectLang];
+    if (selectLang === "eng") {
         textarea.textContent = coursesTextForApplication.eng[3];
 
     } else {
         textarea.textContent = coursesTextForApplication.rus[3];
+    }
+})
+
+courseOrderButtonModalWindowContentWrapper3.addEventListener('click', (event) => {
+    event.preventDefault();
+    paymentCourse = true;
+    checkbox = true;
+    window.scrollTo({
+        top: window.innerWidth * 1.950625,
+        behavior: 'smooth'
+    });
+    let score = (numberOfPage - 1) * 2 + clickedTop;
+    choiceServecesTitleText.style.opacity = "0";
+    choiceServecesSquare.style.display = "none";
+    choiceServecesSquare.style.opacity = "0";
+    fourthSectionChoiceOfServiceArrow.style.display = "none";
+    fourthSectionChoiceOfServiceArrow.style.opacity = "0";
+    choiceOfCourseClose.style.display = "block"
+    fourthSectionChoiceOfService.style.pointerEvents = "none";
+    setTimeout(() => {
+        if (selectLang === "eng") {
+            choiceServecesTitleText.textContent = "Chosen course";
+        } else {
+            choiceServecesTitleText.textContent = "Выбранный курс";
+        }
+
+        setTimeout(() => {
+            choiceServecesTitleText.style.opacity = "1";
+        }, 300);
+    }, 1);
+
+    choiceOfServicePlaceholder.textContent = sortedArray[score].title[selectLang];
+    if (selectLang === "eng") {
+        textarea.textContent = coursesTextForApplication.eng[4];
+
+    } else {
+        textarea.textContent = coursesTextForApplication.rus[4];
     }
 })
