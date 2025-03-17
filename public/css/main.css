@@ -1687,7 +1687,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, opacity 0.3 ease-in-out;
 }
 
 #choice-serveces-checkbox {
@@ -1759,6 +1759,18 @@
     &>#correct-img-choice-of-service {
         left: 19.79167vw;
     }
+}
+
+#choice-of-course-close {
+    object-fit: contain;
+    width: 0.83333vw;
+    height: 0.83333vw;
+    display: none;
+    position: absolute;
+    right: 2.86458vw;
+    top: 18.4375vw;
+    z-index: 10;
+    cursor: pointer;
 }
 
 

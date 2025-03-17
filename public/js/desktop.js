@@ -1,6 +1,6 @@
 import localizationWrapper from "./localization-data.js";
 import arrayDataOfService from "./Services.js";
-import { ideasArrayUp, ideasArrayDown, textForApplication } from "./slogans.js";
+import { ideasArrayUp, ideasArrayDown, textForApplication, coursesTextForApplication } from "./slogans.js";
 import reviews from "./reviews.js";
 import dataContats from "./links.js";
 import themeWrapper from "./switchTheme-data.js"
@@ -1884,98 +1884,202 @@ choiceServecesTitleWrapper.addEventListener('click', () => {
     }
 })
 
+let paymentCourse = false;
+let clickedTop = 0;
+let numberOfPage = 1;
+
+
+let sortedArray = []
+
+sortedArray = [...coursesData];
 
 submitButtonFourthSection.addEventListener('click', () => {
-    const data = {
-        text: `
-    First Name: ${inputFirstName.value}, 
-    Last Name: ${inputLastName.value}, 
-    Phone: ${inputPhone.value}, 
-    Email: ${inputEmail.value}, 
-    Service: ${choiceOfServicePlaceholder.textContent},
-    HasPrepaymant: ${checkbox},
-    Text: ${textarea.value}`,
-        hasPrepaymant: checkbox,
-        service: `${choiceOfServicePlaceholder.textContent}`,
-        price: arrayDataOfService[arrayDataOfService.map((category) => category.title[selectLang]).findIndex(el => el === choiceOfServicePlaceholder.textContent)].prices[0].cost * 100,
-        email: inputEmail.value
-    };
-    if (applicationShow) {
-        sendToApplicationWrapper.style.display = "block";
-        setTimeout(() => {
-            sendToApplicationWrapper.style.opacity = "1";
+    if (!paymentCourse) {
+        const data = {
+            text: `
+        First Name: ${inputFirstName.value}, 
+        Last Name: ${inputLastName.value}, 
+        Phone: ${inputPhone.value}, 
+        Email: ${inputEmail.value}, 
+        Service: ${choiceOfServicePlaceholder.textContent},
+        HasPrepaymant: ${checkbox},
+        Text: ${textarea.value}`,
+            hasPrepaymant: checkbox,
+            service: `${choiceOfServicePlaceholder.textContent}`,
+            price: arrayDataOfService[arrayDataOfService.map((category) => category.title[selectLang]).findIndex(el => el === choiceOfServicePlaceholder.textContent)].prices[0].cost * 100,
+            email: inputEmail.value
+        };
+        if (applicationShow) {
+            sendToApplicationWrapper.style.display = "block";
             setTimeout(() => {
-                sendToApplicationMainContent.style.opacity = "0"
+                sendToApplicationWrapper.style.opacity = "1";
                 setTimeout(() => {
-                    fetch(url, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json', // Указываем, что данные в формате JSON
-                        },
-                        body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
-                    })
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.url) {
-                                window.location.href = data.url;  // Переход на страницу оплаты
-                            }
-                        })
-                        .then(() => {
-                            if (selectLang === "eng") {
-                                sendToApplicationMainContentTitle.textContent = "Successfully";
-                                sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
-                            } else {
-                                sendToApplicationMainContentTitle.textContent = "Успешно";
-                                sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
-                            }
-                            sendToApplicationMainContentImg.style.display = "none"
-                            sendToApplicationMainContentImgSecces.style.display = "block"
-                            sendToApplicationMainContent.style.border = "0.05208vw solid var(--success)";
-
-                            setTimeout(() => {
-                                sendToApplicationMainContent.style.opacity = "1"
-                            }, 300);
-                        })
-
-
-                        .catch(() => {
-                            if (selectLang === "eng") {
-                                sendToApplicationMainContentTitle.textContent = "Something went wrong";
-                                sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
-                            } else {
-                                sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
-                                sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
-                            }
-                            sendToApplicationMainContentImg.style.display = "none"
-                            sendToApplicationMainContentImgWrong.style.display = "block"
-                            sendToApplicationMainContent.style.border = "0.05208vw solid var(--bad)";
-
-
-                            setTimeout(() => {
-                                sendToApplicationMainContent.style.opacity = "1"
-                            }, 300);
-                        })
-
+                    sendToApplicationMainContent.style.opacity = "0"
                     setTimeout(() => {
-                        sendToApplicationWrapper.style.opacity = "";
+                        fetch(url, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json', // Указываем, что данные в формате JSON
+                            },
+                            body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.url) {
+                                    window.location.href = data.url;  // Переход на страницу оплаты
+                                }
+                            })
+                            .then(() => {
+                                if (selectLang === "eng") {
+                                    sendToApplicationMainContentTitle.textContent = "Successfully";
+                                    sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
+                                } else {
+                                    sendToApplicationMainContentTitle.textContent = "Успешно";
+                                    sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
+                                }
+                                sendToApplicationMainContentImg.style.display = "none"
+                                sendToApplicationMainContentImgSecces.style.display = "block"
+                                sendToApplicationMainContent.style.border = "0.05208vw solid var(--success)";
+
+                                setTimeout(() => {
+                                    sendToApplicationMainContent.style.opacity = "1"
+                                }, 300);
+                            })
+
+
+                            .catch(() => {
+                                if (selectLang === "eng") {
+                                    sendToApplicationMainContentTitle.textContent = "Something went wrong";
+                                    sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
+                                } else {
+                                    sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
+                                    sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
+                                }
+                                sendToApplicationMainContentImg.style.display = "none"
+                                sendToApplicationMainContentImgWrong.style.display = "block"
+                                sendToApplicationMainContent.style.border = "0.05208vw solid var(--bad)";
+
+
+                                setTimeout(() => {
+                                    sendToApplicationMainContent.style.opacity = "1"
+                                }, 300);
+                            })
+
                         setTimeout(() => {
-                            sendToApplicationWrapper.style.display = "";
-                            if (selectLang === "eng") {
-                                sendToApplicationMainContentTitle.textContent = "Sending an application";
-                                sendToApplicationMainContentText.textContent = "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds..."
-                            } else {
-                                sendToApplicationMainContentTitle.textContent = "Отправляем вашу заявку";
-                                sendToApplicationMainContentText.textContent = "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд..."
-                            }
-                            sendToApplicationMainContent.style.border = "";
-                            sendToApplicationMainContentImgWrong.style.display = "";
-                            sendToApplicationMainContentImgSecces.style.display = "";
-                            sendToApplicationMainContentImg.style.display = "";
-                        }, 300);
-                    }, 3000);
-                }, 300);
-            }, 3000);
-        }, 300);
+                            sendToApplicationWrapper.style.opacity = "";
+                            setTimeout(() => {
+                                sendToApplicationWrapper.style.display = "";
+                                if (selectLang === "eng") {
+                                    sendToApplicationMainContentTitle.textContent = "Sending an application";
+                                    sendToApplicationMainContentText.textContent = "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds..."
+                                } else {
+                                    sendToApplicationMainContentTitle.textContent = "Отправляем вашу заявку";
+                                    sendToApplicationMainContentText.textContent = "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд..."
+                                }
+                                sendToApplicationMainContent.style.border = "";
+                                sendToApplicationMainContentImgWrong.style.display = "";
+                                sendToApplicationMainContentImgSecces.style.display = "";
+                                sendToApplicationMainContentImg.style.display = "";
+                            }, 300);
+                        }, 3000);
+                    }, 300);
+                }, 3000);
+            }, 300);
+        }
+
+    } else {
+        let score = (numberOfPage - 1) * 2 + clickedTop;
+        const data = {
+            text: `
+        First Name: ${inputFirstName.value}, 
+        Last Name: ${inputLastName.value}, 
+        Phone: ${inputPhone.value}, 
+        Email: ${inputEmail.value}, 
+        Service: ${choiceOfServicePlaceholder.textContent},
+        HasPrepaymant: ${checkbox},
+        Text: ${textarea.value}`,
+            hasPrepaymant: checkbox,
+            service: `${choiceOfServicePlaceholder.textContent}`,
+            price: sortedArray[sortedArray.map((category) => category.title[selectLang]).findIndex(el => el === choiceOfServicePlaceholder.textContent)].cost,
+            email: inputEmail.value
+        };
+        if (applicationShow) {
+            sendToApplicationWrapper.style.display = "block";
+            setTimeout(() => {
+                sendToApplicationWrapper.style.opacity = "1";
+                setTimeout(() => {
+                    sendToApplicationMainContent.style.opacity = "0"
+                    setTimeout(() => {
+                        fetch(url, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json', // Указываем, что данные в формате JSON
+                            },
+                            body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.url) {
+                                    window.location.href = data.url;  // Переход на страницу оплаты
+                                }
+                            })
+                            .then(() => {
+                                if (selectLang === "eng") {
+                                    sendToApplicationMainContentTitle.textContent = "Successfully";
+                                    sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
+                                } else {
+                                    sendToApplicationMainContentTitle.textContent = "Успешно";
+                                    sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
+                                }
+                                sendToApplicationMainContentImg.style.display = "none"
+                                sendToApplicationMainContentImgSecces.style.display = "block"
+                                sendToApplicationMainContent.style.border = "0.05208vw solid var(--success)";
+
+                                setTimeout(() => {
+                                    sendToApplicationMainContent.style.opacity = "1"
+                                }, 300);
+                            })
+
+
+                            .catch(() => {
+                                if (selectLang === "eng") {
+                                    sendToApplicationMainContentTitle.textContent = "Something went wrong";
+                                    sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
+                                } else {
+                                    sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
+                                    sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
+                                }
+                                sendToApplicationMainContentImg.style.display = "none"
+                                sendToApplicationMainContentImgWrong.style.display = "block"
+                                sendToApplicationMainContent.style.border = "0.05208vw solid var(--bad)";
+
+
+                                setTimeout(() => {
+                                    sendToApplicationMainContent.style.opacity = "1"
+                                }, 300);
+                            })
+
+                        setTimeout(() => {
+                            sendToApplicationWrapper.style.opacity = "";
+                            setTimeout(() => {
+                                sendToApplicationWrapper.style.display = "";
+                                if (selectLang === "eng") {
+                                    sendToApplicationMainContentTitle.textContent = "Sending an application";
+                                    sendToApplicationMainContentText.textContent = "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds..."
+                                } else {
+                                    sendToApplicationMainContentTitle.textContent = "Отправляем вашу заявку";
+                                    sendToApplicationMainContentText.textContent = "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд..."
+                                }
+                                sendToApplicationMainContent.style.border = "";
+                                sendToApplicationMainContentImgWrong.style.display = "";
+                                sendToApplicationMainContentImgSecces.style.display = "";
+                                sendToApplicationMainContentImg.style.display = "";
+                            }, 300);
+                        }, 3000);
+                    }, 300);
+                }, 3000);
+            }, 300);
+        }
     }
 })
 
@@ -2060,8 +2164,8 @@ const courseButtonMoreSecondQuestionBaseImg = document.getElementById("course-bu
 const courseOrderButtonModalWindowTitle = document.getElementById("course-order-button-modal-window-title");
 
 let course = false;
-let numberOfPage = 1;
-let clickedTop = 0;
+
+
 
 const activeClassNumbersOfPage = () => {
     for (let index = 1; index <= Math.ceil(sortedArray.length / 2); index++) {
@@ -2240,9 +2344,6 @@ thirdSectionTitleServices.addEventListener('click', () => {
     }
 })
 
-let sortedArray = []
-
-sortedArray = [...coursesData];
 
 
 const visualVitrine = () => {
@@ -2514,11 +2615,16 @@ courseMoreCloseButton.addEventListener('click', () => {
     courseButtonMoreThirdQuestionWrapper2.style.opacity = "";
     courseButtonMoreThirdQuestionWrapper3.style.opacity = "";
     courseButtonMoreThirdQuestionWrapper4.style.opacity = "";
-    courseButtonMoreFirstQuestionTitle0.style.display = "";
     courseButtonMoreSecondQuestionTitleImg.style.opacity = "";
     courseButtonMoreSecondQuestionBaseImg.style.opacity = "";
     wrapperCourseImgBottom.style.top = "";
     setTimeout(() => {
+
+        courseButtonMoreFirstQuestionTitle0.style.display = "";
+        courseButtonMoreFirstQuestionText0.style.marginTop = "";
+        courseButtonMoreFirstQuestionTitle1.style.marginTop = "";
+        courseButtonMoreFirstQuestionTitle2.style.marginTop = "";
+        courseButtonMoreFirstQuestionTitle3.style.marginTop = "";
         topCurseLowerText.style.top = "";
         topCurseName.textContent = sortedArray[score].title[selectLang];
         setTimeout(() => {
@@ -2549,6 +2655,7 @@ courseMoreCloseButton.addEventListener('click', () => {
             courseButtonMoreFirstQuestionText.style.display = "";
             courseButtonMoreSecondQuestionText.style.display = "";
             courseButtonMoreThirdQuestionText.style.display = "";
+
 
         }, 300);
     }, 300);
@@ -2901,7 +3008,6 @@ courseButtonMoreThirdQuestionText.addEventListener('click', () => {
 
     setTimeout(() => {
         courseButtonMoreFirstQuestionTitle0.style.display = "";
-        // courseButtonMoreFirstQuestionTitle0.style.display = "none";
         courseButtonMoreFirstQuestionText0.style.marginTop = "";
         courseButtonMoreFirstQuestionTitle1.style.marginTop = "";
         courseButtonMoreFirstQuestionTitle2.style.marginTop = "";
@@ -3015,4 +3121,111 @@ courseOrderButtonModalWindowClose.addEventListener('click', () => {
     setTimeout(() => {
         courseOrderButtonModalWindow.style.display = "";
     }, 300);
+})
+
+courseMoreStudyButton.addEventListener('click', () => {
+    let score = (numberOfPage - 1) * 2 + clickedTop;
+    courseOrderButtonModalWindowTitle.textContent = sortedArray[score].title[selectLang];
+    courseOrderButtonModalWindow.style.display = "block";
+    setTimeout(() => {
+        courseOrderButtonModalWindow.style.opacity = "1";
+    }, 1);
+})
+
+const choiceOfCourseClose = document.getElementById("choice-of-course-close");
+
+courseMoreCounsellingButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    paymentCourse = true;
+    checkbox = false;
+    window.scrollTo({
+        top: window.innerWidth * 1.950625,
+        behavior: 'smooth'
+    });
+    let score = (numberOfPage - 1) * 2 + clickedTop;
+    choiceServecesTitleText.style.opacity = "0";
+    choiceServecesSquare.style.display = "none";
+    choiceServecesSquare.style.opacity = "0";
+    fourthSectionChoiceOfServiceArrow.style.display = "none";
+    fourthSectionChoiceOfServiceArrow.style.opacity = "0";
+    choiceOfCourseClose.style.display = "block"
+    fourthSectionChoiceOfService.style.pointerEvents = "none";
+    setTimeout(() => {
+        if (selectLang === "eng") {
+            choiceServecesTitleText.textContent = "Chosen course";
+        } else {
+            choiceServecesTitleText.textContent = "Выбранный курс";
+        }
+
+        setTimeout(() => {
+            choiceServecesTitleText.style.opacity = "1";
+        }, 300);
+    }, 1);
+
+    choiceOfServicePlaceholder.textContent = sortedArray[score].title[selectLang];
+    if (selectLang === "eng") {
+        textarea.textContent = coursesTextForApplication.eng[2];
+
+    } else {
+        textarea.textContent = coursesTextForApplication.rus[2];
+    }
+})
+
+choiceOfCourseClose.addEventListener('click', () => {
+    paymentCourse = false;
+    choiceServecesTitleText.style.opacity = "0";
+    choiceServecesSquare.style.display = "";
+    fourthSectionChoiceOfServiceArrow.style.display = "";
+    choiceOfCourseClose.style.opacity = "0";
+    fourthSectionChoiceOfService.style.pointerEvents = "all";
+    setTimeout(() => {
+        if (selectLang === "eng") {
+            choiceServecesTitleText.textContent = "Minimum prepayment";
+        } else {
+            choiceServecesTitleText.textContent = "Минимальная предоплата";
+        }
+        setTimeout(() => {
+            choiceOfCourseClose.style.display = "";
+            choiceServecesTitleText.style.opacity = "1";
+            choiceServecesSquare.style.opacity = "1";
+            fourthSectionChoiceOfServiceArrow.style.opacity = "1";
+        }, 1);
+    }, 300);
+})
+
+courseMoreReviewButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    paymentCourse = true;
+    checkbox = false;
+    window.scrollTo({
+        top: window.innerWidth * 1.950625,
+        behavior: 'smooth'
+    });
+    let score = (numberOfPage - 1) * 2 + clickedTop;
+    choiceServecesTitleText.style.opacity = "0";
+    choiceServecesSquare.style.display = "none";
+    choiceServecesSquare.style.opacity = "0";
+    fourthSectionChoiceOfServiceArrow.style.display = "none";
+    fourthSectionChoiceOfServiceArrow.style.opacity = "0";
+    choiceOfCourseClose.style.display = "block"
+    fourthSectionChoiceOfService.style.pointerEvents = "none";
+    setTimeout(() => {
+        if (selectLang === "eng") {
+            choiceServecesTitleText.textContent = "Chosen course";
+        } else {
+            choiceServecesTitleText.textContent = "Выбранный курс";
+        }
+
+        setTimeout(() => {
+            choiceServecesTitleText.style.opacity = "1";
+        }, 300);
+    }, 1);
+
+    choiceOfServicePlaceholder.textContent = sortedArray[score].title[selectLang];
+    if (selectLang === "eng") {
+        textarea.textContent = coursesTextForApplication.eng[3];
+
+    } else {
+        textarea.textContent = coursesTextForApplication.rus[3];
+    }
 })

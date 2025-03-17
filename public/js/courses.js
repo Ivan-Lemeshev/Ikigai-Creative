@@ -357,7 +357,7 @@ const coursesData = [
         },
         descriptionDown: {
             rus: "Станьте уверенным игроком в шахматы!",
-            eng: "Начните свой путь в шахматах уже сегодня!"
+            eng: "Become a confident chess player!"
         },
         svgCode: `...`,
         cost: 15000,
@@ -1089,6 +1089,166 @@ const coursesData = [
             eng: "Nutrition Science"
         },
         complexity: 2,
+        descriptionUp: {
+            rus: "Разберитесь в основах правильного питания, научитесь подбирать рацион для себя и клиентов. Курс подойдет как для личного развития, так и для профессиональной деятельности.",
+            eng: "Understand the fundamentals of proper nutrition, learn to create personalized meal plans for yourself and clients. Suitable for both personal growth and professional practice."
+        },
+        descriptionDown: {
+            rus: "Начните изучать нутрициологию уже сегодня!",
+            eng: "Start learning nutrition science today!"
+        },
+        svgCode: `<svg id="course-img-nutrition" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="80" stroke="var(--svgColor)" stroke-width="10" fill="none"/>
+                    <path d="M50 120 C70 90, 130 90, 150 120" stroke="var(--svgColor)" stroke-width="8" fill="none"/>
+                    <circle cx="70" cy="80" r="8" fill="var(--svgColor)"/>
+                    <circle cx="130" cy="80" r="8" fill="var(--svgColor)"/>
+                  </svg>`,
+        cost: 18000,
+        popularity: 250,
+        MMR: 4.7,
+        releasesData: "10.04.2025",
+        isProfession: false,
+        who: {
+            subtitles: {
+                rus: ["Начинающим разработчикам",
+                    "Тем, кто хочет сменить профессию",
+                    "Дизайнерам и креативщикам",
+                    "Студентам и IT-специалистам"
+                ],
+                eng: [
+                    "Beginning developers",
+                    "Those looking for a career change",
+                    "Designers and creatives",
+                    "Students and IT professionals"
+                ]
+            },
+            whoText: {
+                rus: ["Если вы никогда не работали с программированием, этот курс даст прочную основу для старта в мире веб-разработки.",
+                    "Если вы ищете новые карьерные возможности и готовы учиться, курс поможет освоить востребованные навыки.",
+                    "Если вы уже занимаетесь дизайном, дополните его знаниями в области front-end и back-end разработки для создания более комплексных проектов",
+                    "Даже если вы уже работаете в IT, курс поможет углубить знания и освоить новые инструменты и технологии веб-разработки."
+                ],
+                eng: [
+                    "If you've never worked with programming, this course will give you a solid foundation to get started in the world of web development.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "If you're already involved in design, supplement it with knowledge of front-end and back-end development to create more complex projects.",
+                    "Even if you already work in IT, the course will help you deepen your knowledge and learn new web development tools and technologies."
+                ]
+            }
+        },
+
+        whatNeed: {
+            subtitles: {
+                rus: ["",
+                    "Внимательность",
+                    "Желание учиться",
+                    "Базовое владение компьютером"
+                ],
+                eng: [
+                    "",
+                    "Attentiveness",
+                    "Willingness to learn",
+                    "Basic computer skills"
+                ]
+            },
+            whatNeedText: {
+                rus: ["Этот курс предназначен для начинающих и не требует большого опыта. Вам понадобятся только базовые навыки, которые будут полезны в процессе обучения.",
+                    "Важно быть внимательным при изучении новых понятий, следить за шагами и не пропускать важные детали. Это поможет усвоить материал быстрее и избежать ошибок.",
+                    "Стремление развиваться и осваивать новое — ключевой аспект успешного обучения. Важно быть готовым к трудностям, задавать вопросы и искать решения, если что-то непонятно.",
+                    "Знание основных функций компьютера: работа с файловой системой, использование браузера, установка программ и работа с текстовыми редакторами."
+                ],
+                eng: [
+                    "This course is designed for beginners and does not require much experience. You will only need basic skills that will be useful in the learning process:",
+                    "The desire to develop and learn new things is a key aspect of successful learning. It is important to be prepared for difficulties, ask questions and seek solutions when things are not clear.",
+                    "If you're looking for new career opportunities and are willing to learn, this course will help you learn in-demand skills.",
+                    "Knowledge of basic computer functions: working with the file system, using a browser, installing programmes and working with word processors."
+                ]
+            }
+        },
+        fullText: {
+            rus: [
+                "Этот курс поможет вам разобраться в принципах здорового питания и нутрициологии. Вы узнаете, как правильно подбирать рацион, учитывать особенности организма и корректировать питание для достижения различных целей – от снижения веса до набора мышечной массы.",
+                "Мы разберем влияние макро- и микроэлементов на здоровье, научимся анализировать состав продуктов и составлять сбалансированные диеты. Также вы получите базовые знания по диетологии и сможете применять их в работе с клиентами или для собственного здоровья.",
+                "По окончании курса вы сможете грамотно подходить к вопросам питания, разбираться в современных тенденциях нутрициологии и применять полученные знания на практике."
+            ],
+            eng: [
+                "This course will help you understand the principles of healthy eating and nutrition science. You'll learn how to create balanced meal plans, consider individual body needs, and adjust nutrition for different goals – from weight loss to muscle gain.",
+                "We will cover the impact of macro- and micronutrients on health, analyze food compositions, and create well-balanced diets. You'll also gain basic knowledge of dietetics, which you can apply to working with clients or improving your own health.",
+                "By the end of the course, you'll be able to make informed decisions about nutrition, understand modern nutrition trends, and apply your knowledge in practice."
+            ]
+        },
+        time: {
+            rus: "15-25 часов",
+            eng: "15-25 hours"
+        },
+        amountLessons: 15,
+        label: {
+            rus: ["IT",
+                "Востребованный",
+                "Легкий старт"
+            ],
+            eng: [
+                "IT",
+                "In demand",
+                "Easy start"
+            ]
+        },
+        freeLesson: "ссылка на бесплатный урок",
+        planOfLessons: {
+            rus: [
+                {
+                    duration: "5 недель",
+                    title: "Основы веб-верстки: HTML и CSS"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Базовый JavaScript: работа с DOM и событиями"
+                },
+                {
+                    duration: "10 недель",
+                    title: "Фронтенд-разработка: современные инструменты"
+                },
+                {
+                    duration: "9 недель",
+                    title: "Работа с API: взаимодействие фронтенда и бэкенда"
+                },
+                {
+                    duration: "4 недели",
+                    title: "Управление проектом на удалённом сервере"
+                },
+
+            ],
+            eng: [
+                {
+                    duration: "5 weeks",
+                    title: "Web layout basics: HTML and CSS"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Basic JavaScript: working with DOM and events"
+                },
+                {
+                    duration: "10 weeks",
+                    title: "Frontend development: modern tools and frameworks"
+                },
+                {
+                    duration: "9 weeks",
+                    title: "Working with API: frontend and backend interaction"
+                },
+                {
+                    duration: "4 weeks",
+                    title: "Project management on a remote server"
+                },
+
+            ]
+        }
+    },
+    {
+        title: {
+            rus: "Обучение по Notion",
+            eng: "Notion"
+        },
+        complexity: 1,
         descriptionUp: {
             rus: "Разберитесь в основах правильного питания, научитесь подбирать рацион для себя и клиентов. Курс подойдет как для личного развития, так и для профессиональной деятельности.",
             eng: "Understand the fundamentals of proper nutrition, learn to create personalized meal plans for yourself and clients. Suitable for both personal growth and professional practice."
