@@ -665,6 +665,7 @@
             justify-content: space-between;
             align-items: center;
             overflow: visible;
+            transition: opacity 0.3s ease-in-out;
 
             &>.mv-fourth-section-button {
                 width: 34.452736318407965vw;
@@ -1611,4 +1612,64 @@
     color: var(--ltText);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+}
+
+.mv-wrapper-fourth-section-lines-buttons-courses {
+    position: absolute;
+    width: 75.12437810945273vw;
+    height: 44.90049751243781vw;
+    left: 12.437810945273633vw;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    overflow: visible;
+    transition: opacity 0.3s ease-in-out;
+
+    &>.mv-fourth-section-button-courses {
+        width: 34.452736318407965vw;
+        height: 44.90049751243781vw;
+        overflow: visible;
+
+        &>.mv-wrapper-for-img-courses {
+            width: 34.452736318407965vw;
+            height: 34.452736318407965vw;
+            border: 0.24875621890547264vw solid var(--dtSeparationLine);
+            background: linear-gradient(179.79deg, rgba(232, 232, 232, 0.08) 0.23%, rgba(0, 136, 204, 0.04) 61.99%, rgba(232, 232, 232, 0.08) 99.87%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &>.mv-fourth-section-courses-img {
+                object-fit: contain;
+                width: 25.26616915422885vw;
+                height: 25.26616915422885vw;
+            }
+        }
+
+        &>.mv-name-of-courses {
+            width: 29.47761194029851vw;
+            height: 7.960199004975125vw;
+            margin-top: 2.4875621890547266vw;
+            margin-left: 2.4875621890547266vw;
+            font-size: 3.482587064676617vw;
+            font-weight: 300;
+            line-height: 4.179104477611941vw;
+            color: var(--ltText);
+            text-align: center;
+            overflow: visible;
+        }
+    }
+}
+
+#mv-wrapper-fourth-section-first-line-buttons-courses {
+    top: 23.6318407960199vw;
+}
+
+#mv-wrapper-fourth-section-second-line-buttons-courses {
+    top: 73.38308457711443vw;
+}
+
+#mv-wrapper-fourth-section-third-line-buttons-courses {
+    top: 123.38308457711442vw;
 }

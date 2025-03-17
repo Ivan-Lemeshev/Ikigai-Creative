@@ -1205,11 +1205,19 @@ const mvFourthSectionSubtitleTopLineCourses = document.getElementById("mv-fourth
 const mvFourthSectionSubtitleBottomLineCourses = document.getElementById("mv-fourth-section-subtitle-courses-bottom-line");
 const mvFourthSectionSubtitleCourses = document.getElementById("mv-fourth-section-subtitle-courses");
 
+const mvWrapperFourthSectionFirstLineButtons = document.getElementById("mv-wrapper-fourth-section-first-line-buttons");
+const mvWrapperFourthSectionSecondLineButtons = document.getElementById("mv-wrapper-fourth-section-second-line-buttons");
+const mvWrapperFourthSectionThirdLineButtons = document.getElementById("mv-wrapper-fourth-section-third-line-buttons");
+
+const mvWrapperFourthSectionFirstLineButtonsCourses = document.getElementById("mv-wrapper-fourth-section-first-line-buttons-courses");
+const mvWrapperFourthSectionSecondLineButtonsCourses = document.getElementById("mv-wrapper-fourth-section-second-line-buttons-courses");
+const mvWrapperFourthSectionThirdLineButtonsCourses = document.getElementById("mv-wrapper-fourth-section-third-line-buttons-courses");
+
 mvFourthSectionTitleCourses.addEventListener('click', () => {
     mvFourthSectionTitle.style.opacity = "0.4";
     mvFourthSectionTitleLeftLine.style.opacity = "0.4";
     mvFourthSectionTitleRightLine.style.opacity = "0.4";
-    
+
     mvFourthSectionTitleCourses.style.opacity = "1";
     mvFourthSectionTitleLeftLineCourses.style.opacity = "1";
     mvFourthSectionTitleRightLineCourses.style.opacity = "1";
@@ -1224,7 +1232,23 @@ mvFourthSectionTitleCourses.addEventListener('click', () => {
     mvFourthSectionSubtitleBottomLineCourses.style.opacity = "1";
     mvFourthSectionSubtitleCourses.style.opacity = "1";
 
-    
+    mvWrapperFourthSectionFirstLineButtons.style.opacity = "0";
+    mvWrapperFourthSectionSecondLineButtons.style.opacity = "0";
+    mvWrapperFourthSectionThirdLineButtons.style.opacity = "0";
+
+    mvWrapperFourthSectionFirstLineButtonsCourses.style.display = "flex";
+    mvWrapperFourthSectionSecondLineButtonsCourses.style.display = "flex";
+    mvWrapperFourthSectionThirdLineButtonsCourses.style.display = "flex";
+
+    setTimeout(() => {
+        mvWrapperFourthSectionFirstLineButtons.style.display = "none";
+        mvWrapperFourthSectionSecondLineButtons.style.display = "none";
+        mvWrapperFourthSectionThirdLineButtons.style.display = "none";
+
+        mvWrapperFourthSectionFirstLineButtonsCourses.style.opacity = "1";
+        mvWrapperFourthSectionSecondLineButtonsCourses.style.opacity = "1";
+        mvWrapperFourthSectionThirdLineButtonsCourses.style.opacity = "1";
+    }, 300);
 })
 
 mvFourthSectionTitle.addEventListener('click', () => {
@@ -1241,8 +1265,29 @@ mvFourthSectionTitle.addEventListener('click', () => {
 
     mvFourthSectionTitleLeftLineCourses.style.top = "";
     mvFourthSectionTitleRightLineCourses.style.top = "";
-    
+
     mvFourthSectionSubtitleTopLineCourses.style.opacity = "";
     mvFourthSectionSubtitleBottomLineCourses.style.opacity = "";
     mvFourthSectionSubtitleCourses.style.opacity = "";
+
+    mvWrapperFourthSectionFirstLineButtons.style.display = "";
+    mvWrapperFourthSectionSecondLineButtons.style.display = "";
+    mvWrapperFourthSectionThirdLineButtons.style.display = "";
+
+    mvWrapperFourthSectionFirstLineButtonsCourses.style.opacity = "";
+    mvWrapperFourthSectionSecondLineButtonsCourses.style.opacity = "";
+    mvWrapperFourthSectionThirdLineButtonsCourses.style.opacity = "";
+
+    setTimeout(() => {
+        mvWrapperFourthSectionFirstLineButtons.style.opacity = "";
+        mvWrapperFourthSectionSecondLineButtons.style.opacity = "";
+        mvWrapperFourthSectionThirdLineButtons.style.opacity = "";
+
+        mvWrapperFourthSectionFirstLineButtonsCourses.style.display = "";
+        mvWrapperFourthSectionSecondLineButtonsCourses.style.display = "";
+        mvWrapperFourthSectionThirdLineButtonsCourses.style.display = "";
+    }, 1);
 })
+
+
+
