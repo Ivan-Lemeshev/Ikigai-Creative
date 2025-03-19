@@ -1225,7 +1225,6 @@ const coursesNavigationSpecializationCourses = document.getElementById("mv-cours
 const numberOfPageWrapper = document.getElementById("mv-number-of-page");
 
 
-
 let paymentCourse = false;
 let clickedTop = 0;
 let numberOfPage = 1;
@@ -1262,7 +1261,7 @@ const visualVitrine = () => {
     }
 }
 
-visualVitrine()
+
 
 const activeClassNumbersOfPage = () => {
     for (let index = 1; index <= Math.ceil(sortedArray.length / 5); index++) {
@@ -1307,6 +1306,7 @@ const uploadNumbers = (amountPage) => {
 mvFourthSectionTitleCourses.addEventListener('click', () => {
     uploadNumbers(Math.ceil(sortedArray.length / 3)) // не пойму что не так 
     activeClassNumbersOfPage();
+    visualVitrine()
     mvFourthSectionTitle.style.opacity = "0.4";
     mvFourthSectionTitleLeftLine.style.opacity = "0.4";
     mvFourthSectionTitleRightLine.style.opacity = "0.4";
@@ -1421,4 +1421,49 @@ mvFourthSectionTitle.addEventListener('click', () => {
         coursesNavigationSpecializationCourses.style.display = "";
         numberOfPageWrapper.style.display = "none";
     }, 300);
+})
+
+coursesNavigationMostPopular.addEventListener('click', () => {
+    sortedArray = [...coursesData];
+    sortedArray.sort((a, b) => b.popularity - a.popularity);
+    uploadNumbers(sortedArray.length / 3)
+    coursesNavigationMostPopular.style.opacity = "1";
+    coursesNavigationBestReviews.style.opacity = "0.6";
+    coursesNavigationRecentReleases.style.opacity = "0.6";
+    coursesNavigationSpecializationCourses.style.opacity = "0.6";
+    visualVitrine();
+    uploadNumbers(Math.ceil(sortedArray.length / 3))
+})
+
+coursesNavigationBestReviews.addEventListener('click', () => {
+    sortedArray = [...coursesData];
+    sortedArray.sort((a, b) => b.MMR - a.MMR);
+    uploadNumbers(sortedArray.length / 3)
+    coursesNavigationMostPopular.style.opacity = "0.6";
+    coursesNavigationBestReviews.style.opacity = "1";
+    coursesNavigationRecentReleases.style.opacity = "0.6";
+    coursesNavigationSpecializationCourses.style.opacity = "0.6";
+    visualVitrine();
+})
+
+coursesNavigationRecentReleases.addEventListener('click', () => {
+    sortedArray = [...coursesData];
+    sortedArray.sort((a, b) => new Date(b.releasesData) - new Date(a.releasesData));
+    uploadNumbers(sortedArray.length / 3)
+    coursesNavigationMostPopular.style.opacity = "0.6";
+    coursesNavigationBestReviews.style.opacity = "0.6";
+    coursesNavigationRecentReleases.style.opacity = "1";
+    coursesNavigationSpecializationCourses.style.opacity = "0.6";
+    visualVitrine();
+})
+
+coursesNavigationSpecializationCourses.addEventListener('click', () => {
+    sortedArray = [...coursesData];
+    sortedArray = sortedArray.filter(Prof => Prof.isProfession);
+    uploadNumbers(sortedArray.length / 3)
+    coursesNavigationMostPopular.style.opacity = "0.6";
+    coursesNavigationBestReviews.style.opacity = "0.6";
+    coursesNavigationRecentReleases.style.opacity = "0.6";
+    coursesNavigationSpecializationCourses.style.opacity = "1";
+    visualVitrine();
 })
