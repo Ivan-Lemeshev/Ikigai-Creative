@@ -1261,8 +1261,6 @@ const visualVitrine = () => {
     }
 }
 
-
-
 const activeClassNumbersOfPage = () => {
     for (let index = 1; index <= Math.ceil(sortedArray.length / 5); index++) {
         const pageClass = document.getElementById(`mv-number-of-page-${index}`);
