@@ -1602,16 +1602,19 @@
 
 #mv-fourth-section-subtitle-courses {
     position: absolute;
-    top: 9vw;
-    left: 20.149253731343283vw;
-    width: 30.34825870646766vw;
-    height: 5.970149253731343vw;
+    top: 7.711442786069651vw;
+    left: 12.437810945273633vw;
+    width: 40.547263681592035vw;
+    height: 8.45771144278607vw;
     font-weight: 350;
     font-size: 3.9800995024875623vw;
     letter-spacing: 0.1em;
     color: var(--ltText);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mv-wrapper-fourth-section-lines-buttons-courses {
@@ -1639,6 +1642,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: opacity 0.3s ease-in-out;
 
             &>.mv-fourth-section-courses-img {
                 object-fit: contain;
@@ -1658,6 +1662,7 @@
             color: var(--ltText);
             text-align: center;
             overflow: visible;
+            transition: opacity 0.3s ease-in-out;
         }
     }
 }
@@ -1672,4 +1677,99 @@
 
 #mv-wrapper-fourth-section-third-line-buttons-courses {
     top: 123.38308457711442vw;
+}
+
+#mv-courses-navigation-most-popular-light {
+    position: absolute;
+    width: 3.9800995024875623vw;
+    height: 3.9800995024875623vw;
+    top: 9.950248756218906vw;
+    left: 56.46766169154229vw;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mv-courses-navigation-best-reviews-light {
+    position: absolute;
+    width: 3.9800995024875623vw;
+    height: 3.9800995024875623vw;
+    top: 9.950248756218906vw;
+    left: 64.42786069651741vw;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mv-courses-navigation-recent-releases-light {
+    position: absolute;
+    width: 3.9800995024875623vw;
+    height: 3.9800995024875623vw;
+    top: 9.950248756218906vw;
+    left: 72.38805970149254vw;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mv-courses-navigation-specialization-courses-light {
+    position: absolute;
+    width: 3.9800995024875623vw;
+    height: 3.9800995024875623vw;
+    top: 9.950248756218906vw;
+    left: 80.34825870646766vw;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+#mv-number-of-page {
+    margin-top: 172vw;
+    margin-left: 40.298507462686565vw;
+    height: 5.223880597014925vw;
+    width: 22.388059701492537vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.mv-number-of-page {
+    height: 100%;
+    width: 1.4925373134328357vw;
+    font-size: 3.9800995024875623vw;
+    font-weight: 350;
+    overflow: visible;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+
+    &:not(:first-of-type) {
+        margin-left: 1.5625vw;
+    }
+
+    &.mv-number-of-page-active {
+        opacity: 1;
+    }
+
+    &.mv-number-of-page-passive {
+        opacity: 0.5;
+    }
+
+    &.mv-number-of-page-light {
+        color: black;
+    }
+
+    &.mv-number-of-page-dark {
+        color: white;
+    }
+
+}
+
+.mv-course-img {
+    width: 24.875621890547265vw;
+    height: 24.875621890547265vw;
+    object-fit: contain;
 }

@@ -4,6 +4,8 @@ import reviews from "./reviews-mobile.js";
 import themeWrapper from "./switchTheme-data.js";
 import dataContats from "./links.js";
 import url from "./url.js"
+import { coursesTextForApplication } from "./slogans.js";
+import coursesData from "./courses.js"
 
 const mvNavButton = document.getElementById("mv-nav-button");
 const mvNavigationBlock = document.getElementById("mv-navigation-block");
@@ -356,6 +358,7 @@ const mvRefreshTheme = () => {
         mvTextarea.classList = "mv-textarea-dark";
         mainBlockAllText.style.border = "0.24875621890547264vw solid rgba(214, 214, 214, 0.5)";
         document.documentElement.style.setProperty('--svgColor', '#F3F3F3');
+        document.documentElement.style.setProperty('--svgColorMobile', '#2E2E2E');
         choiceServecesSquare.style.border = "0.12437810945273632vw var(--ltSeparationLine) solid";
     } else {
         mvLight.textContent = "Light"
@@ -385,6 +388,7 @@ const mvRefreshTheme = () => {
         mvTextarea.classList = "mv-textarea-light";
         mainBlockAllText.style.border = "";
         document.documentElement.style.setProperty('--svgColor', '#2E2E2E');
+        document.documentElement.style.setProperty('--svgColorMobile', '#E8E8E8');
         choiceServecesSquare.style.border = "";
     }
 }
@@ -1213,7 +1217,96 @@ const mvWrapperFourthSectionFirstLineButtonsCourses = document.getElementById("m
 const mvWrapperFourthSectionSecondLineButtonsCourses = document.getElementById("mv-wrapper-fourth-section-second-line-buttons-courses");
 const mvWrapperFourthSectionThirdLineButtonsCourses = document.getElementById("mv-wrapper-fourth-section-third-line-buttons-courses");
 
+const coursesNavigationMostPopular = document.getElementById("mv-courses-navigation-most-popular-light");
+const coursesNavigationBestReviews = document.getElementById("mv-courses-navigation-best-reviews-light");
+const coursesNavigationRecentReleases = document.getElementById("mv-courses-navigation-recent-releases-light");
+const coursesNavigationSpecializationCourses = document.getElementById("mv-courses-navigation-specialization-courses-light");
+
+const numberOfPageWrapper = document.getElementById("mv-number-of-page");
+
+
+
+let paymentCourse = false;
+let clickedTop = 0;
+let numberOfPage = 1;
+let course = false;
+
+let sortedArray = []
+sortedArray = [...coursesData];
+
+const visualVitrine = () => {
+    for (let index = 0; index <= Math.ceil(sortedArray.length / 2); index++) {
+        const upperServise = sortedArray[index];
+        const parserUp = new DOMParser();
+        const courseImg = parserUp.parseFromString(upperServise.svgCode, "image/svg+xml").documentElement;
+        const mvWrapperForImgCourses = document.getElementById(`mv-wrapper-for-img-courses-${index}`);
+        const mvNameForCourses = document.getElementById(`mv-name-of-courses-${index}`);
+        courseImg.id = `mv-course-img-${index}`;
+        courseImg.classList = "mv-course-img";
+        let oldSvgElement = document.getElementById(`mv-course-img-${index}`);
+        setTimeout(() => {
+            mvWrapperForImgCourses.style.opacity = "0";
+            mvNameForCourses.style.opacity = "0";
+            setTimeout(() => {
+                if (oldSvgElement) {
+                    mvWrapperForImgCourses.removeChild(oldSvgElement);
+                }
+                mvWrapperForImgCourses.appendChild(courseImg);
+                mvNameForCourses.textContent = upperServise.title[mvSelectLang];
+                setTimeout(() => {
+                    mvWrapperForImgCourses.style.opacity = "1";
+                    mvNameForCourses.style.opacity = "1";
+                }, 300);
+            }, 300);
+        }, 1);
+    }
+}
+
+visualVitrine()
+
+const activeClassNumbersOfPage = () => {
+    for (let index = 1; index <= Math.ceil(sortedArray.length / 5); index++) {
+        const pageClass = document.getElementById(`mv-number-of-page-${index}`);
+        if (index == numberOfPage) {
+            if (mvSelectTheme === "light") {
+                pageClass.classList = "mv-number-of-page-active mv-number-of-page mv-number-of-page-light";
+            } else {
+                pageClass.classList = "mv-number-of-page-active mv-number-of-page mv-number-of-page-dark";
+            }
+        } else {
+            if (mvSelectTheme === "light") {
+                pageClass.classList = "mv-number-of-page-passive mv-number-of-page mv-number-of-page-light";
+            } else {
+                pageClass.classList = "mv-number-of-page-passive mv-number-of-page mv-number-of-page-dark";
+            }
+        }
+    }
+}
+
+const uploadNumbers = (amountPage) => {
+    numberOfPage = 1;
+    numberOfPageWrapper.replaceChildren();
+    for (let index = 1; index <= Math.ceil(amountPage / 2); index++) {
+        const newPage = document.createElement("div");
+        newPage.textContent = index;
+        newPage.classList = "mv-number-of-page";
+        newPage.id = `mv-number-of-page-${index}`;
+        newPage.addEventListener('click', () => {
+            console.log(numberOfPage)
+            numberOfPage = index;
+            visualVitrine();
+            activeClassNumbersOfPage()
+            console.log(index)
+
+        })
+        numberOfPageWrapper.appendChild(newPage);
+    }
+}
+
+
 mvFourthSectionTitleCourses.addEventListener('click', () => {
+    uploadNumbers(Math.ceil(sortedArray.length / 3)) // не пойму что не так 
+    activeClassNumbersOfPage();
     mvFourthSectionTitle.style.opacity = "0.4";
     mvFourthSectionTitleLeftLine.style.opacity = "0.4";
     mvFourthSectionTitleRightLine.style.opacity = "0.4";
@@ -1240,6 +1333,28 @@ mvFourthSectionTitleCourses.addEventListener('click', () => {
     mvWrapperFourthSectionSecondLineButtonsCourses.style.display = "flex";
     mvWrapperFourthSectionThirdLineButtonsCourses.style.display = "flex";
 
+    coursesNavigationMostPopular.style.display = "block";
+    coursesNavigationBestReviews.style.display = "block";
+    coursesNavigationRecentReleases.style.display = "block";
+    coursesNavigationSpecializationCourses.style.display = "block";
+
+    if (mvSelectLang === "eng") {
+        mvFourthSectionSubtitleCourses.textContent = "Most popular"
+    } else {
+        mvFourthSectionSubtitleCourses.textContent = "Популярные"
+    }
+    numberOfPageWrapper.style.display = "flex";
+
+    setTimeout(() => {
+        coursesNavigationMostPopular.style.opacity = "1";
+        coursesNavigationBestReviews.style.opacity = "0.6";
+        coursesNavigationRecentReleases.style.opacity = "0.6";
+        coursesNavigationSpecializationCourses.style.opacity = "0.6";
+
+        numberOfPageWrapper.style.opacity = "1";
+
+    }, 1);
+
     setTimeout(() => {
         mvWrapperFourthSectionFirstLineButtons.style.display = "none";
         mvWrapperFourthSectionSecondLineButtons.style.display = "none";
@@ -1249,6 +1364,7 @@ mvFourthSectionTitleCourses.addEventListener('click', () => {
         mvWrapperFourthSectionSecondLineButtonsCourses.style.opacity = "1";
         mvWrapperFourthSectionThirdLineButtonsCourses.style.opacity = "1";
     }, 300);
+
 })
 
 mvFourthSectionTitle.addEventListener('click', () => {
@@ -1278,6 +1394,14 @@ mvFourthSectionTitle.addEventListener('click', () => {
     mvWrapperFourthSectionSecondLineButtonsCourses.style.opacity = "";
     mvWrapperFourthSectionThirdLineButtonsCourses.style.opacity = "";
 
+    coursesNavigationMostPopular.style.opacity = "";
+    coursesNavigationBestReviews.style.opacity = "";
+    coursesNavigationRecentReleases.style.opacity = "";
+    coursesNavigationSpecializationCourses.style.opacity = "";
+
+    numberOfPageWrapper.style.opacity = "0";
+
+
     setTimeout(() => {
         mvWrapperFourthSectionFirstLineButtons.style.opacity = "";
         mvWrapperFourthSectionSecondLineButtons.style.opacity = "";
@@ -1286,8 +1410,15 @@ mvFourthSectionTitle.addEventListener('click', () => {
         mvWrapperFourthSectionFirstLineButtonsCourses.style.display = "";
         mvWrapperFourthSectionSecondLineButtonsCourses.style.display = "";
         mvWrapperFourthSectionThirdLineButtonsCourses.style.display = "";
+
+
     }, 1);
+
+    setTimeout(() => {
+        coursesNavigationMostPopular.style.display = "";
+        coursesNavigationBestReviews.style.display = "";
+        coursesNavigationRecentReleases.style.display = "";
+        coursesNavigationSpecializationCourses.style.display = "";
+        numberOfPageWrapper.style.display = "none";
+    }, 300);
 })
-
-
-

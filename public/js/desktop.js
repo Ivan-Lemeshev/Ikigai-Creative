@@ -2189,10 +2189,7 @@ const activeClassNumbersOfPage = () => {
                 pageClass.classList = "number-of-page-passive number-of-page number-of-page-dark";
             }
         }
-
-
     }
-
 }
 
 
@@ -2428,8 +2425,8 @@ const uploadNumbers = (amountPage, firstStart = false) => {
             newPage.style.opacity = "0";
         }
         newPage.textContent = index;
-        newPage.classList = "number-of-page";
-        newPage.id = `number-of-page-${index}`;
+        newPage.classList = "mv-number-of-page";
+        newPage.id = `mv-number-of-page-${index}`;
         newPage.addEventListener('click', () => {
             numberOfPage = index;
             visualVitrine();
@@ -2437,7 +2434,6 @@ const uploadNumbers = (amountPage, firstStart = false) => {
         })
         numberOfPageWrapper.appendChild(newPage);
     }
-
 }
 
 

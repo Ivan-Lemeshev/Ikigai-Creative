@@ -6995,6 +6995,19 @@ const themeWrapper = {
         }
     },
 
+    "mv-fourth-section-title-courses": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
 
 
 }
