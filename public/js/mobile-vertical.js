@@ -25,6 +25,7 @@ const mvnumberOfReviews = document.getElementById("mv-sixth-section-number-of-re
 let number = 0;
 let float = false;
 const choiceServecesSquare = document.getElementById("mv-choice-serveces-square");
+let course = false;
 
 mvNavButton.addEventListener('click', () => {
     mvNavigationBlock.style.display = "block";
@@ -281,17 +282,28 @@ const mvSwitchTheme = () => {
     }
 }
 
+const mvThirdSectionWrapperImg = document.getElementById("mv-third-section-wrapper-img");
+
+const mvPriceListButtonImg = document.getElementById("mv-price-list-button-img");
+
+const mvCourseDescriptionImg = document.getElementById("mv-course-description-img");
+const mvCourseSuitableImg = document.getElementById("mv-course-suitable-img");
+const mvCourseComplexityImg = document.getElementById("mv-course-complexity-img");
+const mvCourseOutlineImg = document.getElementById("mv-course-outline-img");
+
+
+const mvButtonMoreLowerPartButtons0 = document.getElementById("mv-button-more-lower-part-buttons-0");
+const mvButtonMoreLowerPartButtons1 = document.getElementById("mv-button-more-lower-part-buttons-1");
+const mvButtonMoreLowerPartButtons2 = document.getElementById("mv-button-more-lower-part-buttons-2");
+
+const mvButtonMoreLowerPartButtonsImg1 = document.getElementById("mv-button-more-lower-part-buttons-0-img");
+const mvButtonMoreLowerPartButtonsImg2 = document.getElementById("mv-button-more-lower-part-buttons-1-img");
+const mvButtonMoreLowerPartButtonsImg3 = document.getElementById("mv-button-more-lower-part-buttons-2-img");
+
+
+
 const mvRefreshTheme = () => {
     const service = arrayPriceList[mvActivNumber]
-
-    const mvThirdSectionWrapperImg = document.getElementById("mv-third-section-wrapper-img");
-    const mvPriceListButtonImg = document.getElementById("mv-price-list-button-img");
-    const mvButtonMoreLowerPartButtons0 = document.getElementById("mv-button-more-lower-part-buttons-0");
-    const mvButtonMoreLowerPartButtons1 = document.getElementById("mv-button-more-lower-part-buttons-1");
-    const mvButtonMoreLowerPartButtons2 = document.getElementById("mv-button-more-lower-part-buttons-2");
-    const mvButtonMoreLowerPartButtonsImg1 = document.getElementById("mv-button-more-lower-part-buttons-0-img");
-    const mvButtonMoreLowerPartButtonsImg2 = document.getElementById("mv-button-more-lower-part-buttons-1-img");
-    const mvButtonMoreLowerPartButtonsImg3 = document.getElementById("mv-button-more-lower-part-buttons-2-img");
     const mvWrapperForImg1 = document.getElementById("mv-wrapper-for-img-1");
     const mvWrapperForImg2 = document.getElementById("mv-wrapper-for-img-2");
     const mvWrapperForImg3 = document.getElementById("mv-wrapper-for-img-3");
@@ -508,23 +520,44 @@ const mvChangeIdeasText = () => {
 
 mvChangeIdeasText();
 
+const mvCourseDescriptionTitle = document.getElementById("mv-course-description-title");
+
 const mvActivService = () => {
     const currentService = arrayPriceList[mvActivNumber];
+    if (course) {
+        const courseImg = document.getElementById("mv-third-section-course-img");
+        courseImg.style.display = "none";
+        mvThirdSectionWrapperImg.removeChild(courseImg);
+    }
+    course = false;
+    mvPriceListButtonImg.style.display = "";
+    mvButtonMoreLowerPartButtonsImg1.style.display = "";
+    mvButtonMoreLowerPartButtonsImg2.style.display = "";
+    mvButtonMoreLowerPartButtonsImg3.style.display = "";
+    mvCourseDescriptionImg.style.display = "";
+    mvCourseSuitableImg.style.display = "";
+    mvCourseComplexityImg.style.display = "";
+    mvCourseOutlineImg.style.display = "";
+    mvPriceListButton.style.border = "";
+    mvCourseDescriptionTitle.style.display = "";
+    mvThirdSectionText0.style.marginTop = "";
+    mvThirdSectionText1.style.marginTop = "";
+    
+    setTimeout(() => {
+        mvThirdSectionTitle.textContent = currentService.title[mvSelectLang];
+        mvThirdSectionImg.style.display = "";
+        mvThirdSectionImg.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-third-section-img ${currentService.title.eng}.svg`;
+        mvThirdSectionText0.textContent = currentService.description[mvSelectLang][0];
+        mvThirdSectionText1.textContent = currentService.description[mvSelectLang][1];
 
-    mvThirdSectionTitle.textContent = currentService.title[mvSelectLang];
-
-    mvThirdSectionImg.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-third-section-img ${currentService.title.eng}.svg`;
-    mvThirdSectionText0.textContent = currentService.description[mvSelectLang][0];
-    mvThirdSectionText1.textContent = currentService.description[mvSelectLang][1];
-
-    currentService.prices.map((serviceData, number) => {
-        const { nameOfServise, cost } = serviceData;
-        const mvPriceListServiceName = document.getElementById(`mv-price-list-service-name-${number}`);
-        const mvPriceListServiceCost = document.getElementById(`mv-price-list-service-cost-${number}`);
-        mvPriceListServiceCost.textContent = `£${cost}`;
-        mvPriceListServiceName.textContent = nameOfServise[mvSelectLang];
-
-    })
+        currentService.prices.map((serviceData, number) => {
+            const { nameOfServise, cost } = serviceData;
+            const mvPriceListServiceName = document.getElementById(`mv-price-list-service-name-${number}`);
+            const mvPriceListServiceCost = document.getElementById(`mv-price-list-service-cost-${number}`);
+            mvPriceListServiceCost.textContent = `£${cost}`;
+            mvPriceListServiceName.textContent = nameOfServise[mvSelectLang];
+        })
+    }, 100);
 }
 
 mvActivService()
@@ -622,10 +655,12 @@ mvSecondSectionButtonContacts.addEventListener('click', () => {
 
 
 mvPriceListButton.addEventListener('click', () => {
-    mvPriceListWrapper.style.display = "block";
-    setTimeout(() => {
-        mvPriceListWrapper.style.opacity = "1";
-    }, 1);
+    if (!course) {
+        mvPriceListWrapper.style.display = "block";
+        setTimeout(() => {
+            mvPriceListWrapper.style.opacity = "1";
+        }, 1);
+    }
 })
 
 mvPriceListX.addEventListener('click', () => {
@@ -936,22 +971,27 @@ const func = () => {
         for (let index = 0; index < mvTextForApplication.eng.length; index++) {
             const button = document.getElementById(`mv-button-more-lower-part-buttons-${index}`);
             button.addEventListener('click', (event) => {
-                event.preventDefault();
-                mvNumberOfText = index;
-                setupAndTranslateForSelectService(event);
+                if (!course) {
+                    event.preventDefault();
+                    mvNumberOfText = index;
+                    setupAndTranslateForSelectService(event);
+                }
             })
         }
     } else {
         for (let index = 0; index < mvTextForApplication.rus.length; index++) {
             const button = document.getElementById(`mv-button-more-lower-part-buttons-${index}`);
             button.addEventListener('click', (event) => {
-                event.preventDefault();
-                mvNumberOfText = index;
-                setupAndTranslateForSelectService(event);
+                if (!course) {
+                    event.preventDefault();
+                    mvNumberOfText = index;
+                    setupAndTranslateForSelectService(event);
+                }
             })
         }
     }
 }
+
 
 func();
 
@@ -1225,10 +1265,12 @@ const coursesNavigationSpecializationCourses = document.getElementById("mv-cours
 const numberOfPageWrapper = document.getElementById("mv-number-of-page");
 
 
+
+
 let paymentCourse = false;
 let clickedTop = 0;
 let numberOfPage = 1;
-let course = false;
+
 
 let sortedArray = []
 sortedArray = [...coursesData];
@@ -1302,6 +1344,7 @@ const uploadNumbers = (amountPage) => {
 
 
 mvFourthSectionTitleCourses.addEventListener('click', () => {
+    course = true;
     uploadNumbers(Math.ceil(sortedArray.length / 3)) // не пойму что не так 
     activeClassNumbersOfPage();
     visualVitrine()
@@ -1366,6 +1409,7 @@ mvFourthSectionTitleCourses.addEventListener('click', () => {
 })
 
 mvFourthSectionTitle.addEventListener('click', () => {
+
     mvFourthSectionTitle.style.opacity = "";
     mvFourthSectionTitleLeftLine.style.opacity = "";
     mvFourthSectionTitleRightLine.style.opacity = "";
@@ -1465,3 +1509,48 @@ coursesNavigationSpecializationCourses.addEventListener('click', () => {
     coursesNavigationSpecializationCourses.style.opacity = "1";
     visualVitrine();
 })
+
+const courseUpFunction = () => {
+    for (let index = 0; index <= Math.ceil(sortedArray.length / 2); index++) {
+        const newArray = sortedArray[index];
+        const mvWrapperForImgCourses = document.getElementById(`mv-wrapper-for-img-courses-${index}`);
+        mvWrapperForImgCourses.addEventListener('click', () => {
+            if (course) {
+                window.scrollTo({
+                    top: window.innerWidth * 4.3,
+                    behavior: 'smooth'
+                });
+                mvThirdSectionTitle.textContent = newArray.title[mvSelectLang];
+                mvThirdSectionImg.style.display = "none";
+                mvPriceListButtonImg.style.display = "none";
+                mvButtonMoreLowerPartButtonsImg1.style.display = "none";
+                mvButtonMoreLowerPartButtonsImg2.style.display = "none";
+                mvButtonMoreLowerPartButtonsImg3.style.display = "none";
+                mvCourseDescriptionImg.style.display = "block";
+                mvCourseSuitableImg.style.display = "block";
+                mvCourseComplexityImg.style.display = "block";
+                mvCourseOutlineImg.style.display = "block";
+                mvCourseDescriptionImg.style.opacity = "0.4";
+                mvCourseDescriptionTitle.style.display = "block";
+                mvThirdSectionText0.style.marginTop = "3.482587064676617vw";
+                mvThirdSectionText1.style.marginTop = "3.482587064676617vw";
+                mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+                const parser = new DOMParser();
+                const courseImg = parser.parseFromString(newArray.svgCode, "image/svg+xml").documentElement;
+                if (!course) {
+                    courseImg.style.display = "block";
+                }
+                courseImg.id = `mv-third-section-course-img`;
+                courseImg.classList = "mv-third-section-course-img";
+                let oldSvgElement = document.getElementById(`mv-third-section-course-img`);
+
+                if (oldSvgElement) {
+                    mvThirdSectionWrapperImg.removeChild(oldSvgElement);
+                }
+                mvThirdSectionWrapperImg.appendChild(courseImg);
+            }
+        })
+    }
+}
+
+courseUpFunction()
