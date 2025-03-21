@@ -16,6 +16,8 @@
     --success: #4CAF50;
     --svgColor: #2E2E2E;
     --svgColorMobile: #E8E8E8;
+    --svgColorMobileDark: #2B2B2B;
+    --svgColorMobileDark2: #E8E8E8;
 }
 
 body {

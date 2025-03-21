@@ -352,7 +352,6 @@
     background:
         linear-gradient(180deg, rgba(232, 232, 232, 0.2) 0%, rgba(0, 136, 204, 0.2) 13.4%, rgba(232, 232, 232, 0.2) 24.28%, rgba(232, 232, 232, 0.2) 52.1%, rgba(0, 136, 204, 0.2) 71.42%, rgba(0, 136, 204, 0.2) 83.92%, rgba(232, 232, 232, 0.2) 100%),
         linear-gradient(0deg, #E8E8E8, #E8E8E8);
-    padding-top: 8.45771144278607vw;
 
     &>#mv-third-section-title-wrapper {
         margin-left: 12.437810945273633vw;
@@ -652,6 +651,9 @@
         top: 239.55223880597015vw;
         width: 100vw;
         height: 217.4129353233831vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
 
         &>#mv-fourth-section-title {
@@ -1741,12 +1743,10 @@
 
 #mv-number-of-page {
     margin-top: 172vw;
-    margin-left: 40.298507462686565vw;
     height: 5.223880597014925vw;
-    width: 22.388059701492537vw;
+    width: min-content;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     overflow: visible;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
@@ -1762,7 +1762,7 @@
     z-index: 2;
 
     &:not(:first-of-type) {
-        margin-left: 1.5625vw;
+        margin-left: 4.975124378109453vw;
     }
 
     &.mv-number-of-page-active {
