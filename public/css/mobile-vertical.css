@@ -1839,3 +1839,32 @@
     display: none;
     transition: opacity 0.3s ease-in-out;
 }
+
+.mv-suitable-block-wrapper{ 
+    width: 75.12437810945273vw;
+    height: 26.865671641791046vw;
+    margin-top: 3.9800995024875623vw;
+    margin-left: 12.437810945273633vw;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.mv-suitable-block-title{ 
+    font-weight: 350;
+    font-size: 3.482587064676617vw;
+    letter-spacing: 0.1em;
+    color: black;
+    width: 100%;
+    height: min-content;
+}
+
+.mv-suitable-block-text {
+    font-weight: 300;
+    font-size: 3.482587064676617vw;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+    margin-top: 1.9900497512437811vw;
+    width: 100%;
+    height: min-content;
+}

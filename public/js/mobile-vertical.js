@@ -1272,6 +1272,11 @@ const coursesNavigationSpecializationCourses = document.getElementById("mv-cours
 
 const numberOfPageWrapper = document.getElementById("mv-number-of-page");
 
+const mvSuitableBlockWrapper0 = document.getElementById("mv-suitable-block-wrapper-0");
+const mvSuitableBlockWrapper1 = document.getElementById("mv-suitable-block-wrapper-1");
+const mvSuitableBlockWrapper2 = document.getElementById("mv-suitable-block-wrapper-2");
+const mvSuitableBlockWrapper3 = document.getElementById("mv-suitable-block-wrapper-3");
+
 
 
 
@@ -1583,10 +1588,7 @@ const courseUpFunction = () => {
     }
 }
 
-courseUpFunction()
-
-
-
+courseUpFunction();
 
 mvPriceListButton.addEventListener('click', () => {
     if (!course) {
@@ -1613,11 +1615,16 @@ mvButtonMoreLowerPartButtons0.addEventListener('click', () => {
         mvThirdSectionText0.style.opacity = "0";
         mvThirdSectionText1.style.opacity = "0";
         mvThirdSectionText2.style.opacity = "0";
+
+        mvSuitableBlockWrapper0.style.display = "block";
+        mvSuitableBlockWrapper1.style.display = "block";
+        mvSuitableBlockWrapper2.style.display = "block";
+        mvSuitableBlockWrapper3.style.display = "block";
         setTimeout(() => {
             if(mvSelectLang === "eng") {
                 mvCourseDescriptionTitle.textContent = "Our course is suitable for"
             } else {
-                mvCourseDescriptionTitle.textContent = "На кого рассчитан данный курс?"
+                mvCourseDescriptionTitle.textContent = "Наш курс подойдет"
             }
             mvThirdSectionText0.style.display = "none";
             mvThirdSectionText1.style.display = "none";
