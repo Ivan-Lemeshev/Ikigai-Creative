@@ -435,7 +435,7 @@
                 border: 0.24875621890547264vw solid var(--ltText);
                 background: linear-gradient(0deg, rgba(0, 136, 204, 0.02), rgba(0, 136, 204, 0.02)),
                     linear-gradient(179.79deg, rgba(232, 232, 232, 0.16) 0.23%, rgba(0, 136, 204, 0.08) 61.99%, rgba(232, 232, 232, 0.16) 99.87%);
-
+                transition: border 0.3s ease-in-out;
 
                 &>.mv-third-section-right-four-buttons {
                     object-fit: contain;
@@ -449,7 +449,7 @@
 
 
     &>#mv-third-section-text-0 {
-        min-height: 57.46268656716418vw;
+        min-height: min-content;
         width: 75.12437810945273vw;
         margin-top: 7.462686567164178vw;
         margin-left: 12.437810945273633vw;
@@ -457,10 +457,11 @@
         font-weight: 300;
         line-height: 5.174129353233831vw;
         color: var(--ltText);
+        transition: opacity 0.3s ease-in-out;
     }
 
     &>#mv-third-section-text-1 {
-        min-height: 41.7910447761194vw;
+        min-height: min-content;
         width: 75.12437810945273vw;
         margin-top: 4.975124378109453vw;
         margin-left: 12.437810945273633vw;
@@ -468,6 +469,20 @@
         font-weight: 300;
         line-height: 5.174129353233831vw;
         color: var(--ltText);
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &>#mv-third-section-text-2 {
+        min-height: min-content;
+        width: 75.12437810945273vw;
+        margin-top: 3.482587064676617vw;
+        margin-left: 12.437810945273633vw;
+        font-size: 3.9800995024875623vw;
+        font-weight: 300;
+        line-height: 5.174129353233831vw;
+        color: var(--ltText);
+        display: none;
+        transition: opacity 0.3s ease-in-out;
     }
 
     &>#mv-third-section-button-order {
@@ -1785,6 +1800,7 @@
     width: 7.462686567164178vw;
     height: 7.462686567164178vw;
     object-fit: contain;
+    transition: opacity 0.3s ease-in-out;
 }
 
 #mv-course-suitable-img {
@@ -1792,6 +1808,7 @@
     width: 7.462686567164178vw;
     height: 7.462686567164178vw;
     object-fit: contain;
+    transition: opacity 0.3s ease-in-out;
 }
 
 #mv-course-complexity-img {
@@ -1799,6 +1816,7 @@
     width: 7.462686567164178vw;
     height: 7.462686567164178vw;
     object-fit: contain;
+    transition: opacity 0.3s ease-in-out;
 }
 
 #mv-course-outline-img {
@@ -1806,6 +1824,7 @@
     width: 7.462686567164178vw;
     height: 7.462686567164178vw;
     object-fit: contain;
+    transition: opacity 0.3s ease-in-out;
 }
 
 #mv-course-description-title {
@@ -1818,4 +1837,5 @@
     margin-top: 7.462686567164178vw;
     margin-left: 12.437810945273633vw;
     display: none;
+    transition: opacity 0.3s ease-in-out;
 }

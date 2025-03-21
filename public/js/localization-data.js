@@ -325,11 +325,6 @@ const localizationWrapper = {
         eng: "Eng",
     },
 
-    "mv-third-section-button-order-text": {
-        rus: "Заказать",
-        eng: "Order",
-    },
-
     "mv-price-list-title": {
         rus: "Прайс-лист",
         eng: "Price list",

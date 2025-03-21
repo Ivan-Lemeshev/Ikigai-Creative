@@ -174,9 +174,16 @@ const coursesData = [
                     duration: "4 weeks",
                     title: "Project management on a remote server"
                 },
-
             ]
-        }
+        },
+
+        descriptionMobile: {
+            eng: ["Want to break into tech and build modern web applications? Our web development course takes you from beginner to skilled developer. You’ll master HTML, CSS, JavaScript, and modern frameworks to create responsive, interactive websites.",
+                "Beyond front-end skills, you’ll dive into back-end development, working with databases, APIs, and server-side programming. Hands-on projects and expert mentorship ensure you gain real-world experience and a strong portfolio.",
+                "Whether you’re starting a new career or launching your own projects, this course equips you with the confidence and expertise to succeed as a web developer."],
+            rus: ["", "", ""]
+        },
+
     },
     {
         title: {
@@ -342,7 +349,11 @@ const coursesData = [
                 },
 
             ]
-        }
+        },
+        descriptionMobile: {
+            eng: ["", "", ""],
+            rus: ["", "", ""]
+        },
     },
 
     {
@@ -510,7 +521,11 @@ const coursesData = [
                 },
 
             ]
-        }
+        },
+        descriptionMobile: {
+            eng: ["", "", ""],
+            rus: ["", "", ""]
+        },
     },
     {
         title: {
@@ -657,7 +672,11 @@ const coursesData = [
                 },
 
             ]
-        }
+        },
+        descriptionMobile: {
+            eng: ["", "", ""],
+            rus: ["", "", ""]
+        },
     },
     {
         title: {
@@ -808,7 +827,11 @@ const coursesData = [
                 },
 
             ]
-        }
+        },
+        descriptionMobile: {
+            eng: ["", "", ""],
+            rus: ["", "", ""]
+        },
     },
     {
         title: {
@@ -959,7 +982,11 @@ const coursesData = [
                 },
 
             ]
-        }
+        },
+        descriptionMobile: {
+            eng: ["", "", ""],
+            rus: ["", "", ""]
+        },
     },
     {
         title: {
@@ -1106,7 +1133,11 @@ const coursesData = [
                 },
 
             ]
-        }
+        },
+        descriptionMobile: {
+            eng: ["", "", ""],
+            rus: ["", "", ""]
+        },
     },
     {
         title: {
@@ -1274,7 +1305,11 @@ const coursesData = [
                 },
 
             ]
-        }
+        },
+        descriptionMobile: {
+            eng: ["", "", ""],
+            rus: ["", "", ""]
+        },
     },
     {
         title: {
@@ -1434,7 +1469,11 @@ const coursesData = [
                 },
 
             ]
-        }
+        },
+        descriptionMobile: {
+            eng: ["", "", ""],
+            rus: ["", "", ""]
+        },
     }
 
 ];

@@ -150,6 +150,7 @@ const mvThirdSectionTitle = document.getElementById("mv-third-section-title");
 const mvThirdSectionImg = document.getElementById("mv-third-section-img");
 const mvThirdSectionText0 = document.getElementById("mv-third-section-text-0");
 const mvThirdSectionText1 = document.getElementById("mv-third-section-text-1");
+const mvThirdSectionText2 = document.getElementById("mv-third-section-text-2");
 
 const mvFourthSectionButton0 = document.getElementById("mv-fourth-section-button-0");
 const mvFourthSectionButton1 = document.getElementById("mv-fourth-section-button-1");
@@ -290,6 +291,9 @@ const mvCourseDescriptionImg = document.getElementById("mv-course-description-im
 const mvCourseSuitableImg = document.getElementById("mv-course-suitable-img");
 const mvCourseComplexityImg = document.getElementById("mv-course-complexity-img");
 const mvCourseOutlineImg = document.getElementById("mv-course-outline-img");
+
+const mvThirdSectionButtonOrderText = document.getElementById("mv-third-section-button-order-text");
+
 
 
 const mvButtonMoreLowerPartButtons0 = document.getElementById("mv-button-more-lower-part-buttons-0");
@@ -542,7 +546,7 @@ const mvActivService = () => {
     mvCourseDescriptionTitle.style.display = "";
     mvThirdSectionText0.style.marginTop = "";
     mvThirdSectionText1.style.marginTop = "";
-    
+
     setTimeout(() => {
         mvThirdSectionTitle.textContent = currentService.title[mvSelectLang];
         mvThirdSectionImg.style.display = "";
@@ -558,6 +562,13 @@ const mvActivService = () => {
             mvPriceListServiceName.textContent = nameOfServise[mvSelectLang];
         })
     }, 100);
+
+
+    if (mvSelectLang === "eng") {
+        mvThirdSectionButtonOrderText.textContent = "Order";
+    } else {
+        mvThirdSectionButtonOrderText.textContent = "Заказать";
+    }
 }
 
 mvActivService()
@@ -991,9 +1002,6 @@ const func = () => {
         }
     }
 }
-
-
-func();
 
 
 
@@ -1514,27 +1522,39 @@ const courseUpFunction = () => {
     for (let index = 0; index <= Math.ceil(sortedArray.length / 2); index++) {
         const newArray = sortedArray[index];
         const mvWrapperForImgCourses = document.getElementById(`mv-wrapper-for-img-courses-${index}`);
+
         mvWrapperForImgCourses.addEventListener('click', () => {
             if (course) {
+
                 window.scrollTo({
                     top: window.innerWidth * 4.3,
                     behavior: 'smooth'
                 });
+
                 mvThirdSectionTitle.textContent = newArray.title[mvSelectLang];
                 mvThirdSectionImg.style.display = "none";
                 mvPriceListButtonImg.style.display = "none";
                 mvButtonMoreLowerPartButtonsImg1.style.display = "none";
                 mvButtonMoreLowerPartButtonsImg2.style.display = "none";
                 mvButtonMoreLowerPartButtonsImg3.style.display = "none";
+
                 mvCourseDescriptionImg.style.display = "block";
                 mvCourseSuitableImg.style.display = "block";
                 mvCourseComplexityImg.style.display = "block";
                 mvCourseOutlineImg.style.display = "block";
                 mvCourseDescriptionImg.style.opacity = "0.4";
+                if (mvSelectLang === "eng") {
+                    mvCourseDescriptionTitle.textContent = "Description";
+                } else {
+                    mvCourseDescriptionTitle.textContent = "Описание";
+                }
                 mvCourseDescriptionTitle.style.display = "block";
+
                 mvThirdSectionText0.style.marginTop = "3.482587064676617vw";
                 mvThirdSectionText1.style.marginTop = "3.482587064676617vw";
                 mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+                mvPriceListButton.style.pointerEvents = "none";
+
                 const parser = new DOMParser();
                 const courseImg = parser.parseFromString(newArray.svgCode, "image/svg+xml").documentElement;
                 if (!course) {
@@ -1543,14 +1563,81 @@ const courseUpFunction = () => {
                 courseImg.id = `mv-third-section-course-img`;
                 courseImg.classList = "mv-third-section-course-img";
                 let oldSvgElement = document.getElementById(`mv-third-section-course-img`);
-
                 if (oldSvgElement) {
                     mvThirdSectionWrapperImg.removeChild(oldSvgElement);
                 }
                 mvThirdSectionWrapperImg.appendChild(courseImg);
+
+                mvThirdSectionText0.textContent = newArray.descriptionMobile[mvSelectLang][0];
+                mvThirdSectionText1.textContent = newArray.descriptionMobile[mvSelectLang][1];
+                mvThirdSectionText2.style.display = "block";
+                mvThirdSectionText2.textContent = newArray.descriptionMobile[mvSelectLang][2];
+
+                if (mvSelectLang === "eng") {
+                    mvThirdSectionButtonOrderText.textContent = "Study";
+                } else {
+                    mvThirdSectionButtonOrderText.textContent = "Обучаться";
+                }
             }
         })
     }
 }
 
 courseUpFunction()
+
+
+
+
+mvPriceListButton.addEventListener('click', () => {
+    if (!course) {
+        func();
+    } else {
+        console.log(mvPriceListButton)
+    }
+})
+
+
+mvButtonMoreLowerPartButtons0.addEventListener('click', () => {
+    if (!course) {
+        func();
+    } else {
+        mvCourseDescriptionImg.style.opacity = "";
+        mvPriceListButton.style.pointerEvents = "";
+        mvPriceListButton.style.border = "";
+
+        mvCourseSuitableImg.style.opacity = "0.4";
+        mvButtonMoreLowerPartButtons0.style.pointerEvents = "none";
+        mvButtonMoreLowerPartButtons0.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+
+        mvCourseDescriptionTitle.style.opacity = "0";
+        mvThirdSectionText0.style.opacity = "0";
+        mvThirdSectionText1.style.opacity = "0";
+        mvThirdSectionText2.style.opacity = "0";
+        setTimeout(() => {
+            if(mvSelectLang === "eng") {
+                mvCourseDescriptionTitle.textContent = "Our course is suitable for"
+            } else {
+                mvCourseDescriptionTitle.textContent = "На кого рассчитан данный курс?"
+            }
+            mvThirdSectionText0.style.display = "none";
+            mvThirdSectionText1.style.display = "none";
+            mvThirdSectionText2.style.display = "none";
+        }, 300);
+    }
+})
+
+mvButtonMoreLowerPartButtons1.addEventListener('click', () => {
+    if (!course) {
+        func();
+    } else {
+        console.log(mvButtonMoreLowerPartButtons1)
+    }
+})
+
+mvButtonMoreLowerPartButtons2.addEventListener('click', () => {
+    if (!course) {
+        func();
+    } else {
+        console.log(mvButtonMoreLowerPartButtons2)
+    }
+})
