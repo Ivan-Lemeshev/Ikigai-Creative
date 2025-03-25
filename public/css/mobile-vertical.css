@@ -1842,12 +1842,13 @@
 
 .mv-suitable-block-wrapper{ 
     width: 75.12437810945273vw;
-    height: 26.865671641791046vw;
+    height: min-content;
     margin-top: 3.9800995024875623vw;
     margin-left: 12.437810945273633vw;
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    overflow: visible;
 }
 
 .mv-suitable-block-title{ 
@@ -1909,4 +1910,57 @@
     margin-top: 0.9950248756218906vw;
     margin-left: 3.9800995024875623vw;
     margin-bottom: 2.9850746268656714vw;
+}
+
+#mv-course-button-more-second-question-title-img {
+    width: 36.57711442786069vw;
+    height: min-content;
+    font-size: 3.482587064676617vw;
+    overflow: visible;
+    margin-top: 3.482587064676617vw;
+    margin-left: 12.437810945273633vw;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: none;
+}
+
+#mv-course-button-more-second-question-base-img {
+    width: 34.07960199004975vw;
+    height: 2.9850746268656714vw;
+    position: absolute;
+    top: 95.5vw;
+    left: 53.5323383084577vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: none;
+    object-fit: contain;
+}
+
+#mv-course-button-more-second-question-base-img.complexity-1 rect[fill="url(#paint1_linear_5974_359)"],
+#mv-course-button-more-second-question-base-img.complexity-1 rect[fill="url(#paint2_linear_5974_359)"],
+#mv-course-button-more-second-question-base-img.complexity-1 rect[fill="url(#paint3_linear_5974_359)"],
+#mv-course-button-more-second-question-base-img.complexity-1 path[fill="url(#paint4_linear_5974_359)"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mv-course-button-more-second-question-base-img.complexity-2 rect[fill="url(#paint2_linear_5974_359)"],
+#mv-course-button-more-second-question-base-img.complexity-2 rect[fill="url(#paint3_linear_5974_359)"],
+#mv-course-button-more-second-question-base-img.complexity-2 path[fill="url(#paint4_linear_5974_359)"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mv-course-button-more-second-question-base-img.complexity-3 rect[fill="url(#paint3_linear_5974_359)"],
+#mv-course-button-more-second-question-base-img.complexity-3 path[fill="url(#paint4_linear_5974_359)"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mv-course-button-more-second-question-base-img.complexity-4 path[fill="url(#paint4_linear_5974_359)"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
