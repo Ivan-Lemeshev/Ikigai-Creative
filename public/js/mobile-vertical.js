@@ -304,6 +304,26 @@ const mvButtonMoreLowerPartButtonsImg1 = document.getElementById("mv-button-more
 const mvButtonMoreLowerPartButtonsImg2 = document.getElementById("mv-button-more-lower-part-buttons-1-img");
 const mvButtonMoreLowerPartButtonsImg3 = document.getElementById("mv-button-more-lower-part-buttons-2-img");
 
+const mvCourseOrderButtonModalWindowContentImgLight1 = document.getElementById("mv-course-order-button-modal-window-content-img-light-1");
+const mvCourseOrderButtonModalWindowContentImgLight2 = document.getElementById("mv-course-order-button-modal-window-content-img-light-2");
+const mvCourseOrderButtonModalWindowContentImgLight3 = document.getElementById("mv-course-order-button-modal-window-content-img-light-3");
+
+const mvCourseOrderButtonModalWindowContentImgDark1 = document.getElementById("mv-course-order-button-modal-window-content-img-dark-1");
+const mvCourseOrderButtonModalWindowContentImgDark2 = document.getElementById("mv-course-order-button-modal-window-content-img-dark-2");
+const mvCourseOrderButtonModalWindowContentImgDark3 = document.getElementById("mv-course-order-button-modal-window-content-img-dark-3");
+
+const mvWrapperForImgCourses0 = document.getElementById("mv-wrapper-for-img-courses-0");
+const mvWrapperForImgCourses1 = document.getElementById("mv-wrapper-for-img-courses-1");
+const mvWrapperForImgCourses2 = document.getElementById("mv-wrapper-for-img-courses-2");
+const mvWrapperForImgCourses3 = document.getElementById("mv-wrapper-for-img-courses-3");
+const mvWrapperForImgCourses4 = document.getElementById("mv-wrapper-for-img-courses-4");
+const mvWrapperForImgCourses5 = document.getElementById("mv-wrapper-for-img-courses-5");
+
+const mvCourseOrderButtonModalWindowContentWrapper1 = document.getElementById("mv-course-order-button-modal-window-content-wrapper-1");
+const mvCourseOrderButtonModalWindowContentWrapper2 = document.getElementById("mv-course-order-button-modal-window-content-wrapper-2");
+const mvCourseOrderButtonModalWindowContentWrapper3 = document.getElementById("mv-course-order-button-modal-window-content-wrapper-3");
+const mvCourseOrderButtonModalWindowContentWrapper4 = document.getElementById("mv-course-order-button-modal-window-content-wrapper-4");
+
 
 
 const mvRefreshTheme = () => {
@@ -347,12 +367,18 @@ const mvRefreshTheme = () => {
     mvSixthSectionMainBlockArrowRight.src = `/img/svg/mobile-vertical/src/${mvSelectTheme}/mv-sixth-section-main-block-arrow-right.svg`;
 
     if (mvSelectTheme === "dark") {
-        mvLight.textContent = "Night"
-        mvThirdSectionWrapperImg.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)"
-        mvPriceListButton.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
-        mvButtonMoreLowerPartButtons0.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
-        mvButtonMoreLowerPartButtons1.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
-        mvButtonMoreLowerPartButtons2.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
+        mvLight.textContent = "Night";
+        mvCourseOrderButtonModalWindowContentImgLight1.style.display = "none";
+        mvCourseOrderButtonModalWindowContentImgDark1.style.display = "block";
+        mvCourseOrderButtonModalWindowContentImgLight2.style.display = "none";
+        mvCourseOrderButtonModalWindowContentImgDark2.style.display = "block";
+        mvCourseOrderButtonModalWindowContentImgLight3.style.display = "none";
+        mvCourseOrderButtonModalWindowContentImgDark3.style.display = "block";
+        mvThirdSectionWrapperImg.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
+        mvPriceListButton.style.border = "0.12437810945273632vw solid var(--dtText)";
+        mvButtonMoreLowerPartButtons0.style.border = "0.12437810945273632vw solid var(--dtText)";
+        mvButtonMoreLowerPartButtons1.style.border = "0.12437810945273632vw solid var(--dtText)";
+        mvButtonMoreLowerPartButtons2.style.border = "0.12437810945273632vw solid var(--dtText)";
         mvWrapperForImg1.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
         mvWrapperForImg2.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
         mvWrapperForImg3.style.border = "0.24875621890547264vw solid var(--ltSeparationLine)";
@@ -378,7 +404,27 @@ const mvRefreshTheme = () => {
         document.documentElement.style.setProperty('--svgColorMobileDark', '#D6D6D6');
         document.documentElement.style.setProperty('--svgColorMobileDark2', '#1C1C1C');
         choiceServecesSquare.style.border = "0.12437810945273632vw var(--ltSeparationLine) solid";
+        mvWrapperForImgCourses0.style.border = "0.12437810945273632vw var(--dtText) solid";
+        mvWrapperForImgCourses1.style.border = "0.12437810945273632vw var(--dtText) solid";
+        mvWrapperForImgCourses2.style.border = "0.12437810945273632vw var(--dtText) solid";
+        mvWrapperForImgCourses3.style.border = "0.12437810945273632vw var(--dtText) solid";
+        mvWrapperForImgCourses4.style.border = "0.12437810945273632vw var(--dtText) solid";
+        mvWrapperForImgCourses5.style.border = "0.12437810945273632vw var(--dtText) solid";
+        mvCourseOrderButtonModalWindowContentWrapper1.style.border = "0.12437810945273632vw var(--dtText) solid";
+        mvCourseOrderButtonModalWindowContentWrapper2.style.border = "0.12437810945273632vw var(--dtText) solid";
+        mvCourseOrderButtonModalWindowContentWrapper3.style.border = "0.12437810945273632vw var(--dtText) solid";
+        mvCourseOrderButtonModalWindowContentWrapper4.style.border = "0.12437810945273632vw var(--dtText) solid";
     } else {
+        mvCourseOrderButtonModalWindowContentWrapper1.style.border = "";
+        mvCourseOrderButtonModalWindowContentWrapper2.style.border = "";
+        mvCourseOrderButtonModalWindowContentWrapper3.style.border = "";
+        mvCourseOrderButtonModalWindowContentWrapper4.style.border = "";
+        mvCourseOrderButtonModalWindowContentImgLight1.style.display = "";
+        mvCourseOrderButtonModalWindowContentImgDark1.style.display = "";
+        mvCourseOrderButtonModalWindowContentImgLight2.style.display = "";
+        mvCourseOrderButtonModalWindowContentImgDark2.style.display = "";
+        mvCourseOrderButtonModalWindowContentImgLight3.style.display = "";
+        mvCourseOrderButtonModalWindowContentImgDark3.style.display = "";
         mvLight.textContent = "Light"
         mvThirdSectionWrapperImg.style.border = "";
         mvPriceListButton.style.border = "";
@@ -410,6 +456,12 @@ const mvRefreshTheme = () => {
         document.documentElement.style.setProperty('--svgColorMobileDark', '#2B2B2B');
         document.documentElement.style.setProperty('--svgColorMobileDark2', '#E8E8E8');
         choiceServecesSquare.style.border = "";
+        mvWrapperForImgCourses0.style.border = "";
+        mvWrapperForImgCourses1.style.border = "";
+        mvWrapperForImgCourses2.style.border = "";
+        mvWrapperForImgCourses3.style.border = "";
+        mvWrapperForImgCourses4.style.border = "";
+        mvWrapperForImgCourses5.style.border = "";
     }
 }
 
@@ -547,7 +599,11 @@ const mvActivService = () => {
     mvCourseSuitableImg.style.display = "";
     mvCourseComplexityImg.style.display = "";
     mvCourseOutlineImg.style.display = "";
-    mvPriceListButton.style.border = "";
+    if (mvSelectTheme === "light") {
+        mvPriceListButton.style.border = "";
+    } else {
+        mvPriceListButton.style.border = "0.12437810945273632vw solid var(--dtText)";
+    }
     mvCourseDescriptionTitle.style.display = "";
     mvThirdSectionText0.style.marginTop = "";
     mvThirdSectionText1.style.marginTop = "";
@@ -686,7 +742,11 @@ mvThirdSectionRightArrow.addEventListener('click', () => {
 
         mvCourseDescriptionImg.style.opacity = "0.4";
         mvPriceListButton.style.pointerEvents = "none";
-        mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        if (mvSelectTheme === "light") {
+            mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        } else {
+            mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(232, 232, 232, 0.2)";
+        }
 
         courseButtonMoreThirdQuestionWrapper0.style.opacity = "";
         courseButtonMoreThirdQuestionWrapper1.style.opacity = "";
@@ -704,6 +764,8 @@ mvThirdSectionRightArrow.addEventListener('click', () => {
         mvThirdSectionText0.style.opacity = "0";
         mvThirdSectionText1.style.opacity = "0";
         mvThirdSectionText2.style.opacity = "0";
+
+        mvThirdSectionButtonOrder.style.opacity = "0";
 
         setTimeout(() => {
             mvSuitableBlockWrapper0.style.display = "";
@@ -734,6 +796,7 @@ mvThirdSectionRightArrow.addEventListener('click', () => {
             courseButtonMoreThirdQuestionWrapper4.style.display = "";
 
             setTimeout(() => {
+                mvThirdSectionButtonOrder.style.opacity = "1";
                 mvThirdSectionTitle.style.opacity = "1";
                 mvCourseDescriptionTitle.style.opacity = "1";
                 mvThirdSectionText0.style.opacity = "1";
@@ -787,7 +850,11 @@ mvThirdSectionLeftArrow.addEventListener('click', () => {
 
         mvCourseDescriptionImg.style.opacity = "0.4";
         mvPriceListButton.style.pointerEvents = "none";
-        mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        if (mvSelectTheme === "light") {
+            mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        } else {
+            mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(232, 232, 232, 0.2)";
+        }
 
         courseButtonMoreThirdQuestionWrapper0.style.opacity = "";
         courseButtonMoreThirdQuestionWrapper1.style.opacity = "";
@@ -805,6 +872,8 @@ mvThirdSectionLeftArrow.addEventListener('click', () => {
         mvThirdSectionText0.style.opacity = "0";
         mvThirdSectionText1.style.opacity = "0";
         mvThirdSectionText2.style.opacity = "0";
+
+        mvThirdSectionButtonOrder.style.opacity = "0";
 
         setTimeout(() => {
             mvSuitableBlockWrapper0.style.display = "";
@@ -834,6 +903,7 @@ mvThirdSectionLeftArrow.addEventListener('click', () => {
             courseButtonMoreThirdQuestionWrapper4.style.display = "";
 
             setTimeout(() => {
+                mvThirdSectionButtonOrder.style.opacity = "1";
                 mvThirdSectionTitle.style.opacity = "1";
                 mvCourseDescriptionTitle.style.opacity = "1";
                 mvThirdSectionText0.style.opacity = "1";
@@ -1017,7 +1087,7 @@ const mvFifvthSectionMainContentSubtitle = document.getElementById("mv-fifvth-se
 let mvActivNumberSave = null;
 
 const mvAllInputsHave = () => {
-    if (mvInputFirstName.value.length && mvInputLastName.value.length && mvInputPhone.value.length && mvInputEmail.value.length && isValidEmail(mvInputEmail.value) && mvActivNumberSave !== null) {
+    if (mvInputFirstName.value.length && mvInputLastName.value.length && mvInputPhone.value.length && mvInputEmail.value.length && isValidEmail(mvInputEmail.value) && mvActivNumberSave !== null || course === true) {
         mvSubmitButton.classList = "mv-activ-button";
         mvFifvthSectionImgPath.style.fill = "#0088CC";
         applicationShow = true;
@@ -1243,11 +1313,6 @@ mvSixthSectionMainBlockArrowRight.addEventListener('click', () => {
 const mvThirdSectionButtonOrder = document.getElementById("mv-third-section-button-order");
 const mvCloseStudyButton = document.getElementById("mv-close-study-button");
 
-const mvCourseOrderButtonModalWindowContentWrapper1 = document.getElementById("mv-course-order-button-modal-window-content-wrapper-1");
-const mvCourseOrderButtonModalWindowContentWrapper2 = document.getElementById("mv-course-order-button-modal-window-content-wrapper-2");
-const mvCourseOrderButtonModalWindowContentWrapper3 = document.getElementById("mv-course-order-button-modal-window-content-wrapper-3");
-const mvCourseOrderButtonModalWindowContentWrapper4 = document.getElementById("mv-course-order-button-modal-window-content-wrapper-4");
-
 const mvSuitableBlockWrapper0 = document.getElementById("mv-suitable-block-wrapper-0");
 const mvSuitableBlockWrapper1 = document.getElementById("mv-suitable-block-wrapper-1");
 const mvSuitableBlockWrapper2 = document.getElementById("mv-suitable-block-wrapper-2");
@@ -1261,6 +1326,46 @@ const courseButtonMoreThirdQuestionWrapper1 = document.getElementById("mv-course
 const courseButtonMoreThirdQuestionWrapper2 = document.getElementById("mv-course-button-more-third-question-wrapper-2");
 const courseButtonMoreThirdQuestionWrapper3 = document.getElementById("mv-course-button-more-third-question-wrapper-3");
 const courseButtonMoreThirdQuestionWrapper4 = document.getElementById("mv-course-button-more-third-question-wrapper-4");
+
+const mvFifvthSectionDropList = document.getElementById("mv-fifvth-section-drop-list");
+const mvChosenCourseWrapperBlock = document.getElementById("mv-chosen-course-wrapper-block");
+const mvChosenCourseNameOfCourse = document.getElementById("mv-chosen-course-name-of-course");
+const mvChosenCourseNameOfService = document.getElementById("mv-chosen-course-name-of-service");
+const mvChosenCourseWrapperOfSvg = document.getElementById("mv-chosen-course-wrapper-of-svg");
+const mvChosenCourseCloseButton = document.getElementById("mv-chosen-course-close-button");
+
+
+const choiceServecesTitleWrapper = document.getElementById("mv-choice-serveces-title-wrapper");
+const choiceServecesTitleText = document.getElementById("mv-choice-serveces-title");
+const choiceServecesCheckbox = document.getElementById("mv-choice-serveces-checkbox");
+let checkbox = false;
+
+choiceServecesTitleWrapper.addEventListener('click', () => {
+    if (!checkbox) {
+        checkbox = true;
+        choiceServecesTitleText.style.color = "var(--success)";
+        choiceServecesSquare.style.opacity = "0";
+        setTimeout(() => {
+            choiceServecesSquare.style.display = "none";
+            choiceServecesCheckbox.style.display = "block";
+            choiceServecesCheckbox.style.opacity = "1";
+        }, 300);
+    } else {
+        checkbox = false;
+        if (mvSelectTheme === "light") {
+            choiceServecesTitleText.style.color = "var(--ltText)";
+        } else {
+            choiceServecesTitleText.style.color = "var(--dtText)";
+        }
+
+        choiceServecesCheckbox.style.opacity = "";
+        setTimeout(() => {
+            choiceServecesCheckbox.style.display = "";
+            choiceServecesSquare.style.display = "";
+            choiceServecesSquare.style.opacity = "";
+        }, 300);
+    }
+})
 
 mvThirdSectionButtonOrder.addEventListener('click', () => {
     if (!course) {
@@ -1320,10 +1425,17 @@ mvThirdSectionButtonOrder.addEventListener('click', () => {
         mvButtonMoreLowerPartButtons1.style.pointerEvents = "none";
         mvButtonMoreLowerPartButtons2.style.pointerEvents = "none";
 
-        mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
-        mvButtonMoreLowerPartButtons0.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
-        mvButtonMoreLowerPartButtons1.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
-        mvButtonMoreLowerPartButtons2.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        if (mvSelectTheme === "light") {
+            mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+            mvButtonMoreLowerPartButtons0.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+            mvButtonMoreLowerPartButtons1.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+            mvButtonMoreLowerPartButtons2.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        } else {
+            mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(232, 232, 232, 0.2)";
+            mvButtonMoreLowerPartButtons0.style.border = "0.24875621890547264vw solid rgba(232, 232, 232, 0.2)";
+            mvButtonMoreLowerPartButtons1.style.border = "0.24875621890547264vw solid rgba(232, 232, 232, 0.2)";
+            mvButtonMoreLowerPartButtons2.style.border = "0.24875621890547264vw solid rgba(232, 232, 232, 0.2)";
+        }
 
         mvCourseOrderButtonModalWindowContentWrapper1.style.display = "block";
         mvCourseOrderButtonModalWindowContentWrapper2.style.display = "block";
@@ -1402,12 +1514,22 @@ mvThirdSectionButtonOrder.addEventListener('click', () => {
 
 mvCloseStudyButton.addEventListener('click', () => {
     mvThirdSectionWrapperImg.style.setProperty('--opacityBackroundThirdSectionImg', '0');
-    mvThirdSectionWrapperImg.style.border = "";
+    if (mvSelectTheme === "light") {
+        mvThirdSectionWrapperImg.style.border = "";
+    } else {
+        mvThirdSectionWrapperImg.style.border = "0.12437810945273632vw solid var(--dtText)";
+    }
 
     mvCloseStudyButton.style.opacity = "";
+    mvCloseStudyButton.style.display = "";
     mvCourseDescriptionTitle.style.opacity = "0";
     mvThirdSectionText0.style.opacity = "0";
     mvThirdSectionText1.style.opacity = "0";
+
+
+
+    mvThirdSectionLeftArrow.style.display = "";
+    mvThirdSectionRightArrow.style.display = "";
 
     mvCourseOrderButtonModalWindowContentWrapper1.style.opacity = "";
     mvCourseOrderButtonModalWindowContentWrapper2.style.opacity = "";
@@ -1421,6 +1543,8 @@ mvCloseStudyButton.addEventListener('click', () => {
     mvThirdSectionButtonOrder.style.display = "";
 
     setTimeout(() => {
+        mvThirdSectionLeftArrow.style.opacity = "1";
+        mvThirdSectionRightArrow.style.opacity = "1";
         mvThirdSectionText0.textContent = sortedArray[score].descriptionMobile[mvSelectLang][0];
         mvThirdSectionText1.textContent = sortedArray[score].descriptionMobile[mvSelectLang][1];
         mvThirdSectionText2.textContent = sortedArray[score].descriptionMobile[mvSelectLang][2];
@@ -1431,9 +1555,16 @@ mvCloseStudyButton.addEventListener('click', () => {
         }
         mvThirdSectionText2.style.display = "block";
 
-        mvButtonMoreLowerPartButtons0.style.border = "";
-        mvButtonMoreLowerPartButtons1.style.border = "";
-        mvButtonMoreLowerPartButtons2.style.border = "";
+        if (mvSelectTheme === "light") {
+            mvButtonMoreLowerPartButtons0.style.border = "";
+            mvButtonMoreLowerPartButtons1.style.border = "";
+            mvButtonMoreLowerPartButtons2.style.border = "";
+        } else {
+            mvButtonMoreLowerPartButtons0.style.border = "0.12437810945273632vw solid var(--dtText)";
+            mvButtonMoreLowerPartButtons1.style.border = "0.12437810945273632vw solid var(--dtText)";
+            mvButtonMoreLowerPartButtons2.style.border = "0.12437810945273632vw solid var(--dtText)";
+        }
+
 
         mvCourseSuitableImg.style.opacity = "";
         mvCourseComplexityImg.style.opacity = "";
@@ -1454,6 +1585,140 @@ mvCloseStudyButton.addEventListener('click', () => {
     }, 300);
 });
 
+mvCourseOrderButtonModalWindowContentWrapper1.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 8.5,
+        behavior: 'smooth'
+    });
+
+    mvFifvthSectionDropList.style.display = "none";
+    mvChosenCourseWrapperBlock.style.display = "block";
+    mvChosenCourseWrapperBlock.style.opacity = "1";
+    mvChosenCourseNameOfCourse.textContent = sortedArray[score].title[mvSelectLang];
+    if (mvSelectLang === "eng") {
+        mvChosenCourseNameOfService.textContent = "Trial session";
+    } else {
+        mvChosenCourseNameOfService.textContent = "Пробное занятие";
+    }
+
+    const parser = new DOMParser();
+    const courseImg = parser.parseFromString(sortedArray[score].svgCode, "image/svg+xml").documentElement;
+    courseImg.id = "mv-chosen-course-svg-content";
+    let oldSvgElement = document.getElementById(`mv-chosen-course-svg-content`);
+    if (oldSvgElement) {
+        mvChosenCourseWrapperOfSvg.removeChild(oldSvgElement);
+    }
+    mvChosenCourseWrapperOfSvg.appendChild(courseImg);
+})
+
+mvCourseOrderButtonModalWindowContentWrapper2.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerWidth * 8.5,
+        behavior: 'smooth'
+    });
+
+    mvFifvthSectionDropList.style.display = "none";
+    mvChosenCourseWrapperBlock.style.display = "block";
+    mvChosenCourseWrapperBlock.style.opacity = "1";
+    mvChosenCourseNameOfCourse.textContent = sortedArray[score].title[mvSelectLang];
+    if (mvSelectLang === "eng") {
+        mvChosenCourseNameOfService.textContent = "Course prepayment";
+    } else {
+        mvChosenCourseNameOfService.textContent = "Предоплата курса";
+    }
+
+    const parser = new DOMParser();
+    const courseImg = parser.parseFromString(sortedArray[score].svgCode, "image/svg+xml").documentElement;
+    courseImg.id = "mv-chosen-course-svg-content";
+    let oldSvgElement = document.getElementById(`mv-chosen-course-svg-content`);
+    if (oldSvgElement) {
+        mvChosenCourseWrapperOfSvg.removeChild(oldSvgElement);
+    }
+    mvChosenCourseWrapperOfSvg.appendChild(courseImg);
+
+    checkbox = true;
+    choiceServecesTitleText.style.color = "var(--success)";
+    choiceServecesSquare.style.opacity = "0";
+    setTimeout(() => {
+        choiceServecesSquare.style.display = "none";
+        choiceServecesCheckbox.style.display = "block";
+        choiceServecesCheckbox.style.opacity = "1";
+    }, 300);
+})
+
+mvCourseOrderButtonModalWindowContentWrapper3.addEventListener('click', () => {
+
+    window.scrollTo({
+        top: window.innerWidth * 8.5,
+        behavior: 'smooth'
+    });
+
+    mvFifvthSectionDropList.style.display = "none";
+    mvChosenCourseWrapperBlock.style.display = "block";
+    mvChosenCourseWrapperBlock.style.opacity = "1";
+    mvChosenCourseNameOfCourse.textContent = sortedArray[score].title[mvSelectLang];
+    if (mvSelectLang === "eng") {
+        mvChosenCourseNameOfService.textContent = "Abstracts";
+    } else {
+        mvChosenCourseNameOfService.textContent = "Конспекты";
+    }
+
+    const parser = new DOMParser();
+    const courseImg = parser.parseFromString(sortedArray[score].svgCode, "image/svg+xml").documentElement;
+    courseImg.id = "mv-chosen-course-svg-content";
+    let oldSvgElement = document.getElementById(`mv-chosen-course-svg-content`);
+    if (oldSvgElement) {
+        mvChosenCourseWrapperOfSvg.removeChild(oldSvgElement);
+    }
+    mvChosenCourseWrapperOfSvg.appendChild(courseImg);
+
+    checkbox = true;
+    choiceServecesTitleText.style.color = "var(--success)";
+    choiceServecesSquare.style.opacity = "0";
+    setTimeout(() => {
+        choiceServecesSquare.style.display = "none";
+        choiceServecesCheckbox.style.display = "block";
+        choiceServecesCheckbox.style.opacity = "1";
+    }, 300);
+})
+
+mvCourseOrderButtonModalWindowContentWrapper4.addEventListener('click', () => {
+
+    window.scrollTo({
+        top: window.innerWidth * 8.5,
+        behavior: 'smooth'
+    });
+
+    mvFifvthSectionDropList.style.display = "none";
+    mvChosenCourseWrapperBlock.style.display = "block";
+    mvChosenCourseWrapperBlock.style.opacity = "1";
+    mvChosenCourseNameOfCourse.textContent = sortedArray[score].title[mvSelectLang];
+    if (mvSelectLang === "eng") {
+        mvChosenCourseNameOfService.textContent = "Free part";
+    } else {
+        mvChosenCourseNameOfService.textContent = "Бесплатная часть";
+    }
+
+    const parser = new DOMParser();
+    const courseImg = parser.parseFromString(sortedArray[score].svgCode, "image/svg+xml").documentElement;
+    courseImg.id = "mv-chosen-course-svg-content";
+    let oldSvgElement = document.getElementById(`mv-chosen-course-svg-content`);
+    if (oldSvgElement) {
+        mvChosenCourseWrapperOfSvg.removeChild(oldSvgElement);
+    }
+    mvChosenCourseWrapperOfSvg.appendChild(courseImg);
+
+})
+
+mvChosenCourseCloseButton.addEventListener('click', () => {
+    mvFifvthSectionDropList.style.display = "";
+    mvChosenCourseWrapperBlock.style.opacity = "";
+    setTimeout(() => {
+        mvFifvthSectionDropList.style.opacity = "";
+        mvChosenCourseWrapperBlock.style.display = "";
+    }, 300);
+})
+
 
 const sendToApplicationMainContent = document.getElementById("mv-send-to-application-main-content");
 const sendToApplicationWrapper = document.getElementById("mv-send-to-application-wrapper");
@@ -1463,37 +1728,7 @@ const sendToApplicationMainContentImg = document.getElementById("mv-send-to-appl
 const sendToApplicationMainContentImgSecces = document.getElementById("mv-send-to-application-main-content-img-secces");
 const sendToApplicationMainContentImgWrong = document.getElementById("mv-send-to-application-main-content-img-wrong");
 
-const choiceServecesTitleWrapper = document.getElementById("mv-choice-serveces-title-wrapper");
-const choiceServecesTitleText = document.getElementById("mv-choice-serveces-title");
-const choiceServecesCheckbox = document.getElementById("mv-choice-serveces-checkbox");
-let checkbox = false;
 
-choiceServecesTitleWrapper.addEventListener('click', () => {
-    if (!checkbox) {
-        checkbox = true;
-        choiceServecesTitleText.style.color = "var(--success)";
-        choiceServecesSquare.style.opacity = "0";
-        setTimeout(() => {
-            choiceServecesSquare.style.display = "none";
-            choiceServecesCheckbox.style.display = "block";
-            choiceServecesCheckbox.style.opacity = "1";
-        }, 300);
-    } else {
-        checkbox = false;
-        if (mvSelectTheme === "light") {
-            choiceServecesTitleText.style.color = "var(--ltText)";
-        } else {
-            choiceServecesTitleText.style.color = "var(--dtText)";
-        }
-
-        choiceServecesCheckbox.style.opacity = "";
-        setTimeout(() => {
-            choiceServecesCheckbox.style.display = "";
-            choiceServecesSquare.style.display = "";
-            choiceServecesSquare.style.opacity = "";
-        }, 300);
-    }
-})
 
 
 mvSubmitButton.addEventListener('click', () => {
@@ -1658,7 +1893,6 @@ const courseButtonMoreThirdQuestionText4 = document.getElementById("mv-course-bu
 
 
 let paymentCourse = false;
-let clickedTop = 0;
 let numberOfPage = 1;
 
 
@@ -1707,7 +1941,11 @@ const visualVitrine = () => {
 
                 mvThirdSectionText0.style.marginTop = "3.482587064676617vw";
                 mvThirdSectionText1.style.marginTop = "3.482587064676617vw";
-                mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+                if (mvSelectTheme === "light") {
+                    mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+                } else {
+                    mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(232, 232, 232, 0.2)";
+                }
                 mvPriceListButton.style.pointerEvents = "none";
 
                 const parser = new DOMParser();
@@ -1724,7 +1962,6 @@ const visualVitrine = () => {
                 mvThirdSectionWrapperImg.appendChild(courseImg);
 
                 mvThirdSectionText2.style.display = "block";
-
                 mvThirdSectionText0.textContent = newCourse.descriptionMobile[mvSelectLang][0];
                 mvThirdSectionText1.textContent = newCourse.descriptionMobile[mvSelectLang][1];
                 mvThirdSectionText2.textContent = newCourse.descriptionMobile[mvSelectLang][2];
@@ -1734,7 +1971,66 @@ const visualVitrine = () => {
                 } else {
                     mvThirdSectionButtonOrderText.textContent = "Обучаться";
                 }
+
+                mvCourseOrderButtonModalWindowContentWrapper1.style.opacity = "";
+                mvCourseOrderButtonModalWindowContentWrapper2.style.opacity = "";
+                mvCourseOrderButtonModalWindowContentWrapper3.style.opacity = "";
+                mvCourseOrderButtonModalWindowContentWrapper4.style.opacity = "";
+
+                mvThirdSectionButtonOrder.style.display = "";
+                mvCourseSuitableImg.style.opacity = "";
+                mvCourseComplexityImg.style.opacity = "";
+                mvCourseOutlineImg.style.opacity = "";
+
+                mvCourseSuitableImg.style.pointerEvents = "";
+                mvCourseComplexityImg.style.pointerEvents = "";
+                mvCourseOutlineImg.style.pointerEvents = "";
+
+                mvThirdSectionLeftArrow.style.display = "";
+                mvThirdSectionRightArrow.style.display = "";
+
+                mvCloseStudyButton.style.opacity = "";
+
+                mvThirdSectionLeftArrow.style.pointerEvents = "";
+                mvThirdSectionRightArrow.style.pointerEvents = "";
+
+                setTimeout(() => {
+                    mvThirdSectionText2.style.opacity = "1";
+                    mvThirdSectionLeftArrow.style.opacity = "1";
+                    mvThirdSectionRightArrow.style.opacity = "1";
+                }, 1);
+
+                setTimeout(() => {
+                    mvCloseStudyButton.style.display = "";
+                    mvThirdSectionButtonOrder.style.opacity = "";
+                    mvCourseOrderButtonModalWindowContentWrapper1.style.display = "";
+                    mvCourseOrderButtonModalWindowContentWrapper2.style.display = "";
+                    mvCourseOrderButtonModalWindowContentWrapper3.style.display = "";
+                    mvCourseOrderButtonModalWindowContentWrapper4.style.display = "";
+                }, 300);
+
+
+                mvThirdSectionWrapperImg.style.setProperty('--opacityBackroundThirdSectionImg', '0');
+                if (mvSelectTheme === "light") {
+                    mvThirdSectionWrapperImg.style.border = "";
+                } else {
+                    mvThirdSectionWrapperImg.style.border = "0.12437810945273632vw solid var(--dtText)";
+                }
+
+
+                if (mvSelectTheme === "light") {
+                    mvButtonMoreLowerPartButtons0.style.border = "";
+                    mvButtonMoreLowerPartButtons1.style.border = "";
+                    mvButtonMoreLowerPartButtons2.style.border = "";
+                } else {
+                    mvButtonMoreLowerPartButtons0.style.border = "0.12437810945273632vw solid var(--dtText)";
+                    mvButtonMoreLowerPartButtons1.style.border = "0.12437810945273632vw solid var(--dtText)";
+                    mvButtonMoreLowerPartButtons2.style.border = "0.12437810945273632vw solid var(--dtText)";
+                }
+
             })
+
+
             mvWrapperForImgCourses.style.display = "flex";
             mvNameForCourses.style.display = "flex";
 
@@ -2038,6 +2334,7 @@ mvPriceListButton.addEventListener('click', () => {
             mvPriceListWrapper.style.opacity = "1";
         }, 1);
     } else {
+        mvThirdSectionButtonOrder.style.opacity = "0";
         mvCourseOutlineImg.style.opacity = "";
         mvCourseComplexityImg.style.opacity = "";
         mvCourseSuitableImg.style.opacity = "";
@@ -2052,7 +2349,11 @@ mvPriceListButton.addEventListener('click', () => {
 
         mvCourseDescriptionImg.style.opacity = "0.4";
         mvPriceListButton.style.pointerEvents = "none";
-        mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        if (mvSelectTheme === "light") {
+            mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        } else {
+            mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(232, 232, 232, 0.2)";
+        }
 
         courseButtonMoreThirdQuestionWrapper0.style.opacity = "";
         courseButtonMoreThirdQuestionWrapper1.style.opacity = "";
@@ -2105,6 +2406,7 @@ mvPriceListButton.addEventListener('click', () => {
             courseButtonMoreSecondQuestionBaseImg.style.display = "";
 
             setTimeout(() => {
+                mvThirdSectionButtonOrder.style.opacity = "1";
                 mvCourseDescriptionTitle.style.opacity = "1";
                 mvThirdSectionText0.style.opacity = "1";
                 mvThirdSectionText1.style.opacity = "1";
@@ -2128,6 +2430,7 @@ mvButtonMoreLowerPartButtons0.addEventListener('click', () => {
     if (!course) {
         func();
     } else {
+        mvThirdSectionButtonOrder.style.opacity = "0";
         mvCourseDescriptionImg.style.opacity = "";
         mvCourseComplexityImg.style.opacity = "";
         mvCourseOutlineImg.style.opacity = "";
@@ -2136,13 +2439,24 @@ mvButtonMoreLowerPartButtons0.addEventListener('click', () => {
         mvButtonMoreLowerPartButtons1.style.pointerEvents = "";
         mvButtonMoreLowerPartButtons2.style.pointerEvents = "";
 
-        mvPriceListButton.style.border = "";
-        mvButtonMoreLowerPartButtons1.style.border = "";
-        mvButtonMoreLowerPartButtons2.style.border = "";
+        if (mvSelectTheme === "light") {
+            mvPriceListButton.style.border = "";
+            mvButtonMoreLowerPartButtons1.style.border = "";
+            mvButtonMoreLowerPartButtons2.style.border = "";
+        } else {
+            mvPriceListButton.style.border = "solid 0.12437810945273632vw var(--dtText)";
+            mvButtonMoreLowerPartButtons1.style.border = "solid 0.12437810945273632vw var(--dtText)";
+            mvButtonMoreLowerPartButtons2.style.border = "solid 0.12437810945273632vw var(--dtText)";
+        }
+
 
         mvCourseSuitableImg.style.opacity = "0.4";
         mvButtonMoreLowerPartButtons0.style.pointerEvents = "none";
-        mvButtonMoreLowerPartButtons0.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        if (mvSelectTheme === "light") {
+            mvButtonMoreLowerPartButtons0.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        } else {
+            mvButtonMoreLowerPartButtons0.style.border = "0.24875621890547264vw solid rgba(232, 232, 232, 0.2)";
+        }
 
         mvCourseDescriptionTitle.style.opacity = "0";
         mvThirdSectionText0.style.opacity = "0";
@@ -2196,6 +2510,7 @@ mvButtonMoreLowerPartButtons0.addEventListener('click', () => {
             mvSuitableBlockWrapper3.style.opacity = "1";
 
             if (mvSelectLang === "eng") {
+
                 mvCourseDescriptionTitle.textContent = "Our course is suitable for"
             } else {
                 mvCourseDescriptionTitle.textContent = "Наш курс подойдет"
@@ -2205,8 +2520,8 @@ mvButtonMoreLowerPartButtons0.addEventListener('click', () => {
             mvThirdSectionText2.style.display = "none";
             setTimeout(() => {
                 mvCourseDescriptionTitle.style.opacity = "1";
-
-            }, 1);
+                mvThirdSectionButtonOrder.style.opacity = "1";
+            }, 300);
         }, 300);
     }
 })
@@ -2216,7 +2531,7 @@ mvButtonMoreLowerPartButtons1.addEventListener('click', () => {
         func();
     } else {
         mvCourseDescriptionTitle.style.opacity = "0";
-
+        mvThirdSectionButtonOrder.style.opacity = "0";
         mvCourseDescriptionImg.style.opacity = "";
         mvCourseSuitableImg.style.opacity = "";
         mvCourseOutlineImg.style.opacity = "";
@@ -2225,24 +2540,30 @@ mvButtonMoreLowerPartButtons1.addEventListener('click', () => {
         mvButtonMoreLowerPartButtons0.style.pointerEvents = "";
         mvButtonMoreLowerPartButtons2.style.pointerEvents = "";
 
-        mvPriceListButton.style.border = "";
-        mvButtonMoreLowerPartButtons0.style.border = "";
-        mvButtonMoreLowerPartButtons2.style.border = "";
+        if (mvSelectTheme === "light") {
+            mvPriceListButton.style.border = "";
+            mvButtonMoreLowerPartButtons0.style.border = "";
+            mvButtonMoreLowerPartButtons2.style.border = "";
+        } else {
+            mvPriceListButton.style.border = "solid var(--dtText) 0.12437810945273632vw";
+            mvButtonMoreLowerPartButtons0.style.border = "solid var(--dtText) 0.12437810945273632vw";
+            mvButtonMoreLowerPartButtons2.style.border = "solid var(--dtText) 0.12437810945273632vw";
+        }
+
 
         mvCourseComplexityImg.style.opacity = "0.4";
         mvButtonMoreLowerPartButtons1.style.pointerEvents = "none";
-        mvButtonMoreLowerPartButtons1.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        if (mvSelectTheme === "light") {
+            mvButtonMoreLowerPartButtons1.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        } else {
+            mvButtonMoreLowerPartButtons1.style.border = "0.24875621890547264vw solid rgba(232, 232, 232, 0.2)";
+        }
 
         courseButtonMoreThirdQuestionWrapper0.style.opacity = "";
         courseButtonMoreThirdQuestionWrapper1.style.opacity = "";
         courseButtonMoreThirdQuestionWrapper2.style.opacity = "";
         courseButtonMoreThirdQuestionWrapper3.style.opacity = "";
         courseButtonMoreThirdQuestionWrapper4.style.opacity = "";
-
-        mvSuitableBlockWrapper0.style.display = "block";
-        mvSuitableBlockWrapper1.style.display = "block";
-        mvSuitableBlockWrapper2.style.display = "block";
-        mvSuitableBlockWrapper3.style.display = "block";
 
         mvSuitableBlockWrapper0.style.opacity = "";
         mvSuitableBlockWrapper1.style.opacity = "";
@@ -2254,9 +2575,15 @@ mvButtonMoreLowerPartButtons1.addEventListener('click', () => {
         mvThirdSectionText2.style.opacity = "0";
 
         courseButtonMoreSecondQuestionBaseImg.classList = `complexity-${(sortedArray[score]).complexity}`;
-        console.log(`complexity-${(sortedArray[score]).complexity}`)
 
         setTimeout(() => {
+
+            mvSuitableBlockWrapper0.style.display = "block";
+            mvSuitableBlockWrapper1.style.display = "block";
+            mvSuitableBlockWrapper2.style.display = "block";
+            mvSuitableBlockWrapper3.style.display = "block";
+
+
             courseButtonMoreFirstQuestionTitle0.style.display = "none";
             courseButtonMoreSecondQuestionTitleImg.style.display = "block";
             courseButtonMoreSecondQuestionBaseImg.style.display = "block";
@@ -2265,10 +2592,7 @@ mvButtonMoreLowerPartButtons1.addEventListener('click', () => {
             } else {
                 mvCourseDescriptionTitle.textContent = "Необходимо для обучения"
             }
-            mvSuitableBlockWrapper0.style.opacity = "1";
-            mvSuitableBlockWrapper1.style.opacity = "1";
-            mvSuitableBlockWrapper2.style.opacity = "1";
-            mvSuitableBlockWrapper3.style.opacity = "1";
+
 
 
             mvThirdSectionText0.style.display = "none";
@@ -2292,6 +2616,11 @@ mvButtonMoreLowerPartButtons1.addEventListener('click', () => {
 
 
             setTimeout(() => {
+                mvSuitableBlockWrapper0.style.opacity = "1";
+                mvSuitableBlockWrapper1.style.opacity = "1";
+                mvSuitableBlockWrapper2.style.opacity = "1";
+                mvSuitableBlockWrapper3.style.opacity = "1";
+                mvThirdSectionButtonOrder.style.opacity = "1";
                 mvCourseDescriptionTitle.style.opacity = "1";
                 courseButtonMoreSecondQuestionTitleImg.style.opacity = "1";
                 courseButtonMoreSecondQuestionBaseImg.style.opacity = "1";
@@ -2303,7 +2632,7 @@ mvButtonMoreLowerPartButtons1.addEventListener('click', () => {
                 courseButtonMoreFirstQuestionText2.style.opacity = "1";
                 courseButtonMoreFirstQuestionTitle3.style.opacity = "1";
                 courseButtonMoreFirstQuestionText3.style.opacity = "1";
-            }, 1);
+            }, 300);
         }, 300);
     }
 })
@@ -2312,6 +2641,8 @@ mvButtonMoreLowerPartButtons2.addEventListener('click', () => {
     if (!course) {
         func();
     } else {
+        mvThirdSectionButtonOrder.style.opacity = "0";
+        
         mvCourseDescriptionImg.style.opacity = "";
         mvCourseComplexityImg.style.opacity = "";
         mvCourseSuitableImg.style.opacity = "";
@@ -2320,13 +2651,24 @@ mvButtonMoreLowerPartButtons2.addEventListener('click', () => {
         mvButtonMoreLowerPartButtons0.style.pointerEvents = "";
         mvButtonMoreLowerPartButtons1.style.pointerEvents = "";
 
-        mvPriceListButton.style.border = "";
-        mvButtonMoreLowerPartButtons0.style.border = "";
-        mvButtonMoreLowerPartButtons1.style.border = "";
+        if (mvSelectTheme === "light") {
+            mvPriceListButton.style.border = "";
+            mvButtonMoreLowerPartButtons0.style.border = "";
+            mvButtonMoreLowerPartButtons1.style.border = "";
+        } else {
+            mvPriceListButton.style.border = "0.24875621890547264vw solid var(--dtText)";
+            mvButtonMoreLowerPartButtons0.style.border = "0.24875621890547264vw solid var(--dtText)";
+            mvButtonMoreLowerPartButtons1.style.border = "0.24875621890547264vw solid var(--dtText)";
+        }
+
 
         mvCourseOutlineImg.style.opacity = "0.4";
         mvButtonMoreLowerPartButtons2.style.pointerEvents = "none";
-        mvButtonMoreLowerPartButtons2.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        if (mvSelectTheme === "light") {
+            mvButtonMoreLowerPartButtons2.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        } else {
+            mvButtonMoreLowerPartButtons2.style.border = "0.24875621890547264vw solid rgba(232, 232, 232, 0.2)";
+        }
 
         mvCourseDescriptionTitle.style.opacity = "0";
         mvThirdSectionText0.style.opacity = "0";
@@ -2383,8 +2725,9 @@ mvButtonMoreLowerPartButtons2.addEventListener('click', () => {
             courseButtonMoreThirdQuestionWrapper3.style.opacity = "1";
             courseButtonMoreThirdQuestionWrapper4.style.opacity = "1";
             setTimeout(() => {
+                mvThirdSectionButtonOrder.style.opacity = "1";
                 mvCourseDescriptionTitle.style.opacity = "1";
-            }, 1);
+            }, 300);
         }, 300);
     }
 })

@@ -7151,6 +7151,214 @@ const themeWrapper = {
         }
     },
 
+    "mv-name-of-courses-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-name-of-courses-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-name-of-courses-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-name-of-courses-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-name-of-courses-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-name-of-courses-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-course-order-button-modal-window-content-img-subtitle-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-course-order-button-modal-window-content-img-subtitle-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-course-order-button-modal-window-content-img-subtitle-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-course-order-button-modal-window-content-img-subtitle-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-chosen-course-wrapper-block": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtText)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtMain)`
+            }
+        }
+    },
+
+    "mv-chosen-course-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--ltSeparationLine)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-chosen-course-left-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtSeparationLine)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtText)`
+            }
+        }
+    },
+
+    "mv-chosen-course-right-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtSeparationLine)`
+            },
+            dark: {
+                color: "",
+                background: `var(--dtText)`
+            }
+        }
+    },
+
+    "mv-chosen-course-name-of-course": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--ltSeparationLine)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-chosen-course-name-of-service": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--ltSeparationLine)",
+                background: ``
+            }
+        }
+    },
+
 
 
 

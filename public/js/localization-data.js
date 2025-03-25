@@ -930,6 +930,36 @@ const localizationWrapper = {
         rus: "Курсы",
         eng: "Courses",     
     },
+
+    "mv-course-button-more-second-question-title-img": {
+        rus: "Сложность курса",
+        eng: "Course Complexity",     
+    },
+
+    "mv-course-order-button-modal-window-content-img-subtitle-1": {
+        rus: "Пробное занятие",
+        eng: "Trial session",     
+    },
+
+    "mv-course-order-button-modal-window-content-img-subtitle-2": {
+        rus: "Предоплата курса",
+        eng: "Course prepayment",     
+    },
+
+    "mv-course-order-button-modal-window-content-img-subtitle-3": {
+        rus: "Конспекты",
+        eng: "Abstracts",     
+    },
+
+    "mv-course-order-button-modal-window-content-img-subtitle-4": {
+        rus: "Бесплатная часть",
+        eng: "Free part",     
+    },
+
+    "mv-chosen-course-title": {
+        rus: "Выбранный курс",
+        eng: "Chosen course",     
+    },
 }
 
 export default localizationWrapper;
