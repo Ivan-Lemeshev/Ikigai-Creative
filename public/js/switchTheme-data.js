@@ -7008,6 +7008,150 @@ const themeWrapper = {
         }
     },
 
+    "mv-course-description-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-course-button-more-second-question-title-img": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-suitable-block-title-0": {
+        styles: {
+            light: {
+                color: "black",
+                background: ``
+            },
+            dark: {
+                color: "white",
+                background: ``
+            }
+        }
+    },
+
+    "mv-suitable-block-title-1": {
+        styles: {
+            light: {
+                color: "black",
+                background: ``
+            },
+            dark: {
+                color: "white",
+                background: ``
+            }
+        }
+    },
+
+    "mv-suitable-block-title-2": {
+        styles: {
+            light: {
+                color: "black",
+                background: ``
+            },
+            dark: {
+                color: "white",
+                background: ``
+            }
+        }
+    },
+
+    "mv-suitable-block-title-3": {
+        styles: {
+            light: {
+                color: "black",
+                background: ``
+            },
+            dark: {
+                color: "white",
+                background: ``
+            }
+        }
+    },
+
+    "mv-suitable-block-text-0": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-suitable-block-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-suitable-block-text-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-suitable-block-text-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mv-third-section-text-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+
 
 
 }

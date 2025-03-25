@@ -531,6 +531,7 @@ mvChangeIdeasText();
 const mvCourseDescriptionTitle = document.getElementById("mv-course-description-title");
 
 const mvActivService = () => {
+    mvPriceListButton.style.pointerEvents = "";
     const currentService = arrayPriceList[mvActivNumber];
     if (course) {
         const courseImg = document.getElementById("mv-third-section-course-img");
@@ -550,6 +551,7 @@ const mvActivService = () => {
     mvCourseDescriptionTitle.style.display = "";
     mvThirdSectionText0.style.marginTop = "";
     mvThirdSectionText1.style.marginTop = "";
+    mvThirdSectionText2.style.display = "";
 
     setTimeout(() => {
         mvThirdSectionTitle.textContent = currentService.title[mvSelectLang];
@@ -861,14 +863,6 @@ mvSecondSectionButtonContacts.addEventListener('click', () => {
 
 
 
-mvPriceListButton.addEventListener('click', () => {
-    if (!course) {
-        mvPriceListWrapper.style.display = "block";
-        setTimeout(() => {
-            mvPriceListWrapper.style.opacity = "1";
-        }, 1);
-    }
-})
 
 mvPriceListX.addEventListener('click', () => {
     mvPriceListWrapper.style.opacity = "";
@@ -1247,36 +1241,218 @@ mvSixthSectionMainBlockArrowRight.addEventListener('click', () => {
 })
 
 const mvThirdSectionButtonOrder = document.getElementById("mv-third-section-button-order");
+const mvCloseStudyButton = document.getElementById("mv-close-study-button");
+
+const mvCourseOrderButtonModalWindowContentWrapper1 = document.getElementById("mv-course-order-button-modal-window-content-wrapper-1");
+const mvCourseOrderButtonModalWindowContentWrapper2 = document.getElementById("mv-course-order-button-modal-window-content-wrapper-2");
+const mvCourseOrderButtonModalWindowContentWrapper3 = document.getElementById("mv-course-order-button-modal-window-content-wrapper-3");
+const mvCourseOrderButtonModalWindowContentWrapper4 = document.getElementById("mv-course-order-button-modal-window-content-wrapper-4");
+
+const mvSuitableBlockWrapper0 = document.getElementById("mv-suitable-block-wrapper-0");
+const mvSuitableBlockWrapper1 = document.getElementById("mv-suitable-block-wrapper-1");
+const mvSuitableBlockWrapper2 = document.getElementById("mv-suitable-block-wrapper-2");
+const mvSuitableBlockWrapper3 = document.getElementById("mv-suitable-block-wrapper-3");
+
+const courseButtonMoreSecondQuestionTitleImg = document.getElementById("mv-course-button-more-second-question-title-img");
+const courseButtonMoreSecondQuestionBaseImg = document.getElementById("mv-course-button-more-second-question-base-img");
+
+const courseButtonMoreThirdQuestionWrapper0 = document.getElementById("mv-course-button-more-third-question-wrapper-0");
+const courseButtonMoreThirdQuestionWrapper1 = document.getElementById("mv-course-button-more-third-question-wrapper-1");
+const courseButtonMoreThirdQuestionWrapper2 = document.getElementById("mv-course-button-more-third-question-wrapper-2");
+const courseButtonMoreThirdQuestionWrapper3 = document.getElementById("mv-course-button-more-third-question-wrapper-3");
+const courseButtonMoreThirdQuestionWrapper4 = document.getElementById("mv-course-button-more-third-question-wrapper-4");
 
 mvThirdSectionButtonOrder.addEventListener('click', () => {
-    window.scrollTo({
-        top: window.innerWidth * 8.5,
-        behavior: 'smooth'
-    });
+    if (!course) {
+        window.scrollTo({
+            top: window.innerWidth * 8.5,
+            behavior: 'smooth'
+        });
 
-    if (mvActivNumberSave !== null) {
-        const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvActivNumber}`);
-        const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${mvActivNumber}`);
-        if (mvSelectTheme === "light") {
-            mvFifvthSectionDropListItemCircle.style.background = "";
-            mvFifvthSectionDropListItemCircle.style.border = "";
-            mvFifvthSectionDropListItemText.style.color = "";
+        if (mvActivNumberSave !== null) {
+            const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvActivNumber}`);
+            const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${mvActivNumber}`);
+            if (mvSelectTheme === "light") {
+                mvFifvthSectionDropListItemCircle.style.background = "";
+                mvFifvthSectionDropListItemCircle.style.border = "";
+                mvFifvthSectionDropListItemText.style.color = "";
 
-        } else {
-            mvFifvthSectionDropListItemCircle.style.background = "";
-            mvFifvthSectionDropListItemCircle.style.border = "0.24875621890547264vw solid var(--ltElementBackground)";
-            mvFifvthSectionDropListItemText.style.color = "var(--dtText)";
+            } else {
+                mvFifvthSectionDropListItemCircle.style.background = "";
+                mvFifvthSectionDropListItemCircle.style.border = "0.24875621890547264vw solid var(--ltElementBackground)";
+                mvFifvthSectionDropListItemText.style.color = "var(--dtText)";
+            }
         }
+        mvOldActivService = mvActivNumber;
+        mvActivNumberSave = mvActivNumber;
+
+        const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvActivNumberSave}`);
+        const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${mvActivNumberSave}`);
+        mvFifvthSectionDropListItemCircle.style.backgroundColor = "var(--accent)";
+        mvFifvthSectionDropListItemText.style.color = "var(--accent)";
+        mvThirdSectionWrapperImg.style.setProperty('--opacityBackroundThirdSectionImg', '0');
+        mvThirdSectionWrapperImg.style.border = "";
+
+    } else {
+        mvThirdSectionWrapperImg.style.border = "0.12437810945273632vw solid var(--accent)";
+        mvThirdSectionWrapperImg.style.setProperty('--opacityBackroundThirdSectionImg', '1');
+
+        mvCourseDescriptionTitle.style.opacity = "0";
+
+        mvThirdSectionText0.style.opacity = "0";
+        mvThirdSectionText1.style.opacity = "0";
+        mvThirdSectionText2.style.opacity = "0";
+
+        mvThirdSectionButtonOrder.style.opacity = "0";
+
+        mvThirdSectionLeftArrow.style.opacity = "0";
+        mvThirdSectionRightArrow.style.opacity = "0";
+
+        mvCloseStudyButton.style.display = "block";
+
+        mvCourseDescriptionImg.style.opacity = "0.4";
+        mvCourseSuitableImg.style.opacity = "0.4";
+        mvCourseComplexityImg.style.opacity = "0.4";
+        mvCourseOutlineImg.style.opacity = "0.4";
+
+        mvPriceListButton.style.pointerEvents = "none";
+        mvButtonMoreLowerPartButtons0.style.pointerEvents = "none";
+        mvButtonMoreLowerPartButtons1.style.pointerEvents = "none";
+        mvButtonMoreLowerPartButtons2.style.pointerEvents = "none";
+
+        mvPriceListButton.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        mvButtonMoreLowerPartButtons0.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        mvButtonMoreLowerPartButtons1.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+        mvButtonMoreLowerPartButtons2.style.border = "0.24875621890547264vw solid rgba(46, 46, 46, 0.2)";
+
+        mvCourseOrderButtonModalWindowContentWrapper1.style.display = "block";
+        mvCourseOrderButtonModalWindowContentWrapper2.style.display = "block";
+        mvCourseOrderButtonModalWindowContentWrapper3.style.display = "block";
+        mvCourseOrderButtonModalWindowContentWrapper4.style.display = "block";
+
+        mvSuitableBlockWrapper0.style.opacity = "0";
+        mvSuitableBlockWrapper1.style.opacity = "0";
+        mvSuitableBlockWrapper2.style.opacity = "0";
+        mvSuitableBlockWrapper3.style.opacity = "0";
+
+        courseButtonMoreSecondQuestionTitleImg.style.opacity = "0";
+        courseButtonMoreSecondQuestionBaseImg.style.opacity = "0";
+
+        courseButtonMoreThirdQuestionWrapper0.style.opacity = "0";
+        courseButtonMoreThirdQuestionWrapper1.style.opacity = "0";
+        courseButtonMoreThirdQuestionWrapper2.style.opacity = "0";
+        courseButtonMoreThirdQuestionWrapper3.style.opacity = "0";
+        courseButtonMoreThirdQuestionWrapper4.style.opacity = "0";
+
+        setTimeout(() => {
+            if (mvSelectLang === "eng") {
+                mvCourseDescriptionTitle.textContent = "Let's get started...";
+                mvThirdSectionText0.textContent = "We are delighted that you have chosen our course! We will do everything we can to ensure that your learning is effective and brings meaningful results.";
+                mvThirdSectionText1.textContent = "There is only one step left - choose where you want to start!";
+
+            } else {
+                mvCourseDescriptionTitle.textContent = "Давайте начнем...";
+                mvThirdSectionText0.textContent = "Мы рады, что вы выбрали наш курс! Мы сделаем всё, чтобы ваше обучение было эффективным и принесло значимые результаты.";
+                mvThirdSectionText1.textContent = "Остался всего один шаг — выберите, с чего хотите начать!";
+            }
+
+            mvThirdSectionText0.style.marginTop = "4.975124378109453vw";
+            mvThirdSectionText1.style.marginTop = "7vw";
+
+            mvThirdSectionText2.style.display = "none";
+            mvThirdSectionButtonOrder.style.display = "none";
+
+            mvThirdSectionLeftArrow.style.display = "none";
+            mvThirdSectionRightArrow.style.display = "none";
+
+            mvSuitableBlockWrapper0.style.display = "none";
+            mvSuitableBlockWrapper1.style.display = "none";
+            mvSuitableBlockWrapper2.style.display = "none";
+            mvSuitableBlockWrapper3.style.display = "none";
+
+            courseButtonMoreSecondQuestionTitleImg.style.display = "none";
+            courseButtonMoreSecondQuestionBaseImg.style.display = "none";
+
+            courseButtonMoreThirdQuestionWrapper0.style.display = "none";
+            courseButtonMoreThirdQuestionWrapper1.style.display = "none";
+            courseButtonMoreThirdQuestionWrapper2.style.display = "none";
+            courseButtonMoreThirdQuestionWrapper3.style.display = "none";
+            courseButtonMoreThirdQuestionWrapper4.style.display = "none";
+
+            mvThirdSectionText0.style.display = "";
+            mvThirdSectionText1.style.display = "";
+
+
+
+            setTimeout(() => {
+                mvCloseStudyButton.style.opacity = "1";
+                mvCourseDescriptionTitle.style.opacity = "1";
+                mvThirdSectionText0.style.opacity = "1";
+                mvThirdSectionText1.style.opacity = "1";
+
+                mvCourseOrderButtonModalWindowContentWrapper1.style.opacity = "1";
+                mvCourseOrderButtonModalWindowContentWrapper2.style.opacity = "1";
+                mvCourseOrderButtonModalWindowContentWrapper3.style.opacity = "1";
+                mvCourseOrderButtonModalWindowContentWrapper4.style.opacity = "1";
+            }, 1);
+
+        }, 300);
     }
-    mvOldActivService = mvActivNumber;
-    mvActivNumberSave = mvActivNumber;
+});
 
-    const mvFifvthSectionDropListItemCircle = document.getElementById(`mv-fifvth-section-drop-list-activ-circle-${mvActivNumberSave}`);
-    const mvFifvthSectionDropListItemText = document.getElementById(`mv-fifvth-section-drop-list-item-text-${mvActivNumberSave}`);
-    mvFifvthSectionDropListItemCircle.style.backgroundColor = "var(--accent)";
-    mvFifvthSectionDropListItemText.style.color = "var(--accent)";
+mvCloseStudyButton.addEventListener('click', () => {
+    mvThirdSectionWrapperImg.style.setProperty('--opacityBackroundThirdSectionImg', '0');
+    mvThirdSectionWrapperImg.style.border = "";
 
-})
+    mvCloseStudyButton.style.opacity = "";
+    mvCourseDescriptionTitle.style.opacity = "0";
+    mvThirdSectionText0.style.opacity = "0";
+    mvThirdSectionText1.style.opacity = "0";
+
+    mvCourseOrderButtonModalWindowContentWrapper1.style.opacity = "";
+    mvCourseOrderButtonModalWindowContentWrapper2.style.opacity = "";
+    mvCourseOrderButtonModalWindowContentWrapper3.style.opacity = "";
+    mvCourseOrderButtonModalWindowContentWrapper4.style.opacity = "";
+
+    mvButtonMoreLowerPartButtons0.style.pointerEvents = "";
+    mvButtonMoreLowerPartButtons1.style.pointerEvents = "";
+    mvButtonMoreLowerPartButtons2.style.pointerEvents = "";
+
+    mvThirdSectionButtonOrder.style.display = "";
+
+    setTimeout(() => {
+        mvThirdSectionText0.textContent = sortedArray[score].descriptionMobile[mvSelectLang][0];
+        mvThirdSectionText1.textContent = sortedArray[score].descriptionMobile[mvSelectLang][1];
+        mvThirdSectionText2.textContent = sortedArray[score].descriptionMobile[mvSelectLang][2];
+        if (mvSelectLang === "eng") {
+            mvCourseDescriptionTitle.textContent = "Description";
+        } else {
+            mvCourseDescriptionTitle.textContent = "Описание";
+        }
+        mvThirdSectionText2.style.display = "block";
+
+        mvButtonMoreLowerPartButtons0.style.border = "";
+        mvButtonMoreLowerPartButtons1.style.border = "";
+        mvButtonMoreLowerPartButtons2.style.border = "";
+
+        mvCourseSuitableImg.style.opacity = "";
+        mvCourseComplexityImg.style.opacity = "";
+        mvCourseOutlineImg.style.opacity = "";
+
+        mvCourseOrderButtonModalWindowContentWrapper1.style.display = "";
+        mvCourseOrderButtonModalWindowContentWrapper2.style.display = "";
+        mvCourseOrderButtonModalWindowContentWrapper3.style.display = "";
+        mvCourseOrderButtonModalWindowContentWrapper4.style.display = "";
+
+        setTimeout(() => {
+            mvThirdSectionText0.style.opacity = "1";
+            mvThirdSectionText1.style.opacity = "1";
+            mvThirdSectionText2.style.opacity = "1";
+            mvCourseDescriptionTitle.style.opacity = "1";
+            mvThirdSectionButtonOrder.style.opacity = "1";
+        }, 1);
+    }, 300);
+});
 
 
 const sendToApplicationMainContent = document.getElementById("mv-send-to-application-main-content");
@@ -1468,17 +1644,6 @@ const coursesNavigationSpecializationCourses = document.getElementById("mv-cours
 
 const numberOfPageWrapper = document.getElementById("mv-number-of-page");
 
-const mvSuitableBlockWrapper0 = document.getElementById("mv-suitable-block-wrapper-0");
-const mvSuitableBlockWrapper1 = document.getElementById("mv-suitable-block-wrapper-1");
-const mvSuitableBlockWrapper2 = document.getElementById("mv-suitable-block-wrapper-2");
-const mvSuitableBlockWrapper3 = document.getElementById("mv-suitable-block-wrapper-3");
-
-const courseButtonMoreThirdQuestionWrapper0 = document.getElementById("mv-course-button-more-third-question-wrapper-0");
-const courseButtonMoreThirdQuestionWrapper1 = document.getElementById("mv-course-button-more-third-question-wrapper-1");
-const courseButtonMoreThirdQuestionWrapper2 = document.getElementById("mv-course-button-more-third-question-wrapper-2");
-const courseButtonMoreThirdQuestionWrapper3 = document.getElementById("mv-course-button-more-third-question-wrapper-3");
-const courseButtonMoreThirdQuestionWrapper4 = document.getElementById("mv-course-button-more-third-question-wrapper-4");
-
 const courseButtonMoreThirdQuestionWeeks0 = document.getElementById("mv-course-button-more-third-question-weeks-0");
 const courseButtonMoreThirdQuestionWeeks1 = document.getElementById("mv-course-button-more-third-question-weeks-1");
 const courseButtonMoreThirdQuestionWeeks2 = document.getElementById("mv-course-button-more-third-question-weeks-2");
@@ -1490,9 +1655,6 @@ const courseButtonMoreThirdQuestionText1 = document.getElementById("mv-course-bu
 const courseButtonMoreThirdQuestionText2 = document.getElementById("mv-course-button-more-third-question-text-2");
 const courseButtonMoreThirdQuestionText3 = document.getElementById("mv-course-button-more-third-question-text-3");
 const courseButtonMoreThirdQuestionText4 = document.getElementById("mv-course-button-more-third-question-text-4");
-
-const courseButtonMoreSecondQuestionTitleImg = document.getElementById("mv-course-button-more-second-question-title-img");
-const courseButtonMoreSecondQuestionBaseImg = document.getElementById("mv-course-button-more-second-question-base-img");
 
 
 let paymentCourse = false;
@@ -1517,6 +1679,7 @@ const visualVitrine = () => {
         } else {
 
             mvWrapperForImgCourses.addEventListener('click', () => {
+                course = true;
                 score = numberOfIndex + index;
                 window.scrollTo({
                     top: window.innerWidth * 4.3,
@@ -1644,7 +1807,6 @@ const uploadNumbers = () => {
 }
 
 mvFourthSectionTitleCourses.addEventListener('click', () => {
-    course = true;
     uploadNumbers();
     activeClassNumbersOfPage();
     visualVitrine();
@@ -1869,7 +2031,12 @@ coursesNavigationSpecializationCourses.addEventListener('click', () => {
 
 mvPriceListButton.addEventListener('click', () => {
     if (!course) {
+
         func();
+        mvPriceListWrapper.style.display = "block";
+        setTimeout(() => {
+            mvPriceListWrapper.style.opacity = "1";
+        }, 1);
     } else {
         mvCourseOutlineImg.style.opacity = "";
         mvCourseComplexityImg.style.opacity = "";
@@ -1992,7 +2159,7 @@ mvButtonMoreLowerPartButtons0.addEventListener('click', () => {
         courseButtonMoreThirdQuestionWrapper2.style.opacity = "";
         courseButtonMoreThirdQuestionWrapper3.style.opacity = "";
         courseButtonMoreThirdQuestionWrapper4.style.opacity = "";
-        
+
         mvSuitableBlockWrapper0.style.opacity = "";
         mvSuitableBlockWrapper1.style.opacity = "";
         mvSuitableBlockWrapper2.style.opacity = "";
@@ -2002,6 +2169,7 @@ mvButtonMoreLowerPartButtons0.addEventListener('click', () => {
         courseButtonMoreSecondQuestionBaseImg.style.opacity = "";
 
         setTimeout(() => {
+            courseButtonMoreFirstQuestionTitle0.style.display = "";
 
             courseButtonMoreFirstQuestionTitle0.textContent = sortedArray[score].who.subtitles[mvSelectLang][0];
             courseButtonMoreFirstQuestionText0.textContent = sortedArray[score].who.whoText[mvSelectLang][0];
@@ -2011,7 +2179,7 @@ mvButtonMoreLowerPartButtons0.addEventListener('click', () => {
             courseButtonMoreFirstQuestionText2.textContent = sortedArray[score].who.whoText[mvSelectLang][2];
             courseButtonMoreFirstQuestionTitle3.textContent = sortedArray[score].who.subtitles[mvSelectLang][3];
             courseButtonMoreFirstQuestionText3.textContent = sortedArray[score].who.whoText[mvSelectLang][3];
-    
+
             courseButtonMoreSecondQuestionTitleImg.style.display = "none";
             courseButtonMoreSecondQuestionBaseImg.style.display = "none";
 
@@ -2085,14 +2253,11 @@ mvButtonMoreLowerPartButtons1.addEventListener('click', () => {
         mvThirdSectionText1.style.opacity = "0";
         mvThirdSectionText2.style.opacity = "0";
 
-
-
-
-
         courseButtonMoreSecondQuestionBaseImg.classList = `complexity-${(sortedArray[score]).complexity}`;
         console.log(`complexity-${(sortedArray[score]).complexity}`)
 
         setTimeout(() => {
+            courseButtonMoreFirstQuestionTitle0.style.display = "none";
             courseButtonMoreSecondQuestionTitleImg.style.display = "block";
             courseButtonMoreSecondQuestionBaseImg.style.display = "block";
             if (mvSelectLang === "eng") {
@@ -2118,6 +2283,12 @@ mvButtonMoreLowerPartButtons1.addEventListener('click', () => {
             courseButtonMoreFirstQuestionText2.textContent = sortedArray[score].whatNeed.whatNeedText[mvSelectLang][2];
             courseButtonMoreFirstQuestionTitle3.textContent = sortedArray[score].whatNeed.subtitles[mvSelectLang][3];
             courseButtonMoreFirstQuestionText3.textContent = sortedArray[score].whatNeed.whatNeedText[mvSelectLang][3];
+
+            courseButtonMoreThirdQuestionWrapper0.style.display = "none";
+            courseButtonMoreThirdQuestionWrapper1.style.display = "none";
+            courseButtonMoreThirdQuestionWrapper2.style.display = "none";
+            courseButtonMoreThirdQuestionWrapper3.style.display = "none";
+            courseButtonMoreThirdQuestionWrapper4.style.display = "none";
 
 
             setTimeout(() => {
@@ -2217,3 +2388,5 @@ mvButtonMoreLowerPartButtons2.addEventListener('click', () => {
         }, 300);
     }
 })
+
+
