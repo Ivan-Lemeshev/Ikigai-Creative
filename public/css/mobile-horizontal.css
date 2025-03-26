@@ -508,7 +508,7 @@
 
     &>#mh-four-section-others-services-title {
         position: absolute;
-        top: 55.26315789473685vw;
+        bottom: 28.14645308924485vw;
         left: 5.720823798627003vw;
         width: 19.162471395881006vw;
         height: 2.745995423340961vw;
@@ -1837,22 +1837,22 @@
     position: absolute;
     bottom: 31.23569794050343vw;
     left: 10.068649885583524vw;
-    height: 0.034324942791762014vw;
+    height: 0.06vw;
     width: 51.60183066361556vw;
     background: linear-gradient(90deg, #2E2E2E 43.59%, rgba(46, 46, 46, 0) 100%);
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out, left 0.5s ease-in-out;
 }
 
 #mh-four-section-others-services-bottom-line {
     position: absolute;
     bottom: 27.80320366132723vw;
     left: 10.068649885583524vw;
-    height: 0.034324942791762014vw;
+    height: 0.06vw;
     width: 51.60183066361556vw;
     background: linear-gradient(90deg, #2E2E2E 35.77%, rgba(46, 46, 46, 0) 86.89%);
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out, left 0.5s ease-in-out;
 }
 
 #mh-four-section-others-services-img-wrapper {
@@ -1875,4 +1875,150 @@
     object-fit: contain;
     width: 2.059496567505721vw;
     height: 2.059496567505721vw;
+}
+
+#mh-most-popular-wrapper {
+    position: absolute;
+    bottom: 28.37528604118993vw;
+    left: 5.720823798627003vw;
+    width: 15.903890160183066vw;
+    height: 2.402745995423341vw;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#mh-most-popular-text {
+    font-weight: 400;
+    font-size: 1.8306636155606408vw;
+    letter-spacing: 0.1em;
+    width: 13.929061784897025vw;
+    height: 100%;
+}
+
+#mh-most-popular-svg {
+    width: 1.8306636155606408vw;
+    height: 1.8306636155606408vw;
+    object-fit: contain;
+}
+
+#mh-reviews-courses-wrapper {
+    position: absolute;
+    bottom: 28.37528604118993vw;
+    left: 24.59954233409611vw;
+    width: 17.96338672768879vw;
+    height: 2.402745995423341vw;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#mh-reviews-courses-text {
+    font-weight: 400;
+    font-size: 1.8306636155606408vw;
+    letter-spacing: 0.1em;
+    width: 15.988558352402745vw;
+    height: 100%;
+}
+
+#mh-reviews-courses-svg {
+    width: 1.8306636155606408vw;
+    height: 1.8306636155606408vw;
+    object-fit: contain;
+}
+
+#mh-releases-courses-wrapper {
+    position: absolute;
+    bottom: 28.37528604118993vw;
+    left: 45.53775743707094vw;
+    width: 17.96338672768879vw;
+    height: 2.402745995423341vw;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#mh-releases-courses-text {
+    font-weight: 400;
+    font-size: 1.8306636155606408vw;
+    letter-spacing: 0.1em;
+    width: 15.988558352402745vw;
+    height: 100%;
+}
+
+#mh-releases-courses-svg {
+    width: 1.8306636155606408vw;
+    height: 1.8306636155606408vw;
+    object-fit: contain;
+}
+
+#mh-specialization-courses-wrapper {
+    position: absolute;
+    bottom: 28.37528604118993vw;
+    left: 66.47597254004577vw;
+    width: 24.485125858123567vw;
+    height: 2.402745995423341vw;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#mh-specialization-courses-text {
+    font-weight: 400;
+    font-size: 1.8306636155606408vw;
+    letter-spacing: 0.1em;
+    width: 22.51029748283753vw;
+    height: 100%;
+}
+
+#mh-specialization-courses-svg {
+    width: 1.8306636155606408vw;
+    height: 1.8306636155606408vw;
+    object-fit: contain;
+}
+
+.mh-four-section-course-second-button {
+    width: 53.546910755148744vw;
+    height: min-content;
+    margin-left: 6.979405034324943vw;
+    display: none;
+    opacity: 0;
+
+    &>h4 {
+        width: 100%;
+        height: 2.1739130434782608vw;
+        font-weight: 400;
+        font-size: 1.6018306636155606vw;
+        letter-spacing: 0.1em;
+        color: #000000;
+    }
+
+    &>div {
+        width: 100%;
+        height: min-content;
+        font-weight: 400;
+        font-size: 1.6018306636155606vw;
+        letter-spacing: 0.1em;
+        color: var(--ltText);
+        text-align: justify;
+        margin-top: 0.9153318077803204vw;
+    }
+}
+
+#mh-four-section-course-second-button-wrapper-1 {
+    padding-top: 8.924485125858125vw;
+}
+
+#mh-four-section-course-second-button-wrapper-2,
+#mh-four-section-course-second-button-wrapper-3,
+#mh-four-section-course-second-button-wrapper-4 {
+    margin-top: 2.2883295194508007vw;
 }

@@ -2242,9 +2242,8 @@ coursesNavigationMostPopular.addEventListener('click', () => {
     coursesNavigationRecentReleases.style.opacity = "0.6";
     coursesNavigationSpecializationCourses.style.opacity = "0.6";
     visualVitrine();
-    uploadNumbers()
+    uploadNumbers();
     activeClassNumbersOfPage();
-    // courseUpFunction();
 })
 
 coursesNavigationBestReviews.addEventListener('click', () => {
@@ -2270,7 +2269,6 @@ coursesNavigationBestReviews.addEventListener('click', () => {
     coursesNavigationRecentReleases.style.opacity = "0.6";
     coursesNavigationSpecializationCourses.style.opacity = "0.6";
     visualVitrine();
-    // courseUpFunction();
 })
 
 coursesNavigationRecentReleases.addEventListener('click', () => {
@@ -2296,7 +2294,6 @@ coursesNavigationRecentReleases.addEventListener('click', () => {
     coursesNavigationRecentReleases.style.opacity = "1";
     coursesNavigationSpecializationCourses.style.opacity = "0.6";
     visualVitrine();
-    // courseUpFunction();
 })
 
 coursesNavigationSpecializationCourses.addEventListener('click', () => {
@@ -2321,7 +2318,6 @@ coursesNavigationSpecializationCourses.addEventListener('click', () => {
     coursesNavigationRecentReleases.style.opacity = "0.6";
     coursesNavigationSpecializationCourses.style.opacity = "1";
     visualVitrine();
-    // courseUpFunction();
 })
 
 mvPriceListButton.addEventListener('click', () => {

@@ -335,6 +335,36 @@ mhFourSectionButtonOfPriceList.addEventListener('click', () => {
         }, 1);
     } else {
         console.log("outline")
+        mhFourSectionCourseSecondButtonWrapper1.style.opacity = "";
+        mhFourSectionCourseSecondButtonWrapper2.style.opacity = "";
+        mhFourSectionCourseSecondButtonWrapper3.style.opacity = "";
+        mhFourSectionCourseSecondButtonWrapper4.style.opacity = "";
+
+        mhFourSectionText0.style.opacity = "0";
+        mhFourSectionText1.style.opacity = "0";
+        mhFourSectionText2.style.opacity = "0";
+
+        buttonReview.style.opacity = "";
+        buttonQuestion.style.opacity = "";
+        buttonConsultation.style.opacity = "";
+
+        buttonReview.style.pointerEvents = "";
+        buttonQuestion.style.pointerEvents = "";
+        buttonConsultation.style.pointerEvents = "";
+
+        mhFourSectionButtonOfPriceList.style.opacity = "0.4";
+        mhFourSectionButtonOfPriceList.style.pointerEvents = "none";
+
+        setTimeout(() => {
+            mhFourSectionCourseSecondButtonWrapper1.style.display = "";
+            mhFourSectionCourseSecondButtonWrapper2.style.display = "";
+            mhFourSectionCourseSecondButtonWrapper3.style.display = "";
+            mhFourSectionCourseSecondButtonWrapper4.style.display = "";
+
+            mhFourSectionText0.style.display = "none";
+            mhFourSectionText1.style.display = "none";
+            mhFourSectionText2.style.display = "none";
+        }, 300);
     }
 
 })
@@ -382,6 +412,23 @@ const buttonReview = document.getElementById("mh-four-section-button-review");
 const buttonConsultation = document.getElementById("mh-four-section-button-consultation");
 const buttonQuestion = document.getElementById("mh-four-section-button-question");
 const mhFiveSectionTitleInterestingService = document.getElementById("mh-five-section-title-interesting-service-img");
+const mhFourSectionText2 = document.getElementById("mh-four-section-text-2");
+
+const mhFourSectionCourseSecondButtonWrapper1 = document.getElementById("mh-four-section-course-second-button-wrapper-1");
+const mhFourSectionCourseSecondButtonTitle1 = document.getElementById("mh-four-section-course-second-button-title-1");
+const mhFourSectionCourseSecondButtonText1 = document.getElementById("mh-four-section-course-second-button-text-1");
+
+const mhFourSectionCourseSecondButtonWrapper2 = document.getElementById("mh-four-section-course-second-button-wrapper-2");
+const mhFourSectionCourseSecondButtonTitle2 = document.getElementById("mh-four-section-course-second-button-title-2");
+const mhFourSectionCourseSecondButtonText2 = document.getElementById("mh-four-section-course-second-button-text-2");
+
+const mhFourSectionCourseSecondButtonWrapper3 = document.getElementById("mh-four-section-course-second-button-wrapper-3");
+const mhFourSectionCourseSecondButtonTitle3 = document.getElementById("mh-four-section-course-second-button-title-3");
+const mhFourSectionCourseSecondButtonText3 = document.getElementById("mh-four-section-course-second-button-text-3");
+
+const mhFourSectionCourseSecondButtonWrapper4 = document.getElementById("mh-four-section-course-second-button-wrapper-4");
+const mhFourSectionCourseSecondButtonTitle4 = document.getElementById("mh-four-section-course-second-button-title-4");
+const mhFourSectionCourseSecondButtonText4 = document.getElementById("mh-four-section-course-second-button-text-4");
 
 const mhSetupAndTranslateForSelectService = (event) => {
     event.preventDefault();
@@ -429,6 +476,30 @@ buttonReview.addEventListener('click', (event) => {
         mhTextarea.textContent = textForApplication[mhSelectLang][3];
     } else {
         console.log("description")
+
+        mhFourSectionCourseSecondButtonWrapper1.style.opacity = "";
+        mhFourSectionCourseSecondButtonWrapper2.style.opacity = "";
+        mhFourSectionCourseSecondButtonWrapper3.style.opacity = "";
+        mhFourSectionCourseSecondButtonWrapper4.style.opacity = "";
+
+        mhFourSectionButtonOfPriceList.style.opacity = "";
+        buttonQuestion.style.opacity = "";
+        buttonConsultation.style.opacity = "";
+
+        mhFourSectionButtonOfPriceList.style.pointerEvents = "";
+        buttonQuestion.style.pointerEvents = "";
+        buttonConsultation.style.pointerEvents = "";
+
+        buttonReview.style.opacity = "0.4";
+        buttonReview.style.pointerEvents = "none";
+        
+
+        setTimeout(() => {
+            mhFourSectionCourseSecondButtonWrapper1.style.display = "";
+            mhFourSectionCourseSecondButtonWrapper2.style.display = "";
+            mhFourSectionCourseSecondButtonWrapper3.style.display = "";
+            mhFourSectionCourseSecondButtonWrapper4.style.display = "";
+        }, 300);
     }
 })
 
@@ -439,7 +510,48 @@ buttonConsultation.addEventListener('click', (event) => {
         mhSetupAndTranslateForSelectService(event);
         mhTextarea.textContent = textForApplication[mhSelectLang][1]
     } else {
-        console.log("suitable")
+        mhFourSectionText0.style.opacity = "0";
+        mhFourSectionText1.style.opacity = "0";
+        mhFourSectionText2.style.opacity = "0";
+
+        mhFourSectionButtonOfPriceList.style.opacity = "";
+        buttonReview.style.opacity = "";
+        buttonQuestion.style.opacity = "";
+
+        mhFourSectionButtonOfPriceList.style.pointerEvents = "";
+        buttonReview.style.pointerEvents = "";
+        buttonQuestion.style.pointerEvents = "";
+
+        buttonConsultation.style.opacity = "0.4";
+        buttonConsultation.style.pointerEvents = "none";
+
+        mhFourSectionCourseSecondButtonWrapper1.style.display = "block";
+        mhFourSectionCourseSecondButtonWrapper2.style.display = "block";
+        mhFourSectionCourseSecondButtonWrapper3.style.display = "block";
+        mhFourSectionCourseSecondButtonWrapper4.style.display = "block";
+
+        setTimeout(() => {
+            mhFourSectionText0.style.display = "none";
+            mhFourSectionText1.style.display = "none";
+            mhFourSectionText2.style.display = "none";
+
+            mhFourSectionCourseSecondButtonTitle1.textContent = sortedArray[score].who.subtitles[mhSelectLang][0];
+            mhFourSectionCourseSecondButtonText1.textContent = sortedArray[score].who.whoText[mhSelectLang][0];
+            mhFourSectionCourseSecondButtonTitle2.textContent = sortedArray[score].who.subtitles[mhSelectLang][1];
+            mhFourSectionCourseSecondButtonText2.textContent = sortedArray[score].who.whoText[mhSelectLang][1];
+            mhFourSectionCourseSecondButtonTitle3.textContent = sortedArray[score].who.subtitles[mhSelectLang][2];
+            mhFourSectionCourseSecondButtonText3.textContent = sortedArray[score].who.whoText[mhSelectLang][2];
+            mhFourSectionCourseSecondButtonTitle4.textContent = sortedArray[score].who.subtitles[mhSelectLang][3];
+            mhFourSectionCourseSecondButtonText4.textContent = sortedArray[score].who.whoText[mhSelectLang][3];
+            setTimeout(() => {
+                mhFourSectionCourseSecondButtonWrapper1.style.opacity = "1";
+                mhFourSectionCourseSecondButtonWrapper2.style.opacity = "1";
+                mhFourSectionCourseSecondButtonWrapper3.style.opacity = "1";
+                mhFourSectionCourseSecondButtonWrapper4.style.opacity = "1";
+            }, 1);
+
+
+        }, 300);
     }
 })
 
@@ -451,6 +563,36 @@ buttonQuestion.addEventListener('click', (event) => {
         mhTextarea.textContent = textForApplication[mhSelectLang][2]
     } else {
         console.log("complexity")
+        mhFourSectionCourseSecondButtonWrapper1.style.opacity = "";
+        mhFourSectionCourseSecondButtonWrapper2.style.opacity = "";
+        mhFourSectionCourseSecondButtonWrapper3.style.opacity = "";
+        mhFourSectionCourseSecondButtonWrapper4.style.opacity = "";
+
+        mhFourSectionText0.style.opacity = "0";
+        mhFourSectionText1.style.opacity = "0";
+        mhFourSectionText2.style.opacity = "0";
+
+        mhFourSectionButtonOfPriceList.style.opacity = "";
+        buttonReview.style.opacity = "";
+        buttonConsultation.style.opacity = "";
+
+        mhFourSectionButtonOfPriceList.style.pointerEvents = "";
+        buttonReview.style.pointerEvents = "";
+        buttonConsultation.style.pointerEvents = "";
+
+        buttonQuestion.style.opacity = "0.4";
+        buttonQuestion.style.pointerEvents = "none";
+
+        setTimeout(() => {
+            mhFourSectionCourseSecondButtonWrapper1.style.display = "";
+            mhFourSectionCourseSecondButtonWrapper2.style.display = "";
+            mhFourSectionCourseSecondButtonWrapper3.style.display = "";
+            mhFourSectionCourseSecondButtonWrapper4.style.display = "";
+
+            mhFourSectionText0.style.display = "none";
+            mhFourSectionText1.style.display = "none";
+            mhFourSectionText2.style.display = "none";
+        }, 300);
     }
 })
 
@@ -580,9 +722,9 @@ const createCourseBlocks = () => {
     let i = scrollLvl % (sortedArray.length);
 
     while (buffer.length < (visableBlocks + 2)) {
-        if (i !== score) {
+        const service = sortedArray[i];
+        if (service !== coursesData[score]) {
             const div = document.createElement('div');
-            const service = sortedArray[i];
             const divImgWrapper = document.createElement('div');
             const parser = new DOMParser();
             const divImg = parser.parseFromString(sortedArray[i].svgCode, "image/svg+xml").documentElement;
@@ -970,6 +1112,13 @@ sixSectionBottomContactUs.addEventListener('click', () => {
 const mhThemeButton = document.getElementById("mh-navigation-block-night-mode-switch-button-wrapper");
 const mhFiveSectionInterestingChangeButton = document.getElementById("mh-five-section-interesting-change-button");
 
+const mhFourSectionCourseSwitchButton = document.getElementById("mh-four-section-course-switch-button");
+const mhFourSectionCourseSwitchButtonServices = document.getElementById("mh-four-section-course-switch-button-services");
+const mhFourSectionCourseSwitchButtonCourses = document.getElementById("mh-four-section-course-switch-button-courses");
+const mhFourSectionOthersServicesTopLine = document.getElementById("mh-four-section-others-services-top-line");
+const mhFourSectionOthersServicesBottomLine = document.getElementById("mh-four-section-others-services-bottom-line");
+const mhFourSectionOthersServicesImgWrapper = document.getElementById("mh-four-section-others-services-img-wrapper");
+
 mhFiveSectionInterestingChangeButton.addEventListener('click', () => {
     window.scrollTo({
         top: window.innerWidth * 1.85,
@@ -1061,7 +1210,8 @@ const mhRefreshTheme = () => {
         imgH3Wrapper4.style.color = "var(--dtText)";
         imgH3Wrapper5.style.color = "var(--dtText)";
         choiceServecesSquare.style.border = "0.1144164vw var(--ltSeparationLine) solid"
-
+        document.documentElement.style.setProperty('--svgColor', '#F3F3F3');
+        document.documentElement.style.setProperty('--svgColorMobile', '#2E2E2E');
     } else {
         nightModeMoonPath.style.fill = "#2E2E2E"
         languageSvgPath.style.fill = "#2E2E2E"
@@ -1094,6 +1244,8 @@ const mhRefreshTheme = () => {
         imgH3Wrapper4.style.color = "var(--ltText)";
         imgH3Wrapper5.style.color = "var(--ltText)";
         choiceServecesSquare.style.border = ""
+        document.documentElement.style.setProperty('--svgColor', '#2E2E2E');
+        document.documentElement.style.setProperty('--svgColorMobile', '#E8E8E8');
     }
 }
 
@@ -1283,7 +1435,6 @@ let coursesNotification = false;
 
 const mhNotificationBlackBlock = document.getElementById("mh-notification-black-block");
 const mhNotificationWrapper = document.getElementById("mh-notification-wrapper");
-const mhFourSectionText2 = document.getElementById("mh-four-section-text-2");
 
 window.addEventListener('scroll', () => {
     if (!coursesNotification) {
@@ -1313,12 +1464,11 @@ window.addEventListener('scroll', () => {
     };
 });
 
-const mhFourSectionCourseSwitchButton = document.getElementById("mh-four-section-course-switch-button");
-const mhFourSectionCourseSwitchButtonServices = document.getElementById("mh-four-section-course-switch-button-services");
-const mhFourSectionCourseSwitchButtonCourses = document.getElementById("mh-four-section-course-switch-button-courses");
-const mhFourSectionOthersServicesTopLine = document.getElementById("mh-four-section-others-services-top-line");
-const mhFourSectionOthersServicesBottomLine = document.getElementById("mh-four-section-others-services-bottom-line");
-const mhFourSectionOthersServicesImgWrapper = document.getElementById("mh-four-section-others-services-img-wrapper");
+
+const mhMostPopularWrapper = document.getElementById("mh-most-popular-wrapper");
+const mhReviewsCoursesWrapper = document.getElementById("mh-reviews-courses-wrapper");
+const mhReleasesCoursesWrapper = document.getElementById("mh-releases-courses-wrapper");
+const mhSpecializationCoursesWrapper = document.getElementById("mh-specialization-courses-wrapper");
 
 
 mhFourSectionCourseSwitchButton.addEventListener('click', () => {
@@ -1380,6 +1530,7 @@ mhFourSectionCourseSwitchButton.addEventListener('click', () => {
                 mhFourSectionText0.style.opacity = "";
                 mhFourSectionText1.style.opacity = "";
                 mhFourSectionText2.style.opacity = "1";
+
                 mhFourSectionCourseSwitchButtonCourses.style.opacity = "1";
                 mhFourSectionButtonOrderText.style.opacity = "";
 
@@ -1402,5 +1553,200 @@ mhFourSectionCourseSwitchButton.addEventListener('click', () => {
                 visualVitrine();
             }, 300);
         }, 300);
-    };
+    } else {
+        const imgSvg = document.getElementById("mh-four-section-course-img");
+        course = false;
+        mhFourSectionTitle.style.opacity = "0";
+        mhFourSectionText0.style.opacity = "0";
+        mhFourSectionText1.style.opacity = "0";
+        mhFourSectionText2.style.opacity = "";
+
+        mhFourSectionCourseSwitchButtonServices.style.opacity = "0";
+        mhFourSectionImg.style.opacity = "0";
+        mhFourSectionButtonOrderText.style.opacity = "0";
+
+        mhFourSectionButtonReviewImg.style.opacity = "0";
+        mhFourSectionButtonConsultationImg.style.opacity = "0";
+        mhFourSectionButtonQuestionImg.style.opacity = "0";
+        mhFourSectionButtonPriceListImg.style.opacity = "0";
+
+        mhFourSectionOthersServicesTitle.style.opacity = "0";
+
+        mhFourSectionCourseSwitchButtonCourses.style.opacity = "";
+        mhFourSectionOthersServicesTopLine.style.opacity = "";
+        mhFourSectionOthersServicesBottomLine.style.opacity = "";
+        mhFourSectionOthersServicesImgWrapper.style.opacity = "";
+
+        mhFourSectionButtonReviewImg.style.opacity = "";
+        mhFourSectionButtonConsultationImg.style.opacity = "";
+        mhFourSectionButtonQuestionImg.style.opacity = "";
+        mhFourSectionButtonPriceListImg.style.opacity = "";
+
+        mhFourSectionButtonDescription.style.opacity = "";
+        mhFourSectionButtonSuitable.style.opacity = "";
+        mhFourSectionButtonComplexity.style.opacity = "";
+        mhFourSectionButtonOutline.style.opacity = "";
+
+        mhFourSectionOthersServicesTopLine.style.opacity = "";
+        mhFourSectionOthersServicesBottomLine.style.opacity = "";
+        mhFourSectionOthersServicesImgWrapper.style.opacity = "";
+
+        imgSvg.style.opacity = "";
+
+        mhMostPopularWrapper.style.opacity = "";
+        mhReviewsCoursesWrapper.style.opacity = "";
+        mhReleasesCoursesWrapper.style.opacity = "";
+        mhSpecializationCoursesWrapper.style.opacity = "";
+
+        setTimeout(() => {
+            mhMostPopularWrapper.style.display = "";
+            mhReviewsCoursesWrapper.style.display = "";
+            mhReleasesCoursesWrapper.style.display = "";
+            mhSpecializationCoursesWrapper.style.display = "";
+
+            mhFourSectionOthersServicesTopLine.style.width = "";
+            mhFourSectionOthersServicesBottomLine.style.width = "";
+            mhFourSectionOthersServicesTopLine.style.left = "";
+            mhFourSectionOthersServicesBottomLine.style.left = "";
+
+            mhFourSectionText2.style.display = "";
+            mhFourSectionText1.style.marginTop = "";
+
+            mhFourSectionText0.textContent = arrayPriceList[mhActivNumber].description[mhSelectLang][0];
+            mhFourSectionText1.textContent = arrayPriceList[mhActivNumber].description[mhSelectLang][1];
+            mhFourSectionTitle.textContent = arrayPriceList[mhActivNumber].title[mhSelectLang];
+
+            mhFourSectionCourseSwitchButtonCourses.style.display = "";
+
+            mhFourSectionImg.style.display = "";
+            mhFourSectionCourseSwitchButtonServices.style.display = "";
+
+            mhFourSectionOthersServicesTopLine.style.display = "";
+            mhFourSectionOthersServicesBottomLine.style.display = "";
+            mhFourSectionOthersServicesImgWrapper.style.display = "";
+
+            mhFourSectionButtonReviewImg.style.display = "";
+            mhFourSectionButtonConsultationImg.style.display = "";
+            mhFourSectionButtonQuestionImg.style.display = "";
+            mhFourSectionButtonPriceListImg.style.display = "";
+
+            mhFourSectionButtonDescription.style.display = "";
+            mhFourSectionButtonSuitable.style.display = "";
+            mhFourSectionButtonComplexity.style.display = "";
+            mhFourSectionButtonOutline.style.display = "";
+
+            mhFourSectionOthersServicesTitle.style.left = "";
+
+            mhFourSectionImgWrapper.removeChild(imgSvg);
+
+            if (mhSelectLang === "eng") {
+                mhFourSectionButtonOrderText.textContent = "Order";
+                mhFourSectionOthersServicesTitle.textContent = "Others services";
+            } else {
+                mhFourSectionButtonOrderText.textContent = "Заказать";
+                mhFourSectionOthersServicesTitle.textContent = "Другие услуги";
+            }
+
+            setTimeout(() => {
+
+
+                mhFourSectionImg.style.opacity = "";
+                mhFourSectionCourseSwitchButtonServices.style.opacity = "";
+
+                mhFourSectionTitle.style.opacity = "";
+                mhFourSectionText0.style.opacity = "";
+                mhFourSectionText1.style.opacity = "";
+
+                mhFourSectionButtonOrderText.style.opacity = "";
+
+                buttonReview.style.opacity = "";
+                buttonConsultation.style.opacity = "";
+                buttonQuestion.style.opacity = "";
+                mhFourSectionButtonOfPriceList.style.opacity = "";
+
+                buttonConsultation.style.pointerEvents = "";
+                buttonQuestion.style.pointerEvents = "";
+                mhFourSectionButtonOfPriceList.style.pointerEvents = "";
+                buttonReview.style.pointerEvents = "";
+
+
+
+                mhFourSectionOthersServicesTitle.style.opacity = "";
+
+                resetBlocks();
+                createDivBlocks();
+                thActivService();
+            }, 300);
+        }, 300);
+
+    }
+});
+
+mhFourSectionOthersServicesImgWrapper.addEventListener('click', () => {
+    mhFourSectionOthersServicesTopLine.style.width = "85.1258581235698vw";
+    mhFourSectionOthersServicesBottomLine.style.width = "85.1258581235698vw";
+    mhFourSectionOthersServicesTopLine.style.left = "5.720823798627003vw";
+    mhFourSectionOthersServicesBottomLine.style.left = "5.720823798627003vw";
+
+    mhFourSectionOthersServicesTitle.style.opacity = "0";
+    mhFourSectionOthersServicesImgWrapper.style.opacity = "";
+
+    mhMostPopularWrapper.style.display = "flex";
+    mhReviewsCoursesWrapper.style.display = "flex";
+    mhReleasesCoursesWrapper.style.display = "flex";
+    mhSpecializationCoursesWrapper.style.display = "flex";
+    sortedArray = [...coursesData];
+    sortedArray.sort((a, b) => b.popularity - a.popularity);
+    resetBlocks();
+    setTimeout(() => {
+        mhMostPopularWrapper.style.opacity = "1";
+        mhReviewsCoursesWrapper.style.opacity = "0.6";
+        mhReleasesCoursesWrapper.style.opacity = "0.6";
+        mhSpecializationCoursesWrapper.style.opacity = "0.6";
+    }, 500);
+    createCourseBlocks();
+});
+
+mhMostPopularWrapper.addEventListener('click', () => {
+    sortedArray = [...coursesData];
+    sortedArray.sort((a, b) => b.popularity - a.popularity);
+    resetBlocks();
+    mhMostPopularWrapper.style.opacity = "1";
+    mhReviewsCoursesWrapper.style.opacity = "0.6";
+    mhReleasesCoursesWrapper.style.opacity = "0.6";
+    mhSpecializationCoursesWrapper.style.opacity = "0.6";
+    createCourseBlocks();
+});
+
+mhReviewsCoursesWrapper.addEventListener('click', () => {
+    sortedArray = [...coursesData];
+    sortedArray.sort((a, b) => b.MMR - a.MMR);
+    resetBlocks();
+    mhMostPopularWrapper.style.opacity = "0.6";
+    mhReviewsCoursesWrapper.style.opacity = "1";
+    mhReleasesCoursesWrapper.style.opacity = "0.6";
+    mhSpecializationCoursesWrapper.style.opacity = "0.6";
+    createCourseBlocks();
+});
+
+mhReleasesCoursesWrapper.addEventListener('click', () => {
+    sortedArray = [...coursesData];
+    sortedArray.sort((a, b) => new Date(b.releasesData) - new Date(a.releasesData));
+    resetBlocks();
+    mhMostPopularWrapper.style.opacity = "0.6";
+    mhReviewsCoursesWrapper.style.opacity = "0.6";
+    mhReleasesCoursesWrapper.style.opacity = "1";
+    mhSpecializationCoursesWrapper.style.opacity = "0.6";
+    createCourseBlocks();
+});
+
+mhSpecializationCoursesWrapper.addEventListener('click', () => {
+    sortedArray = [...coursesData];
+    sortedArray = sortedArray.filter(Prof => Prof.isProfession);
+    resetBlocks();
+    mhMostPopularWrapper.style.opacity = "0.6";
+    mhReviewsCoursesWrapper.style.opacity = "0.6";
+    mhReleasesCoursesWrapper.style.opacity = "0.6";
+    mhSpecializationCoursesWrapper.style.opacity = "1";
+    createCourseBlocks();
 });
