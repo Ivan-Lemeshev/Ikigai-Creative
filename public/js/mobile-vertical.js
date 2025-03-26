@@ -4,7 +4,6 @@ import reviews from "./reviews-mobile.js";
 import themeWrapper from "./switchTheme-data.js";
 import dataContats from "./links.js";
 import url from "./url.js"
-import { coursesTextForApplication } from "./slogans.js";
 import coursesData from "./courses.js"
 
 const mvNavButton = document.getElementById("mv-nav-button");

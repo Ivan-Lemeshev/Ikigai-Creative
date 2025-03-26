@@ -6,6 +6,7 @@ import { textForApplication } from "./slogans.js";
 import reviews from "./reviews.js";
 import dataContats from "./links.js";
 import url from "./url.js"
+import coursesData from "./courses.js"
 
 const mhNavButton = document.getElementById("mh-first-section-navigation-button");
 const mhNavigationBlock = document.getElementById("mh-navigation-block");
@@ -16,6 +17,19 @@ const mhNavigationBlockContacts = document.getElementById("mh-navigation-block-m
 const mhNavigationBlockReviews = document.getElementById("mh-navigation-block-main-content-reviews");
 let applicationShow = false;
 const choiceServecesSquare = document.getElementById("mh-choice-serveces-square");
+let course = false;
+const mhFourSectionButtonOrderText = document.getElementById("mh-four-section-button-order-text");
+const mhFourSectionImgWrapper = document.getElementById("mh-four-section-img-wrapper");
+let score = 0;
+
+const mhFourSectionButtonReviewImg = document.getElementById("mh-four-section-button-review-img");
+const mhFourSectionButtonConsultationImg = document.getElementById("mh-four-section-button-consultation-img");
+const mhFourSectionButtonQuestionImg = document.getElementById("mh-four-section-button-question-img");
+const mhFourSectionButtonPriceListImg = document.getElementById("mh-four-section-button-price-list-img");
+const mhFourSectionButtonDescription = document.getElementById("mh-four-section-button-description");
+const mhFourSectionButtonSuitable = document.getElementById("mh-four-section-button-suitable");
+const mhFourSectionButtonComplexity = document.getElementById("mh-four-section-button-complexity");
+const mhFourSectionButtonOutline = document.getElementById("mh-four-section-button-outline");
 
 mhNavButton.addEventListener('click', () => {
     mhNavigationBlock.style.display = "block";
@@ -228,6 +242,8 @@ const mhFourSectionText1 = document.getElementById("mh-four-section-text-1");
 const mhFooterEng = document.getElementById("mh-footer-eng");
 const mhFooterRus = document.getElementById("mh-footer-rus");
 
+const mhFourSectionOthersServicesTitle = document.getElementById("mh-four-section-others-services-title");
+
 const mhRefreshDataForLocalization = () => {
     const current = arrayPriceList[mhActivNumber];
 
@@ -256,6 +272,13 @@ const mhRefreshDataForLocalization = () => {
         mhTextarea.placeholder = "В этом поле вы можете указать указать любые дополнительные данные или пожелания по заказу."
         mhFooterEng.style.display = "none";
         mhFooterRus.style.display = "block";
+        if (!course) {
+            mhFourSectionButtonOrderText.textContent = "Заказать";
+            mhFourSectionOthersServicesTitle.textContent = "Другие услуги";
+        } else {
+            mhFourSectionButtonOrderText.textContent = "Обучаться";
+            mhFourSectionOthersServicesTitle.textContent = "Другие курсы";
+        }
     } else {
         mhInputFirstName.placeholder = "First Name";
         mhInputLastName.placeholder = "Last Name";
@@ -263,6 +286,13 @@ const mhRefreshDataForLocalization = () => {
         mhTextarea.placeholder = "In this field, you can provide any additional details or requests for your order, including your preferred method of contact.";
         mhFooterEng.style.display = "block";
         mhFooterRus.style.display = "none";
+        if (!course) {
+            mhFourSectionButtonOrderText.textContent = "Order";
+            mhFourSectionOthersServicesTitle.textContent = "Others services";
+        } else {
+            mhFourSectionButtonOrderText.textContent = "Study";
+            mhFourSectionOthersServicesTitle.textContent = "Others courses";
+        }
     }
 
     for (let index = 0; index < arrayPriceList.length; index++) {
@@ -296,12 +326,17 @@ const mhFourPriceListWrapper = document.getElementById("mh-price-list-wrapper");
 const mhFourPriceListXMark = document.getElementById("mh-price-list-x-mark");
 
 mhFourSectionButtonOfPriceList.addEventListener('click', () => {
-    mhFourPriceListWrapper.style.display = "block";
-    mhNavButton.style.opacity = "0";
-    mhNavButton.style.zIndex = "1";
-    setTimeout(() => {
-        mhFourPriceListWrapper.style.opacity = "1";
-    }, 1);
+    if (!course) {
+        mhFourPriceListWrapper.style.display = "block";
+        mhNavButton.style.opacity = "0";
+        mhNavButton.style.zIndex = "1";
+        setTimeout(() => {
+            mhFourPriceListWrapper.style.opacity = "1";
+        }, 1);
+    } else {
+        console.log("outline")
+    }
+
 })
 
 mhFourPriceListXMark.addEventListener('click', () => {
@@ -312,8 +347,6 @@ mhFourPriceListXMark.addEventListener('click', () => {
         mhFourPriceListWrapper.style.display = "";
     }, 300);
 })
-
-
 
 const thActivService = () => {
     const currentService = arrayPriceList[mhActivNumber];
@@ -378,31 +411,47 @@ const mhSetupAndTranslateForSelectService = (event) => {
 
 
 buttonOrder.addEventListener('click', (event) => {
-    event.preventDefault();
-    mhNumberOfService = mhActivNumber;
-    mhSetupAndTranslateForSelectService(event);
-    mhTextarea.textContent = textForApplication.eng[0]
+    if (!course) {
+        event.preventDefault();
+        mhNumberOfService = mhActivNumber;
+        mhSetupAndTranslateForSelectService(event);
+        mhTextarea.textContent = textForApplication.eng[0]
+    } else {
+        console.log("study")
+    }
 })
 
 buttonReview.addEventListener('click', (event) => {
-    event.preventDefault();
-    mhNumberOfService = mhActivNumber;
-    mhSetupAndTranslateForSelectService(event);
-    mhTextarea.textContent = textForApplication[mhSelectLang][3];
+    if (!course) {
+        event.preventDefault();
+        mhNumberOfService = mhActivNumber;
+        mhSetupAndTranslateForSelectService(event);
+        mhTextarea.textContent = textForApplication[mhSelectLang][3];
+    } else {
+        console.log("description")
+    }
 })
 
 buttonConsultation.addEventListener('click', (event) => {
-    event.preventDefault();
-    mhNumberOfService = mhActivNumber;
-    mhSetupAndTranslateForSelectService(event);
-    mhTextarea.textContent = textForApplication[mhSelectLang][1]
+    if (!course) {
+        event.preventDefault();
+        mhNumberOfService = mhActivNumber;
+        mhSetupAndTranslateForSelectService(event);
+        mhTextarea.textContent = textForApplication[mhSelectLang][1]
+    } else {
+        console.log("suitable")
+    }
 })
 
 buttonQuestion.addEventListener('click', (event) => {
-    event.preventDefault();
-    mhNumberOfService = mhActivNumber;
-    mhSetupAndTranslateForSelectService(event);
-    mhTextarea.textContent = textForApplication[mhSelectLang][2]
+    if (!course) {
+        event.preventDefault();
+        mhNumberOfService = mhActivNumber;
+        mhSetupAndTranslateForSelectService(event);
+        mhTextarea.textContent = textForApplication[mhSelectLang][2]
+    } else {
+        console.log("complexity")
+    }
 })
 
 
@@ -415,12 +464,48 @@ const gapDivs = 1.7162471395881007;
 const startDivLeft = -18.87871853546911;
 const divWidth = 17.162471395881006;
 
+let sortedArray = []
+sortedArray = [...coursesData];
 
 const resetBlocks = () => {
     while (buffer.length > 0) {
         ServicesWrapper.removeChild(buffer.shift().link)
     }
 }
+
+const visualVitrine = () => {
+    const parser = new DOMParser();
+    const divImg2 = parser.parseFromString(sortedArray[score].svgCode, "image/svg+xml").documentElement;
+    divImg2.id = `mh-four-section-course-img`;
+    let oldSvgElement = document.getElementById(`mh-four-section-course-img`);
+    if (oldSvgElement) {
+        mhFourSectionImgWrapper.removeChild(oldSvgElement);
+    };
+    mhFourSectionImgWrapper.appendChild(divImg2);
+    mhFourSectionTitle.style.opacity = "0";
+    mhFourSectionText0.style.opacity = "0";
+    mhFourSectionText1.style.opacity = "0";
+    mhFourSectionText2.style.opacity = "0";
+    window.scrollTo({
+        top: window.innerWidth * 1.35,
+        behavior: 'smooth'
+    });
+    setTimeout(() => {
+        mhFourSectionTitle.textContent = sortedArray[score].title[mhSelectLang];
+        mhFourSectionText0.textContent = sortedArray[score].descriptionMobile[mhSelectLang][0];
+        mhFourSectionText1.textContent = sortedArray[score].descriptionMobile[mhSelectLang][1];
+        mhFourSectionText2.textContent = sortedArray[score].descriptionMobile[mhSelectLang][2];
+
+        setTimeout(() => {
+            divImg2.style.opacity = "1";
+            mhFourSectionTitle.style.opacity = "1";
+            mhFourSectionText0.style.opacity = "1";
+            mhFourSectionText1.style.opacity = "1";
+            mhFourSectionText2.style.opacity = "1";
+        }, 300);
+    }, 300);
+}
+
 
 const createDivBlocks = () => {
 
@@ -479,6 +564,7 @@ const createDivBlocks = () => {
 
 createDivBlocks();
 
+
 const movePlitka = (deltaGap) => {
     for (let index = 0; index < buffer.length; index++) {
         const newLeft = startDivLeft + (gapDivs + divWidth) * index + deltaGap + "vw";
@@ -490,50 +576,156 @@ const thThirdSectionLeftArrow = document.getElementById("mh-four-section-others-
 const thThirdSectionRightArrow = document.getElementById("mh-four-section-others-services-right-arrow");
 let thThirdSectionAnimation = false;
 
+const createCourseBlocks = () => {
+    let i = scrollLvl % (sortedArray.length);
 
+    while (buffer.length < (visableBlocks + 2)) {
+        if (i !== score) {
+            const div = document.createElement('div');
+            const service = sortedArray[i];
+            const divImgWrapper = document.createElement('div');
+            const parser = new DOMParser();
+            const divImg = parser.parseFromString(sortedArray[i].svgCode, "image/svg+xml").documentElement;
 
-thThirdSectionLeftArrow.addEventListener('click', () => {
-    if (!thThirdSectionAnimation) {
-        thThirdSectionAnimation = true;
-        movePlitka(-gapDivs - divWidth)
-        setTimeout(() => {
-            thThirdSectionAnimation = false;
-            scrollLvl = (scrollLvl + 1) % (arrayPriceList.length);
+            divImg.id = `mh-lower-part-courses-${i}`;
 
-            if (scrollLvl === mhActivNumber) {
-                scrollLvl = (scrollLvl + 1) % (arrayPriceList.length);
+            const divH3 = document.createElement('h4');
+
+            div.id = `mh-third-section-right-services-${buffer.length}`;
+
+            divImgWrapper.id = `mh-third-section-right-services-img-wrapper-js-${buffer.length}`;
+
+            divH3.id = `mh-third-section-right-services-h3-js-${buffer.length}`;
+
+            if (mhSelectTheme === "light") {
+                div.classList = "light-course";
+
+            } else {
+                div.classList = "dark-course";
             }
 
-            resetBlocks();
-            createDivBlocks();
-        }, 300);
+            div.style.left = startDivLeft + (gapDivs + divWidth) * buffer.length + "vw";
+
+            if (mhSelectTheme === "light") {
+                divImgWrapper.classList = "mh-four-section-others-courses-wrapper-img-light";
+            } else {
+                divImgWrapper.classList = "mh-four-section-others-courses-wrapper-img-dark";
+            }
+
+            divImgWrapper.appendChild(divImg);
+
+            divH3.textContent = service.title[mhSelectLang];
+
+            div.appendChild(divImgWrapper);
+
+            div.appendChild(divH3);
+
+            ServicesWrapper.appendChild(div);
+
+
+            div.addEventListener('click', () => {
+                score = buffer[Math.round(Number(div.id[div.id.length - 1]))].serviceId;
+
+                visualVitrine();
+                resetBlocks();
+                createCourseBlocks();
+            });
+            buffer.push({
+                serviceId: i,
+                link: document.getElementById(div.id)
+            });
+        };
+        i = (i + 1) % (sortedArray.length);
+    };
+};
+
+thThirdSectionLeftArrow.addEventListener('click', () => {
+    if (!course) {
+        if (!thThirdSectionAnimation) {
+            thThirdSectionAnimation = true;
+            movePlitka(-gapDivs - divWidth)
+            setTimeout(() => {
+                thThirdSectionAnimation = false;
+                scrollLvl = (scrollLvl + 1) % (arrayPriceList.length);
+
+                if (scrollLvl === mhActivNumber) {
+                    scrollLvl = (scrollLvl + 1) % (arrayPriceList.length);
+                }
+
+                resetBlocks();
+                createDivBlocks();
+            }, 300);
+        }
+    } else {
+        if (!thThirdSectionAnimation) {
+            thThirdSectionAnimation = true;
+            movePlitka(-gapDivs - divWidth)
+            setTimeout(() => {
+                thThirdSectionAnimation = false;
+                scrollLvl = (scrollLvl + 1) % (sortedArray.length);
+
+                if (scrollLvl === score) {
+                    scrollLvl = (scrollLvl + 1) % (sortedArray.length);
+                }
+
+                resetBlocks();
+                createCourseBlocks();
+            }, 300);
+        }
     }
+
 
 })
 
 thThirdSectionRightArrow.addEventListener('click', () => {
-    if (!thThirdSectionAnimation) {
-        thThirdSectionAnimation = true;
-        movePlitka(gapDivs + divWidth)
-        setTimeout(() => {
-            thThirdSectionAnimation = false;
-            scrollLvl = (scrollLvl - 1);
-            if (scrollLvl === 0) {
-                scrollLvl = arrayPriceList.length - 1;
-            }
-            if (scrollLvl === mhActivNumber) {
+    if (!course) {
+        if (!thThirdSectionAnimation) {
+            thThirdSectionAnimation = true;
+            movePlitka(gapDivs + divWidth)
+            setTimeout(() => {
+                thThirdSectionAnimation = false;
                 scrollLvl = (scrollLvl - 1);
-
                 if (scrollLvl === 0) {
                     scrollLvl = arrayPriceList.length - 1;
                 }
-            }
+                if (scrollLvl === mhActivNumber) {
+                    scrollLvl = (scrollLvl - 1);
 
-            resetBlocks();
-            createDivBlocks();
-        }, 300);
+                    if (scrollLvl === 0) {
+                        scrollLvl = arrayPriceList.length - 1;
+                    }
+                }
+
+                resetBlocks();
+                createDivBlocks();
+            }, 300);
+        }
+    } else {
+        if (!thThirdSectionAnimation) {
+            thThirdSectionAnimation = true;
+            movePlitka(gapDivs + divWidth)
+            setTimeout(() => {
+                thThirdSectionAnimation = false;
+                scrollLvl = (scrollLvl - 1);
+                if (scrollLvl === 0) {
+                    scrollLvl = sortedArray.length - 1;
+                }
+                if (scrollLvl === score) {
+                    scrollLvl = (scrollLvl - 1);
+
+                    if (scrollLvl === 0) {
+                        scrollLvl = sortedArray.length - 1;
+                    }
+                }
+
+                resetBlocks();
+                createCourseBlocks();
+            }, 300);
+        }
     }
+
 })
+
 
 const capitalize = (str) => {
     return str.split(' ')
@@ -797,6 +989,7 @@ const mhSwitchTheme = () => {
     }
 }
 
+
 const mhRefreshTheme = () => {
 
     const service = arrayPriceList[mhActivNumber]
@@ -807,7 +1000,6 @@ const mhRefreshTheme = () => {
     const switchButtonFace = document.getElementById("mh-navigation-block-night-mode-switch-button-face");
     const switchButtonFaceRect1 = document.getElementById("mh-navigation-block-night-mode-switch-button-face-rect-1");
     const switchButtonFaceRect2 = document.getElementById("mh-navigation-block-night-mode-switch-button-face-rect-2");
-    const mhFourSectionImgWrapper = document.getElementById("mh-four-section-img-wrapper");
     const mhSixSectionBottomImgPath = document.getElementById("mh-six-section-bottom-img-path");
     const setImg = document.querySelectorAll("#mh-four-section-others-services-wrapper img");
     const imgWrapperJs0 = document.getElementById("mh-third-section-right-services-img-wrapper-js-0");
@@ -1083,6 +1275,132 @@ const uploadLinks = () => {
         window.location.href = `${dataContats.Telegram}`;
     })
 
-}
+};
 
-uploadLinks()
+uploadLinks();
+
+let coursesNotification = false;
+
+const mhNotificationBlackBlock = document.getElementById("mh-notification-black-block");
+const mhNotificationWrapper = document.getElementById("mh-notification-wrapper");
+const mhFourSectionText2 = document.getElementById("mh-four-section-text-2");
+
+window.addEventListener('scroll', () => {
+    if (!coursesNotification) {
+        if (window.scrollY > window.innerWidth * 1.35) {
+            setTimeout(() => {
+                mhNotificationBlackBlock.style.display = "block";
+                mhNotificationWrapper.style.display = "block";
+                setTimeout(() => {
+                    mhNotificationBlackBlock.style.opacity = "1";
+                    mhNotificationWrapper.style.opacity = "1";
+                    window.scrollTo({
+                        top: window.innerWidth * 1.35,
+                        behavior: 'smooth'
+                    });
+                    setTimeout(() => {
+                        mhNotificationBlackBlock.style.opacity = "";
+                        mhNotificationWrapper.style.opacity = "";
+                        setTimeout(() => {
+                            mhNotificationBlackBlock.style.display = "";
+                            mhNotificationWrapper.style.display = "";
+                        }, 500);
+                    }, 3000);
+                }, 500);
+            }, 500);
+        };
+        coursesNotification = true;
+    };
+});
+
+const mhFourSectionCourseSwitchButton = document.getElementById("mh-four-section-course-switch-button");
+const mhFourSectionCourseSwitchButtonServices = document.getElementById("mh-four-section-course-switch-button-services");
+const mhFourSectionCourseSwitchButtonCourses = document.getElementById("mh-four-section-course-switch-button-courses");
+const mhFourSectionOthersServicesTopLine = document.getElementById("mh-four-section-others-services-top-line");
+const mhFourSectionOthersServicesBottomLine = document.getElementById("mh-four-section-others-services-bottom-line");
+const mhFourSectionOthersServicesImgWrapper = document.getElementById("mh-four-section-others-services-img-wrapper");
+
+
+mhFourSectionCourseSwitchButton.addEventListener('click', () => {
+    if (!course) {
+        course = true;
+
+        mhFourSectionTitle.style.opacity = "0";
+        mhFourSectionText0.style.opacity = "0";
+        mhFourSectionText1.style.opacity = "0";
+        mhFourSectionText2.style.display = "block";
+        mhFourSectionCourseSwitchButtonServices.style.opacity = "0";
+        mhFourSectionImg.style.opacity = "0";
+        mhFourSectionButtonOrderText.style.opacity = "0";
+
+        mhFourSectionButtonReviewImg.style.opacity = "0";
+        mhFourSectionButtonConsultationImg.style.opacity = "0";
+        mhFourSectionButtonQuestionImg.style.opacity = "0";
+        mhFourSectionButtonPriceListImg.style.opacity = "0";
+
+        mhFourSectionOthersServicesTitle.style.opacity = "0";
+
+        setTimeout(() => {
+            mhFourSectionText1.style.marginTop = "1.1441647597254003vw";
+            mhFourSectionText0.textContent = sortedArray[score].descriptionMobile[mhSelectLang][0];
+            mhFourSectionText1.textContent = sortedArray[score].descriptionMobile[mhSelectLang][1];
+            mhFourSectionText2.textContent = sortedArray[score].descriptionMobile[mhSelectLang][2];
+            mhFourSectionTitle.textContent = sortedArray[score].title[mhSelectLang];
+            mhFourSectionCourseSwitchButtonServices.style.display = "none";
+            mhFourSectionCourseSwitchButtonCourses.style.display = "block";
+            mhFourSectionImg.style.display = "none";
+
+            mhFourSectionOthersServicesTopLine.style.display = "block";
+            mhFourSectionOthersServicesBottomLine.style.display = "block";
+            mhFourSectionOthersServicesImgWrapper.style.display = "flex";
+
+            mhFourSectionButtonReviewImg.style.display = "none";
+            mhFourSectionButtonConsultationImg.style.display = "none";
+            mhFourSectionButtonQuestionImg.style.display = "none";
+            mhFourSectionButtonPriceListImg.style.display = "none";
+
+            mhFourSectionButtonDescription.style.display = "block";
+            mhFourSectionButtonSuitable.style.display = "block";
+            mhFourSectionButtonComplexity.style.display = "block";
+            mhFourSectionButtonOutline.style.display = "block";
+
+            mhFourSectionOthersServicesTitle.style.left = "11.441647597254006vw";
+
+
+            if (mhSelectLang === "eng") {
+                mhFourSectionButtonOrderText.textContent = "Study";
+                mhFourSectionOthersServicesTitle.textContent = "Others courses";
+            } else {
+                mhFourSectionButtonOrderText.textContent = "Обучаться";
+                mhFourSectionOthersServicesTitle.textContent = "Другие курсы";
+            }
+
+            setTimeout(() => {
+                mhFourSectionTitle.style.opacity = "";
+                mhFourSectionText0.style.opacity = "";
+                mhFourSectionText1.style.opacity = "";
+                mhFourSectionText2.style.opacity = "1";
+                mhFourSectionCourseSwitchButtonCourses.style.opacity = "1";
+                mhFourSectionButtonOrderText.style.opacity = "";
+
+                mhFourSectionButtonDescription.style.opacity = "0.8";
+                mhFourSectionButtonSuitable.style.opacity = "1";
+                mhFourSectionButtonComplexity.style.opacity = "1";
+                mhFourSectionButtonOutline.style.opacity = "1";
+
+                buttonReview.style.opacity = "0.4";
+                buttonReview.style.pointerEvents = "none";
+
+                mhFourSectionOthersServicesTitle.style.opacity = "";
+
+                mhFourSectionOthersServicesTopLine.style.opacity = "1";
+                mhFourSectionOthersServicesBottomLine.style.opacity = "1";
+                mhFourSectionOthersServicesImgWrapper.style.opacity = "1";
+
+                resetBlocks();
+                createCourseBlocks();
+                visualVitrine();
+            }, 300);
+        }, 300);
+    };
+});

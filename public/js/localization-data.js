@@ -771,16 +771,6 @@ const localizationWrapper = {
         eng: "Contacts",     
     },
 
-    "mh-four-section-button-order": {
-        rus: "Заказать",
-        eng: "Order",     
-    },
-
-    "mh-four-section-others-services-title": {
-        rus: "Другие сервисы",
-        eng: "Others services",     
-    },
-
     "mh-five-section-title-interesting": {
         rus: "Интересует",
         eng: "Interesting",     
