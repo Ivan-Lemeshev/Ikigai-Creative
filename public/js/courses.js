@@ -1620,7 +1620,7 @@ const coursesData = [
                 },
                 {
                     duration: "2 weeks",
-                    title: "Working with databases: tables, galleries, and Kanban boards"
+                    title: "Working with databases: tables, galleries"
                 },
                 {
                     duration: "2 weeks",
