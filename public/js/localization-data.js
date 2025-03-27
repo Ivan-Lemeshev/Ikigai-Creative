@@ -945,6 +945,66 @@ const localizationWrapper = {
         rus: "Выбранный курс",
         eng: "Chosen course",     
     },
+
+    "mh-notification-text-1": {
+        rus: "Именно здесь спрятаны наши чудесные курсы!",
+        eng: "This is where our marvellous courses are hidden!",     
+    },
+
+    "mh-notification-text-2": {
+        rus: "Одним изящным щелчком мыши вы мгновенно переключите витрину услуг на витрину курсов и обратно.",
+        eng: "With one graceful click, you'll instantly switch the services showcase to the courses showcase and back again.",     
+    },
+
+    "mh-most-popular-text": {
+        rus: "Популярные",
+        eng: "Most popular",     
+    },
+
+    "mh-reviews-courses-text": {
+        rus: "Лучшие отзывы",
+        eng: "Best by reviews",     
+    },
+
+    "mh-releases-courses-text": {
+        rus: "Недавние релизы",
+        eng: "Recent releases",     
+    },
+
+    "mh-specialization-courses-text": {
+        rus: "Курсы профессии",
+        eng: "Specialization courses",     
+    },
+
+    "mh-study-choose-paymant-text-1": {
+        rus: "Мы рады, что вы выбрали наш курс! Мы сделаем всё, чтобы ваше обучение было эффективным и принесло значимые результаты.",
+        eng: "We are delighted that you have chosen our course! We will do everything we can to ensure that your learning is effective and brings meaningful results.",     
+    },
+
+    "mh-study-choose-paymant-text-2": {
+        rus: "Остался всего один шаг — выберите, с чего хотите начать!",
+        eng: "There is only one step left - choose where you want to start!",     
+    },
+
+    "mh-study-choose-paymant-trial-session-title": {
+        rus: "Пробное занятие",
+        eng: "Trial session",     
+    },
+
+    "mh-study-choose-paymant-course-prepayment-title": {
+        rus: "Предоплата курса",
+        eng: "Course prepayment",     
+    },
+
+    "mh-study-choose-paymant-abstracts-title": {
+        rus: "Конспекты",
+        eng: "Abstracts",     
+    },
+
+    "mh-study-choose-paymant-free-part-title": {
+        rus: "Бесплатная часть",
+        eng: "Free part",     
+    },
 }
 
 export default localizationWrapper;

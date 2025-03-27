@@ -31,6 +31,9 @@ const mhFourSectionButtonSuitable = document.getElementById("mh-four-section-but
 const mhFourSectionButtonComplexity = document.getElementById("mh-four-section-button-complexity");
 const mhFourSectionButtonOutline = document.getElementById("mh-four-section-button-outline");
 
+let sortedArray = []
+sortedArray = [...coursesData];
+
 mhNavButton.addEventListener('click', () => {
     mhNavigationBlock.style.display = "block";
     setTimeout(() => {
@@ -295,7 +298,7 @@ const mhRefreshDataForLocalization = () => {
         }
     }
 
-    for (let index = 0; index < arrayPriceList.length; index++) {
+    if (!course) {
         if (mhSelectLang === "rus") {
             mhFourSectionTitle.textContent = current.title.rus;
             mhFourSectionText0.textContent = current.description.rus[0];
@@ -305,8 +308,15 @@ const mhRefreshDataForLocalization = () => {
             mhFourSectionText0.textContent = current.description.eng[0];
             mhFourSectionText1.textContent = current.description.eng[1];
         }
-
+    } else {
+        mhFourSectionTitle.textContent = sortedArray[score].title[mhSelectLang];
+        mhFourSectionText0.textContent = sortedArray[score].descriptionMobile[mhSelectLang][0];
+        mhFourSectionText1.textContent = sortedArray[score].descriptionMobile[mhSelectLang][1];
+        mhFourSectionText2.textContent = sortedArray[score].descriptionMobile[mhSelectLang][2];
     }
+
+
+
 }
 
 mhLang.addEventListener('click', () => {
@@ -889,8 +899,6 @@ const gapDivs = 1.7162471395881007;
 const startDivLeft = -18.87871853546911;
 const divWidth = 17.162471395881006;
 
-let sortedArray = []
-sortedArray = [...coursesData];
 
 const resetBlocks = () => {
     while (buffer.length > 0) {
@@ -1543,7 +1551,29 @@ const mhRefreshTheme = () => {
         choiceServecesSquare.style.border = "0.1144164vw var(--ltSeparationLine) solid"
         document.documentElement.style.setProperty('--svgColor', '#F3F3F3');
         document.documentElement.style.setProperty('--svgColorMobile', '#2E2E2E');
+        document.documentElement.style.setProperty('--svgColorMobileDark', '#D6D6D6');
+        document.documentElement.style.setProperty('--svgColorMobileDark2', '#1C1C1C');
+        mhCourseOutlineWrapper1.style.border = "0.11441647597254005vw solid rgba(232, 232, 232, 0.1)";
+        mhCourseOutlineWrapper2.style.border = "0.11441647597254005vw solid rgba(232, 232, 232, 0.1)";
+        mhCourseOutlineWrapper3.style.border = "0.11441647597254005vw solid rgba(232, 232, 232, 0.1)";
+        mhCourseOutlineWrapper4.style.border = "0.11441647597254005vw solid rgba(232, 232, 232, 0.1)";
+        mhCourseOutlineWrapper5.style.border = "0.11441647597254005vw solid rgba(232, 232, 232, 0.1)";
+        mhStudyChoosePaymantTrialSessionWrapper.style.border = "0.057208237986270026vw solid var(--dtText)";
+        mhStudyChoosePaymantCoursePrepaymentWrapper.style.border = "0.057208237986270026vw solid var(--dtText)";
+        mhStudyChoosePaymantAbstractsWrapper.style.border = "0.057208237986270026vw solid var(--dtText)";
+        mhStudyChoosePaymantFreePartWrapper.style.border = "0.057208237986270026vw solid var(--dtText)";
+        mhStudyChoosePaymantWrapperForBigSvg.style.border = "0.057208237986270026vw solid var(--dtText)";
     } else {
+        mhStudyChoosePaymantTrialSessionWrapper.style.border = "";
+        mhStudyChoosePaymantCoursePrepaymentWrapper.style.border = "";
+        mhStudyChoosePaymantAbstractsWrapper.style.border = "";
+        mhStudyChoosePaymantFreePartWrapper.style.border = "";
+        mhStudyChoosePaymantWrapperForBigSvg.style.border = "";
+        mhCourseOutlineWrapper1.style.border = "";
+        mhCourseOutlineWrapper2.style.border = "";
+        mhCourseOutlineWrapper3.style.border = "";
+        mhCourseOutlineWrapper4.style.border = "";
+        mhCourseOutlineWrapper5.style.border = "";
         nightModeMoonPath.style.fill = "#2E2E2E"
         languageSvgPath.style.fill = "#2E2E2E"
         switchButtonBackRect.style.fill = "#2E2E2E"
@@ -1577,6 +1607,8 @@ const mhRefreshTheme = () => {
         choiceServecesSquare.style.border = ""
         document.documentElement.style.setProperty('--svgColor', '#2E2E2E');
         document.documentElement.style.setProperty('--svgColorMobile', '#E8E8E8');
+        document.documentElement.style.setProperty('--svgColorMobileDark', '#2B2B2B');
+        document.documentElement.style.setProperty('--svgColorMobileDark2', '#E8E8E8');
     }
 }
 

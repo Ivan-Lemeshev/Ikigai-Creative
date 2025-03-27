@@ -6955,7 +6955,7 @@ const themeWrapper = {
             }
         }
     },
-    
+
     "mv-fourth-section-subtitle-courses-top-line": {
         styles: {
             light: {
@@ -7359,7 +7359,590 @@ const themeWrapper = {
         }
     },
 
+    "mh-four-section-text-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
 
+    "mh-four-section-title-top-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(90deg, #2E2E2E 35.77%, rgba(46, 46, 46, 0) 86.89%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(90deg, #D6D6D6 43.59%, rgba(46, 46, 46, 0) 100%)`
+            }
+        }
+    },
+
+    "mh-four-section-title-bottom-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(90deg, #2E2E2E 35.77%, rgba(46, 46, 46, 0) 86.89%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(90deg, #D6D6D6 43.59%, rgba(46, 46, 46, 0) 100%)`
+            }
+        }
+    },
+
+    "mh-four-section-left-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(210deg, #2E2E2E 51.98%, rgba(46, 46, 46, 0) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(210deg, #D6D6D6 51.98%, rgba(46, 46, 46, 0) 100%)`
+            }
+        }
+    },
+
+    "mh-four-section-others-services-top-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(90deg, #2E2E2E 43.59%, rgba(46, 46, 46, 0) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(90deg, #D6D6D6 43.59%, rgba(46, 46, 46, 0) 100%)`
+            }
+        }
+    },
+
+    "mh-four-section-others-services-bottom-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(90deg, #2E2E2E 43.59%, rgba(46, 46, 46, 0) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(90deg, #D6D6D6 43.59%, rgba(46, 46, 46, 0) 100%)`
+            }
+        }
+    },
+
+    "mh-most-popular-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-reviews-courses-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-releases-courses-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-specialization-courses-text": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-four-section-course-second-button-title-1": {
+        styles: {
+            light: {
+                color: "#000000",
+                background: ``
+            },
+            dark: {
+                color: "#FFFFFF",
+                background: ``
+            }
+        }
+    },
+
+    "mh-four-section-course-second-button-title-2": {
+        styles: {
+            light: {
+                color: "#000000",
+                background: ``
+            },
+            dark: {
+                color: "#FFFFFF",
+                background: ``
+            }
+        }
+    },
+
+    "mh-four-section-course-second-button-title-3": {
+        styles: {
+            light: {
+                color: "#000000",
+                background: ``
+            },
+            dark: {
+                color: "#FFFFFF",
+                background: ``
+            }
+        }
+    },
+
+    "mh-four-section-course-second-button-title-4": {
+        styles: {
+            light: {
+                color: "#000000",
+                background: ``
+            },
+            dark: {
+                color: "#FFFFFF",
+                background: ``
+            }
+        }
+    },
+
+    "mh-four-section-course-second-button-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-four-section-course-second-button-text-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-four-section-course-second-button-text-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-four-section-course-second-button-text-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-course-outline-weeks-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-course-outline-weeks-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-course-outline-weeks-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-course-outline-weeks-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-course-outline-weeks-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-course-outline-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-course-outline-text-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-course-outline-text-3": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-course-outline-text-4": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-course-outline-text-5": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-course-outline-wrapper-1": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(232, 232, 232, 0.35)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(28, 28, 28, 0.35)`
+            }
+        }
+    },
+
+    "mh-course-outline-wrapper-2": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(232, 232, 232, 0.35)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(28, 28, 28, 0.35)`
+            }
+        }
+    },
+
+    "mh-course-outline-wrapper-3": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(232, 232, 232, 0.35)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(28, 28, 28, 0.35)`
+            }
+        }
+    },
+
+    "mh-course-outline-wrapper-4": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(232, 232, 232, 0.35)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(28, 28, 28, 0.35)`
+            }
+        }
+    },
+
+    "mh-course-outline-wrapper-5": {
+        styles: {
+            light: {
+                color: "",
+                background: `rgba(232, 232, 232, 0.35)`
+            },
+            dark: {
+                color: "",
+                background: `rgba(28, 28, 28, 0.35)`
+            }
+        }
+    },
+
+    "mh-study-choose-paymant-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-study-choose-paymant-wrapper": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(90deg, rgba(243, 243, 243, 0) 0%, rgba(243, 243, 243, 0.94) 5%, rgba(243, 243, 243, 0.98) 30%, #F3F3F3 70%, rgba(243, 243, 243, 0.9) 90%, rgba(243, 243, 243, 0) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(90deg, rgba(28, 28, 28, 0) 0%, rgba(28, 28, 28, 0.94) 5%, rgba(28, 28, 28, 0.98) 30%, #1C1C1C 70%, rgba(28, 28, 28, 0.9) 90%, rgba(28, 28, 28, 0) 100%)`
+            }
+        }
+    },
+
+    "mh-study-choose-paymant-text-1": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-study-choose-paymant-text-2": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-course-outline-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-study-choose-paymant-top-title-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(90deg, #2E2E2E 43.59%, rgba(46, 46, 46, 0) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(90deg, #D6D6D6 43.59%, rgba(46, 46, 46, 0) 100%)`
+            }
+        }
+    },
+
+    "mh-study-choose-paymant-bottom-title-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `linear-gradient(90deg, #2E2E2E 43.59%, rgba(46, 46, 46, 0) 100%)`
+            },
+            dark: {
+                color: "",
+                background: `linear-gradient(90deg, #D6D6D6 43.59%, rgba(46, 46, 46, 0) 100%)`
+            }
+        }
+    },
+
+    "mh-study-choose-paymant-bottom-line": {
+        styles: {
+            light: {
+                color: "",
+                background: `var(--dtSeparationLine)`
+            },
+            dark: {
+                color: "",
+                background: `var(--ltSeparationLine)`
+            }
+        }
+    },
+
+    "mh-study-choose-paymant-trial-session-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-study-choose-paymant-course-prepayment-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-study-choose-paymant-abstracts-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
+
+    "mh-study-choose-paymant-free-part-title": {
+        styles: {
+            light: {
+                color: "var(--ltText)",
+                background: ``
+            },
+            dark: {
+                color: "var(--dtText)",
+                background: ``
+            }
+        }
+    },
 
 
 }
