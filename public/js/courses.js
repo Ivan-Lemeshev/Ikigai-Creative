@@ -1504,7 +1504,7 @@ const coursesData = [
             rus: "Начните использовать Notion на 100% уже сегодня!",
             eng: "Start using Notion to its full potential today!"
         },
-        cost: 15000,
+        cost: 20000,
         popularity: 280,
         MMR: 4.6,
         releasesData: "15.09.2025",
