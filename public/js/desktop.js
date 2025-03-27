@@ -2425,8 +2425,8 @@ const uploadNumbers = (amountPage, firstStart = false) => {
             newPage.style.opacity = "0";
         }
         newPage.textContent = index;
-        newPage.classList = "mv-number-of-page";
-        newPage.id = `mv-number-of-page-${index}`;
+        newPage.classList = "number-of-page";
+        newPage.id = `number-of-page-${index}`;
         newPage.addEventListener('click', () => {
             numberOfPage = index;
             visualVitrine();

@@ -25,7 +25,8 @@ let number = 0;
 let float = false;
 const choiceServecesSquare = document.getElementById("mv-choice-serveces-square");
 let course = false;
-
+let paymentCourse = false;
+let studyClicked = false;
 mvNavButton.addEventListener('click', () => {
     mvNavigationBlock.style.display = "block";
     setTimeout(() => {
@@ -199,6 +200,7 @@ const mvCentralTextsecondBlockLeftGradient = document.getElementById("mv-first-s
 const mvCentralTextsecondBlockRightGradient = document.getElementById("mv-first-section-subtitle-second-block-right");
 const mvFooterRus = document.getElementById("mv-footer-rus");
 const mvFooterEng = document.getElementById("mv-footer-eng");
+const mvCourseDescriptionTitle = document.getElementById("mv-course-description-title");
 
 
 const mvRefreshDataForLocalization = () => {
@@ -238,8 +240,7 @@ const mvRefreshDataForLocalization = () => {
 
     }
 
-    for (let index = 0; index < arrayPriceList.length; index++) {
-
+    if (!course) {
         if (mvSelectLang === "rus") {
             mvThirdSectionTitle.textContent = current.title.rus;
             mvThirdSectionText0.textContent = current.description.rus[0];
@@ -249,7 +250,28 @@ const mvRefreshDataForLocalization = () => {
             mvThirdSectionText0.textContent = current.description.eng[0];
             mvThirdSectionText1.textContent = current.description.eng[1];
         }
+    } else {
+        if (!studyClicked) {
+            mvThirdSectionTitle.textContent = sortedArray[score].title[mvSelectLang];
+            mvThirdSectionText0.textContent = sortedArray[score].descriptionMobile[mvSelectLang][0];
+            mvThirdSectionText1.textContent = sortedArray[score].descriptionMobile[mvSelectLang][1];
+            mvThirdSectionText2.textContent = sortedArray[score].descriptionMobile[mvSelectLang][2];
+        } else {
+            if (mvSelectLang === "eng") {
+                mvCourseDescriptionTitle.textContent = "Let's get started..."
+                mvThirdSectionText0.textContent = "We are delighted that you have chosen our course! We will do everything we can to ensure that your learning is effective and brings meaningful results.";
+                mvThirdSectionText1.textContent = "There is only one step left - choose where you want to start!";
+            } else {
+                mvCourseDescriptionTitle.textContent = "Давайте начнем..."
+                mvThirdSectionText0.textContent = "Мы рады, что вы выбрали наш курс! Мы сделаем всё, чтобы ваше обучение было эффективным и принесло значимые результаты.";
+                mvThirdSectionText1.textContent = "Остался всего один шаг — выберите, с чего хотите начать! ";
+
+            }
+        }
+
     }
+
+
 }
 
 const mvPriceListButton = document.getElementById("mv-price-list-button");
@@ -579,7 +601,6 @@ const mvChangeIdeasText = () => {
 
 mvChangeIdeasText();
 
-const mvCourseDescriptionTitle = document.getElementById("mv-course-description-title");
 
 const mvActivService = () => {
     mvPriceListButton.style.pointerEvents = "";
@@ -1086,21 +1107,22 @@ const mvFifvthSectionMainContentSubtitle = document.getElementById("mv-fifvth-se
 let mvActivNumberSave = null;
 
 const mvAllInputsHave = () => {
-    if (mvInputFirstName.value.length && mvInputLastName.value.length && mvInputPhone.value.length && mvInputEmail.value.length && isValidEmail(mvInputEmail.value) && mvActivNumberSave !== null || course === true) {
-        mvSubmitButton.classList = "mv-activ-button";
-        mvFifvthSectionImgPath.style.fill = "#0088CC";
-        applicationShow = true;
-        mvFifvthSectionMainContent.style.background = "rgba(0, 136, 204, 0.01)";
-        mvFifvthSectionMainContent.style.border = "0.4975124378109453vw solid rgba(46, 46, 46, 0.5)";
-        mvSubmitButton.style.border = "";
-        mvSubmitButton.style.background = "rgba(0, 154, 236, 0.05)";
-        mvSubmitButton.style.color = "#0088CC";
-        mvFifvthSectionMainContentSubtitle.textContent = "The service you're interested in:"
-        mvFifvthSectionMainContentSubtitle.style.color = "#2B2B2B"
-        mvFifvthSectionMainContentSubtitle.style.justifyContent = ""
-        return true;
-    }
-    return false;
+    const fillInputs = mvInputFirstName.value.length && mvInputLastName.value.length && mvInputPhone.value.length && mvInputEmail.value.length && isValidEmail(mvInputEmail.value)
+    if (!fillInputs) return false;
+    if (!studyClicked && mvActivNumberSave === null) return false;
+    mvSubmitButton.classList = "mv-activ-button";
+    mvFifvthSectionImgPath.style.fill = "#0088CC";
+    applicationShow = true;
+    mvFifvthSectionMainContent.style.background = "rgba(0, 136, 204, 0.01)";
+    mvFifvthSectionMainContent.style.border = "0.4975124378109453vw solid rgba(46, 46, 46, 0.5)";
+    mvSubmitButton.style.border = "";
+    mvSubmitButton.style.background = "rgba(0, 154, 236, 0.05)";
+    mvSubmitButton.style.color = "#0088CC";
+    mvFifvthSectionMainContentSubtitle.textContent = "The service you're interested in:"
+    mvFifvthSectionMainContentSubtitle.style.color = "#2B2B2B"
+    mvFifvthSectionMainContentSubtitle.style.justifyContent = ""
+    return true;
+
 }
 
 mvAllInputsHave()
@@ -1398,6 +1420,7 @@ mvThirdSectionButtonOrder.addEventListener('click', () => {
         mvThirdSectionWrapperImg.style.border = "";
 
     } else {
+        studyClicked = true;
         mvThirdSectionWrapperImg.style.border = "0.12437810945273632vw solid var(--accent)";
         mvThirdSectionWrapperImg.style.setProperty('--opacityBackroundThirdSectionImg', '1');
 
@@ -1512,6 +1535,7 @@ mvThirdSectionButtonOrder.addEventListener('click', () => {
 });
 
 mvCloseStudyButton.addEventListener('click', () => {
+    studyClicked = false;
     mvThirdSectionWrapperImg.style.setProperty('--opacityBackroundThirdSectionImg', '0');
     if (mvSelectTheme === "light") {
         mvThirdSectionWrapperImg.style.border = "";
@@ -1585,6 +1609,22 @@ mvCloseStudyButton.addEventListener('click', () => {
 });
 
 mvCourseOrderButtonModalWindowContentWrapper1.addEventListener('click', () => {
+    paymentCourse = false;
+
+    checkbox = false;
+    if (mvSelectTheme === "light") {
+        choiceServecesTitleText.style.color = "var(--ltText)";
+    } else {
+        choiceServecesTitleText.style.color = "var(--dtText)";
+    }
+
+    choiceServecesCheckbox.style.opacity = "";
+    setTimeout(() => {
+        choiceServecesCheckbox.style.display = "";
+        choiceServecesSquare.style.display = "";
+        choiceServecesSquare.style.opacity = "";
+    }, 300);
+
     window.scrollTo({
         top: window.innerWidth * 8.5,
         behavior: 'smooth'
@@ -1615,6 +1655,15 @@ mvCourseOrderButtonModalWindowContentWrapper2.addEventListener('click', () => {
         top: window.innerWidth * 8.5,
         behavior: 'smooth'
     });
+    paymentCourse = true;
+    checkbox = true;
+    choiceServecesTitleText.style.color = "var(--success)";
+    choiceServecesSquare.style.opacity = "0";
+    setTimeout(() => {
+        choiceServecesSquare.style.display = "none";
+        choiceServecesCheckbox.style.display = "block";
+        choiceServecesCheckbox.style.opacity = "1";
+    }, 300);
 
     mvFifvthSectionDropList.style.display = "none";
     mvChosenCourseWrapperBlock.style.display = "block";
@@ -1646,11 +1695,20 @@ mvCourseOrderButtonModalWindowContentWrapper2.addEventListener('click', () => {
 })
 
 mvCourseOrderButtonModalWindowContentWrapper3.addEventListener('click', () => {
-
+    paymentCourse = true;
     window.scrollTo({
         top: window.innerWidth * 8.5,
         behavior: 'smooth'
     });
+
+    checkbox = true;
+    choiceServecesTitleText.style.color = "var(--success)";
+    choiceServecesSquare.style.opacity = "0";
+    setTimeout(() => {
+        choiceServecesSquare.style.display = "none";
+        choiceServecesCheckbox.style.display = "block";
+        choiceServecesCheckbox.style.opacity = "1";
+    }, 300);
 
     mvFifvthSectionDropList.style.display = "none";
     mvChosenCourseWrapperBlock.style.display = "block";
@@ -1682,7 +1740,21 @@ mvCourseOrderButtonModalWindowContentWrapper3.addEventListener('click', () => {
 })
 
 mvCourseOrderButtonModalWindowContentWrapper4.addEventListener('click', () => {
+    checkbox = false;
+    paymentCourse = false;
 
+    if (mvSelectTheme === "light") {
+        choiceServecesTitleText.style.color = "var(--ltText)";
+    } else {
+        choiceServecesTitleText.style.color = "var(--dtText)";
+    }
+
+    choiceServecesCheckbox.style.opacity = "";
+    setTimeout(() => {
+        choiceServecesCheckbox.style.display = "";
+        choiceServecesSquare.style.display = "";
+        choiceServecesSquare.style.opacity = "";
+    }, 300);
     window.scrollTo({
         top: window.innerWidth * 8.5,
         behavior: 'smooth'
@@ -1731,96 +1803,192 @@ const sendToApplicationMainContentImgWrong = document.getElementById("mv-send-to
 
 
 mvSubmitButton.addEventListener('click', () => {
-    const data = {
-        text: `
-    First Name: ${mvInputFirstName.value}, 
-    Last Name: ${mvInputLastName.value}, 
-    Phone: ${mvInputPhone.value}, 
-    Email: ${mvInputEmail.value}, 
-    Service: ${arrayPriceList[mvActivNumber].title[mvSelectLang]},
-    Text: ${mvTextarea.value}`,
-        hasPrepaymant: checkbox,
-        service: `${arrayPriceList[mvActivNumber].title[mvSelectLang]}`,
-        price: arrayPriceList[arrayPriceList.map((category) => category.title[mvSelectLang]).findIndex(el => el === arrayPriceList[mvActivNumber].title[mvSelectLang])].prices[0].cost * 100,
-        email: mvInputEmail.value
-    };
-    if (applicationShow) {
-        sendToApplicationWrapper.style.display = "block";
-        setTimeout(() => {
-            sendToApplicationWrapper.style.opacity = "1";
+    if (!paymentCourse) {
+        const data = {
+            text: `
+        First Name: ${mvInputFirstName.value}, 
+        Last Name: ${mvInputLastName.value}, 
+        Phone: ${mvInputPhone.value}, 
+        Email: ${mvInputEmail.value}, 
+        Service: ${arrayPriceList[mvActivNumber].title[mvSelectLang]},
+        Text: ${mvTextarea.value}`,
+            hasPrepaymant: checkbox,
+            service: `${arrayPriceList[mvActivNumber].title[mvSelectLang]}`,
+            price: arrayPriceList[arrayPriceList.map((category) => category.title[mvSelectLang]).findIndex(el => el === arrayPriceList[mvActivNumber].title[mvSelectLang])].prices[0].cost * 100,
+            email: mvInputEmail.value
+        };
+        if (applicationShow) {
+            sendToApplicationWrapper.style.display = "block";
             setTimeout(() => {
-                sendToApplicationMainContent.style.opacity = "0"
+                sendToApplicationWrapper.style.opacity = "1";
                 setTimeout(() => {
-                    fetch(url, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json', // Указываем, что данные в формате JSON
-                        },
-                        body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
-                    })
-
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.url) {
-                                window.location.href = data.url;  // Переход на страницу оплаты
-                            }
+                    sendToApplicationMainContent.style.opacity = "0"
+                    setTimeout(() => {
+                        fetch(url, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json', // Указываем, что данные в формате JSON
+                            },
+                            body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
                         })
 
-                        .then(() => {
-                            if (mvSelectLang === "eng") {
-                                sendToApplicationMainContentTitle.textContent = "Successfully";
-                                sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
-                            } else {
-                                sendToApplicationMainContentTitle.textContent = "Успешно";
-                                sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
-                            }
-                            sendToApplicationMainContentImg.style.display = "none"
-                            sendToApplicationMainContentImgSecces.style.display = "block"
-                            sendToApplicationMainContent.style.border = "0.12437810945273632vw solid var(--success)";
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.url) {
+                                    window.location.href = data.url;  // Переход на страницу оплаты
+                                }
+                            })
 
-                            setTimeout(() => {
-                                sendToApplicationMainContent.style.opacity = "1"
-                            }, 300);
-                        }) //если все хорошо
+                            .then(() => {
+                                if (mvSelectLang === "eng") {
+                                    sendToApplicationMainContentTitle.textContent = "Successfully";
+                                    sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
+                                } else {
+                                    sendToApplicationMainContentTitle.textContent = "Успешно";
+                                    sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
+                                }
+                                sendToApplicationMainContentImg.style.display = "none"
+                                sendToApplicationMainContentImgSecces.style.display = "block"
+                                sendToApplicationMainContent.style.border = "0.12437810945273632vw solid var(--success)";
 
-                        .catch(() => {
-                            if (mvSelectLang === "eng") {
-                                sendToApplicationMainContentTitle.textContent = "Something went wrong";
-                                sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
-                            } else {
-                                sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
-                                sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
-                            }
-                            sendToApplicationMainContentImg.style.display = "none"
-                            sendToApplicationMainContentImgWrong.style.display = "block"
-                            sendToApplicationMainContent.style.border = "0.12437810945273632vw solid var(--bad)";
+                                setTimeout(() => {
+                                    sendToApplicationMainContent.style.opacity = "1"
+                                }, 300);
+                            }) //если все хорошо
+
+                            .catch(() => {
+                                if (mvSelectLang === "eng") {
+                                    sendToApplicationMainContentTitle.textContent = "Something went wrong";
+                                    sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
+                                } else {
+                                    sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
+                                    sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
+                                }
+                                sendToApplicationMainContentImg.style.display = "none"
+                                sendToApplicationMainContentImgWrong.style.display = "block"
+                                sendToApplicationMainContent.style.border = "0.12437810945273632vw solid var(--bad)";
 
 
-                            setTimeout(() => {
-                                sendToApplicationMainContent.style.opacity = "1"
-                            }, 300);
-                        }) // если все плохо
+                                setTimeout(() => {
+                                    sendToApplicationMainContent.style.opacity = "1"
+                                }, 300);
+                            }) // если все плохо
 
-                    setTimeout(() => {
-                        sendToApplicationWrapper.style.opacity = "";
                         setTimeout(() => {
-                            sendToApplicationWrapper.style.display = "";
-                            if (mvSelectLang === "eng") {
-                                sendToApplicationMainContentTitle.textContent = "Sending an application";
-                                sendToApplicationMainContentText.textContent = "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds..."
-                            } else {
-                                sendToApplicationMainContentTitle.textContent = "Отправляем вашу заявку";
-                                sendToApplicationMainContentText.textContent = "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд..."
-                            }
-                            sendToApplicationMainContent.style.border = "";
-                            sendToApplicationMainContentImgWrong.style.display = "";
-                            sendToApplicationMainContentImgSecces.style.display = "";
-                            sendToApplicationMainContentImg.style.display = "";
-                        }, 300);
-                    }, 3000);
-                }, 300);
-            }, 3000);
-        }, 300);
+                            sendToApplicationWrapper.style.opacity = "";
+                            setTimeout(() => {
+                                sendToApplicationWrapper.style.display = "";
+                                if (mvSelectLang === "eng") {
+                                    sendToApplicationMainContentTitle.textContent = "Sending an application";
+                                    sendToApplicationMainContentText.textContent = "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds..."
+                                } else {
+                                    sendToApplicationMainContentTitle.textContent = "Отправляем вашу заявку";
+                                    sendToApplicationMainContentText.textContent = "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд..."
+                                }
+                                sendToApplicationMainContent.style.border = "";
+                                sendToApplicationMainContentImgWrong.style.display = "";
+                                sendToApplicationMainContentImgSecces.style.display = "";
+                                sendToApplicationMainContentImg.style.display = "";
+                            }, 300);
+                        }, 3000);
+                    }, 300);
+                }, 3000);
+            }, 300);
+        }
+    } else {
+        const data = {
+            text: `
+        First Name: ${mvInputFirstName.value}, 
+        Last Name: ${mvInputLastName.value}, 
+        Phone: ${mvInputPhone.value}, 
+        Email: ${mvInputEmail.value}, 
+        Service: ${sortedArray[score].title[mvSelectLang]},
+        HasPrepaymant: ${checkbox},
+        Text: ${mvTextarea.value}`,
+            hasPrepaymant: checkbox,
+            service: `${sortedArray[score].title[mvSelectLang]}`,
+            price: sortedArray[sortedArray.map((category) => category.title[mvSelectLang]).findIndex(el => el === sortedArray[score].title[mvSelectLang])].cost,
+            email: mvInputEmail.value
+        };
+        if (applicationShow) {
+            sendToApplicationWrapper.style.display = "block";
+            setTimeout(() => {
+                sendToApplicationWrapper.style.opacity = "1";
+                setTimeout(() => {
+                    sendToApplicationMainContent.style.opacity = "0"
+                    setTimeout(() => {
+                        fetch(url, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json', // Указываем, что данные в формате JSON
+                            },
+                            body: JSON.stringify({ data: data }) // Отправляем данные в теле запроса
+                        })
+
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.url) {
+                                    window.location.href = data.url;  // Переход на страницу оплаты
+                                }
+                            })
+
+                            .then(() => {
+                                if (mvSelectLang === "eng") {
+                                    sendToApplicationMainContentTitle.textContent = "Successfully";
+                                    sendToApplicationMainContentText.textContent = "We have received your application, our experts will contact you with in 1-2 working days."
+                                } else {
+                                    sendToApplicationMainContentTitle.textContent = "Успешно";
+                                    sendToApplicationMainContentText.textContent = "Мы получили вашу заявку, в течение 1-2 рабочих дней наши специалисты свяжутся с вами."
+                                }
+                                sendToApplicationMainContentImg.style.display = "none"
+                                sendToApplicationMainContentImgSecces.style.display = "block"
+                                sendToApplicationMainContent.style.border = "0.12437810945273632vw solid var(--success)";
+
+                                setTimeout(() => {
+                                    sendToApplicationMainContent.style.opacity = "1"
+                                }, 300);
+                            }) //если все хорошо
+
+                            .catch(() => {
+                                if (mvSelectLang === "eng") {
+                                    sendToApplicationMainContentTitle.textContent = "Something went wrong";
+                                    sendToApplicationMainContentText.textContent = "We were unable to register your application, please contact us by phone or social media."
+                                } else {
+                                    sendToApplicationMainContentTitle.textContent = "Что-то пошло не так";
+                                    sendToApplicationMainContentText.textContent = "Мы не смогли зарегистрировать вашу заявку, пожалуйста, свяжитесь с нами по телефону или через социальные сети."
+                                }
+                                sendToApplicationMainContentImg.style.display = "none"
+                                sendToApplicationMainContentImgWrong.style.display = "block"
+                                sendToApplicationMainContent.style.border = "0.12437810945273632vw solid var(--bad)";
+
+
+                                setTimeout(() => {
+                                    sendToApplicationMainContent.style.opacity = "1"
+                                }, 300);
+                            }) // если все плохо
+
+                        setTimeout(() => {
+                            sendToApplicationWrapper.style.opacity = "";
+                            setTimeout(() => {
+                                sendToApplicationWrapper.style.display = "";
+                                if (mvSelectLang === "eng") {
+                                    sendToApplicationMainContentTitle.textContent = "Sending an application";
+                                    sendToApplicationMainContentText.textContent = "The data you specified is being transferred to the server, please wait.Usually it only takes a couple of seconds..."
+                                } else {
+                                    sendToApplicationMainContentTitle.textContent = "Отправляем вашу заявку";
+                                    sendToApplicationMainContentText.textContent = "Указанные вами данные передаются на сервер, пожалуйста, подождите. Обычно это занимает всего пару секунд..."
+                                }
+                                sendToApplicationMainContent.style.border = "";
+                                sendToApplicationMainContentImgWrong.style.display = "";
+                                sendToApplicationMainContentImgSecces.style.display = "";
+                                sendToApplicationMainContentImg.style.display = "";
+                            }, 300);
+                        }, 3000);
+                    }, 300);
+                }, 3000);
+            }, 300);
+        }
+
     }
 })
 
@@ -1891,7 +2059,6 @@ const courseButtonMoreThirdQuestionText3 = document.getElementById("mv-course-bu
 const courseButtonMoreThirdQuestionText4 = document.getElementById("mv-course-button-more-third-question-text-4");
 
 
-let paymentCourse = false;
 let numberOfPage = 1;
 
 
@@ -2637,7 +2804,7 @@ mvButtonMoreLowerPartButtons2.addEventListener('click', () => {
         func();
     } else {
         mvThirdSectionButtonOrder.style.opacity = "0";
-        
+
         mvCourseDescriptionImg.style.opacity = "";
         mvCourseComplexityImg.style.opacity = "";
         mvCourseSuitableImg.style.opacity = "";

@@ -1696,6 +1696,9 @@
             line-height: 4.179104477611941vw;
             color: var(--ltText);
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             overflow: visible;
             transition: opacity 0.3s ease-in-out;
         }
@@ -2067,6 +2070,7 @@
     width: 18.90547263681592vw;
     height: 2.9850746268656714vw;
     overflow: visible;
+    text-align: center;
 }
 
 #mv-course-order-button-modal-window-content-img-subtitle-2 {
