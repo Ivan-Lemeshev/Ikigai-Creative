@@ -771,11 +771,6 @@ const localizationWrapper = {
         eng: "Contacts",     
     },
 
-    "mh-five-section-title-interesting": {
-        rus: "Интересует",
-        eng: "Interesting",     
-    },
-
     "mh-five-section-interesting-change-button": {
         rus: "Изменить",
         eng: "Change",     

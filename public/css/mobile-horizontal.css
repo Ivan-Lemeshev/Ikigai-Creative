@@ -994,7 +994,7 @@
         position: absolute;
         top: 26.65903890160183vw;
         right: 19.336384439359268vw;
-        width: 13.729977116704806vw;
+        width: 14.729977116704806vw;
         height: 4.805491990846682vw;
         display: flex;
         align-items: center;
@@ -1991,6 +1991,7 @@
     margin-left: 6.979405034324943vw;
     display: none;
     opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 
     &>h4 {
         width: 100%;
@@ -2021,4 +2022,386 @@
 #mh-four-section-course-second-button-wrapper-3,
 #mh-four-section-course-second-button-wrapper-4 {
     margin-top: 2.2883295194508007vw;
+}
+
+
+#mh-course-button-more-second-question-base-img {
+    width: 10.434782608695652vw;
+    height: 0.9153318077803204vw;
+    position: absolute;
+    top: 9.725400457665904vw;
+    left: 24.94279176201373vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    object-fit: contain;
+}
+
+#mh-course-button-more-second-question-base-img.complexity-1 rect[fill="url(#mh-paint1_linear_5974_359)"],
+#mh-course-button-more-second-question-base-img.complexity-1 rect[fill="url(#mh-paint2_linear_5974_359)"],
+#mh-course-button-more-second-question-base-img.complexity-1 rect[fill="url(#mh-paint3_linear_5974_359)"],
+#mh-course-button-more-second-question-base-img.complexity-1 path[fill="url(#mh-paint4_linear_5974_359)"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mh-course-button-more-second-question-base-img.complexity-2 rect[fill="url(#mh-paint2_linear_5974_359)"],
+#mh-course-button-more-second-question-base-img.complexity-2 rect[fill="url(#mh-paint3_linear_5974_359)"],
+#mh-course-button-more-second-question-base-img.complexity-2 path[fill="url(#mh-paint4_linear_5974_359)"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mh-course-button-more-second-question-base-img.complexity-3 rect[fill="url(#mh-paint3_linear_5974_359)"],
+#mh-course-button-more-second-question-base-img.complexity-3 path[fill="url(#mh-paint4_linear_5974_359)"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mh-course-button-more-second-question-base-img.complexity-4 path[fill="url(#mh-paint4_linear_5974_359)"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+#mh-course-outline-title {
+    position: absolute;
+    top: 9.267734553775744vw;
+    left: 10.297482837528605vw;
+    width: 45.766590389016024vw;
+    height: 1.8306636155606408vw;
+    overflow: visible;
+    font-weight: 400;
+    font-size: 1.8306636155606408vw;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.mh-course-outline-wrapper {
+    width: 48.51258581235698vw;
+    height: 6.407322654462242vw;
+    position: absolute;
+    left: 10.297482837528605vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border: 0.11441647597254005vw solid rgba(46, 46, 46, 0.1);
+    background: rgba(232, 232, 232, 0.35);
+}
+
+.mh-course-outline-weeks {
+    width: 14.187643020594965vw;
+    height: 1.3729977116704806vw;
+    overflow: visible;
+    font-size: 1.3729977116704806vw;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+    margin-top: 1.3729977116704806vw;
+    margin-left: 1.3729977116704806vw;
+}
+
+.mh-course-outline-text {
+    width: 45.766590389016024vw;
+    height: 1.6018306636155606vw;
+    overflow: visible;
+    margin-top: 0.6864988558352403vw;
+    margin-left: 1.3729977116704806vw;
+    font-weight: 350;
+    font-size: 1.6018306636155606vw;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+}
+
+#mh-course-outline-wrapper-1 {
+    top: 12.929061784897025vw;
+}
+
+#mh-course-outline-wrapper-2 {
+    top: 21.16704805491991vw;
+}
+
+#mh-course-outline-wrapper-3 {
+    top: 29.40503432494279vw;
+}
+
+#mh-course-outline-wrapper-4 {
+    top: 37.64302059496568vw;
+}
+
+#mh-course-outline-wrapper-5 {
+    top: 45.881006864988564vw;
+}
+
+#mh-five-section-title-interesting-course-img {
+    width: 100%;
+    height: 100%;
+}
+
+#mh-study-choose-paymant-wrapper {
+    width: 100vw;
+    height: 45.9954233409611vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    background: linear-gradient(90deg, rgba(243, 243, 243, 0) 0%, rgba(243, 243, 243, 0.94) 5%, rgba(243, 243, 243, 0.98) 30%, #F3F3F3 70%, rgba(243, 243, 243, 0.9) 90%, rgba(243, 243, 243, 0) 100%);
+    backdrop-filter: blur(0.4576659038901602vw);
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mh-study-choose-paymant-wrapper-for-svg {
+    position: absolute;
+    width: 4.576659038901601vw;
+    height: 4.576659038901601vw;
+    top: 2.745995423340961vw;
+    left: 5.720823798627003vw;
+    border-top-left-radius: 0.9153318077803204vw;
+    border-bottom-left-radius: 0.9153318077803204vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dtSeparationLine);
+}
+
+#mh-study-choose-paymant-svg {
+    width: 3.4324942791762014vw;
+    height: 2.1533180778032035vw;
+}
+
+#mh-study-choose-paymant-top-title-line {
+    width: 80.54919908466819vw;
+    height: 0.057208237986270026vw;
+    background: linear-gradient(90deg, #2E2E2E 43.59%, rgba(46, 46, 46, 0) 100%);
+    position: absolute;
+    top: 2.75vw;
+    left: 10.297482837528605vw;
+}
+
+#mh-study-choose-paymant-close {
+    position: absolute;
+    right: 5.720823798627003vw;
+    top: 3.318077803203661vw;
+    width: 3.4324942791762014vw;
+    height: 3.4324942791762014vw;
+}
+
+#mh-study-choose-paymant-bottom-title-line {
+    width: 80.54919908466819vw;
+    height: 0.057208237986270026vw;
+    background: linear-gradient(90deg, #2E2E2E 43.59%, rgba(46, 46, 46, 0) 100%);
+    position: absolute;
+    top: 7.25vw;
+    left: 10.297482837528605vw;
+}
+
+#mh-study-choose-paymant-title {
+    position: absolute;
+    top: 3.6613272311212817vw;
+    left: 12.585812356979407vw;
+    width: 22.36613272311213vw;
+    height: 2.745995423340961vw;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.059496567505721vw;
+    overflow: visible;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+}
+
+#mh-study-choose-paymant-left-line {
+    position: absolute;
+    top: 9.610983981693364vw;
+    left: 5.720823798627003vw;
+    width: 4.576659038901601vw;
+    height: 33.29519450800915vw;
+    border-top-left-radius: 0.9153318077803204vw;
+    border-bottom-left-radius: 0.9153318077803204vw;
+    background: var(--dtSeparationLine);
+}
+
+#mh-study-choose-paymant-text-1 {
+    position: absolute;
+    top: 9.610983981693364vw;
+    left: 12.585812356979407vw;
+    width: 51.94508009153318vw;
+    height: 7.688787185354691vw;
+    font-weight: 400;
+    font-size: 1.8306636155606408vw;
+    line-height: 140%;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+}
+
+#mh-study-choose-paymant-text-2 {
+    position: absolute;
+    top: 19.862700228832953vw;
+    left: 12.585812356979407vw;
+    width: 51.94508009153318vw;
+    height: 5.1258581235697935vw;
+    font-weight: 400;
+    font-size: 1.8306636155606408vw;
+    line-height: 140%;
+    letter-spacing: 0.1em;
+    color: var(--ltText);
+}
+
+#mh-study-choose-paymant-bottom-line {
+    position: absolute;
+    width: 51.94508009153318vw;
+    height: 0.057208237986270026vw;
+    top: 42.90617848970252vw;
+    left: 12.585812356979407vw;
+}
+
+#mh-study-choose-paymant-wrapper-for-big-svg {
+    position: absolute;
+    top: 9.610983981693364vw;
+    right: 5.720823798627003vw;
+    width: 27.45995423340961vw;
+    height: 33.29519450800915vw;
+    border: 0.057208237986270026vw solid var(--dtSeparationLine);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &>svg {
+        width: 20.59496567505721vw;
+        height: 20.59496567505721vw;
+    }
+}
+
+#mh-study-choose-paymant-trial-session-wrapper {
+    width: 11.441647597254006vw;
+    height: 11.441647597254006vw;
+    border: 0.057208237986270026vw solid var(--dtSeparationLine);
+    position: absolute;
+    top: 28.03203661327231vw;
+    left: 12.585812356979407vw;
+
+    &>svg {
+        width: 6.864988558352403vw;
+        height: 6.864988558352403vw;
+        position: absolute;
+        top: 0.8009153318077803vw;
+        left: 2.2883295194508007vw;
+    }
+
+    &>h4 {
+        width: 10.183066361556065vw;
+        height: 2.2883295194508007vw;
+        position: absolute;
+        bottom: 1.0297482837528604vw;
+        left: 0.5720823798627002vw;
+        color: var(--ltText);
+        font-weight: 350;
+        font-size: 1.1441647597254003vw;
+        letter-spacing: 0.1em;
+        text-align: center;
+    }
+}
+
+#mh-study-choose-paymant-course-prepayment-wrapper {
+    width: 11.441647597254006vw;
+    height: 11.441647597254006vw;
+    border: 0.057208237986270026vw solid var(--dtSeparationLine);
+    position: absolute;
+    top: 28.03203661327231vw;
+    left: 26.08695652173913vw;
+
+    &>svg {
+        width: 6.864988558352403vw;
+        height: 6.864988558352403vw;
+        position: absolute;
+        top: 0.8009153318077803vw;
+        left: 2.2883295194508007vw;
+    }
+
+    &>h4 {
+        width: 10.183066361556065vw;
+        height: 2.2883295194508007vw;
+        position: absolute;
+        bottom: 1.0297482837528604vw;
+        left: 0.5720823798627002vw;
+        color: var(--ltText);
+        font-weight: 350;
+        font-size: 1.1441647597254003vw;
+        letter-spacing: 0.1em;
+        overflow: visible;
+        text-align: center;
+    }
+}
+
+#mh-study-choose-paymant-abstracts-wrapper {
+    width: 11.441647597254006vw;
+    height: 11.441647597254006vw;
+    border: 0.057208237986270026vw solid var(--dtSeparationLine);
+    position: absolute;
+    top: 28.03203661327231vw;
+    left: 39.588100686498855vw;
+
+    &>svg {
+        width: 6.864988558352403vw;
+        height: 6.864988558352403vw;
+        position: absolute;
+        top: 0.8009153318077803vw;
+        left: 2.2883295194508007vw;
+    }
+
+    &>h4 {
+        width: 10.183066361556065vw;
+        height: 2.2883295194508007vw;
+        position: absolute;
+        bottom: 1.0297482837528604vw;
+        left: 0.5720823798627002vw;
+        color: var(--ltText);
+        font-weight: 350;
+        font-size: 1.1441647597254003vw;
+        letter-spacing: 0.1em;
+        text-align: center;
+    }
+}
+
+#mh-study-choose-paymant-free-part-wrapper {
+    width: 11.441647597254006vw;
+    height: 11.441647597254006vw;
+    border: 0.057208237986270026vw solid var(--dtSeparationLine);
+    position: absolute;
+    top: 28.03203661327231vw;
+    left: 53.08924485125858vw;
+
+    &>svg {
+        width: 6.864988558352403vw;
+        height: 6.864988558352403vw;
+        position: absolute;
+        top: 0.8009153318077803vw;
+        left: 2.2883295194508007vw;
+    }
+
+    &>h4 {
+        width: 10.183066361556065vw;
+        height: 2.2883295194508007vw;
+        position: absolute;
+        bottom: 1.0297482837528604vw;
+        left: 0.5720823798627002vw;
+        color: var(--ltText);
+        font-weight: 350;
+        font-size: 1.1441647597254003vw;
+        letter-spacing: 0.1em;
+        text-align: center;
+    }
+}
+
+#mh-study-choose-paymant-trial-session-dark {
+    display: none;
+}
+
+#mh-study-choose-paymant-course-prepayment-dark {
+    display: none;
+}
+
+#mh-study-choose-paymant-abstracts-dark {
+    display: none;
 }

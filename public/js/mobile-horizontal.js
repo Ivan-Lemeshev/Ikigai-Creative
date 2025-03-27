@@ -325,6 +325,28 @@ const mhFourSectionButtonOfPriceList = document.getElementById("mh-four-section-
 const mhFourPriceListWrapper = document.getElementById("mh-price-list-wrapper");
 const mhFourPriceListXMark = document.getElementById("mh-price-list-x-mark");
 
+
+const mhCourseOutlineWrapper1 = document.getElementById("mh-course-outline-wrapper-1");
+const mhCourseOutlineWeeks1 = document.getElementById("mh-course-outline-weeks-1");
+const mhCourseOutlineText1 = document.getElementById("mh-course-outline-text-1");
+
+const mhCourseOutlineWrapper2 = document.getElementById("mh-course-outline-wrapper-2");
+const mhCourseOutlineWeeks2 = document.getElementById("mh-course-outline-weeks-2");
+const mhCourseOutlineText2 = document.getElementById("mh-course-outline-text-2");
+
+const mhCourseOutlineWrapper3 = document.getElementById("mh-course-outline-wrapper-3");
+const mhCourseOutlineWeeks3 = document.getElementById("mh-course-outline-weeks-3");
+const mhCourseOutlineText3 = document.getElementById("mh-course-outline-text-3");
+
+const mhCourseOutlineWrapper4 = document.getElementById("mh-course-outline-wrapper-4");
+const mhCourseOutlineWeeks4 = document.getElementById("mh-course-outline-weeks-4");
+const mhCourseOutlineText4 = document.getElementById("mh-course-outline-text-4");
+
+const mhCourseOutlineWrapper5 = document.getElementById("mh-course-outline-wrapper-5");
+const mhCourseOutlineWeeks5 = document.getElementById("mh-course-outline-weeks-5");
+const mhCourseOutlineText5 = document.getElementById("mh-course-outline-text-5");
+
+
 mhFourSectionButtonOfPriceList.addEventListener('click', () => {
     if (!course) {
         mhFourPriceListWrapper.style.display = "block";
@@ -334,7 +356,19 @@ mhFourSectionButtonOfPriceList.addEventListener('click', () => {
             mhFourPriceListWrapper.style.opacity = "1";
         }, 1);
     } else {
-        console.log("outline")
+        mhCourseOutlineWeeks1.textContent = sortedArray[score].planOfLessons[mhSelectLang][0].duration;
+        mhCourseOutlineWeeks2.textContent = sortedArray[score].planOfLessons[mhSelectLang][1].duration;
+        mhCourseOutlineWeeks3.textContent = sortedArray[score].planOfLessons[mhSelectLang][2].duration;
+        mhCourseOutlineWeeks4.textContent = sortedArray[score].planOfLessons[mhSelectLang][3].duration;
+        mhCourseOutlineWeeks5.textContent = sortedArray[score].planOfLessons[mhSelectLang][4].duration;
+
+        mhCourseOutlineText1.textContent = sortedArray[score].planOfLessons[mhSelectLang][0].title;
+        mhCourseOutlineText2.textContent = sortedArray[score].planOfLessons[mhSelectLang][1].title;
+        mhCourseOutlineText3.textContent = sortedArray[score].planOfLessons[mhSelectLang][2].title;
+        mhCourseOutlineText4.textContent = sortedArray[score].planOfLessons[mhSelectLang][3].title;
+        mhCourseOutlineText5.textContent = sortedArray[score].planOfLessons[mhSelectLang][4].title;
+
+
         mhFourSectionCourseSecondButtonWrapper1.style.opacity = "";
         mhFourSectionCourseSecondButtonWrapper2.style.opacity = "";
         mhFourSectionCourseSecondButtonWrapper3.style.opacity = "";
@@ -355,7 +389,15 @@ mhFourSectionButtonOfPriceList.addEventListener('click', () => {
         mhFourSectionButtonOfPriceList.style.opacity = "0.4";
         mhFourSectionButtonOfPriceList.style.pointerEvents = "none";
 
+        courseButtonMoreSecondQuestionBaseImg.style.opacity = "";
+
         setTimeout(() => {
+            mhCourseOutlineWrapper1.style.opacity = "1";
+            mhCourseOutlineWrapper2.style.opacity = "1";
+            mhCourseOutlineWrapper3.style.opacity = "1";
+            mhCourseOutlineWrapper4.style.opacity = "1";
+            mhCourseOutlineWrapper5.style.opacity = "1";
+            mhCourseOutlineTitle.style.opacity = "1";
             mhFourSectionCourseSecondButtonWrapper1.style.display = "";
             mhFourSectionCourseSecondButtonWrapper2.style.display = "";
             mhFourSectionCourseSecondButtonWrapper3.style.display = "";
@@ -405,14 +447,18 @@ thActivService();
 
 let mhNumberOfService = 0;
 let mhSelectCategory = "";
+const titleInterestingTitle = document.getElementById("mh-five-section-title-interesting");
 const titleInterestingName = document.getElementById("mh-five-section-title-interesting-name");
 const mhTextarea = document.getElementById("mh-textarea");
 const buttonOrder = document.getElementById("mh-four-section-button-order");
 const buttonReview = document.getElementById("mh-four-section-button-review");
 const buttonConsultation = document.getElementById("mh-four-section-button-consultation");
 const buttonQuestion = document.getElementById("mh-four-section-button-question");
+const mhFiveSectionTitleInterestingServiceWrapper = document.getElementById("mh-five-section-title-interesting-service");
 const mhFiveSectionTitleInterestingService = document.getElementById("mh-five-section-title-interesting-service-img");
 const mhFourSectionText2 = document.getElementById("mh-four-section-text-2");
+
+const mhCourseOutlineTitle = document.getElementById("mh-course-outline-title");
 
 const mhFourSectionCourseSecondButtonWrapper1 = document.getElementById("mh-four-section-course-second-button-wrapper-1");
 const mhFourSectionCourseSecondButtonTitle1 = document.getElementById("mh-four-section-course-second-button-title-1");
@@ -429,6 +475,16 @@ const mhFourSectionCourseSecondButtonText3 = document.getElementById("mh-four-se
 const mhFourSectionCourseSecondButtonWrapper4 = document.getElementById("mh-four-section-course-second-button-wrapper-4");
 const mhFourSectionCourseSecondButtonTitle4 = document.getElementById("mh-four-section-course-second-button-title-4");
 const mhFourSectionCourseSecondButtonText4 = document.getElementById("mh-four-section-course-second-button-text-4");
+const courseButtonMoreSecondQuestionBaseImg = document.getElementById("mh-course-button-more-second-question-base-img");
+
+const mhStudyChoosePaymantWrapper = document.getElementById("mh-study-choose-paymant-wrapper");
+const mhStudyChoosePaymantClose = document.getElementById("mh-study-choose-paymant-close");
+const mhStudyChoosePaymantWrapperForBigSvg = document.getElementById("mh-study-choose-paymant-wrapper-for-big-svg");
+const mhStudyChoosePaymantTrialSessionWrapper = document.getElementById("mh-study-choose-paymant-trial-session-wrapper");
+const mhStudyChoosePaymantTitle = document.getElementById("mh-study-choose-paymant-title");
+const mhStudyChoosePaymantCoursePrepaymentWrapper = document.getElementById("mh-study-choose-paymant-course-prepayment-wrapper");
+const mhStudyChoosePaymantAbstractsWrapper = document.getElementById("mh-study-choose-paymant-abstracts-wrapper");
+const mhStudyChoosePaymantFreePartWrapper = document.getElementById("mh-study-choose-paymant-free-part-wrapper");
 
 const mhSetupAndTranslateForSelectService = (event) => {
     event.preventDefault();
@@ -456,15 +512,176 @@ const mhSetupAndTranslateForSelectService = (event) => {
     }
 }
 
-
 buttonOrder.addEventListener('click', (event) => {
+    event.preventDefault();
     if (!course) {
-        event.preventDefault();
         mhNumberOfService = mhActivNumber;
         mhSetupAndTranslateForSelectService(event);
         mhTextarea.textContent = textForApplication.eng[0]
+        titleInterestingName.textContent = arrayPriceList[mhActivNumber].title[mhSelectLang]
+        if (mhSelectLang === "eng") {
+            titleInterestingTitle.textContent = "Interesting";
+        } else {
+            titleInterestingTitle.textContent = "Интересует";
+        }
     } else {
-        console.log("study")
+
+        mhStudyChoosePaymantWrapper.style.display = "block";
+        mhStudyChoosePaymantTitle.textContent = sortedArray[score].title[mhSelectLang]
+        setTimeout(() => {
+            mhStudyChoosePaymantWrapper.style.opacity = "1";
+        }, 1);
+
+        const parser = new DOMParser();
+        const divImg = parser.parseFromString(sortedArray[score].svgCode, "image/svg+xml").documentElement;
+        divImg.id = `mh-study-choose-paymant-big-svg`;
+        let oldSvgElement = document.getElementById(`mh-study-choose-paymant-big-svg`);
+        if (oldSvgElement) {
+            mhStudyChoosePaymantWrapperForBigSvg.removeChild(oldSvgElement);
+        };
+        mhStudyChoosePaymantWrapperForBigSvg.appendChild(divImg);
+
+
+    }
+})
+
+mhStudyChoosePaymantClose.addEventListener('click', () => {
+    mhStudyChoosePaymantWrapper.style.opacity = "";
+
+    setTimeout(() => {
+        mhStudyChoosePaymantWrapper.style.display = "";
+    }, 300);
+})
+
+mhStudyChoosePaymantTrialSessionWrapper.addEventListener('click', () => {
+
+    mhStudyChoosePaymantWrapper.style.opacity = "";
+
+    setTimeout(() => {
+        mhStudyChoosePaymantWrapper.style.display = "";
+    }, 300);
+
+    window.scrollTo({
+        top: window.innerWidth * 2.25,
+        behavior: 'smooth'
+    });
+
+    mhFiveSectionTitleInterestingService.style.display = "none";
+
+    const parser = new DOMParser();
+    const divImg = parser.parseFromString(sortedArray[score].svgCode, "image/svg+xml").documentElement;
+    divImg.id = `mh-five-section-title-interesting-course-img`;
+    let oldSvgElement = document.getElementById(`mh-five-section-title-interesting-course-img`);
+    if (oldSvgElement) {
+        mhFiveSectionTitleInterestingServiceWrapper.removeChild(oldSvgElement);
+    };
+    mhFiveSectionTitleInterestingServiceWrapper.appendChild(divImg);
+
+    if (mhSelectLang === "eng") {
+        titleInterestingName.textContent = sortedArray[score].title[mhSelectLang] + ": " + "Trial session";
+        titleInterestingTitle.textContent = "Course";
+    } else {
+        titleInterestingName.textContent = sortedArray[score].title[mhSelectLang] + ": " + "Пробное занятие";
+        titleInterestingTitle.textContent = "Курс";
+    }
+})
+
+mhStudyChoosePaymantCoursePrepaymentWrapper.addEventListener('click', () => {
+
+    mhStudyChoosePaymantWrapper.style.opacity = "";
+
+    setTimeout(() => {
+        mhStudyChoosePaymantWrapper.style.display = "";
+    }, 300);
+
+    window.scrollTo({
+        top: window.innerWidth * 2.25,
+        behavior: 'smooth'
+    });
+
+    mhFiveSectionTitleInterestingService.style.display = "none";
+
+    const parser = new DOMParser();
+    const divImg = parser.parseFromString(sortedArray[score].svgCode, "image/svg+xml").documentElement;
+    divImg.id = `mh-five-section-title-interesting-course-img`;
+    let oldSvgElement = document.getElementById(`mh-five-section-title-interesting-course-img`);
+    if (oldSvgElement) {
+        mhFiveSectionTitleInterestingServiceWrapper.removeChild(oldSvgElement);
+    };
+    mhFiveSectionTitleInterestingServiceWrapper.appendChild(divImg);
+
+    if (mhSelectLang === "eng") {
+        titleInterestingName.textContent = sortedArray[score].title[mhSelectLang] + ": " + "Course prepayment";
+        titleInterestingTitle.textContent = "Course";
+    } else {
+        titleInterestingName.textContent = sortedArray[score].title[mhSelectLang] + ": " + "Предоплата курса";
+        titleInterestingTitle.textContent = "Курс";
+    }
+})
+
+mhStudyChoosePaymantAbstractsWrapper.addEventListener('click', () => {
+
+    mhStudyChoosePaymantWrapper.style.opacity = "";
+
+    setTimeout(() => {
+        mhStudyChoosePaymantWrapper.style.display = "";
+    }, 300);
+
+    window.scrollTo({
+        top: window.innerWidth * 2.25,
+        behavior: 'smooth'
+    });
+
+    mhFiveSectionTitleInterestingService.style.display = "none";
+
+    const parser = new DOMParser();
+    const divImg = parser.parseFromString(sortedArray[score].svgCode, "image/svg+xml").documentElement;
+    divImg.id = `mh-five-section-title-interesting-course-img`;
+    let oldSvgElement = document.getElementById(`mh-five-section-title-interesting-course-img`);
+    if (oldSvgElement) {
+        mhFiveSectionTitleInterestingServiceWrapper.removeChild(oldSvgElement);
+    };
+    mhFiveSectionTitleInterestingServiceWrapper.appendChild(divImg);
+
+    if (mhSelectLang === "eng") {
+        titleInterestingName.textContent = sortedArray[score].title[mhSelectLang] + ": " + "Abstracts";
+        titleInterestingTitle.textContent = "Course";
+    } else {
+        titleInterestingName.textContent = sortedArray[score].title[mhSelectLang] + ": " + "Конспекты";
+        titleInterestingTitle.textContent = "Курс";
+    }
+})
+
+mhStudyChoosePaymantFreePartWrapper.addEventListener('click', () => {
+
+    mhStudyChoosePaymantWrapper.style.opacity = "";
+
+    setTimeout(() => {
+        mhStudyChoosePaymantWrapper.style.display = "";
+    }, 300);
+
+    window.scrollTo({
+        top: window.innerWidth * 2.25,
+        behavior: 'smooth'
+    });
+
+    mhFiveSectionTitleInterestingService.style.display = "none";
+
+    const parser = new DOMParser();
+    const divImg = parser.parseFromString(sortedArray[score].svgCode, "image/svg+xml").documentElement;
+    divImg.id = `mh-five-section-title-interesting-course-img`;
+    let oldSvgElement = document.getElementById(`mh-five-section-title-interesting-course-img`);
+    if (oldSvgElement) {
+        mhFiveSectionTitleInterestingServiceWrapper.removeChild(oldSvgElement);
+    };
+    mhFiveSectionTitleInterestingServiceWrapper.appendChild(divImg);
+
+    if (mhSelectLang === "eng") {
+        titleInterestingName.textContent = sortedArray[score].title[mhSelectLang] + ": " + "Free part";
+        titleInterestingTitle.textContent = "Course";
+    } else {
+        titleInterestingName.textContent = sortedArray[score].title[mhSelectLang] + ": " + "Бесплатная часть";
+        titleInterestingTitle.textContent = "Курс";
     }
 })
 
@@ -475,7 +692,16 @@ buttonReview.addEventListener('click', (event) => {
         mhSetupAndTranslateForSelectService(event);
         mhTextarea.textContent = textForApplication[mhSelectLang][3];
     } else {
-        console.log("description")
+        mhCourseOutlineTitle.style.opacity = "";
+        mhCourseOutlineWrapper1.style.opacity = "";
+        mhCourseOutlineWrapper2.style.opacity = "";
+        mhCourseOutlineWrapper3.style.opacity = "";
+        mhCourseOutlineWrapper4.style.opacity = "";
+        mhCourseOutlineWrapper5.style.opacity = "";
+
+        mhFourSectionText0.style.opacity = "0";
+        mhFourSectionText1.style.opacity = "0";
+        mhFourSectionText2.style.opacity = "";
 
         mhFourSectionCourseSecondButtonWrapper1.style.opacity = "";
         mhFourSectionCourseSecondButtonWrapper2.style.opacity = "";
@@ -492,13 +718,28 @@ buttonReview.addEventListener('click', (event) => {
 
         buttonReview.style.opacity = "0.4";
         buttonReview.style.pointerEvents = "none";
-        
+
+        courseButtonMoreSecondQuestionBaseImg.style.opacity = "";
 
         setTimeout(() => {
+            mhFourSectionText0.style.display = "block";
+            mhFourSectionText1.style.display = "block";
+            mhFourSectionText2.style.display = "block";
+
             mhFourSectionCourseSecondButtonWrapper1.style.display = "";
             mhFourSectionCourseSecondButtonWrapper2.style.display = "";
             mhFourSectionCourseSecondButtonWrapper3.style.display = "";
             mhFourSectionCourseSecondButtonWrapper4.style.display = "";
+
+            mhFourSectionText0.textContent = sortedArray[score].descriptionMobile[mhSelectLang][0];
+            mhFourSectionText1.textContent = sortedArray[score].descriptionMobile[mhSelectLang][1];
+            mhFourSectionText2.textContent = sortedArray[score].descriptionMobile[mhSelectLang][2];
+
+            setTimeout(() => {
+                mhFourSectionText0.style.opacity = "";
+                mhFourSectionText1.style.opacity = "";
+                mhFourSectionText2.style.opacity = "1";
+            }, 300);
         }, 300);
     }
 })
@@ -510,6 +751,13 @@ buttonConsultation.addEventListener('click', (event) => {
         mhSetupAndTranslateForSelectService(event);
         mhTextarea.textContent = textForApplication[mhSelectLang][1]
     } else {
+        mhCourseOutlineTitle.style.opacity = "";
+        mhCourseOutlineWrapper1.style.opacity = "";
+        mhCourseOutlineWrapper2.style.opacity = "";
+        mhCourseOutlineWrapper3.style.opacity = "";
+        mhCourseOutlineWrapper4.style.opacity = "";
+        mhCourseOutlineWrapper5.style.opacity = "";
+
         mhFourSectionText0.style.opacity = "0";
         mhFourSectionText1.style.opacity = "0";
         mhFourSectionText2.style.opacity = "0";
@@ -525,12 +773,19 @@ buttonConsultation.addEventListener('click', (event) => {
         buttonConsultation.style.opacity = "0.4";
         buttonConsultation.style.pointerEvents = "none";
 
-        mhFourSectionCourseSecondButtonWrapper1.style.display = "block";
-        mhFourSectionCourseSecondButtonWrapper2.style.display = "block";
-        mhFourSectionCourseSecondButtonWrapper3.style.display = "block";
-        mhFourSectionCourseSecondButtonWrapper4.style.display = "block";
+        mhFourSectionCourseSecondButtonWrapper1.style.opacity = "";
+        mhFourSectionCourseSecondButtonWrapper2.style.opacity = "";
+        mhFourSectionCourseSecondButtonWrapper3.style.opacity = "";
+        mhFourSectionCourseSecondButtonWrapper4.style.opacity = "";
+
+        courseButtonMoreSecondQuestionBaseImg.style.opacity = "";
 
         setTimeout(() => {
+            mhFourSectionCourseSecondButtonWrapper1.style.display = "block";
+            mhFourSectionCourseSecondButtonWrapper2.style.display = "block";
+            mhFourSectionCourseSecondButtonWrapper3.style.display = "block";
+            mhFourSectionCourseSecondButtonWrapper4.style.display = "block";
+
             mhFourSectionText0.style.display = "none";
             mhFourSectionText1.style.display = "none";
             mhFourSectionText2.style.display = "none";
@@ -548,9 +803,7 @@ buttonConsultation.addEventListener('click', (event) => {
                 mhFourSectionCourseSecondButtonWrapper2.style.opacity = "1";
                 mhFourSectionCourseSecondButtonWrapper3.style.opacity = "1";
                 mhFourSectionCourseSecondButtonWrapper4.style.opacity = "1";
-            }, 1);
-
-
+            }, 300);
         }, 300);
     }
 })
@@ -562,7 +815,13 @@ buttonQuestion.addEventListener('click', (event) => {
         mhSetupAndTranslateForSelectService(event);
         mhTextarea.textContent = textForApplication[mhSelectLang][2]
     } else {
-        console.log("complexity")
+        mhCourseOutlineTitle.style.opacity = "";
+        mhCourseOutlineWrapper1.style.opacity = "";
+        mhCourseOutlineWrapper2.style.opacity = "";
+        mhCourseOutlineWrapper3.style.opacity = "";
+        mhCourseOutlineWrapper4.style.opacity = "";
+        mhCourseOutlineWrapper5.style.opacity = "";
+
         mhFourSectionCourseSecondButtonWrapper1.style.opacity = "";
         mhFourSectionCourseSecondButtonWrapper2.style.opacity = "";
         mhFourSectionCourseSecondButtonWrapper3.style.opacity = "";
@@ -583,15 +842,39 @@ buttonQuestion.addEventListener('click', (event) => {
         buttonQuestion.style.opacity = "0.4";
         buttonQuestion.style.pointerEvents = "none";
 
+        courseButtonMoreSecondQuestionBaseImg.classList = `complexity-${(sortedArray[score]).complexity}`;
+
         setTimeout(() => {
-            mhFourSectionCourseSecondButtonWrapper1.style.display = "";
-            mhFourSectionCourseSecondButtonWrapper2.style.display = "";
-            mhFourSectionCourseSecondButtonWrapper3.style.display = "";
-            mhFourSectionCourseSecondButtonWrapper4.style.display = "";
+            mhFourSectionCourseSecondButtonWrapper1.style.display = "block";
+            mhFourSectionCourseSecondButtonWrapper2.style.display = "block";
+            mhFourSectionCourseSecondButtonWrapper3.style.display = "block";
+            mhFourSectionCourseSecondButtonWrapper4.style.display = "block";
 
             mhFourSectionText0.style.display = "none";
             mhFourSectionText1.style.display = "none";
             mhFourSectionText2.style.display = "none";
+
+            mhFourSectionCourseSecondButtonText1.textContent = sortedArray[score].whatNeed.whatNeedText[mhSelectLang][0];
+            mhFourSectionCourseSecondButtonTitle2.textContent = sortedArray[score].whatNeed.subtitles[mhSelectLang][1];
+            mhFourSectionCourseSecondButtonText2.textContent = sortedArray[score].whatNeed.whatNeedText[mhSelectLang][1];
+            mhFourSectionCourseSecondButtonTitle3.textContent = sortedArray[score].whatNeed.subtitles[mhSelectLang][2];
+            mhFourSectionCourseSecondButtonText3.textContent = sortedArray[score].whatNeed.whatNeedText[mhSelectLang][2];
+            mhFourSectionCourseSecondButtonTitle4.textContent = sortedArray[score].whatNeed.subtitles[mhSelectLang][3];
+            mhFourSectionCourseSecondButtonText4.textContent = sortedArray[score].whatNeed.whatNeedText[mhSelectLang][3];
+
+
+            setTimeout(() => {
+                if (mhSelectLang === "eng") {
+                    mhFourSectionCourseSecondButtonTitle1.textContent = "Course Complexity";
+                } else {
+                    mhFourSectionCourseSecondButtonTitle1.textContent = "Сложность курса";
+                }
+                courseButtonMoreSecondQuestionBaseImg.style.opacity = "1";
+                mhFourSectionCourseSecondButtonWrapper1.style.opacity = "1";
+                mhFourSectionCourseSecondButtonWrapper2.style.opacity = "1";
+                mhFourSectionCourseSecondButtonWrapper3.style.opacity = "1";
+                mhFourSectionCourseSecondButtonWrapper4.style.opacity = "1";
+            }, 300);
         }, 300);
     }
 })
@@ -767,7 +1050,55 @@ const createCourseBlocks = () => {
 
             div.addEventListener('click', () => {
                 score = buffer[Math.round(Number(div.id[div.id.length - 1]))].serviceId;
+                mhCourseOutlineTitle.style.opacity = "";
+                mhCourseOutlineWrapper1.style.opacity = "";
+                mhCourseOutlineWrapper2.style.opacity = "";
+                mhCourseOutlineWrapper3.style.opacity = "";
+                mhCourseOutlineWrapper4.style.opacity = "";
+                mhCourseOutlineWrapper5.style.opacity = "";
 
+                mhFourSectionText0.style.opacity = "0";
+                mhFourSectionText1.style.opacity = "0";
+                mhFourSectionText2.style.opacity = "";
+
+                mhFourSectionCourseSecondButtonWrapper1.style.opacity = "";
+                mhFourSectionCourseSecondButtonWrapper2.style.opacity = "";
+                mhFourSectionCourseSecondButtonWrapper3.style.opacity = "";
+                mhFourSectionCourseSecondButtonWrapper4.style.opacity = "";
+
+                mhFourSectionButtonOfPriceList.style.opacity = "";
+                buttonQuestion.style.opacity = "";
+                buttonConsultation.style.opacity = "";
+
+                mhFourSectionButtonOfPriceList.style.pointerEvents = "";
+                buttonQuestion.style.pointerEvents = "";
+                buttonConsultation.style.pointerEvents = "";
+
+                buttonReview.style.opacity = "0.4";
+                buttonReview.style.pointerEvents = "none";
+
+                courseButtonMoreSecondQuestionBaseImg.style.opacity = "";
+
+                setTimeout(() => {
+                    mhFourSectionText0.style.display = "block";
+                    mhFourSectionText1.style.display = "block";
+                    mhFourSectionText2.style.display = "block";
+
+                    mhFourSectionCourseSecondButtonWrapper1.style.display = "";
+                    mhFourSectionCourseSecondButtonWrapper2.style.display = "";
+                    mhFourSectionCourseSecondButtonWrapper3.style.display = "";
+                    mhFourSectionCourseSecondButtonWrapper4.style.display = "";
+
+                    mhFourSectionText0.textContent = sortedArray[score].descriptionMobile[mhSelectLang][0];
+                    mhFourSectionText1.textContent = sortedArray[score].descriptionMobile[mhSelectLang][1];
+                    mhFourSectionText2.textContent = sortedArray[score].descriptionMobile[mhSelectLang][2];
+
+                    setTimeout(() => {
+                        mhFourSectionText0.style.opacity = "";
+                        mhFourSectionText1.style.opacity = "";
+                        mhFourSectionText2.style.opacity = "1";
+                    }, 300);
+                }, 300);
                 visualVitrine();
                 resetBlocks();
                 createCourseBlocks();
