@@ -737,14 +737,14 @@ const coursesData = [
         },
         descriptionMobile: {
             eng: [
-                "Want to build interactive and scalable web apps? This React course will take you from the fundamentals to advanced concepts, ensuring you gain real-world development skills.",
-                "You’ll learn how to structure React applications, manage state, integrate APIs, and optimize performance for a smooth user experience.",
-                "Whether you’re starting your frontend journey or leveling up your skills, this course will give you the confidence to create modern web applications with React."
+                "Struggling to build dynamic and interactive web applications? This course will guide you through React, the popular JavaScript library used by developers worldwide. You’ll learn how to create reusable components, manage state effectively, and design responsive user interfaces.",
+                "We’ll start with the basics: understanding JSX, component lifecycle, and event handling. Then, you'll dive into advanced topics such as hooks, the Context API, performance optimization, and integrating with backend services using modern tools and APIs.",
+                "By the end of this course, you’ll have hands-on experience developing scalable applications with React. Whether you're a beginner or an experienced developer, mastering React will empower you to build modern, high-performing web apps and elevate your front-end skills."
             ],
             rus: [
-                "Хотите создавать интерактивные и масштабируемые веб-приложения? Этот курс React проведёт вас от основ до продвинутых техник, давая практические навыки разработки.",
-                "Вы научитесь правильно структурировать React-приложения, управлять состоянием, работать с API и оптимизировать производительность.",
-                "Этот курс поможет вам уверенно разрабатывать современные веб-приложения, будь вы новичок во фронтенде или опытный разработчик."
+                "Не знаете, как создать динамичные и интерактивные веб-приложения? В этом курсе вы изучите React — популярную JavaScript библиотеку, используемую разработчиками по всему миру. Вы научитесь создавать переиспользуемые компоненты, эффективно управлять состоянием и разрабатывать адаптивные пользовательские интерфейсы.",
+                "Начнем с основ: освоение JSX, жизненного цикла компонентов и обработки событий. Затем перейдем к продвинутым темам, таким как хуки, Context API, оптимизация производительности и интеграция с бэкендом через современные инструменты и API.",
+                "После прохождения курса вы получите практический опыт разработки масштабируемых приложений с использованием React. Независимо от того, начинающий вы разработчик или уже опытный специалист, владение React позволит создавать современные, высокопроизводительные веб-приложения и значительно повысить ваши навыки во фронтенде."
             ]
         }
     },
@@ -909,14 +909,14 @@ const coursesData = [
         },
         descriptionMobile: {
             eng: [
-                "Want to learn one of the most powerful and versatile programming languages? This Python course will take you from beginner to skilled developer, covering automation, web development, and data science.",
-                "You’ll work on real-world projects, learn how to write efficient code, and build applications using Python’s extensive libraries and frameworks.",
-                "Whether you’re starting a new career or expanding your programming knowledge, this course will equip you with the confidence and skills to succeed with Python."
+                "Struggling to get started with programming? This course will introduce you to Python, one of the most versatile and beginner-friendly languages used by developers worldwide. You’ll learn the fundamentals of syntax, data types, and control structures to build a solid foundation.",
+                "We’ll begin with the basics: writing simple scripts, understanding variables, loops, and functions. Then, you'll explore advanced topics such as object-oriented programming, working with libraries, and automating tasks with Python’s extensive ecosystem.",
+                "By the end of this course, you’ll have hands-on experience creating projects that solve real-world problems. Whether you're a complete beginner or looking to expand your coding skills, mastering Python will open doors to numerous opportunities in web development, data analysis, automation, and more."
             ],
             rus: [
-                "Хотите освоить один из самых мощных и универсальных языков программирования? Этот курс по Python проведёт вас от основ до продвинутого уровня, включая автоматизацию, веб-разработку и анализ данных.",
-                "Вы будете работать над реальными проектами, научитесь писать эффективный код и разрабатывать приложения, используя мощные библиотеки и фреймворки Python.",
-                "Этот курс поможет вам уверенно программировать и применять Python в различных сферах IT, будь вы новичок или опытный разработчик."
+                "Не знаете, с чего начать программировать? Этот курс познакомит вас с Python — одним из самых универсальных и доступных языков, используемых разработчиками по всему миру. Вы изучите основы синтаксиса, типы данных и управляющие конструкции, чтобы заложить прочный фундамент.",
+                "Начнем с простых скриптов: работа с переменными, циклами, функциями и базовыми операциями. Затем перейдем к продвинутым темам, таким как объектно-ориентированное программирование, использование библиотек и автоматизация задач с помощью мощного инструментария Python.",
+                "После завершения курса вы получите практический опыт создания проектов, решающих реальные задачи. Независимо от того, новичок вы или хотите расширить свои навыки программирования, владение Python откроет перед вами множество возможностей в веб-разработке, анализе данных, автоматизации и не только."
             ]
         }
     },
@@ -1073,14 +1073,14 @@ const coursesData = [
         },
         descriptionMobile: {
             eng: [
-                "Want to build your own Telegram bot? This course teaches you how to create bots using Aiogram, a powerful Python framework, and interact with Telegram’s API.",
-                "You’ll learn message handling, keyboards, and database integration, while also exploring automation and API interactions for enhanced bot functionality.",
-                "Whether for business, automation, or fun projects, this course equips you with the skills to build, deploy, and maintain smart Telegram bots."
+                "Struggling to build interactive Telegram bots? This course introduces you to Aiogram, the modern asynchronous framework for developing Telegram bots using Python. Learn how to set up your bot, handle commands, and respond to user messages effectively.",
+                "Begin with the basics: configure your bot, manage messages, and implement simple commands. Then, dive into advanced topics such as inline keyboards, state management, webhook integration, and working with external APIs to add powerful functionalities.",
+                "By the end of this course, you’ll have hands-on experience creating, deploying, and managing fully functional Telegram bots. Whether for business automation or personal projects, mastering Aiogram will empower you to build smart, responsive bots for any use case."
             ],
             rus: [
-                "Хотите создать собственного Telegram-бота? Этот курс научит вас разрабатывать ботов на Aiogram, работать с API Telegram и автоматизировать процессы.",
-                "Вы освоите обработку сообщений, создание кнопок, подключение баз данных и взаимодействие с внешними сервисами.",
-                "Для бизнеса, автоматизации или личных проектов — этот курс даст вам все необходимые знания для создания и поддержки Telegram-ботов."
+                "Не знаете, как создать интерактивного Telegram-бота? Этот курс познакомит вас с Aiogram — современным асинхронным фреймворком для разработки ботов на Python. Вы узнаете, как настроить бота, обрабатывать команды и эффективно реагировать на сообщения пользователей.",
+                "Начнем с основ: настройка бота, обработка сообщений и создание простых команд. Затем перейдем к продвинутым темам, таким как создание инлайн-клавиатур, управление состоянием, интеграция webhook и работа с внешними API для расширения функционала ботов.",
+                "После прохождения курса вы получите практический опыт создания, развертывания и управления полноценными Telegram-ботами. Будь то автоматизация бизнеса или личные проекты, освоение Aiogram позволит вам создавать умных и отзывчивых ботов для любых задач."
             ]
         }
     },
@@ -1290,14 +1290,14 @@ const coursesData = [
         },
         descriptionMobile: {
             eng: [
-                "Want to sell more without being pushy? This course teaches proven techniques to connect with customers, understand their needs, and close deals naturally.",
-                "From handling objections to mastering closing techniques, you'll learn how to make every sales conversation effective and profitable.",
-                "By the end of this course, you'll have the confidence and skills to increase sales, grow your business, and build lasting customer relationships."
+                "Struggling to convert leads into loyal customers? This sales course will equip you with proven strategies and techniques to master every stage of the sales process. You’ll learn persuasive communication, uncovering customer needs, and building lasting trust with your prospects.",
+                "We’ll start with the fundamentals: understanding buyer psychology, developing effective communication skills, and mastering negotiation. Then, you'll dive into advanced topics such as handling objections, closing techniques, and post-sale relationship management to ensure repeat business.",
+                "By the end of this course, you'll have hands-on experience managing sales pipelines and overcoming objections with confidence. Whether you're a beginner or a seasoned professional, mastering these techniques will transform your sales approach and drive success in competitive markets."
             ],
             rus: [
-                "Хотите продавать больше без навязчивости? Этот курс научит вас выстраивать доверительные отношения с клиентами и легко заключать сделки.",
-                "От работы с возражениями до техник закрытия продаж — вы узнаете, как сделать каждое общение с клиентом результативным.",
-                "К концу курса вы сможете уверенно продавать, увеличивать доход и строить долгосрочные отношения с клиентами."
+                "Не знаете, как превратить потенциальных клиентов в постоянных покупателей? Этот курс по продажам даст вам проверенные стратегии и техники для успешной работы на всех этапах процесса продаж. Вы изучите методы убеждения, выявления потребностей клиентов и создания прочного доверия с ними.",
+                "Начнем с основ: изучения психологии покупателя, развития эффективных коммуникативных навыков и искусства переговоров. Затем перейдем к продвинутым темам, таким как работа с возражениями, техники закрытия сделок и управление отношениями с клиентами после продажи для обеспечения повторных покупок.",
+                "После прохождения курса вы получите практический опыт управления воронкой продаж и уверенно справитесь с любыми возражениями. Независимо от того, новичок вы или опытный специалист, освоение этих техник преобразит ваш подход к продажам и поможет добиться успеха на конкурентном рынке."
             ]
         }
     },
@@ -1472,14 +1472,14 @@ const coursesData = [
         },
         descriptionMobile: {
             eng: [
-                "Want to take control of your health through better nutrition? This course will teach you how food affects your body and how to create a balanced diet.",
-                "Learn to read food labels, calculate nutrients, and build meal plans that support your well-being and fitness goals.",
-                "Whether you’re looking to improve your personal diet or help others make better food choices, this course gives you the tools and knowledge to succeed."
+                "Struggling to understand what constitutes a healthy diet? This course will guide you through the fundamentals of nutrition, a field essential for optimal health and performance. You’ll learn how to balance macro- and micronutrients, interpret food labels, and design meals that fuel your body.",
+                "We’ll start with the basics: understanding the role of proteins, fats, and carbohydrates, and exploring the biochemistry of food. Then, you'll dive into advanced topics such as nutritional deficiencies, the impact of diet on chronic diseases, and strategies for personalized meal planning.",
+                "By the end of this course, you’ll have hands-on experience creating balanced diets and developing effective nutritional plans. Whether you’re looking to improve your own health or guide others towards better eating habits, mastering nutrition will empower you to make informed, life-enhancing choices."
             ],
             rus: [
-                "Хотите управлять своим здоровьем с помощью правильного питания? Этот курс поможет понять, как еда влияет на организм, и научит составлять сбалансированный рацион.",
-                "Научитесь анализировать состав продуктов, рассчитывать нутриенты и подбирать питание для здоровья и фитнес-целей.",
-                "Будь вы новичок или хотите помогать другим в вопросах питания, этот курс даст вам необходимые знания и навыки."
+                "Не знаете, что такое здоровое питание и как правильно его соблюдать? В этом курсе вы изучите основы нутрициологии — область, играющую ключевую роль для поддержания здоровья и высокой работоспособности. Вы научитесь балансировать макро- и микронутриенты, читать этикетки и составлять рацион, который будет заряжать вас энергией.",
+                "Начнем с основ: понимания роли белков, жиров и углеводов, а также изучения биохимии пищи. Затем перейдем к продвинутым темам, таким как профилактика дефицита витаминов, влияние питания на хронические заболевания и стратегии персонального планирования рациона.",
+                "После прохождения курса вы получите практический опыт в составлении сбалансированных диет и разработке эффективных планов питания. Независимо от того, хотите ли вы улучшить свое здоровье или помочь другим сделать правильный выбор, владение нутрициологией даст вам инструменты для принятия обоснованных и жизненно важных решений."
             ]
         }
     },
@@ -1636,14 +1636,14 @@ const coursesData = [
         },
         descriptionMobile: {
             eng: [
-                "Want to boost your productivity? Learn how to use Notion to organize tasks, projects, and ideas effectively with a structured approach.",
-                "Discover the power of Notion’s databases, automation, and collaboration tools. From personal use to team management, Notion can adapt to any workflow.",
-                "By the end of this course, you’ll be able to create custom dashboards, automate repetitive tasks, and fully optimize your digital workspace."
+                "Struggling to keep your projects and ideas organized? This course will introduce you to Notion, the all-in-one workspace that combines notes, tasks, databases, and more. Learn to harness its flexibility to manage both personal and professional workflows.",
+                "Begin with the basics: navigating Notion’s interface, creating notes and simple databases, and using templates for quick setup. Then, explore advanced functionalities like relational databases, automation with integrations, and customizing your workspace to suit your unique needs.",
+                "By the end of this course, you'll have hands-on experience setting up a robust system in Notion to organize your tasks, projects, and ideas effectively. Whether you're a student, entrepreneur, or team leader, mastering Notion will transform the way you plan and execute your work."
             ],
             rus: [
-                "Хотите повысить продуктивность? Освойте Notion и научитесь эффективно управлять задачами, проектами и знаниями.",
-                "Изучите базы данных, автоматизацию и командные инструменты Notion. Этот сервис подходит как для личного использования, так и для работы в команде.",
-                "К концу курса вы сможете создавать персонализированные дашборды, автоматизировать рутинные задачи и оптимизировать своё рабочее пространство."
+                "Не знаете, как эффективно организовать свои проекты и идеи? Этот курс познакомит вас с Notion — универсальным инструментом, объединяющим заметки, задачи, базы данных и многое другое. Вы научитесь использовать его гибкость для управления как личными, так и профессиональными процессами.",
+                "Начнем с основ: изучение интерфейса Notion, создание заметок и простых баз данных, а также использование шаблонов для быстрого старта. Затем перейдем к продвинутым функциям, таким как создание взаимосвязанных баз данных, автоматизация с помощью интеграций и настройка рабочего пространства под ваши нужды.",
+                "После прохождения курса вы получите практический опыт в создании надежной системы для организации задач, проектов и идей в Notion. Независимо от того, студент вы, предприниматель или руководитель команды, владение Notion преобразит ваш подход к планированию и выполнению работы."
             ]
         }
     }
